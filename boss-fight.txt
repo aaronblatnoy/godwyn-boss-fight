@@ -1,0 +1,371 @@
+GODWYN / MIQUELLA — SHADOW OF THE ERDTREE FINAL BOSS
+Replacing: Radahn, Consort of Miquella
+Location: Gate of Divinity, Enir-Ilim
+
+
+================================================================================
+THE LORE
+================================================================================
+
+TWO INCOMPLETE THINGS
+---------------------
+
+Miquella's curse was never about his body being small. It was the gap between
+his soul and his vessel. His soul was ancient, vast, an Empyrean's full
+capacity — and it was sealed inside a body that would never grow past
+childhood. A container that couldn't hold what was in it. He was always
+overflowing.
+
+Godwyn's tragedy is the exact inversion. The most complete person in the Lands
+Between — beloved by all, honorable, warm. A body and a soul in genuine
+harmony. Ranni's scheme took a blade to that harmony. The soul killed, the body
+left. What remained was a body without direction, still animate, spreading
+deathroot outward because there was nothing inside to say stop, this is enough,
+this is where I end. A body with no soul is still alive in Elden Ring. It just
+doesn't know what for.
+
+Miquella arrives in the Land of Shadow as pure soul. He shed his flesh at the
+threshold — left it in the cocoon at Mohgwyn Palace. He shed his love, his
+will, his grace. What traveled through the Land of Shadow was intention with no
+vessel.
+
+Godwyn's body is vessel with no intention.
+
+These are not two damaged things patching each other's wounds. They are two
+complementary absences. The soul that has no body capable of containing it. The
+body that has no soul capable of directing it.
+
+
+WHY GODWYN'S BODY SPECIFICALLY
+-------------------------------
+
+Every other potential vessel in the Lands Between is claimed. Mohg's body: the
+Formless Mother. Malenia: the Scarlet Rot. Any vessel Miquella enters inherits
+the tenancy of whatever outer god already lives there.
+
+Godwyn's body has no tenant. His soul was killed by Destined Death — the Rune
+of Death that Marika removed from the Elden Ring. What animates the body is not
+grace, not an outer god's blessing. It's the raw residue of that removed rune.
+The body is the physical shape of death-without-direction, and it belongs to
+no one.
+
+Miquella's unalloyed gold specifically repels outer gods. Running through
+Godwyn's deathroot, it doesn't purify it — it directs it. Death filtered
+through the one substance no outer god can touch. Sovereign death, for the
+first time since Marika suppressed it.
+
+
+MIQUELLA'S ORIGINAL PLAN
+-------------------------
+
+He didn't need just any soul for Godwyn's body. He needed a specific kind —
+strong enough to survive the transformation, marked by grace, tested by
+countless deaths. He needed the Tarnished.
+
+Not to fight. As the material.
+
+The plan: pull the Tarnished into the ritual space — the void between death and
+life where his shed soul travels — and press Godwyn's memory onto their soul.
+Gradually, completely. The Tarnished's own essence displaced. What remained
+would be shaped like Godwyn. Would move like him. Would be him, functionally,
+in every way that matters for inhabiting his waiting body.
+
+The most beloved demigod restored. Not his original soul — that's dead. A new
+one. Made from the Tarnished.
+
+This is the ultimate expression of Miquella's charm. Not devotion. Not
+sacrifice. Becoming. He's been charming people into giving him pieces of
+themselves the entire DLC. This is the version where he takes all of it.
+
+
+THE DENIAL
+----------
+
+The Tarnished's will is strong enough to resist. The soul holds. The template
+doesn't take.
+
+"Let not our dream of a gentler world be denied by the will of the Tarnished
+one."
+
+This isn't a villain speech. It's an explanation — to Godwyn's waiting body,
+to himself — of what just happened and why he's changing the plan. The denial
+is specific: the Tarnished's selfhood refused erasure. Not strength of arms.
+Strength of will.
+
+So he adapts. God and consort were supposed to be two — Miquella in the divine
+seat, the Tarnished-as-Godwyn in the vessel. Instead he collapses the
+distinction entirely. He enters Godwyn's body himself. Not as a rider or
+puppeteer. As a unification.
+
+"For I shall be the sun that swallows thee."
+
+He doesn't fill the consort role. He swallows it. Body and spirit. Death and
+eternal life. The Prince of Death and the Pure Empyrean — inseparable, a third
+thing that is neither and both.
+
+Phase Two is his improvisation. Not the plan — the response to the plan
+failing.
+
+
+THE UNION
+---------
+
+The Elden Ring has a hole in it. Marika removed the Rune of Death. This created
+two catastrophes simultaneously: things that should die don't, and the death
+that should move through the natural order pools in Godwyn's body and spreads
+as deathroot.
+
+Miquella becomes the answer. An Empyrean who contains both the rune of life and
+the rune of death simultaneously. Not the Elden Ring restored. Something that
+makes the Elden Ring's structure unnecessary — a living god who administers
+life and death directly, from inside both of them.
+
+The Age of Compassion, ushered in not the way he planned, but ushered in.
+
+
+================================================================================
+THE BOSS FIGHT — SEQUENCE
+================================================================================
+
+THE APPROACH
+------------
+
+You step through the Gate of Divinity. The arena is the same elevated space at
+the top of Enir-Ilim. Pale sky. Shadow Erdtree in the distance. Stone floor.
+The far gate ahead.
+
+You walk forward.
+
+
+THE WRAPPING
+------------
+
+Miquella's voice. Gentle. Unhurried. Coming from no direction.
+
+    "Lord of the Old Order, guided by grace."
+
+Deathroot rises through the stone floor — not as an attack. Deliberately. It
+wraps around your legs, your waist, your arms. Your character doesn't resist.
+
+    "Divest thyself of thy flesh, sins, and base desires."
+
+The roots pull tighter. The arena darkens at the edges. Everything fades.
+
+Everything goes black.
+
+
+THE VOID
+--------
+
+Silence. A crack of light — shaped like the Gate of Divinity, but seen from
+the other side. A silhouette in the light. Walking forward.
+
+    "Impress his golden memory upon thine soul."
+
+He comes toward you and the light around him fills the void. He is the light
+source. Tall. Broad. Radiant. The most idealized version of who Godwyn was —
+blonde, perfectly formed, the face everyone in the Lands Between carried as a
+memory of what a demigod could be.
+
+He stops.
+
+    "For he is my promised consort."
+
+
+BOSS NAME APPEARS:
+
+    GODWYN THE GOLDEN
+    Prince of Gold
+
+
+PHASE ONE — THE MEMORY
+-----------------------
+
+The void is Miquella's interior. The only illumination is Godwyn. The crack of
+light behind him is the only reference point in absolute black.
+
+The fight against the ideal Godwyn is resistance. Miquella is pressing the
+memory onto the Tarnished's soul — trying to overwrite their identity with the
+template. Every hit the player lands is their own soul asserting itself. Their
+will refusing the replacement.
+
+He made the template beautiful on purpose. The charm works through desire.
+He needs the Tarnished to want to become this. They don't.
+
+His moveset is clean, noble, the memory of a warrior king:
+
+    GOLDEN ARC — wide lateral spear sweep, sacred light trailing each pass.
+    Telegraph: slight weight shift to back foot. Dodge into the swing.
+
+    SACRED SLAM — overhead spear planted into the void floor, holy shockwave
+    radiating outward on impact. Delayed trigger — he holds the raise longer
+    than expected.
+
+    DRAGON'S MEMORY — spectral golden dragon descends, exhales across a wide
+    arc. Sacred damage only. No deathroot here. The memory is clean.
+
+    RADIANT DASH — his only fast move. Closing burst into a thrust, follow-up
+    slash if still in front of him.
+
+    THE PAUSE — he stops entirely. Looks at you. No attack coming. He's giving
+    space. If you wait, he attacks after a long beat. If you attack during the
+    pause, he steps aside and counters.
+
+    MEMORY FRAGMENT — Miquella's voice comes through at intervals. Fragments
+    of recollection. Each one intensifies the light around Godwyn briefly —
+    next attack hits harder. You're fighting against the act of remembering.
+
+His expression throughout: neutral, slightly sorrowful. The face of someone
+being used a second time with no means of objecting.
+
+You reduce him. Hit by hit. The light dims.
+
+
+PHASE ONE DEATH
+---------------
+
+When his HP empties he doesn't fall. The light fades from the edges inward.
+The crack behind him closes. The void goes completely dark.
+
+
+THE VEIL DISSOLVES
+------------------
+
+Gold rises through the dark from everywhere simultaneously. The arena
+reassembles.
+
+But through the reassembly the ideal image of Godwyn bleeds forward into what
+he actually is. The memory gives way — the radiance dims and corrupts
+simultaneously. The perfect figure dissolves into the vast, contorted,
+deathrooted body. Enormous. Slack. Lifeless in the way only something still
+alive can be lifeless.
+
+The sky is black. Not night — black the way deathroot is black. Deathroot
+pushing through every crack in the stone, through the walls of Enir-Ilim.
+Death made environmental.
+
+The Gate of Divinity lights up.
+
+
+THE BROTHER
+-----------
+
+He walks out.
+
+Small. Golden-haired. Moving across the changed arena with complete composure.
+He doesn't look at the Tarnished. He looks at Godwyn.
+
+    "Lord brother."
+
+Not the address of someone speaking to a corpse. The address of someone who
+owes the words regardless of whether they're received.
+
+    "Let not our dream of a gentler world be denied by the will of the
+    Tarnished one."
+
+He rises — unhurried, inevitable — and descends onto Godwyn's back. Small arms
+around something enormous and corrupted. He begins to dissolve inward. His form
+loses its edges, becomes light, presses through Godwyn's skin into the
+deathroot veins beneath.
+
+The gold runs through the black. Every vein in the body, in the floor, in the
+walls of Enir-Ilim lights from within simultaneously.
+
+His voice from inside:
+
+    "For I shall be the sun that swallows thee."
+
+Godwyn illuminates. The eyes open.
+
+
+BOSS NAME CHANGES:
+
+    MIQUELLA
+    God of Abundance
+
+
+PHASE TWO — THE UNION
+----------------------
+
+The charm status appears. The Will drain begins.
+
+Phase Two carries both phases inside it. The geometry of Godwyn's Phase One
+attacks is recognizable — the player's muscle memory is an asset that keeps
+becoming a liability. The same moves, but wrong now. Gold trails deathroot
+where it swept. The clean memory is gone. This is the reality.
+
+    CORRUPTED ARC — the wide spear sweep from Phase One, same dodge window,
+    deathroot trailing the path. The aftermath lingers.
+
+    DRAGON'S DIRGE — the dragon breath from Phase One, now gold-black. Sacred
+    damage and death blight simultaneously.
+
+    ROOT SURGE — gold light traces floor cracks, deathroot erupts along them.
+    Watch the floor, not the face.
+
+    UNALLOYED BLOOM — Haligtree flowers pushing through deathroot. Bloom:
+    healing pulse. Collapse: death blight. Standing in the bloom means standing
+    where the collapse happens.
+
+    THE HOLD — grasping hand tracks the player. If caught, lifted to eye level
+    with his face. Will drains. Moving the camera away from his face slows the
+    drain. Looking directly at him accelerates it. Mash inputs to break free.
+    He doesn't squeeze. He holds.
+
+    GAZE — no wind-up. Eyes focus, Will drain spikes. Breaks on roll or attack.
+    Tends to begin when the player is already committed to something else.
+
+    GRACE REVOKED — one hand raised, gesture almost tender. Golden columns
+    descend slowly from the black sky, leaving sacred patches on landing.
+    Lanes between them readable but narrow.
+
+    DEATHROOT TIDE — entire floor pulses once. Gold drains out of stone a
+    half-second before the blight surfaces. Jump or reach elevated sections.
+
+    THE FORGETTING — if Will empties completely at any point, HUD disappears
+    for fifteen seconds. Flasks still work. Count is hidden.
+    Screen reads: Your grace fades.
+
+    SOLAR ERUPTION — a burst of gold-white light from the body's center,
+    Miquella's soul radiating outward through Godwyn's form. Wide AoE, sacred
+    damage. The room goes briefly luminous. Aftermath: deathroot cauterized
+    to glass.
+
+    COMPASSION'S END — he lowers his face to the arena floor. The player has
+    learned this motion — it preceded Deathroot Tide. They prepare to jump.
+
+    He exhales.
+
+    A slow ring of golden breath expanding outward across the entire arena
+    floor. Damage hard-capped. The player is left at one HP.
+
+    He doesn't follow up. The kill was available. He chose not to take it.
+    He waits.
+
+    The player drinks. Stabilizes. The fight continues on his terms even
+    while they're winning it.
+
+
+THE DEATH
+---------
+
+When his HP empties the eyes close. Slowly. The same pace they opened.
+
+The gold drains out of the roots. The deathroot goes dark. The black sky begins
+to lighten — not to what it was, but to something undecided. The Shadow Erdtree
+in the distance dims.
+
+Somewhere in the Lands Between the deathroot under Stormveil, under the roads,
+through the root systems of every ruin, goes still.
+
+
+WHAT THE PLAYER RECEIVES
+------------------------
+
+The rune carries both gold and black. Its description: something about the
+firstborn who was used twice and the child who was always overflowing and the
+first time either of them was complete, however briefly, and however it ended.
+
+The Site of Grace that appears:
+
+    Seat of the Pure One

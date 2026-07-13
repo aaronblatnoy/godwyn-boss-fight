@@ -1,0 +1,1457 @@
+================================================================================
+GODWYN / MIQUELLA BOSS FIGHT — FULL BUILD SPEC
+Target: Godot 4, Arch Linux (mossad), 2x RTX 3060 Ti, Vulkan renderer
+Goal: Elden Ring-faithful boss fight, new encounter within that aesthetic
+Fidelity target: indistinguishable from a new Elden Ring boss fight
+================================================================================
+
+All decisions resolved. No [DECISION NEEDED] tags remain.
+This document is Fable's complete brief.
+
+
+================================================================================
+1. TECHNICAL FOUNDATION
+================================================================================
+
+ENGINE
+------
+Godot 4.x (latest stable)
+Renderer: Forward+ (Vulkan)
+Physics: Godot Physics 3D
+
+SOULS-LIKE FRAMEWORK
+--------------------
+Fable's first task on Day 1:
+  Search GitHub for "godot 4 souls like" and "godot 4 dark souls"
+  Evaluate top results for:
+    - Lock-on implementation quality
+    - Roll with genuine iframe support
+    - Stamina system
+    - Animation-driven combat (not purely physics)
+    - Active maintenance / Godot 4 compatibility
+
+  If a framework scores well on all five: use it as base.
+  If nothing meets the bar: build from scratch using Godot 4's
+  CharacterBody3D, AnimationPlayer, and AnimationTree. Combat feel
+  is too important to inherit from a poor starting point.
+
+  Priority: correctness of feel over speed of start.
+
+
+================================================================================
+2. PROJECT STRUCTURE
+================================================================================
+
+res://
+├── scenes/
+│   ├── main.tscn
+│   ├── player/
+│   │   ├── player.tscn
+│   │   └── player_camera.tscn
+│   ├── bosses/
+│   │   ├── godwyn_phase1.tscn
+│   │   ├── godwyn_phase2.tscn
+│   │   └── miquella_walk.tscn
+│   ├── environments/
+│   │   ├── void.tscn
+│   │   ├── enir_ilim.tscn
+│   │   └── transition.tscn
+│   └── ui/
+│       ├── hud.tscn
+│       ├── boss_healthbar.tscn
+│       ├── will_bar.tscn
+│       └── death_screen.tscn
+├── scripts/
+│   ├── player/
+│   │   ├── player_controller.gd
+│   │   ├── player_stats.gd
+│   │   ├── player_combat.gd
+│   │   ├── player_camera.gd
+│   │   └── lock_on.gd
+│   ├── bosses/
+│   │   ├── boss_base.gd
+│   │   ├── godwyn_p1_ai.gd
+│   │   ├── godwyn_p2_ai.gd
+│   │   └── attack_library.gd
+│   ├── systems/
+│   │   ├── game_manager.gd
+│   │   ├── hitbox.gd
+│   │   ├── hurtbox.gd
+│   │   └── will_system.gd
+│   └── sequences/
+│       └── transition_sequence.gd
+├── shaders/
+│   ├── void_atmosphere.gdshader
+│   ├── deathroot_spread.gdshader
+│   ├── gold_vein_pulse.gdshader
+│   ├── void_dissolve.gdshader
+│   ├── emissive_godwyn.gdshader
+│   └── corruption_reveal.gdshader
+├── assets/
+│   ├── meshes/
+│   │   ├── player/
+│   │   ├── godwyn/
+│   │   ├── miquella/
+│   │   └── environment/
+│   ├── textures/
+│   │   ├── player/
+│   │   ├── godwyn/
+│   │   ├── environment/
+│   │   └── ui/
+│   ├── animations/
+│   │   ├── player/
+│   │   └── bosses/
+│   ├── particles/
+│   └── audio/
+│       ├── music/
+│       ├── sfx/
+│       └── voice/
+└── autoloads/
+    ├── game_state.gd
+    └── audio_manager.gd
+
+
+================================================================================
+3. PLAYER SYSTEM
+================================================================================
+
+STATS
+-----
+Max HP:       500
+Max Stamina:  100
+Max FP:       80
+Equip Load:   Medium (mid-roll)
+
+STAMINA COSTS
+-------------
+Light Attack:     12
+Heavy Attack:     22
+Roll:             15
+Running:          5 per second
+
+STAMINA RECOVERY
+----------------
+Recovery delay after action:   0.8 seconds
+Recovery rate:                 25 per second
+Recovery paused while:         sprinting, attacking, rolling
+
+ROLL
+----
+Roll type:          Mid-roll
+Roll distance:      3.5 meters
+Roll duration:      0.65 seconds
+Iframe window:      Frames 4–16 (~0.2s–0.4s into animation)
+Roll direction:     Input-relative, or lateral to lock-on target
+Cooldown:           None — stamina gates it
+
+MOVEMENT
+--------
+Walk speed:         3.5 m/s
+Sprint speed:       6.5 m/s
+Rotation speed:     720 degrees/second
+Lock-on strafe:     3.5 m/s while facing target
+
+ATTACKS
+-------
+Light attack:
+  Damage:           60
+  Stamina cost:     12
+  Active frames:    0.15s–0.35s
+  Recovery:         0.4s
+  Hitstop:          0.06s freeze on hit
+
+Heavy attack:
+  Damage:           110
+  Stamina cost:     22
+  Telegraph:        0.4s wind-up
+  Active frames:    0.2s–0.55s
+  Recovery:         0.7s
+  Hitstop:          0.1s freeze on hit
+  Stagger value:    2x light attack poise damage
+
+Hitstop implementation:
+  Engine.time_scale = 0.05 for hitstop_duration on hit, then restore
+
+FLASKS — SACRED FLASK (CRIMSON TEARS EQUIVALENT)
+-------------------------------------------------
+Count:              5 per attempt
+HP restored:        180 per use
+Animation:          0.6s drink animation (can be cancelled by rolling after 0.3s)
+Refill:             On attempt restart only (not during fight)
+Flask display:      Bottom-left below stamina bar
+                    Icon (flask silhouette) + number remaining
+                    Elden Ring style: icon dims when empty
+
+LOCK-ON
+-------
+Max distance:       25 meters
+Camera offset:      Boss upper-center, player lower-left
+Target switch:      Q/E
+Breaks when:        Boss > 35m, or lock-on pressed again
+Camera lerp:        8.0
+
+DEATH
+-----
+On HP = 0:
+  Death animation plays (fall forward)
+  0.8s delay
+  Screen fades to black over 0.5s
+  Text appears: "YOU DIED"
+    Font:       Cinzel (closest free match to Elden Ring)
+    Color:      #C8986E (Elden Ring's exact warm bronze-gold)
+    Size:       Large, centered
+    Fade in:    0.5s
+  Hold:         2.5s
+  Restart:      Current phase beginning (Phase 1 or Phase 2)
+                Phase 2 restarts at Phase 2 — player does not redo
+                the transition sequence or Phase 1 on Phase 2 death
+
+MOUSE SENSITIVITY DEFAULT
+-------------------------
+0.3 (adjustable in settings menu)
+
+
+================================================================================
+4. CAMERA SYSTEM
+================================================================================
+
+DEFAULT
+-------
+Position:       2.5m behind player, 1.4m above
+FOV:            75 degrees
+Vertical clamp: -60 to +80 degrees
+
+LOCK-ON
+-------
+FOV:            72 degrees
+Distance:       Scales with boss — min 3m, max 8m
+Smoothing:      Position lerp 6.0, rotation lerp 8.0
+
+DYNAMIC PULLBACK
+----------------
+Triggered by: Sacred Slam, Dragon's Memory, Solar Eruption, Compassion's End
+Pulls to:     8m over 0.3s
+Returns:      0.5s after attack ends
+
+CUTSCENES
+---------
+Fully controlled by AnimationPlayer. Player input locked.
+
+DEPTH OF FIELD
+--------------
+Cutscenes only. Not during gameplay — would obscure attacks.
+
+
+================================================================================
+5. PHASE 1 ENVIRONMENT — THE VOID
+================================================================================
+
+SCENE: void.tscn
+
+World environment:
+  Background:       Pure black
+  Ambient light:    0.0
+  Sky:              Disabled
+  Fog:              Volumetric, gold
+    Color:          Color(0.85, 0.65, 0.1, 1)
+    Density:        0.015
+    Height:         -2.0 to 2.0
+
+Arena:
+  Playable radius:  20 meters
+  Floor:            YES — very faint dark surface with subtle cracked stone
+                    texture, nearly invisible but provides depth cue and
+                    prevents complete disorientation. Elden Ring always has
+                    clear footing. Opacity very low — 15% visibility.
+  Boundary:         Invisible soft wall, no visual indicator
+
+Particles — void motes:
+  Count:            400
+  Size:             0.04–0.08m
+  Color:            Gold to white
+  Speed:            0.1–0.3 m/s upward drift
+  Lifetime:         8–12 seconds
+  Emission:         40 per second
+
+Crack of light (intro):
+  Shape:            Gate of Divinity silhouette
+  Height:           8m
+  Color:            Warm white-gold
+  Fade in:          2.0s during opening sequence
+
+
+================================================================================
+6. PHASE 1 BOSS — GODWYN, PRINCE OF GOLD
+================================================================================
+
+Boss name card:
+  Line 1:   GODWYN THE GOLDEN
+  Line 2:   Prince of Gold
+  Font:     Cinzel
+  Fade in:  0.6s, hold until HP bar appears, then HP bar fades in beneath
+
+VISUAL DESIGN — PHASE 1
+-----------------------
+Inspiration: fan art by Enzo Spag and @DOUJ — synthesized below.
+Phase 1 = Godwyn at his absolute prime. No death markers. No corruption.
+The most beloved demigod as he was before Ranni's scheme.
+
+  Hair:         Long golden-blonde, partially braided, rest loose and flowing
+                Moves with his attacks — dynamic hair physics
+  Face:         Noble, warm, open — the face people turned toward
+                Expression throughout fight: neutral-sorrowful, the face of
+                someone being used who cannot object but carries no aggression
+                Clean — no dark markings, no corruption visible
+  Armor:        Partial gold plate over open chest — chest exposed, gold
+                filigree on the sternum, arm guards, shoulder pieces
+                NOT full plate — the body itself is the statement
+  Garment:      Long blue flowing robes/cape as primary — same blue as
+                seen in fan references, moves with him
+  Crown:        NONE — no circlet, no crown. His presence is the crown.
+  Feet:         Barefoot
+  Skin:         Pale, near-translucent — demigod skin, subtly luminous
+  Scale:        3.2m height, 1.4x human proportions — idealized but
+                still reads as a person, not a landscape
+
+  WEAPON:       A longsword — fast, one-handed, elegant
+                Gold-hilted, blue-tinged blade (subtle — not glowing heavily)
+                Gold filigree on the crossguard, matching his armor
+                He holds it loosely, the grip of someone who doesn't need
+                to grip hard. Mastery expressed through effortlessness.
+                NO shield — never defensive. He was merciful, not cautious.
+
+COMBAT PHILOSOPHY — PHASE 1
+----------------------------
+Fast, smooth, agile chain combos. NOT heavy like Radahn/Godfrey.
+NOT erratic like Malenia. Elegant and sustained — a master swordsman.
+Every move flows into the next. Recovery windows are short.
+The same starting animation can produce 2, 4, or 6 hits depending on
+chain extension. Players cannot memorize "X hits then done."
+Difficulty target: Promised Consort level or slightly above.
+
+Material:
+  Type:               Emissive self-illuminating
+  Base color:         Color(0.95, 0.90, 0.82) — pale skin tone, luminous
+  Emission:           Color(1.0, 0.88, 0.45) intensity 2.5 (subtler than
+                      pure gold — he glows but doesn't overwhelm)
+  Emission casts light: YES — Godwyn is the room's light source
+  Light radius:       12m
+  Light color:        Color(1.0, 0.92, 0.6)
+  Robes:              Deep blue, Color(0.08, 0.12, 0.35), no emission
+  Armor:              Gold, Color(0.82, 0.65, 0.15), slight metallic sheen
+
+STATS
+-----
+Max HP:               3000
+Poise:                80  (fast fighter — gets staggered more easily,
+                          but recovers faster and is rarely in range)
+Poise per light:      15
+Poise per heavy:      30
+Poise break stagger:  0.8s (shorter stagger — he recovers quickly even
+                          when broken, punish windows are tight)
+
+PHASE 1 AI
+----------
+States: IDLE, TELEGRAPH, ACTIVE, RECOVERY, STUNNED, MEMORY_FRAG
+
+Combat behavior:
+  Godwyn is constantly mobile. In IDLE he circles the player slowly,
+  closing distance gradually. He never stays still for more than 1.5s
+  except during THE PAUSE.
+
+Attack weights by distance:
+  Close (< 4m):   Sovereign's Sequence 45%, The Tide 25%, Radiant Seq 20%,
+                  The Pause 10%
+  Mid (4–10m):    Dash Chain 35%, Sovereign's Sequence 25%,
+                  Dragon's Memory 20%, Sacred Cleave 15%, The Pause 5%
+  Far (> 10m):    Dash Chain 55%, Dragon's Memory 30%, The Pause 15%
+
+Global cooldown between chains: 0.5s min, 1.4s max
+  (shorter than typical ER boss — he pressures constantly)
+
+Memory Fragment: triggers at 75%, 50%, 25% HP
+
+
+================================================================================
+7. PHASE 1 ATTACKS
+================================================================================
+
+COMBAT FEEL
+-----------
+An incredible swordsman. Not a dancer.
+
+He is relentlessly mobile, continuously pursuing, the sword always in motion.
+The fight is one long flowing assault — not a sequence of discrete attacks.
+Every move has somewhere to go. Every transition is itself a movement.
+He doesn't stop and reset. He redirects.
+
+Players experience him as one organism. The named patterns below are
+recognizable shapes within a continuous flow, not separate events with
+start and end states.
+
+Design principle: reward aggression, punish hesitation.
+"Hesitation is defeat."
+
+Guard: sword hanging LOW at his side, point toward the ground.
+This is his only neutral. Everything flows out of it and briefly
+returns to it between phrases. It never reads as idle — it reads
+as loaded.
+
+Scale: 3.2m. His cuts cover enormous arcs. He doesn't need to chase
+because his reach already covers the engagement zone.
+
+
+STATES
+------
+His combat system is state-based. He moves between states and each
+state has available exits. The fluidity comes from many paths leading
+to the same state.
+
+  FACING / LOW HANG — base state. Where initiators begin.
+
+  BACK TO PLAYER — reached via multiple routes (see below).
+                   A false window. Every exit from this state is
+                   an attack, not a vulnerability.
+
+  AIRBORNE — during jump lunge. Lands into thrust or overshoots.
+
+  EXTENDED / COMMITTED — after overhead slam or straight stab.
+                          Brief return to low hang, then next initiator.
+
+
+CUT VOCABULARY
+--------------
+His individual cuts. The building blocks everything is made from.
+
+  DIAGONAL \ — top-right sweeping down to bottom-left
+  DIAGONAL / — top-left sweeping down to bottom-right
+  HORIZONTAL  — wide sweep at chest/head height, either direction
+  HORIZONTAL LOW — same sweep but at knee height, different plane
+  OVERHEAD SLAM — sword raised, driven straight down, committed
+  RISING CUT — sword sweeps low to high, catches forward-rolling players
+  STRAIGHT STAB — linear, minimal movement, committed forward
+  CIRCULAR — body rotates into the cut, wide coverage, heavier
+
+
+OVERSHOOT RULE
+--------------
+Any lunge, thrust, or jump that carries him past the player
+immediately transitions to BACK TO PLAYER state.
+No reset. The overshoot is never neutral — it becomes the next attack.
+
+
+THE COMBO TREE
+--------------
+
+-----------------------------------------------------------------------
+INITIATOR: X COMBO
+-----------------------------------------------------------------------
+His signature opener. Two crossing diagonals forming a visible X.
+
+  Cut 1 — DIAGONAL \  (top-right to bottom-left)
+  Cut 2 — DIAGONAL /  (top-left to bottom-right)
+
+  These cross in the middle of the space in front of him.
+  His body is rotating coming out of cut 2. That energy has
+  somewhere to go.
+
+  BRANCH A — DOUBLE SPIN
+    Two full clockwise rotations, sword extended, wide coverage.
+    First spin flows from X momentum. Second spin is the commitment.
+
+  BRANCH B — HALF-SPIN OVERHEAD
+    Rotation starts like Branch A — looks like a spin is coming.
+    Stops at 180 degrees. Back briefly to player.
+    Converts rotational energy into overhead slam straight down.
+    The false spin-read is the trap.
+
+  BRANCH C — FULL SPIN → HALF-SPIN OVERHEAD
+    Full rotation first (dodge it), then immediately half-spin,
+    then overhead. Both. One motion. No reset between them.
+
+-----------------------------------------------------------------------
+INITIATOR: HORIZONTAL SWEEP R→L
+-----------------------------------------------------------------------
+Wide sweep at chest height, right to left.
+Follow-through turns his body. Back faces player.
+Enters BACK TO PLAYER state.
+
+-----------------------------------------------------------------------
+INITIATOR: JUMP LUNGE (gap closer)
+-----------------------------------------------------------------------
+Primary gap closer. He reads distance, jumps, covers ground,
+comes down into a thrust on landing. No landing animation —
+the thrust is the landing.
+
+  Connects: chains immediately into any cut from facing state.
+  Overshoots: enters BACK TO PLAYER state.
+
+  Secondary gap closer (to be defined): a fast low-commitment
+  dash cut for when he's only one or two steps away.
+
+-----------------------------------------------------------------------
+FROM BACK TO PLAYER STATE
+-----------------------------------------------------------------------
+Reached via: horizontal sweep follow-through, mid-spin,
+half-spin stop, any overshoot, or other rotational momentum.
+
+This is not a vulnerability. Every exit is an attack.
+
+  EXIT A — BACKHAND ROTATION
+    Counter-clockwise rotation, sword comes around on backhand.
+    Catches players who read the turned back as an opening.
+
+    From backhand, branches to:
+      → X combo (loops back into X tree)
+      → Jump thrust
+      → Straight stab (quiet, minimal movement, dangerous)
+
+  EXIT B — OVERHEAD SLAM
+    Converts rotation/momentum into committed overhead straight down.
+
+  EXIT C — CONTINUE SPIN
+    If he was mid-spin when he entered back-to-player state,
+    the spin keeps going. No interruption.
+
+-----------------------------------------------------------------------
+FROM OVERHEAD SLAM
+-----------------------------------------------------------------------
+Phase 1 (100%–50% HP): one exit only.
+
+  EXIT — FLOW INTO X
+    Sword ends at lower-left after impact.
+    Rises from lower-left up to upper-left.
+    Drives down to lower-right — second diagonal of the X.
+    The slam's follow-through became the X entry.
+    Players who back off waiting for safety get the X flowing
+    out of the move they thought had ended.
+
+Phase 1.5 (below 50% HP): second exit unlocks. See Section 7B.
+    TIP INTO GROUND → LIGHTNING AOE added as an additional exit.
+    Players who immediately punish the slam get caught mid-punish.
+    Both exits now available — ambiguity increases at the threshold.
+
+-----------------------------------------------------------------------
+DRAGON'S MEMORY — ranged, space control
+-----------------------------------------------------------------------
+Breaks from the melee flow. Forces a spacing conversation.
+Players who stay at range get punished for it.
+
+Tell: Godwyn turns 45 degrees away, looks upward (0.55s).
+      Spectral golden dragon descends from the void above (0.70s).
+
+Active: dragon exhales sacred cone breath.
+  Cone: 110 degrees, 13m length
+  Continuous for ~1.1s
+  Destroyable: dragon has a small secondary HP bar.
+               Attacking and killing the dragon cancels the breath early.
+               Rewards aggression toward the dragon.
+
+After breath: Godwyn turns back to face player, continues from
+              low hang. Players who ran away are now at range.
+              That's where the next initiator begins.
+
+-----------------------------------------------------------------------
+THE PAUSE — psychological, counter mechanic
+-----------------------------------------------------------------------
+Godwyn stops entirely. Sword low. Looking at the player.
+Everything else moves constantly. This doesn't.
+That stillness registers as wrong. The arena feels different.
+
+Duration: 3.0–5.0s randomized.
+
+If player attacks:
+  He steps offline at 0.12s after input. Already ready.
+  Chain begins from the new position immediately.
+  No telegraph. He was deciding, not resting.
+
+If player waits:
+  He initiates from low hang. Jump lunge weighted +30%.
+  The pause was distance assessment.
+
+The Pause cooldown: 15.0s. Rare enough to feel significant.
+
+-----------------------------------------------------------------------
+MEMORY FRAGMENT — buff trigger (not an attack)
+-----------------------------------------------------------------------
+Trigger: 75%, 50%, 25% HP thresholds.
+
+Visual: light flares off him, particles surge, 0.5s burst.
+        Miquella's memory intensifying — the template fighting back.
+
+Duration: 10.0s
+
+While active:
+  All damage +25%
+  Move speed +12%
+  Transition time between cycles -15%
+  Emission intensity 2.5 → 4.0 — visibly, noticeably brighter
+
+Triggers mid-cycle if HP threshold crossed during active motion.
+The hit after the threshold is 25% heavier than the one before it.
+Players near thresholds should expect a sudden spike.
+
+
+================================================================================
+7B. PHASE 1 — SOFT PHASE 2 (50% HP THRESHOLD)
+================================================================================
+
+At 50% HP, lightning attacks unlock. No cutscene. No pause. No HP reset.
+The melee flow continues uninterrupted — the lightning is a new layer
+added on top of everything that already exists.
+
+Lore basis: Godwyn the Golden was beloved by the ancient dragons.
+They recognized him as kin. The lightning is that inheritance surfacing
+as Miquella's memory intensifies — the dragon blood remembering itself.
+
+Visual tell for threshold cross: Memory Fragment fires as normal (light
+flares, emission spikes), but this one also produces golden lightning
+arcing off his body for 1.5s. Players see the lightning and understand
+the fight has changed.
+
+Lightning attacks appear between melee cycles and alongside them.
+They are not a separate mode — they integrate into the existing flow.
+He can finish a melee cycle and immediately call down strikes.
+He can use the shrinking circle to reset engagement range before a
+jump lunge. The two systems feed each other.
+
+-----------------------------------------------------------------------
+PLACIDUSAX CALL — patterned strikes
+-----------------------------------------------------------------------
+Godwyn raises his sword overhead. Golden lightning answers it,
+striking down in a deliberate pattern across the arena floor.
+
+Tell: sword arm raises slowly, golden light accumulates at the tip.
+      Pattern markers appear on the ground 0.6s before strikes land
+      (same visual language as Elden Ring AoE warnings — faint gold rings).
+
+Pattern: not random. A readable arrangement with clear safe zones.
+         Multiple strikes, staggered 0.2s apart across the pattern.
+         Players who read the safe zone survive. Players who panic-dodge
+         into a strike zone don't.
+
+After the pattern resolves: Godwyn brings sword down and immediately
+re-enters melee flow. The call is a spacing tool, not a break.
+
+-----------------------------------------------------------------------
+TARGETED STRIKES — forced movement
+-----------------------------------------------------------------------
+Two versions: standalone and mid-melee.
+
+STANDALONE VERSION
+Lightning specifically tracks the player's current position.
+Series of strikes that arrive where you ARE, not where you're going.
+Standing still is death. Constant movement is survival.
+
+Tell: Godwyn looks directly at the player, sword held out to the side.
+      Gold light pulses from the blade tip before each strike.
+
+Behavior: 3–5 sequential strikes, each targeting player's position
+          at moment of the pulse. 0.4s between pulses.
+          Each strike has a small AoE radius — staying just outside
+          isn't enough. Real distance is required.
+
+After final strike: he closes distance. Jump lunge weighted heavily.
+Players who've been running from the lightning are now at range.
+
+MID-MELEE VERSION (Phase 1.5 integration)
+A single targeted bolt woven into the melee flow. No standalone
+sequence — just one strike called down at the player's position
+during or between cuts. His melee rhythm doesn't stop for it.
+
+Tell: brief gold pulse at sword tip mid-combo. 0.25s warning.
+      Shorter than standalone tell — less time to react.
+
+The player is already dodging melee and suddenly has to also move
+from their current position. The two pressures overlap.
+This is the "lighter" lightning that bleeds into the melee.
+Frequency: can appear once per melee cycle, not every cycle.
+Weighted toward appearing when the player has been stationary
+for more than 0.5s — punishing players who found a safe spot
+and stopped moving.
+
+-----------------------------------------------------------------------
+HORIZONTAL LIGHTNING SWEEP — full arena coverage
+-----------------------------------------------------------------------
+Used when the player is at distance. Punishes passive spacing.
+
+Tell: Godwyn extends his sword arm to his right, fully extended,
+      at chest height. Sword horizontal. He is facing the player
+      but the sword is pointed away. 0.5s hold.
+
+Active: he drags the arm slowly right to left.
+        Parallel lines of golden lightning extend from the blade
+        perpendicular to the sweep direction, traveling outward
+        as the arm moves. The lines follow the sword's path,
+        sweeping the full arena.
+
+Coverage: entire arena width. No safe side — the sweep goes all the way.
+          Safe option: dodge THROUGH a gap between lightning lines.
+          Timing a roll through the sweep is the intended counter-play.
+          The slowness is deliberate — panic-dodging early puts you in
+          the next line.
+
+After sweep: arm drops. He advances. The sweep created distance;
+             he immediately begins closing it.
+
+-----------------------------------------------------------------------
+SHRINKING CIRCLE — arena compression, passive player punishment
+-----------------------------------------------------------------------
+A ring of golden lightning appears simultaneously around both
+Godwyn and the player. It contracts inward at a steady rate.
+
+The only safe space is close to him.
+Distance kills you. The arena enforces it.
+
+Tell: lightning crackles along the ground in a ring before it
+      solidifies. 0.8s warning before the circle becomes lethal.
+
+Behavior:
+  Circle starts at ~15m radius from center point between them.
+  Contracts at ~1.5m/s.
+  Lethal on contact — not a damage-over-time, a hard hit.
+  Full contraction to ~4m radius takes ~7s.
+  At 4m radius, circle holds for 2s then disperses.
+
+During the circle: Godwyn does not wait. He continues his melee
+flow while the circle shrinks. Players are being compressed toward
+him while he's already swinging.
+
+After dispersal: he re-enters normal flow. The circle was geometry,
+                 not a break in his behavior.
+
+Design intention: punishes passive players mechanically and literally.
+                  The shrinking circle and the melee flow combine —
+                  you're being pushed toward a man who isn't stopping.
+                  "Hesitation is defeat" made environmental.
+
+-----------------------------------------------------------------------
+DRAGON'S CHARGE — one-time cinematic attack
+-----------------------------------------------------------------------
+Happens once per fight. Not repeatable. Weighted to trigger sometime
+in Phase 1.5 when the player has been alive long enough to have
+settled into a rhythm. The disruption is the point.
+
+SETUP — he creates distance.
+  He shoves or sweeps the player back — a deliberate distancing move,
+  not part of a melee chain. Player is knocked back several meters.
+  He steps back simultaneously, widening the gap between them.
+  Arena is now open. He is at one end. Player at the other.
+
+EMERGENCE
+  The ground behind him cracks. A spectral golden dragon erupts
+  upward from beneath the arena floor — rising fast, wings spread.
+  It ascends directly behind him, framed against the void sky.
+  He doesn't look at it. He's looking at the player.
+
+THE CHARGE
+  The dragon levels off above him and surges forward —
+  straight toward the player, covering the full arena length.
+  As it flies, it breathes fire downward along the exact line
+  of its flight path. The fire traces the ground in a continuous
+  beam from Godwyn's position all the way to the far end of the arena.
+
+  If the player is in front of him: sprint hard left or right.
+  The fire line covers the entire forward corridor.
+  No dodge roll survives it — roll iframes aren't enough lateral
+  distance. The counter is to RUN, not dodge.
+
+  Width of fire line: ~4m — wide enough that cautious movement
+  doesn't clear it. Real commitment to a direction is required.
+
+THE LANDING
+  Dragon passes through and disperses at the far end of the arena —
+  dissolves back into golden light.
+  Godwyn closes distance immediately after.
+  No recovery window after the charge. He's already coming.
+
+ONE-TIME FLAG
+  Remove from pool after use. Does not repeat.
+  This is a moment, not a mechanic.
+
+-----------------------------------------------------------------------
+OVERHEAD SLAM EXIT — TIP INTO GROUND → LIGHTNING AOE
+-----------------------------------------------------------------------
+Unlocks at 50% HP as a second exit from the overhead slam.
+See Section 7 (FROM OVERHEAD SLAM) for context on the ambiguity.
+
+After the overhead slam lands, instead of flowing into X:
+he drives the sword tip into the ground. Holds it. Beat of silence.
+Looks like the move is over. Players who immediately punish eat this.
+
+Golden lightning erupts from the impact point.
+  Radius: 8m from impact
+  Damage: significant — this is a punish for punishing
+  Visual: lightning travels outward along ground cracks from tip
+
+After eruption: sword pulls free, returns to low hang, melee continues.
+
+-----------------------------------------------------------------------
+LIGHTNING FOLLOW-UPS — melee integration
+-----------------------------------------------------------------------
+Lightning moves feed back into the melee tree, not into idle.
+
+After PLACIDUSAX CALL: re-enters from low hang, any initiator.
+After TARGETED STRIKES (standalone): jump lunge weighted heavily.
+After TARGETED STRIKES (mid-melee): melee cycle continues unbroken.
+After HORIZONTAL SWEEP: advances immediately, X combo or jump lunge.
+After SHRINKING CIRCLE disperses: player is now at close range.
+                                   He's already there. Melee continues.
+After LIGHTNING AOE: sword pulls free, melee resumes from low hang.
+
+The lightning is a spacing system. The melee is the pressure system.
+The two work together — lightning controls where the player is,
+melee punishes them for being there.
+
+
+================================================================================
+8. TRANSITION SEQUENCE
+================================================================================
+
+Trigger:        Godwyn Phase 1 HP = 0
+Player input:   LOCKED full sequence
+Camera:         AnimationPlayer controlled
+
+[0:00–0:02]  Godwyn stops. Light holds.
+[0:02–0:06]  Light fades from void edges inward toward Godwyn.
+             Particles slow to stop.
+[0:06–0:10]  Godwyn form dissolves — gold bleeds into corrupted grey-black.
+             Phase 2 mesh emerges beneath.
+[0:10–0:14]  Void ripples outward. Enir-Ilim arena bleeds through.
+[0:14–0:16]  Void dissolved. Player in arena.
+             Sky begins darkening.
+[0:16–0:20]  Sky fully black.
+             Deathroot spreads to 60% floor coverage.
+             Corrupted Godwyn present, eyes closed.
+[0:20–0:22]  FULL BEAT OF SILENCE.
+[0:22–0:24]  Gate of Divinity lights up. Resonant tone.
+[0:24–0:30]  Gate opens. Miquella walks out.
+             [0:28] Reaches Godwyn. Kneels.
+             Voice: "Lord brother."
+             [0:30] Voice: "Let not our dream of a gentler world be denied
+                           by the will of the Tarnished one."
+[0:30–0:35]  Gold flows from hands into deathroot veins. Full spread 0.5s.
+             Miquella dissolves inward.
+[0:35–0:40]  Body illuminates. Vein pulse begins. Flowers grow from body.
+[0:40–0:43]  Eyes open. SLOW.
+[0:43–0:44]  Voice: "For I shall be the sun that swallows thee."
+[0:44–0:45]  Boss name card:
+               MIQUELLA
+               God of Abundance
+[0:45]       Player input UNLOCKED.
+
+
+================================================================================
+9. PHASE 2 ENVIRONMENT — ENIR-ILIM
+================================================================================
+
+Based faithfully on Elden Ring's Enir-Ilim top arena.
+Dark stone, ancient architecture, Gate of Divinity at far end.
+
+Sky:                  Color(0.03, 0.02, 0.06) — near black
+Shadow Erdtree:       Faint pale shape, background, self-illuminated low
+Arena size:           ~30m x 30m playable
+Elevated platforms:   3–4 root platforms, 0.6m high, scattered — provide
+                      counterplay for Deathroot Tide, break up flat arena
+
+Floor shader:         deathroot_spread.gdshader — starts at 60% on Phase 2 start
+Ambient light:        Near zero — sources are boss emission, flowers, Gate glow
+Haligtree flowers:    Grow from deathroot areas over fight duration
+
+
+================================================================================
+10. PHASE 2 BOSS — MIQUELLA, GOD OF ABUNDANCE
+================================================================================
+
+Boss name card:
+  Line 1:   MIQUELLA
+  Line 2:   God of Abundance
+  Font:     Cinzel
+
+Scale:
+  Upper form height:  5m above floor
+  Arms reach:         15m (arena edges)
+  Face:               4m above floor, centered
+
+Material:
+  Base:               Color(0.78, 0.75, 0.72) — pale grey-white
+  Deathroot veins:    Color(0.05, 0.02, 0.06)
+  Gold vein overlay:  Color(0.9, 0.7, 0.1), pulsing (sine, period 1.4s)
+  Chest emission:     Color(1.0, 0.85, 0.2) intensity 4.0
+  Eyes:               Color(0.9, 0.9, 1.0), always track player
+
+STATS
+-----
+HP:                   3000 (RESETS FULLY at Phase 2 start — Elden Ring standard)
+Poise:                150
+Poise break stagger:  0.9s
+
+WILL SYSTEM
+-----------
+Max Will:             100
+Bar:                  Below stamina, fades in with Phase 2 name card
+Color:                #C8A020
+
+Drain:
+  Facing boss (dot > 0.7):    -8/s
+  Within 5m of face:          -15/s (stacks)
+  During Gaze:                -25/s
+
+Recovery:
+  Moving:                     +12/s
+  Rolling:                    +20/s burst
+  Not facing:                 +6/s
+
+At Will = 0 — THE FORGETTING:
+  HP, Stamina, Flask count hidden — 15 seconds
+  Screen: "Your grace fades."  (small, centered, Cinzel font)
+  Will refills to 30 after Forgetting ends
+
+PHASE 2 AI
+----------
+Attack weights:
+  Corrupted Arc:      20%
+  Dragon's Dirge:     15%
+  Root Surge:         20%
+  Unalloyed Bloom:    15%
+  Grace Revoked:      10%
+  Deathroot Tide:     10%
+  Solar Eruption:     5%
+  Gaze:               5%
+
+Gaze also triggers: at 90s, 180s, 270s into Phase 2
+                    and if player stands still > 4s
+Gaze cooldown:      45s
+
+Compassion's End:   Once only, at 40% HP threshold
+
+Global cooldown:    1.2s min, 2.8s max
+
+
+================================================================================
+11. PHASE 2 ATTACKS
+================================================================================
+
+-----------------------------------------------------------------------
+CORRUPTED ARC
+-----------------------------------------------------------------------
+IDENTICAL geometry to Golden Arc — same 0.7s telegraph, same dodge window.
+Muscle memory from Phase 1 applies and is the trap.
+
+Damage:         90
+Poise dmg:      22
+Deathroot:      Path of arc leaves blight zone 3.0s — 8 damage/s
+Two-hit:        35% chance
+Cooldown:       4.0s
+
+-----------------------------------------------------------------------
+DRAGON'S DIRGE
+-----------------------------------------------------------------------
+Same structure as Dragon's Memory.
+Breath is gold-black. Sacred + death blight simultaneously.
+
+Sacred dmg/s:   40
+Blight dmg/s:   30
+Blight lingers: 2.0s in breath zone — 15 blight/s
+Cooldown:       7.0s
+
+-----------------------------------------------------------------------
+ROOT SURGE
+-----------------------------------------------------------------------
+Telegraph:      0.9s
+  Phase 1 (0.5s): Gold light traces crack network
+  Phase 2 (0.4s): Root tips visible beneath floor
+
+Active:         0.4s eruption
+  Hitbox:       Line segments along crack path, 0.6m radius, 2m height
+  Damage:       75
+  Poise dmg:    18
+  Knockback:    Upward 1.5m
+
+Patterns (random):
+  A) Single line toward player
+  B) Branching Y
+  C) Expanding ring
+  D) Spiral from boss outward
+
+Roots visible:  3.0s post-eruption (visual only)
+Cooldown:       5.0s
+
+-----------------------------------------------------------------------
+UNALLOYED BLOOM
+-----------------------------------------------------------------------
+Clusters:       2–4 per use, 3–6 flowers each
+Growth:         1.0s telegraph
+
+Bloom:
+  Duration:     0.8s
+  Area:         1.5m radius per flower
+  Heal:         30 HP to player (meaningful vs 500 max HP — worth taking)
+
+Collapse:
+  Delay:        0.3s after bloom
+  Active:       0.4s
+  Area:         2.0m radius (slightly larger — punishes staying)
+  Damage:       85 (death blight)
+
+Cooldown:       6.0s
+
+-----------------------------------------------------------------------
+GAZE
+-----------------------------------------------------------------------
+No telegraph — eyes focus
+Will drain:     -25/s stacked on base drain
+Duration:       Until player rolls/attacks or 8s max
+Boss movement:  Slowly approaches 1.5 m/s during Gaze
+Visual:         Gold ring in eyes, screen vignette
+Cooldown:       45s
+
+-----------------------------------------------------------------------
+THE HOLD
+-----------------------------------------------------------------------
+Telegraph:      0.5s tracking hand
+Grab hitbox:    1.8m sphere on hand
+While held:
+  Will drain:       -20/s
+  Physical dmg:     5/s
+  Camera away:      drain -8/s
+  Camera toward:    drain +15/s
+  Break:            Rapid input mash, 1.5s
+If Will = 0 while held: Forgetting triggers, dropped (20 HP fall)
+Cooldown:       20s
+
+-----------------------------------------------------------------------
+GRACE REVOKED
+-----------------------------------------------------------------------
+Telegraph:      1.0s — hand rises slowly
+Columns:        6–9, semi-random but always 2–3 safe lanes
+Descent:        4 m/s (slow, readable)
+On landing:
+  Damage:       95 (sacred)
+  Area:         2.0m radius
+  Patch:        Lingers 2.5s, 20 dmg/s
+Recovery:       0.7s
+Cooldown:       8.0s
+
+-----------------------------------------------------------------------
+DEATHROOT TIDE
+-----------------------------------------------------------------------
+Telegraph:      0.4s — gold drains from floor (color inversion)
+Active:         0.2s full floor blight pulse
+  Damage:       65
+  Poise dmg:    10
+Counterplay:    Jump, or reach elevated root platforms
+Cooldown:       12.0s
+Secondary tell: Godwyn posture shifts downward ~2s before (expert tell)
+
+-----------------------------------------------------------------------
+SOLAR ERUPTION
+-----------------------------------------------------------------------
+Telegraph:      1.5s — chest builds to white
+Camera:         Dynamic pullback to max
+Active:         0.3s
+  Hitbox:       12m sphere centered on boss
+  Damage:       110 (sacred)
+  Poise dmg:    40
+  Knockback:    5m radial
+Visual aftermath: Deathroot within 8m cauterized to glass — permanent visual
+Cooldown:       25.0s
+
+-----------------------------------------------------------------------
+COMPASSION'S END
+-----------------------------------------------------------------------
+Trigger:        Boss HP crosses 40% — ONCE PER FIGHT
+Cannot repeat.
+
+Telegraph:      2.0s — face lowers toward floor (Deathroot Tide posture)
+The subversion:  NOT Deathroot Tide. Player who learned that will jump.
+                 The exhale catches jumpers safely — the cap means no death.
+
+Exhale ring:
+  Expands:      6 m/s from face outward
+  Covers arena: ~2.5s
+  Damage:       Player HP SET TO 1 — hard cap. Cannot kill.
+
+Post-exhale:
+  Boss still for 3.0 seconds. Looking at player. No attack.
+  The only moment of complete stillness in Phase 2.
+  Then resumes normal attack selection.
+
+
+================================================================================
+12. VOICE LINES
+================================================================================
+
+Voice direction: Soft, genderless, unhurried. Never raised. Barely above a
+whisper. All lines subtitled. Elden Ring subtitle style.
+
+INTRO (deathroot wrap, before void):
+  "Lord of the Old Order, guided by grace."
+  [1.5s pause]
+  "Divest thyself of thy flesh, sins, and base desires."
+
+VOID (as Godwyn silhouette approaches):
+  "Impress his golden memory upon thine soul."
+  [Godwyn stops]
+  "For he is my promised consort."
+
+MEMORY FRAGMENTS (Phase 1 AI):
+  75% HP: "He welcomed the dying dragon's final flight."
+  50% HP: "He refused the last blow when mercy was possible."
+  25% HP: "He was the one they all turned toward."
+
+TRANSITION (scripted):
+  [0:24]: "Lord brother."
+  [0:30]: "Let not our dream of a gentler world be denied
+           by the will of the Tarnished one."
+  [0:43]: "For I shall be the sun that swallows thee."
+
+PHASE 2 (contextual, minimal):
+  First Gaze:           [silence — the absence is intentional]
+  Compassion's End:     [no line — silence is the statement]
+
+PLAYER DEATH SCREEN
+-------------------
+Text: "YOU DIED"
+Font: Cinzel
+Color: #C8986E (Elden Ring's warm bronze-gold)
+Faithful to Elden Ring exactly.
+
+On player death in Phase 2 specifically:
+  After "YOU DIED" fades:
+  Very quiet, barely audible: "Stay."
+  This is the only additional text. Optional — can be removed if
+  it conflicts with the faithful Elden Ring feel.
+
+
+================================================================================
+13. VISUAL SPECIFICATION
+================================================================================
+
+COLOR PALETTE
+-------------
+Gold (primary):     #D4A017
+Gold (emissive):    #FFB800
+Gold (light):       #FFD966
+Deathroot black:    #0D0610
+Deathroot vein:     #6B4F00
+Void black:         #000000
+Corrupted skin:     #C8C0B8
+Sky Phase 2:        #080510
+Sacred damage:      #FFFBE6
+Death blight:       #1A0030  (dark purple-black)
+
+POST-PROCESSING
+---------------
+Bloom:              Threshold 0.85, Intensity 0.6, Radius 3.0
+DOF:                Cutscenes only
+Color grading:      Saturation 0.8, Contrast 1.1, Brightness 0.95
+
+SHADERS
+-------
+
+void_atmosphere.gdshader
+  Volumetric gold fog, animated slow upward drift
+  Parameters: density, color, height, drift_speed
+
+emissive_godwyn.gdshader
+  Self-illuminating, gold shimmer animation
+  Godwyn is the scene's only light source in Phase 1
+  Parameters: base_color, emission_color, emission_intensity, shimmer_speed
+
+deathroot_spread.gdshader
+  Spreading mask on floor: 0.0 (none) to 1.0 (full coverage)
+  Gold vein pulse (sine wave, period 1.4s)
+  Parameters: spread_amount, vein_color, pulse_speed, pulse_amplitude
+  Driven by: game_manager.deathroot_spread_amount
+
+gold_vein_pulse.gdshader
+  Phase 2 boss body: pale base + black veins + gold animated overlay
+  Parameters: base_color, vein_color, gold_color, pulse_speed
+
+void_dissolve.gdshader
+  Ripple outward transition, reveals Phase 2 through ripples
+  Parameters: ripple_progress (0→1), ripple_speed, ripple_count
+
+corruption_reveal.gdshader
+  Lerps Phase 1 to Phase 2 material, corruption enters from edges
+  Parameters: corruption_amount (0→1)
+
+
+================================================================================
+14. UI SPECIFICATION
+================================================================================
+
+Faithful to Elden Ring HUD layout exactly.
+
+PLAYER HUD (bottom-left)
+------------------------
+HP bar:
+  Position:     40px from left, 80px from bottom
+  Size:         280px x 14px
+  Color:        #C00000, border #000000
+  Background:   #1A0000
+
+FP bar:
+  Position:     Below HP, 8px gap
+  Size:         200px x 10px
+  Color:        #0050A0
+
+Stamina bar:
+  Position:     Below FP, 8px gap
+  Size:         240px x 10px
+  Color:        #7A9A20
+
+Flask display:
+  Position:     Below stamina, 12px gap
+  Count:        5 uses, icon + number
+  Style:        Elden Ring Sacred Flask — icon dims when 0 remaining
+
+Will bar (Phase 2 only):
+  Position:     Below flask, 12px gap
+  Size:         240px x 10px
+  Color:        #C8A020
+  Background:   #1A1200
+  Label:        "WILL" small text left of bar
+  Fade in:      1.0s at Phase 2 start
+
+BOSS UI (bottom-center)
+-----------------------
+Boss HP bar:
+  Position:     Center, 40px from bottom
+  Size:         600px x 14px
+  Color:        #C00000
+  Phase 2 bar:  Same position, slight gold tint #C05000
+
+Boss name card:
+  Appears:      0.5s after phase start
+  Line 1:       28pt Cinzel, uppercase, white with gold tint
+  Line 2:       16pt Cinzel, italic, slightly letter-spaced
+  Animation:    Fade in 0.6s, hold, HP bar fades in beneath it
+
+DEATH SCREEN
+------------
+Timing:         0.8s after death animation
+Fade to black:  0.5s
+Text:           "YOU DIED" — Cinzel, large, centered, #C8986E
+Text fade in:   0.5s after black
+Hold:           2.5s
+Restart:        Current phase start
+
+
+================================================================================
+15. ASSET LIST
+================================================================================
+
+MESHES                             SOURCE
+-------------------------------    ---------------------------
+Player (Tarnished-like)            Mixamo base + dark fantasy armor from
+                                   Sketchfab (search: "dark fantasy knight")
+Player animations                  Mixamo animation pack
+Godwyn Phase 1 (idealized)         Base human mesh, tall/broad, custom
+Godwyn Phase 2 (corrupted)         Phase 1 mesh + deathroot geometry added
+Miquella (small, child)            Separate base mesh, 1.4m, slender
+Dragon (spectral)                  Free dragon mesh from Sketchfab,
+                                   transparency + emissive for spectral look
+Enir-Ilim arena                    Modular stone tiles + custom layout
+Gate of Divinity                   Custom: tall archway, stone, gold trim
+Root/deathroot geometry            Procedural via Godot CSG or external tube mesh
+Haligtree flowers                  Custom low-poly, two-toned texture
+Player weapon (greatsword)         Sketchfab search: "fantasy greatsword"
+
+TEXTURES (ComfyUI on mossad, second GPU)
+Corrupted skin                     Prompt: "pale necrotic skin with black root
+                                   veins, god-like, dark fantasy, seamless"
+Deathroot surface                  Prompt: "dark purple-black organic root
+                                   network with gold veins, seamless texture"
+Stone arena floor                  Prompt: "ancient dark stone floor,
+                                   cracked, dark fantasy, seamless"
+Gold vein overlay                  Prompt: "golden energy veins, glowing,
+                                   transparent background, seamless"
+Player armor                       Prompt: "tarnished knight armor,
+                                   worn, dark gold trim, seamless"
+
+AUDIO
+-----
+Miquella voice lines:   ElevenLabs — voice profile: soft, androgynous,
+                        calm, slightly ethereal. Age: ageless.
+                        Generate all lines listed in Section 12.
+
+Music:
+  Phase 1:              Dark fantasy orchestral, somber, choir elements.
+                        Tempo: slow build. No percussion until Memory Fragment.
+                        Source: royalty-free — Incompetech, Pixabay, or
+                        commissioned from Fiverr composer.
+  Phase 2:              Full orchestral, choir, percussion. Builds urgency
+                        without chaos. Gold undertone (brass, bells).
+  Transition:           Ambient, no melody. Just texture and space.
+                        Silence at [0:20] (the full beat) is intentional.
+
+SFX (all from Freesound.org or generated):
+  Attack impacts:       Sword on flesh, with sacred light version
+  Boss attacks:         Whoosh + sacred resonance for golden attacks
+                        Wet organic impact for deathroot attacks
+  Void mote:            Soft crystalline ping (barely audible)
+  Gate of Divinity:     Deep resonant tone on light-up
+  Eye open:             Unsettling low hum, very subtle
+  Compassion's End:     Soft exhale, like wind through reeds
+  Death SFX:            Elden Ring-style — silence, then UI sound
+  "YOU DIED" appear:    Elden Ring-style UI sting
+
+
+================================================================================
+16. BUILD ORDER FOR FABLE
+================================================================================
+
+PHASE 0 — FOUNDATION  (Day 1, morning)
+---------------------------------------
+0.1  Search GitHub: evaluate top 3 Godot 4 souls-like frameworks
+     Report findings, select best or decide to build from scratch
+0.2  Install Godot 4 on mossad if not present
+     (pacman -S godot or flatpak — confirm Vulkan support active)
+0.3  Initialize project per Section 2 folder structure
+0.4  Confirm Vulkan renderer active (Project Settings > Rendering)
+0.5  Placeholder assets: capsule mesh for player, sphere for boss
+0.6  Establish naming conventions across all scripts
+
+Deliverable: Project opens, Vulkan active, folder structure in place.
+
+PHASE 1 — PLAYER SYSTEM  (Day 1)
+----------------------------------
+1.1  CharacterBody3D player with movement (WASD, sprint)
+1.2  Camera system — default and lock-on per Section 4
+1.3  Roll with iframe window (use collision layer disable during frames 4–16)
+1.4  Stamina system (player_stats.gd) — costs, recovery, display
+1.5  Light and heavy attack with hitbox activation on correct frames
+1.6  Hitstop implementation (Engine.time_scale)
+1.7  Lock-on (lock_on.gd) — targeting, camera behavior, strafe
+1.8  Flask system — 5 uses, heal 180 HP, animation cancel at 0.3s
+1.9  Player HUD (hud.tscn) — HP, FP, Stamina, Flask display per Section 14
+1.10 Death state — animation, black fade, "YOU DIED" screen, restart
+
+Deliverable: Player feels like Elden Ring. Combat weight is correct.
+             This phase gets iterated until it feels right before moving on.
+
+PHASE 2 — VOID ENVIRONMENT  (Day 1–2)
+---------------------------------------
+2.1  void.tscn — world environment, black background, zero ambient
+2.2  Faint floor surface (15% opacity dark stone)
+2.3  void_atmosphere.gdshader — volumetric gold fog
+2.4  Particle system — 400 gold motes, slow upward drift
+2.5  Crack of light — Gate of Divinity shape, 8m, fade in 2.0s
+2.6  Arena boundary (invisible collision wall, 20m radius)
+2.7  Post-processing: bloom settings per Section 13
+
+Deliverable: Standing in the void looks correct and atmospheric.
+
+PHASE 3 — GODWYN PHASE 1  (Day 2)
+-----------------------------------
+3.1  Placeholder boss mesh (tall capsule, 3.2m)
+3.2  emissive_godwyn.gdshader applied — boss as room light source
+3.3  Boss state machine scaffold (boss_base.gd + godwyn_p1_ai.gd)
+3.4  Boss HP bar + name card UI per Section 14
+3.5  Hitbox/hurtbox system (hitbox.gd, hurtbox.gd)
+3.6  Implement Golden Arc — hitbox, telegraph, two-hit variant
+3.7  Implement Sacred Slam — delayed trigger, shockwave ring
+3.8  Implement Dragon's Memory — dragon placeholder, cone breath, dragon HP bar
+3.9  Implement Radiant Dash — fast, follow-up variant
+3.10 Implement The Pause — parry counter into Radiant Dash
+3.11 Memory Fragment system — HP thresholds, voice trigger, intensify buff
+3.12 AI attack selection weights per distance (Section 6)
+3.13 Phase 1 death trigger → hand off to transition manager
+3.14 Poise system — poise damage, poise break stagger
+
+Deliverable: Phase 1 fully playable start to death trigger.
+
+PHASE 4 — TRANSITION SEQUENCE  (Day 2–3)
+------------------------------------------
+4.1  transition_sequence.gd — scripted timeline controller
+4.2  Player input lock/unlock at correct timestamps
+4.3  void_dissolve.gdshader — ripple outward effect
+4.4  corruption_reveal.gdshader — gold to corrupted material lerp
+4.5  Enir-Ilim scene loads in background during [0:10–0:14]
+4.6  Sky color lerp — pale to near-black over 2.0s
+4.7  deathroot_spread.gdshader advances to 60% at transition end
+4.8  Miquella mesh placeholder (small capsule, 1.4m)
+4.9  Miquella walk path — Gate of Divinity to Godwyn center
+4.10 Kneeling animation placeholder
+4.11 Gold flow from hands — particle system from hands into floor veins
+4.12 Miquella dissolve inward — fade + scale to 0
+4.13 Boss body illumination — gold vein pulse activates
+4.14 Haligtree flower spawn begin
+4.15 Eye open animation — driven by AnimationPlayer, slow
+4.16 Voice lines timed to timestamps
+4.17 Boss name card swap animation
+4.18 Camera path for full sequence via AnimationPlayer
+4.19 Full sequence timing pass — play through 10 times, tune pacing
+
+Deliverable: Transition sequence plays correctly, timing feels right.
+
+PHASE 5 — PHASE 2 ENVIRONMENT  (Day 3)
+----------------------------------------
+5.1  enir_ilim.tscn — arena geometry, stone floor, walls, Gate
+5.2  deathroot_spread.gdshader on floor mesh
+5.3  Deathroot spread driven by game_manager (increases over fight duration)
+5.4  3–4 elevated root platforms (0.6m height, NavigationMesh updated)
+5.5  Haligtree flower scene (ambient decoration, slow growth animation)
+5.6  Near-zero ambient lighting setup
+5.7  Gate of Divinity background — constant soft gold glow
+5.8  Shadow Erdtree background — very faint, self-illuminated
+5.9  Post-processing: same bloom, slight color desaturation
+
+Deliverable: Phase 2 arena looks correct.
+
+PHASE 6 — MIQUELLA / PHASE 2  (Day 3–4)
+-----------------------------------------
+6.1  Phase 2 boss mesh applied (Godwyn corrupted placeholder geometry)
+6.2  gold_vein_pulse.gdshader applied to boss body
+6.3  Eye tracking — always faces player (look_at every frame)
+6.4  Extended boss state machine (godwyn_p2_ai.gd)
+6.5  Phase 2 HP bar (fresh 3000 HP — reset)
+6.6  Will system (will_system.gd) + Will bar UI — appear on Phase 2 start
+6.7  Implement Corrupted Arc (Golden Arc geometry + deathroot aftermath)
+6.8  Implement Dragon's Dirge (Dragon's Memory + blight damage type)
+6.9  Implement Root Surge (all 4 pattern variants)
+6.10 Implement Unalloyed Bloom (flower spawn, heal, collapse, blight)
+6.11 Implement Gaze (Will drain spike, slow approach)
+6.12 Implement The Hold (grab, lift, camera mechanic, mash break)
+6.13 Implement Grace Revoked (columns from sky, sacred patches)
+6.14 Implement Deathroot Tide (floor pulse, jump counterplay)
+6.15 Implement Solar Eruption (chest burst, glass aftermath)
+6.16 Implement Compassion's End (HP cap at 1, 3s wait)
+6.17 Phase 2 AI behavior, attack weights, Gaze timing triggers
+6.18 Phase 2 boss death — eyes close, roots still, deathroot stops
+6.19 Victory state — rune pickup prompt, Site of Grace appears
+
+Deliverable: Full fight playable Phase 1 → Transition → Phase 2 → Victory.
+
+PHASE 7 — ASSET REPLACEMENT + POLISH  (Day 4+)
+------------------------------------------------
+7.1  Replace all placeholder meshes with real assets
+7.2  ComfyUI texture generation and application (second GPU)
+7.3  Animations — player full set via Mixamo, boss attack animations
+7.4  Audio integration — voice lines, SFX, music per Section 15
+7.5  Feel tuning — attack timing, hitbox sizes, damage values
+     Play through 20+ times. Adjust. Repeat.
+7.6  Camera tuning — dynamic pullback timing, lock-on feel
+7.7  Hitstop and impact tuning
+7.8  Performance profiling — both 3060 Ti's should handle easily,
+     but profile deathroot spread shader and particle systems
+7.9  Bug pass
+7.10 Final playthrough — complete sequence Phase 1 to Victory
+
+
+================================================================================
+17. MOSSAD SETUP CHECKLIST
+================================================================================
+
+Before Fable starts, confirm on mossad:
+
+  □ Godot 4.x installed (godot or godot4 in PATH)
+  □ Vulkan drivers active (verify: vulkaninfo | grep GPU)
+  □ Git installed
+  □ ComfyUI installed on second GPU (CUDA_VISIBLE_DEVICES=1)
+  □ ElevenLabs API key available (for voice generation)
+  □ Blender installed (optional — for mesh editing)
+  □ Project directory created: ~/godwyn-boss-fight/
+  □ Sufficient disk space (estimate: 10–20GB for full project)
