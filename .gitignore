@@ -1,0 +1,8 @@
+# Local build tooling — contains server-specific connection details.
+# Kept out of the public repo; lives locally and on the render server.
+blender-build-plan.txt
+blender-workflow.js
+
+# Blender working files
+*.blend1
+renders/wip/

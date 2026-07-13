@@ -1,6 +1,6 @@
 ================================================================================
 GODWYN / MIQUELLA BOSS FIGHT — FULL BUILD SPEC
-Target: Godot 4, Arch Linux (mossad), 2x RTX 3060 Ti, Vulkan renderer
+Target: Godot 4, Arch Linux render server, 2x RTX 3060 Ti, Vulkan renderer
 Goal: Elden Ring-faithful boss fight, new encounter within that aesthetic
 Fidelity target: indistinguishable from a new Elden Ring boss fight
 ================================================================================
@@ -1259,7 +1259,7 @@ Root/deathroot geometry            Procedural via Godot CSG or external tube mes
 Haligtree flowers                  Custom low-poly, two-toned texture
 Player weapon (greatsword)         Sketchfab search: "fantasy greatsword"
 
-TEXTURES (ComfyUI on mossad, second GPU)
+TEXTURES (ComfyUI on the render server, second GPU)
 Corrupted skin                     Prompt: "pale necrotic skin with black root
                                    veins, god-like, dark fantasy, seamless"
 Deathroot surface                  Prompt: "dark purple-black organic root
@@ -1307,7 +1307,7 @@ PHASE 0 — FOUNDATION  (Day 1, morning)
 ---------------------------------------
 0.1  Search GitHub: evaluate top 3 Godot 4 souls-like frameworks
      Report findings, select best or decide to build from scratch
-0.2  Install Godot 4 on mossad if not present
+0.2  Install Godot 4 on the render server if not present
      (pacman -S godot or flatpak — confirm Vulkan support active)
 0.3  Initialize project per Section 2 folder structure
 0.4  Confirm Vulkan renderer active (Project Settings > Rendering)
@@ -1442,10 +1442,10 @@ PHASE 7 — ASSET REPLACEMENT + POLISH  (Day 4+)
 
 
 ================================================================================
-17. MOSSAD SETUP CHECKLIST
+17. RENDER SERVER SETUP CHECKLIST
 ================================================================================
 
-Before Fable starts, confirm on mossad:
+Before Fable starts, confirm on the render server:
 
   □ Godot 4.x installed (godot or godot4 in PATH)
   □ Vulkan drivers active (verify: vulkaninfo | grep GPU)
