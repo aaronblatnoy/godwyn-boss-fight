@@ -24,16 +24,17 @@ deathroot outward because there was nothing inside to say stop, this is enough,
 this is where I end. A body with no soul is still alive in Elden Ring. It just
 doesn't know what for.
 
-Miquella arrives in the Land of Shadow as pure soul. He shed his flesh at the
-threshold — left it in the cocoon at Mohgwyn Palace. He shed his love, his
-will, his grace. What traveled through the Land of Shadow was intention with no
-vessel.
+Miquella crosses the Land of Shadow shedding himself the entire way. Not one
+act at a threshold — a progression. His flesh, his love, his will, his grace,
+each left behind along the path he walked. By the time he reaches Enir-Ilim,
+what remains is pure soul. Intention with no vessel. His body has been
+discarded, extracted from him and left in the world behind.
 
-Godwyn's body is vessel with no intention.
+Godwyn's body is the inverse: vessel with no intention.
 
 These are not two damaged things patching each other's wounds. They are two
-complementary absences. The soul that has no body capable of containing it. The
-body that has no soul capable of directing it.
+complementary absences. The soul that has shed the body meant to contain it.
+The body that has lost the soul meant to direct it.
 
 
 WHY GODWYN'S BODY SPECIFICALLY
@@ -55,6 +56,23 @@ through the one substance no outer god can touch. Sovereign death, for the
 first time since Marika suppressed it.
 
 
+WHY GODWYN
+----------
+
+Of everyone Miquella could restore, he chose Godwyn the Golden. Not out of
+grief alone — out of design. Godwyn was the most beloved figure in the Lands
+Between. Revered by all, honored by all, mourned by all. His Golden Lineage was
+the heart of the old order. To bring back Godwyn is to give the world back the
+one it wept for. The gentler age Miquella wants needs a beloved face at its
+center, and there is no face more beloved.
+
+The obstacle is precise. Godwyn's body survives — but his soul was killed on
+the Night of the Black Knives, struck by Destined Death while his body was
+spared. The most complete person in the Lands Between was severed down the
+middle. Body without soul. To restore Godwyn, Miquella needs to replace the one
+thing that cannot be recovered: the soul itself.
+
+
 MIQUELLA'S ORIGINAL PLAN
 -------------------------
 
@@ -66,12 +84,18 @@ Not to fight. As the material.
 
 The plan: pull the Tarnished into the ritual space — the void between death and
 life where his shed soul travels — and press Godwyn's memory onto their soul.
-Gradually, completely. The Tarnished's own essence displaced. What remained
-would be shaped like Godwyn. Would move like him. Would be him, functionally,
-in every way that matters for inhabiting his waiting body.
+Gradually, completely. The Tarnished's own essence displaced, overwritten by
+the golden memory until what remained was no longer the Tarnished at all. It
+would be shaped like Godwyn. Would move like him. Would BE him — a new soul,
+made from the Tarnished's, imprinted into the exact form of the one that died.
+Godwyn's soul, restored not by recovery but by forgery, ready to inhabit
+Godwyn's waiting body.
 
-The most beloved demigod restored. Not his original soul — that's dead. A new
-one. Made from the Tarnished.
+Whether he had attempted this before — with other Tarnished, with demigods,
+with anyone whose soul might take the imprint — is an open question. The Land
+of Shadow is littered with the things he discarded. It may be littered with
+failures of this too. The Tarnished may simply be the first soul strong enough
+to be worth the attempt, or the last in a long line of them.
 
 This is the ultimate expression of Miquella's charm. Not devotion. Not
 sacrifice. Becoming. He's been charming people into giving him pieces of
@@ -84,6 +108,23 @@ THE DENIAL
 The Tarnished's will is strong enough to resist. The soul holds. The template
 doesn't take.
 
+And this is what Phase One IS. The fight against memory-Godwyn in the ritual
+space is not a battle in the ordinary sense — it is the resistance itself,
+made visible. Every strike the player lands against that golden memory is the
+Tarnished's soul refusing to be overwritten. Miquella is pressing the template
+down; the player is pushing it off. The combat is the argument. The health bar
+is the measure of how much of the imprint has been rejected.
+
+There is a specific defiance in this. The Tarnished is a being widely perceived
+to have no self at all — a hollow, a corpse called back by grace, a blank
+convenience for the schemes of gods and would-be gods. Miquella's entire plan
+depends on that perception being true: that the Tarnished is empty enough to be
+filled, formless enough to be shaped. Phase One is the perception proven wrong.
+The supposedly soulless thing turns out to have the one soul in the Lands
+Between too stubborn to overwrite. It is an assertion of personhood from
+precisely the entity assumed to have none — the flame of ambition and the
+audacity of sheer will, answering a god who counted on finding neither.
+
 "Let not our dream of a gentler world be denied by the will of the Tarnished
 one."
 
@@ -92,10 +133,15 @@ to himself — of what just happened and why he's changing the plan. The denial
 is specific: the Tarnished's selfhood refused erasure. Not strength of arms.
 Strength of will.
 
-So he adapts. God and consort were supposed to be two — Miquella in the divine
-seat, the Tarnished-as-Godwyn in the vessel. Instead he collapses the
-distinction entirely. He enters Godwyn's body himself. Not as a rider or
-puppeteer. As a unification.
+So he adapts, and the adaptation is a sacrifice. The Tarnished's soul will not
+become Godwyn's. But Godwyn's body still needs a soul, and there is one soul
+left that could fill it — his own. The soul he extracted from himself and
+carried across the Land of Shadow, shedding everything else to keep it pure.
+He never intended to spend it this way. God and consort were supposed to be
+two — Miquella in the divine seat, the Tarnished-as-Godwyn in the vessel.
+With the forgery denied, he collapses the distinction entirely. He pours his
+own soul — the only one that will still answer — into the soulless body. Not as
+a rider or puppeteer. As a unification.
 
 "For I shall be the sun that swallows thee."
 
@@ -187,7 +233,8 @@ light behind him is the only reference point in absolute black.
 The fight against the ideal Godwyn is resistance. Miquella is pressing the
 memory onto the Tarnished's soul — trying to overwrite their identity with the
 template. Every hit the player lands is their own soul asserting itself. Their
-will refusing the replacement.
+will refusing the replacement. The entity the whole world wrote off as hollow
+turns out to be the one thing too willful to fill.
 
 He made the template beautiful on purpose. The charm works through desire.
 He needs the Tarnished to want to become this. They don't.
