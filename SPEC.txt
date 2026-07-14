@@ -302,14 +302,23 @@ The most beloved demigod as he was before Ranni's scheme.
                 Expression throughout fight: neutral-sorrowful, the face of
                 someone being used who cannot object but carries no aggression
                 Clean — no dark markings, no corruption visible
-  Armor:        Partial gold plate over open chest — chest exposed, gold
-                filigree on the sternum, arm guards, shoulder pieces
-                NOT full plate — the body itself is the statement
-  Garment:      Long blue flowing robes/cape as primary — same blue as
-                seen in fan references, moves with him
+  Armor:        ORNATE GOLD PLATE, near-full coverage — an elite warrior-king.
+                Engraved gold cuirass fully covering the chest and torso
+                (sacred filigree, not exposed skin), matching pauldrons,
+                gauntlets/vambraces, and a gorget at the neck. The gold is
+                the statement — regal, gleaming, covered.
+  Legs:         Armored FAULDS / TASSETS — layered gold plate skirt panels
+                (reads as armor, NOT a cloth skirt), over greaves. Near-full
+                leg coverage in gold plate.
+  Feet:         SABATONS — articulated gold armored boots. NOT barefoot.
+  Garment:      A single flowing BLUE CAPE as the only cloth — his color
+                identity, worn over the plate, moving with him. No blue
+                robe/skirt; the lower body is armored, not draped.
+  Coverage:     Near-full — minimal exposed skin. Face and (loosely) the
+                neck read as skin; everything else is gold plate + the cape.
   Crown:        NONE — no circlet, no crown. His presence is the crown.
-  Feet:         Barefoot
-  Skin:         Pale, near-translucent — demigod skin, subtly luminous
+  Skin:         Pale, near-translucent where visible (face) — demigod skin,
+                subtly luminous
   Scale:        3.2m height, 1.4x human proportions — idealized but
                 still reads as a person, not a landscape
 
@@ -337,8 +346,11 @@ Material:
   Emission casts light: YES — Godwyn is the room's light source
   Light radius:       12m
   Light color:        Color(1.0, 0.92, 0.6)
-  Robes:              Deep blue, Color(0.08, 0.12, 0.35), no emission
+  Cape:               Deep blue, Color(0.08, 0.12, 0.35), no emission
+                      (the only cloth — lower body is armored, not draped)
   Armor:              Gold, Color(0.82, 0.65, 0.15), slight metallic sheen
+                      Near-full coverage: cuirass, faulds/tassets, greaves,
+                      sabatons, pauldrons, gauntlets, gorget
 
 STATS
 -----
