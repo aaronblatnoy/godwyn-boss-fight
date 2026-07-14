@@ -1,0 +1,8 @@
+# Binary asset types — prevent CRLF mangling
+*.png   binary
+*.blend binary
+*.blend1 binary
+*.exr   binary
+*.hdr   binary
+*.glb   binary
+*.fbx   binary

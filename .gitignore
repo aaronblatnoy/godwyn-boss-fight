@@ -2,6 +2,7 @@
 # Kept out of the public repo; lives locally and on the render server.
 blender-build-plan.txt
 blender-workflow.js
+godwyn-model-workflow.js
 
 # Blender working files
 *.blend1
