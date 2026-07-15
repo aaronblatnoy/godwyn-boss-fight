@@ -302,23 +302,31 @@ The most beloved demigod as he was before Ranni's scheme.
                 Expression throughout fight: neutral-sorrowful, the face of
                 someone being used who cannot object but carries no aggression
                 Clean — no dark markings, no corruption visible
-  Armor:        ORNATE GOLD PLATE, near-full coverage — an elite warrior-king.
-                Engraved gold cuirass fully covering the chest and torso
-                (sacred filigree, not exposed skin), matching pauldrons,
-                gauntlets/vambraces, and a gorget at the neck. The gold is
-                the statement — regal, gleaming, covered.
-  Legs:         Armored FAULDS / TASSETS — layered gold plate skirt panels
-                (reads as armor, NOT a cloth skirt), over greaves. Near-full
-                leg coverage in gold plate.
-  Feet:         SABATONS — articulated gold armored boots. NOT barefoot.
-  Garment:      A single flowing BLUE CAPE as the only cloth — his color
-                identity, worn over the plate, moving with him. No blue
-                robe/skirt; the lower body is armored, not draped.
-  Coverage:     Near-full — minimal exposed skin. Face and (loosely) the
-                neck read as skin; everything else is gold plate + the cape.
+  Armor:        ORNATE, LAYERED GOLD PLATE, near-full coverage — the main
+                structure. Intricately engraved throughout with gold filigree /
+                laurel scrollwork (this is a HIGHLY ornate suit, not plain plate):
+                - an engraved BREASTPLATE with a central sacred EMBLEM/medallion
+                  over the chest (chest COVERED, not shirtless)
+                - ornate layered PAULDRONS at the shoulders
+                - ARMORED ARMS: upper-arm guards + full gauntlets/vambraces
+                - armored LEGS: thigh plates + GREAVES into sabatons / armored
+                  boots (NOT barefoot)
+                - a studded BELT with gold fittings at the waist
+                Reference (@DOUJ Godwyn): ornate, weighty, elegant — Elden Ring
+                design language, layered and intricately detailed.
+  Garment:      DEEP-BLUE cloth INTEGRATED INTO the armor — NOT a back cape,
+                NOT a standalone robe. Woven through the armored ensemble:
+                - a hanging front TABARD / SURCOAT panel down the center, from
+                  the waist belt to the floor (the primary blue element)
+                - blue cloth UNDERLAYER / accents showing between the gold plates
+                - optional side/back panels trailing to the floor
+                GOLD laurel/vine EMBROIDERY along the blue edges and hems.
+                The blue reads as PART OF the armor — one unified gold-and-blue
+                ensemble (like the reference), never a cape.
+  Coverage:     Near-full — the face is essentially the only exposed skin.
   Crown:        NONE — no circlet, no crown. His presence is the crown.
-  Skin:         Pale, near-translucent where visible (face) — demigod skin,
-                subtly luminous
+  Skin:         Pale, near-translucent where visible (face, arms) — demigod
+                skin, subtly luminous
   Scale:        3.2m height, 1.4x human proportions — idealized but
                 still reads as a person, not a landscape
 
@@ -346,11 +354,14 @@ Material:
   Emission casts light: YES — Godwyn is the room's light source
   Light radius:       12m
   Light color:        Color(1.0, 0.92, 0.6)
-  Cape:               Deep blue, Color(0.08, 0.12, 0.35), no emission
-                      (the only cloth — lower body is armored, not draped)
-  Armor:              Gold, Color(0.82, 0.65, 0.15), slight metallic sheen
-                      Near-full coverage: cuirass, faulds/tassets, greaves,
-                      sabatons, pauldrons, gauntlets, gorget
+  Blue cloth:         Deep blue, Color(0.08, 0.12, 0.35), no emission —
+                      INTEGRATED into the armor: torso sash, hanging tabard
+                      panels trailing to the floor, underlayer between plates.
+  Armor:              Gold, Color(0.82, 0.65, 0.15), slight metallic sheen —
+                      the main structure: breastplate, armored arms, greaves,
+                      sabatons, studded belt.
+  Embroidery:         Gold, Color(0.82, 0.65, 0.15) — laurel/vine motif along
+                      the blue trailing edges and hems.
 
 STATS
 -----

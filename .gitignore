@@ -3,7 +3,11 @@
 blender-build-plan.txt
 blender-workflow.js
 godwyn-model-workflow.js
+godwyn-detail-workflow.js
 
 # Blender working files
 *.blend1
 renders/wip/
+
+godwyn-reoutfit-workflow.js
+godwyn-refine-workflow.js
