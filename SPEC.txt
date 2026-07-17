@@ -246,6 +246,21 @@ Cutscenes only. Not during gameplay — would obscure attacks.
 5. PHASE 1 ENVIRONMENT — THE VOID
 ================================================================================
 
+ENVIRONMENT SCOPE (IMPORTANT — keeps this small):
+  We build ONLY the boss arena, NOT the Enir-Ilim dungeon. Two spaces total:
+    (1) THE VOID — Phase 1's space (Miquella's interior). Nearly free: a black
+        void, a faint floor, the light crack, motes. No level geometry.
+    (2) THE GATE ARENA — used only for the intro, the transition, and Phase 2:
+        a single bounded platform at the top of Enir-Ilim with the Gate of
+        Divinity, the distant Shadow Erdtree, and the sky. ONE arena, not a
+        traversable dungeon — the player never leaves this platform.
+  Since Phase 1 (the bulk of the fight) is the void, the only real environment
+  build is the single Gate arena.
+  REFERENCE (optional): the real Enir-Ilim / Gate of Divinity geometry exists
+  in Elden Ring's files and can be viewed/exported with FromSoft modding tools
+  (Smithbox map/model editor). Use it as VISUAL REFERENCE to rebuild a faithful
+  arena — screenshots are usually enough; do not ship extracted FromSoft mesh.
+
 SCENE: void.tscn
 
 World environment:
@@ -296,8 +311,14 @@ Inspiration: fan art by Enzo Spag and @DOUJ — synthesized below.
 Phase 1 = Godwyn at his absolute prime. No death markers. No corruption.
 The most beloved demigod as he was before Ranni's scheme.
 
-  Hair:         Long golden-blonde, partially braided, rest loose and flowing
-                Moves with his attacks — dynamic hair physics
+  Hair:         Long golden-blonde, HIGHLY DETAILED — many fine layered strands
+                and clumps (not a few thick ropes). The braid must be a proper
+                multi-strand plait (3+ interwoven strands, not 2 threads),
+                tightly and believably woven. Rest loose and flowing.
+                PHYSICS-READY: built as strand clumps rigged to hair BONE CHAINS
+                (spring/jiggle bones) so it can swing and settle — must export
+                in the .glb so it can be driven by physics in-engine. Moves with
+                his attacks.
   Face:         Noble, warm, open — the face people turned toward
                 Expression throughout fight: neutral-sorrowful, the face of
                 someone being used who cannot object but carries no aggression
