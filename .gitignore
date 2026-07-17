@@ -11,3 +11,8 @@ renders/wip/
 
 godwyn-reoutfit-workflow.js
 godwyn-refine-workflow.js
+godwyn-face-target-workflow.js
+godwyn-declay-workflow.js
+godwyn-gameasset-workflow.js
+godwyn-facesword-workflow.js
+godwyn-movement-workflow.js
