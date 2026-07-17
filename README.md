@@ -38,32 +38,75 @@ Seven signature poses from Phase 1 combat:
 |:---:|
 | ![Double Spin](renders/moveset/7_double_spin.png) |
 
+## Rigged + Textured Game Asset (Phase 3)
+
+`models/godwyn_game.glb` is the **rigged + de-clayed game-ready asset** — a glTF 2.0 export produced by `scripts/export_game_glb.py` from the baked gameasset pipeline (`scripts/bake_gameasset.py`). It carries the full armature with skinned weights, and three baked PBR textures (baseColor, metallic, roughness) embedded directly in the GLB. Verified headlessly on export:
+
+| Property | Value |
+|---|---|
+| File size | ~19.4 MB |
+| Bones | 24 (full body armature) |
+| Meshes | 2 (skinned character + helper) |
+| Materials | 1 (GodwynGameMat — Principled BSDF) |
+| Textures | 3 baked PNGs embedded (albedo / metallic / roughness) |
+| Rig | Skinned, rest-pose bind, +Y up (glTF 2.0) |
+| De-clayed | Yes — baked from procedural PBR, no clay shading |
+
+### Game Asset Turnaround
+
+| Front | Three-Quarter | Side |
+|:---:|:---:|:---:|
+| ![Front](renders/game/game_front.png) | ![3Q](renders/game/game_3q.png) | ![Side](renders/game/game_side.png) |
+
+## Animatable Game Asset (Phase 1 pipeline)
+
+`models/godwyn_phase1.glb` is the Godot-4-ready export — a fully animatable glTF 2.0 asset verified by `scripts/07_export_glb.py`:
+
+| Property | Value |
+|---|---|
+| File size | 74.9 MB |
+| Armatures | 1 (`Godwyn_Armature`, 30 bones) |
+| Meshes | 8 (body, armor, tabard, hair, sword, eyes, void crack + extras) |
+| Blendshapes | 7 `Expr_*` shape keys (face expressions, Godot-ready) |
+| Materials | 7 (6 with baseColor + normal maps, 1 eye material) |
+| Textures | 18 baked PNGs (basecolor / metalRoughness / normal per mesh) |
+| Rig | Skinned, rest-pose bind, +Y up (glTF 2.0 convention) |
+
+The blue cloth is exported as `Godwyn_Tabard` — an integrated hanging front tabard/surcoat panel (waist-to-floor) with gold laurel embroidery, skinned to pelvis/spine/thigh/shin bones for natural cloth deformation. This is NOT a back cape — it is woven into the armor ensemble as per the SPEC.
+
+The `.blend` keeps its procedural Cycles beauty materials intact; the `.glb` ships baked texture maps baked by `03b_bake_maps.py` so surface detail (pores, weave, gold wear, hair streaks) survives the glTF export.
+
 ## How to Regenerate
 
-All renders are generated deterministically from Python scripts via Blender's headless mode. To regenerate the asset suite:
+All renders are generated deterministically from Python scripts via Blender's headless mode. To regenerate the full asset suite:
 
 ```bash
 ssh mossad "cd ~/godwyn-boss-fight && bash scripts/build_all.sh"
 ```
 
-This runs all phases (0–6) sequentially:
-- **Phase 0:** Environment check, GPU device enumeration
-- **Phase 1:** Base humanoid mesh (3.2m, 1.4x proportions)
-- **Phase 2:** Details (armor, robe, hair, longsword)
-- **Phase 3:** Materials and shaders (emissive skin, metallic armor, void backdrop)
-- **Phase 4:** Armature, lighting rig, cameras, save .blend
-- **Phase 5:** Character sheet renders (7 views)
-- **Phase 6:** Moveset pose renders (7 action stills)
+This runs all phases (0–7) sequentially:
+- **Phase 0:** Environment check, GPU device enumeration (OptiX gate)
+- **Phase 1:** Base humanoid mesh via MPFB2 (anatomical 19 158-vert human)
+- **Phase 2:** Armor, robe, hair, longsword on the MPFB2 body
+- **Phase 3:** Procedural materials (skin SSS + inner glow, gold, robe, blade, hair, void)
+- **Phase 4:** Armature (30 bones), dark-fantasy lighting rig, 8 cameras
+- **Phase 4b:** Macro form-check renders (raking light clay views)
+- **Phase 4c:** GPU bake procedural detail → PNG maps + export base GLB
+- **Phase 5:** Character sheet renders (7 views, 2K portrait)
+- **Phase 6:** Moveset pose renders (7 action stills, 2K cinematic)
+- **Phase 7:** Final animatable GLB export + verification gate (Godot-ready)
 
 Outputs:
-- `models/godwyn_phase1.blend` — complete 3D model (regenerable from scripts)
-- `renders/character/*.png` — character sheet (2K portrait, ~2048×2560)
-- `renders/moveset/*.png` — pose stills (2K, ~1920×2560)
+- `models/godwyn_phase1.blend` — complete rigged model (procedural beauty mats)
+- `models/godwyn_phase1.glb` — animatable Godot-4-ready export (baked textures)
+- `models/textures/` — 18 baked PNG maps (source for the GLB)
+- `renders/character/*.png` — character sheet (2K portrait, 2048×2560)
+- `renders/moveset/*.png` — pose stills (2K cinematic, 1440×2560)
 
 For details on the build process, see `blender-build-plan.txt`.
 
 ## Credits
 
 Visual inspiration: fan art by **Enzo Spag** and **@DOUJ**  
-Built with: Blender 4.x (Cycles GPU), Claude Fable 5  
+Built with: Blender 5.1.2 (Cycles GPU / OptiX), Claude Fable 5  
 Specification: SPEC.txt, boss-fight.txt
