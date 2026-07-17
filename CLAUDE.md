@@ -76,7 +76,7 @@ These violations cause the most bugs. Never break them.
 
 ## Godwyn Phase 1 stats
 
-- HP: 2500 | Poise: 80 | Stagger duration: 0.8s
+- HP: 3000 | Poise: 80 | Stagger duration: 0.8s (SPEC.txt §6 is the authority)
 - Phase 2 HP resets to 3000 at transition start
 
 ## Blender pipeline (current active work)

@@ -1395,15 +1395,26 @@ PHASE 3 — GODWYN PHASE 1  (Day 2)
 3.3  Boss state machine scaffold (boss_base.gd + godwyn_p1_ai.gd)
 3.4  Boss HP bar + name card UI per Section 14
 3.5  Hitbox/hurtbox system (hitbox.gd, hurtbox.gd)
-3.6  Implement Golden Arc — hitbox, telegraph, two-hit variant
-3.7  Implement Sacred Slam — delayed trigger, shockwave ring
-3.8  Implement Dragon's Memory — dragon placeholder, cone breath, dragon HP bar
-3.9  Implement Radiant Dash — fast, follow-up variant
-3.10 Implement The Pause — parry counter into Radiant Dash
+     NOTE: the moveset is the SWORDSMAN COMBO TREE in Section 7 / 7B — NOT the
+     old spear attacks (Golden Arc / Sacred Slam / Radiant Dash) that appear in
+     older drafts. Build from Section 7's cut vocabulary + state tree.
+3.6  Implement the CUT VOCABULARY (Section 7) — diagonal/horizontal/overhead/
+     thrust/rising/circular cuts as animation-event-keyed hitboxes
+3.7  Implement the STATE TREE — initiators (X Combo, Horizontal Sweep, Jump
+     Lunge), the Back-to-Player state + its exits, and the OVERSHOOT RULE
+3.8  Implement chained combos with probabilistic extension (Sovereign's
+     Sequence / The Tide / Radiant Sequence / Dash Chain as tree traversals)
+3.9  Implement Sacred Cleave (readable overhead + jumpable shockwave) and
+     Dragon's Memory (destroyable dragon, cone breath, secondary HP bar)
+3.10 Implement The Pause — stillness + step-offline counter (Section 7)
 3.11 Memory Fragment system — HP thresholds, voice trigger, intensify buff
-3.12 AI attack selection weights per distance (Section 6)
-3.13 Phase 1 death trigger → hand off to transition manager
-3.14 Poise system — poise damage, poise break stagger
+3.12 AI: distance-weighted initiator/branch selection + relentless pursuit
+     (Section 7 combat feel; reward aggression, punish hesitation)
+3.13 Phase 1.5 (50% HP): unlock the DRAGON LIGHTNING layer (Section 7B —
+     Placidusax Call, Targeted Strikes, Horizontal Sweep, Shrinking Circle,
+     tip-into-ground AOE, one-time Dragon's Charge)
+3.14 Phase 1 death trigger → hand off to transition manager
+3.15 Poise/STANCE system — stance damage accumulation, stagger/riposte window
 
 Deliverable: Phase 1 fully playable start to death trigger.
 

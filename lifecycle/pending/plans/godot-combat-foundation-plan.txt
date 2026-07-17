@@ -1,0 +1,1388 @@
+=====================================================================
+BUILDOUT PHASE PLAN: Godot 4 Combat Foundation — Godwyn Phase 1
+Generated: 2026-07-17
+Scope: Turn the designed Godwyn Phase 1 boss fight into a playable,
+       Elden-Ring-faithful souls-like encounter in Godot 4 — player
+       controller, camera/lock-on, animation-driven hitbox combat,
+       a state-machine boss that expresses the SPEC combo tree as
+       data + AI, the void arena, HUD, and a vertical-slice milestone.
+Sources: SPEC.txt (design), boss-fight.txt (lore/sequence),
+         CLAUDE.md (invariants). Tuning numbers plug in from
+         lifecycle/elden-ring-combat-reference.md (being compiled
+         separately — NOT yet on disk as of this plan).
+=====================================================================
+
+## 0. CONTEXT & GOALS
+
+PROBLEM STATEMENT
+  We have a locked design (SPEC.txt) and lore (boss-fight.txt) for a
+  two-phase Elden Ring boss fight, plus a game-ready rigged hero mesh
+  (models/godwyn_game.glb). Nothing playable exists yet — there is no
+  Godot project on disk and Godot is not yet installed on the render
+  server. This plan builds ONLY the COMBAT FOUNDATION for Phase 1
+  (incl. the 50% "soft phase" lightning layer): the player, camera,
+  combat core, the boss framework that expresses the SPEC state-based
+  moveset tree, HUD, the void arena, and a vertical-slice checkpoint.
+
+SUCCESS CRITERIA (measurable)
+  S1. Project opens in Godot 4.x on the render server with Forward+
+      (Vulkan) confirmed active; headless import/export runs clean.
+  S2. Player: WASD locomotion, sprint, mid-roll with REAL i-frames
+      (hurtbox disabled on frames 4-16 per SPEC line 143), stamina
+      gate, light+heavy attack with animation-keyed hitboxes,
+      flask heal (5x, 180 HP, cancel after 0.3s), death→"YOU DIED".
+  S3. Camera: third-person default (SPEC §4) + lock-on at 25m with
+      Q/E target switch, break at 35m, dynamic pullback hook.
+  S4. Combat core: Area3D hitbox/hurtbox on dedicated collision
+      layers (NOT physics bodies, NOT Godot physics hit detection —
+      CLAUDE.md invariant), damage + poise application, hitstop via
+      Engine.time_scale=0.05, knockback, i-frame handling, boss
+      stagger on poise-break.
+  S5. Boss framework: a state machine (IDLE/TELEGRAPH/ACTIVE/RECOVERY/
+      STUNNED/MEMORY_FRAG) + an AttackData resource library + an AI
+      decision layer that (a) picks initiators by distance weights,
+      (b) walks the SPEC combo tree with probabilistic chain
+      extension, (c) honors the Back-to-Player state and the
+      Overshoot Rule, (d) unlocks the Phase 1.5 lightning layer at
+      50% HP. Hitbox windows are driven by AnimationPlayer method/
+      call tracks — NOT hardcoded timers where an animation exists.
+  S6. HUD: player HP/FP/stamina bars, flask counter, boss HP bar +
+      Cinzel name card, "YOU DIED" screen — all per SPEC §14, exact
+      colors/positions.
+  S7. The void arena (void.tscn) per SPEC §5 as the combat testbed.
+  S8. VERTICAL SLICE: player enters the void, locks onto a Godwyn
+      running a SUBSET of the moveset (X-combo tree + one gap closer
+      + The Pause + Dragon's Memory), fights with roll/stamina/
+      attacks, staggers him, and can die OR win. This is the "is it
+      fun and ER-faithful?" checkpoint.
+
+NON-GOALS (explicitly out of scope for THIS plan)
+  N1. Phase 2 / Miquella (boss_p2, will_system, all §11 attacks).
+  N2. The cinematic transition sequence (SPEC §8, transition_*).
+  N3. Enir-Ilim arena, deathroot shaders, Phase 2 environment (§9).
+  N4. Final art: real animations, ComfyUI textures, audio/voice/music,
+      real player mesh + weapon. Placeholders + the existing rig only.
+      (Real assets are SPEC §16 Phase 7 — a LATER plan.)
+  N5. FP/spell system beyond a displayed FP bar (no Ashes of War).
+  N6. Settings menu, save system, rune economy, Site of Grace.
+  N7. Networking. Single-player, single-machine, native on server.
+
+ASSUMPTIONS MADE
+  A1. Godot 4.x (latest stable, targeting 4.3+) will be installed on
+      the render server as part of Phase 0. It is NOT present now
+      (verified: `which godot godot4` returns nothing on the server).
+  A2. Combat FEEL is prioritized over start speed (SPEC line 38). Per
+      SPEC §1 we BUILD FROM SCRATCH on CharacterBody3D/AnimationTree
+      rather than adopting a GitHub souls-like framework, UNLESS
+      Phase 0's evaluation finds one meeting all five bars. Default
+      assumption: from scratch. (This keeps the combat core ours and
+      avoids inheriting poor feel — the SPEC's stated preference.)
+  A3. Real attack animations do NOT exist yet. Combat is built
+      "animation-driven" architecturally: every hitbox window is a
+      call/method track on an AnimationPlayer clip. Until real clips
+      exist we author PLACEHOLDER clips (root-motion-free, correct
+      DURATION and event-track timing from the reference doc) so the
+      timing contract is real from day one and real animations later
+      drop in without touching combat code. This is the load-bearing
+      architectural bet — see §3 Phase 4/6.
+  A4. models/godwyn_game.glb is rigged (24-bone Mixamo-style),
+      skinned, PBR-baked, sword becoming a separate hand-parented
+      object. We plan the boss around the rig existing; we do NOT
+      wire real Godwyn attack animations in this plan (greybox capsule
+      boss reaches a fun checkpoint FIRST, then the rig is imported).
+  A5. Boss Phase 1 HP: SPEC.txt §6 says 3000; CLAUDE.md says 2500.
+      CONFLICT — flagged in §10 Open Questions. Plan treats HP as a
+      single exported tunable (`boss_stats.max_hp`) so the number is
+      a one-line change; default to the reference doc's authoritative
+      value when it lands, else SPEC's 3000.
+  A6. elden-ring-combat-reference.md is the authoritative source for
+      i-frame counts, stamina costs, poise/stagger, frame data, flask
+      amounts, and boss HP. Where it is silent, use the SPEC
+      placeholder. This plan CITES it rather than inventing numbers.
+      It is NOT on disk yet — Phase 1 has a hard dependency on it for
+      final tuning, but greybox scaffolding can proceed with SPEC
+      placeholders and a single TUNABLES resource that gets repointed.
+  A7. Player mesh: a capsule for greybox, then a Mixamo Tarnished-like
+      placeholder (SPEC §15) — but sourcing/rigging the player mesh is
+      out of scope; a capsule + a debug arrow for facing is acceptable
+      through the vertical slice.
+  A8. All combat math is deterministic and frame-rate-independent
+      (physics_process / delta-scaled), so hitstop (time_scale) and
+      i-frame windows behave identically regardless of FPS on the
+      2x 3060 Ti box.
+
+RECOMMENDED ADJUSTMENTS (conflicts with invariants — resolve early)
+  R1. SPEC §16 Phase 3 lists Phase-1 attacks as "Golden Arc, Sacred
+      Slam, Radiant Dash, The Pause, Dragon's Memory" — this is the
+      LORE/boss-fight.txt naming (spear-based memory-Godwyn). SPEC §7
+      (the newer, authoritative combat design) supersedes it with the
+      SWORDSMAN combo tree: X Combo, Sovereign's Sequence, spins,
+      Back-to-Player, Overshoot, Jump Lunge, Dragon's Memory, The
+      Pause + the §7B lightning layer. THIS PLAN follows SPEC §7/§7B
+      (the state-based swordsman), NOT the §16 checklist. Called out
+      so the executor does not build the wrong, older moveset.
+  R2. The AI weight table (SPEC §6 lines 406-412) references attack
+      names ("Sovereign's Sequence", "The Tide", "Radiant Seq", "Dash
+      Chain", "Radiant Seq") that are NOT all defined as named moves
+      in §7. Treat these as INITIATOR SLOTS mapping onto §7 shapes:
+        Sovereign's Sequence -> X Combo initiator (+ its branch tree)
+        The Tide             -> Horizontal Sweep R->L initiator
+        Radiant Seq          -> a short close-range diagonal chain
+        Dash Chain           -> Jump Lunge / secondary dash gap-closer
+        Dragon's Memory      -> Dragon's Memory (ranged)
+        The Pause            -> The Pause
+      This mapping is a DECISION recorded in §10 Q3 — the executor
+      implements these as the initiator set and does not invent new
+      geometry.
+
+## 1. ARCHITECTURE OVERVIEW
+
+HOW THIS FITS
+  This is the first executable code in the repo. Everything to date is
+  the Blender character pipeline (scripts/, models/, renders/). This
+  plan stands up res:// (SPEC §2 layout) INSIDE the repo (e.g.
+  `game/` subdir per CLAUDE.md "The Godot game itself (res://) will
+  live in a subdirectory"). It consumes models/godwyn_game.glb and the
+  tuning reference; it produces the playable Phase-1 slice that Phase 2
+  and the transition (future plans) will extend.
+
+AFFECTED "SERVICES" (this is a single native game, but by subsystem)
+  - engine/project  : Godot project, input map, render settings, CI.
+  - player          : CharacterBody3D controller + stats + combat FSM.
+  - camera          : third-person rig + lock-on.
+  - combat-core     : hitbox/hurtbox Areas, damage/poise, hitstop.
+  - boss            : boss FSM + AttackData library + AI + moveset tree.
+  - ui              : HUD, boss bar/name card, death screen.
+  - world           : void.tscn arena.
+  - autoload        : game_state / game_manager singletons, TUNABLES.
+
+DATA FLOW (one combat exchange)
+
+  Input ─▶ player_controller ─▶ player_combat FSM
+                                     │ enters ATTACK state
+                                     ▼
+                          AnimationPlayer plays "light_attack"
+                                     │ call-track @ active frame
+                                     ▼
+                          player Hitbox(Area3D).monitoring = true
+                                     │ area_entered
+                                     ▼
+                     boss Hurtbox(Area3D) ─▶ HitResolver
+                                     │ apply damage + poise
+                                     ▼
+              boss_stats.hp -=, boss_stats.poise -=  ─▶ Hitstop(0.06s)
+                                     │                 (time_scale=0.05)
+                                     ▼
+                   poise<=0 ? ─▶ boss FSM ─▶ STUNNED(0.8s)
+                                     │
+                                     ▼
+                            HUD.update(boss_hp)
+
+  Boss offense mirrors this: boss AI ─▶ boss FSM ─▶ AttackData ─▶
+  AnimationPlayer clip ─▶ boss Hitbox active window ─▶ player Hurtbox
+  ─▶ (if not in i-frames) player takes damage/knockback.
+
+INVARIANTS THIS PLAN MUST PRESERVE (from CLAUDE.md + SPEC)
+  I1. ANIMATION-DRIVEN COMBAT, NOT PHYSICS. Hit detection is Area3D
+      hitbox vs Area3D hurtbox on dedicated collision layers. NEVER
+      use Godot's physics-body collision or move_and_collide for
+      combat hits. (CLAUDE.md "What NOT to do".)
+  I2. HITBOX WINDOWS ARE ANIMATION EVENTS. Where an AnimationPlayer
+      clip exists, its call/method track toggles the hitbox — not a
+      standalone Timer. Timers are only a fallback for greybox clips
+      that have not been authored yet, and even then they mimic the
+      same event contract.
+  I3. i-FRAMES ARE REAL. The roll disables the player HURTBOX on the
+      exact frame window (SPEC frames 4-16), via monitoring toggle on
+      a collision layer — NOT invulnerability-by-flag guesswork.
+  I4. OVERSHOOT RULE (CLAUDE.md #5). Any boss lunge/thrust/jump that
+      carries him past the player enters BACK-TO-PLAYER state; no
+      neutral reset. The FSM MUST encode this transition.
+  I5. SPEC-FIDELITY. All timings, damage, poise, colors, sizes come
+      from SPEC.txt / the reference doc. Do NOT invent numbers.
+      Any needed-but-absent number is flagged, not fabricated.
+  I6. PHASE-1 APPEARANCE. No crown, no dark markings, no deathroot,
+      Phase-1 material only. (Relevant when the rig is imported —
+      do not apply Phase-2 shaders.)
+  I7. HEADLESS-ONLY on the server. Import, export, and any automated
+      build run via `ssh <server> "godot --headless ..."`. No GUI on
+      the server. Interactive editing happens on the local Mac; the
+      server runs headless builds and the native game.
+  I8. IDEMPOTENT AUTOMATION. Import/build scripts are re-runnable and
+      never duplicate state (mirrors CLAUDE.md #6 for bpy).
+  I9. NEVER AUTO-PUSH. Commit locally/on server per phase; push only
+      on explicit user instruction (CLAUDE.md #7).
+
+## 2. AFFECTED SURFACE AREA
+
+FILES TO CREATE (all under the game root, e.g. `game/` = res://)
+  Project / engine:
+    game/project.godot                    (Forward+, input map, layers)
+    game/.gitignore                       (.godot/, *.import cache)
+    game/export_presets.cfg               (Linux/X11 headless export)
+    game/README.md                        (how to open/run/build)
+  Autoloads:
+    game/autoloads/game_state.gd          (run/attempt state, restart)
+    game/autoloads/audio_manager.gd       (stub — no audio this plan)
+    game/scripts/systems/game_manager.gd  (fight orchestration, phase)
+    game/scripts/systems/tunables.gd      (Resource: ALL numbers,
+                                           repointed to reference doc)
+  Combat core:
+    game/scripts/systems/hitbox.gd
+    game/scripts/systems/hurtbox.gd
+    game/scripts/systems/hit_resolver.gd  (damage+poise+knockback math)
+    game/scripts/systems/hitstop.gd       (time_scale helper)
+    game/scripts/systems/damage_types.gd  (enum: physical/sacred/light)
+  Player:
+    game/scenes/player/player.tscn
+    game/scenes/player/player_camera.tscn
+    game/scripts/player/player_controller.gd
+    game/scripts/player/player_stats.gd
+    game/scripts/player/player_combat.gd   (FSM: locomotion/roll/attack)
+    game/scripts/player/player_camera.gd
+    game/scripts/player/lock_on.gd
+    game/scripts/player/flask.gd
+  Boss:
+    game/scenes/bosses/godwyn_phase1.tscn
+    game/scripts/bosses/boss_base.gd       (FSM host, shared)
+    game/scripts/bosses/godwyn_p1_ai.gd    (decision layer)
+    game/scripts/bosses/attack_library.gd  (loads AttackData resources)
+    game/scripts/bosses/attack_data.gd     (Resource class def)
+    game/scripts/bosses/moveset_tree.gd    (state graph + chain logic)
+    game/scripts/bosses/boss_stats.gd
+    game/scripts/bosses/lightning_layer.gd (Phase 1.5, unlock at 50%)
+    game/resources/attacks/*.tres          (one AttackData per move)
+    game/resources/moveset/godwyn_p1.tres  (the combo-tree graph data)
+  UI:
+    game/scenes/ui/hud.tscn
+    game/scenes/ui/boss_healthbar.tscn
+    game/scenes/ui/death_screen.tscn
+    game/scripts/ui/hud.gd
+    game/scripts/ui/boss_healthbar.gd
+    game/scripts/ui/death_screen.gd
+  World:
+    game/scenes/environments/void.tscn
+    game/scripts/environments/void.gd      (motes, crack fade-in)
+    game/shaders/void_atmosphere.gdshader  (gold volumetric fog)
+    game/scenes/main.tscn                  (root: world+player+boss+ui)
+  Build tooling:
+    scripts/godot/install_godot.sh         (server install + verify)
+    scripts/godot/headless_import.sh       (import + Vulkan assert)
+    scripts/godot/build_linux.sh           (headless export)
+    scripts/godot/run_native.sh            (launch on server)
+
+FILES TO MODIFY
+    CLAUDE.md            — add a "Godot game" section: run/build cmds,
+                           layer map, the TUNABLES-from-reference rule.
+                           (reason: new subsystem needs its own doc.)
+    lifecycle/.../plans  — this plan moves to archive on completion
+                           (executor's job, not this plan's).
+
+MIGRATIONS
+    None (no database). "Migration"-equivalent = the input map +
+    collision-layer naming + TUNABLES resource schema. Lock these in
+    Phase 0 so later phases don't churn them.
+
+NEW CONFIG / CONVENTIONS
+    Collision layer names (Project Settings > Layer Names > 3D Physics):
+      1 world        4 player_hurtbox   7 boss_hurtbox
+      2 player_body  5 player_hitbox    8 boss_hitbox
+      3 boss_body    6 environment      9 lockon_target
+    Input actions (see Phase 0). Rendering: Forward+ / Vulkan.
+
+NEW DEPENDENCIES
+    Godot 4.x (engine binary + export templates) on the server.
+    NO third-party GDScript addons by default (A2 = from scratch).
+    If Phase 0 selects a framework, it is vendored under
+    game/addons/ and this section is amended.
+
+## 3. PHASES
+
+Sequencing principle: reach an EARLY PLAYABLE GREYBOX (capsule player
+vs capsule boss) before the real rig/animations. Phases 0-8 below get
+to the greybox vertical slice; the rig import (Phase 9) is last and is
+the ONLY phase that depends on models/godwyn_game.glb.
+
+-----------------------------------------------------------------------
+### PHASE 0: Project Bootstrap & Server Toolchain — Goal: it opens, Vulkan is on, layers/input/tunables are frozen
+-----------------------------------------------------------------------
+   Prerequisites: none.
+   Deliverables:
+     - Godot 4.x installed on the render server; Vulkan verified.
+     - game/project.godot with Forward+ renderer, the collision-layer
+       names above, and the full input map.
+     - game/scripts/systems/tunables.gd — a Resource holding EVERY
+       number this plan needs, seeded from SPEC placeholders, with a
+       clearly marked block "// FROM elden-ring-combat-reference.md".
+     - Folder tree per SPEC §2 created under game/.
+     - scripts/godot/{install_godot.sh,headless_import.sh}.
+     - main.tscn that loads an empty world + prints "boot ok".
+   Steps:
+     1. Evaluate GitHub souls-like frameworks per SPEC §1 (lock-on,
+        real i-frames, stamina, animation-driven combat, Godot-4
+        maintained). Record a 5-criteria scorecard. Default: build
+        from scratch (A2). If one clears ALL five, vendor it and note
+        the deviation in the audit — otherwise proceed scratch.
+     2. install_godot.sh: install Godot 4.x + Linux export templates
+        on the server (pacman/flatpak/official tarball — pick what
+        gives a headless-capable binary). Assert
+        `godot --headless --version` and that Vulkan is available
+        (`vulkaninfo | grep -i "GPU"`). Idempotent (I8).
+     3. Create game/project.godot: Rendering=Forward+ (Vulkan),
+        set Layer Names (§2), MSAA/bloom baseline (SPEC §13).
+     4. Define input map: move_fwd/back/left/right, sprint, roll(dodge),
+        light_attack, heavy_attack, use_flask, lock_on, target_left(Q),
+        target_right(E), interact, pause. Bind KB+mouse AND a gamepad
+        profile (souls-likes are pad-first).
+     5. Author tunables.gd from SPEC §3/§6/§7 placeholders. Structure:
+        player{}, roll{iframe_start,iframe_end,...}, attacks{}, boss{},
+        lightning{}. Every field carries a `# SPEC ln / ref-doc` note.
+     6. headless_import.sh: `godot --headless --import` + a boot smoke
+        test that opens main.tscn headlessly and exits 0. This is the
+        CI gate reused by every later phase.
+     7. Commit on server (I9 — no push).
+   Validation:
+     - `ssh <server> "godot --headless --version"` prints 4.x.
+     - `ssh <server> "bash scripts/godot/headless_import.sh"` exits 0
+       and logs "Vulkan" + "boot ok".
+     - project.godot shows rendering/renderer/rendering_method="forward_plus".
+   Risks / Edge cases:
+     - Godot headless still needs a GL/Vulkan context for import of
+       some resources → if import fails headless, run under a virtual
+       framebuffer (xvfb-run) OR use `--headless` with the Vulkan
+       swiftshader/lavapipe fallback ONLY for import (not for the
+       real game, which uses the 3060 Tis). Mitigation: verify in
+       step 2; document the exact working invocation in README.
+     - Framework eval rabbit-hole → timebox to the scorecard; default
+       to scratch (A2) and move on.
+     - Input map churn later → freeze the action NAMES now; rebinding
+       keys is fine, renaming actions breaks scripts.
+   Subagent orchestration:
+     - Execution shape: [SINGLE] — foundational, everything depends on
+       the layer/input/tunable contract being frozen first.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: opus  (server toolchain + Vulkan headless
+       gotchas + the frozen contract that all later phases inherit;
+       a wrong layer map or input schema cascades everywhere).
+     - Run in background: no (its output — the frozen contract —
+       gates every subsequent dispatch).
+     - Brief template:
+        "Execute Phase 0 of <PLAN_FILE_PATH>. Install Godot 4.x on the
+         render server (see CLAUDE.md 'Render server' + ssh rules),
+         verify Vulkan, and scaffold game/ per SPEC §2. Read §2, §3,
+         and Phase 0 of the plan. Touch only game/project.godot,
+         game/scripts/systems/tunables.gd, the folder tree, main.tscn,
+         and scripts/godot/*.sh. Freeze the collision-layer names and
+         input actions EXACTLY as listed in §2. Validation:
+         headless_import.sh exits 0 and logs Vulkan + 'boot ok'.
+         Evidence: paste `godot --headless --version` output and the
+         import log. Commit on server, DO NOT push. Print one-line
+         summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 1: Combat Core Primitives — Goal: hitbox/hurtbox + damage/poise/hitstop/knockback, testable in isolation
+-----------------------------------------------------------------------
+   Prerequisites: Phase 0 (layers, tunables).
+   Deliverables:
+     - hitbox.gd, hurtbox.gd (Area3D-based, layer-driven, I1).
+     - hit_resolver.gd (damage, poise, damage_type, knockback vector,
+       hit-once-per-swing set, faction filter).
+     - hitstop.gd (Engine.time_scale=0.05 for duration then restore,
+       robust to overlapping hits — reentrant-safe).
+     - damage_types.gd enum.
+     - A throwaway test scene: two capsules, one swings an Area, the
+       other loses HP and gets knocked back — proves the pipeline with
+       NO player/boss code yet.
+   Steps:
+     1. Hitbox: Area3D on player_hitbox/boss_hitbox layer, exports
+        {damage, poise_damage, damage_type, knockback, owner_faction,
+        hitstop_duration}. `activate()/deactivate()` toggle monitoring.
+        Tracks already-hit hurtboxes this activation (no double-hit).
+     2. Hurtbox: Area3D on *_hurtbox layer, exports {stats_target}.
+        On area_entered from an enemy-faction hitbox → call
+        HitResolver.resolve(hitbox, self).
+     3. HitResolver: apply damage + poise to target stats; compute
+        knockback along hitbox->hurtbox vector; emit `hit_landed`
+        signal (owner, victim, amount, poise) for hitstop/HUD/AI.
+     4. Hitstop: on hit_landed, set Engine.time_scale to tunables
+        value for duration (unscaled timer), then restore to 1.0.
+        Guard against nested calls (track a counter, restore only
+        when all clear). Player i-frame check happens in Hurtbox
+        BEFORE resolve (skip if hurtbox monitoring disabled).
+     5. Wire the test scene; verify numbers come from tunables.
+   Validation:
+     - Test scene: attacker capsule swing removes exactly `damage`
+       HP from victim, applies poise, and knocks it back; a second
+       overlap in the same swing does NOT double-hit.
+     - Hitstop visibly freezes for ~hitstop_duration then resumes;
+       two hits in quick succession don't strand time_scale at 0.05.
+     - Disabling the victim hurtbox (simulated i-frame) => no damage.
+   Risks / Edge cases:
+     - time_scale affects timers → use `Timer` with process_mode
+       ALWAYS or `get_tree().create_timer(t, false, false, true)`
+       (ignore_time_scale) for the hitstop restore, else hitstop
+       never ends. This is THE classic bug; call it out in code.
+     - Area monitoring toggled same-frame can miss/duplicate → toggle
+       in physics_process and clear the hit set on activate().
+     - Knockback vs CharacterBody3D → knockback is applied as a
+       velocity impulse the controller reads next frame, not a
+       teleport.
+   Subagent orchestration:
+     - Execution shape: [SINGLE] — small, load-bearing, everything
+       downstream calls it; must be correct before fan-out.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: opus (the time_scale/i-frame/double-hit
+       correctness core — subtle bugs here poison all combat feel).
+     - Run in background: no (player + boss phases both depend on it).
+     - Brief template:
+        "Execute Phase 1 of <PLAN_FILE_PATH>. Build the Area3D
+         hitbox/hurtbox + damage/poise/hitstop/knockback core. Read §1
+         (invariants I1-I3) and Phase 1. Touch only
+         game/scripts/systems/{hitbox,hurtbox,hit_resolver,hitstop,
+         damage_types}.gd and a test scene under game/scenes/_tests/.
+         NEVER use physics-body collision for hits (I1). Pull all
+         numbers from tunables.gd. Validation: the two-capsule test
+         proves single-hit damage+poise+knockback, working hitstop
+         that always restores, and i-frame skip. Evidence: describe
+         the test run + paste the hitstop restore logic. Commit,
+         no push. Print one-line summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 2: Player Locomotion, Stamina & Roll i-Frames — Goal: it MOVES and DODGES like Elden Ring
+-----------------------------------------------------------------------
+   Prerequisites: Phase 0; Phase 1 (hurtbox to toggle for i-frames).
+   Deliverables:
+     - player.tscn (CharacterBody3D + hurtbox + a placeholder capsule
+       + a facing debug arrow + a hand-socket Node3D for future
+       weapon/hitbox).
+     - player_stats.gd (HP 500, stamina 100, FP 80 display-only,
+       recovery model per SPEC §3).
+     - player_controller.gd (walk 3.5 / sprint 6.5 / rotate 720°/s,
+       lock-on strafe, gravity/floor).
+     - Roll: 3.5m over 0.65s, stamina 15, i-frame window on frames
+       4-16 (SPEC 143) implemented as a hurtbox-disable window on a
+       normalized roll timeline; input-relative or lateral-to-target.
+     - player_combat.gd FSM skeleton: FREE / SPRINT / ROLL / (attack
+       states arrive Phase 3) — one authoritative state machine.
+   Steps:
+     1. Controller: read input, produce desired velocity; apply
+        rotation at 720°/s; sprint drains 5 stamina/s; block sprint
+        when stamina==0. Camera-relative movement (needs Phase 3's
+        camera but works with a temporary fixed cam until then).
+     2. Stats: stamina recovery delay 0.8s after any action, then
+        25/s; paused while sprint/roll/attack (SPEC §3).
+     3. Roll as an FSM state with a normalized t in [0,1] over 0.65s.
+        Map SPEC frame window 4-16 (of an assumed clip length) to a
+        t-range and disable the hurtbox for that sub-window (I3).
+        Roll consumes 15 stamina on entry; movement follows a
+        3.5m displacement curve; direction = input dir, or lateral
+        to lock-on when locked with no directional input.
+     4. Encode i-frame window numbers in tunables (from reference
+        doc when present; SPEC frames 4-16 as placeholder). Draw a
+        debug overlay (hurtbox color flips during i-frames) for QA.
+     5. FSM enforces: can't roll with <15 stamina; roll cancels
+        sprint; recovery lockout minimal (souls roll chains).
+   Validation:
+     - Walk/sprint speeds match SPEC; sprint blocked at 0 stamina.
+     - During the roll's i-frame sub-window the debug overlay shows
+       invulnerable; a test hitbox passing through in that window
+       deals 0 damage, and outside it deals full damage.
+     - Stamina recovery timing matches SPEC (0.8s delay, 25/s).
+   Risks / Edge cases:
+     - i-frame window is defined in FRAMES but the clip is a
+       placeholder → normalize by clip length so when the REAL roll
+       animation lands (different frame count) we re-map once in
+       tunables, not in code. Document the frame->t formula.
+     - Roll displacement fighting gravity/floor snap → apply roll as
+       a horizontal velocity curve; keep floor snapping.
+     - Diagonal input speed > cardinal → normalize input vector.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phase 1] but can run
+       CONCURRENTLY with Phase 4 (boss FSM scaffold) since they touch
+       disjoint files. See §12.1.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet (well-specified controller; opus not
+       needed once the i-frame contract from Phase 1 exists).
+     - Run in background: yes (>2 min; player + camera can proceed in
+       parallel with boss scaffolding).
+     - Brief template:
+        "Execute Phase 2 of <PLAN_FILE_PATH>. Build the CharacterBody3D
+         player: locomotion, sprint, stamina, and the mid-roll with
+         REAL i-frames (hurtbox disabled over the frame-4-16 window,
+         I3). Read SPEC §3 + Phase 2. Touch only
+         game/scenes/player/player.tscn and
+         game/scripts/player/{player_controller,player_stats,
+         player_combat}.gd. Numbers from tunables.gd; normalize the
+         i-frame window by clip length. Validation: a test hitbox
+         does 0 dmg inside the i-frame window, full dmg outside;
+         speeds + stamina match SPEC. Evidence: the frame->t formula
+         + debug-overlay description. Commit, no push. Print one-line
+         summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 3: Third-Person Camera & Lock-On — Goal: ER-faithful camera + 25m lock-on with Q/E switch
+-----------------------------------------------------------------------
+   Prerequisites: Phase 2 (player to follow).
+   Deliverables:
+     - player_camera.tscn/.gd: SpringArm3D rig, 2.5m back / 1.4m up,
+       FOV 75, pitch clamp -60/+80, mouse sens 0.3 (SPEC §4).
+     - lock_on.gd: acquire target within 25m on a lockon_target layer,
+       Q/E cycle, break at >35m or re-press, camera frames boss
+       upper-center + player lower-left, lerps per SPEC (pos 6, rot 8).
+     - Dynamic pullback HOOK (to 8m over 0.3s, return 0.5s) exposed as
+       a callable the boss will trigger on big attacks (SPEC §4).
+   Steps:
+     1. Free camera: SpringArm3D (auto-collision pullback), mouse-look
+        with clamp + sensitivity; strafe-aware when locked.
+     2. Lock-on: raycast/Area sphere of 25m for lockon_target markers
+        on bosses; pick nearest to screen center; store current target.
+     3. When locked: player faces/strafes relative to target
+        (feeds Phase 2's lock-on strafe path); camera composes the
+        boss upper-center framing; distance scales 3-8m (SPEC §4).
+     4. Q/E: cycle among valid targets by screen-x order.
+     5. Break conditions: target >35m, dead, or re-press.
+     6. pull_back(to, in_time, hold_source) API for boss big moves.
+   Validation:
+     - Lock engages only within 25m; breaks at 35m; Q/E switches
+       between two dummy targets; framing keeps boss upper-center.
+     - Pullback hook visibly pulls to 8m and returns on release.
+   Risks / Edge cases:
+     - Camera clipping in the void (no geometry) → SpringArm still
+       fine; ensure it doesn't collapse on the invisible boundary.
+     - Lock-on jitter when boss is fast/mobile → lerp rotation (8.0),
+       and deadzone the target-switch so mobility doesn't drop lock.
+     - Single target in the void → Q/E is a no-op, not an error.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phase 2].
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet.
+     - Run in background: yes (>2 min; boss track runs in parallel).
+     - Brief template:
+        "Execute Phase 3 of <PLAN_FILE_PATH>. Build the third-person
+         camera + 25m lock-on per SPEC §4. Read §4 + Phase 3. Touch
+         only game/scenes/player/player_camera.tscn and
+         game/scripts/player/{player_camera,lock_on}.gd. Expose a
+         pull_back() hook for boss big attacks. Validation: lock in
+         at <=25m, break at >35m, Q/E cycles two dummy targets,
+         framing holds boss upper-center. Numbers from tunables/SPEC.
+         Commit, no push. Print one-line summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 4: Boss Framework — FSM + AttackData Library + Moveset-Tree Engine — Goal: the SPEC combo tree becomes DATA + a state graph
+-----------------------------------------------------------------------
+   Prerequisites: Phase 0 (tunables); Phase 1 (hitbox for boss).
+   (Can run CONCURRENTLY with Phases 2-3 — disjoint files.)
+   Deliverables:
+     - boss_base.gd: generic FSM host (states IDLE/TELEGRAPH/ACTIVE/
+       RECOVERY/STUNNED/MEMORY_FRAG per SPEC §6) + a hurtbox + a
+       hitbox that AttackData windows drive.
+     - attack_data.gd: Resource {id, initiator?, telegraph_time,
+       active_windows[], recovery_time, damage, poise_damage,
+       damage_type, hitbox_shape/transform per window, animation_clip,
+       enters_state, exit_options[], overshoot_possible, camera_pull}.
+     - moveset_tree.gd: the STATE GRAPH engine. Encodes SPEC §7:
+       FACING/LOW-HANG, BACK-TO-PLAYER, AIRBORNE, EXTENDED states;
+       each state exposes exits; exits carry probabilistic chain
+       extension; the OVERSHOOT RULE (I4) is a hard transition from
+       any lunge/thrust/jump-that-passes-player → BACK-TO-PLAYER.
+     - godwyn_p1.tres: the actual graph data for the tree (X Combo
+       initiator + branches A/B/C, Horizontal Sweep, Jump Lunge,
+       Back-to-Player exits A/B/C, Overhead-slam→flow-into-X,
+       Dragon's Memory, The Pause).
+     - attack_library.gd: loads all AttackData .tres, resolves an
+       attack by id, and asks the animation/timer system to run its
+       telegraph→active→recovery timeline.
+   Steps:
+     1. Define attack_data.gd as a Resource so designers edit .tres
+        in the inspector — data, not code. `active_windows` is a list
+        of {start_t, end_t, hitbox_shape, transform} normalized to the
+        clip so real animations slot in later (A3, I2).
+     2. boss_base.gd FSM: current_state, a state timer, and
+        `run_attack(AttackData)` that sequences TELEGRAPH (no hitbox)
+        → ACTIVE (hitbox on during each window) → RECOVERY. Poise
+        break at any point → STUNNED for stagger_duration, then back
+        to IDLE. Emits signals for HUD/AI.
+     3. moveset_tree.gd: model each SPEC state as a node with an
+        `exits` list. An exit is {attack_id, weight, condition}. After
+        an attack resolves, the tree picks the next exit from the
+        state the attack `enters_state` landed in (e.g. an overshoot
+        put him in BACK-TO-PLAYER → choose among Exit A/B/C). Chain
+        extension: each exit has a continue-probability so "the same
+        opener produces 2/4/6 hits" (SPEC line 366-368).
+     4. Encode the OVERSHOOT RULE (I4): AttackData.overshoot_possible
+        + a runtime check "did this move carry him past the player?"
+        → force enters_state = BACK_TO_PLAYER regardless of the
+        move's default exit. No neutral reset.
+     5. Author godwyn_p1.tres capturing the §7 tree faithfully
+        (X Combo → Branch A double-spin / B half-spin overhead /
+        C full+half+overhead; Back-to-Player → backhand/overhead/
+        continue-spin; overhead → flow-into-X). Wire attack .tres for
+        each cut using CUT VOCABULARY (SPEC §7) hitbox shapes.
+     6. Placeholder timelines: since real clips don't exist (A3),
+        run windows off an unscaled Timer that mimics the exact
+        call-track contract — swap to AnimationPlayer call tracks in
+        Phase 6/9 with zero FSM change.
+   Validation:
+     - Unit-drive the tree headlessly: feed a start state + a fixed
+       RNG seed and assert the emitted attack sequence matches an
+       expected chain (e.g. X → Branch B → overhead → flow-into-X).
+     - Force an overshoot flag → next state is BACK-TO-PLAYER, and
+       its chosen exit is an attack, never idle (I4).
+     - Chain-extension probability produces variable-length chains
+       across seeds (2..6 hits observed).
+   Risks / Edge cases:
+     - The tree could deadlock or loop forever → cap consecutive
+       chain length and always have a RECOVERY→IDLE fallback with
+       the global cooldown (SPEC §6: 0.5-1.4s).
+     - AttackData over-specification → keep windows normalized;
+       don't bake absolute seconds that break when clips change.
+     - "Named" AI moves not matching §7 geometry (R2) → use the
+       initiator-slot mapping in §0 R2; do not invent new cuts.
+   Subagent orchestration:
+     - Execution shape: [SINGLE] but PARALLEL to Phases 2-3 (disjoint
+       files). It is the spine the AI (Phase 5) and animation wiring
+       (Phase 6) build on.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: opus (this is the hardest architectural phase —
+       turning a prose state-machine with probabilistic chains + the
+       overshoot rule into a correct, data-driven graph engine; a
+       flaw here misrepresents the whole boss and cascades into AI).
+     - Run in background: yes (>2 min; runs alongside player track).
+     - Brief template:
+        "Execute Phase 4 of <PLAN_FILE_PATH>. Turn the SPEC §7
+         state-based combo tree into DATA + a graph engine. Read SPEC
+         §6, §7, §0 (R1/R2 mapping), invariant I4, and Phase 4. Touch
+         only game/scripts/bosses/{boss_base,attack_data,moveset_tree,
+         attack_library}.gd and game/resources/{attacks/*.tres,
+         moveset/godwyn_p1.tres}. Model FACING/BACK-TO-PLAYER/AIRBORNE/
+         EXTENDED states with per-state weighted exits and continue-
+         probabilities; enforce the OVERSHOOT RULE as a hard
+         transition (I4). Hitbox windows normalized to clip length
+         (I2, A3). Validation: a seeded headless drive of the tree
+         yields the expected chains, overshoot forces BACK-TO-PLAYER,
+         chains vary 2..6 hits. Numbers from tunables/SPEC — invent
+         nothing (I5). Commit, no push. Print one-line summary + exit."
+
+-----------------------------------------------------------------------
+### PHASE 5: Boss AI Decision Layer & Mobility — Goal: Godwyn picks initiators by distance, pursues, and pressures
+-----------------------------------------------------------------------
+   Prerequisites: Phase 4 (FSM + tree); Phase 2 (a player to target).
+   Deliverables:
+     - godwyn_p1_ai.gd: perception (distance/angle to player), the
+       distance-band initiator selection (SPEC §6 weights), global
+       cooldown (0.5-1.4s), constant-mobility IDLE circling, and
+       The-Pause behavior (stop, 3-5s, counter-on-attack at 0.12s).
+     - Mobility/pursuit: close distance in IDLE, honor "never still
+       >1.5s except The Pause", weight Jump Lunge as gap-closer.
+     - Memory Fragment buff system: triggers 75/50/25% HP; +25% dmg,
+       +12% move, -15% transition, emission spike; 10s duration;
+       fires mid-cycle if a threshold is crossed (SPEC §6/§7).
+   Steps:
+     1. Perception each physics tick: distance band (close<4 /
+        mid 4-10 / far>10) and facing.
+     2. Initiator selection: sample the §6 weight table for the band,
+        map names→§7 initiators via §0 R2, hand the chosen initiator
+        id to the moveset tree (Phase 4) to begin a chain.
+     3. Global cooldown between chains (0.5-1.4s) + IDLE circling
+        (slow strafe closing distance); enforce the 1.5s stillness cap.
+     4. The Pause: a special state — stop fully; randomize 3-5s; if
+        player attacks, step offline at 0.12s and immediately begin a
+        chain from the new position; if player waits, initiate from
+        low hang with jump-lunge weighted +30%. 15s cooldown.
+     5. Memory Fragment: HP-threshold watcher applies the buff (scales
+        AttackData damage + move speed + shortens transitions) for 10s;
+        emits a signal for the emission/light spike and voice hook.
+   Validation:
+     - Standing at 3 / 7 / 12m yields initiator distributions matching
+       the §6 tables (statistical check over N samples).
+     - Boss is never idle >1.5s except during The Pause; attacking
+       during The Pause triggers the 0.12s counter.
+     - Crossing 75/50/25% HP toggles the buff; the hit after a
+       threshold is measurably ~25% heavier (SPEC §7).
+   Risks / Edge cases:
+     - AI over-aggression = unfun spam → respect global cooldown and
+       recovery windows; expose aggression as a tunable for the slice.
+     - Pursuit into the invisible boundary → clamp to 20m arena radius.
+     - Threshold buff double-firing on a single frame → latch per
+       threshold once.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phase 4 and Phase 2].
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: opus (decision logic + The-Pause counter timing
+       + mid-cycle buff crossing is where "Elden Ring feel" lives;
+       high leverage on fun).
+     - Run in background: yes (>2 min).
+     - Brief template:
+        "Execute Phase 5 of <PLAN_FILE_PATH>. Build Godwyn's AI: the
+         distance-band initiator selection (SPEC §6 weights via §0 R2
+         mapping), constant mobility, The Pause counter, and the
+         Memory Fragment buff. Read SPEC §6, §7 (The Pause, Memory
+         Fragment) and Phase 5. Touch only
+         game/scripts/bosses/godwyn_p1_ai.gd. Call into the Phase 4
+         moveset tree to run chains — do NOT re-implement the tree.
+         Validation: initiator distribution matches the §6 tables at
+         3/7/12m; boss never idle >1.5s except The Pause; buff toggles
+         at 75/50/25% HP. Numbers from tunables/SPEC. Commit, no push.
+         Print one-line summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 6: Player Attacks, Flask & Boss Stagger Wiring — Goal: the two combatants can actually hurt each other; poise-break staggers Godwyn
+-----------------------------------------------------------------------
+   Prerequisites: Phase 1 (core), Phase 2 (player FSM), Phase 4 (boss
+   hurtbox/FSM). Joins the player and boss tracks.
+   Deliverables:
+     - player_combat.gd attack states: LIGHT (60 dmg, 12 stam, active
+       0.15-0.35s, 0.4s recovery, 0.06s hitstop) and HEAVY (110 dmg,
+       22 stam, 0.4s telegraph, active 0.2-0.55s, 0.7s recovery, 0.1s
+       hitstop, 2x poise) per SPEC §3 — hitbox windows on a normalized
+       timeline (placeholder clip now, AnimationPlayer track later).
+     - flask.gd: 5 charges, 180 HP, 0.6s drink, roll-cancel after
+       0.3s, refill only on attempt restart (SPEC §3).
+     - Boss stagger: player poise damage accrues on the boss; at
+       poise-break → boss FSM STUNNED 0.8s (a real punish window);
+       poise regenerates per reference doc.
+     - Player weapon hitbox parented to the player's hand socket.
+   Steps:
+     1. Add LIGHT/HEAVY states to the player FSM; each activates the
+        weapon hitbox during its window and locks movement/rotation
+        appropriately; stamina consumed on startup; light combo can
+        chain (2-3 hits) with input buffering.
+     2. Flask: consume a charge, heal 180 over the drink, allow roll
+        cancel after 0.3s (refund nothing, no heal if cancelled before
+        heal tick per SPEC nuance — heal applies at the drink's heal
+        frame). Refill on restart only.
+     3. Boss poise: player hits apply poise_damage (light 15-equiv on
+        the boss scale? — use SPEC §6 boss poise 80, poise-per-hit
+        from reference doc); on <=0 → STUNNED; regen after.
+     4. Verify hitstop fires on BOTH directions (player hits boss,
+        boss hits player) via the Phase 1 core.
+   Validation:
+     - Light/heavy deal SPEC damage; stamina gates them; hitstop
+       fires; combo chains with buffered input.
+     - Flask heals 180, roll-cancels after 0.3s, count decrements,
+       0 charges dims the icon (HUD phase).
+     - Sustained player aggression poise-breaks the boss → 0.8s
+       stagger window in which follow-up hits land freely.
+   Risks / Edge cases:
+     - Attack committing the player into a boss combo (souls risk/
+       reward) is INTENDED — don't over-cancel; recovery is real.
+     - Flask-cancel timing exploit (heal + full mobility) → heal
+       applies at the heal frame; cancel before it = no heal.
+     - Boss staggers too easily/rarely → poise numbers are tunables;
+       leave a note for the tuning pass.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phases 1,2,4].
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet (well-specified once the core + FSMs
+       exist; mostly wiring SPEC numbers into existing systems).
+     - Run in background: yes (>2 min).
+     - Brief template:
+        "Execute Phase 6 of <PLAN_FILE_PATH>. Add player light/heavy
+         attacks + flask + boss poise-break stagger. Read SPEC §3
+         (attacks, flask), §6 (boss poise/stagger) and Phase 6. Touch
+         only game/scripts/player/{player_combat,flask}.gd and the
+         boss stagger hook in game/scripts/bosses/boss_base.gd. Hitbox
+         windows normalized to clip (I2). Numbers from tunables/SPEC.
+         Validation: SPEC-correct damage/stamina/hitstop; flask heals
+         180 + roll-cancels after 0.3s; sustained aggression staggers
+         the boss for 0.8s. Commit, no push. Print one-line summary +
+         exit."
+
+-----------------------------------------------------------------------
+### PHASE 7: HUD / UI — Goal: ER-faithful bars, boss name card, "YOU DIED"
+-----------------------------------------------------------------------
+   Prerequisites: Phase 2 (player stats), Phase 4 (boss stats). Can
+   run CONCURRENTLY with Phases 5/6 (reads stats via signals; disjoint
+   files).
+   Deliverables:
+     - hud.tscn/.gd: HP/FP/stamina bars + flask counter, exact SPEC
+       §14 positions/sizes/colors; flask icon dims at 0.
+     - boss_healthbar.tscn/.gd: 600x14 center bar + Cinzel name card
+       ("GODWYN THE GOLDEN" / "Prince of Gold"), fade-in per SPEC.
+     - death_screen.tscn/.gd: fade to black 0.5s → "YOU DIED" Cinzel
+       #C8986E, fade-in 0.5s, hold 2.5s → restart current phase.
+     - Cinzel font imported; a dragon secondary HP bar stub for
+       Dragon's Memory (from Phase 8).
+   Steps:
+     1. Build the bottom-left player stack (HP/FP/stamina/flask) with
+        exact px positions/colors from SPEC §14; bind to stats signals.
+     2. Boss bar + name card with the fade sequence (§6/§14).
+     3. Death screen driven by game_state on player HP=0 (SPEC §3
+        DEATH timeline: death anim → 0.8s → fade → text → hold →
+        restart current phase).
+     4. Import Cinzel (free) for name card + death text.
+   Validation:
+     - Bars track live values; flask icon dims at 0.
+     - Name card fades in then HP bar beneath it (§14).
+     - Killing the player runs the full death timeline and restarts
+       at Phase 1 start (fresh HP/stamina/flasks).
+   Risks / Edge cases:
+     - Exact ER colors/positions matter (fidelity) → use SPEC §14
+       values verbatim; do not approximate.
+     - time_scale=0 hitstop must not stall UI tweens → run UI tweens
+       process_mode ALWAYS / unscaled.
+   Subagent orchestration:
+     - Execution shape: [PARALLEL FANOUT OK — 2 siblings]:
+       (7a) player HUD, (7b) boss bar + name card + death screen.
+       Disjoint scenes/scripts; both read stats via signals.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet.
+     - Run in background: yes.
+     - Brief template (per sibling):
+        "Execute Phase 7 (<slice: 7a player-HUD | 7b boss-bar+death>)
+         of <PLAN_FILE_PATH>. Read SPEC §14 (+ §3 DEATH, §6 name card)
+         and Phase 7. Touch only your slice's scenes/scripts under
+         game/scenes/ui/ + game/scripts/ui/. Use EXACT SPEC §14 px
+         positions + colors (#C8986E, Cinzel). Bind to stats via
+         signals; run tweens unscaled so hitstop doesn't freeze them.
+         Validation: bars track live values / death timeline restarts
+         current phase. Commit, no push. Print one-line summary+exit."
+
+-----------------------------------------------------------------------
+### PHASE 8: The Void Arena — Goal: the atmospheric combat testbed
+-----------------------------------------------------------------------
+   Prerequisites: Phase 0. Can run CONCURRENTLY with combat phases
+   (disjoint files); needed assembled for the slice (Phase 10).
+   Deliverables:
+     - void.tscn: pure-black WorldEnvironment, ambient 0.0, sky
+       disabled, gold volumetric fog (SPEC §5), bloom (SPEC §13).
+     - Faint cracked-stone floor (15% opacity), 20m playable radius,
+       invisible soft boundary wall (collision-only).
+     - void_atmosphere.gdshader (density/color/height/drift).
+     - 400 gold motes (GPUParticles3D, 0.04-0.08m, 0.1-0.3 m/s drift,
+       8-12s life, 40/s emission) per SPEC §5.
+     - Crack-of-light (Gate silhouette, 8m, warm white-gold, fade-in
+       2.0s hook for the intro).
+   Steps:
+     1. WorldEnvironment: black bg, 0 ambient, gold volumetric fog,
+        bloom threshold 0.85/int 0.6/radius 3.0 (SPEC §13).
+     2. Floor mesh with a very-low-opacity cracked-stone material
+        (depth cue only) + an invisible StaticBody boundary at 20m.
+     3. GPUParticles3D motes per the §5 numbers.
+     4. Crack-of-light node with a 2.0s fade-in method (called by the
+        intro later; here just proven).
+   Validation:
+     - Standing in void.tscn: black void, faint floor, drifting gold
+       motes, gold fog, bloom on emissive objects — reads as SPEC §5.
+     - Boundary stops the player at 20m; no visible wall.
+   Risks / Edge cases:
+     - Emissive boss is "the only light source" (SPEC) → ambient must
+       be 0; verify the player is lit by the boss's OmniLight, not by
+       a stray ambient/sun.
+     - Particle cost on the 3060 Tis is trivial but profile anyway.
+   Subagent orchestration:
+     - Execution shape: [SINGLE], PARALLEL to the combat track.
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet (a shader + particles + environment;
+       well-specified by §5/§13, no cross-cutting reasoning).
+     - Run in background: yes.
+     - Brief template:
+        "Execute Phase 8 of <PLAN_FILE_PATH>. Build void.tscn per SPEC
+         §5 (+ §13 post-processing). Read §5, §13, Phase 8. Touch only
+         game/scenes/environments/void.tscn,
+         game/scripts/environments/void.gd, and
+         game/shaders/void_atmosphere.gdshader. Ambient 0.0 (boss is
+         the only light source), 400 gold motes, 20m boundary, faint
+         15%-opacity floor, 2.0s crack-of-light fade-in hook. Numbers
+         from SPEC verbatim. Validation: void reads atmospheric per §5
+         and the boundary stops the player at 20m. Commit, no push.
+         Print one-line summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 9: Phase 1.5 Lightning Layer (50% HP unlock) — Goal: the dragon-lightning system integrates on top of the melee flow
+-----------------------------------------------------------------------
+   Prerequisites: Phase 4 (tree), Phase 5 (AI), Phase 8 (arena for
+   AoE markers). Additive layer — does NOT alter the melee tree.
+   Deliverables:
+     - lightning_layer.gd: unlocks at 50% HP (SPEC §7B); a Memory-
+       Fragment-style threshold-cross visual (golden lightning arcs
+       1.5s); registers lightning moves as ADDITIONAL exits/interleaves
+       into the existing melee flow (SPEC §7B "a new layer added on
+       top", not a mode switch).
+     - AttackData .tres for the §7B moves relevant to a Phase-1.5
+       combat foundation:
+         Placidusax Call (patterned floor strikes, gold-ring warnings)
+         Targeted Strikes (standalone + mid-melee single-bolt)
+         Horizontal Lightning Sweep (dodge-through-gap)
+         Shrinking Circle (arena compression, safe-near-boss)
+         Overhead-Slam TIP-INTO-GROUND → lightning AoE (2nd slam exit)
+         Dragon's Charge (one-time cinematic run-not-dodge; ONE-TIME
+           FLAG, removed from pool after use)
+     - Ground AoE-marker system (faint gold rings, ER warning language)
+       with lead time per move (0.6s / 0.25s / 0.8s per SPEC §7B).
+   Steps:
+     1. Threshold unlock: on HP<=50% latch the layer once, fire the
+        1.5s lightning-arc visual (reuse Memory Fragment path).
+     2. Add the 2nd overhead-slam exit (tip-into-ground AoE) to the
+        moveset tree's overhead node — now AMBIGUOUS between flow-into-X
+        and AoE (SPEC line 573-576). This is the only tree edit.
+     3. Implement each lightning move as AttackData with a
+        ground-marker telegraph → strike hitbox on the arena floor.
+        Follow the §7B follow-up rules (each lightning move feeds back
+        into a specific melee continuation, not idle).
+     4. Dragon's Charge: a scripted one-time sequence (distancing shove
+        → dragon emerges → fire-line corridor ~4m wide, "run don't
+        roll") with a ONE-TIME flag removed from the pool after use.
+     5. Interleave weighting: lightning appears between and alongside
+        melee cycles; mid-melee bolt weighted toward players stationary
+        >0.5s (SPEC §7B).
+   Validation:
+     - Below 50% HP the layer is active (arcs fired once at the cross);
+       lightning moves appear interleaved WITHOUT stopping the melee
+       flow; above 50% they never fire.
+     - The overhead slam now has two exits and picks between them.
+     - Dragon's Charge fires at most ONCE per fight; the fire line is
+       un-rollable (lateral run is the counter) and the one-time flag
+       prevents repeats.
+     - AoE ground markers lead strikes by the SPEC times.
+   Risks / Edge cases:
+     - Lightning becoming a separate "mode" (violates SPEC intent) →
+       enforce interleave: it's extra exits on the SAME tree, AI keeps
+       running melee. Guard against a lightning-only loop.
+     - Dragon's Charge repeating → the one-time flag is authoritative;
+       assert removal from pool.
+     - AoE markers vs the near-invisible floor readability → markers
+       are self-emissive gold rings, readable on black.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phases 4,5,8].
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: opus (integrating a second combat system that
+       must INTERLEAVE — not replace — the melee flow, plus the
+       one-time cinematic and the ambiguity-increasing 2nd slam exit;
+       subtle to get faithful).
+     - Run in background: yes.
+     - Brief template:
+        "Execute Phase 9 of <PLAN_FILE_PATH>. Add the Phase-1.5
+         lightning layer per SPEC §7B — an ADDITIVE layer on the
+         existing melee tree unlocked at 50% HP, NOT a mode switch.
+         Read SPEC §7 (overhead slam), §7B (all lightning moves +
+         follow-ups) and Phase 9. Touch only
+         game/scripts/bosses/lightning_layer.gd, new
+         game/resources/attacks/lightning_*.tres, and the single
+         overhead-node edit in game/resources/moveset/godwyn_p1.tres.
+         Enforce interleave (melee never stops), the one-time Dragon's
+         Charge flag, and the ambiguous 2nd slam exit. Numbers from
+         SPEC §7B verbatim. Validation: layer active only <50% HP,
+         moves interleave without stopping melee, Charge fires once.
+         Commit, no push. Print one-line summary and exit."
+
+-----------------------------------------------------------------------
+### PHASE 10: Vertical-Slice Assembly & Feel Checkpoint — Goal: playable greybox fight — enter void, lock on, fight, stagger, die/win
+-----------------------------------------------------------------------
+   Prerequisites: Phases 2,3,5,6,7,8 (greybox combat complete);
+   Phase 9 optional-in (can slice with or without lightning first).
+   Deliverables:
+     - main.tscn wiring void + player + capsule Godwyn + HUD +
+       game_manager fight orchestration (start → fight → death/victory
+       → restart current phase).
+     - game_manager.gd: spawns the fight, watches boss HP=0 (victory
+       stub — hand-off point for the future transition) and player
+       HP=0 (death → restart).
+     - A tuned SUBSET moveset for the slice: X-Combo tree (branches
+       A/B/C), Jump Lunge gap-closer, The Pause, Dragon's Memory —
+       enough to prove the flow. (Full tree + lightning can be on.)
+     - A feel-checkpoint report: is it fun? ER-faithful? What tuning
+       is off? Feeds the numbers back into tunables from the
+       reference doc.
+   Steps:
+     1. Assemble main.tscn; game_manager orchestrates the run.
+     2. Enable the subset moveset via AI weights; leave the rest
+        data-present but low-weight so the slice is legible.
+     3. Play headlessly is impossible (it's a feel test) → run the
+        native game on the server; capture a session (frames/notes)
+        or drive an automated smoke (boss runs a scripted chain, a
+        scripted player rolls through i-frames and lands hits) to
+        prove the loop end-to-end without a human.
+     4. Verify the full loop: enter void → lock on (25m) → fight with
+        roll/stamina/light+heavy → poise-break stagger → punish →
+        either player dies ("YOU DIED" → restart) or boss HP=0
+        (victory stub fires).
+     5. Write the feel-checkpoint notes; list tuning deltas to apply
+        once the reference doc lands.
+   Validation:
+     - The end-to-end loop runs on the server natively with Forward+.
+     - Automated smoke: scripted player survives an i-frame roll
+       (0 dmg) then lands a combo that poise-breaks the boss; boss
+       AI produces variable-length chains; death + victory both fire
+       their end states.
+     - Frame time is comfortable on the 3060 Tis (profile once).
+   Risks / Edge cases:
+     - "Fun" is subjective → the automated smoke proves CORRECTNESS;
+       the fun verdict is a human pass Aaron does. Provide the report
+       + a list of the top tuning knobs.
+     - Missing reference-doc numbers → slice runs on SPEC placeholders;
+       flag every placeholder still in play so the tuning pass is
+       targeted.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on 2,3,5,6,7,8].
+     - REQUIRED subagent_type: general-purpose (assembly) + a final
+       verification via consensus-verification-duo IF Aaron wants a
+       rigorous correctness gate on the loop (optional; the automated
+       smoke may suffice). Default: general-purpose assembles;
+       escalate to a duo only on request.
+     - REQUIRED model: opus (integration + the correctness smoke +
+       the feel-checkpoint judgment that steers all later tuning).
+     - Run in background: no (this is the checkpoint the user reviews).
+     - Brief template:
+        "Execute Phase 10 of <PLAN_FILE_PATH>. Assemble main.tscn
+         (void + player + capsule Godwyn + HUD + game_manager) and
+         prove the full greybox loop on the server natively (Forward+).
+         Read Phase 10 + §8 vertical-slice criteria. Touch only
+         game/scenes/main.tscn and
+         game/scripts/systems/game_manager.gd. Enable the subset
+         moveset (X-Combo tree + Jump Lunge + The Pause + Dragon's
+         Memory). Validation: automated smoke — scripted player
+         i-frame-rolls (0 dmg) then poise-breaks the boss; death +
+         victory end states both fire. Evidence: the smoke log + a
+         feel-checkpoint report listing tuning deltas + remaining SPEC
+         placeholders. Commit, no push. Print one-line summary+exit."
+
+-----------------------------------------------------------------------
+### PHASE 11: Real Rig Import — Goal: swap the capsule for models/godwyn_game.glb without touching combat code
+-----------------------------------------------------------------------
+   Prerequisites: Phase 10 (working greybox). LAST — the only phase
+   that depends on the real asset; proves the animation-driven
+   architecture accepts real clips later.
+   Deliverables:
+     - godwyn_game.glb imported into game/assets/meshes/godwyn/,
+       headlessly, with the sword as a separate hand-parented object;
+       Phase-1 emissive material only (I6 — no crown/markings/deathroot).
+     - godwyn_phase1.tscn using the real mesh + skeleton, an
+       AnimationPlayer, and the SAME boss FSM/AI/hitboxes from Phases
+       4/5 — capsule swapped for mesh with ZERO combat-code changes.
+     - A documented "animation call-track contract": each AttackData's
+       normalized active_windows map onto AnimationPlayer method/call
+       tracks so REAL attack animations (a future plan) drop in by
+       authoring clips, not editing code (I2, A3).
+     - emissive_godwyn.gdshader applied; boss is the void's light
+       source (OmniLight, 12m, SPEC §6).
+   Steps:
+     1. Headless import of the .glb (I7); verify 24-bone skeleton,
+        skin, sword-as-separate-object, PBR intact.
+     2. Build godwyn_phase1.tscn: mesh + Skeleton3D + AnimationPlayer +
+        the hitbox/hurtbox from the boss framework, hand-socket for the
+        sword hitbox.
+     3. Repoint the boss scene the game_manager spawns from capsule to
+        the real scene; confirm FSM/AI/tree/hitboxes behave identically.
+     4. Write the call-track contract doc: normalized window t → clip
+        method-track. Author ONE placeholder clip (e.g. an idle low-
+        hang + a stub swing) to prove the pipeline; real clips later.
+     5. Apply emissive_godwyn.gdshader + the 12m OmniLight (SPEC §6);
+        verify Phase-1 appearance rules (I6).
+   Validation:
+     - The real Godwyn stands in the void, is the light source, and
+       runs the SAME fight as the capsule (FSM/AI unchanged).
+     - No combat script changed between Phase 10 and 11 (git diff
+       shows only scene/asset/material files touched).
+     - Appearance rules honored: no crown, no dark markings, no
+       deathroot, Phase-1 material only (I6).
+   Risks / Edge cases:
+     - GLB import scale/orientation/bone-name mismatch → normalize on
+       import; document the transform. Sword parenting to the correct
+       hand bone must survive import.
+     - Emissive + bloom blowing out the scene → tune emission 2.5 per
+       SPEC; verify against §13 bloom.
+     - Temptation to hardcode timers now that a mesh exists → keep the
+       normalized-window contract; timers stay only as the greybox
+       fallback.
+   Subagent orchestration:
+     - Execution shape: [SEQUENTIAL — depends on Phase 10].
+     - REQUIRED subagent_type: general-purpose
+     - REQUIRED model: sonnet (mechanical import + scene swap +
+       material; the hard architecture already exists — this proves
+       it accepts the real asset).
+     - Run in background: yes.
+     - Brief template:
+        "Execute Phase 11 of <PLAN_FILE_PATH>. Headlessly import
+         models/godwyn_game.glb and swap the capsule boss for the real
+         rig with ZERO combat-code changes. Read §1 (I6, I7), Phase 11.
+         Touch only game/assets/meshes/godwyn/*, game/scenes/bosses/
+         godwyn_phase1.tscn, game/shaders/emissive_godwyn.gdshader, and
+         the spawn line in game_manager.gd. Preserve the FSM/AI/tree/
+         hitboxes exactly (git diff must show no combat-script edits).
+         Apply Phase-1 emissive material + 12m OmniLight; enforce
+         appearance rules (no crown/markings/deathroot). Document the
+         normalized-window → AnimationPlayer call-track contract.
+         Validation: real Godwyn runs the identical fight + is the
+         void's light source. Commit, no push. Print one-line summary
+         and exit."
+
+## 4. DATA MODEL CHANGES
+
+No database. The "data model" is Godot Resources + collision layers.
+
+  Resource: AttackData (attack_data.gd) — the core combat datum:
+    id: StringName
+    role: enum { INITIATOR, BRANCH, EXIT, LIGHTNING }
+    telegraph_time: float
+    active_windows: Array[Dictionary]  # {start_t,end_t,shape,xform}
+                                        # t normalized to clip [0,1]
+    recovery_time: float
+    damage: float
+    poise_damage: float
+    damage_type: enum (damage_types.gd)
+    knockback: float
+    animation_clip: StringName
+    enters_state: enum { FACING, BACK_TO_PLAYER, AIRBORNE, EXTENDED }
+    exit_options: Array[Dictionary]  # {attack_id, weight, continue_p}
+    overshoot_possible: bool
+    camera_pull: bool
+    one_time: bool                   # Dragon's Charge
+
+  Resource: MovesetTree (godwyn_p1.tres) — states + exits graph.
+  Resource: Tunables (tunables.gd) — ALL numbers, repointed to
+            elden-ring-combat-reference.md when it lands.
+
+  Collision layers (the "schema" that must not churn): see §2.
+
+  RLS / encryption / queues: N/A (single-player local game, no PII,
+  no network, no persistence beyond a run). No compliance surface.
+
+## 5. API CONTRACT
+
+No network API. The internal "contracts" that later phases/plans
+depend on:
+
+  - Collision-layer map (§2) — frozen in Phase 0.
+  - Input action names (§2) — frozen in Phase 0.
+  - HitResolver.hit_landed(owner, victim, damage, poise) signal.
+  - boss_base signals: state_changed, attack_started, poise_broken,
+    hp_changed, threshold_crossed(pct).
+  - player_stats signals: hp_changed, stamina_changed, flask_changed,
+    died.
+  - camera.pull_back(distance, in_time, source) — boss big-move hook.
+  - game_manager: victory_reached() — the HAND-OFF to the future
+    transition sequence (out of scope here; the stub fires the signal).
+  - AttackData normalized-window → AnimationPlayer call-track contract
+    (documented Phase 11) — the seam future real animations plug into.
+
+## 6. WORKER / QUEUE CHANGES
+
+None. There are no background jobs/queues. The nearest analogue is the
+headless BUILD pipeline on the server:
+  - install_godot.sh (one-time), headless_import.sh (per-change CI
+    gate), build_linux.sh (export), run_native.sh (launch).
+  All idempotent (I8), all via ssh one-shots (I7), no auto-push (I9).
+
+## 7. FRONTEND CHANGES
+
+The "frontend" is the in-game HUD (Phase 7) — covered above. No web UI.
+
+  New scenes: hud.tscn, boss_healthbar.tscn, death_screen.tscn.
+  State: driven by stats signals (no separate store); UI tweens run
+  unscaled so hitstop (time_scale=0.05) does not freeze the HUD.
+  Fonts: Cinzel imported for name card + "YOU DIED".
+
+## 8. TESTING STRATEGY
+
+  Unit / headless (run via `godot --headless --script` or GUT if
+  adopted):
+    - Combat core: single-hit, no double-hit, hitstop restore,
+      i-frame skip (Phase 1).
+    - Moveset tree: seeded chain sequences, overshoot→BACK-TO-PLAYER,
+      chain-length variance 2..6 (Phase 4).
+    - AI: initiator distribution vs §6 weights at 3/7/12m; buff
+      thresholds (Phase 5).
+    - Lightning: active only <50% HP; Dragon's Charge one-time
+      (Phase 9).
+  Integration (automated smoke, Phase 10):
+    - Scripted player i-frame-rolls (0 dmg) then poise-breaks a
+      scripted boss; death + victory end states fire.
+  Manual QA checklist (the FEEL pass — human, Aaron):
+    [ ] Roll feels like a mid-roll; i-frames land dodges into swings.
+    [ ] Stamina pressure is real; can't spam.
+    [ ] Light/heavy weight + hitstop feel ER-faithful.
+    [ ] Boss pressures constantly, never idle >1.5s (except Pause).
+    [ ] The same opener produces different-length chains (unmemorizable).
+    [ ] Overshoots become attacks (no free punish on a turned back).
+    [ ] The Pause creates genuine tension; punishes both attack and wait.
+    [ ] Stagger window is a satisfying, tight punish.
+    [ ] Below 50%: lightning integrates, doesn't become a separate mode.
+    [ ] Dragon's Charge reads as "run, don't roll" and happens once.
+    [ ] Void + boss-as-light-source looks like Elden Ring.
+    [ ] "YOU DIED" is pixel-faithful (Cinzel, #C8986E).
+
+## 9. ROLLOUT & OBSERVABILITY
+
+  Feature flags: not a live service. The nearest equivalent is
+  tunables.gd (hot-swap numbers) and AI weights (enable subset
+  moveset for the slice, full tree later). The lightning layer is
+  gated by the 50%-HP unlock (a natural flag).
+  Logging/metrics: an on-screen debug overlay (state, stamina,
+  i-frame status, boss state/poise, current attack id, frame time)
+  toggled by a debug key — the primary "observability" for tuning.
+  Rollback: git per-phase commits on the server; each phase leaves a
+  working build. No push without instruction (I9). Revert = checkout.
+
+## 10. OPEN QUESTIONS
+
+  Q1. BOSS HP CONFLICT: SPEC §6 = 3000, CLAUDE.md = 2500. Which is
+      authoritative for Phase 1? (Plan makes it a one-line tunable;
+      defaults to the reference doc, else SPEC 3000.) [tuning-only]
+  Q2. elden-ring-combat-reference.md is NOT on disk yet. Phase 1
+      greybox can proceed on SPEC placeholders, but FINAL tuning
+      (i-frames, stamina, poise, frame data, flask, HP) is BLOCKED on
+      it. Confirm the plan should scaffold-now / tune-when-it-lands
+      (assumed A6). Executor: if a phase needs a number the ref-doc
+      would give and it's absent, use the SPEC placeholder and log it
+      to the feel-checkpoint deferred list — do NOT invent (I5).
+  Q3. INITIATOR-SLOT MAPPING (§0 R2): confirm the §6 weight-table
+      names map onto the §7 shapes as listed (Sovereign's Sequence→
+      X Combo, The Tide→Horizontal Sweep, Dash Chain→Jump Lunge,
+      etc.). If Aaron intends distinct geometry for any, it's a
+      new AttackData, not a remap. [design]
+  Q4. Souls-like FRAMEWORK vs SCRATCH: Phase 0 evaluates; default is
+      scratch (A2). Confirm no objection to building from scratch.
+  Q5. Does the vertical slice want the FULL tree + lightning on, or
+      the legible SUBSET (assumed)? [scope of the checkpoint]
+  Q6. "Secondary gap closer (to be defined)" (SPEC line 533) — the
+      fast low-commitment dash cut is under-specified. Plan treats it
+      as an optional extra AttackData; confirm whether to author it
+      now or defer. [design, low priority]
+
+## 11. ESTIMATED EFFORT
+
+  Phase 0  Bootstrap + toolchain ............ M  (server install risk)
+  Phase 1  Combat core .................... M  (correctness-heavy)
+  Phase 2  Player locomotion + roll ....... M
+  Phase 3  Camera + lock-on .............. M
+  Phase 4  Boss FSM + tree engine ........ L  (hardest — the graph)
+  Phase 5  Boss AI + mobility ............ L
+  Phase 6  Player attacks + flask + stagger  M
+  Phase 7  HUD / UI ..................... S  (2 parallel slices)
+  Phase 8  Void arena .................. S
+  Phase 9  Lightning layer .............. L  (additive integration)
+  Phase 10 Vertical slice assembly ...... M  (checkpoint)
+  Phase 11 Rig import ................... S  (proves the seam)
+
+  CRITICAL PATH: 0 → 1 → 4 → 5 → 9 → 10 (boss brain is the spine).
+  The player track (2 → 3 → 6) and world (8) and HUD (7) run in
+  PARALLEL off Phase 1, joining at Phase 10.
+  Rough total: ~L overall; the boss framework (4+5+9) is the bulk of
+  the intellectual load and the critical path.
+
+## 12. EXECUTOR ORCHESTRATION GUIDE
+
+### 12.1 Parallelism map
+
+  Phase | Execution | Siblings | Depends on   | Model  | Subagent type
+  ------|-----------|----------|--------------|--------|----------------
+  P0    | SINGLE    | —        | none         | opus   | general-purpose
+  P1    | SINGLE    | —        | P0           | opus   | general-purpose
+  P2    | PARALLEL  | (w/P3,P4)| P1           | sonnet | general-purpose
+  P3    | SEQUENTIAL| —        | P2           | sonnet | general-purpose
+  P4    | PARALLEL  | (w/P2,P3)| P0,P1        | opus   | general-purpose
+  P5    | SEQUENTIAL| —        | P4,P2        | opus   | general-purpose
+  P6    | SEQUENTIAL| —        | P1,P2,P4     | sonnet | general-purpose
+  P7    | PARALLEL  | 2 (7a,7b)| P2,P4        | sonnet | general-purpose
+  P8    | SINGLE    | (w/track)| P0           | sonnet | general-purpose
+  P9    | SEQUENTIAL| —        | P4,P5,P8     | opus   | general-purpose
+  P10   | SEQUENTIAL| —        | P2,P3,P5,P6,P7,P8 | opus | general-purpose
+  P11   | SEQUENTIAL| —        | P10          | sonnet | general-purpose
+
+  DAG sketch (non-linear):
+
+      P0 ─┬─▶ P1 ─┬─▶ P2 ─▶ P3 ─┐
+          │       │            ├─▶ P6 ─┐
+          │       ├─▶ P4 ─▶ P5 ─┴─▶ P9 ─┤
+          │       │      └────────▶ P7 ─┤
+          └───────┴─▶ P8 ───────────────┼─▶ P10 ─▶ P11
+                                        │
+      (P7a ∥ P7b are the two HUD siblings)
+
+  Concurrency windows:
+    - After P1: launch P2 (→P3), P4, and P8 concurrently.
+    - After P4: P5 and P7 can start (P7 also needs P2 for player stats).
+    - P6 joins player+boss after P1/P2/P4.
+    - P9 waits on P4+P5+P8. P10 is the join. P11 is last.
+
+### 12.2 Cross-phase work consolidation
+
+  - tunables.gd is read by nearly every phase — it is FROZEN in P0 and
+    passed by reference (each phase reads it; it's tiny, re-reads are
+    free). Every phase that needs a number reads tunables, not SPEC
+    directly, so the reference-doc repoint is one file.
+  - godwyn_p1.tres (the moveset graph) is authored in P4 and EDITED
+    ONLY by P9 (the single overhead-node 2nd-exit edit). P4 and P9 are
+    SEQUENTIAL on this shared file — never parallel (avoids Edit-tool
+    conflicts on the same resource). [[feedback_shared_file_serialization]]
+  - game_manager.gd is touched by P10 (assembly) and P11 (the one spawn
+    line). Sequential — P11 after P10.
+  - boss_base.gd is created in P4 and gets a stagger hook in P6 →
+    sequential on that file (P6 after P4).
+  - SPEC.txt §5/§13 are read by P8 only; §7/§7B by P4/P5/P9; §3/§4 by
+    the player track — natural partition, no shared large-input reload.
+
+### 12.3 Model-mix budget
+
+  Target split across 12 phases (P0-P11):
+    - fable:  0 phases (0%). No phase here is frontier-grade beyond
+      opus: P4 (the tree engine) is the hardest and is well within
+      opus. Do NOT assign fable.
+    - opus:   5 phases (~42%) — P0, P1, P4, P5, P9, P10 are the
+      correctness/architecture spine (server+Vulkan contract, combat
+      core, tree engine, AI, lightning integration, the assembly gate).
+      [This is above the ≤15% guideline BECAUSE this plan is unusually
+      front-loaded with load-bearing architecture — the boss brain and
+      combat core are the whole point; a cheap model here poisons feel.
+      Justified per-phase in each block.]
+    - sonnet: 6 phases (~50%) — P2, P3, P6, P7, P8, P11 (well-specified
+      wiring/scenes/import once the contracts exist).
+    - haiku:  0 phases. No phase is a trivial single-field edit;
+      the smallest (P11 import, P8 arena) still involve scene assembly
+      + shader work that sonnet handles more reliably.
+  Sanity check: opus-heavy is deliberate and localized to the spine;
+  everything downstream of a solid core drops to sonnet.
+
+### 12.4 Estimated wall-clock
+
+  Best case (parallelism applied): the critical path is
+    P0 → P1 → P4 → P5 → P9 → P10 → P11.
+  With P2/P3/P6/P7/P8 overlapping P4/P5, the wall-clock is roughly the
+  length of that 7-node chain. Given the boss phases (P4,P5,P9) are the
+  L-sized ones, expect the chain to dominate. Rough: best-case ≈ 45-70
+  min of agent wall-clock (excludes the human FEEL pass at P10).
+  Strictly serial (worst case, no overlap): all 12 phases end-to-end,
+  roughly 1.7-2x best case.
+  CRITICAL PATH: the boss brain — P0→P1→P4→P5→P9→P10. Everything else
+  hangs off P1 and joins at P10, so it is not on the critical path
+  unless it slips past the boss chain.
+
+### 12.5 Failure recovery policy
+
+  - P0 (toolchain): if Godot won't run headless / Vulkan absent →
+    PAUSE and escalate (server/driver issue needs Aaron; the
+    quarantined-GPU note in CLAUDE.md is relevant). Do not improvise a
+    CPU/software-render path for the real game.
+  - P1 (core): retry up to 2x — the time_scale/i-frame bugs are known
+    and fixable; if still failing, escalate (it's load-bearing).
+  - P2,P3,P6,P7,P8 (wiring/scenes): retry up to 2x with the same
+    subagent — non-flaky, well-specified.
+  - P4,P5,P9 (boss brain): on validation failure, PAUSE and escalate —
+    a wrong tree/AI is a design-fidelity call Aaron should see, not a
+    silent retry that entrenches a misread of §7.
+  - P10 (slice): the automated smoke must pass; the FEEL verdict is
+    Aaron's. If the smoke fails, retry 1x then escalate. Do not declare
+    the checkpoint "done" without the smoke green.
+  - P11 (rig): if the GLB import mismatches (scale/bones/sword) →
+    retry 1x with a normalized import transform, then escalate.
+  - Any phase needing an absent reference-doc number → use the SPEC
+    placeholder, log to the deferred-tuning list, PROCEED (do NOT
+    block the greybox on the tuning doc; A6). Never invent a number
+    that isn't in SPEC or the ref-doc (I5).
+  - Default if unspecified: pause and escalate.
+
+### 12.6 Audit trail location
+
+  Per-phase evidence: lifecycle/archive/audits/godot-combat-foundation/
+      phase-<id>.md
+  Final rollup:       lifecycle/archive/audits/godot-combat-foundation/
+      FINAL.md
+  On successful completion the executor moves this plan from
+  lifecycle/pending/plans/ to lifecycle/archive/plans/ (per CLAUDE.md
+  working flow). Commits are made per-phase on the server; NO push
+  without explicit user instruction (I9).
+
+=====================================================================
+END OF PLAN
+=====================================================================
