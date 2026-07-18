@@ -38,19 +38,29 @@ Seven signature poses from Phase 1 combat:
 |:---:|
 | ![Double Spin](renders/moveset/7_double_spin.png) |
 
-## Rigged + Textured Game Asset (Phase 3)
+## Rigged + Textured Game Asset (Phase 4 — Updated)
 
-`models/godwyn_game.glb` is the **rigged + de-clayed game-ready asset** — a glTF 2.0 export produced by `scripts/export_game_glb.py` from the baked gameasset pipeline (`scripts/bake_gameasset.py`). It carries the full armature with skinned weights, and three baked PBR textures (baseColor, metallic, roughness) embedded directly in the GLB. Verified headlessly on export:
+`models/godwyn_game.glb` is the **fully rigged, physics-chain-enhanced game-ready asset** re-exported in Phase 4 from `godwyn_p2_robe.blend` via `scripts/phase4_export_p4_final.py`. This export supersedes all previous versions and includes the full robe/cape/hair physics bone chains added in Phases 2–3, cleaned skinning weights, and `Godwyn_Sword` + `Godwyn_Gauntlet` parented to the `RightHand` bone. Final combat animations will be retargeted Mixamo mocap applied on top of this rig.
 
 | Property | Value |
 |---|---|
-| File size | ~19.4 MB |
-| Bones | 24 (full body armature) |
-| Meshes | 2 (skinned character + helper) |
-| Materials | 1 (GodwynGameMat — Principled BSDF) |
-| Textures | 3 baked PNGs embedded (albedo / metallic / roughness) |
-| Rig | Skinned, rest-pose bind, +Y up (glTF 2.0) |
-| De-clayed | Yes — baked from procedural PBR, no clay shading |
+| File size | ~20.6 MB |
+| Bones | 121 (24 Mixamo body + 97 phys chains: 64 robe, 21 cape, 12 hair) |
+| Meshes | 3 (char1 skinned body, Godwyn_Sword, Godwyn_Gauntlet) |
+| Materials | 4 (GodwynGameMat, GodwynGauntletMat, GodwynSwordGoldMat, GodwynSwordMat) |
+| Textures | 2 packed PNGs (godwyn_albedo 2048×2048, metallic-roughness 2048×2048) |
+| Rig | Skinned (121 VGs on char1), rest-pose bind, +Y up (glTF 2.0) |
+| Sword | Godwyn_Sword + Godwyn_Gauntlet parented to RightHand bone |
+| Physics chains | 8×8 robe grid (front/back/side L/C/R), 3×7 cape (L/C/R), 2×4 hair |
+| Skinning | Cleaned weights (Phase 1), exclusive phys masks + cloth drape (Phase 3) |
+
+### Phase 4 Motion Previews (EEVEE)
+
+EEVEE quick-renders showing deformation across rest, walk, and sword swing poses — verifying the rig and robe/cape chain deformation before Mixamo mocap retargeting:
+
+| Rest Pose | Walk Stride | Overhead Swing | Follow-Through + Robe Drape |
+|:---:|:---:|:---:|:---:|
+| ![Rest](renders/game/phase4_preview_f01_rest.png) | ![Walk](renders/game/phase4_preview_f02_walk.png) | ![Swing](renders/game/phase4_preview_f03_swing.png) | ![Follow-thru](renders/game/phase4_preview_f04_followthru.png) |
 
 ### Game Asset Turnaround
 
