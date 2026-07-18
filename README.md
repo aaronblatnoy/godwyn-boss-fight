@@ -115,6 +115,27 @@ Outputs:
 
 For details on the build process, see `blender-build-plan.txt`.
 
+## X-Slash Animation (Phase 4 — First Authored Moveset Animation)
+
+`models/godwyn_xslash.glb` is the **first authored moveset animation** — the X-slash combo fully keyframed and exported as a self-contained glTF 2.0 asset.
+
+The X-slash is Godwyn's signature opener: from a low ready guard, he winds up over his right shoulder and drives a diagonal cut down to his lower-left (`\`), then immediately coils to his upper-left and delivers the crossing cut down to his lower-right (`/`). The two arcs cross in front of him to form an X. Power comes from the spine and shoulder rotation, not just the wrist. Total duration: 64 frames / 2.13s @ 30fps.
+
+`renders/game/xslash.mp4` is the EEVEE render with a reflective environment (metallic ground plane, warm golden key light, cool blue fill, amber rim), encoded at 30fps via ffmpeg.
+
+| Property | Value |
+|---|---|
+| File | `models/godwyn_xslash.glb` |
+| File size | ~20.4 MB |
+| Bones | 121 (24 Mixamo body + 97 physics chains) |
+| Animation track | `ArmatureAction` — 64 frames / 2.13s @ 30fps |
+| Meshes | char1 (skinned body) + Godwyn_Sword |
+| Skinning | 1 skinned mesh, 121 vertex groups, rest-pose bind |
+| Up axis | +Y (glTF 2.0) |
+| Render | `renders/game/xslash.mp4` — EEVEE, 1280×720, 30fps |
+
+Authored via `scripts/anim_xslash.py` (keyframe definitions) and exported via `scripts/phase4_xslash_export_glb.py`. The animation was verified by re-importing the .glb and confirming the animation track, frame count, and skinning are intact.
+
 ## Credits
 
 Visual inspiration: fan art by **Enzo Spag** and **@DOUJ**  
