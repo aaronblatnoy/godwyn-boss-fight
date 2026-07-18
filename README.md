@@ -136,8 +136,29 @@ The X-slash is Godwyn's signature opener: from a low ready guard, he winds up ov
 
 Authored via `scripts/anim_xslash.py` (keyframe definitions) and exported via `scripts/phase4_xslash_export_glb.py`. The animation was verified by re-importing the .glb and confirming the animation track, frame count, and skinning are intact.
 
+## Mocap Double Combo — Phase 4 Final Export
+
+`models/godwyn_mocap_combo.glb` is the **Phase 4 final deliverable** — the retargeted Mixamo Double Combo mocap action baked onto the full game rig with cloth simulation (cape + robe Verlet chains), exported as a self-contained glTF 2.0 asset. This is the canonical animated game asset for the Godwyn boss fight.
+
+`renders/game/mocap_combo.mp4` is the EEVEE render with a reflective dark-fantasy environment (highly metallic ground, warm golden key, cool blue rim, soft fill), encoded at 30fps via ffmpeg.
+
+| Property | Value |
+|---|---|
+| File | `models/godwyn_mocap_combo.glb` |
+| File size | ~20.9 MB |
+| Bones | Full armature (Mixamo body + cape/robe chains) |
+| Animation track | `Godwyn_DoubleCombo` — 67 frames / 2.79s @ 24fps |
+| Meshes | char1, CapeGrid, RobeGrid (all skinned) + Godwyn_Sword |
+| Skinning | Armature modifiers + vertex groups on all deforming meshes |
+| Cloth | CapeGrid + RobeGrid baked cloth simulation (frames -45..68) |
+| Materials | GodwynGameMat with baked textures |
+| Up axis | +Y (glTF 2.0) |
+| Render | `renders/game/mocap_combo.mp4` — EEVEE, 960×1080, 30fps |
+
+Authored via `scripts/mocap_retarget.py` (mocap retargeting), `scripts/p2cloth_final.py` (cloth bake), and exported via `scripts/phase4_final_render_export.py`. GLB verified by re-importing with `scripts/phase4_verify_mocap_combo.py` — confirmed animation track, skinning, and sword present.
+
 ## Credits
 
 Visual inspiration: fan art by **Enzo Spag** and **@DOUJ**  
-Built with: Blender 5.1.2 (Cycles GPU / OptiX), Claude Fable 5  
+Built with: Blender 5.2 LTS (EEVEE/Cycles GPU / OptiX), Claude Sonnet 4.6  
 Specification: SPEC.txt, boss-fight.txt
