@@ -9,3 +9,10 @@ lifecycle/archive/plans/blender-build-plan.txt
 *.blend1
 renders/wip/
 renders/_discarded/
+
+# junk
+.DS_Store
+**/.DS_Store
+scripts/__pycache__/
+*.pyc
+__pycache__/
