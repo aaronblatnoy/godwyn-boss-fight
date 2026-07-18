@@ -8,7 +8,7 @@ Scope: Turn the designed Godwyn Phase 1 boss fight into a playable,
        data + AI, the void arena, HUD, and a vertical-slice milestone.
 Sources: SPEC.txt (design), boss-fight.txt (lore/sequence),
          CLAUDE.md (invariants). Tuning numbers plug in from
-         lifecycle/elden-ring-combat-reference.md (being compiled
+         elden-ring-combat-reference.md (being compiled
          separately — NOT yet on disk as of this plan).
 =====================================================================
 

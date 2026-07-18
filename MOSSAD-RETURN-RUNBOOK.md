@@ -33,7 +33,7 @@ locomotion + the moveset attacks. This likely needs a few **Mixamo FBX clips** s
 
 ## 4. Then: build the actual GAME (Godot)
 - Install Godot on the server, execute `lifecycle/pending/plans/godot-combat-foundation-plan.txt`.
-- Tune to `lifecycle/elden-ring-combat-reference.md` (remember the 30fps→60fps doubling).
+- Tune to `elden-ring-combat-reference.md` (remember the 30fps→60fps doubling).
 - Target the P10 greybox vertical slice first (capsule player vs capsule Godwyn), then
   swap in `models/godwyn_game.glb`.
 

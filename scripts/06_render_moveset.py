@@ -1,5 +1,5 @@
 """
-06_render_moveset.py — Phase 7: 7 Moveset Pose Renders
+06_render_moveset.py — Phase 6: 7 Moveset Pose Renders (REFINED)
 
 Opens models/godwyn_phase1.blend ONCE, loops through 7 SPEC-matching poses,
 renders 1920x1080 GPU (OptiX) to renders/moveset/, resets between poses.
@@ -27,6 +27,13 @@ BONE COORDINATE SYSTEM (verified):
     rx > 0 on thigh = leg swings BACKWARD (+Y direction)
     rx < 0 on thigh = leg swings FORWARD (-Y direction, toward camera)
   For jump: elevate with arm.location (armature object Z translation).
+
+REFINEMENTS (natural-pose pass):
+  - VoidCrack + extra lights hidden during moveset (restored after each pose)
+  - Pose 1: hand rotated so blade broad face shows (not edge-on)
+  - Pose 5: sword arm extended further, shoulder and upper arm adjusted
+  - All poses: moderate joint angles, no extreme/contorted positions
+  - Light artifacts eliminated
 
 INV-1 headless, INV-2 GPU-real per render, INV-6 reset between poses.
 
@@ -59,12 +66,18 @@ RENDER_SAMPLES = 256
 ARMATURE_NAME  = "Godwyn_Armature"
 R = math.radians
 
-# Actual light positions from blend file (character faces -Y)
+# Canonical light positions from blend file (character faces -Y)
 _CANONICAL_LIGHTS = {
     "Light_Key":  ((-1.8, -4.5, 7.0), (0.0, 0.0, 2.0), 190.0),
     "Light_Fill": (( 4.0, -2.8, 2.2), (0.0, 0.0, 1.8),  35.0),
     "Light_Rim":  (( 0.8,  6.5, 4.5), (0.0, 0.0, 2.2), 260.0),
 }
+
+# Objects to hide during moveset renders to eliminate artifacts
+# VoidCrack causes bright vertical/rectangular flare artifacts
+_HIDE_FOR_MOVESET = ["Godwyn_VoidCrack"]
+# Extra lights that produce noise but aren't needed for moveset shots
+_EXTRA_LIGHTS = ["Light_EyeFill", "Light_Hands", "Light_Kick"]
 
 
 # ---------------------------------------------------------------------------
@@ -138,6 +151,29 @@ def shift_light(name, location, look_at, energy=None):
 def restore_lights():
     for name, (loc, tgt, eng) in _CANONICAL_LIGHTS.items():
         shift_light(name, loc, tgt, eng)
+    # Restore extra lights visibility
+    for name in _EXTRA_LIGHTS:
+        obj = bpy.data.objects.get(name)
+        if obj:
+            obj.hide_render = True  # keep them hidden — moveset doesn't need them
+    # Restore hidden objects
+    for name in _HIDE_FOR_MOVESET:
+        obj = bpy.data.objects.get(name)
+        if obj:
+            obj.hide_render = True  # keep hidden for all moveset renders
+
+
+def setup_moveset_scene():
+    """Hide artifacts and extra lights before any pose renders."""
+    for name in _HIDE_FOR_MOVESET:
+        obj = bpy.data.objects.get(name)
+        if obj:
+            print(f"[06] Hiding: {name}")
+            obj.hide_render = True
+    for name in _EXTRA_LIGHTS:
+        obj = bpy.data.objects.get(name)
+        if obj:
+            obj.hide_render = True
 
 
 def assert_gpu(scene):
@@ -191,7 +227,10 @@ def render_pose(filepath, scene):
 
 
 # ===========================================================================
-# POSE DEFINITIONS
+# POSE DEFINITIONS — NATURAL POSES PASS
+#
+# Philosophy: moderate joint angles, real balance, weighty stances.
+# No extreme contortions. Real Elden Ring boss energy.
 #
 # REMEMBER:
 #   Character faces -Y. Camera at -Y = frontal view.
@@ -210,86 +249,86 @@ def render_pose(filepath, scene):
 
 def pose_1_low_hang_guard(arm, scene):
     """
-    SPEC 395-398: neutral LOW HANG GUARD.
-    Sword hanging low at his right side, tip angled toward ground.
-    Slight forward lean (toward -Y camera). Right arm close to body, down.
-    Weight on right leg (contrapposto). Noble, loaded, inevitable.
-    Camera: frontal 3/4 left, slightly below chest level — full figure readable.
+    SPEC: LOW HANG GUARD — neutral loaded stance.
+    Sword hanging low at right side, blade tip toward ground.
+    Slight contrapposto weight shift right. Noble bearing.
+    KEY FIX: hand.R rotated so sword blade shows its broad face to camera,
+    not edge-on (which made it look like a thin pole).
+    Camera: 3/4 left, slightly low — full figure readable, sword visible.
     """
     reset_pose(arm)
 
-    # Very slight forward lean (toward camera = rx < 0 on spine)
+    # Very slight forward lean (toward camera)
     pb(arm, "spine.01", rx=R(-3))
     pb(arm, "chest",    rx=R(-2))
 
-    # RIGHT arm (sword) — close to body, hanging LOW
+    # RIGHT arm (sword) — hanging low, close to body
     # Pull arm IN toward body (ry < 0) and slightly back (rx > 0)
     pb(arm, "shoulder.R",  rx=R(5),  rz=R(-5))
-    pb(arm, "upper_arm.R", rx=R(10), ry=R(-35), rz=R(-5))
-    pb(arm, "forearm.R",   rx=R(10))
-    # Hand rotated so blade tip angles downward
-    pb(arm, "hand.R",      rx=R(-10), ry=R(15))
+    pb(arm, "upper_arm.R", rx=R(10), ry=R(-30), rz=R(-5))
+    pb(arm, "forearm.R",   rx=R(12))
+    # FIXED: hand.R — ry=-25 rotates wrist so blade broad face shows to camera
+    # (old: ry=R(15) was edge-on; now ry=R(-25) opens the flat to camera)
+    pb(arm, "hand.R",      rx=R(-5), ry=R(-25), rz=R(-10))
 
-    # LEFT arm — relaxed, slightly out from body
+    # LEFT arm — relaxed at side, slightly out
     pb(arm, "shoulder.L",  rx=R(3),  rz=R(5))
     pb(arm, "upper_arm.L", rx=R(5),  ry=R(-25))
     pb(arm, "forearm.L",   rx=R(5))
 
-    # Contrapposto legs
-    pb(arm, "thigh.R", rz=R(-3))
-    pb(arm, "thigh.L", rz=R( 3))
+    # Contrapposto: weight right, hip left
+    pb(arm, "thigh.R", rx=R(2),  rz=R(-3))
+    pb(arm, "thigh.L", rx=R(-2), rz=R( 3))
 
-    # Head up, slightly back — noble bearing
+    # Head up — noble bearing, slight pride
     pb(arm, "neck", rx=R(3))
     pb(arm, "head", rx=R(2))
 
     bpy.context.view_layer.update()
     restore_lights()
-    # Boost key energy for a clear read
     shift_light("Light_Key", (-2.0, -5.5, 6.5), (0, 0, 2.0), energy=380)
 
-    # Camera: frontal 3/4 left, slightly below chest — see full figure + sword
+    # Camera: frontal 3/4 left — full figure + sword readable
     _set_camera("Cam_Moveset_01",
-                location=(-3.0, -9.5, 0.8),
+                location=(-3.5, -9.5, 0.9),
                 look_at=(0.3, 0.0, 2.0),
-                lens=65)
+                lens=60)
 
 
 def pose_2_x_combo_hit1(arm, scene):
     """
-    SPEC 447: X COMBO hit 1 — diagonal \\ (top-RIGHT down to bottom-LEFT).
-    Body twisted RIGHT (rz < 0 from viewer = CW). Right arm high-right,
-    sword at TOP of arc about to sweep down-left.
-    Camera: right-side front, slightly low — catches the raised sword arc.
+    SPEC: X COMBO hit 1 — diagonal \\ (top-RIGHT down to bottom-LEFT).
+    Body twisted right, right arm high, sword at top of arc about to sweep down.
+    NATURAL: moderate 20-deg torso twist, arm raised but not hyperextended.
+    Camera: right-side front, slightly low — catches raised sword arc.
     """
     reset_pose(arm)
 
-    # Body rotates RIGHT from viewer perspective = rz < 0 on spine bones
-    pb(arm, "pelvis",   rz=R(-22), rx=R(-3))
-    pb(arm, "spine.01", rz=R(-20), rx=R(-5))
-    pb(arm, "chest",    rz=R(-15), rx=R(-6))
+    # Moderate axial twist toward sword side + slight forward lean
+    pb(arm, "pelvis",   ry=R(18), rx=R(-4))
+    pb(arm, "spine.01", ry=R(14), rx=R(-5))
+    pb(arm, "chest",    ry=R(10), rx=R(-5))
 
-    # RIGHT arm: RAISED HIGH-RIGHT — sword at top of \\ arc
-    # Shoulder rises (rz > 0) and forward (rx < 0 = toward -Y = forward)
-    pb(arm, "shoulder.R",  rx=R(-15), rz=R(20))
-    # Upper arm sweeps up and outward: rx < 0 forward + ry > 0 outward
-    pb(arm, "upper_arm.R", rx=R(-105), ry=R(25), rz=R(15))
-    pb(arm, "forearm.R",   rx=R(20))
-    pb(arm, "hand.R",      rx=R(5), ry=R(-15))
+    # RIGHT arm: RAISED HIGH-RIGHT — top of \\ arc
+    pb(arm, "shoulder.R",  rx=R(-12), rz=R(18))
+    pb(arm, "upper_arm.R", rx=R(-115), ry=R(28), rz=R(12))
+    pb(arm, "forearm.R",   rx=R(28))
+    # Hand opens sword to camera (broad face forward)
+    pb(arm, "hand.R",      rx=R(5), ry=R(-12), rz=R(25))
 
-    # LEFT arm: counterbalance swept left-low
-    pb(arm, "shoulder.L",  rx=R(8), rz=R(-8))
-    pb(arm, "upper_arm.L", rx=R(15), ry=R(-20))
+    # LEFT arm: counterbalance swept left
+    pb(arm, "shoulder.L",  rx=R(6), rz=R(-6))
+    pb(arm, "upper_arm.L", rx=R(12), ry=R(-18))
     pb(arm, "forearm.L",   rx=R(8))
 
-    # Legs: wide stance — right back, left forward (body weight left-forward)
-    pb(arm, "thigh.R",  rx=R(8),  rz=R(-5))  # right leg BACK
-    pb(arm, "shin.R",   rx=R(-8))
-    pb(arm, "thigh.L",  rx=R(-15), rz=R(5))  # left leg FORWARD
-    pb(arm, "shin.L",   rx=R(10))
+    # Legs: natural split stance — right back, left forward
+    pb(arm, "thigh.R",  rx=R(8),  rz=R(-5))
+    pb(arm, "shin.R",   rx=R(-6))
+    pb(arm, "thigh.L",  rx=R(-12), rz=R(5))
+    pb(arm, "shin.L",   rx=R(8))
 
-    pb(arm, "neck", rz=R(-8))
-    pb(arm, "head", rz=R(-10))
+    pb(arm, "neck", ry=R(6))
+    pb(arm, "head", ry=R(8))
 
     bpy.context.view_layer.update()
 
@@ -298,47 +337,46 @@ def pose_2_x_combo_hit1(arm, scene):
     shift_light("Light_Rim",  ( 5.0,  5.0, 3.5), (0, 0, 2.0), energy=320)
     shift_light("Light_Fill", ( 3.0, -4.0, 1.5), (0, 0, 1.8), energy=55)
 
-    # Camera: right-front low angle — from right side (positive X) + front (-Y)
+    # Camera: right-front low angle — reads sword high against void
     _set_camera("Cam_Moveset_02",
-                location=(5.5, -6.5, 0.5),
-                look_at=(-0.5, 0.0, 2.4),
-                lens=55)
+                location=(5.0, -8.2, 1.4),
+                look_at=(0.0, 0.0, 1.95),
+                lens=48)
 
 
 def pose_3_x_combo_hit2(arm, scene):
     """
-    SPEC 447: X COMBO hit 2 — diagonal / (top-LEFT down to bottom-RIGHT).
-    Body twisted LEFT (rz > 0 from viewer = CCW), completing the X.
-    Sword extended out to his right, sweeping downward to bottom-right.
-    Camera: left-side front, low angle.
+    SPEC: X COMBO hit 2 — diagonal / (top-LEFT down to bottom-RIGHT).
+    Body twisted left completing the X, sword swinging down-right.
+    NATURAL: moderate 20-deg counter-twist, natural follow-through.
+    Camera: left-front, low angle.
     """
     reset_pose(arm)
 
-    # Body twisted LEFT from viewer = rz > 0
-    pb(arm, "pelvis",   rz=R(25), rx=R(-3))
-    pb(arm, "spine.01", rz=R(22), rx=R(-5))
-    pb(arm, "chest",    rz=R(16), rx=R(-6))
+    # Counter-twist as blade sweeps down-right
+    pb(arm, "pelvis",   ry=R(-18), rx=R(-4))
+    pb(arm, "spine.01", ry=R(-14), rx=R(-5))
+    pb(arm, "chest",    ry=R(-10), rx=R(-5))
 
-    # RIGHT arm: sweep has come DOWN from top-left — arm now lower-right
-    # rx small negative (arm mostly sideways-out), ry > 0 (outward extended)
-    pb(arm, "shoulder.R",  rx=R(-8), rz=R(5))
-    pb(arm, "upper_arm.R", rx=R(-55), ry=R(35), rz=R(-10))
-    pb(arm, "forearm.R",   rx=R(15))
-    pb(arm, "hand.R",      rx=R(10), ry=R(-20))
+    # RIGHT arm: sweep coming DOWN — arm now lower-right extended
+    pb(arm, "shoulder.R",  rx=R(-6), rz=R(4))
+    pb(arm, "upper_arm.R", rx=R(-50), ry=R(32), rz=R(-8))
+    pb(arm, "forearm.R",   rx=R(12))
+    pb(arm, "hand.R",      rx=R(8), ry=R(-18))
 
     # LEFT arm: swept HIGH-LEFT as counterbalance
-    pb(arm, "shoulder.L",  rx=R(-12), rz=R(18))
-    pb(arm, "upper_arm.L", rx=R(-90), ry=R(-20), rz=R(15))
-    pb(arm, "forearm.L",   rx=R(25))
+    pb(arm, "shoulder.L",  rx=R(-10), rz=R(16))
+    pb(arm, "upper_arm.L", rx=R(-82), ry=R(-18), rz=R(12))
+    pb(arm, "forearm.L",   rx=R(22))
 
     # Legs: reversed from pose 2
-    pb(arm, "thigh.R",  rx=R(-15), rz=R(-5))  # right leg FORWARD
-    pb(arm, "shin.R",   rx=R(10))
-    pb(arm, "thigh.L",  rx=R(8),   rz=R(5))   # left leg BACK
-    pb(arm, "shin.L",   rx=R(-8))
+    pb(arm, "thigh.R",  rx=R(-12), rz=R(-5))
+    pb(arm, "shin.R",   rx=R(8))
+    pb(arm, "thigh.L",  rx=R(8),   rz=R(5))
+    pb(arm, "shin.L",   rx=R(-6))
 
-    pb(arm, "neck", rz=R(10))
-    pb(arm, "head", rz=R(12))
+    pb(arm, "neck", ry=R(-7))
+    pb(arm, "head", ry=R(-9))
 
     bpy.context.view_layer.update()
 
@@ -349,223 +387,228 @@ def pose_3_x_combo_hit2(arm, scene):
 
     # Camera: left-front low angle
     _set_camera("Cam_Moveset_03",
-                location=(-5.5, -6.5, 0.5),
-                look_at=(0.5, 0.0, 2.4),
-                lens=55)
+                location=(-5.0, -8.2, 1.4),
+                look_at=(0.0, 0.0, 1.95),
+                lens=48)
 
 
 def pose_4_overhead_slam(arm, scene):
     """
-    SPEC 430: overhead slam — sword raised TWO-HANDED above head.
-    Right hand on hilt, left grips lower blade (two-handed overhead).
-    Body arched back slightly, arms fully overhead, about to slam DOWN.
-    Camera: front, medium-low, capture full figure with arms overhead.
+    SPEC: OVERHEAD SLAM — two-handed overhead, committed but not contorted.
+    Arms raised above head, sword pointing up. Believable power stance.
+    NATURAL: moderate backward arch (not extreme), arms naturally overhead.
+    Camera: frontal, low upshot. Shows full silhouette against void.
     """
     reset_pose(arm)
 
-    # Very slight backward arch (arms overhead = natural arch)
-    pb(arm, "pelvis",   rx=R(5))
-    pb(arm, "spine.01", rx=R(4))
-    pb(arm, "chest",    rx=R(3))
+    # Slight backward arch — chest forward, committed power
+    pb(arm, "pelvis",   rx=R(8))
+    pb(arm, "spine.01", rx=R(6))
+    pb(arm, "chest",    rx=R(4))
 
-    # Head back slightly — looking up at the sword
-    pb(arm, "neck", rx=R(8))
-    pb(arm, "head", rx=R(10))
+    # Head tilts back — looking up past the blade
+    pb(arm, "neck", rx=R(-8))
+    pb(arm, "head", rx=R(-12))
 
-    # RIGHT arm: PRIMARY GRIP — FULLY overhead (rx very negative)
-    pb(arm, "shoulder.R",  rx=R(-25), rz=R(30))
-    pb(arm, "upper_arm.R", rx=R(-155), ry=R(15), rz=R(15))
-    pb(arm, "forearm.R",   rx=R(15))
-    pb(arm, "hand.R",      rx=R(-10), ry=R(5))
+    # RIGHT arm: OVERHEAD. rx=-150 brings arm fully up from rest position.
+    # ry=-20 pulls it toward centerline for two-hand grip proximity.
+    pb(arm, "shoulder.R",  rx=R(-22), rz=R(18))
+    pb(arm, "upper_arm.R", rx=R(-148), ry=R(-22), rz=R(0))
+    pb(arm, "forearm.R",   rx=R(6))   # slight natural bend
+    pb(arm, "hand.R",      rx=R(-5), rz=R(50))
 
-    # LEFT arm: OFF-HAND GRIP — mirrors right, both overhead
-    pb(arm, "shoulder.L",  rx=R(-22), rz=R(30))
-    pb(arm, "upper_arm.L", rx=R(-145), ry=R(-18), rz=R(-15))
-    pb(arm, "forearm.L",   rx=R(20))
-    pb(arm, "hand.L",      rx=R(-8), ry=R(-5))
+    # LEFT arm: off-hand grip — both arms overhead close together
+    pb(arm, "shoulder.L",  rx=R(-20), rz=R(16))
+    pb(arm, "upper_arm.L", rx=R(-140), ry=R(22), rz=R(0))
+    pb(arm, "forearm.L",   rx=R(8))
+    pb(arm, "hand.L",      rx=R(-5))
 
-    # Legs: stable wide stance
-    pb(arm, "thigh.R", rx=R(5),  rz=R(-6))
-    pb(arm, "shin.R",  rx=R(-5))
-    pb(arm, "thigh.L", rx=R(5),  rz=R( 6))
-    pb(arm, "shin.L",  rx=R(-5))
+    # Legs: wide grounded stance, slight knee bend for power
+    pb(arm, "thigh.R", rx=R(5),  rz=R(-8))
+    pb(arm, "shin.R",  rx=R(-8))
+    pb(arm, "thigh.L", rx=R(5),  rz=R(8))
+    pb(arm, "shin.L",  rx=R(-8))
 
     bpy.context.view_layer.update()
 
-    # Overhead drama: key from front-above
-    shift_light("Light_Key",  (0.0, -3.5, 10.5), (0, 0, 3.5), energy=800)
-    shift_light("Light_Fill", (4.0, -4.5, 2.0),  (0, 0, 2.0), energy=50)
-    shift_light("Light_Rim",  (0.5,  6.5, 5.0),  (0, 0, 2.5), energy=280)
+    # Key from high front — dramatically under-lights the raised arms
+    shift_light("Light_Key",  (0.0,  -3.5, 10.0), (0, 0, 3.2), energy=1000)
+    shift_light("Light_Fill", (4.0,  -5.0,  2.0), (0, 0, 2.0), energy=60)
+    shift_light("Light_Rim",  (0.5,   7.0,  5.0), (0, 0, 2.5), energy=300)
 
-    # Camera: slightly lower front, wide lens — see arms overhead + whole figure
+    # Camera: frontal low upshot — feet/legs/torso/arms+sword fill frame
     _set_camera("Cam_Moveset_04",
-                location=(0.5, -9.5, -0.5),
-                look_at=(0.0, 0.0, 3.0),
-                lens=55)
+                location=(0.6, -9.8, 0.55),
+                look_at=(0.0, 0.0, 2.55),
+                lens=40)
 
 
 def pose_5_backhand_rotation(arm, scene):
     """
-    SPEC 500-501: mid CCW spin, BACK TO CAMERA.
-    Armature object rotated 180° — character now faces +Y (away from us).
-    Sword swings around on the backhand; body mid-CCW spin.
-    Camera at +Y to see his back clearly.
+    SPEC: BACKHAND ROTATION — CCW turning cut, back mostly to camera.
+    Armature rotated ~125 deg so we see a 3/4 back-left angle.
+    The backhand swing = sword arm sweeps across (R arm arcing to the left).
+    At this angle, the extended sword arm is visible against the void.
+    Camera: low right-side to see the sword arc extending across body.
     """
     reset_pose(arm)
 
-    # Rotate the whole armature 180° to face away
-    arm.rotation_euler = Euler((0, 0, R(180)))
+    # 125-deg rotation: character faces mostly left-back
+    # CCW spin: his chest faces ~35deg past the camera's left.
+    # His R arm (with sword) swings across in front from this view.
+    arm.rotation_euler = Euler((0, 0, R(125)))
 
-    # In his local frame (now facing +Y), body mid-CCW spin:
-    # rz > 0 in his NEW facing would be... let's keep small twist
-    pb(arm, "pelvis",   rz=R(-10), rx=R(-3))
-    pb(arm, "spine.01", rz=R(-8),  rx=R(-2))
-    pb(arm, "chest",    rz=R(-5))
+    # Body mid-CCW spin: twist + slight lean into the swing
+    pb(arm, "pelvis",   ry=R(-10), rx=R(-4))
+    pb(arm, "spine.01", ry=R(-8),  rx=R(-3))
+    pb(arm, "chest",    ry=R(-5))
 
-    # Head turned to look back over his shoulder (toward +X direction now)
-    pb(arm, "neck", rz=R(15), rx=R(5))
-    pb(arm, "head", rz=R(20), rx=R(5))
+    # Head looking over left shoulder toward camera (natural spin look)
+    pb(arm, "neck", ry=R(-15), rx=R(3))
+    pb(arm, "head", ry=R(-20), rx=R(4))
 
-    # RIGHT arm (sword): on the backhand sweep — arm extended to his side
-    # In his new +Y facing, "extending outward right" = extending toward global -X
-    pb(arm, "shoulder.R",  rx=R(-5), rz=R(8))
-    pb(arm, "upper_arm.R", rx=R(-30), ry=R(30), rz=R(10))
-    pb(arm, "forearm.R",   rx=R(15))
-    pb(arm, "hand.R",      rx=R(-5), ry=R(10))
+    # RIGHT arm (sword): backhand extended — arm sweeping across the body
+    # ry > 0 = outward, rx < 0 = forward-ish; this should extend sword to the left
+    pb(arm, "shoulder.R",  rx=R(-5), rz=R(12))
+    pb(arm, "upper_arm.R", rx=R(-60), ry=R(50), rz=R(10))
+    pb(arm, "forearm.R",   rx=R(8))   # nearly straight
+    pb(arm, "hand.R",      rx=R(-10), ry=R(20), rz=R(-30))
 
-    # LEFT arm: sweeping forward as counterbalance
-    pb(arm, "shoulder.L",  rx=R(-8), rz=R(-5))
-    pb(arm, "upper_arm.L", rx=R(-50), ry=R(-20), rz=R(-10))
-    pb(arm, "forearm.L",   rx=R(15))
+    # LEFT arm: counterbalance pulling back
+    pb(arm, "shoulder.L",  rx=R(5), rz=R(-8))
+    pb(arm, "upper_arm.L", rx=R(15), ry=R(-22), rz=R(-5))
+    pb(arm, "forearm.L",   rx=R(8))
 
-    # Legs: spinning stance — weight on right, left lifting
-    pb(arm, "thigh.R", rx=R(5),  rz=R(-5))
-    pb(arm, "thigh.L", rx=R(-10), rz=R(4))
-    pb(arm, "shin.L",  rx=R(12))
+    # Legs: grounded spin — right planted, left trailing
+    pb(arm, "thigh.R", rx=R(4),  rz=R(-5))
+    pb(arm, "shin.R",  rx=R(-4))
+    pb(arm, "thigh.L", rx=R(-6), rz=R(4))
+    pb(arm, "shin.L",  rx=R(8))
 
     bpy.context.view_layer.update()
 
-    # After 180° rotation: character faces +Y. Camera at -Y sees his BACK.
-    # Key light from -Y (behind him now = illuminates his back well)
-    shift_light("Light_Key",  (-1.5, -7.5, 6.5), (0, 0, 2.0), energy=450)
-    shift_light("Light_Fill", ( 3.5, -5.0, 2.5), (0, 0, 1.8), energy=80)
-    # Rim from +Y (his new front) to silhouette the back edges
-    shift_light("Light_Rim",  ( 0.5,  6.0, 4.5), (0, 0, 2.2), energy=200)
+    # Key light from camera-side (low-left in world) to illuminate the swing
+    shift_light("Light_Key",  (-3.5, -6.5, 6.5), (0, 0, 2.0), energy=520)
+    shift_light("Light_Fill", ( 4.0, -4.0, 2.5), (0, 0, 1.8), energy=70)
+    # Rim from behind the character to outline the silhouette
+    shift_light("Light_Rim",  ( 2.5,  6.0, 4.5), (0, 0, 2.2), energy=300)
 
-    # Camera at -Y (his back side after rotation) — sees his back + sword arc
+    # Camera: low-right-front — looking at the 3/4 back-left figure.
+    # Position at camera-left (+X) to see the sword arc sweeping past the body.
     _set_camera("Cam_Moveset_05",
-                location=(3.0, -9.0, 2.2),
+                location=(5.5, -6.5, 1.5),
                 look_at=(0.0, 0.0, 2.0),
-                lens=62)
+                lens=55)
 
 
 def pose_6_jump_lunge(arm, scene):
     """
-    SPEC 416/480: jump lunge — AIRBORNE, sword thrust downward.
-    Elevate entire character by moving the armature object up on Z.
-    Forward lean, legs tucked, right arm driving sword down-forward.
-    Camera: frontal, very low, looking steeply UP — see airborne silhouette.
+    SPEC: JUMP LUNGE — grounded leaping thrust, not wild mid-air split.
+    Character 1m airborne, forward lean, sword extending downward-forward.
+    NATURAL: moderate leg tuck (not extreme 90-deg splits), believable arc.
+    Camera: frontal low-angle upshot — reads airborne silhouette clearly.
     """
     reset_pose(arm)
 
-    # ELEVATE entire character by moving the armature object up on Z.
-    # Note: arm.location is in world space since armature has no parent.
-    arm.location = Vector((0, 0, 1.0))  # 1m airborne
+    # Elevate character: 1m off ground
+    arm.location = Vector((0, 0, 1.0))
     bpy.context.view_layer.update()
 
-    # Forward lean into the lunge (rx < 0 toward camera)
-    pb(arm, "pelvis",   rx=R(-15))
-    pb(arm, "spine.01", rx=R(-12))
-    pb(arm, "chest",    rx=R(-8))
+    # Forward lean into the lunge — committed but not contorted
+    pb(arm, "pelvis",   rx=R(-12))
+    pb(arm, "spine.01", rx=R(-10))
+    pb(arm, "chest",    rx=R(-6))
 
-    # Head looking slightly down at the target
+    # Head looking slightly down at target
     pb(arm, "neck", rx=R(5))
-    pb(arm, "head", rx=R(8))
+    pb(arm, "head", rx=R(7))
 
-    # RIGHT arm: sword extended DOWNWARD — arm forward and down
+    # RIGHT arm: sword extended DOWNWARD-FORWARD — committed lunge
     pb(arm, "shoulder.R",  rx=R(-5),  rz=R(8))
-    pb(arm, "upper_arm.R", rx=R(-40), ry=R(15))
-    pb(arm, "forearm.R",   rx=R(75))   # Elbow bends down hard
-    pb(arm, "hand.R",      rx=R(15), ry=R(-8))
+    pb(arm, "upper_arm.R", rx=R(-38), ry=R(14))
+    pb(arm, "forearm.R",   rx=R(68))   # elbow bends into the thrust
+    pb(arm, "hand.R",      rx=R(12), ry=R(-10))
 
-    # LEFT arm: extended sideways-back for airborne balance
-    pb(arm, "shoulder.L",  rx=R(-18), rz=R(20))
-    pb(arm, "upper_arm.L", rx=R(-85), ry=R(-20), rz=R(12))
-    pb(arm, "forearm.L",   rx=R(22))
+    # LEFT arm: spread for airborne balance
+    pb(arm, "shoulder.L",  rx=R(-15), rz=R(18))
+    pb(arm, "upper_arm.L", rx=R(-48), ry=R(-35), rz=R(25))
+    pb(arm, "forearm.L",   rx=R(20))
 
-    # Legs TUCKED UP: thighs toward camera, shins bent back
-    pb(arm, "thigh.R",  rx=R(-45), rz=R(-5))
-    pb(arm, "shin.R",   rx=R(75))
-    pb(arm, "foot.R",   rx=R(-22))
-    pb(arm, "thigh.L",  rx=R(-38), rz=R(5))
-    pb(arm, "shin.L",   rx=R(65))
-    pb(arm, "foot.L",   rx=R(-18))
+    # Legs MODERATELY TUCKED — not extreme splits, natural in-flight
+    pb(arm, "thigh.R",  rx=R(-38), rz=R(-5))
+    pb(arm, "shin.R",   rx=R(60))
+    pb(arm, "foot.R",   rx=R(-18))
+    pb(arm, "thigh.L",  rx=R(-30), rz=R(5))
+    pb(arm, "shin.L",   rx=R(50))
+    pb(arm, "foot.L",   rx=R(-14))
 
     bpy.context.view_layer.update()
 
-    # Key from front-above; character is 1m higher so adjust target height
+    # Key from front-above; character 1m higher so adjust target
     shift_light("Light_Key",  (-1.5, -3.5, 10.5), (0, 0, 3.5), energy=750)
     shift_light("Light_Fill", ( 3.5, -5.0,  2.0), (0, 0, 3.0), energy=50)
     shift_light("Light_Rim",  ( 1.0,  6.5,  4.0), (0, 0, 3.5), energy=300)
 
-    # Camera: positioned close enough to fill the frame properly
-    # Character center is ~Z=3.2 (elevated 1m + natural ~2.2m center)
-    # Camera at medium distance, looking at character center
-    cam = _set_camera("Cam_Moveset_06",
-                      location=(2.0, -7.5, 1.5),
-                      look_at=(0.0, 0.0, 3.2),
-                      lens=52,
-                      roll=6)
+    # Camera: 3/4 low-front angle, closer in — fills the frame better.
+    # Character is 1m elevated; center mass ~Z=3.2. Camera at Z=1.0
+    # gives a moderate upshot without crushing them into the top of frame.
+    # The sword extending down-forward reads clearly from this angle.
+    _set_camera("Cam_Moveset_06",
+                location=(2.0, -8.0, 1.0),
+                look_at=(0.0, 0.0, 2.8),
+                lens=50,
+                roll=3)
 
 
 def pose_7_double_spin(arm, scene):
     """
-    SPEC 458-460: mid CW double-spin — sword extended centrifugally outward.
-    Body twisted RIGHT (CW from viewer = rz < 0 on spine).
-    Right arm fully extended outward, sword sweeping a wide arc.
-    Camera: elevated 3/4 right-front — sees extended sword + robe sweep.
+    SPEC: DOUBLE SPIN — mid CW turning cut, sword extended centrifugally.
+    Character upright (spinning = vertical axis), sword sweeping outward right.
+    NATURAL: 25-deg torso twist, arm extended — upright and grounded, not falling.
+    Camera: frontal right-offset — reads upright figure + wide sword arc.
     """
     reset_pose(arm)
 
-    # Body mid-CW spin (twist RIGHT from viewer = rz < 0)
-    pb(arm, "pelvis",   rz=R(-50), rx=R(-3))
-    pb(arm, "spine.01", rz=R(-40), rx=R(-4))
-    pb(arm, "chest",    rz=R(-30), rx=R(-4))
+    # Body mid-CW spin: modest axial twist (ry = axial on this rig)
+    pb(arm, "pelvis",   ry=R(-22), rx=R(-2))
+    pb(arm, "spine.01", ry=R(-17), rx=R(-2))
+    pb(arm, "chest",    ry=R(-12), rx=R(-2))
 
-    # Head: gaze leads the spin (looking right = rz < 0 from viewer)
-    pb(arm, "neck", rz=R(-20))
-    pb(arm, "head", rz=R(-25))
+    # Head: gaze leads the spin
+    pb(arm, "neck", ry=R(-12))
+    pb(arm, "head", ry=R(-15))
 
-    # RIGHT arm: CENTRIFUGALLY EXTENDED outward in spin direction
-    # In CW spin (turning right), right arm is the trailing extended arm
-    pb(arm, "shoulder.R",  rx=R(-10), rz=R(18))
-    pb(arm, "upper_arm.R", rx=R(-80), ry=R(45), rz=R(20))
-    pb(arm, "forearm.R",   rx=R(10))   # Extended — near straight
-    pb(arm, "hand.R",      ry=R(18))
+    # RIGHT arm: SWORD FULLY EXTENDED CENTRIFUGALLY outward
+    # ry > 0 on R arm = outward/centrifugal; rx slightly negative = upward angle
+    pb(arm, "shoulder.R",  rx=R(-8), rz=R(20))
+    pb(arm, "upper_arm.R", rx=R(-88), ry=R(42), rz=R(0))
+    pb(arm, "forearm.R",   rx=R(5))    # nearly straight — centrifugal extension
+    pb(arm, "hand.R",      ry=R(18), rz=R(-30))
 
-    # LEFT arm: drawn inward from the centrifugal energy
-    pb(arm, "shoulder.L",  rx=R(5),  rz=R(-8))
-    pb(arm, "upper_arm.L", rx=R(15), ry=R(-20), rz=R(15))
-    pb(arm, "forearm.L",   rx=R(8))
+    # LEFT arm: drawn across body (centripetal) for balance
+    pb(arm, "shoulder.L",  rx=R(6),  rz=R(-10))
+    pb(arm, "upper_arm.L", rx=R(22), ry=R(-20), rz=R(10))
+    pb(arm, "forearm.L",   rx=R(10))
 
-    # Legs: right planted (pivot), left lifts in spin
-    pb(arm, "thigh.R",  rx=R(5),  rz=R(-6))
+    # Legs: planted right, left slightly lifted in spin
+    pb(arm, "thigh.R",  rx=R(3),  rz=R(-6))
     pb(arm, "shin.R",   rx=R(-4))
-    pb(arm, "thigh.L",  rx=R(-20), rz=R(5))
-    pb(arm, "shin.L",   rx=R(25))
+    pb(arm, "thigh.L",  rx=R(-10), rz=R(5))
+    pb(arm, "shin.L",   rx=R(15))
 
     bpy.context.view_layer.update()
 
-    # Rim light from his extended right (= global +X side from him, shifted by spin)
-    shift_light("Light_Key",  (-1.5, -4.0, 7.5), (0, 0, 2.0), energy=520)
-    shift_light("Light_Fill", (-3.5, -3.5, 1.5), (0, 0, 1.8), energy=60)
-    shift_light("Light_Rim",  ( 7.0,  2.0, 3.5), (0, 0, 2.0), energy=400)
+    # Key from upper front-left — illuminates chest + pauldron
+    shift_light("Light_Key",  (-2.5, -5.0, 7.5), (0, 0, 2.0), energy=620)
+    shift_light("Light_Fill", (-1.5, -4.5, 1.5), (0, 0, 1.8), energy=60)
+    # Strong rim from +X to rim-light the extended sword arm
+    shift_light("Light_Rim",  ( 9.0,  0.5, 4.0), (0, 0, 2.0), energy=550)
 
-    # Camera: elevated 3/4 right-front
+    # Camera: front-center, slight right offset at chest height
     _set_camera("Cam_Moveset_07",
-                location=(7.0, -6.5, 3.0),
-                look_at=(0.0, 0.0, 2.0),
-                lens=60)
+                location=(1.5, -8.6, 1.7),
+                look_at=(0.3, 0.0, 1.9),
+                lens=52)
 
 
 # ===========================================================================
@@ -591,7 +634,7 @@ EXPECTED_FILES = [f"{name}.png" for name, _ in POSES]
 
 def main():
     print("=" * 60)
-    print("[06] Phase 7 — Moveset Pose Renders (7 poses)")
+    print("[06] Phase 6 — Moveset Pose Renders (7 poses, NATURAL PASS)")
     print("=" * 60)
 
     active_gpu = G.enable_gpu()
@@ -617,6 +660,10 @@ def main():
         print("[06] FATAL: Godwyn_Sword missing", file=sys.stderr)
         sys.exit(1)
 
+    # Hide artifacts and extra lights for all moveset renders
+    setup_moveset_scene()
+    print("[06] Scene prepared: VoidCrack hidden, extra lights off")
+
     failed = []
 
     for i, (pose_name, pose_fn) in enumerate(POSES, start=1):
@@ -635,6 +682,11 @@ def main():
         finally:
             reset_pose(arm)
             restore_lights()
+            # Re-hide VoidCrack for next pose
+            for name in _HIDE_FOR_MOVESET:
+                obj = bpy.data.objects.get(name)
+                if obj:
+                    obj.hide_render = True
             bpy.context.view_layer.update()
 
     # Validation gate
@@ -660,7 +712,7 @@ def main():
 
     print(f"[06] GATE MET: {len(produced)}/{len(EXPECTED_FILES)} renders in {_MOVESET_DIR}")
     print(f"[06] GPU: {active_gpu}")
-    print("[06] Phase 7 complete.")
+    print("[06] Phase 6 complete — natural poses rendered.")
     print("=" * 60)
 
 

@@ -55,14 +55,82 @@ TARGET_HEIGHT = 3.2  # metres (SPEC.txt: 3.2m, reads as a person not a landscape
 GODWYN_MACRO = {
     "gender": 1.0,
     "age": 0.45,
-    "muscle": 0.70,
-    "weight": 0.44,
+    # p5b fixer r3 blocker #3: the body still read slight/feminine — muscle
+    # pushed near max (heroic demigod mass; 02_details adds the plate sculpt)
+    "muscle": 0.92,
+    "weight": 0.46,
     "proportions": 1.0,
     "height": 0.78,
     "cupsize": 0.5,
     "firmness": 0.5,
     "race": {"asian": 0.0, "caucasian": 1.0, "african": 0.0},
 }
+
+# ---------------------------------------------------------------------------
+# GODWYN DETAIL TARGETS (MPFB2 target/morph system — MACRO DEFINITION pass)
+#
+# The macro dict alone leaves a soft "pill" read: no nose bridge, no brow,
+# no cheekbones, undefined jaw, soft torso. These MakeHuman detail targets
+# are loaded via TargetService.load_target() (real morph system, NOT raw
+# vertex edits) and give Godwyn a DEFINED, noble, idealized face + an
+# athletic swordsman body. Deterministic list; iterate weights visually.
+#
+# Names resolve via TargetService.target_full_path() (basename prefix match
+# over mpfb/data/targets/**). Values are shape-key weights in [-1, 1].
+# ---------------------------------------------------------------------------
+GODWYN_DETAIL_TARGETS = [
+    # ---- SKULL / HEAD FORM -------------------------------------------------
+    ("head-scale-depth-incr",          0.30),  # deeper skull in profile
+    ("head-rectangular",               0.30),  # masculine head plane
+    ("head-scale-horiz-incr",          0.05),  # p5b r3: 0.15 made the face
+                                               # read WIDE + flat — mostly out
+    ("forehead-trans-backward",        0.15),  # slight noble forehead slope
+    ("forehead-temple-incr",           0.10),
+    # ---- BROW (real brow ridge — the "pill" killer) -------------------------
+    ("eyebrows-trans-forward",         0.95),
+    ("eyebrows-trans-down",            0.30),
+    # ---- NOSE (straight Greek bridge, projected, refined tip) ---------------
+    ("nose-greek-incr",                0.60),
+    ("nose-scale-depth-incr",          0.50),
+    ("nose-volume-incr",               0.20),
+    ("nose-width2-decr",               0.30),
+    ("nose-point-width-decr",          0.30),
+    ("nose-hump-incr",                 0.08),
+    # ---- CHEEKBONES ----------------------------------------------------------
+    # phase4 fixer r4 blocker #1 ("flat wide facial planes"): cheekbone morphs
+    # to FULL and inner-cheek hollow deepened — the malar plane break + the
+    # narrowed midface must come from the morph system first, with 02's
+    # sculpt pass layering on top.
+    ("l-cheek-bones-incr",             1.00),
+    ("r-cheek-bones-incr",             1.00),
+    ("l-cheek-inner-decr",             0.62),
+    ("r-cheek-inner-decr",             0.62),
+    # ---- JAW / CHIN -----------------------------------------------------------
+    ("chin-bones-incr",                0.80),  # wide masculine jawbones
+    ("chin-prominent-incr",            0.50),
+    ("chin-width-incr",                0.30),
+    ("chin-height-incr",               0.15),
+    # ---- LIPS (refined, defined cupid's bow) ----------------------------------
+    ("mouth-cupidsbow-incr",           0.40),
+    ("mouth-lowerlip-volume-incr",     0.20),
+    ("mouth-upperlip-volume-incr",     0.15),
+    # ---- BODY: athletic-defined swordsman -------------------------------------
+    # p5 fixer r1 (major #5): morphs pushed HARDER — the exposed chest read
+    # as a smooth flat plane. 02_details adds a landmark sculpt pass on top
+    # (clavicles, sternum groove, rectus blocking) for the macro shapes.
+    ("torso-vshape-incr",              0.70),
+    ("torso-muscle-pectoral-incr",     1.00),
+    ("torso-muscle-dorsi-incr",        0.90),  # p5b r3: V-taper vs hips
+    ("stomach-tone-incr",              1.00),
+    ("measure-waist-circ-decr",        0.28),
+    ("l-upperarm-muscle-incr",         0.82),
+    ("r-upperarm-muscle-incr",         0.82),
+    ("l-upperarm-shoulder-muscle-incr", 0.90),
+    ("r-upperarm-shoulder-muscle-incr", 0.90),
+    ("l-lowerarm-muscle-incr",         0.85),  # p5b r3: thin-arm read
+    ("r-lowerarm-muscle-incr",         0.85),
+    ("neck-scale-horiz-incr",          0.20),  # warrior neck
+]
 
 
 def dynamic_import(pkg_suffix, key):
@@ -113,10 +181,27 @@ def main():
     body.select_set(True)
     bpy.context.view_layer.objects.active = body
 
-    # -- Bake macro shape keys into the mesh (deterministic geometry) ---------
-    # MPFB shapes the human via shape keys; bake the current mix so that
-    # vertex coords ARE the shaped human (fixes landmark math + allows a
-    # clean helper delete + export-friendly mesh).
+    # -- MACRO DEFINITION: MPFB2 detail targets (morph system, not raw verts) --
+    TargetService = dynamic_import("mpfb.services.targetservice", "TargetService")
+    loaded = 0
+    for tname, weight in GODWYN_DETAIL_TARGETS:
+        path = TargetService.target_full_path(tname)
+        if not path:
+            print(f"[01_base_human] FATAL: target '{tname}' not found",
+                  file=sys.stderr)
+            sys.exit(1)
+        TargetService.load_target(body, path, weight=weight, name=tname)
+        loaded += 1
+    print(f"[01_base_human] Detail targets loaded: {loaded} "
+          f"(face definition + athletic body)")
+
+    # -- Bake SHAPING morphs into the mesh (deterministic base geometry) ------
+    # MPFB shapes the human via shape keys; bake the current macro+detail mix
+    # so vertex coords ARE the shaped human (fixes landmark math + allows a
+    # clean helper delete + export-friendly mesh). This bakes the BASE SHAPE
+    # only — the morph values stay reachable in GODWYN_DETAIL_TARGETS above
+    # (scripts are the reproducible source), and FACE EXPRESSION blendshapes
+    # are added as live shape keys at the end of 02_details.py (animatable).
     if body.data.shape_keys:
         baked = body.shape_key_add(name="_GodwynBaked", from_mix=True)
         for kb in [k for k in body.data.shape_keys.key_blocks
@@ -134,6 +219,13 @@ def main():
     keep_groups = {"body", "helper-l-eye", "helper-r-eye"}
     keep_idx = {body.vertex_groups[g].index for g in keep_groups
                 if g in body.vertex_groups}
+    # Original-basemesh vertex indices, stored as a persistent int attribute
+    # BEFORE any vertex deletion. 02_details uses this to remap MPFB face
+    # expression targets (indexed against the full basemesh) onto the trimmed
+    # mesh when it creates the live expression blendshapes.
+    oidx = body.data.attributes.new("godwyn_orig_idx", "INT", "POINT")
+    for i in range(len(body.data.vertices)):
+        oidx.data[i].value = i
     import bmesh
     bm = bmesh.new()
     bm.from_mesh(body.data)
@@ -178,7 +270,14 @@ def main():
     # Art direction: neck a touch long, shoulders slightly narrow for the
     # 1.4x-human idealized-warrior brief. Widen the clavicle/deltoid span
     # ~6% and shorten the neck ~3cm, then re-normalize height to 3.2m.
-    heroic_proportions(body)
+    s_heroic = heroic_proportions(body)
+
+    # Cumulative target-delta scale: MakeHuman target units -> final mesh.
+    # 0.1 = create_human(scale=0.1); sf = rescale to 3.2m; s_heroic = the
+    # re-normalize above. 02_details multiplies expression target deltas by
+    # this (times its own head-enlarge factor) when building blendshapes.
+    body["godwyn_expr_scale"] = 0.1 * sf * s_heroic
+    print(f"[01_base_human] expr delta scale = {body['godwyn_expr_scale']:.5f}")
 
     print(f"[01_base_human] Final dims: "
           f"{tuple(round(d, 3) for d in body.dimensions)} "
@@ -223,15 +322,29 @@ def heroic_proportions(body):
     """
     me = body.data
     # 1) shoulder span: |x| scaled up inside a z band around the deltoids
+    # p5b fixer r3 blocker #3: +6% still read narrow-shouldered/feminine —
+    # pushed to +14% at the deltoid peak (director asked +20-30% total across
+    # macro morphs + this band; muscle 0.92 supplies the rest of the mass).
     n_sh = 0
     for v in me.vertices:
         z = v.co.z
         ax = abs(v.co.x)
-        if 2.30 < z < 2.80 and ax > 0.12:
+        if 2.28 < z < 2.82 and ax > 0.12:
             w = min(1.0, (ax - 0.12) / 0.20)             # ramp out from midline
-            zc = max(0.0, 1.0 - abs(z - 2.56) / 0.26)    # soft band falloff
-            v.co.x *= 1.0 + 0.06 * w * zc
+            zc = max(0.0, 1.0 - abs(z - 2.56) / 0.28)    # soft band falloff
+            v.co.x *= 1.0 + 0.14 * w * zc
             n_sh += 1
+    # 1b) hips: narrow the pelvic span ~5% (kills the wide-hipped silhouette;
+    # p5b fixer r3 blocker #3). Soft band through the hip/glute mass.
+    n_hp = 0
+    for v in me.vertices:
+        z = v.co.z
+        ax = abs(v.co.x)
+        if 1.50 < z < 2.05 and ax > 0.05:
+            w = min(1.0, (ax - 0.05) / 0.12)
+            zc = max(0.0, 1.0 - abs(z - 1.78) / 0.28)
+            v.co.x *= 1.0 - 0.05 * w * zc
+            n_hp += 1
     # 2) neck: drop everything above the neck base by up to 3cm
     NB, DROP = 2.58, 0.030
     n_nk = 0
@@ -250,8 +363,10 @@ def heroic_proportions(body):
     for v in me.vertices:
         v.co *= s
     me.update()
-    print(f"[01_base_human] heroic proportions: shoulders +6% ({n_sh} verts), "
+    print(f"[01_base_human] heroic proportions: shoulders +14% ({n_sh} verts), "
+          f"hips -5% ({n_hp} verts), "
           f"neck -{DROP*1000:.0f}mm ({n_nk} verts), re-normalized x{s:.4f}")
+    return s
 
 
 # ---------------------------------------------------------------------------
