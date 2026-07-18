@@ -420,6 +420,21 @@ Memory Fragment: triggers at 75%, 50%, 25% HP
 7. PHASE 1 ATTACKS
 ================================================================================
 
+ANIMATION AUTHORING NOTES (user-directed)
+-----------------------------------------
+- SPIN SPEED: spins/rotations are NOT more than ~1 full rotation per second
+  (user-calibrated by physically doing the spin). No fast/erratic whirling —
+  spins are weighty and readable. (Applies to Double Spin, Backhand Rotation,
+  the half-spin overhead, etc.)
+- FEET: toes point roughly FORWARD, not splayed outward. (The image-to-3D base
+  splays the feet — correct this in the rig/pose.)
+- COMBAT GRIP vs IDLE: the planted point-down sword is an IDLE/intro pose; in
+  COMBAT he wields it in an active grip and swings. Both must be possible.
+- FIRST ANIMATION TO AUTHOR: the "vanilla" X-slash combo (the bread-and-butter):
+  cut 1 top-right -> bottom-left, cut 2 top-left -> bottom-right, from low guard.
+  Author only AFTER the deformation (movement pass) + sword separation are done,
+  so it deforms cleanly and the sword swings as a separate object.
+
 COMBAT FEEL
 -----------
 An incredible swordsman. Not a dancer.
