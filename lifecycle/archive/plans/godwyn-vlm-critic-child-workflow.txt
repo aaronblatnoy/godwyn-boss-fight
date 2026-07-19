@@ -1,0 +1,429 @@
+=====================================================================
+BUILDOUT PHASE PLAN: godwyn-vlm-critic
+  Full-Video Adaptive Describe-Swarm Motion Critic (nested child workflow),
+  routed through the llm-server gateway, + parent-loop integration.
+Generated: 2026-07-19  (clean rewrite — supersedes all prior iterations)
+Feeds: phase-plan-executor (compiles this .txt into a dynamic Workflow script).
+=====================================================================
+
+## 0. CONTEXT & GOALS
+
+The main animation loop (lifecycle/pending/workflows/godwyn-anim-critique-loop.workflow.js)
+builds a Godwyn moveset animation with Fable, gates it on OBJECTIVE metrics
+(anim_metrics.py), and each round asks a critic what to fix. This plan builds that
+critic as a NESTED CHILD WORKFLOW `godwyn-vlm-critic` and rewires the parent's P2.B
+to invoke it via workflow('godwyn-vlm-critic', {...}).
+
+THE CRITIC (settled, empirically validated — build EXACTLY this):
+A FULL-VIDEO, describe-then-judge, adaptive-swarm motion critic.
+  - METRICS are the objective gate. anim_metrics.py (parent plan §4) computes the
+    objective faults (cape/robe explosion via vertex displacement, body jerk/
+    contortion, foot-slide, sword-detach, smoothness) and DECIDES pass/fail
+    (G-4: metrics win). The VLM NEVER renders a verdict. Metrics own ALL objective/
+    geometric faults — the VLM never inspects geometry.
+  - The WIP animation is rendered to ONE FULL VIDEO (mp4). That video is the ONLY
+    visual input to the VLM. FULL VIDEO ONLY — no key-frames, no single frames, no
+    contact-sheet grids, ever. Every VLM task describes a narrow ASPECT of the full
+    video.
+  - Sonnet AUTONOMOUSLY decides what to probe. Each wave it chooses narrow motion/
+    feel ASPECTS to have described ("describe the cape's motion", "describe the speed
+    and snap of the swing", "describe how the body's weight shifts", "describe the
+    hair physics", "describe how the cape settles after the strike"), grounded on
+    {intended move + fablePassNote + metric flags + prior descriptions}. Open prompts,
+    never leading, always "describe literally; do NOT assume it is intentional."
+  - Those describe-tasks run as a SWARM: fired CONCURRENTLY to MAX OUT GPU CAPACITY.
+    Sonnet reads the descriptions, decides what MORE to probe based on the feedback,
+    keeps probing in waves. Budget-bounded (converge OR max-waves OR max-total-tasks)
+    so it always terminates.
+  - Sonnet then writes Fable a DETAILED PROMPT: it synthesizes ALL the aspect-
+    descriptions + the metrics into one direction telling Fable exactly what to fix
+    next. That is returned to the parent, whose P2.C Fable fixer consumes it.
+
+EMPIRICAL GROUNDING (PROVEN — do not re-test):
+  - Describe-then-judge beats asking the VLM to judge. The VLM only DESCRIBES;
+    Sonnet does ALL judging.
+  - The VLM reads MOTION qualities accurately from FULL VIDEO: a narrow cape-motion
+    describe discriminated a broken clip ("erratic, chaotic, whips and flings
+    outward, turbulent, snapping") from a normal swing ("fluid, gentle, settles
+    naturally"). That is exactly what metrics give only as numbers.
+  - Metrics own the objective + geometric faults (incl. cape explosion) AND the
+    pass/fail gate. The VLM's job is the qualitative motion/feel description; it
+    never judges.
+
+BACKEND — THROUGH THE llm-server GATEWAY (hard requirement):
+Aaron's network-abstraction directive: everything goes through the llm-server
+gateway (repo aaronblatnoy/llm-server, on Coolify, black-sky:8000) so backends stay
+swappable across machines. TODAY the gateway only proxies Ollama and its /chat is
+text-only. So this plan UPGRADES the gateway into a model->backend ROUTER: an
+OpenAI-compatible endpoint that carries MULTIMODAL content (video_url) and routes by
+model name to the right backend — Ollama (text) or the local vLLM Qwen2.5-VL video
+server (black-sky:8001). Both Ollama and vLLM already speak OpenAI
+/v1/chat/completions incl. video_url, so the gateway just maps model->backend URL and
+forwards (streaming pass-through). The describe-swarm then hits the GATEWAY
+(black-sky:8000) with {model: the VL model, messages with video_url}; the gateway
+routes to vLLM. Existing text /chat clients keep working (backward-compatible).
+
+### Success criteria (measurable)
+1. lifecycle/pending/workflows/godwyn-vlm-critic.child.workflow.js exists; given
+   {wipGlb, action, move, metricFlaws?, families?, fablePassNote, vlmModel} it runs
+   the deterministic graph (C0 metrics-ingest -> C1 render-full-video -> C2 adaptive
+   describe-swarm loop -> C3 synthesize-Fable-prompt) and RETURNS the parent contract.
+2. The child NEVER calls workflow() (one-level nesting); internals are agent() nodes
+   + a swarm-runner only. grep child for `workflow(` = 0.
+3. The video-describe swarm hits the GATEWAY (black-sky:8000), which routes the VL
+   model to vLLM. No swarm call targets vLLM:8001 directly.
+4. The gateway (aaronblatnoy/llm-server) is upgraded to the model->backend router with
+   multimodal pass-through; a video request through :8000 reaches vLLM and returns a
+   description; existing text /chat still works.
+5. Parent P2.B calls workflow('godwyn-vlm-critic', {...}); P1 + P2.C emit fablePassNote;
+   metrics gate P2.A, G-4 combine, convergence, per-round checkpoint, P3 export are
+   UNCHANGED.
+6. Any null/timeout/empty swarm degrades to metrics-only (vlmTrust:'blind') — never a
+   null-cascade; metrics remain the pass/fail gate (G-4).
+
+### Non-goals
+- Re-authoring anim_metrics.py (REUSE parent §4). Changing G-4, thresholds, the
+  convergence/patience logic, or the parent's checkpoint/export. Godot/gameplay.
+  Frames/grids/key-frames/narrow-questions of any kind (superseded — do not reintroduce).
+
+### Assumptions
+- A-1 Workflow tool supports workflow(name,args) with ONE nesting level; the child
+  cannot call workflow(). Phase 1 confirms the exact registration/export convention
+  (JC-1); if one-level nesting is unsupported, ESCALATE — do NOT inline the child.
+- A-2 anim_metrics.py + its JSON schema exist (parent P0 authors them). This child is a
+  CONSUMER; it accepts metricFlaws/families from the parent, else re-runs it.
+- A-3 The local vLLM Qwen2.5-VL video server is up on black-sky:8001 (launch
+  ~/launch_vllm.sh; currently Qwen2.5-VL-3B-AWQ — 7B OOMs single-GPU, see OQ-1). vLLM
+  does continuous batching -> concurrent requests saturate the GPU. video_url base64
+  data URI works.
+- A-4 The gateway is a small FastAPI app (repo aaronblatnoy/llm-server); it can be
+  edited + redeployed via the coolify MCP. Both backends are OpenAI-compatible.
+
+=====================================================================
+## 1. ARCHITECTURE
+=====================================================================
+
+```
+ PARENT godwyn-anim-critique-loop.workflow.js  (UNCHANGED except P2.B + P1/P2.C schema)
+   P0 setup (authors anim_metrics.py, VLM sanity)                    [sonnet]
+   P1 Fable build  -> wipGlb + fablePassNote                          [fable]
+   P2 loop (serial, MAX_ROUNDS, PATIENCE):
+      P2.A metrics (anim_metrics.py) -> overallMetricsPass, metricFlaws, families [sonnet]
+      P2.B  ===>  workflow('godwyn-vlm-critic', { wipGlb, action, move,          <== CHANGE
+                     metricFlaws, families, fablePassNote, vlmModel })
+                  -> { pass, score, metrics, fixBrief[], subjectiveNotes[],
+                       vlmTrust, modelUsed, videoPath, investigationLog }
+      G-4 combine (metrics win; blind/timeout critic abstains)        [parent JS]
+      checkpoint-commit each round                                    [sonnet]
+      P2.C Fable fixer (if !roundPass) -> updated wipGlb + fablePassNote [fable]
+   P3 export + verify + mp4 + archive                                 [sonnet]
+
+ CHILD godwyn-vlm-critic.child.workflow.js  (NEW — NO workflow() inside; one level)
+   C0 metrics-ingest: accept metricFlaws/families OR re-run anim_metrics.py  [sonnet]
+   C1 render-full-video: scripts/anim_video.py -> ONE mp4 of the WIP anim    [sonnet]
+   C2 ADAPTIVE DESCRIBE-SWARM LOOP  for wave in 1..PROBE_BUDGET.maxWaves:
+        C2.a author-aspects   (Sonnet: pick narrow motion/feel ASPECTS to
+                               describe this wave; open prompts on the FULL VIDEO) [sonnet]
+        C2.b describe-swarm    (RUNNER: fire the wave's describe-tasks CONCURRENTLY
+                               at the GATEWAY :8000 (video_url) -> descriptions) [sonnet]
+        C2.c read-and-decide   (Sonnet: read descriptions; converged? else what
+                               NEXT aspects to probe)                            [sonnet]
+        break if converged OR wave==maxWaves OR totalTasks>=maxTotalTasks
+   C3 synthesize (Sonnet: ALL descriptions + metrics -> ONE detailed Fable prompt
+        (= fixBrief) + subjectiveNotes + pass echo + investigationLog)  [sonnet]
+   return the parent contract.
+
+ GATEWAY llm-server (aaronblatnoy/llm-server, black-sky:8000)  (UPGRADED to a router)
+   model->backend map: text models -> Ollama; the VL model -> vLLM (black-sky:8001).
+   OpenAI /v1/chat/completions incl. multimodal (video_url) pass-through, streaming.
+   Backward-compatible with the existing text /chat clients.
+```
+
+### The four roles
+- METRICS (anim_metrics.py): objective ground-truth backbone + the pass/fail GATE
+  (G-4: metrics win). Owns all geometric/objective faults; produces the flags the
+  critic probes AROUND. In C0.
+- SONNET: the adaptive investigator + judge. C2.a picks which motion/feel ASPECTS to
+  probe (autonomously, grounded on move+fablePassNote+metric flags+prior descriptions);
+  C2.c reads descriptions and decides what to probe next; C3 synthesizes ALL
+  descriptions + metrics into the detailed Fable prompt. DEFERS to metrics as ground
+  truth (never overturns a metric FAIL; uncorroborated VLM color -> low-confidence
+  notes).
+- THE DESCRIBE-SWARM (VLM via the gateway->vLLM): a pure PERCEPTION oracle. It only
+  DESCRIBES narrow aspects of the FULL VIDEO. Never judges. Fired concurrently to
+  saturate the GPU.
+- FABLE: builder/fixer OUTSIDE the critic (parent P1/P2.C). Consumes the fixBrief;
+  emits a fablePassNote that feeds the next critique.
+
+### Invariants (preserve)
+- INV-1 Headless black-sky only (ssh "cmd"; no -t/GUI). Author scripts local, scp, run
+  headless. /tmp on the server, NEVER ~/Desktop.
+- INV-2 EEVEE for the WIP video render (fast). Blender 5.2 (scene.frame_set; slotted
+  actions — no action.fcurves).
+- INV-3 Idempotent scripts (delete-by-name before recreate).
+- INV-4 Never auto-push. Commit local + server after phases.
+- INV-5 The critic is READ-ONLY on the animation (renders + reads; never edits the rig).
+- INV-6 LOCAL no-egress: gateway + vLLM both on black-sky; the video never leaves the box.
+- INV-7 stability: the 7B/Ollama text path is light; the vLLM 3B video path is the
+  heavy one. Size swarm concurrency to what vLLM sustains for video (measure); a hung/
+  errored describe ABSTAINS, never blocks. Watchdog (sp5100_tco + RuntimeWatchdogSec=30)
+  installed.
+- INV-8 SPEC-fidelity: motion vocabulary from SPEC §7; the author-aspects node grounds
+  probes on the intended move, not invented ones.
+- INV-NEST One-level nesting: the child MUST NOT call workflow(). grep = 0.
+- G-4 Metrics win. pass = overallMetricsPass AND (blind/timeout critic ? true :
+  no swarm-surfaced blocker corroborated by a metric). A blind/timeout/empty critic
+  abstains; metrics alone decide.
+- INV-GW Everything the critic sends to a model goes THROUGH the gateway (:8000), never
+  a raw backend URL.
+
+=====================================================================
+## 2. AFFECTED SURFACE AREA
+=====================================================================
+
+### CREATE
+- lifecycle/pending/workflows/godwyn-vlm-critic.child.workflow.js  — the child workflow.
+- scripts/anim_video.py  — renders the WIP animation (glb/blend + action) to ONE full
+  EEVEE mp4 to /tmp on the server (dark-fantasy env so gold+blue read; front or the
+  moveset framing that shows the full silhouette). Idempotent; prints the mp4 path.
+- scripts/vlm_describe_swarm.sh (or an inline runner)  — fires N video-describe tasks
+  CONCURRENTLY at the GATEWAY black-sky:8000 (OpenAI /v1/chat/completions with a
+  video_url base64 data URI + the aspect prompt), sized to saturate vLLM's continuous
+  batching; writes one JSONL description line per task; a timeout/error -> abstain line
+  (never blocks). Input: a tasks file (id \t aspect_prompt) + the shared video path.
+
+### MODIFY
+- lifecycle/pending/workflows/godwyn-anim-critique-loop.workflow.js
+  - P2.B: replace the @vlm-critic agent dispatch with
+      const crit = await workflow('godwyn-vlm-critic', {
+        wipGlb, action: ANIM_NAME, move: ANIM_DESC,
+        metricFlaws: metrics.metricFlaws, families: metrics.families,
+        fablePassNote, vlmModel: VLM_MODEL });
+    Keep the downstream crit.* handling (vlmTrust, pass, fixBrief, subjectiveNotes,
+    score, contactSheets->videoPath, vlmRaw->investigation digest), the G-4 combine,
+    fixBrief fallback, and checkpoint BYTE-IDENTICAL. If workflow() can throw, wrap in
+    try/catch -> null -> abstain (JC-6).
+  - P1 (BUILD_SCHEMA + brief): add required `fablePassNote` (string); Fable emits 1-3
+    sentences on what it built/changed/struggled with. `let fablePassNote = p1.fablePassNote||'';`
+  - P2.C (FIXER_SCHEMA + brief): add required `fablePassNote`; update it after each fix.
+- The gateway repo aaronblatnoy/llm-server: add the model->backend router +
+  multimodal (video_url/image_url) pass-through; redeploy via the coolify MCP.
+
+### DEPS / ENV
+- None new in the workflow. Relies on: black-sky vLLM :8001 (up), the gateway :8000,
+  anim_metrics.py, Blender 5.2 EEVEE, ffmpeg, curl/python on black-sky.
+
+=====================================================================
+## 3. PHASES
+=====================================================================
+
+-----------------------------------------------------------------
+### PHASE 1: Contract lock + nesting spike
+-----------------------------------------------------------------
+Deliverables: frozen CHILD ARGS + RETURN contract (JSDoc in the child stub); the
+  nested-workflow() convention resolved (JC-1). Return superset of every field parent
+  P2.B reads (pass, score, vlmTrust, fixBrief, subjectiveNotes, contactSheets[->the
+  video path], vlmRaw) + additions (videoPath, investigationLog, modelUsed, blockers).
+Steps: read parent P2.B + VLM_CRITIC_SCHEMA + @vlm-critic.md; determine how
+  workflow('godwyn-vlm-critic',args) resolves to the child file + required export shape;
+  write the frozen contract as JSDoc into an empty child stub.
+Gate: contract note has ZERO missing parent-read fields; a concrete nesting example.
+  If one-level nesting unsupported -> ESCALATE, do not inline.
+Orchestration: [SINGLE] general-purpose, sonnet, background:no (gates all).
+
+-----------------------------------------------------------------
+### PHASE 2: scripts/anim_video.py — render WIP animation to ONE full mp4
+-----------------------------------------------------------------
+Deliverables: anim_video.py: --glb/--blend --action [--out /tmp/<anim>.mp4] renders the
+  WHOLE clip to a single EEVEE mp4 (front / moveset framing, dark-fantasy env,
+  ~24-30fps), idempotent, prints the mp4 path. Do NOT rebuild materials (INV-5).
+Steps: author local mirroring existing render conventions; scp; render an existing WIP
+  glb; confirm the mp4 exists + plays the full clip. Commit server (no push).
+Gate: a single full-clip mp4 is produced and re-runnable (idempotent).
+Orchestration: [PARALLEL OK w/ P3,P4] general-purpose, sonnet, background:yes.
+
+-----------------------------------------------------------------
+### PHASE 3: Gateway upgrade — llm-server becomes the model->backend router
+-----------------------------------------------------------------
+Deliverables: aaronblatnoy/llm-server upgraded so black-sky:8000 is an OpenAI-compatible
+  router: (a) a model->backend map (text models -> Ollama 11434; the VL model
+  qwen2.5vl* -> vLLM 8001); (b) accepts MULTIMODAL messages (video_url/image_url) and
+  forwards them unchanged to the chosen backend's /v1/chat/completions (streaming
+  pass-through); (c) backward-compatible: the existing text /chat clients still work.
+Steps: clone/edit the repo (small FastAPI app); add the router + a /v1/chat/completions
+  passthrough (both backends are OpenAI-compatible so this is a URL-select + proxy);
+  redeploy via the coolify MCP; VERIFY end-to-end: a curl to :8000 /v1/chat/completions
+  with the VL model + a tiny video_url returns a description (proving :8000 -> vLLM),
+  AND a text /chat still returns (Ollama path intact).
+Gate: a video request through :8000 reaches vLLM and returns text; text path unbroken.
+Risks: don't break the existing bespoke /chat -> keep it; ADD /v1/chat/completions for
+  the router (JC-GW/OQ-3).
+Orchestration: [independent of P2/P4] general-purpose, sonnet, background:no (verify
+  gate). Uses the coolify MCP for redeploy.
+
+-----------------------------------------------------------------
+### PHASE 4: scripts/vlm_describe_swarm.sh — concurrent describe pool via the gateway
+-----------------------------------------------------------------
+Deliverables: the swarm runner. INPUT: a tasks file (id \t aspect_prompt) + the shared
+  full-video path + the gateway URL + the VL model name. Each task: POST :8000
+  /v1/chat/completions with {model, messages:[{role:user, content:[{type:video_url,
+  video_url:{url:data:video/mp4;base64,...}},{type:text,text:aspect_prompt}]}],
+  max_tokens ~200}. Fire tasks CONCURRENTLY to saturate vLLM continuous batching
+  (concurrency = SWARM_WIDTH, sized to what vLLM sustains for video — MEASURE, it is
+  lower than the image case; set vLLM --max-num-seqs to match). OUTPUT: one JSONL line
+  per id {id, aspect, description, abstained, latency_ms}; a timeout/error ->
+  {id, description:null, abstained:true} — never blocks the pool. Base64 the video ONCE
+  and reuse across the wave's tasks (same clip).
+Steps: author local; scp; smoke: a 6-aspect tasks file over the WIP mp4 through :8000 ->
+  6 description lines; an induced timeout -> abstain line, others complete; nvidia-smi
+  shows the GPU saturated but not OOM. Commit server (no push).
+Gate: N-aspect smoke returns N description lines through the GATEWAY, saturating vLLM;
+  induced error -> abstain, pool continues.
+Orchestration: [PARALLEL OK w/ P2] general-purpose, sonnet, background:yes.
+
+-----------------------------------------------------------------
+### PHASE 5: Child workflow body — C0..C3 + the adaptive loop
+-----------------------------------------------------------------
+Deliverables: godwyn-vlm-critic.child.workflow.js full body. NO workflow() (INV-NEST).
+Steps (spell out the deterministic dispatch graph in JS):
+  1. HEADER + shared SSH/CARE context + an ASPECT PALETTE string (reference motion/feel
+     aspects the author node draws from: cape motion — whips/flings vs flows/settles;
+     swing speed/snap; body weight-shift + balance; follow-through; hair physics —
+     stiff/wire vs natural swing/lag; overall timing/continuity; readability of the
+     move). vlmModel default = the VL model; GATEWAY_URL = black-sky:8000.
+  2. C0 metrics-ingest [sonnet OR pure JS]: if metricFlaws+families passed -> use them
+     (overallMetricsPass = AND of M1..M4). Else run anim_metrics.py. If null AND none
+     passed -> return a metrics-only ABSTAIN (vlmTrust:'blind', blockers set; no cascade).
+  3. C1 render-full-video [sonnet]: run scripts/anim_video.py on wipGlb/action -> the
+     mp4 path. If render fails -> abstain-degrade (metrics decide; vlmTrust:'blind').
+  4. C2 loop `for (wave=1; wave<=maxWaves; wave++)` with a totalTasks counter:
+     (a) author-aspects [sonnet]: from {move, fablePassNote, metricFlaws, families,
+         PALETTE, prior-wave descriptions}, choose the narrow ASPECTS to probe this wave
+         (wave 1 = broad coverage anchored on the metric flags + key move phases; waves
+         >=2 = DRILL-DOWN on what C2.c flagged). Each = an OPEN describe prompt on the
+         FULL VIDEO ("Describe ONLY <aspect> of the motion in this video. Is it <coarse
+         axis, e.g. calm/gentle vs fast/violent/erratic>? Describe literally what
+         happens across the clip; do NOT assume it is intentional."). Emit the tasks
+         file (id \t prompt); cap per-wave count so totalTasks stays <= maxTotalTasks.
+     (b) describe-swarm [sonnet runner]: run scripts/vlm_describe_swarm.sh with the wave
+         tasks + the mp4 -> descriptions JSONL (through the GATEWAY). One runner agent;
+         the concurrency is inside the runner (not parallel()-per-task).
+     (c) read-and-decide [sonnet]: read the descriptions; against the metric anchors +
+         the move, decide CONVERGED vs NEEDS-MORE (which aspects next). Defer to metrics;
+         uncorroborated color -> low-confidence note; on repeat/no-new-info -> converge.
+     break if converged OR wave==maxWaves OR totalTasks>=maxTotalTasks. Push each wave to
+     investigationLog.
+  5. C3 synthesize [sonnet]: from {families/overallMetricsPass/metricFlaws, ALL wave
+     descriptions, C2.c findings, move}, write the ONE detailed Fable prompt (= fixBrief)
+     + subjectiveNotes + pass + score. RULES:
+       - pass = overallMetricsPass AND (blind/timeout ? true : no swarm-surfaced blocker
+         corroborated by a metric). Metrics necessary; blind critic -> pass=overallMetricsPass.
+       - fixBrief items {aspect/target, whatWrong (from the VLM's descriptive words),
+         howToFix, severity, confidence}; confidence 'high' ONLY when metric-corroborated;
+         VLM-only -> subjectiveNotes. The fixBrief reads as a DIRECT, detailed instruction
+         to Fable ("the cape whips too violently at the cut apex and never settles —
+         raise the phys_cape damping / clamp the per-frame delta so it trails and settles").
+       - score = M5 smoothness (echoed). vlmRaw = a compact digest of the strongest
+         descriptions.
+  6. RETURN the parent contract + investigationLog + videoPath. Assert grep `workflow(` = 0.
+Gate: file parses; grep workflow( = 0; every node sonnet/general-purpose with a null/
+  timeout abstain branch (metrics-only, no cascade); a DRY dispatch trace in the header.
+Orchestration: [SINGLE, SEQUENTIAL after 1-4] general-purpose, opus (load-bearing
+  multi-node control-flow + reconcile/abstain logic; a wrong join / missing null-branch /
+  accidental workflow() / G-4 inversion cascades through every critique), background:no.
+
+-----------------------------------------------------------------
+### PHASE 6: Probe-budget + convergence (fold into P5 or a review pass)
+-----------------------------------------------------------------
+LOCKED: PROBE_BUDGET = { maxWaves: 3, maxTotalTasks: 24 } (overridable via args). The C2
+loop breaks on converged / wave==maxWaves / totalTasks>=maxTotalTasks (checked before
+authoring the next wave; per-wave count shrinks as budget depletes). C2.c CONVERGED when:
+no metric-flagged concern is still OPEN and no NEW concern surfaced; OR the wave only
+raised low-confidence/uncorroborated color; OR descriptions repeat (no new info).
+NEEDS-MORE when a metric-flagged aspect got ambiguous/contradictory descriptions a
+sharper aspect-probe could disambiguate, OR a new candidate flaw on a metric-flagged
+aspect isn't localized yet. On budget exhaustion -> C3 aggregates what it has; unresolved
+-> subjectiveNotes; metrics still decide. Verify: worst case 3 waves / <=24 tasks, ALWAYS
+terminates; metric-FAIL + all-"fine" descriptions -> pass stays false (G-4); blind swarm
+(all abstains) -> converge wave 1, vlmTrust:'blind', pass=overallMetricsPass.
+Orchestration: [SINGLE] general-purpose, sonnet, background:no (or folded into P5).
+
+-----------------------------------------------------------------
+### PHASE 7: Parent integration — P2.B -> workflow(), P1/P2.C emit fablePassNote
+-----------------------------------------------------------------
+Deliverables: edited parent workflow per §2. Steps: (1) P1 BUILD_SCHEMA + brief add
+fablePassNote; init `let fablePassNote=p1.fablePassNote||''`. (2) P2.B: swap the
+@vlm-critic agent call for workflow('godwyn-vlm-critic',{wipGlb,action:ANIM_NAME,
+move:ANIM_DESC,metricFlaws:metrics.metricFlaws,families:metrics.families,fablePassNote,
+vlmModel:VLM_MODEL}); keep ALL downstream crit.* reads + G-4 + fixBrief fallback +
+checkpoint byte-identical; wrap in try/catch -> null -> abstain if workflow() can throw
+(JC-6). (3) P2.C FIXER_SCHEMA + brief add fablePassNote; update it after each fix. (4)
+Confirm P2.A gate, checkpoint, plateau/patience, P3, archive UNTOUCHED. Commit server+local.
+Gate: parent parses; the ONLY diffs are the four intended changes; crit.* reads unchanged;
+G-4/checkpoint/P3 diff-confirmed untouched; the null-crit abstain path survives the swap.
+Orchestration: [SINGLE] refractor-pair (surgical multi-site edit on a load-bearing shared
+file — MAPPER finds every crit.* read + fablePassNote thread; CHECKER confirms G-4/
+checkpoint/P3 byte-unchanged + the null path). model: sonnet. background:no.
+
+-----------------------------------------------------------------
+### PHASE 8: End-to-end dry validation + docs + archive
+-----------------------------------------------------------------
+Steps: (1) static: grep child workflow( = 0; parse both files; child agents sonnet/opus
+per §; return matches the frozen contract; parent diff = the four changes; gateway routes
+video (:8000 -> vLLM) and text (:8000 -> Ollama). (2) live smoke of the CHILD ALONE on an
+existing WIP glb with a known metric flag: C1 rendered ONE full mp4; the swarm returned
+real motion descriptions THROUGH THE GATEWAY (not abstains) saturating vLLM; C2.c decided;
+C3 produced a detailed Fable prompt + investigationLog; G-4 holds (metrics FAIL -> pass
+false). (3) failure smoke: kill the gateway route briefly -> child returns vlmTrust:'blind',
+pass=overallMetricsPass, no cascade; restore. (4) doc-sync @vlm-critic.md (loop now uses
+the child workflow via the full-video describe-swarm through the gateway). (5) git mv the
+plan pending->archive; commit local (no push). Do NOT run the full parent loop end-to-end
+(expensive; the user runs it — they are the final judge of feel).
+Orchestration: [SINGLE] general-purpose, sonnet, background:yes.
+
+=====================================================================
+## 4. NODE SCHEMAS (child)
+=====================================================================
+- C0 metrics-ingest: {ok, overallMetricsPass, families, metricFlaws, source:'passed'|
+  'recomputed', blockers[]}
+- C1 render-video:    {ok, videoPath, blockers[]}
+- C2.a author-aspects:{ok, aspects:[{id, prompt}], tasksPath, count, blockers[]}
+- C2.b describe-swarm:{ok, descriptions:[{id, aspect, description, abstained}], blockers[]}
+- C2.c read-decide:   {converged:bool, findings:[...], nextAspects:[...]}
+- C3 synthesize / RETURN (parent contract):
+  {pass, score, metrics, fixBrief:[{aspect, whatWrong, howToFix, severity, confidence}],
+   subjectiveNotes[], vlmTrust:'trusted'|'blind'|'timeout', modelUsed, videoPath,
+   contactSheets:[videoPath] (back-compat alias), vlmRaw (digest), investigationLog:
+   {waves:[{wave, aspects, descriptions, decision}]}, blockers[]}
+
+=====================================================================
+## 5. OPEN QUESTIONS
+=====================================================================
+- OQ-1 Model scale: currently vLLM serves Qwen2.5-VL-3B-AWQ (7B OOMs single-GPU; multi-GPU
+  NCCL fails on this box). 3B reads coarse motion adequately (proven) but a bigger model
+  would describe finer motion. Revisit if the 3B's descriptions prove too coarse — NOT a
+  blocker for building the loop.
+- OQ-2 Video swarm concurrency: measure how many concurrent video-describe requests vLLM
+  sustains before KV pressure (video is token-heavy). Set SWARM_WIDTH + vLLM --max-num-seqs
+  to that. (Image was 8-wide; video will be lower.)
+- OQ-3 Gateway endpoint shape: add /v1/chat/completions to llm-server as the router and
+  KEEP the existing bespoke /chat untouched (backward-compat), rather than reworking /chat.
+- JC-1 nested-workflow() convention (Phase 1). JC-6 workflow() throw-vs-null (try/catch).
+
+=====================================================================
+## 6. EXECUTOR ORCHESTRATION GUIDE
+=====================================================================
+DAG: P1 -> (P2 || P3 || P4) -> P5 -> P6(fold) -> P7 -> P8.
+  P2 (video render script), P3 (gateway upgrade), P4 (swarm runner) are INDEPENDENT and
+  can fan out after P1. P5 (child body) needs P1-P4. P7 (parent edit) needs P1+P5. P8 last.
+Model mix: opus x1 (P5 child control-flow); sonnet for all else; fable ZERO (Fable lives
+  in the parent build/fix, outside this critic); refractor-pair for P7 (surgical parent edit).
+Failure recovery: P1 hard-stop if nesting unsupported (escalate, don't inline). P2/P3/P4
+  retry once then escalate. P5 is the spine — if null after retry, escalate. P7 via
+  refractor-pair. Any child node null/timeout -> abstain to metrics-only (G-4), never cascade.
+Serialization: the child runs ONE describe-swarm at a time (sequential waves); the parent
+  loop is serial. The gateway upgrade (P3) touches an EXTERNAL repo — do it once, verify,
+  before P5 depends on it.
+=====================================================================
+END OF PLAN
+=====================================================================
