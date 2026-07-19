@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.0",
+  "phase": "P3-export-final",
+  "animName": "Godwyn_XSlash",
+  "outGlb": "/home/aaron/godwyn-boss-fight/models/godwyn_xslash_v2.glb",
+  "outMp4": "/home/aaron/godwyn-boss-fight/renders/game/godwyn_xslash_v2.mp4",
+  "glbSizeMb": 19.4,
+  "mp4SizeMb": 1.1,
+  "reimportVerified": true,
+  "reimportInfo": {
+    "boneCount": 121,
+    "bodyBones": 24,
+    "physBones": 97,
+    "animTrack": "Godwyn_XSlash",
+    "frameRange": [
+      0,
+      51
+    ],
+    "frameCount": 52,
+    "skinnedMeshes": [
+      "char1(vg=121)"
+    ],
+    "textures": [
+      "godwyn_albedo",
+      "godwyn_metallic-godwyn_roughness"
+    ],
+    "swordPresent": true,
+    "swordParentBone": "RightHand"
+  },
+  "qualityLoop": {
+    "passed": false,
+    "plateaued": true,
+    "rounds": 1,
+    "bestCombinedScore": 0.0,
+    "scoreTrajectory": [
+      0.0
+    ],
+    "finalMetricsPass": false,
+    "lastVlmTrust": "not-run",
+    "metricSummary": {
+      "M1_cape_pass": true,
+      "M2_body_pass": false,
+      "M3_foot_pass": true,
+      "M4_sword_pass": true
+    },
+    "failingFamilies": [
+      "M2_body"
+    ],
+    "m2Details": {
+      "worstAngVel": 360.0,
+      "worstJerk": 360.0,
+      "worstFrame": 5,
+      "limitViolations": [
+        {
+          "bone": "RightForeArm",
+          "frame": 11,
+          "angle_deg": 314.84,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 12,
+          "angle_deg": 314.57,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 13,
+          "angle_deg": 314.48,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 14,
+          "angle_deg": 314.48,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 15,
+          "angle_deg": 319.13,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 28,
+          "angle_deg": 313.59,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 29,
+          "angle_deg": 311.0,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 30,
+          "angle_deg": 309.59,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 31,
+          "angle_deg": 309.31,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 32,
+          "angle_deg": 309.31,
+          "limit_deg": 175.0
+        }
+      ]
+    },
+    "note": "M2_body failed: ang-vel 360deg/frame (threshold 45) and RightForeArm anatomical limit (314deg > 175deg). M1 cape, M3 foot, M4 sword all PASSED. Animation is best-effort; needsUserJudgment=true."
+  },
+  "critLog": [
+    {
+      "round": 1,
+      "metricsPass": false,
+      "metricsJson": "/home/aaron/godwyn-boss-fight/renders/game/godwyn_xslash_v2.round1.metrics.json",
+      "M1_cape": {
+        "pass": true,
+        "worstDelta": 0.0,
+        "bboxGrowth": 1.0
+      },
+      "M2_body": {
+        "pass": false,
+        "worstAngVel": 360.0,
+        "worstJerk": 360.0,
+        "limitViolationCount": 10
+      },
+      "M3_foot": {
+        "pass": true,
+        "worstSlide": 0.00269
+      },
+      "M4_sword": {
+        "pass": true,
+        "worstDistRatio": 1.0
+      },
+      "smoothnessM5": 0.0,
+      "vlmPass": null,
+      "vlmTrust": "not-run",
+      "combinedScore": 0.0,
+      "fixerChanges": "none \u2014 P2 loop exited after 1 round (initial critique had metrics-null error; round1 metrics then captured and surfaced M2 failures)",
+      "error": "metrics-null in initial P2.A call; actual round1 metrics JSON subsequently written and captured"
+    }
+  ],
+  "round1MetricsPath": "/home/aaron/godwyn-boss-fight/renders/game/godwyn_xslash_v2.round1.metrics.json",
+  "needsUserJudgment": true,
+  "awaitingUser": "Watch renders/game/godwyn_xslash_v2.mp4 \u2014 you are the final judge of feel. Note M2_body metric failed (360deg/frame ang-vel, RightForeArm hyperextension at f11-15/28-32). Cape/robe stable (M1 pass). Feet planted (M3 pass). Sword held (M4 pass). Visual check: look for arm pop/snap during the cuts."
+}

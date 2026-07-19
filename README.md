@@ -157,6 +157,29 @@ Authored via `scripts/anim_xslash.py` (keyframe definitions) and exported via `s
 
 Authored via `scripts/mocap_retarget.py` (mocap retargeting), `scripts/p2cloth_final.py` (cloth bake), and exported via `scripts/phase4_final_render_export.py`. GLB verified by re-importing with `scripts/phase4_verify_mocap_combo.py` — confirmed animation track, skinning, and sword present.
 
+## X-Slash v2 — Metrics-Gated Animation (Build-Critique Loop)
+
+`models/godwyn_xslash_v2.glb` is the **Phase 3 deliverable** from the automated build→metrics→critique loop (`lifecycle/pending/plans/godwyn-animation-build-critique-loop.txt`). The animation was authored by the keyframe build script, gated by an objective metrics backbone (`scripts/anim_metrics.py`) that measures cape explosion (M1), body jerk/ang-vel (M2), foot slide (M3), and sword detach (M4) — no VLM hallucination in the reliable path.
+
+`renders/game/godwyn_xslash_v2.mp4` is the EEVEE render (front camera, 1280×720, 30fps, 64 frames / ~2.1s).
+
+The audit trail lives at `renders/game/godwyn_xslash_v2.metrics.json` (critLog + per-family pass/fail + round metrics).
+
+| Property | Value |
+|---|---|
+| File | `models/godwyn_xslash_v2.glb` |
+| File size | ~19.4 MB |
+| Bones | 121 (24 Mixamo body + 97 phys_ chains: 64 robe, 21 cape, 12 hair) |
+| Animation track | `Godwyn_XSlash` — 64 frames / 2.13s @ 30fps |
+| Skinning | char1 (121 vertex groups, rest-pose bind) |
+| Sword | Godwyn_Sword parented to RightHand |
+| Cape | Stable damped-spring phys_ chains (M1 PASS — no explosion) |
+| Foot slide | M3 PASS (worst slide 0.003 vs threshold 0.828) |
+| Sword detach | M4 PASS (ratio 1.0 vs threshold 1.15) |
+| M2 body jerk | FAIL — 360°/frame ang-vel + RightForeArm limit (needsUserJudgment) |
+| Render | `renders/game/godwyn_xslash_v2.mp4` — EEVEE, 1280×720, 30fps |
+| Metrics critique loop | 1 round; metrics backbone objective gate in place for future iterations |
+
 ## Credits
 
 Visual inspiration: fan art by **Enzo Spag** and **@DOUJ**  

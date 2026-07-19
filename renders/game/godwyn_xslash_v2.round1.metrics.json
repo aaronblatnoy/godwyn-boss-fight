@@ -1,0 +1,183 @@
+{
+  "label": "",
+  "animName": "Godwyn_XSlash",
+  "action": "Godwyn_XSlash",
+  "frameRange": [
+    0,
+    51
+  ],
+  "characterHeight": 41.4304,
+  "families": {
+    "M1_cape": {
+      "pass": true,
+      "worstFrame": 0,
+      "worstDelta": 0.0,
+      "bboxGrowth": 1.0,
+      "threshold_delta_frac": 0.06,
+      "threshold_bbox_ratio": 1.8,
+      "cloth_vert_count": 136350
+    },
+    "M2_body": {
+      "pass": false,
+      "worstFrame": 5,
+      "worstAngVel": 360.0,
+      "worstJerk": 360.0,
+      "jerkSpikeFrames": [
+        5,
+        6,
+        7,
+        8,
+        8,
+        9,
+        9,
+        10,
+        11,
+        12,
+        16,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        17,
+        17,
+        18,
+        18,
+        18,
+        19,
+        19,
+        20,
+        27,
+        28,
+        28,
+        29,
+        33,
+        33,
+        34,
+        34,
+        34,
+        35,
+        35,
+        35,
+        35,
+        35,
+        36,
+        36,
+        38,
+        40,
+        43,
+        44
+      ],
+      "limitViolations": [
+        {
+          "bone": "RightForeArm",
+          "frame": 11,
+          "angle_deg": 314.84,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 12,
+          "angle_deg": 314.57,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 13,
+          "angle_deg": 314.48,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 14,
+          "angle_deg": 314.48,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 15,
+          "angle_deg": 319.13,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 28,
+          "angle_deg": 313.59,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 29,
+          "angle_deg": 311.0,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 30,
+          "angle_deg": 309.59,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 31,
+          "angle_deg": 309.31,
+          "limit_deg": 175.0
+        },
+        {
+          "bone": "RightForeArm",
+          "frame": 32,
+          "angle_deg": 309.31,
+          "limit_deg": 175.0
+        }
+      ],
+      "threshold_ang_vel": 45.0,
+      "threshold_jerk": 30.0
+    },
+    "M3_foot": {
+      "pass": true,
+      "worstFrame": 18,
+      "worstSlide": 0.00269,
+      "foot": "RightToeBase",
+      "threshold_slide_frac": 0.02,
+      "ground_eps": 0.05
+    },
+    "M4_sword": {
+      "pass": true,
+      "worstFrame": 31,
+      "worstDistRatio": 1.0,
+      "restGripDist": 47.1428,
+      "threshold_ratio": 1.15,
+      "sword_found": true
+    }
+  },
+  "overallMetricsPass": false,
+  "smoothnessM5": 0.0,
+  "metricFlaws": [
+    {
+      "issue": "M2 body teleport/pop at f005: ang-vel 360.0\u00b0/frame > 45.0\u00b0",
+      "fix": "Add intermediate keyframes to smooth the jump; reduce Euler discontinuities",
+      "severity": "HIGH"
+    },
+    {
+      "issue": "M2 jerk 360.0\u00b0/frame\u00b2 at f005 on 45 frames",
+      "fix": "Smooth out snap transitions with bezier handles or additional easing keys",
+      "severity": "HIGH"
+    },
+    {
+      "issue": "M2 anatomical limit: RightForeArm bent 314.84\u00b0 > 175.0\u00b0 at f011",
+      "fix": "Constrain RightForeArm rotation; check IK rest",
+      "severity": "MEDIUM"
+    },
+    {
+      "issue": "M2 anatomical limit: RightForeArm bent 314.57\u00b0 > 175.0\u00b0 at f012",
+      "fix": "Constrain RightForeArm rotation; check IK rest",
+      "severity": "MEDIUM"
+    },
+    {
+      "issue": "M2 anatomical limit: RightForeArm bent 314.48\u00b0 > 175.0\u00b0 at f013",
+      "fix": "Constrain RightForeArm rotation; check IK rest",
+      "severity": "MEDIUM"
+    }
+  ]
+}
