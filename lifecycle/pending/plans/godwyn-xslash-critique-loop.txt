@@ -1,0 +1,798 @@
+=====================================================================
+BUILDOUT PHASE PLAN: Godwyn X-Slash Critique-Loop Driver
+  A thin X-slash-FOCUSED harness over the (child-critic-wired) animation
+  build->critique->fix loop, with a measurable "GOOD X-SLASH" acceptance
+  spec, X-specific metric extensions, and fixBrief-threading refinements
+  that keep Fable converging on the visible X (not spinning).
+Generated: 2026-07-19
+Scope: Drive the existing godwyn-anim-critique-loop (Fable builds, describe-swarm
+       critic criticizes, Fable fixes) pinned to the X-slash, with acceptance
+       criteria + probe aspects derived from SPEC §7, so the loop converges on
+       "a good X-slash" rather than a generic pass.
+Feeds: phase-plan-executor (compiles this .txt into a dynamic Workflow script).
+=====================================================================
+
+## 0. CONTEXT & GOALS
+
+### HONEST POSITION — what already exists vs. the genuine delta
+
+The user asked for: "a workflow that uses the godwyn-vlm-critic child workflow to
+criticize what Fable makes, to get a good X-slash moveset. A LOOP: Fable builds,
+this workflow criticizes and prompts Fable how to fix."
+
+Almost ALL of that mechanism ALREADY EXISTS on disk. I read it. Stating this plainly
+so the executor does NOT rebuild what is done:
+
+  ALREADY BUILT / PLANNED — DO NOT DUPLICATE:
+  - The build->critique->fix LOOP itself is the compiled parent workflow
+    lifecycle/pending/workflows/godwyn-anim-critique-loop.workflow.js (42KB, done):
+    P0 setup+metrics-tool / P1 Fable build / P2 serial metrics+critic+Fable-fixer loop
+    (convergence-aware, checkpoint-per-round) / P3 export. It is STRICTLY SERIAL,
+    plateau/patience-bounded, overnight-resilient.
+  - Its DEFAULT MOVE IS ALREADY THE X-SLASH. args.animName defaults 'Godwyn_XSlash'
+    and args.animDesc ALREADY encodes the SPEC §7 X vocabulary verbatim: "\ then /,
+    the two arcs crossing in front to form an X, spine+shoulder power, spin <=1 rot/sec,
+    toes forward, ~2s, cape trails not explodes." (workflow.js lines 54-57.)
+  - The CRITIC is the describe-swarm child, planned in
+    lifecycle/pending/plans/godwyn-vlm-critic-child-workflow.txt. Its Phase 7 ALREADY
+    rewires the parent P2.B to call workflow('godwyn-vlm-critic', {wipGlb, action, move,
+    metricFlaws, families, fablePassNote, vlmModel}) and thread the returned fixBrief[]
+    back into the P2.C Fable fixer. The "criticize + prompt Fable how to fix" round-trip
+    IS that child's fixBrief + fablePassNote contract.
+  - The OBJECTIVE gate (anim_metrics.py, parent §4) that decides pass/fail (G-4 metrics
+    win) is planned in the parent P0.
+
+  So the LOOP + the CRITIC WIRING + the FIXBRIEF THREADING are already covered. If this
+  plan re-created any of those it would be redundant churn.
+
+  THE GENUINE DELTA (what the user actually still needs, and all this plan builds):
+  D1. A MEASURABLE DEFINITION OF "A GOOD X-SLASH." The parent's metric thresholds are
+      GENERIC failure-catchers (no explosion / no contortion / no foot-slide / no
+      sword-detach / smoothness). Passing them means "not broken" — NOT "reads as a
+      crisp X-slash." Nothing on disk encodes the X-slash's POSITIVE motion targets:
+      two DISTINCT crossing diagonals whose blade paths actually form a visible X, the
+      \ before the /, the crossing point in front of the torso, spine/shoulder-driven
+      power, spin <=1 rot/sec, a cape that WHIPS with the cut then SETTLES, a clean
+      weight-shift + small forward step, and readable follow-through. This plan writes
+      that acceptance spec as concrete, checkable criteria (§0 success criteria + §4).
+  D2. X-SPECIFIC METRIC EXTENSIONS. anim_metrics.py's generic families cannot confirm
+      "the blade traced an X." This plan adds an OPTIONAL, ADDITIVE metric module
+      (scripts/anim_metrics_xslash.py) that measures the X-shape-specific quantities
+      (blade-tip path signature, the two diagonal directions + their crossing, cut
+      ordering \-then-/, spin-rate cap, cape whip-then-settle envelope) WITHOUT touching
+      the generic anim_metrics.py (byte-preserved). The parent stays reusable for any
+      move; the X targets ride in an add-on the driver opts into.
+  D3. AN X-SLASH DRIVER WORKFLOW. A THIN wrapper that invokes the (child-wired) parent
+      loop with X-slash-pinned args: the SPEC §7 animDesc, the X-specific acceptance
+      thresholds, TUNED probe aspects for the describe-swarm (cape whip/settle, swing
+      snap, cross-slash geometry, weight-shift, follow-through), an X-acceptance
+      post-gate, and a fixBrief-threading refinement that keeps Fable's fix step aimed
+      at the X (§3 P3/P4). The driver OWNS the "good X-slash" opinion; the parent stays
+      a generic engine.
+
+  If, at build time, the parent + child are NOT yet executed (they are still plans),
+  this driver still compiles and is INERT-until-ready: Phase 1 is a hard dependency gate
+  that either confirms the parent/child are runnable or ESCALATES (does not fork them).
+
+### Problem statement
+We want an automated loop that iterates specifically until Godwyn's X-slash reads as a
+GOOD X-slash — measurably, not just "not broken." The loop machinery exists; what is
+missing is (a) a checkable definition of good, (b) X-shape-aware measurement, and (c) a
+driver that points the existing loop + describe-swarm at those X targets and threads the
+critique back to Fable so it converges on the X instead of spinning on generic polish.
+
+### Success criteria (measurable) — THE "GOOD X-SLASH" ACCEPTANCE SPEC
+The driver run is ACCEPTED when the final animation satisfies ALL of the below. These are
+the load-bearing new definition of "good"; §4 gives the exact measurement.
+  S0. GENERIC BASELINE (from the parent, unchanged): anim_metrics.py PASSES all four hard
+      families — no cape/robe explosion (M1), no body contortion/jerk (M2), no foot-slide
+      while planted (M3), no sword detach (M4). This is necessary but NOT sufficient.
+  S1. TWO DISTINCT DIAGONAL CUTS. The blade-tip world path over the clip decomposes into
+      exactly TWO dominant sweeping strokes, temporally separated (cut1 completes, then
+      cut2 begins — not one smear). (X1 in §4.)
+  S2. CORRECT DIAGONAL DIRECTIONS + ORDER. Cut1 is a \ (starts upper-right, ends
+      lower-left); cut2 is a / (starts upper-left, ends lower-right); cut1 precedes cut2.
+      Each stroke's dominant direction vector matches the target diagonal within a
+      tolerance cone. (X2 in §4.)
+  S3. THE PATHS ACTUALLY CROSS — A VISIBLE X. The two blade-tip stroke paths, projected
+      onto the frontal (camera-facing) plane, INTERSECT roughly in front of the torso
+      (crossing point within the mid-chest region, not off to one side, not behind).
+      (X3 in §4.)
+  S4. SPINE/SHOULDER-DRIVEN POWER. The spine + shoulder bones lead the cut (their angular
+      motion peaks BEFORE the wrist/hand's), not an arm-only flail. (X4 in §4.)
+  S5. SPIN CAP. Total root/hips yaw rotation rate never exceeds ~1 rotation/sec
+      (360°/sec) at any point — SPEC §7 user-calibrated. (X5 in §4.)
+  S6. CAPE WHIP-THEN-SETTLE. The cape/robe phys_ chains show a WHIP (elevated but
+      NON-exploding motion — M1 still passes) DURING each cut, followed by a SETTLE
+      (motion decays toward rest) after the second cut. Not frozen-stiff, not exploding.
+      (X6 in §4.)
+  S7. WEIGHT-SHIFT + FOOT PLANT. A readable weight-shift (hips CoM translates) with the
+      cuts and a small forward step; feet stay planted during contact (M3), i.e. the step
+      is a deliberate replant, not a slide. (X7 in §4.)
+  S8. HUMAN FEEL (final judge, non-automatable). The human watches renders/game/
+      godwyn_xslash_v2.mp4 and confirms it reads as Godwyn's signature X. The driver
+      NEVER declares final victory without surfacing awaitingUser (parent already does).
+  S9. The describe-swarm critic was ACTUALLY USED each round via the child workflow, its
+      fixBrief[] was threaded to Fable, and the X-acceptance evaluation (S1-S7) is logged
+      per round so convergence on the X is visible in the audit trail.
+
+### Non-goals
+- Re-authoring the loop, the metrics backbone, the child critic, the gateway, G-4, the
+  convergence/patience/checkpoint/export logic, or the parent's args surface. This plan
+  is ADDITIVE — a driver + an X-metric add-on + an acceptance spec. It changes NONE of
+  the existing parent/child files except the ONE additive P2.B probe-aspect + acceptance
+  hook (see §2, tightly scoped, refactor-pair-gated).
+- Authoring the rest of the moveset (Double Spin, Half-Spin Overhead, etc.). X-slash only.
+- Godot import / hitbox wiring (godot-combat-foundation-plan.txt).
+- Making the VLM the judge — metrics + the X-acceptance module decide; the describe-swarm
+  only DESCRIBES (the child's whole design; unchanged). The human judges final feel.
+
+### Assumptions
+- A-1: The parent loop (godwyn-anim-critique-loop.workflow.js) and the child critic plan
+  (godwyn-vlm-critic-child-workflow.txt) are the source of truth for the loop + critic and
+  are (or will be) runnable. This driver is a CONSUMER. Phase 1 verifies runnability and
+  ESCALATES if not — it does not fork or reimplement them.
+- A-2: anim_metrics.py (parent §4) exists/will-exist and emits the JSON schema in that §4
+  (families M1..M4 + smoothnessM5 + metricFlaws[]). The X-metric add-on READS the same
+  rig facts (rigMap: phys_ prefixes, Godwyn_Sword parented to RightHand, 24 Mixamo body
+  bones) and is a SEPARATE script, not an edit to anim_metrics.py.
+- A-3: The blade tip is a determinable point on Godwyn_Sword (tip vertex / an empty at the
+  blade end). Phase 2 resolves EXACTLY which point (JC-2) against the actual glb; if the
+  sword has no clean tip marker, Phase 2 derives one (farthest vertex from the RightHand
+  grip along the blade's long axis) and records it.
+- A-4: "Frontal plane" for the X-crossing test = the plane facing the moveset camera used
+  by scripts/anim_video.py (child) / anim_flipbook.py (parent). Phase 2 pins that camera's
+  forward axis so X3's projection is consistent with what the human/critic sees.
+- A-5: SPEC §7 is the motion authority: X = \ (top-right->bottom-left) THEN / (top-left->
+  bottom-right), crossing in front; spin <=1 rot/sec; toes forward; low-guard start; ~2s.
+  The driver passes this verbatim as animDesc (already the parent default) and DERIVES
+  the X1-X7 thresholds from it (§4).
+- A-6: The child critic's fixBrief[] is the channel to Fable (parent P2.C consumes it) and
+  fablePassNote is Fable's reply channel. The driver's refinement (D3) augments the
+  probe-aspects fed to the child and adds an X-acceptance summary to the fixBrief context
+  — it does NOT invent a new Fable channel.
+
+=====================================================================
+## 1. ARCHITECTURE OVERVIEW
+=====================================================================
+
+This is a THIN DRIVER Workflow that wraps the existing engine. The engine (parent loop)
++ oracle (child describe-swarm critic) do the heavy lifting; the driver supplies the
+X-slash OPINION: pinned args, X-shape measurement, X-tuned probe aspects, and an
+X-acceptance gate layered on top of the generic pass.
+
+```
+ DRIVER  godwyn-xslash-critique-loop.workflow.js   (NEW — the only new workflow)
+   D-P1  dependency gate: parent + child runnable? rig facts + blade tip resolved   [sonnet]
+   D-P2  invoke the ENGINE, X-pinned:
+           workflow('godwyn-anim-critique-loop', {                 <-- REUSE, do not rebuild
+             animName:'Godwyn_XSlash',
+             animDesc: <SPEC §7 X-slash verbatim>,
+             xAccept:  <X1..X7 thresholds from §4>,     // NEW arg the parent forwards to P2.B
+             probeAspects: <X-tuned describe aspects>,  // NEW arg the parent forwards to child
+             vlmModel, maxRounds, patience, ... })
+         │
+         ▼   inside the engine (UNCHANGED except the additive P2.B hook):
+   ┌───────────────────────────────────────────────────────────────────────────┐
+   │ P1 Fable build (X-slash)                                          [fable]  │
+   │ P2 SERIAL loop, each round:                                                │
+   │   P2.A anim_metrics.py  -> generic families M1..M4 (G-4 gate)     [sonnet] │
+   │   P2.A+ anim_metrics_xslash.py -> X1..X7 (NEW add-on, additive)   [sonnet] │  <-- D2
+   │   P2.B workflow('godwyn-vlm-critic', { ..., probeAspects,                  │
+   │         metricFlaws (generic + X) }) -> describe-swarm -> fixBrief[]       │  <-- child
+   │        the X-tuned aspects steer the swarm at cape whip/settle,            │
+   │        swing snap, cross geometry, weight-shift, follow-through            │
+   │   G-4 combine: roundPass = M1..M4 PASS AND X1..X7 PASS AND critic-abstain- │  <-- D1 acceptance
+   │        or-no-corroborated-blocker. X failures become metric-grade flaws.   │
+   │   P2.C Fable fixer consumes fixBrief[] (X-anchored first)         [fable]  │
+   │   checkpoint each round (parent, unchanged)                                │
+   │ P3 export godwyn_xslash_v2.glb + mp4 (parent, unchanged)          [sonnet] │
+   └───────────────────────────────────────────────────────────────────────────┘
+         │
+         ▼
+   D-P3  X-ACCEPTANCE post-gate + human handoff: assert S0..S7 on the FINAL glb;
+         emit the acceptance report + awaitingUser (watch the mp4).             [sonnet]
+```
+
+If the parent cannot forward the two new args (xAccept, probeAspects) without a code
+change, that change is a TIGHTLY-SCOPED additive edit to the parent P2.B + P2.A combine
+(§2), routed to refractor-pair so the existing G-4 / checkpoint / export stay byte-stable.
+The DRIVER never reimplements the loop.
+
+### Invariants this plan MUST preserve
+- INV-1 Headless black-sky only (ssh "cmd", no -t/GUI). Author scripts local, scp, run
+  headless. /tmp on the server, NEVER ~/Desktop.
+- INV-2 EEVEE for previews/video (fast); Blender 5.2 (scene.frame_set; slotted actions —
+  NO action.fcurves; read bone matrices by frame-stepping).
+- INV-3 Idempotent bpy scripts (delete-by-name before recreate).
+- INV-4 Never auto-push. Commit local+server after phases; push only on explicit ask.
+- INV-5 Preserve armature+skinning+baked materials on every edit; never touch FACE geom.
+- INV-6 Cape/robe/hair = damped-spring phys_ chains, NEVER full cloth sim. A cape WHIP
+  (X6) is elevated-but-bounded motion — it MUST still pass M1 explosion. Whip != explode.
+- INV-7 black-sky stability: never two VLM/vLLM calls in parallel outside the child's own
+  measured swarm width; a hung critic ABSTAINS (metrics + X-metrics decide).
+- INV-8 SPEC-fidelity: the X vocabulary + spin cap + toes-forward come from SPEC §7. The
+  driver derives X1..X7 from SPEC, does not invent motion.
+- INV-9 (NEW, this plan) ADDITIVE-ONLY on the engine: anim_metrics.py stays byte-identical;
+  the X measurement lives in a separate script; the parent gets AT MOST the two additive
+  arg-forwards + the X-flaw combine, refactor-pair-verified to leave G-4/checkpoint/export
+  unchanged. The generic engine stays reusable for other moves.
+- INV-10 (NEW) METRICS/X-METRICS WIN (G-4 preserved + extended): the describe-swarm never
+  renders the X verdict. S1..S7 are decided by anim_metrics_xslash.py (objective geometry),
+  exactly as M1..M4 are decided by anim_metrics.py. The critic's prose only ENRICHES the
+  fixBrief; a blind critic abstains; the X-metrics still gate.
+
+=====================================================================
+## 2. AFFECTED SURFACE AREA
+=====================================================================
+
+### Files to CREATE
+- lifecycle/pending/workflows/godwyn-xslash-critique-loop.workflow.js
+    The driver (phase-plan-executor compiles it). Wraps workflow('godwyn-anim-critique-loop').
+- scripts/anim_metrics_xslash.py   (NEW — the X-shape objective add-on; §4). ADDITIVE,
+    idempotent, separate from anim_metrics.py. CLI:
+      --glb/--blend IN --action NAME --tip <spec> --cam-forward <axis>
+      [--xaccept JSON] --out /tmp/<anim>_xmetrics.json
+    Reads bone/sword matrices per frame (frame-stepping, Blender-5.2-safe). Emits X1..X7
+    PASS/FAIL + worst values + prioritized xFlaws[] (fixer-consumable, phrased for Fable).
+
+### Files to MODIFY (tightly scoped, additive; refactor-pair-gated in P4)
+- lifecycle/pending/workflows/godwyn-anim-critique-loop.workflow.js   (ADDITIVE hook only)
+    - P2.A block: after the generic anim_metrics.py run, ALSO run anim_metrics_xslash.py
+      when args.xAccept is present; merge its xFlaws into metricFlaws and its X-families
+      into families. (No change when xAccept is absent — the engine stays generic.)
+    - G-4 combine: roundPass also requires X1..X7 pass when xAccept present (X-fail =>
+      roundPass false, same standing as an M-fail). Byte-stable when xAccept absent.
+    - P2.B call to the child: forward args.probeAspects into the child's
+      workflow('godwyn-vlm-critic', {..., probeAspects}) so the describe-swarm's
+      author-aspects node prefers the X-tuned aspects. (Child reads it if present; the
+      child plan's C2.a already grounds on move+metricFlaws — probeAspects is an
+      additional, optional palette hint. If the child does not yet accept probeAspects,
+      that is a ONE-LINE additive to the child's C2.a palette — flagged as a dep in P4.)
+    CONSTRAINT: these are the ONLY parent edits. G-4 arithmetic, checkpoint, plateau/
+    patience, P3 export, and the args defaults stay byte-identical when xAccept is absent.
+    A refactor-pair CHECKER confirms this by diff.
+- lifecycle/pending/plans/godwyn-vlm-critic-child-workflow.txt  (DOC note only, optional)
+    Add a one-line note that C2.a MAY accept an optional probeAspects palette hint from
+    the parent. Does NOT change the child contract. (Skip if the child already lists it.)
+- README.md — note the X-slash driver + the X-acceptance spec exist.
+
+### Migrations / env / deps
+- None new. Relies on: the parent loop + anim_metrics.py + rigMap (parent P0), the child
+  critic + its video render + describe-swarm + gateway (child plan), Blender 5.2 EEVEE,
+  ffmpeg, black-sky. The X add-on introduces NO new dependency (pure bpy + numpy already
+  used by anim_metrics.py).
+
+=====================================================================
+## 3. PHASES
+=====================================================================
+
+Model tiering: sonnet for the driver mechanics, dependency gates, X-metric authoring,
+acceptance evaluation, export/report (all mechanical + measurement). Fable is NOT invoked
+by this driver directly — Fable's artistry lives INSIDE the engine (parent P1/P2.C), which
+this driver calls. opus is NOT needed (no whole-system control-flow authoring here; the
+one shared-file edit is surgical and goes to refactor-pair, not opus). No haiku.
+
+-----------------------------------------------------------------
+### PHASE 1: Dependency gate + rig/blade/camera resolution
+-----------------------------------------------------------------
+Prerequisites: none (but it VERIFIES the parent + child exist and are runnable).
+Deliverables:
+  - Confirmed: godwyn-anim-critique-loop.workflow.js is present and invokable via
+    workflow('godwyn-anim-critique-loop', args); anim_metrics.py exists (or parent P0
+    authors it) and emits the §4 schema; the child godwyn-vlm-critic is registered and
+    invokable (per the child plan's Phase 1 nesting convention JC-1). If ANY is missing/
+    not-runnable -> ESCALATE with the specific gap (do NOT fork or inline them).
+  - rigMap resolved against the ACTUAL models/godwyn_game.glb (reuse parent P0's if
+    available; else enumerate): 24 Mixamo body bones, phys_cape/robe/hair prefixes,
+    Godwyn_Sword parented to RightHand.
+  - BLADE-TIP point resolved (JC-2): the specific Godwyn_Sword point used for the X-path
+    measurement — a named tip vertex/empty if present, else the farthest vertex from the
+    RightHand grip along the blade long axis. Recorded as a --tip spec string.
+  - MOVESET CAMERA forward-axis resolved (A-4): the camera anim_video.py / anim_flipbook.py
+    frames from, so X3's frontal-plane projection matches what the critic + human see.
+Steps:
+  1. Static: ls the parent workflow + anim_metrics.py; grep the child registration; confirm
+     workflow() one-level nesting is available (child plan JC-1). Record runnable | gap.
+  2. Import godwyn_game.glb headless; enumerate armature; confirm sword parenting; emit/
+     reuse rigMap.
+  3. Resolve the blade tip: locate a tip marker, else compute farthest-from-grip vertex
+     along the blade axis; print its object/vertex/empty spec + rest grip distance.
+  4. Read the moveset camera transform from the render script; record its forward axis
+     (the frontal-plane normal for X3).
+  5. Commit the resolution note on the server (no push).
+Gate (HARD): parent + anim_metrics.py + child all runnable AND blade tip + camera axis
+  resolved AND rigMap confirmed. If parent/child not runnable -> ESCALATE (this is the
+  one hard stop; the whole driver depends on the engine existing).
+Risks / Edge cases:
+  - Parent/child still un-executed plans -> that's fine for building the DRIVER file, but
+    a LIVE run needs them; record "engine-not-yet-built: driver compiled, run deferred"
+    and surface to the user rather than forking.
+  - No clean blade tip -> derive one (documented), don't guess per-run.
+Subagent orchestration:
+  - Execution shape: [SINGLE]
+  - REQUIRED subagent_type: general-purpose
+  - REQUIRED model: sonnet
+  - Run in background: no (gates everything)
+  - Brief template:
+     "Execute Phase 1 of <PLAN_FILE_PATH>. Read §3 PHASE 1 + §0 assumptions. Slice: verify
+      the parent workflow godwyn-anim-critique-loop + anim_metrics.py + the child
+      godwyn-vlm-critic are runnable; resolve rigMap, the Godwyn_Sword blade-tip spec, and
+      the moveset camera forward-axis against models/godwyn_game.glb on black-sky. Touch
+      only a resolution note + git. Validation: all three engine pieces runnable AND tip +
+      camera + rigMap resolved (else ESCALATE the specific gap). Evidence: the tip spec,
+      camera axis, rigMap, runnable/gap verdict. Commit (no push). One-line summary + exit."
+
+-----------------------------------------------------------------
+### PHASE 2: scripts/anim_metrics_xslash.py — the X-shape objective add-on
+-----------------------------------------------------------------
+Prerequisites: P1 (blade tip + camera axis + rigMap).
+This is the load-bearing NEW artifact: it turns "a good X-slash" from prose into geometry.
+Deliverables:
+  - scripts/anim_metrics_xslash.py implementing X1..X7 (§4) as an ADDITIVE, standalone,
+    idempotent script that READS an animated glb/action and emits an X-metrics JSON with
+    per-family PASS/FAIL, worst frame+value, and a prioritized xFlaws[] phrased as direct
+    Fable instructions (e.g. "X3 crossing point is 0.4·h to the right of the torso center
+    at the cut2 apex — bring cut2's plane leftward so the two blade paths intersect in
+    front of the chest").
+  - A --calibrate mode: run it on a KNOWN-GOOD reference X (if one exists on the box, e.g.
+    an earlier godwyn_xslash*.glb that reads clean) and a KNOWN-NOT-X clip (any non-crossing
+    swing) and print the measured good/bad envelope so the X1..X7 thresholds are grounded,
+    not guessed (mirrors anim_metrics.py's calibration philosophy).
+  - Smoke-tested: it FAILS a clip whose blade never crosses (no visible X) and PASSES a
+    clean crossing X — proving it discriminates the X before the loop trusts it.
+Steps:
+  1. Author local mirroring anim_metrics.py conventions (frame-stepping, character_height
+     normalizer, thresholds in one top dict, JSON out to /tmp, prints path). Take --tip
+     and --cam-forward from P1 as PARAMS (never hardcode).
+  2. Implement X1..X7 per §4 against the blade-tip world path + spine/shoulder/hips bones
+     + phys_ cape chains.
+  3. scp; run --calibrate on a good/bad pair; run on an existing clip; assert all X-families
+     populate; assert it fails a non-crossing swing and passes a crossing X.
+  4. Commit on server (no push).
+Gate: X-metrics JSON emitted with all families non-null AND it discriminates crossing-X
+  from non-crossing (the single most important test for this add-on).
+Risks / Edge cases:
+  - Blade tip noisy (skinning wobble) -> smooth the tip path (small window) before stroke
+    decomposition; record the smoothing.
+  - "Two strokes" segmentation ambiguous on a fast blur -> segment on blade-speed minima
+    (the natural pause between cut1 and cut2); if none found, X1 FAILS (one smear, not two
+    cuts) — which is the correct verdict.
+  - Camera-axis wrong -> X3 crossing looks off; P1 pins it, and --calibrate on a known-good
+    X validates the projection.
+Subagent orchestration:
+  - Execution shape: [SINGLE] (can run background alongside nothing else needed inline)
+  - REQUIRED subagent_type: general-purpose
+  - REQUIRED model: sonnet   (measurement/scripting — mechanical, mirrors anim_metrics.py)
+  - Run in background: yes (>2 min authoring+smoke; nothing gates on it until P3/P4 wiring)
+  - Brief template:
+     "Execute Phase 2 of <PLAN_FILE_PATH>. Read §3 PHASE 2 + §4 (X1..X7 spec). Slice: author
+      scripts/anim_metrics_xslash.py — ADDITIVE, standalone, idempotent, mirroring
+      anim_metrics.py; --tip=<P1 TIP SPEC> --cam-forward=<P1 CAM AXIS>. Implement X1..X7 +
+      --calibrate. scp + smoke on black-sky: it FAILS a non-crossing swing, PASSES a crossing
+      X, all families populate. Touch only scripts/anim_metrics_xslash.py + /tmp + git. Do NOT
+      edit anim_metrics.py. Validation: X-JSON complete AND discriminates X from non-X.
+      Evidence: the X-JSON path + calibrate envelope. Commit (no push). One-line summary + exit."
+
+-----------------------------------------------------------------
+### PHASE 3: The driver workflow body
+-----------------------------------------------------------------
+Prerequisites: P1 (engine runnable) + P2 (X-metrics ready).
+Deliverables:
+  - lifecycle/pending/workflows/godwyn-xslash-critique-loop.workflow.js. It:
+    1. Defines the X-slash-pinned args: animName 'Godwyn_XSlash', animDesc = SPEC §7
+       verbatim (the crossing \ then /), xAccept = the X1..X7 threshold dict (§4),
+       probeAspects = the X-tuned describe palette (below), vlmModel/maxRounds/patience
+       passthrough (defaults matching the parent).
+    2. Builds the X-tuned probeAspects palette for the describe-swarm — narrow motion/feel
+       aspects that the critic should describe each wave, aimed at the X:
+         - "the cape's motion during and after each cut — does it whip with the swing then
+            SETTLE, or does it explode / stay frozen-stiff?"          (S6/X6)
+         - "the speed and SNAP of each diagonal cut — crisp and weighty, or floaty/limp?"  (feel)
+         - "the geometry of the two cuts — do the blade paths clearly CROSS in front to
+            form a visible X, or do they miss / overlap / read as one swing?"              (S1-S3/X1-X3)
+         - "how the body's WEIGHT SHIFTS and steps with the cuts — grounded or floaty?"    (S7/X7)
+         - "the FOLLOW-THROUGH after the second cut — does the energy carry and settle, or
+            stop dead / snap back?"                                                        (feel)
+       (These are HINTS; the child's C2.a still grounds on move + metric flags. The driver
+        passes them so the swarm spends its budget on X-relevant aspects.)
+    3. INVOKES THE ENGINE:  await workflow('godwyn-anim-critique-loop', { ...X-pinned args }).
+       (Wrap in try/catch -> surface a clean error, never a null-cascade.)
+    4. FIXBRIEF-THREADING REFINEMENT (D3): the driver passes xAccept so the engine's P2.A+
+       runs anim_metrics_xslash.py and merges xFlaws into metricFlaws BEFORE P2.B. Because
+       xFlaws are metric-grade and phrased as direct Fable instructions, the child's fixBrief
+       synthesis anchors on them and the P2.C Fable fixer gets X-specific direction each
+       round ("cut2 doesn't cross — shift its plane left", not just "smoother"). This is the
+       mechanism that keeps Fable converging on the X instead of polishing a non-X.
+  - The driver is the ONLY file authored here; the engine edits are Phase 4.
+Steps:
+  1. Author the driver JS: args block, probeAspects palette, the single engine invocation,
+     result passthrough + the D-P3 acceptance hand-off (Phase 5 does the eval; the driver
+     wires the call).
+  2. DRY parse + a dispatch-trace comment in the header showing: driver -> parent -> (P1
+     build / P2 loop with X-metrics + X-tuned child probes / P3 export) -> acceptance gate.
+  3. Confirm grep for a SECOND loop/re-implementation = 0 (the driver must NOT contain its
+     own build/critique/fix loop — it delegates to the parent).
+  4. Commit local + server (no push).
+Gate: driver parses; contains exactly ONE workflow('godwyn-anim-critique-loop', ...) call
+  and NO reimplemented loop; passes xAccept + probeAspects + the SPEC §7 animDesc.
+Risks / Edge cases:
+  - Temptation to reimplement the loop in the driver -> FORBIDDEN (INV-9); grep-gate it.
+  - Parent doesn't yet forward xAccept/probeAspects -> that's Phase 4's additive edit; the
+    driver passes them regardless (the engine ignores unknown args harmlessly until P4).
+Subagent orchestration:
+  - Execution shape: [SEQUENTIAL — depends on P1+P2]
+  - REQUIRED subagent_type: general-purpose
+  - REQUIRED model: sonnet   (workflow-authoring; delegates all artistry to the engine)
+  - Run in background: no (its shape gates the P4 parent edit)
+  - Brief template:
+     "Execute Phase 3 of <PLAN_FILE_PATH>. Read §3 PHASE 3 + §1 architecture. Slice: author
+      lifecycle/pending/workflows/godwyn-xslash-critique-loop.workflow.js — a THIN driver that
+      pins X-slash args (animName, SPEC §7 animDesc, xAccept from §4, the X-tuned probeAspects
+      palette) and INVOKES workflow('godwyn-anim-critique-loop', {...}) ONCE, then hands to the
+      acceptance gate. NO reimplemented loop (grep-gate = 0). Touch only the driver file + git.
+      Validation: parses; exactly one engine call; no second loop; passes xAccept+probeAspects+
+      §7 animDesc. Evidence: the dispatch-trace header. Commit (no push). One-line summary + exit."
+
+-----------------------------------------------------------------
+### PHASE 4: Additive engine hook — parent P2.A+ / G-4 / P2.B probe forward
+-----------------------------------------------------------------
+Prerequisites: P2 (X-metrics script) + P3 (driver defines xAccept/probeAspects).
+This is the ONLY edit to an existing engine file. It is surgical and additive; a
+refactor-pair CHECKER confirms the engine stays byte-stable when xAccept is absent.
+Deliverables:
+  - godwyn-anim-critique-loop.workflow.js edited so that, WHEN args.xAccept is present:
+    (a) P2.A also runs scripts/anim_metrics_xslash.py; merges xFlaws into metricFlaws and
+        X-families into families;
+    (b) G-4 combine additionally requires X1..X7 pass (X-fail => roundPass false, same
+        standing as an M-fail); the score/plateau logic is unchanged;
+    (c) the P2.B child call forwards args.probeAspects into
+        workflow('godwyn-vlm-critic', {..., probeAspects}).
+  - WHEN args.xAccept is ABSENT: the engine is BYTE-IDENTICAL (generic, reusable for any
+    move). This is the correctness guarantee refactor-pair verifies.
+  - (Optional) the one-line child C2.a note that probeAspects is an accepted palette hint
+    (flag as a dep if the child doesn't read it yet — additive, non-breaking).
+Steps:
+  1. MAPPER: find every site — the P2.A metrics block, the G-4 combine expression, the
+     P2.B child invocation, and every downstream reader of metricFlaws/families/roundPass.
+  2. BUILDER: apply the three additive guards (all gated on `if (args.xAccept)`); merge
+     xFlaws/X-families; extend the G-4 conjunction; forward probeAspects.
+  3. CHECKER: diff-confirm that with xAccept absent the file behaves byte-identically
+     (G-4 arithmetic, checkpoint, plateau/patience, P3 export, args defaults untouched);
+     confirm no crit.* reader broke; parse both files.
+  4. Commit local + server (no push).
+Gate: parent parses; with xAccept present the X-metrics gate + probe-forward are live;
+  with xAccept absent the file is byte-identical (CHECKER diff proves it). No existing
+  crit.* / G-4 / checkpoint / export behavior changed.
+Risks / Edge cases:
+  - Accidentally changing generic behavior -> refactor-pair CHECKER's byte-identical-when-
+    absent diff is the hard gate against exactly this.
+  - Child doesn't accept probeAspects -> forward it anyway (harmless) + flag the one-line
+    child add as a dep; do not block on it (the child's C2.a already grounds on metricFlaws,
+    which now carry the X flaws).
+Subagent orchestration:
+  - Execution shape: [SEQUENTIAL — depends on P2+P3]
+  - REQUIRED subagent_type: refractor-pair
+      (surgical multi-site edit on a load-bearing shared workflow file: MAPPER finds every
+       P2.A/G-4/P2.B/metricFlaws site, BUILDER applies the additive guards, CHECKER proves
+       byte-identical-when-xAccept-absent. Inline-personation forbidden — the whole point is
+       the independent CHECKER diff that guarantees the generic engine is untouched.)
+  - REQUIRED model: sonnet
+  - Run in background: no (gates the live acceptance + it's the one shared-file edit)
+  - Brief template:
+     "Execute Phase 4 of <PLAN_FILE_PATH> as refactor-pair. Read §3 PHASE 4 + §2 MODIFY.
+      Refactor: in godwyn-anim-critique-loop.workflow.js, add THREE additive guards ALL under
+      `if (args.xAccept)` — (a) P2.A also runs anim_metrics_xslash.py + merges xFlaws/X-families,
+      (b) G-4 also requires X1..X7 pass, (c) P2.B forwards args.probeAspects to the child.
+      Scope: only that file (+ optional one-line child C2.a note). verify: with xAccept ABSENT
+      the file is BYTE-IDENTICAL (CHECKER diff) — G-4/checkpoint/plateau/export/defaults
+      unchanged; both files parse. Commit (no push). One-line summary + exit."
+
+-----------------------------------------------------------------
+### PHASE 5: X-acceptance post-gate + human handoff + docs + archive
+-----------------------------------------------------------------
+Prerequisites: P3 (driver) + P4 (engine hook).
+Deliverables:
+  - The driver's D-P3 acceptance gate: on the engine's FINAL glb (models/godwyn_xslash_v2.glb),
+    run anim_metrics.py + anim_metrics_xslash.py once more and assert S0 (M1..M4) AND
+    S1..S7 (X1..X7). Emit renders/game/godwyn_xslash_v2.acceptance.json:
+      { s0_generic:PASS/FAIL(per family), s1..s7:PASS/FAIL(+worst value), overallXAccept,
+        roundsToConverge, xFlawTrajectory (per-round X-family pass counts from the critLog),
+        awaitingUser:'watch renders/game/godwyn_xslash_v2.mp4 — you are the final judge (S8)' }.
+  - The per-round X-family trajectory (S9): confirm the critLog shows X-metrics + the child
+    critic fixBrief were used each round and X-family passes trend upward (convergence on
+    the X is visible).
+  - README note; git mv this plan pending -> archive on success; commit local (no push).
+  - Do NOT run the full loop end-to-end here (expensive; the human runs the driver and
+    watches the mp4). This phase VALIDATES the acceptance machinery + wiring, and runs the
+    acceptance gate against whatever final glb exists (or reports engine-not-yet-run).
+Steps:
+  1. Wire D-P3 into the driver: after the engine returns, run both metric scripts on the
+     final glb, evaluate S0..S7, write acceptance.json, set awaitingUser.
+  2. Static validation: driver -> one engine call -> acceptance gate; xAccept/probeAspects
+     forwarded; anim_metrics_xslash.py discriminates; parent byte-stable when xAccept absent.
+  3. If a final glb exists (engine already run), run the real acceptance gate on it and
+     record S0..S7. Else record "engine-not-yet-run: acceptance machinery validated, live
+     acceptance deferred to the user's run."
+  4. Doc-sync README; git mv plan to archive; commit local (no push).
+Gate: acceptance.json schema emitted; S-criteria evaluated (live if a final glb exists,
+  else machinery-validated); driver+engine wiring confirmed; plan archived.
+Risks / Edge cases:
+  - Engine passes generic metrics but FAILS an X criterion -> that's the WHOLE POINT: the
+    acceptance gate reports overallXAccept:false + which S failed, and (during a live loop)
+    the X-fail already blocked roundPass so Fable kept fixing. A final-gate X-fail with the
+    loop exhausted -> needsUserJudgment (surface, don't hang).
+  - The human dislikes the feel despite S0..S7 passing (S8) -> surfaced via awaitingUser;
+    the human is always the final judge (SPEC/CLAUDE.md).
+Subagent orchestration:
+  - Execution shape: [SEQUENTIAL — depends on P3+P4]
+  - REQUIRED subagent_type: general-purpose
+  - REQUIRED model: sonnet
+  - Run in background: yes (validation + docs + archive; nothing downstream gates on it)
+  - Brief template:
+     "Execute Phase 5 of <PLAN_FILE_PATH>. Read §3 PHASE 5 + §0 success criteria S0..S9.
+      Slice: wire the driver's acceptance gate (run anim_metrics.py + anim_metrics_xslash.py
+      on the final glb, evaluate S0..S7, write renders/game/godwyn_xslash_v2.acceptance.json +
+      awaitingUser). Statically validate driver->one-engine-call->acceptance; confirm parent
+      byte-stable when xAccept absent. If a final glb exists, run the real acceptance; else
+      record engine-not-yet-run. Doc-sync README; git mv this plan to archive. Touch only the
+      driver + README + git. Validation: acceptance.json emitted + wiring confirmed + archived.
+      Commit (no push). One-line summary + exit."
+
+=====================================================================
+## 4. THE X-SLASH MEASUREMENT SPEC — scripts/anim_metrics_xslash.py (X1..X7)
+=====================================================================
+
+All quantities are computed per frame by stepping scene.frame_set across the action range
+(Blender 5.2 safe — NO action.fcurves), normalized by character_height (rest-pose body
+bbox Z). Inputs from P1: --tip (blade-tip world point spec), --cam-forward (frontal-plane
+normal). Thresholds live in one top-of-file dict (easy re-tune); --calibrate grounds them.
+
+  X1  TWO DISTINCT CUTS  (S1)
+    Compute blade-tip speed per frame (smoothed). Segment the clip on speed minima into
+    strokes. FAIL if the clip does not decompose into exactly TWO dominant high-speed
+    strokes separated by a clear low-speed trough (i.e. one smear, or three+ swings, is not
+    the X opener). PASS = 2 strokes, cut1 then cut2, with a discernible gap.
+    Threshold: gap trough speed < 0.35 * peak stroke speed; each stroke arc-length >
+    0.5·character_height.
+
+  X2  DIAGONAL DIRECTIONS + ORDER  (S2)
+    For each stroke, the dominant travel vector (tip end minus tip start), projected onto
+    the frontal plane. cut1 must be a \ (start upper-right, end lower-left): its projected
+    direction within a tolerance cone of the target down-left diagonal. cut2 must be a /
+    (start upper-left, end lower-right): within the cone of the down-right diagonal. cut1
+    must temporally precede cut2.
+    Threshold: each stroke direction within 30° of its target diagonal; ordering \ then /.
+
+  X3  VISIBLE CROSSING X  (S3)  — the signature test
+    Project both stroke tip-paths onto the frontal plane. Compute their intersection point.
+    FAIL if the paths do not intersect, OR the intersection lies outside the mid-torso
+    region (a box centered on the chest bone, +/- ~0.25·character_height in each frontal
+    axis), OR the crossing is behind the body. PASS = a single clean crossing in front of
+    the mid-chest — the visible X.
+    Threshold: crossing exists AND within the mid-chest box AND on the front (camera) side.
+
+  X4  SPINE/SHOULDER-DRIVEN POWER  (S4)
+    Angular-velocity peak timing: the spine + clavicle/shoulder bones' peak angular speed
+    must occur BEFORE the RightHand/wrist peak in each cut (power initiates from the core,
+    the hand follows). FAIL if the hand leads (arm-only flail) in either cut.
+    Threshold: shoulder/spine peak frame <= hand peak frame per cut (small tolerance
+    +/- 2 frames); core angular contribution >= a floor fraction of total.
+
+  X5  SPIN CAP  (S5)
+    Root/hips yaw rate (Δ yaw / Δt) across the clip. FAIL if any frame exceeds 360°/sec
+    (1 rotation/sec, SPEC §7 user-calibrated). PASS = weighty, readable, never whirling.
+    Threshold: max hips yaw rate <= 360°/sec.
+
+  X6  CAPE WHIP-THEN-SETTLE  (S6)
+    For phys_cape/robe verts: motion energy (per-frame displacement magnitude) must RISE
+    during each cut (a whip) and DECAY after cut2 toward rest (a settle) — while STILL
+    passing M1 (no explosion). FAIL if the cape is frozen-stiff (no rise during cuts:
+    energy variance below a floor => lifeless) OR never settles (energy still high N frames
+    after cut2 => flailing). NOTE: M1 explosion is a SEPARATE, harder fail owned by
+    anim_metrics.py; X6 is the "alive but controlled" band between stiff and exploding.
+    Threshold: per-cut cape energy peak > 1.5× rest-idle energy (whip present) AND
+    post-cut2 energy decays to < 1.3× rest within ~0.4s (settle) AND M1 still PASS.
+
+  X7  WEIGHT-SHIFT + FOOT PLANT  (S7)
+    Hips center-of-mass horizontal translation must show a readable shift with the cuts +
+    a small net forward step (SPEC §7 "feet planted then a small forward step"), while each
+    planted foot stays planted during contact (defers to M3 for slide). FAIL if the hips
+    are static (no weight-shift => floaty upper-body-only) OR a foot slides during contact
+    (M3, cross-checked).
+    Threshold: hips horizontal CoM travel between 0.05·h and 0.5·h (a shift, not a lunge)
+    AND net forward step > 0.03·h AND M3 PASS (no contact-slide).
+
+OUTPUT JSON:
+  {
+    animName, action, frameRange, characterHeight, tipSpec, camForward,
+    xFamilies: {
+      X1_twoCuts:   { pass, strokeCount, gapTroughRatio, arcLengths },
+      X2_diagonals: { pass, cut1DirDeg, cut2DirDeg, order },
+      X3_crossing:  { pass, crossingPoint, inMidChest, front },
+      X4_power:     { pass, cut1: {shoulderPeakF, handPeakF}, cut2: {...} },
+      X5_spin:      { pass, maxYawRateDegPerSec },
+      X6_cape:      { pass, whipPeakRatio, settleTime, m1Pass },
+      X7_weight:    { pass, hipsCoMTravel, netForwardStep, m3Pass }
+    },
+    overallXAccept,                 // AND of X1..X7
+    xFlaws: [ { criterion, whatWrong, howToFix, severity } ]  // prioritized, Fable-phrased
+  }
+Idempotent; writes to /tmp; prints path. --calibrate prints a suggested-threshold block
+from a good-X / non-X envelope. If calibrate disagrees with the defaults by >2x, RECORD
+it for the user (OQ-2), proceed with the stricter.
+
+=====================================================================
+## 5. API CONTRACT — driver Workflow args + the two new engine args
+=====================================================================
+
+DRIVER args (all optional; no-arg run drives the default X-slash):
+  vlmModel   : enum  default 'qwen2.5vl:7b' (or whatever the child uses) — passthrough.
+  maxRounds  : int   default 5 — passthrough to the engine.
+  patience   : int   default 2 — passthrough.
+  sourceGlb  : string default '~/godwyn-boss-fight/models/godwyn_game.glb' — passthrough.
+  xThresholds: object default null — override the X1..X7 threshold dict.
+  (animName/animDesc are PINNED to the X-slash by the driver — not user args here.)
+
+NEW engine args the driver passes into workflow('godwyn-anim-critique-loop', ...):
+  xAccept      : object — the X1..X7 threshold dict (from §4 / xThresholds). Presence
+                 ACTIVATES the additive X-metrics gate in P2.A+/G-4 (Phase 4). Absent =>
+                 the engine is the byte-identical generic loop.
+  probeAspects : string[] — the X-tuned describe-swarm palette hints (§3 P3) forwarded to
+                 the child's C2.a author-aspects node.
+
+DRIVER return object:
+  { status, move:'Godwyn_XSlash',
+    engineResult: <the parent loop's return, verbatim>,
+    xAcceptance: { s0_generic, s1..s7, overallXAccept, roundsToConverge, xFlawTrajectory },
+    output: 'models/godwyn_xslash_v2.glb', renders:['renders/game/godwyn_xslash_v2.mp4'],
+    acceptanceJson: 'renders/game/godwyn_xslash_v2.acceptance.json',
+    needsUserJudgment: true,
+    awaitingUser: 'watch renders/game/godwyn_xslash_v2.mp4 — you are the final judge of feel (S8)' }
+
+=====================================================================
+## 6. WORKER / QUEUE CHANGES
+=====================================================================
+None. All execution is the engine's existing ssh black-sky headless Blender + the child's
+serialized describe-swarm. The driver adds no concurrency; INV-7 stability is the engine's.
+
+=====================================================================
+## 7. FRONTEND CHANGES
+=====================================================================
+None. Human-facing artifact is renders/game/godwyn_xslash_v2.mp4 (S8, the human watches it)
+plus the acceptance.json report.
+
+=====================================================================
+## 8. TESTING STRATEGY
+=====================================================================
+- X-metric discrimination test (P2, the critical one): anim_metrics_xslash.py FAILS a
+  non-crossing swing (no visible X) and PASSES a clean crossing X. Proves the add-on
+  actually measures "X-ness" before the loop trusts it.
+- Calibration test (P2): --calibrate on a good-X / non-X pair grounds the X1..X7 thresholds.
+- Engine byte-stability test (P4): with xAccept absent, godwyn-anim-critique-loop.workflow.js
+  is byte-identical (refactor-pair CHECKER diff). Guarantees the generic engine is untouched.
+- Driver-shape test (P3): exactly one workflow('godwyn-anim-critique-loop', ...) call, NO
+  reimplemented loop (grep-gate).
+- Acceptance-machinery test (P5): acceptance.json evaluates S0..S7; awaitingUser set.
+- Convergence-visibility test (P5/S9): per-round X-family pass counts in the critLog trend
+  upward over rounds (Fable converging on the X, not spinning).
+- Manual QA (S8): the human watches the mp4 — final judge of feel.
+
+=====================================================================
+## 9. ROLLOUT & OBSERVABILITY
+=====================================================================
+- No feature flag; running the driver is opt-in. xAccept presence is the switch that turns
+  the generic engine into the X-gated one (absent => generic, for other moves).
+- Observability: renders/game/godwyn_xslash_v2.acceptance.json (S0..S7 + X-flaw trajectory)
+  + the parent's per-round critLog + per-round X-metrics JSON = the audit trail. A blind
+  critic, a plateau, or a persistent X-fail is all visible after the fact.
+- Rollback: the driver + anim_metrics_xslash.py are additive new files; the parent edit is
+  byte-stable when xAccept is absent. Discard the _v2 X-slash glb to revert; nothing else
+  changed. Never pushed.
+
+=====================================================================
+## 10. OPEN QUESTIONS
+=====================================================================
+- OQ-1 (DEP): the parent loop + child critic are (at plan-writing) still .txt plans, not yet
+  executed. This driver COMPILES regardless, but a LIVE run needs both engines built first.
+  Sequencing recommendation: execute godwyn-animation-build-critique-loop + the child plan
+  FIRST, then this driver. Phase 1 hard-gates on their runnability and escalates if absent.
+- OQ-2: X1..X7 threshold calibration — if --calibrate disagrees with the §4 defaults by >2x,
+  the user confirms the final thresholds (surfaced, not auto-trusted).
+- OQ-3: does a KNOWN-GOOD reference X-slash glb exist on the box for --calibrate? If not, P2
+  calibrates the "good" side from the SPEC-derived ideal + a synthetic clean crossing, and
+  the "bad" side from any non-crossing swing. Confirm what's available.
+- OQ-4: the X3 crossing test assumes a single dominant frontal camera. If the moveset framing
+  is 3/4, X3 projects onto that plane (P1 pins it); confirm the X still reads as a crossing
+  in 3/4 or add a second (front) projection. (Not a blocker — P1 resolves the axis.)
+- OQ-5: should the one-line child C2.a probeAspects-palette note be applied to the child plan
+  now, or left as a harmless additive dep (the child already grounds on metricFlaws, which now
+  carry the X flaws)? Default: leave as a dep, note it; apply only if trivial.
+- JC-2: exact blade-tip point on Godwyn_Sword (Phase 1 resolves).
+
+=====================================================================
+## 11. ESTIMATED EFFORT
+=====================================================================
+  P1 Dependency gate + rig/blade/camera resolution ... S/M  (verification + resolution)
+  P2 anim_metrics_xslash.py (X1..X7 + calibrate) ...... L    (the real new work — X geometry)
+  P3 Driver workflow body ............................. S/M  (thin wrapper; delegates artistry)
+  P4 Additive engine hook (refactor-pair) ............. M    (surgical, byte-stable-gated)
+  P5 Acceptance gate + docs + archive ................. S/M
+  Critical path: P1 -> P2 -> P3 -> P4 -> P5 (largely serial; P2 is the biggest lift).
+  NOTE: this is the DRIVER build effort only. A LIVE X-slash convergence run's wall-clock is
+  the ENGINE's (P1 build + N critique rounds + export), covered by the parent plan §11 —
+  typically 75-90 min for a 7B-critic multi-round run; this driver adds only the X-metric
+  compute (~seconds/round) + the acceptance gate (~1 min).
+
+=====================================================================
+## 12. EXECUTOR ORCHESTRATION GUIDE
+=====================================================================
+
+### 12.1 Parallelism map
+  Phase | Execution   | Siblings | Depends on | Model  | Subagent type
+  P1    | SINGLE      | —        | none       | sonnet | general-purpose
+  P2    | SINGLE (bg) | —        | P1         | sonnet | general-purpose
+  P3    | SEQUENTIAL  | —        | P1,P2      | sonnet | general-purpose
+  P4    | SEQUENTIAL  | —        | P2,P3      | sonnet | refractor-pair
+  P5    | SEQUENTIAL(bg)| —      | P3,P4      | sonnet | general-purpose
+
+  DAG (near-linear; P2 can run in the background while P3 is authored, then both join at P4):
+    P1 ──► P2 ─┐
+       └──► P3 ─┴──► P4 ──► P5
+    (P2 and P3 both depend on P1 and are independent of each other — P2 authors the X-metric
+     script, P3 authors the driver JS; they touch disjoint files. They MAY overlap. P4 is the
+     single shared-file edit and joins them; P5 is last.)
+
+### 12.2 Cross-phase work consolidation / shared-file serialization
+  - The ONLY shared existing file touched is godwyn-anim-critique-loop.workflow.js, edited
+    ONCE in P4 (refactor-pair). No other phase touches it — no serialization conflict.
+  - scripts/anim_metrics_xslash.py (P2) and the driver JS (P3) are disjoint NEW files — safe
+    to author concurrently.
+  - rigMap + blade-tip + camera axis are resolved ONCE in P1 and passed as params to P2's
+    script (never re-derived) — consolidation point.
+  - The X-slash animDesc is SPEC §7 verbatim and ALREADY the parent default — reuse it, do
+    not re-transcribe (drift risk).
+
+### 12.3 Model-mix budget
+  - fable  0%   — Fable's artistry lives INSIDE the engine (parent P1/P2.C); this driver
+                  never dispatches Fable directly. (A live run DOES use Fable — via the engine.)
+  - opus   0%   — no whole-system control-flow authoring here; the one shared-file edit is
+                  surgical and goes to refactor-pair, not opus.
+  - sonnet ~100% — all 5 phases (verification, X-metric measurement, driver authoring,
+                  the additive edit via refactor-pair(model:sonnet), acceptance/docs).
+  - haiku  0%   — nothing is a trivial single-field edit; each phase carries real logic.
+  Split: 0% fable / 0% opus / 100% sonnet / 0% haiku. Sanity: the driver is deliberately
+  THIN — it borrows the engine's Fable/critic tiers rather than re-spending them.
+
+### 12.4 Estimated wall-clock (DRIVER BUILD, not a live convergence run)
+  Best case (P2 || P3 overlap): P1(~10m) + max(P2 ~30m, P3 ~15m) + P4(~15m) + P5(~10m)
+    ≈ 65 min.
+  Serial worst case: ≈ 80-90 min.
+  Critical path: P1 -> P2 (the X-metric script is the dominant lift) -> P4 -> P5.
+  A LIVE X-slash convergence run afterward is the engine's wall-clock (parent §11), NOT
+  this build.
+
+### 12.5 Failure recovery policy
+  - P1 (parent/child not runnable): HARD STOP — ESCALATE. The driver has no engine to drive;
+    recommend executing the parent + child plans first (OQ-1). Do NOT fork/inline them.
+  - P1 (blade tip / camera unresolved): derive-and-record (documented default), continue.
+  - P2 (X-metric script null/doesn't discriminate): retry once; if it still can't tell a
+    crossing X from a non-crossing swing, PAUSE + escalate — a non-discriminating X-metric
+    is worse than none (it would false-pass). Do NOT ship it.
+  - P3 (driver null): retry once; if it still reimplements the loop instead of delegating,
+    escalate (INV-9 violation).
+  - P4 (refactor-pair CHECKER finds the engine NOT byte-identical when xAccept absent):
+    BLOCK — rework until byte-stable; the generic engine must stay untouched. Do not proceed.
+  - P5 (acceptance machinery / archive): retry once, else leave the plan in pending + surface.
+  - Default if unspecified: pause and escalate.
+
+### 12.6 Audit trail location
+  Per-phase evidence: committed beside the artifacts on black-sky + local (this repo has no
+    runtime/audits tree — evidence lives with the code, per the parent plan §12.6).
+  X-metric per-run: /tmp/godwyn_xslash_xmetrics.json (+ the parent's per-round metrics JSON).
+  Final acceptance rollup: renders/game/godwyn_xslash_v2.acceptance.json (S0..S7 + X-flaw
+    trajectory) + renders/game/godwyn_xslash_v2.mp4 (the S8 human artifact).
+
+=====================================================================
+END OF PLAN
+=====================================================================
