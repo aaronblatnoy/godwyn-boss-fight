@@ -47,7 +47,7 @@ VIDEO_PATH=""
 GATEWAY_URL=""
 MODEL_NAME=""
 OUT_FILE=""
-SWARM_WIDTH=4
+SWARM_WIDTH=2   # all-frames (~51/req) prompts are heavy; 2-wide avoids 7B KV OOM
 TASK_TIMEOUT=60
 MAX_TOKENS=200
 
@@ -103,22 +103,29 @@ fi
 # Step 1: Base64-encode the video ONCE, write to a shared temp file.
 #         Use Python for portability (macOS and Linux).
 # ---------------------------------------------------------------------------
-echo "[vlm_swarm] Encoding video (once): $VIDEO_PATH" >&2
-VIDEO_DATA_URI_FILE="$TMPDIR_SWARM/video_data_uri.txt"
+echo "[vlm_swarm] Extracting DENSE FRAMES ONCE (full-video read): $VIDEO_PATH" >&2
+FRAMES_JSON_FILE="$TMPDIR_SWARM/frames_content.json"
+FRAMES_DIR="$TMPDIR_SWARM/frames"
+mkdir -p "$FRAMES_DIR"
+# The vLLM video_url path only samples ~4 frames on this build (reads as stills). Instead
+# we extract dense frames spanning the WHOLE clip and send them as an ORDERED image
+# sequence so the VLM watches the full motion. 6fps + 384px keeps ~13 frames in context.
+# fps=24 == the clip's native rate -> EVERY frame (the literal full video). scale keeps
+# per-frame tokens low enough that all ~51 frames fit the context window.
+ffmpeg -y -loglevel error -i "$VIDEO_PATH" -vf 'fps=24,scale=-2:320' "$FRAMES_DIR/f%03d.png" 2>/dev/null || true
 
-python3 - "$VIDEO_PATH" "$VIDEO_DATA_URI_FILE" << 'PYEOF'
-import base64, sys
-video_path = sys.argv[1]
+python3 - "$FRAMES_DIR" "$FRAMES_JSON_FILE" << 'PYEOF'
+import base64, sys, glob, os, json
+frames_dir = sys.argv[1]
 out_path   = sys.argv[2]
-with open(video_path, 'rb') as f:
-    data = f.read()
-b64 = base64.b64encode(data).decode('ascii')
-uri = "data:video/mp4;base64," + b64
-with open(out_path, 'w') as f:
-    f.write(uri)
+items = []
+for f in sorted(glob.glob(os.path.join(frames_dir, '*.png'))):
+    b64 = base64.b64encode(open(f, 'rb').read()).decode('ascii')
+    items.append({"type": "image_url", "image_url": {"url": "data:image/png;base64," + b64}})
+json.dump(items, open(out_path, 'w'))
 PYEOF
 
-echo "[vlm_swarm] Video encoded ($(wc -c < "$VIDEO_DATA_URI_FILE") URI bytes)" >&2
+echo "[vlm_swarm] Encoded $(python3 -c "import json;print(len(json.load(open('$FRAMES_JSON_FILE'))))") frames as an ordered sequence" >&2
 
 # ---------------------------------------------------------------------------
 # Step 2: Parse tasks file — write each task to a numbered file so
@@ -179,27 +186,23 @@ print(json.dumps({
 PYEOF
   }
 
-  # Build the JSON payload via Python (handles all special chars safely)
+  # Build the JSON payload via Python (handles all special chars safely).
+  # Content = the ordered frame sequence (the full clip) + the aspect prompt.
   python3 - "$MODEL_NAME" "$aspect_prompt" "$MAX_TOKENS" \
-    "$VIDEO_DATA_URI_FILE" "$payload_file" << 'PYEOF'
+    "$FRAMES_JSON_FILE" "$payload_file" << 'PYEOF'
 import json, sys
 model        = sys.argv[1]
 aspect       = sys.argv[2]
 max_tokens   = int(sys.argv[3])
-video_uri    = open(sys.argv[4]).read().strip()
+frames       = json.load(open(sys.argv[4]))   # ordered list of image_url content items
 payload_path = sys.argv[5]
 
-payload = {
-    "model": model,
-    "messages": [{
-        "role": "user",
-        "content": [
-            {"type": "video_url", "video_url": {"url": video_uri}},
-            {"type": "text", "text": aspect}
-        ]
-    }],
-    "max_tokens": max_tokens
-}
+n = len(frames)
+lead = (f"The {n} images above are sequential frames of a ~2-second animation IN ORDER "
+        f"(frame 1 first, frame {n} last) — treat them together as a VIDEO and describe the "
+        f"MOTION across the WHOLE clip, not any single frame. ")
+content = list(frames) + [{"type": "text", "text": lead + aspect}]
+payload = {"model": model, "messages": [{"role": "user", "content": content}], "max_tokens": max_tokens}
 with open(payload_path, 'w') as f:
     json.dump(payload, f)
 PYEOF

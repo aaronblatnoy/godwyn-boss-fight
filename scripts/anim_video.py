@@ -101,10 +101,13 @@ print(f"[anim_video] armature={arm.name}")
 if action_name:
     act = bpy.data.actions.get(action_name)
     if act is None:
-        print(f"[anim_video] WARNING: action '{action_name}' not found; "
-              f"available={[a.name for a in bpy.data.actions]}")
-        # Fall through: use the scene's existing frame range (may already be set
-        # from the .blend or a prior bake step).
+        # FAIL LOUD — never silently render the scene-default range (~250 frames of the
+        # wrong/static pose, which wastes ~10 min and starves the critic of its video).
+        # A missing action is a caller bug; refuse rather than paper over it.
+        raise SystemExit(
+            f"[anim_video] ERROR: action '{action_name}' not found; "
+            f"available={[a.name for a in bpy.data.actions]} — refusing to render the "
+            f"scene-default frame range. Pass the correct --action.")
     else:
         # Slotted action assignment — Blender 5.2 API
         if arm.animation_data is None:

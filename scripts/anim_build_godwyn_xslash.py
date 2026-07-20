@@ -15,6 +15,108 @@ pattern into ONE idempotent pass:
      is ~44deg over 9 frames = ~0.4 rot/sec), toes forward, combat grip, ~2s.
      Power from SPINE+SHOULDER rotation. pose_bone.keyframe_insert only
      (Blender 5.2 slotted actions — NO action.fcurves).
+     R1 FIX (M2 ang-vel/jerk 360deg + elbow "315deg"): body bones are now
+     authored in QUATERNION mode with hemisphere continuity between successive
+     keys (q flipped to q.dot(prev)>=0). The old euler authoring let aim_hand's
+     matrix->euler decomposition wrap +/-360deg between keys of the same world
+     aim (each solve started from the previous mutated pose), so interpolation
+     took the LONG way around — the genuine source of the M2 teleport/pop reads.
+     Breakdown keys added mid guard->windup1 and cut1_settle->windup2 to smooth
+     both swing onsets. Phys bake quats get the same per-bone hemisphere
+     continuity.
+     R2 FIX (round-2 fixBrief, metric-anchored): probed the exported WIP glb
+     exactly as anim_metrics.py reads it (fresh import, default 24fps scene, so
+     the 30fps clip is SAMPLED at 1/24s steps = 1.25x the authored per-frame
+     travel). ONE genuine violation found: RightHand true (double-cover-FOLDED)
+     ang-vel peaked 51.3deg/frame at the cut-2 launch (glb f33-f34, authored
+     ~f42-43) — the 3-step launch was too hot once resampled. Fixed by
+     RETIMING both cut launches to FIVE even slerp steps (hold->mid over 6
+     frames instead of 4): authored peak ~27deg/frame, x1.25 sampling = ~34 <
+     45. Self-check now asserts worst folded ang-vel < 36deg/frame @30fps
+     (= <45 at the metric's 24fps sampling, since a 1/24s interval spans at
+     most 1.25 authored frames). Cuts stay snappy: windup->impact 0.30s.
+     EVERY OTHER round-2 M2 flag was verified (probe /tmp/probe_m2.py, w signs
+     + folded angles logged) to be quaternion DOUBLE-COVER in the frozen
+     metric's UNFOLDED reading, not motion: bones whose total world rotation
+     hovers at ~180deg (w~0: shoulders, headfront, toe bases — structural for
+     a -Y-facing rig; LeftToeBase w=0.0000 permanently) flip decomposition
+     hemisphere while their TRUE folded motion at the flagged frames is
+     0.0-33deg (e.g. glb f05 LeftToeBase reads 360.0 unfolded, 0.00 folded;
+     RightForeArm "315deg" = 360-45 parent/child hemisphere split). These
+     cannot be removed by ANY authoring while anim_metrics.py stays
+     byte-identical (INV-9).
+     R3 FIX (round-1 full-video VLM critique, 4 items):
+     a) X legibility (blocker): camera moved dead-frontal, spine yaw sweeps
+        widened (coil ~-70deg total -> uncoil ~+76deg) so the two diagonals
+        span wider and unambiguously cross; NEW numeric self-check finds the
+        actual 2D (camera-plane XZ) intersection of the two dense tip paths
+        and asserts it exists, sits at mid-torso height, near the midline,
+        and IN FRONT of the body (y < -0.15).
+     b) spine/shoulder power (blocker): spine+hips yaw magnitudes ~doubled at
+        every anchor, and launch in-betweens now give TORSO bones a timing
+        LEAD (t*1.35 vs the arm's t) so the shoulders visibly lead the arm
+        into each cut — whole-body uncoil, not an arm swing.
+     c) over-right-shoulder wind-up (major): windup1 is now a HELD BEAT
+        (f15-f18, ~0.13s) with the blade dir pulled further up-and-behind
+        (-0.35, 0.42, 0.84) so the loaded position over the right shoulder
+        reads; windup2 held f40-f43 symmetrically.
+     d) forward step (minor): Hips bone now gets WORLD -Y (forward) location
+        keys — 0 through windup1, creeping in cut1 (0.05-0.10m), committing
+        through cut2 (0.32m at impact), kept in recover (0.28m, a NEW
+        'recover' anchor so he does not slide back). Left leg swings/plants
+        with bigger UpLeg/Leg deltas through cut2. Toes stay forward.
+     Phys cape/robe/hair params UNTOUCHED this round (critic praised the cape;
+     damped-spring verlet + both INV-6 guards stay as-is).
+     R4 FIX (round-2 full-video VLM critique, 3 items):
+     a) X geometry absent / reads as a vertical yo-yo (blocker): the strokes
+        WERE diagonal in world numbers but too vertical ON SCREEN — the blade
+        end directions were ~75deg from horizontal and the windup1 tip hid
+        BEHIND the head. All D_ blade vectors re-planed for LATERAL amplitude:
+        windup1 tip now clearly at his upper-RIGHT (x -0.60, only slightly
+        behind), cut1 mid/end drive down-LEFT at ~40deg off vertical
+        (x 0.70/0.58 vs old 0.62/0.36); cut2 mirrored down-RIGHT. NEW numeric
+        self-check: each stroke's tip delta must satisfy |dx|/|dz| >= 0.55
+        (>= ~29deg off vertical) so neither cut can read as a vertical drop.
+     b) transition coil direction (blocker): the old cut1_settle->windup2 yaw
+        was nearly static (+50 -> +70 summed) while the head counter-rotated
+        RIGHT (-20) — the visible cue read as a rightward pivot. Now the
+        torso coils VISIBLY LEFT into windup2 (summed yaw +50 -> +100), the
+        LEFT shoulder pulls back (-14), and the head counter-rotation is
+        halved (-10) so no body part sweeps rightward during the transition.
+     c) torso rotation too small (major): spine/hips yaw scaled up ~35% at
+        every anchor (coil -94deg summed -> uncoil +94 -> -85), shoulders lead
+        harder. LEAD dropped 0.35 -> 0.25 so the bigger sweep still clears the
+        M2 self-check gate (torso lead-step 0.25 x ~190deg launch sweep stays
+        < 36deg/frame authored).
+     R5 FIX (round-3 full-video VLM critique, 6 items):
+     a) windup coil missing (blocker): NEW explicit 'windup1_rise' anchor at
+        f10 — the blade now visibly sweeps UP along his right side (dir
+        (-0.88, 0.05, 0.30), tip far right at ~ear height) before arriving
+        loaded over the right shoulder at f14. NEW numeric self-checks: the
+        tip must RISE >0.3m between f6 and f10 and again into f14, and the
+        held windup tip (f15) must sit high (z>=2.6) and clearly on HIS
+        RIGHT (x<=-0.5).
+     b) torso pre-rotation (major): NEW 'windup*_prime' anchors replace the
+        static second hold key (f18/f44) — TORSO+SHOULDER bones only are
+        blended 25% toward the cut-mid pose while the arm+blade stay coiled,
+        so the spine/shoulders are visibly ~15-20deg into the turn for 3-4
+        frames BEFORE the blade accelerates (and each launch's torso travel
+        SHRINKS, helping the M2 gate). Self-check asserts the summed torso
+        yaw moves >=10deg toward each cut across the held beat.
+     c) X crossing centered (major): assert tightened |x| < 0.9 -> < 0.55.
+     d) cut1 \\ legibility (major): rise anchor puts the stroke start
+        unambiguously RIGHT of center; stroke-diagonality + tip-delta checks
+        retained.
+     e) cape snap/bunch at the pivot (major): cape/robe damped-spring
+        re-damped for drag inertia — stiffness 0.22/0.24 -> 0.16/0.19,
+        damping 0.80/0.82 -> 0.86/0.85, gravity 3.5 -> 3.0/3.2, angular cap
+        30 -> 36/34deg (the hard cap kicking in mid-pivot was the 'snap';
+        a softer pull + higher cap lets the fabric trail through the pivot
+        instead of being yanked to the rigid follow pose). STILL the same
+        damped-spring verlet + BOTH INV-6 guards — NOT a cloth sim.
+     f) forward step stronger (minor, low-conf): step offsets scaled up
+        (commit 0.32 -> 0.42m at cut2 impact, kept 0.38 in recover) so the
+        weight shift reads on camera.
   4. phys_ cape/robe/hair chains: deterministic verlet damped-spring bake that
      LAGS the body (inertia + damping + stiffness pull to the rigid follow
      shape + link-length constraints + ground clamp) with TWO explosion guards
@@ -114,11 +216,13 @@ fill.name = "XS_Fill"
 fill.data.energy = 300
 fill.data.size = 4
 
-# Near-frontal cam (he faces -Y) so BOTH diagonals read; plus a back cam for cape.
-bpy.ops.object.camera_add(location=(1.2, -7.4, 2.1))
+# R3: DEAD-FRONTAL cam (he faces -Y) so the X crossing is unambiguous on
+# screen (round-1 critic: crossing not legible from the oblique angle);
+# plus a back cam for cape.
+bpy.ops.object.camera_add(location=(0.35, -8.2, 1.9))
 cam = bpy.context.active_object
 cam.name = "XS_Cam"
-tgt = Vector((0.0, 0.0, 1.8))
+tgt = Vector((0.0, -0.3, 1.7))
 cam.rotation_euler = (tgt - cam.location).to_track_quat('-Z', 'Y').to_euler()
 sc.camera = cam
 bpy.ops.object.camera_add(location=(-3.0, 6.4, 2.3))
@@ -138,7 +242,11 @@ CTRL = ["RightShoulder", "RightArm", "RightForeArm", "RightHand",
 for n in CTRL:
     pb = arm.pose.bones.get(n)
     assert pb is not None, f"FATAL: missing body bone {n}"
-    pb.rotation_mode = 'XYZ'
+    # R1 FIX: quaternion authoring — euler decomposition of aim_hand's matrix
+    # solve wrapped +/-360deg between keys, making interpolation spin the long
+    # way (M2 ang-vel/jerk 360deg/frame). Quaternions + hemisphere continuity
+    # interpolate the SHORT path by construction.
+    pb.rotation_mode = 'QUATERNION'
 
 def aim_hand(blade_dir):
     """Rotate RightHand so its Y axis (blade dir after re-seat) points at the
@@ -153,15 +261,78 @@ def aim_hand(blade_dir):
     pb.matrix = arm.matrix_world.inverted() @ (T @ R @ T.inverted() @ M)
     bpy.context.view_layer.update()
 
-def key_pose(frame, pose, blade_dir=None):
+def _pose_quat(pose, n):
+    rx, ry, rz = pose.get(n, (0, 0, 0))
+    return Euler((math.radians(rx), math.radians(ry), math.radians(rz)),
+                 'XYZ').to_quaternion()
+
+PREV_Q = {}                              # R1 FIX: hemisphere continuity per bone
+
+# R3 (fix d): convert a WORLD forward offset (meters, -Y) into Hips bone-local
+# location units once — (AW @ rest).to_3x3() carries armature+rest scale/orient.
+_HIPS_L3 = (arm.matrix_world @ arm.pose.bones["Hips"].bone.matrix_local).to_3x3()
+HIPS_FWD_LOCAL = _HIPS_L3.inverted() @ Vector((0.0, -1.0, 0.0))
+
+def key_pose(frame, pose, hand_quat, step=0.0):
+    """Key all CTRL bones from a pose table, with the RightHand local quat
+    given EXPLICITLY (pre-solved per anchor, slerped for in-betweens — R1 FIX:
+    per-key aim_hand re-solves carried inconsistent blade-axis twist, which
+    dense keys baked in as jitter). step = world-forward Hips offset (m)."""
     for n in CTRL:
-        rx, ry, rz = pose.get(n, (0, 0, 0))
-        arm.pose.bones[n].rotation_euler = Euler(
-            (math.radians(rx), math.radians(ry), math.radians(rz)), 'XYZ')
-    if blade_dir is not None:
-        aim_hand(blade_dir)
+        arm.pose.bones[n].rotation_quaternion = _pose_quat(pose, n)
+    arm.pose.bones["RightHand"].rotation_quaternion = hand_quat.normalized()
     for n in CTRL:
-        arm.pose.bones[n].keyframe_insert(data_path='rotation_euler', frame=frame)
+        pb = arm.pose.bones[n]
+        q = pb.rotation_quaternion.copy().normalized()
+        pq = PREV_Q.get(n)
+        if pq is not None and q.dot(pq) < 0.0:
+            q = -q                       # same rotation, short-path hemisphere
+        pb.rotation_quaternion = q
+        PREV_Q[n] = q.copy()
+        pb.keyframe_insert(data_path='rotation_quaternion', frame=frame)
+    hips = arm.pose.bones["Hips"]
+    hips.location = HIPS_FWD_LOCAL * step
+    hips.keyframe_insert(data_path='location', frame=frame)
+
+# R3: torso bones can LEAD the arm through a blend — shoulders/spine arrive
+# ahead of the hand so each cut reads as a whole-body uncoil (blocker fix b).
+TORSO_LEAD = {"Spine", "Spine01", "Spine02", "Hips", "Head"}
+
+def blend_pose(pa, pb_, t, lead=0.0):
+    """Slerp-blend two pose tables (per-bone short-path) -> new pose table.
+    lead > 0 advances TORSO_LEAD bones (t*(1+lead), capped 1) vs the arm."""
+    out = {}
+    for n in CTRL:
+        tt = min(1.0, t * (1.0 + lead)) if (lead and n in TORSO_LEAD) else t
+        qa, qb = _pose_quat(pa, n), _pose_quat(pb_, n)
+        if qa.dot(qb) < 0.0:
+            qb = -qb
+        e = qa.slerp(qb, tt).to_euler('XYZ')
+        out[n] = (math.degrees(e.x), math.degrees(e.y), math.degrees(e.z))
+    return out
+
+def blend_dir(a, b, t):
+    v = Vector(a).normalized().lerp(Vector(b).normalized(), t)
+    return tuple(v.normalized())
+
+# R5 (fix b): torso/shoulder PRE-ROTATION set — these bones get blended toward
+# the cut during the held windup beat while the arm+blade stay coiled.
+PRELEAD = TORSO_LEAD | {"RightShoulder", "LeftShoulder"}
+
+def torso_blend(pa, pb_, t):
+    """Blend ONLY PRELEAD (spine/hips/head/shoulders) t of the way pa->pb_;
+    the sword arm and legs stay at pa. R5 fix b: the power source (spine +
+    shoulder) is visibly into its turn BEFORE the blade moves at speed."""
+    out = dict(pa)
+    for n in CTRL:
+        if n not in PRELEAD:
+            continue
+        qa, qb = _pose_quat(pa, n), _pose_quat(pb_, n)
+        if qa.dot(qb) < 0.0:
+            qb = -qb
+        e = qa.slerp(qb, t).to_euler('XYZ')
+        out[n] = (math.degrees(e.x), math.degrees(e.y), math.degrees(e.z))
+    return out
 
 # POSES (degrees, XYZ). World: faces -Y; HIS right = -X, HIS left = +X.
 # Toes forward: no UpLeg yaw anywhere (SPEC sec 7 — no splay).
@@ -177,17 +348,19 @@ GUARD = {
     "Head":          (-4, 0, 0),
 }
 WINDUP1 = {                              # coiled over HIS RIGHT shoulder
-    "RightShoulder": (0, 0, -18),
-    "RightArm":      (-70, 0, -72),
+    "RightShoulder": (0, 0, -20),
+    "RightArm":      (-74, 0, -72),
     "RightForeArm":  (-30, 30, 0),
     "LeftShoulder":  (0, 0, 6),
     "LeftArm":       (30, 0, 18),
     "LeftForeArm":   (-25, 0, 0),
-    "Spine":         (0, 0, -16),        # spine coil = the power source
-    "Spine01":       (0, 0, -10),
-    "Spine02":       (-4, 0, -6),
-    "Hips":          (0, 0, -6),
-    "Head":          (0, 0, 10),
+    # R4: spine coil scaled up again — round-2 critic still read the torso as
+    # "relatively stable"; the coil must be unmistakable at spine/hip level
+    "Spine":         (0, 4, -38),
+    "Spine01":       (0, 0, -24),
+    "Spine02":       (-4, 0, -16),
+    "Hips":          (0, 0, -16),
+    "Head":          (0, 0, 22),         # counter-rotate: eyes stay on target
     "RightUpLeg":    (6, 0, 0),
 }
 CUT1_MID = {
@@ -196,57 +369,66 @@ CUT1_MID = {
     "RightForeArm":  (-5, 10, 0),
     "LeftArm":       (24, 0, 14),
     "LeftForeArm":   (-20, 0, 0),
-    "Spine":         (6, 0, 2),
-    "Spine01":       (4, 0, 2),
-    "Head":          (-4, 0, 0),
+    # R4: torso already well into the uncoil at mid-cut (leads the arm, and
+    # keeps the mid->end world ang-vel under the M2 gate); magnitudes up ~40%
+    "Spine":         (6, 0, 22),
+    "Spine01":       (4, 0, 13),
+    "Spine02":       (0, 0, 8),
+    "Hips":          (0, 0, 9),
+    "Head":          (-4, 0, -2),
     "LeftUpLeg":     (-14, 0, 0),        # small forward step with the cut
     "LeftLeg":       (10, 0, 0),
     "RightUpLeg":    (8, 0, 0),
 }
 CUT1_END = {                             # hip height across at HIS LEFT (\ done)
-    "RightShoulder": (0, 0, 14),
-    "RightArm":      (5, 0, -35),
+    "RightShoulder": (0, 0, 18),
+    "RightArm":      (5, 0, -38),
     "RightForeArm":  (-5, 0, 0),
     "LeftShoulder":  (0, 0, -4),
     "LeftArm":       (14, 0, 8),
     "LeftForeArm":   (-12, 0, 0),
-    "Spine":         (2, 0, 22),         # rotation carried THROUGH the cut
-    "Spine01":       (3, 0, 12),
-    "Spine02":       (2, 0, 6),
-    "Hips":          (0, 0, 8),
+    "Spine":         (2, 0, 40),         # R4: rotation carried THROUGH the cut
+    "Spine01":       (3, 0, 24),
+    "Spine02":       (2, 0, 14),
+    "Hips":          (0, 0, 16),
     "Head":          (-8, 0, -8),
     "LeftUpLeg":     (-12, 0, 0),
     "LeftLeg":       (12, 0, 0),
     "RightUpLeg":    (10, 0, 0),
 }
 CUT1_SETTLE = {
-    "RightShoulder": (0, 0, 11),
-    "RightArm":      (5, 0, -32),
+    "RightShoulder": (0, 0, 14),
+    "RightArm":      (5, 0, -34),
     "RightForeArm":  (-10, 0, 0),
     "LeftArm":       (16, 0, 10),
     "LeftForeArm":   (-14, 0, 0),
-    "Spine":         (2, 0, 18),
-    "Spine01":       (3, 0, 10),
-    "Hips":          (0, 0, 6),
+    "Spine":         (2, 0, 33),
+    "Spine01":       (3, 0, 20),
+    "Spine02":       (1, 0, 11),
+    "Hips":          (0, 0, 12),
     "Head":          (-7, 0, -6),
     "LeftUpLeg":     (-12, 0, 0),
     "LeftLeg":       (10, 0, 0),
     "RightUpLeg":    (8, 0, 0),
 }
 WINDUP2 = {                              # hand HIGH, blade up-left, lateral coil
-    "RightShoulder": (0, 0, 16),
-    "RightArm":      (-85, -45, 0),
+    "RightShoulder": (0, 0, 18),
+    "RightArm":      (-80, -40, 0),      # R4: hair less extreme — trims the
+                                         # hot cut2 launch arm travel ~7deg
     "RightForeArm":  (-25, -15, 0),
-    "LeftShoulder":  (0, 0, -4),
+    # R4 (blocker b): the transition must READ as a LEFTWARD coil — left
+    # shoulder pulls BACK, torso yaw keeps sweeping left (+50 -> +100 summed,
+    # was nearly static), head counter-rotation halved so nothing pivots right
+    "LeftShoulder":  (0, 0, -14),
     "LeftArm":       (26, 0, 16),
     "LeftForeArm":   (-22, 0, 0),
-    "Spine":         (0, 0, 26),
-    "Spine01":       (0, 0, 10),
-    "Spine02":       (-4, 0, 5),
-    "Hips":          (0, 0, 6),
-    "Head":          (0, 0, -16),
-    "LeftUpLeg":     (-14, 0, 0),
-    "LeftLeg":       (9, 0, 0),
+    "Spine":         (0, -4, 46),
+    "Spine01":       (0, 0, 24),
+    "Spine02":       (-4, 0, 14),
+    "Hips":          (0, 0, 16),
+    "Head":          (0, 0, -10),
+    "LeftUpLeg":     (-20, 0, 0),
+    "LeftLeg":       (18, 0, 0),
     "RightUpLeg":    (7, 0, 0),
 }
 CUT2_MID = {
@@ -255,73 +437,212 @@ CUT2_MID = {
     "RightForeArm":  (-5, -10, 0),
     "LeftArm":       (22, 0, 12),
     "LeftForeArm":   (-18, 0, 0),
-    "Spine":         (6, 0, -2),
-    "Spine01":       (4, 0, -1),
-    "Head":          (-4, 0, 2),
-    "LeftUpLeg":     (-12, 0, 0),
-    "LeftLeg":       (8, 0, 0),
-    "RightUpLeg":    (6, 0, 0),
-}
-CUT2_END = {                             # hip height out at HIS RIGHT (/ done)
-    "RightShoulder": (0, 0, -16),
-    "RightArm":      (8, 0, -24),
-    "RightForeArm":  (-20, 10, 0),
-    "LeftShoulder":  (0, 0, 6),
-    "LeftArm":       (20, 0, 14),
-    "LeftForeArm":   (-16, 0, 0),
-    "Spine":         (10, 0, -18),
-    "Spine01":       (6, 0, -10),
-    "Spine02":       (4, 0, -5),
-    "Hips":          (4, 0, -6),
-    "Head":          (2, 0, 8),
-    "LeftUpLeg":     (-14, 0, 0),
-    "LeftLeg":       (9, 0, 0),
+    # R4: torso already into the opposite uncoil at mid-cut (same reasoning)
+    "Spine":         (6, 0, -20),
+    "Spine01":       (4, 0, -12),
+    "Spine02":       (0, 0, -7),
+    "Hips":          (0, 0, -8),
+    "Head":          (-4, 0, 4),
+    "LeftUpLeg":     (-24, 0, 0),        # R3: left leg swinging forward w/ cut
+    "LeftLeg":       (22, 0, 0),
     "RightUpLeg":    (8, 0, 0),
 }
+CUT2_END = {                             # hip height out at HIS RIGHT (/ done)
+    "RightShoulder": (0, 0, -20),
+    "RightArm":      (8, 0, -24),
+    "RightForeArm":  (-20, 10, 0),
+    "LeftShoulder":  (0, 0, 8),
+    "LeftArm":       (20, 0, 14),
+    "LeftForeArm":   (-16, 0, 0),
+    "Spine":         (10, 0, -36),
+    "Spine01":       (6, 0, -22),
+    "Spine02":       (4, 0, -13),
+    "Hips":          (4, 0, -14),
+    "Head":          (2, 0, 10),
+    "LeftUpLeg":     (-22, 0, 0),        # R3: lead foot PLANTED forward
+    "LeftLeg":       (8, 0, 0),
+    "RightUpLeg":    (14, 0, 0),         # trailing leg extends behind
+    "RightLeg":      (6, 0, 0),
+}
 CUT2_SETTLE = {
-    "RightShoulder": (0, 0, -13),
+    "RightShoulder": (0, 0, -16),
     "RightArm":      (8, 0, -22),
     "RightForeArm":  (-20, 8, 0),
     "LeftArm":       (21, 0, 13),
     "LeftForeArm":   (-17, 0, 0),
-    "Spine":         (8, 0, -12),
-    "Spine01":       (5, 0, -7),
-    "Hips":          (3, 0, -4),
-    "Head":          (0, 0, 6),
-    "LeftUpLeg":     (-12, 0, 0),
+    "Spine":         (8, 0, -27),
+    "Spine01":       (5, 0, -16),
+    "Spine02":       (2, 0, -9),
+    "Hips":          (3, 0, -10),
+    "Head":          (0, 0, 8),
+    "LeftUpLeg":     (-20, 0, 0),
     "LeftLeg":       (8, 0, 0),
-    "RightUpLeg":    (6, 0, 0),
+    "RightUpLeg":    (12, 0, 0),
+    "RightLeg":      (5, 0, 0),
 }
 
 # WORLD blade directions per key (validated: X crosses in FRONT, strokes full)
+# R4 (blocker a): round-2 full-video critic read the strokes as a VERTICAL
+# yo-yo — the old end dirs were ~75deg from horizontal and the windup1 tip hid
+# BEHIND the head (y +0.42). Re-planed for LATERAL on-screen amplitude: the
+# windup1 tip sits clearly at his upper-RIGHT (x -0.60, barely behind), and
+# both cuts drive ~40deg off vertical (end |x| 0.58 vs old 0.36) so each
+# diagonal is unmistakable from the frontal cam. Cut2 mirrors cut1.
 D_GUARD   = (-0.20, -0.55, -0.81)
-D_WINDUP1 = (-0.42,  0.28,  0.86)
-D_CUT1MID = ( 0.80, -0.55, -0.18)
-D_CUT1END = ( 0.47, -0.30, -0.76)
-D_CUT1SET = ( 0.46, -0.30, -0.77)
-D_WINDUP2 = ( 0.62,  0.22,  0.76)
-D_CUT2MID = (-0.58, -0.75, -0.18)
-D_CUT2END = (-0.36, -0.36, -0.86)
-D_CUT2SET = (-0.35, -0.36, -0.86)
+# R5 (fix a): explicit RISE direction — the blade sweeps up along HIS RIGHT
+# side (tip far right, near-level) on the way to the over-shoulder coil, so
+# the upward coil is unmistakable instead of a low-static start.
+D_RISE1   = (-0.88,  0.05,  0.30)
+D_WINDUP1 = (-0.60,  0.18,  0.78)
+# R4: crossing-point geometry (measured over 3 probe runs): raising cut1's
+# line moves the X crossing toward HIS LEFT (+x); raising cut2's line moves
+# it toward the midline and UP. So cut1 mid descends moderately (z -0.42)
+# while cut2 mid sweeps nearly LEVEL (z -0.18) through the centerline.
+D_CUT1MID = ( 0.72, -0.48, -0.42)
+D_CUT1END = ( 0.58, -0.30, -0.76)
+D_CUT1SET = ( 0.56, -0.30, -0.77)
+D_WINDUP2 = ( 0.60,  0.18,  0.78)
+D_CUT2MID = (-0.80, -0.42, -0.18)
+D_CUT2END = (-0.58, -0.30, -0.76)
+D_CUT2SET = (-0.56, -0.30, -0.77)
 
-TIMELINE = [
-    (1,  GUARD,       D_GUARD,   "guard"),
-    (6,  GUARD,       D_GUARD,   "guard_hold"),
-    (16, WINDUP1,     D_WINDUP1, "windup1"),
-    (18, WINDUP1,     D_WINDUP1, "windup1_hold"),
-    (21, CUT1_MID,    D_CUT1MID, "cut1_mid"),
-    (25, CUT1_END,    D_CUT1END, "cut1_end"),
-    (29, CUT1_SETTLE, D_CUT1SET, "cut1_settle"),
-    (38, WINDUP2,     D_WINDUP2, "windup2"),
-    (40, WINDUP2,     D_WINDUP2, "windup2_hold"),
-    (43, CUT2_MID,    D_CUT2MID, "cut2_mid"),
-    (47, CUT2_END,    D_CUT2END, "cut2_end"),
-    (51, CUT2_SETTLE, D_CUT2SET, "cut2_settle"),
-    (64, GUARD,       D_GUARD,   "recover"),
+# ── R1 FIX: pre-solve the RightHand aim ONCE per anchor pose ────────────────
+# aim_hand is deterministic per (pose, dir) but its minimal-rotation solve
+# carries arbitrary twist about the blade axis; solving per-key made twist
+# jump between adjacent dense keys (measured 67.8deg/frame). Instead: solve
+# each ANCHOR once, then SLERP the hand local quat for in-between keys —
+# per-frame velocity is total-angle/nframes by construction.
+# R5: derived anchor poses.
+# windup1_rise — mid guard->windup1 body, blade sweeping up the right side.
+RISE1_POSE  = blend_pose(GUARD, WINDUP1, 0.55)
+# windup*_prime — held-coil body but TORSO+SHOULDERS 25% into the cut (fix b).
+PRIME1_POSE = torso_blend(WINDUP1, CUT1_MID, 0.25)
+PRIME2_POSE = torso_blend(WINDUP2, CUT2_MID, 0.25)
+# hold anchors pre-rotate the blade toward the cut (anticipation).
+# R4: 0.22 / 0.32 — the re-planed dirs sweep a wider arc, so the held blade
+# starts further into it to keep each launch under the M2 gate.
+HOLD1_DIR = blend_dir(D_WINDUP1, D_CUT1MID, 0.22)
+HOLD2_DIR = blend_dir(D_WINDUP2, D_CUT2MID, 0.32)
+ANCHORS = [
+    ("guard",         GUARD,       D_GUARD),
+    ("windup1_rise",  RISE1_POSE,  D_RISE1),      # R5 fix a: visible up-coil
+    ("windup1",       WINDUP1,     D_WINDUP1),
+    ("windup1_hold",  WINDUP1,     HOLD1_DIR),
+    ("windup1_prime", PRIME1_POSE, HOLD1_DIR),    # R5 fix b: torso pre-rot
+    ("cut1_mid",      CUT1_MID,    D_CUT1MID),
+    ("cut1_end",      CUT1_END,    D_CUT1END),
+    ("cut1_settle",   CUT1_SETTLE, D_CUT1SET),
+    ("windup2",       WINDUP2,     D_WINDUP2),
+    ("windup2_hold",  WINDUP2,     HOLD2_DIR),
+    ("windup2_prime", PRIME2_POSE, HOLD2_DIR),    # R5 fix b: torso pre-rot
+    ("cut2_mid",      CUT2_MID,    D_CUT2MID),
+    ("cut2_end",      CUT2_END,    D_CUT2END),
+    ("cut2_settle",   CUT2_SETTLE, D_CUT2SET),
+    # R3: distinct recover anchor = guard pose but KEEPING the forward step
+    # (weight stays committed; he must not slide back to the origin).
+    ("recover",       GUARD,       D_GUARD),
 ]
-for frame, pose, blade, label in TIMELINE:
-    key_pose(frame, pose, blade)
-    print(f"[build] keyed f{frame:02d} {label}")
+# R3 (fix d) + R5 (fix f, scaled up ~30%): small forward step — WORLD forward
+# (-Y) Hips offset in meters per anchor. Creeps in with cut 1, COMMITS as
+# cut 2 lands (0.42m), kept in recover. A step, not a lunge; toes forward.
+STEP_OF = {
+    "guard": 0.0, "windup1_rise": 0.0, "windup1": 0.0,
+    "windup1_hold": 0.0, "windup1_prime": 0.02,
+    "cut1_mid": 0.10, "cut1_end": 0.16, "cut1_settle": 0.16,
+    "windup2": 0.18, "windup2_hold": 0.18, "windup2_prime": 0.18,
+    "cut2_mid": 0.30, "cut2_end": 0.42, "cut2_settle": 0.42,
+    "recover": 0.38,
+}
+POSE_OF, HANDQ = {}, {}
+_hq_prev = None
+for _label, _pose, _dir in ANCHORS:
+    POSE_OF[_label] = _pose
+    for n in CTRL:
+        arm.pose.bones[n].rotation_quaternion = _pose_quat(_pose, n)
+    bpy.context.view_layer.update()
+    aim_hand(_dir)
+    _q = arm.pose.bones["RightHand"].rotation_quaternion.copy().normalized()
+    if _hq_prev is not None and _q.dot(_hq_prev) < 0.0:
+        _q = -_q                         # hemisphere continuity between anchors
+    HANDQ[_label] = _q
+    _hq_prev = _q.copy()
+print(f"[build] pre-solved hand aim for {len(HANDQ)} anchors")
+
+def hand_slerp(a, b, t):
+    qa, qb = HANDQ[a].copy(), HANDQ[b].copy()
+    if qa.dot(qb) < 0.0:
+        qb = -qb
+    return qa.slerp(qb, t)
+
+# TIMELINE entries: (frame, labelA, labelB_or_None, t, printlabel).
+# t=0 -> pure anchor labelA. t>0 -> slerp/blend labelA->labelB.
+# R1: breakdown keys (guard->windup1, cut1_settle->windup2) smooth both onsets.
+# R2 FIX (metric-anchored): each cut launch is now FIVE even slerp steps
+# (hold -> mid over 6 frames, was 4). The metric samples the exported glb at
+# 24fps (1.25x the authored 30fps per-frame travel); the old 3-step launch
+# peaked 51.3deg/frame folded at that sampling (> the 45 gate). Five steps
+# put the authored peak at ~27deg/frame -> ~34 at 24fps sampling. Each cut
+# is still windup->impact in 0.30s (snappy per SPEC sec 7).
+# R3: windup1/windup2 are now HELD BEATS (double-keyed, ~0.13s) so the loaded
+# over-shoulder positions read (major fix c); launch in-betweens carry a
+# torso LEAD so the shoulders arrive ahead of the arm (blocker fix b).
+# R4: LEAD 0.35 -> 0.15 — the yaw sweep grew ~35% (fix c), so the per-frame
+# torso lead-step must shrink to keep the summed-chain world ang-vel under
+# the 36deg/frame authored gate (measured ladder: LEAD 0.25 -> 39.1, 0.22 ->
+# 36.3-36.5, all peaking RightHand@f49). The shoulder lead now reads mostly
+# from the ~35% bigger anchor yaws, not the in-between offset.
+# Entries: (frame, labelA, labelB_or_None, t, printlabel, lead).
+LEAD = 0.15
+# R4: each launch RETIMED to SEVEN even slerp steps (held -> mid over 7
+# frames, was 6) — the wider R4 arcs peaked 38-39deg/frame on the 6-step
+# launch (RightHand@f47) regardless of hold pre-rotation, because the ARM
+# POSE travel dominates the hand's world rotation. One extra frame per
+# launch cuts the per-frame step ~14%. Downstream keys shift +1/+2; each
+# cut is still held->impact in 0.37s (snappy per SPEC sec 7).
+# R5: f10 is now the EXPLICIT rise anchor (fix a — visible up-coil along his
+# right side); the second held key (f18/f44) is the PRIME anchor (fix b —
+# torso/shoulders 25% into the turn, blade still coiled), and each launch
+# slerps from the PRIME pose so torso launch travel shrinks.
+TIMELINE = [
+    (1,  "guard",         None,           0.00, "guard",          0.0),
+    (6,  "guard",         None,           0.00, "guard_hold",     0.0),
+    (10, "windup1_rise",  None,           0.00, "windup1_rise",   0.0),
+    (14, "windup1",       None,           0.00, "windup1",        0.0),
+    (15, "windup1_hold",  None,           0.00, "windup1_hold",   0.0),
+    (18, "windup1_prime", None,           0.00, "windup1_prime",  0.0),
+    (19, "windup1_prime", "cut1_mid",     1/7., "cut1_launch_a",  LEAD),
+    (20, "windup1_prime", "cut1_mid",     2/7., "cut1_launch_b",  LEAD),
+    (21, "windup1_prime", "cut1_mid",     3/7., "cut1_launch",    LEAD),
+    (22, "windup1_prime", "cut1_mid",     4/7., "cut1_launch_c",  LEAD),
+    (23, "windup1_prime", "cut1_mid",     5/7., "cut1_launch_d",  LEAD),
+    (24, "windup1_prime", "cut1_mid",     6/7., "cut1_launch_e",  LEAD),
+    (25, "cut1_mid",      None,           0.00, "cut1_mid",       0.0),
+    (29, "cut1_end",      None,           0.00, "cut1_end",       0.0),
+    (32, "cut1_settle",   None,           0.00, "cut1_settle",    0.0),
+    (36, "cut1_settle",   "windup2",      0.50, "windup2_break",  0.0),
+    (40, "windup2",       None,           0.00, "windup2",        0.0),
+    (41, "windup2_hold",  None,           0.00, "windup2_hold",   0.0),
+    (44, "windup2_prime", None,           0.00, "windup2_prime",  0.0),
+    (45, "windup2_prime", "cut2_mid",     1/7., "cut2_launch_a",  LEAD),
+    (46, "windup2_prime", "cut2_mid",     2/7., "cut2_launch_b",  LEAD),
+    (47, "windup2_prime", "cut2_mid",     3/7., "cut2_launch",    LEAD),
+    (48, "windup2_prime", "cut2_mid",     4/7., "cut2_launch_c",  LEAD),
+    (49, "windup2_prime", "cut2_mid",     5/7., "cut2_launch_d",  LEAD),
+    (50, "windup2_prime", "cut2_mid",     6/7., "cut2_launch_e",  LEAD),
+    (51, "cut2_mid",      None,           0.00, "cut2_mid",       0.0),
+    (55, "cut2_end",      None,           0.00, "cut2_end",       0.0),
+    (59, "cut2_settle",   None,           0.00, "cut2_settle",    0.0),
+    (64, "recover",       None,           0.00, "recover",        0.0),
+]
+for frame, la, lb, t, label, lead in TIMELINE:
+    if lb is None or t == 0.0:
+        pose, hq, step = POSE_OF[la], HANDQ[la], STEP_OF[la]
+    else:
+        pose = blend_pose(POSE_OF[la], POSE_OF[lb], t, lead=lead)
+        hq = hand_slerp(la, lb, t)
+        step = STEP_OF[la] * (1.0 - t) + STEP_OF[lb] * t
+    key_pose(frame, pose, hq, step=step)
+    print(f"[build] keyed f{frame:02d} {label} step={step:.2f}")
 bpy.ops.object.mode_set(mode='OBJECT')
 
 # ── phys_ chains: damped-spring verlet bake with pre-emptive INV-6 guards ───
@@ -341,10 +662,18 @@ print(f"[build] phys chains={len(chains)} bones={n_phys}")
 assert n_phys == 97, f"FATAL: expected 97 phys bones, chained {n_phys}"
 
 def params(name):
-    """(stiffness pull to rigid, damping, gravity scale, max deviation deg)"""
+    """(stiffness pull to rigid, damping, gravity scale, max deviation deg)
+    R5 (fix e): round-3 critic saw the cape BUNCH + SNAP at the cut1->cut2
+    pivot. Root cause: a stiff pull to the rigid follow pose + the 30deg
+    angular cap saturating mid-pivot, then releasing — a yank, not a trail.
+    Re-damped for drag inertia: LOWER stiffness (fabric lags the pivot and
+    keeps trailing the cut-1 direction), HIGHER damping (velocity bleeds off
+    instead of springing back), slightly wider angular cap (the hard clamp
+    engages later/softer). Same damped-spring verlet, same two INV-6 guards
+    (delta clamp + angular cap) — still NEVER a cloth sim."""
     if "hair" in name:  return (0.30, 0.84, 1.5, 40.0)
-    if "robe" in name:  return (0.24, 0.82, 3.5, 30.0)
-    return (0.22, 0.80, 3.5, 30.0)      # cape: stiff pull, tight cap, trails low
+    if "robe" in name:  return (0.19, 0.85, 3.2, 34.0)
+    return (0.16, 0.86, 3.0, 36.0)      # cape: soft pull, high drag, trails
 
 def chain_phase(name):
     """Slight per-column temporal offset so cape columns break up."""
@@ -431,6 +760,7 @@ print(f"[build] sim done; max per-frame particle delta (post-clamp) = "
 # Bake sim -> local quaternions on every phys bone (angular deviation clamp)
 bpy.context.view_layer.objects.active = arm
 bpy.ops.object.mode_set(mode='POSE')
+PREV_PQ = {}                # R1 FIX: hemisphere continuity for phys quats too
 for ci, ch in enumerate(chains):
     _, _, _, maxdev = params(ch[0].name)
     for f in range(1, FRAME_END + 1):
@@ -452,7 +782,15 @@ for ci, ch in enumerate(chains):
                   @ Matrix.Translation(-head)) @ Wu
             Mc = AWI @ Wc
             basis = OFF[pb.name].inverted() @ Mparent.inverted() @ Mc
-            pb.rotation_quaternion = basis.to_quaternion().normalized()
+            # R1 FIX: to_quaternion() can land on either hemisphere frame to
+            # frame (reads as ~360deg/frame in M2 world-quat diffs); flip so
+            # q.dot(prev) >= 0 — identical rotation, continuous representation.
+            bq = basis.to_quaternion().normalized()
+            ppq = PREV_PQ.get(pb.name)
+            if ppq is not None and bq.dot(ppq) < 0.0:
+                bq = -bq
+            PREV_PQ[pb.name] = bq.copy()
+            pb.rotation_quaternion = bq
             pb.keyframe_insert(data_path='rotation_quaternion', frame=f)
             Mparent = Mc
     print(f"[build] baked {ch[0].name[:-3]} ({len(ch)} bones)")
@@ -468,8 +806,16 @@ act.name = ACTION_NAME
 print(f"[build] action = {act.name}")
 
 # ── Numeric self-checks (sword path + X-cross + spin rate) ──────────────────
+def _fold(a):
+    """Fold a quaternion double-cover angle (0..360) to true rotation (0..180)."""
+    return min(a, 360.0 - a)
+
 dg = bpy.context.evaluated_depsgraph_get()
 tip_path, grip_path, yaw_track = {}, {}, {}
+prev_wq = {}
+worst_av, worst_av_info = 0.0, ""
+worst_bend, worst_bend_info = 0.0, ""
+HINGES = ("RightForeArm", "LeftForeArm", "RightLeg", "LeftLeg")
 for f in range(1, FRAME_END + 1):
     sc.frame_set(f)
     dg.update()
@@ -477,18 +823,112 @@ for f in range(1, FRAME_END + 1):
     tip_path[f]  = (sw.matrix_world @ TIP_LOCAL).copy()
     grip_path[f] = (sw.matrix_world @ GRIP_LOCAL).copy()
     # torso yaw (deg) at this frame — actual interpolated pose values
-    yaw_track[f] = sum(math.degrees(arm.pose.bones[n].rotation_euler.z)
-                       for n in ("Spine", "Spine01", "Spine02", "Hips"))
+    # (R1: bones are quaternion mode now; decompose for the yaw sum)
+    yaw_track[f] = sum(
+        math.degrees(arm.pose.bones[n].rotation_quaternion.to_euler('XYZ').z)
+        for n in ("Spine", "Spine01", "Spine02", "Hips"))
     # sword-grip distance to hand (M4 preview)
     hand_w = (arm.matrix_world @ arm.pose.bones["RightHand"].matrix).translation
     gd = (grip_path[f] - hand_w).length
     assert gd < 0.30, f"FATAL f{f}: sword grip {gd:.2f}m from hand (detach)"
-d1 = tip_path[25] - tip_path[18]
-d2 = tip_path[47] - tip_path[40]
+    # R1 FIX self-checks — TRUE (double-cover-folded) M2 quantities:
+    # a) world angular velocity of every keyed body bone < 45 deg/frame
+    for n in CTRL:
+        wq = (arm.matrix_world @ arm.pose.bones[n].matrix).to_quaternion()
+        if n in prev_wq:
+            av = _fold(math.degrees(prev_wq[n].rotation_difference(wq).angle))
+            if av > worst_av:
+                worst_av, worst_av_info = av, f"{n}@f{f}"
+        prev_wq[n] = wq
+    # b) elbow/knee true bend (parent-vs-child world rotation) < 175 deg
+    for n in HINGES:
+        pbh = arm.pose.bones[n]
+        qp = (arm.matrix_world @ pbh.parent.matrix).to_quaternion()
+        qc = (arm.matrix_world @ pbh.matrix).to_quaternion()
+        bend = _fold(math.degrees(qp.rotation_difference(qc).angle))
+        if bend > worst_bend:
+            worst_bend, worst_bend_info = bend, f"{n}@f{f}"
+# R2: the metric re-imports the glb into a default 24fps scene and samples at
+# 1/24s steps; one metric step spans at most 1.25 authored frames, so the
+# authored (30fps) worst must clear 45/1.25 = 36 deg/frame for the metric's
+# folded truth to clear 45.
+print(f"[build] M2 self-check: worst TRUE body ang-vel {worst_av:.1f}deg/frame "
+      f"@30fps ({worst_av_info}, limit 36 = 45 at the metric's 24fps sampling)")
+print(f"[build] M2 self-check: worst TRUE elbow/knee bend {worst_bend:.1f}deg "
+      f"({worst_bend_info}, limit 175)")
+assert worst_av < 36.0, f"FATAL: body ang-vel {worst_av:.1f} ({worst_av_info})"
+assert worst_bend < 175.0, f"FATAL: hinge bend {worst_bend:.1f} ({worst_bend_info})"
+# R5 fix a: the windup COIL must read — tip rises visibly along his right
+# side (f6 guard -> f10 rise -> f14 loaded) and the held windup tip sits
+# HIGH and clearly on HIS RIGHT (-x) of center.
+rise1 = tip_path[10].z - tip_path[6].z
+rise2 = tip_path[14].z - tip_path[10].z
+tw = tip_path[15]
+print(f"[build] WINDUP coil: tip rise f6->f10 {rise1:+.2f}m, f10->f14 "
+      f"{rise2:+.2f}m; held tip x={tw.x:+.2f} z={tw.z:.2f} "
+      f"(want rise>0.3 each, x<=-0.5, z>=2.6)")
+assert rise1 > 0.3 and rise2 > 0.3, "FATAL: windup coil does not rise"
+assert tw.x <= -0.5, f"FATAL: windup tip not over HIS RIGHT (x={tw.x:+.2f})"
+assert tw.z >= 2.6, f"FATAL: windup tip too low (z={tw.z:.2f})"
+# R5 fix b: torso pre-rotation across each held beat — summed spine/hips yaw
+# must move >=10deg TOWARD the cut before the launch frames begin.
+pre1 = yaw_track[18] - yaw_track[15]     # cut1 uncoils toward +yaw
+pre2 = yaw_track[44] - yaw_track[41]     # cut2 uncoils toward -yaw
+print(f"[build] torso pre-rotation: beat1 {pre1:+.1f}deg (want >=+10), "
+      f"beat2 {pre2:+.1f}deg (want <=-10)")
+assert pre1 >= 10.0, f"FATAL: no torso pre-rotation into cut1 ({pre1:+.1f})"
+assert pre2 <= -10.0, f"FATAL: no torso pre-rotation into cut2 ({pre2:+.1f})"
+d1 = tip_path[29] - tip_path[19]         # R4 retime: cut1 held f18 -> end f29
+d2 = tip_path[55] - tip_path[45]         # R4 retime: cut2 held f44 -> end f55
 print(f"[build] CUT1 tip delta dx={d1.x:+.2f} dz={d1.z:+.2f} (want +x, -z: \\)")
 print(f"[build] CUT2 tip delta dx={d2.x:+.2f} dz={d2.z:+.2f} (want -x, -z: /)")
 assert d1.x > 0.5 and d1.z < -0.5, "FATAL: cut1 not a \\ stroke"
 assert d2.x < -0.5 and d2.z < -0.5, "FATAL: cut2 not a / stroke"
+# R4 blocker fix a: each stroke must be DIAGONAL on screen, not a vertical
+# drop — lateral travel at least 0.55x the vertical travel (~29deg+ off
+# vertical in the frontal camera plane).
+r1 = abs(d1.x) / max(abs(d1.z), 1e-6)
+r2 = abs(d2.x) / max(abs(d2.z), 1e-6)
+print(f"[build] stroke diagonality |dx|/|dz|: cut1={r1:.2f} cut2={r2:.2f} "
+      f"(min 0.55)")
+assert r1 >= 0.55, f"FATAL: cut1 too vertical (|dx|/|dz|={r1:.2f})"
+assert r2 >= 0.55, f"FATAL: cut2 too vertical (|dx|/|dz|={r2:.2f})"
+# R3 blocker fix a: the two dense tip paths must actually INTERSECT in the
+# frontal camera plane (world XZ — the cam looks straight down +Y), at
+# mid-torso height, near the midline, and IN FRONT of the body (y < -0.15).
+def _seg_x(p1, p2, p3, p4):
+    """2D (x,z) segment intersection; returns (t, u) in [0,1]^2 or None."""
+    d1x, d1z = p2.x - p1.x, p2.z - p1.z
+    d2x, d2z = p4.x - p3.x, p4.z - p3.z
+    den = d1x * d2z - d1z * d2x
+    if abs(den) < 1e-9:
+        return None
+    t = ((p3.x - p1.x) * d2z - (p3.z - p1.z) * d2x) / den
+    u = ((p3.x - p1.x) * d1z - (p3.z - p1.z) * d1x) / den
+    return (t, u) if (0.0 <= t <= 1.0 and 0.0 <= u <= 1.0) else None
+
+seg1 = [tip_path[f] for f in range(19, 30)]   # cut1 stroke, dense (R4 retime)
+seg2 = [tip_path[f] for f in range(45, 56)]   # cut2 stroke, dense (R4 retime)
+xing = None
+for i in range(len(seg1) - 1):
+    for j in range(len(seg2) - 1):
+        hit = _seg_x(seg1[i], seg1[i + 1], seg2[j], seg2[j + 1])
+        if hit:
+            t, u = hit
+            pA = seg1[i].lerp(seg1[i + 1], t)
+            pB = seg2[j].lerp(seg2[j + 1], u)
+            xing = (pA, pB)
+            break
+    if xing:
+        break
+assert xing, "FATAL: cut paths do NOT cross in the camera plane (no X)"
+pA, pB = xing
+print(f"[build] X-CROSS at x={pA.x:+.2f} z={pA.z:.2f} "
+      f"(depths y1={pA.y:+.2f} y2={pB.y:+.2f})")
+assert 0.9 < pA.z < 2.4, f"FATAL: X crosses at z={pA.z:.2f}, not mid-torso"
+# R5 fix c: tightened 0.9 -> 0.55 — the crossing must sit ON the midline.
+assert abs(pA.x) < 0.55, f"FATAL: X crossing off-midline x={pA.x:+.2f}"
+assert pA.y < -0.15 and pB.y < -0.15, "FATAL: X crossing not in FRONT of body"
 # spin rate (SPEC sec 7: no more than ~1 full ROTATION per second): the torso
 # must never accumulate >=360deg of yaw travel inside any 1-second window.
 # (A ~50deg torso rotation releasing a cut is a cut, not a spin — measured on
@@ -553,9 +993,10 @@ sc.render.stamp_font_size = 22
 sc.render.stamp_foreground = (1, 1, 1, 1)
 sc.render.stamp_background = (0, 0, 0, 0.7)
 
-STRIP = [(1, "GUARD"), (16, "WINDUP-1 upper-R"), (21, "CUT-1 mid"),
-         (25, "CUT-1 end lower-L"), (38, "WINDUP-2 upper-L"),
-         (43, "CUT-2 mid"), (47, "CUT-2 end lower-R"), (64, "RECOVER")]
+STRIP = [(1, "GUARD"), (10, "WINDUP-1 rise (coil up R side)"),
+         (16, "WINDUP-1 over-R-shoulder"), (25, "CUT-1 mid"),
+         (29, "CUT-1 end lower-L"), (42, "WINDUP-2 upper-L"),
+         (51, "CUT-2 mid"), (55, "CUT-2 end lower-R + step"), (64, "RECOVER")]
 for camtag, c in (("front", cam), ("back", back_cam)):
     sc.camera = c
     for f, note in STRIP:
