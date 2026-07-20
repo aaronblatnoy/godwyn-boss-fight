@@ -6,16 +6,6 @@ As much as we all love the Promised Consort boss fight, lets be real, it's not w
 
 Godwyn the Golden in his idealized prime — a demigod swordsman of peerless grace. All renders are GPU-accelerated via Cycles (OptiX/CUDA on 2x RTX 3060 Ti), produced headlessly from reproducible Blender scripts.
 
-### Character Sheet (Multiple Views)
-
-| Front | Three-Quarter Left | Three-Quarter Right |
-|:---:|:---:|:---:|
-| ![Front view](renders/character/front.png) | ![3Q Left](renders/character/3q_left.png) | ![3Q Right](renders/character/3q_right.png) |
-
-| Back | Side | Face Close-up |
-|:---:|:---:|:---:|
-| ![Back view](renders/character/back.png) | ![Side view](renders/character/side.png) | ![Face](renders/character/face.png) |
-
 ### Weapon Detail
 
 ![Longsword](renders/character/sword.png)
