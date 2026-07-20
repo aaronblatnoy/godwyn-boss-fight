@@ -6,27 +6,9 @@ As much as we all love the Promised Consort boss fight, lets be real, it's not w
 
 Godwyn the Golden in his idealized prime — a demigod swordsman of peerless grace. All renders are GPU-accelerated via Cycles (OptiX/CUDA on 2x RTX 3060 Ti), produced headlessly from reproducible Blender scripts.
 
-### Weapon Detail
-
-![Longsword](renders/character/sword.png)
-
-Gold-hilted, blue-tinged blade with filigree crossguard — the mark of his grace.
-
-### Moveset Action Poses
-
-Seven signature poses from Phase 1 combat:
-
-| Low Hang Guard | X Combo Hit 1 | X Combo Hit 2 |
-|:---:|:---:|:---:|
-| ![Low Hang Guard](renders/moveset/1_low_hang_guard.png) | ![X Combo 1](renders/moveset/2_x_combo_hit1.png) | ![X Combo 2](renders/moveset/3_x_combo_hit2.png) |
-
-| Overhead Slam | Backhand Rotation | Jump Lunge |
-|:---:|:---:|:---:|
-| ![Overhead Slam](renders/moveset/4_overhead_slam.png) | ![Backhand](renders/moveset/5_backhand_rotation.png) | ![Jump Lunge](renders/moveset/6_jump_lunge.png) |
-
-| Double Spin |
-|:---:|
-| ![Double Spin](renders/moveset/7_double_spin.png) |
+| Full Body | Bust |
+|:---:|:---:|
+| ![P1 Full](renders/declay/p1_full.png) | ![P1 Bust](renders/declay/p1_bust.png) |
 
 ## Rigged + Textured Game Asset (Phase 4 — Updated)
 
@@ -51,12 +33,6 @@ The final rigged, textured game asset — gold armor over blue robe with the ful
 | Full Body | Bust |
 |:---:|:---:|
 | ![P4 Full](renders/declay/p4_full.png) | ![P4 Bust](renders/declay/p4_bust.png) |
-
-### Game Asset Turnaround
-
-| Front | Three-Quarter | Side |
-|:---:|:---:|:---:|
-| ![Front](renders/game/game_front.png) | ![3Q](renders/game/game_3q.png) | ![Side](renders/game/game_side.png) |
 
 ## Animatable Game Asset (Phase 1 pipeline)
 
