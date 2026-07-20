@@ -84,9 +84,17 @@ def parse_args():
 
 
 def quat_angle_between(q1: Quaternion, q2: Quaternion) -> float:
-    """Angle (degrees) between two quaternions."""
-    q_diff = q1.rotation_difference(q2)
-    return math.degrees(abs(q_diff.angle))
+    """Shortest-arc angle (degrees) between two ORIENTATIONS.
+
+    Folds the quaternion double cover: q and -q represent the SAME orientation, so
+    a sign flip between frames must read as ~0 deg, not 360. rotation_difference().angle
+    can return up to 2*pi and does not fold the sign flip, which produced a spurious
+    360 deg/frame M2 artifact (identical on good and bad clips). Using abs(dot) folds
+    q/-q, and 2*acos(|dot|) yields the true shortest arc in [0, 180] deg.
+    """
+    d = abs(q1.normalized().dot(q2.normalized()))
+    d = max(-1.0, min(1.0, d))
+    return math.degrees(2.0 * math.acos(d))
 
 
 def bone_world_matrix(arm_obj, pose_bone) -> Matrix:
