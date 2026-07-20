@@ -54,13 +54,13 @@ Seven signature poses from Phase 1 combat:
 | Physics chains | 8×8 robe grid (front/back/side L/C/R), 3×7 cape (L/C/R), 2×4 hair |
 | Skinning | Cleaned weights (Phase 1), exclusive phys masks + cloth drape (Phase 3) |
 
-### Phase 4 Motion Previews (EEVEE)
+### Phase 4 Rigged Asset Renders
 
-EEVEE quick-renders showing deformation across rest, walk, and sword swing poses — verifying the rig and robe/cape chain deformation before Mixamo mocap retargeting:
+The final rigged, textured game asset — gold armor over blue robe with the full physics-chain robe/cape drape, longsword in hand:
 
-| Rest Pose | Walk Stride | Overhead Swing | Follow-Through + Robe Drape |
-|:---:|:---:|:---:|:---:|
-| ![Rest](renders/game/phase4_preview_f01_rest.png) | ![Walk](renders/game/phase4_preview_f02_walk.png) | ![Swing](renders/game/phase4_preview_f03_swing.png) | ![Follow-thru](renders/game/phase4_preview_f04_followthru.png) |
+| Full Body | Bust |
+|:---:|:---:|
+| ![P4 Full](renders/declay/p4_full.png) | ![P4 Bust](renders/declay/p4_bust.png) |
 
 ### Game Asset Turnaround
 
@@ -91,7 +91,7 @@ The `.blend` keeps its procedural Cycles beauty materials intact; the `.glb` shi
 All renders are generated deterministically from Python scripts via Blender's headless mode. To regenerate the full asset suite:
 
 ```bash
-ssh mossad "cd ~/godwyn-boss-fight && bash scripts/build_all.sh"
+ssh black-sky "cd ~/godwyn-boss-fight && bash scripts/build_all.sh"
 ```
 
 This runs all phases (0–7) sequentially:
