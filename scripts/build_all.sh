@@ -2,20 +2,20 @@
 ################################################################################
 # build_all.sh — Reproducible Blender asset build orchestrator for Godwyn
 #
-# Runs scripts 00 through 06 sequentially on mossad (headless Blender).
+# Runs scripts 00 through 06 sequentially on black-sky (headless Blender).
 # Each stage builds on the prior stage, culminating in a complete character
 # model, materials, lighting rig, and render suite.
 #
 # Usage:
-#   ssh mossad "cd ~/godwyn-boss-fight && bash scripts/build_all.sh"
+#   ssh black-sky "cd ~/godwyn-boss-fight && bash scripts/build_all.sh"
 #
 # For individual stages:
-#   ssh mossad "blender --background --python ~/godwyn-boss-fight/scripts/00_env_check.py 2>&1"
-#   ssh mossad "blender --background --python ~/godwyn-boss-fight/scripts/01_base_mesh.py 2>&1"
+#   ssh black-sky "blender --background --python ~/godwyn-boss-fight/scripts/00_env_check.py 2>&1"
+#   ssh black-sky "blender --background --python ~/godwyn-boss-fight/scripts/01_base_mesh.py 2>&1"
 #   ... etc
 #
 # All output goes to stdout/stderr; capture to a log if needed:
-#   ssh mossad "cd ~/godwyn-boss-fight && bash scripts/build_all.sh 2>&1 | tee build.log"
+#   ssh black-sky "cd ~/godwyn-boss-fight && bash scripts/build_all.sh 2>&1 | tee build.log"
 #
 # Invariants (see blender-build-plan.txt):
 #   - INV-1 headless-only: --background mode, no GUI

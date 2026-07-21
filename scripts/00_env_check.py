@@ -25,7 +25,7 @@ import mathutils
 ver = bpy.app.version
 ver_str = ".".join(str(v) for v in ver)
 print(f"\n[00_env_check] Blender version: {ver_str}")
-# Accept 4.x AND 5.x (mossad has 5.1.2)
+# Accept 4.x AND 5.x (black-sky has 5.1.2)
 if ver[0] < 4:
     print(f"[00_env_check] FATAL: Blender {ver_str} is < 4.0. Need Blender 4+.",
           file=sys.stderr)

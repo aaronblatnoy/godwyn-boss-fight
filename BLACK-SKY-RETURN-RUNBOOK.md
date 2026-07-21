@@ -1,11 +1,11 @@
-# Mossad-Return Runbook
+# Black-sky-Return Runbook
 
-When the render server (`mossad`) is back up, run these in order. Everything below
-needs the server (Blender/GPU); it was prepped while mossad was down.
+When the render server (`black-sky`) is back up, run these in order. Everything below
+needs the server (Blender/GPU); it was prepped while black-sky was down.
 
 ## 0. Verify the server
 ```
-ssh mossad "cd ~/godwyn-boss-fight && git pull && nvidia-smi | head -20 && blender --version"
+ssh black-sky "cd ~/godwyn-boss-fight && git pull && nvidia-smi | head -20 && blender --version"
 ```
 
 ## 1. Resume the FACE + SWORD fix  (was paused mid-run)
