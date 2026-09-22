@@ -1,0 +1,46 @@
+00:04.024  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+00:32.324  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/001.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+MOVE RENDER rising_spin 1
+00:43.144  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/016.png'
+MOVE RENDER rising_spin 16
+00:50.548  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/022.png'
+MOVE RENDER rising_spin 22
+01:00.231  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/024.png'
+MOVE RENDER rising_spin 24
+01:13.074  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/026.png'
+MOVE RENDER rising_spin 26
+01:23.258  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/028.png'
+MOVE RENDER rising_spin 28
+01:34.901  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/030.png'
+MOVE RENDER rising_spin 30
+01:43.755  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/032.png'
+MOVE RENDER rising_spin 32
+01:54.873  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/034.png'
+MOVE RENDER rising_spin 34
+02:05.576  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/036.png'
+MOVE RENDER rising_spin 36
+02:14.639  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/038.png'
+MOVE RENDER rising_spin 38
+02:22.898  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/040.png'
+MOVE RENDER rising_spin 40
+02:29.468  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/048.png'
+MOVE RENDER rising_spin 48
+02:37.521  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/060.png'
+MOVE RENDER rising_spin 60
+02:44.723  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/072.png'
+MOVE RENDER rising_spin 72
+02:52.679  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/084.png'
+MOVE RENDER rising_spin 84
+03:08.505  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/096.png'
+MOVE RENDER rising_spin 96
+03:15.357  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/104.png'
+MOVE RENDER rising_spin 104
+03:22.519  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/116.png'
+MOVE RENDER rising_spin 116
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

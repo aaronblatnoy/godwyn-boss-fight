@@ -1,0 +1,11 @@
+00:00.891  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+SURFACE rehost floor -0.014999999664723873 counts {'LeftFoot': 1123, 'RightFoot': 1258, 'cloth': 83698}
+FOOT RANGE {'LeftFoot': (0.0013416549190878868, 0.0039208149537444115), 'RightFoot': (0.0022639045491814613, 0.002787635661661625)}
+CLOTH SWORD []
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

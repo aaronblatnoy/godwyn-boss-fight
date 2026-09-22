@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.492  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+HEAD AUDIT walk_stalk 10
+HEAD AUDIT walk_stalk 20
+HEAD AUDIT walk_stalk 30
+HEAD AUDIT walk_stalk 40
+HEAD AUDIT walk_stalk 50
+HEAD AUDIT walk_stalk 60
+HEAD AUDIT walk_stalk 70
+HEAD AUDIT COMPLETE walk_stalk {"name": "walk_stalk", "frames_checked": 72, "hair_control_points_sampled_per_frame": 22766, "blade_radius_99pct_m": 0.14284108579158783, "gorget_head": {"internal_neck_insertion_frames": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72], "exposed_intersection_frames": [], "minimum_exposed_sampled_distance_m": 0.016566989943385124, "worst_frame": 66, "classification": "hidden published neck insertion below the gorget lip is reported separately; exposed jaw/neck is the acceptance surface"}, "blade_head": {"minimum_clearance_proxy_m": 0.9364569336175919, "worst_frame": 35, "exact_intersection_frames": [], "exact_minimum_sampled_surface_distance_m": null}, "blade_hair": {"minimum_sampled_clearance_proxy_m": 0.44307092324556785, "worst_frame": 35, "fiber_radius_assumption_m": 0.002, "exact_minimum_sampled_surface_clearance_m": null, "exact_worst_frame": null}}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

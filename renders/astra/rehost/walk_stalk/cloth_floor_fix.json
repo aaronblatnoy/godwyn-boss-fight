@@ -1,0 +1,11 @@
+{
+  "name": "walk_stalk",
+  "target_clearance_m": 0.0009964289620518678,
+  "max_requested_lift_m": 0.0008108122898638238,
+  "families": {
+    "phys_robe_side_L": {
+      "vertices": 6941,
+      "max_requested_lift_m": 0.0008108122898638238
+    }
+  }
+}

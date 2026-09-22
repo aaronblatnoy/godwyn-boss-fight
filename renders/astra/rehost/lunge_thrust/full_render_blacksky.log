@@ -1,0 +1,147 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.322  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_lunge_thrust_v2_wip.blend"
+00:11.646  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER lunge_thrust 1
+00:13.392  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/002.png'
+MOVE RENDER lunge_thrust 2
+00:15.133  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/003.png'
+MOVE RENDER lunge_thrust 3
+00:16.897  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/004.png'
+MOVE RENDER lunge_thrust 4
+00:18.626  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/005.png'
+MOVE RENDER lunge_thrust 5
+00:20.374  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/006.png'
+MOVE RENDER lunge_thrust 6
+00:22.099  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/007.png'
+MOVE RENDER lunge_thrust 7
+00:23.836  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/008.png'
+MOVE RENDER lunge_thrust 8
+00:25.556  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/009.png'
+MOVE RENDER lunge_thrust 9
+00:27.277  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/010.png'
+MOVE RENDER lunge_thrust 10
+00:29.010  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/011.png'
+MOVE RENDER lunge_thrust 11
+00:30.754  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/012.png'
+MOVE RENDER lunge_thrust 12
+00:32.510  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/013.png'
+MOVE RENDER lunge_thrust 13
+00:34.234  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/014.png'
+MOVE RENDER lunge_thrust 14
+00:35.934  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/015.png'
+MOVE RENDER lunge_thrust 15
+00:37.706  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/016.png'
+MOVE RENDER lunge_thrust 16
+00:39.443  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/017.png'
+MOVE RENDER lunge_thrust 17
+00:41.175  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/018.png'
+MOVE RENDER lunge_thrust 18
+00:42.925  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/019.png'
+MOVE RENDER lunge_thrust 19
+00:44.689  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/020.png'
+MOVE RENDER lunge_thrust 20
+00:46.412  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/021.png'
+MOVE RENDER lunge_thrust 21
+00:48.174  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/022.png'
+MOVE RENDER lunge_thrust 22
+00:49.921  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/023.png'
+MOVE RENDER lunge_thrust 23
+00:51.688  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/024.png'
+MOVE RENDER lunge_thrust 24
+00:53.767  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/025.png'
+MOVE RENDER lunge_thrust 25
+00:55.559  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/026.png'
+MOVE RENDER lunge_thrust 26
+00:57.380  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/027.png'
+MOVE RENDER lunge_thrust 27
+00:59.184  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/028.png'
+MOVE RENDER lunge_thrust 28
+01:00.982  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/029.png'
+MOVE RENDER lunge_thrust 29
+01:02.773  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/030.png'
+MOVE RENDER lunge_thrust 30
+01:04.558  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/031.png'
+MOVE RENDER lunge_thrust 31
+01:06.347  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/032.png'
+MOVE RENDER lunge_thrust 32
+01:08.116  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/033.png'
+MOVE RENDER lunge_thrust 33
+01:09.872  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/034.png'
+MOVE RENDER lunge_thrust 34
+01:11.625  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/035.png'
+MOVE RENDER lunge_thrust 35
+01:13.410  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/036.png'
+MOVE RENDER lunge_thrust 36
+01:15.130  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/037.png'
+MOVE RENDER lunge_thrust 37
+01:16.902  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/038.png'
+MOVE RENDER lunge_thrust 38
+01:18.680  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/039.png'
+MOVE RENDER lunge_thrust 39
+01:20.381  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/040.png'
+MOVE RENDER lunge_thrust 40
+01:22.100  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/041.png'
+MOVE RENDER lunge_thrust 41
+01:23.903  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/042.png'
+MOVE RENDER lunge_thrust 42
+01:25.627  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/043.png'
+MOVE RENDER lunge_thrust 43
+01:27.322  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/044.png'
+MOVE RENDER lunge_thrust 44
+01:29.097  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/045.png'
+MOVE RENDER lunge_thrust 45
+01:30.840  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/046.png'
+MOVE RENDER lunge_thrust 46
+01:32.540  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/047.png'
+MOVE RENDER lunge_thrust 47
+01:34.333  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/048.png'
+MOVE RENDER lunge_thrust 48
+01:36.091  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/049.png'
+MOVE RENDER lunge_thrust 49
+01:37.829  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/050.png'
+MOVE RENDER lunge_thrust 50
+01:39.577  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/051.png'
+MOVE RENDER lunge_thrust 51
+01:41.320  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/052.png'
+MOVE RENDER lunge_thrust 52
+01:43.061  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/053.png'
+MOVE RENDER lunge_thrust 53
+01:44.811  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/054.png'
+MOVE RENDER lunge_thrust 54
+01:46.587  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/055.png'
+MOVE RENDER lunge_thrust 55
+01:48.320  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/056.png'
+MOVE RENDER lunge_thrust 56
+01:50.049  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/057.png'
+MOVE RENDER lunge_thrust 57
+01:51.805  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/058.png'
+MOVE RENDER lunge_thrust 58
+01:53.537  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/059.png'
+MOVE RENDER lunge_thrust 59
+01:55.269  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/060.png'
+MOVE RENDER lunge_thrust 60
+01:57.021  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/061.png'
+MOVE RENDER lunge_thrust 61
+01:58.731  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/062.png'
+MOVE RENDER lunge_thrust 62
+02:00.500  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/063.png'
+MOVE RENDER lunge_thrust 63
+02:02.265  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/frames/064.png'
+MOVE RENDER lunge_thrust 64
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

@@ -1,0 +1,53 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.317  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_wip.blend"
+00:10.928  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER xslash 1
+00:12.040  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/013.png'
+MOVE RENDER xslash 13
+00:13.143  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/027.png'
+MOVE RENDER xslash 27
+00:14.243  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/031.png'
+MOVE RENDER xslash 31
+00:15.306  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/034.png'
+MOVE RENDER xslash 34
+00:16.390  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/036.png'
+MOVE RENDER xslash 36
+00:17.726  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/038.png'
+MOVE RENDER xslash 38
+00:18.826  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/040.png'
+MOVE RENDER xslash 40
+00:19.922  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/043.png'
+MOVE RENDER xslash 43
+00:20.995  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/046.png'
+MOVE RENDER xslash 46
+00:22.058  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/053.png'
+MOVE RENDER xslash 53
+00:23.115  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/054.png'
+MOVE RENDER xslash 54
+00:24.216  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/057.png'
+MOVE RENDER xslash 57
+00:25.314  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/061.png'
+MOVE RENDER xslash 61
+00:26.375  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/070.png'
+MOVE RENDER xslash 70
+00:27.436  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/080.png'
+MOVE RENDER xslash 80
+00:28.503  render           | Saved: 'renders/astra/rehost/xslash/xslash/preview/090.png'
+MOVE RENDER xslash 90
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

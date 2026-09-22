@@ -1,0 +1,197 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.365  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_idle_guard_v2_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+{
+  "support_summary": {
+    "outside_frames": [],
+    "airborne_frames": [],
+    "minimum_margin_m": 0.15360197352002314
+  },
+  "planted_ankle_max_planar_step_m": {
+    "Left": 4.2670431921709637e-07,
+    "Right": 6.98449709728835e-07
+  },
+  "cascade": {
+    "Hips": {
+      "world_peak_frame": 1.5,
+      "local_peak_frame": 1.5
+    },
+    "Spine02": {
+      "world_peak_frame": 2.25,
+      "local_peak_frame": 6.75
+    },
+    "Spine01": {
+      "world_peak_frame": 2.75,
+      "local_peak_frame": 8.25
+    },
+    "Spine": {
+      "world_peak_frame": 3.5,
+      "local_peak_frame": 8.25
+    },
+    "RightShoulder": {
+      "world_peak_frame": 5.25,
+      "local_peak_frame": 9.75
+    },
+    "RightArm": {
+      "world_peak_frame": 2.25,
+      "local_peak_frame": 7.0
+    },
+    "RightForeArm": {
+      "world_peak_frame": 8.25,
+      "local_peak_frame": 61.25
+    },
+    "RightHand": {
+      "world_peak_frame": 2.25,
+      "local_peak_frame": 6.25
+    }
+  },
+  "cloth_yaw_lag": {
+    "phys_robe_front_C_06": {
+      "best_delay_frames": 6,
+      "correlations": {
+        "-10": 0.4012767381811202,
+        "-9": 0.47347871498537536,
+        "-8": 0.5419934116049038,
+        "-7": 0.606361809996861,
+        "-6": 0.6662070793367761,
+        "-5": 0.7212420040922678,
+        "-4": 0.7712733175665937,
+        "-3": 0.8161883190999922,
+        "-2": 0.8559484186114339,
+        "-1": 0.8905815009611542,
+        "0": 0.9201644775755624,
+        "1": 0.9427241332052856,
+        "2": 0.9619384973592353,
+        "3": 0.9775579122504168,
+        "4": 0.9893044569024528,
+        "5": 0.9968753145557121,
+        "6": 0.9999477137885978,
+        "7": 0.9981857683647029,
+        "8": 0.9912495292993303,
+        "9": 0.9788065481414031,
+        "10": 0.9605440918679814,
+        "11": 0.9361863180265312,
+        "12": 0.9055103250515543,
+        "13": 0.8683624167156416,
+        "14": 0.8246785575886877,
+        "15": 0.7744973453518674,
+        "16": 0.7179759702548114,
+        "17": 0.6553993156338004,
+        "18": 0.5871917842915231,
+        "19": 0.5138968570227654,
+        "20": 0.4361992094475911
+      }
+    },
+    "phys_cape_C_06": {
+      "best_delay_frames": 8,
+      "correlations": {
+        "-10": 0.29895288295543376,
+        "-9": 0.3736776546881516,
+        "-8": 0.4455646754554459,
+        "-7": 0.514094611906596,
+        "-6": 0.5788114069098919,
+        "-5": 0.6393397852387113,
+        "-4": 0.6953883070590712,
+        "-3": 0.7467431035419533,
+        "-2": 0.7932684725144137,
+        "-1": 0.8348921055405374,
+        "0": 0.8716058601511228,
+        "1": 0.9000555564617351,
+        "2": 0.9254727168031899,
+        "3": 0.9476346087333091,
+        "4": 0.9662900214680163,
+        "5": 0.9811597792460586,
+        "6": 0.9919400110187596,
+        "7": 0.9983074310744081,
+        "8": 0.9999251347145315,
+        "9": 0.9964519015333481,
+        "10": 0.9875520463901144,
+        "11": 0.9729083968612646,
+        "12": 0.9522368687038598,
+        "13": 0.9252995719061186,
+        "14": 0.8919242967929714,
+        "15": 0.8520165439725607,
+        "16": 0.8055771283539556,
+        "17": 0.75271375191083,
+        "18": 0.693653910368218,
+        "19": 0.628742063161985,
+        "20": 0.5584596693347159
+      }
+    }
+  },
+  "active_windows": {},
+  "name": "idle_guard",
+  "quarter_samples": 385,
+  "bone_count": 121,
+  "joint_ranges_deg": {
+    "Left_elbow": [
+      67.891161482715,
+      74.49054552111892
+    ],
+    "Left_wrist": [
+      18.834310467780078,
+      19.12923278992727
+    ],
+    "Left_knee": [
+      24.93105523204466,
+      29.125625264274728
+    ],
+    "Left_shoulder_elevation": [
+      54.95709932910174,
+      60.228932366312954
+    ],
+    "Right_elbow": [
+      35.009766532798686,
+      46.090277133546564
+    ],
+    "Right_wrist": [
+      26.3376381996182,
+      29.179717122069057
+    ],
+    "Right_knee": [
+      25.915240966863628,
+      31.83218999895892
+    ],
+    "Right_shoulder_elevation": [
+      38.69246490248344,
+      39.97185611895019
+    ]
+  },
+  "asymmetry_speed_correlation": {
+    "Shoulder": 0.9464312045499425,
+    "Arm": 0.5971720018343276,
+    "ForeArm": 0.7267200913502067,
+    "Hand": 0.6502401885728605,
+    "UpLeg": 0.9788411552351703
+  },
+  "loop": {
+    "max_joint_position_error_m": 0.0,
+    "max_local_rotation_error_deg": 0.0,
+    "max_position_velocity_mismatch_m_s": 0.0018902279165760308,
+    "max_rotation_velocity_mismatch_deg_s": 0.08781670186905277
+  },
+  "max_limb_length_error_m": 4.796298200826499e-06,
+  "blade_peak_speed_m_s": 0.17911551133809925,
+  "blade_min_z_m": 0.09499268233776093,
+  "peak_hips_yaw_deg_s": 4.907948438145681,
+  "source_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386"
+}
+FLAGS []
+CONTACT {'before': {'Left': [0.002003589048981666, 0.002032905220985412], 'Right': [0.0015425890311598772, 0.0016985287517309183]}, 'after': {'Left': [0.0021454086527228355, 0.002184987999498844], 'Right': [0.0027019167318940163, 0.00275562796741724]}}
+HEM 0.0006976081058382988
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

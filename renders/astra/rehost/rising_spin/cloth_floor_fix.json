@@ -1,0 +1,11 @@
+{
+  "name": "rising_spin",
+  "target_clearance_m": 0.0020512430474162098,
+  "max_requested_lift_m": 0.0002842808766663067,
+  "families": {
+    "phys_robe_side_L": {
+      "vertices": 6941,
+      "max_requested_lift_m": 0.0002842808766663067
+    }
+  }
+}

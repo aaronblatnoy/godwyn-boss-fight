@@ -1,0 +1,14 @@
+{
+  "frames": [
+    30,
+    54
+  ],
+  "plateau_frames": [
+    38,
+    50
+  ],
+  "peak_frame": 46,
+  "world_y_deg": 0.0,
+  "world_z_deg": -45.0,
+  "changed_channels": 4
+}

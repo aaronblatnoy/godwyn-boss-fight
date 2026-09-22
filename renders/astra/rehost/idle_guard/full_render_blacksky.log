@@ -1,0 +1,211 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.320  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_idle_guard_v2_wip.blend"
+00:13.810  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER idle_guard 1
+00:16.061  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/002.png'
+MOVE RENDER idle_guard 2
+00:18.160  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/003.png'
+MOVE RENDER idle_guard 3
+00:20.108  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/004.png'
+MOVE RENDER idle_guard 4
+00:21.877  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/005.png'
+MOVE RENDER idle_guard 5
+00:23.383  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/006.png'
+MOVE RENDER idle_guard 6
+00:24.962  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/007.png'
+MOVE RENDER idle_guard 7
+00:26.583  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/008.png'
+MOVE RENDER idle_guard 8
+00:28.181  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/009.png'
+MOVE RENDER idle_guard 9
+00:29.803  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/010.png'
+MOVE RENDER idle_guard 10
+00:31.416  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/011.png'
+MOVE RENDER idle_guard 11
+00:33.032  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/012.png'
+MOVE RENDER idle_guard 12
+00:34.660  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/013.png'
+MOVE RENDER idle_guard 13
+00:36.279  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/014.png'
+MOVE RENDER idle_guard 14
+00:37.885  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/015.png'
+MOVE RENDER idle_guard 15
+00:39.500  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/016.png'
+MOVE RENDER idle_guard 16
+00:41.090  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/017.png'
+MOVE RENDER idle_guard 17
+00:42.501  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/018.png'
+MOVE RENDER idle_guard 18
+00:43.931  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/019.png'
+MOVE RENDER idle_guard 19
+00:45.357  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/020.png'
+MOVE RENDER idle_guard 20
+00:46.781  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/021.png'
+MOVE RENDER idle_guard 21
+00:48.208  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/022.png'
+MOVE RENDER idle_guard 22
+00:49.633  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/023.png'
+MOVE RENDER idle_guard 23
+00:51.069  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/024.png'
+MOVE RENDER idle_guard 24
+00:52.472  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/025.png'
+MOVE RENDER idle_guard 25
+00:53.890  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/026.png'
+MOVE RENDER idle_guard 26
+00:55.315  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/027.png'
+MOVE RENDER idle_guard 27
+00:56.723  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/028.png'
+MOVE RENDER idle_guard 28
+00:58.133  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/029.png'
+MOVE RENDER idle_guard 29
+00:59.553  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/030.png'
+MOVE RENDER idle_guard 30
+01:00.983  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/031.png'
+MOVE RENDER idle_guard 31
+01:02.412  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/032.png'
+MOVE RENDER idle_guard 32
+01:03.835  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/033.png'
+MOVE RENDER idle_guard 33
+01:05.243  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/034.png'
+MOVE RENDER idle_guard 34
+01:06.629  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/035.png'
+MOVE RENDER idle_guard 35
+01:08.034  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/036.png'
+MOVE RENDER idle_guard 36
+01:09.447  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/037.png'
+MOVE RENDER idle_guard 37
+01:10.867  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/038.png'
+MOVE RENDER idle_guard 38
+01:12.256  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/039.png'
+MOVE RENDER idle_guard 39
+01:13.641  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/040.png'
+MOVE RENDER idle_guard 40
+01:15.022  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/041.png'
+MOVE RENDER idle_guard 41
+01:16.404  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/042.png'
+MOVE RENDER idle_guard 42
+01:17.788  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/043.png'
+MOVE RENDER idle_guard 43
+01:19.188  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/044.png'
+MOVE RENDER idle_guard 44
+01:20.602  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/045.png'
+MOVE RENDER idle_guard 45
+01:22.022  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/046.png'
+MOVE RENDER idle_guard 46
+01:23.398  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/047.png'
+MOVE RENDER idle_guard 47
+01:24.805  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/048.png'
+MOVE RENDER idle_guard 48
+01:26.194  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/049.png'
+MOVE RENDER idle_guard 49
+01:27.584  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/050.png'
+MOVE RENDER idle_guard 50
+01:28.976  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/051.png'
+MOVE RENDER idle_guard 51
+01:30.358  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/052.png'
+MOVE RENDER idle_guard 52
+01:31.726  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/053.png'
+MOVE RENDER idle_guard 53
+01:33.140  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/054.png'
+MOVE RENDER idle_guard 54
+01:34.540  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/055.png'
+MOVE RENDER idle_guard 55
+01:35.937  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/056.png'
+MOVE RENDER idle_guard 56
+01:37.368  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/057.png'
+MOVE RENDER idle_guard 57
+01:38.762  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/058.png'
+MOVE RENDER idle_guard 58
+01:40.195  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/059.png'
+MOVE RENDER idle_guard 59
+01:41.591  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/060.png'
+MOVE RENDER idle_guard 60
+01:42.973  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/061.png'
+MOVE RENDER idle_guard 61
+01:44.391  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/062.png'
+MOVE RENDER idle_guard 62
+01:45.787  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/063.png'
+MOVE RENDER idle_guard 63
+01:47.180  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/064.png'
+MOVE RENDER idle_guard 64
+01:48.579  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/065.png'
+MOVE RENDER idle_guard 65
+01:49.977  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/066.png'
+MOVE RENDER idle_guard 66
+01:51.378  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/067.png'
+MOVE RENDER idle_guard 67
+01:52.780  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/068.png'
+MOVE RENDER idle_guard 68
+01:54.191  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/069.png'
+MOVE RENDER idle_guard 69
+01:55.599  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/070.png'
+MOVE RENDER idle_guard 70
+01:57.000  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/071.png'
+MOVE RENDER idle_guard 71
+01:58.395  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/072.png'
+MOVE RENDER idle_guard 72
+01:59.804  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/073.png'
+MOVE RENDER idle_guard 73
+02:01.221  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/074.png'
+MOVE RENDER idle_guard 74
+02:02.618  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/075.png'
+MOVE RENDER idle_guard 75
+02:04.007  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/076.png'
+MOVE RENDER idle_guard 76
+02:05.428  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/077.png'
+MOVE RENDER idle_guard 77
+02:06.824  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/078.png'
+MOVE RENDER idle_guard 78
+02:08.227  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/079.png'
+MOVE RENDER idle_guard 79
+02:09.621  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/080.png'
+MOVE RENDER idle_guard 80
+02:11.023  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/081.png'
+MOVE RENDER idle_guard 81
+02:12.416  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/082.png'
+MOVE RENDER idle_guard 82
+02:13.782  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/083.png'
+MOVE RENDER idle_guard 83
+02:15.180  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/084.png'
+MOVE RENDER idle_guard 84
+02:16.575  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/085.png'
+MOVE RENDER idle_guard 85
+02:17.964  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/086.png'
+MOVE RENDER idle_guard 86
+02:19.372  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/087.png'
+MOVE RENDER idle_guard 87
+02:20.775  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/088.png'
+MOVE RENDER idle_guard 88
+02:22.174  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/089.png'
+MOVE RENDER idle_guard 89
+02:23.576  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/090.png'
+MOVE RENDER idle_guard 90
+02:24.975  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/091.png'
+MOVE RENDER idle_guard 91
+02:26.388  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/092.png'
+MOVE RENDER idle_guard 92
+02:27.784  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/093.png'
+MOVE RENDER idle_guard 93
+02:29.185  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/094.png'
+MOVE RENDER idle_guard 94
+02:30.621  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/095.png'
+MOVE RENDER idle_guard 95
+02:32.017  render           | Saved: 'renders/astra/rehost/idle_guard/idle_guard/frames/096.png'
+MOVE RENDER idle_guard 96
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

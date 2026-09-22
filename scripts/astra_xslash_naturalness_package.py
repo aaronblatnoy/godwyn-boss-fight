@@ -17,7 +17,7 @@ FIXES={
  '10_cloth_lag':[38,43,61,90],
  '11_hem_floor':[39,46,57,90],
 }
-def ff(args):subprocess.run(['/opt/homebrew/bin/ffmpeg','-hide_banner','-loglevel','error','-y']+args,check=True)
+def ff(args):subprocess.run([(__import__('shutil').which('ffmpeg') or '/opt/homebrew/bin/ffmpeg'),'-hide_banner','-loglevel','error','-y']+args,check=True)
 def sheet(files,dest,cols):
     temp=Path('/tmp')/('astra_xslash_naturalness_'+dest.stem);temp.mkdir(exist_ok=True)
     for i,p in enumerate(files):shutil.copy2(p,temp/f'{i:03d}.png')
@@ -37,7 +37,7 @@ for label,folder in [('before',OUT/'naturalness_before'),('after',fixed)]:
 ff(['-framerate','30','-start_number','1','-i',str(OUT/'video_frames/%03d.png'),'-frames:v','90','-c:v','libx264','-crf','17','-preset','slow','-pix_fmt','yuv420p','-movflags','+faststart',str(FINAL)])
 ff(['-v','error','-xerror','-i',str(FINAL),'-f','null','-'])
 ff(['-i',str(FINAL),'-vf','scale=320:320,tile=5x3:nb_frames=15:padding=4:margin=8:color=0x171b22','-fps_mode','vfr',str(OUT/'naturalness_decoded_%02d.png')])
-probe=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-show_format','-of','json',str(FINAL)],text=True))
+probe=json.loads(subprocess.check_output([(__import__('shutil').which('ffprobe') or '/opt/homebrew/bin/ffprobe'),'-v','error','-count_frames','-show_streams','-show_format','-of','json',str(FINAL)],text=True))
 st=next(x for x in probe['streams'] if x['codec_type']=='video')
 assert int(st['nb_read_frames'])==90 and st['r_frame_rate']=='30/1' and st['width']==st['height']==640
 meta={'final_mp4':str(FINAL.relative_to(ROOT)),'sha256':hashlib.sha256(FINAL.read_bytes()).hexdigest(),'frames':90,'fps':30,'duration':float(probe['format']['duration']),'resolution':[640,640],'codec':st['codec_name'],'pixel_format':st['pix_fmt'],'full_decode_error_free':True,'camera':'unchanged saved front camera; prior MP4 temporary three-quarter override intentionally not reapplied under strict scope','evaluation_frames':EVAL,'evidence_order':FIXES,'decoded_sheets':[f'naturalness_decoded_{i:02d}.png' for i in range(1,7)]}

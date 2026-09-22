@@ -1,0 +1,1871 @@
+00:01.254  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_character_base_v2.blend"
+00:11.179  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_idle_guard_wip.blend"
+00:13.746  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_wip.blend"
+00:15.740  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_wip.blend"
+00:17.844  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_wip.blend"
+00:20.086  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "models/astra_move_character_base_v2.blend": {
+    "frame_start": 1,
+    "frame_end": 250,
+    "fps": 24,
+    "scene_custom": {
+      "AstraChar2_quality_gate": "NOT_MET: progress toward approved portrait, still visibly synthetic; see ROUND2_REPORT.md",
+      "AstraChar2_review_report": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/REPORT.md",
+      "astra_char2_round3_quality_gate": "NOT_MET: consult ROUND3_REPORT.md",
+      "astra_char2_round4": "Native hair-curves groom; portable strand meshes hidden in native render",
+      "astra_char2_round4_quality": "Native curves groom; see ROUND4_REPORT.md"
+    },
+    "scene_camera": "Astra evaluation camera",
+    "objects": 145,
+    "object_names": [
+      "Armature",
+      "Astra evaluation camera",
+      "Astra evaluation ground",
+      "Astra face",
+      "Astra fill",
+      "Astra key",
+      "Astra rim",
+      "AstraChar2_Cornea_L",
+      "AstraChar2_Cornea_R",
+      "AstraChar2_Eyeball_L",
+      "AstraChar2_Eyeball_R",
+      "AstraChar2_Eyebrows_L",
+      "AstraChar2_Eyebrows_R",
+      "AstraChar2_Iris_L",
+      "AstraChar2_Iris_R",
+      "AstraChar2_Lashes_L",
+      "AstraChar2_Lashes_R",
+      "AstraChar2_Mpfb_Head",
+      "AstraChar2_Nostril_L",
+      "AstraChar2_Nostril_R",
+      "AstraChar2_Pupil_L",
+      "AstraChar2_Pupil_R",
+      "AstraChar2_R2_HairFibers_0",
+      "AstraChar2_R2_HairFibers_1",
+      "AstraChar2_R2_HairFibers_2",
+      "AstraChar2_R2_HairFibers_3",
+      "AstraChar2_R2_HairRoots",
+      "AstraChar2_R2_HairlineWisps",
+      "AstraChar2_R3_ChasedLaurel",
+      "AstraChar2_R3_Flow_L",
+      "AstraChar2_R3_Flow_R",
+      "AstraChar2_R3_Plait_L",
+      "AstraChar2_R3_Plait_R",
+      "AstraChar2_R4_Control_L_Back_0",
+      "AstraChar2_R4_Control_L_Back_1",
+      "AstraChar2_R4_Control_L_Braids",
+      "AstraChar2_R4_Control_L_Front_0",
+      "AstraChar2_R4_Control_L_Front_1",
+      "AstraChar2_R4_Control_L_Side_0",
+      "AstraChar2_R4_Control_L_Side_1",
+      "AstraChar2_R4_Control_R_Back_0",
+      "AstraChar2_R4_Control_R_Back_1",
+      "AstraChar2_R4_Control_R_Braids",
+      "AstraChar2_R4_Control_R_Front_0",
+      "AstraChar2_R4_Control_R_Front_1",
+      "AstraChar2_R4_Control_R_Side_0",
+      "AstraChar2_R4_Control_R_Side_1",
+      "AstraChar2_R4_Curves_L_Back_0",
+      "AstraChar2_R4_Curves_L_Back_1",
+      "AstraChar2_R4_Curves_L_Braids",
+      "AstraChar2_R4_Curves_L_Front_0",
+      "AstraChar2_R4_Curves_L_Front_1",
+      "AstraChar2_R4_Curves_L_Side_0",
+      "AstraChar2_R4_Curves_L_Side_1",
+      "AstraChar2_R4_Curves_R_Back_0",
+      "AstraChar2_R4_Curves_R_Back_1",
+      "AstraChar2_R4_Curves_R_Braids",
+      "AstraChar2_R4_Curves_R_Front_0",
+      "AstraChar2_R4_Curves_R_Front_1",
+      "AstraChar2_R4_Curves_R_Side_0",
+      "AstraChar2_R4_Curves_R_Side_1",
+      "AstraChar2_R4_Scalp",
+      "AstraChar2_R4_ScalpRoots",
+      "AstraChar2_R4_Strands_L_Back_0",
+      "AstraChar2_R4_Strands_L_Back_1",
+      "AstraChar2_R4_Strands_L_Braids",
+      "AstraChar2_R4_Strands_L_Front_0",
+      "AstraChar2_R4_Strands_L_Front_1",
+      "AstraChar2_R4_Strands_L_Side_0",
+      "AstraChar2_R4_Strands_L_Side_1",
+      "AstraChar2_R4_Strands_R_Back_0",
+      "AstraChar2_R4_Strands_R_Back_1",
+      "AstraChar2_R4_Strands_R_Braids",
+      "AstraChar2_R4_Strands_R_Front_0",
+      "AstraChar2_R4_Strands_R_Front_1",
+      "AstraChar2_R4_Strands_R_Side_0",
+      "AstraChar2_R4_Strands_R_Side_1",
+      "AstraChar2_R5_ClavicleMantle",
+      "AstraChar2_R5_ClothFitEnvelope",
+      "AstraChar2_R5_Control_MPFB_L_Back",
+      "AstraChar2_R5_Control_MPFB_L_Braids",
+      "AstraChar2_R5_Control_MPFB_L_Front",
+      "AstraChar2_R5_Control_MPFB_L_Side",
+      "AstraChar2_R5_Control_MPFB_R_Back",
+      "AstraChar2_R5_Control_MPFB_R_Braids",
+      "AstraChar2_R5_Control_MPFB_R_Front",
+      "AstraChar2_R5_Control_MPFB_R_Side",
+      "AstraChar2_R5_Control_MPFB_ScalpBed",
+      "AstraChar2_R5_Cuirass",
+      "AstraChar2_R5_Curves_MPFB_L_Back",
+      "AstraChar2_R5_Curves_MPFB_L_Braids",
+      "AstraChar2_R5_Curves_MPFB_L_Front",
+      "AstraChar2_R5_Curves_MPFB_L_Side",
+      "AstraChar2_R5_Curves_MPFB_R_Back",
+      "AstraChar2_R5_Curves_MPFB_R_Braids",
+      "AstraChar2_R5_Curves_MPFB_R_Front",
+      "AstraChar2_R5_Curves_MPFB_R_Side",
+      "AstraChar2_R5_Curves_MPFB_ScalpBed",
+      "AstraChar2_R5_Gorget",
+      "AstraChar2_R5_GorgetRim",
+      "AstraChar2_R5_PauldronRim_L",
+      "AstraChar2_R5_PauldronRim_R",
+      "AstraChar2_R5_Pauldron_L",
+      "AstraChar2_R5_Pauldron_R",
+      "AstraChar2_R5_SacredEmblem",
+      "AstraChar2_R5_Strands_MPFB_L_Back",
+      "AstraChar2_R5_Strands_MPFB_L_Braids",
+      "AstraChar2_R5_Strands_MPFB_L_Front",
+      "AstraChar2_R5_Strands_MPFB_L_Side",
+      "AstraChar2_R5_Strands_MPFB_R_Back",
+      "AstraChar2_R5_Strands_MPFB_R_Braids",
+      "AstraChar2_R5_Strands_MPFB_R_Front",
+      "AstraChar2_R5_Strands_MPFB_R_Side",
+      "AstraChar2_R5_Strands_MPFB_ScalpBed",
+      "AstraChar2_R5_SunRay_0",
+      "AstraChar2_R5_SunRay_1",
+      "AstraChar2_R5_SunRay_10",
+      "AstraChar2_R5_SunRay_11",
+      "AstraChar2_R5_SunRay_12",
+      "AstraChar2_R5_SunRay_13",
+      "AstraChar2_R5_SunRay_14",
+      "AstraChar2_R5_SunRay_15",
+      "AstraChar2_R5_SunRay_2",
+      "AstraChar2_R5_SunRay_3",
+      "AstraChar2_R5_SunRay_4",
+      "AstraChar2_R5_SunRay_5",
+      "AstraChar2_R5_SunRay_6",
+      "AstraChar2_R5_SunRay_7",
+      "AstraChar2_R5_SunRay_8",
+      "AstraChar2_R5_SunRay_9",
+      "AstraChar2_R5_UpperArm_L_0",
+      "AstraChar2_R5_UpperArm_L_1",
+      "AstraChar2_R5_UpperArm_L_2",
+      "AstraChar2_R5_UpperArm_R_0",
+      "AstraChar2_R5_UpperArm_R_1",
+      "AstraChar2_R5_UpperArm_R_2",
+      "AstraChar2_R6_NeckGraft",
+      "AstraChar2_TearCorner_L",
+      "AstraChar2_TearCorner_R",
+      "AstraChar2_Wetline_L",
+      "AstraChar2_Wetline_R",
+      "Astra_Undersleeves",
+      "Godwyn_Sword",
+      "Icosphere",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": null,
+    "actions": [],
+    "meshes": {
+      "char1": {
+        "vertices": 366392,
+        "polygons": 244493,
+        "digest": "315e2cea880b503de7070077acc3d04be648d4155aed306d387490bc5b7a0215",
+        "custom": {
+          "astra_char2_nostril_-1": "<bpy id property array [0]>",
+          "astra_char2_nostril_1": "<bpy id property array [0]>",
+          "round2_front_patch": "Continuous grid, 257 by 441 vertices, openings for eyes/nostrils; Head weights, same char1 object and material slots. Body and cloth unmodified."
+        },
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand",
+          "AstraChar2_R5_CollarFit"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "AstraChar2 R5 collar cloth containment",
+            "SHRINKWRAP",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  },
+  "models/astra_move_idle_guard_wip.blend": {
+    "frame_start": 1,
+    "frame_end": 96,
+    "fps": 30,
+    "scene_custom": {
+      "astra_move": "idle_guard",
+      "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "loop_period_frames": 96,
+      "cycle_root_displacement": "<bpy id property array [0]>"
+    },
+    "scene_camera": "Astra_Move_Camera",
+    "objects": 10,
+    "object_names": [
+      "Armature",
+      "Astra_Move_Camera",
+      "Astra_Move_Fill",
+      "Astra_Move_Key",
+      "Astra_Move_Rim",
+      "Astra_Move_Stage",
+      "Astra_Undersleeves",
+      "Godwyn_Sword",
+      "Icosphere",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": "Astra_Move_idle_guard.002",
+    "actions": [
+      {
+        "name": "Astra_Move_idle_guard.002",
+        "frame_range": [
+          1.0,
+          97.0
+        ],
+        "fcurves": 847,
+        "keys": 326095,
+        "cyclic_fcurves": 847
+      }
+    ],
+    "meshes": {
+      "char1": {
+        "vertices": 181200,
+        "polygons": 292488,
+        "digest": "7db5eb57776570628485db70ac42151797f2f3810c97477f40827bf1dd057656",
+        "custom": {
+          "astra_move_palm_sliver_faces": 621,
+          "astra_move_hilt_envelope_m": 0.029374360874295236,
+          "astra_move_closed_finger_vertices": 2553,
+          "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+          "astra_move_grip_clean": true,
+          "astra_move_gold_palm_faces": 3442
+        },
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  },
+  "models/astra_move_walk_stalk_wip.blend": {
+    "frame_start": 1,
+    "frame_end": 72,
+    "fps": 30,
+    "scene_custom": {
+      "astra_move": "walk_stalk",
+      "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "move_meta": "{\"description\": \"Watchful low-guard forward stalk; deliberate alternating footfalls, no idle arm swing.\", \"contact_frames\": [1, 7, 13, 19, 25, 31, 37, 43, 49, 55, 61, 67, 73], \"grip_frames\": [1, 19, 37, 55, 73], \"active\": [], \"scale\": 4.5, \"target\": [0, -0.38, 1.58], \"track_translation\": true}",
+      "loop_period_frames": 72,
+      "cycle_root_displacement": "<bpy id property array [0]>"
+    },
+    "scene_camera": "Astra_Move_Camera",
+    "objects": 10,
+    "object_names": [
+      "Armature",
+      "Astra_Move_Camera",
+      "Astra_Move_Fill",
+      "Astra_Move_Key",
+      "Astra_Move_Rim",
+      "Astra_Move_Stage",
+      "Astra_Undersleeves",
+      "Godwyn_Sword",
+      "Icosphere",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": "Astra_Move_walk_stalk.002",
+    "actions": [
+      {
+        "name": "Astra_Move_CameraAction",
+        "frame_range": [
+          1.0,
+          73.0
+        ],
+        "fcurves": 3,
+        "keys": 6,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_FillAction",
+        "frame_range": [
+          1.0,
+          73.0
+        ],
+        "fcurves": 3,
+        "keys": 6,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_KeyAction",
+        "frame_range": [
+          1.0,
+          73.0
+        ],
+        "fcurves": 3,
+        "keys": 6,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_RimAction",
+        "frame_range": [
+          1.0,
+          73.0
+        ],
+        "fcurves": 3,
+        "keys": 6,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_walk_stalk.002",
+        "frame_range": [
+          1.0,
+          73.0
+        ],
+        "fcurves": 847,
+        "keys": 244783,
+        "cyclic_fcurves": 847
+      }
+    ],
+    "meshes": {
+      "char1": {
+        "vertices": 181200,
+        "polygons": 292488,
+        "digest": "7db5eb57776570628485db70ac42151797f2f3810c97477f40827bf1dd057656",
+        "custom": {
+          "astra_move_palm_sliver_faces": 621,
+          "astra_move_hilt_envelope_m": 0.029374360874295236,
+          "astra_move_closed_finger_vertices": 2553,
+          "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+          "astra_move_grip_clean": true,
+          "astra_move_gold_palm_faces": 3442
+        },
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  },
+  "models/astra_move_lunge_thrust_wip.blend": {
+    "frame_start": 1,
+    "frame_end": 64,
+    "fps": 30,
+    "scene_custom": {
+      "astra_move": "lunge_thrust",
+      "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "move_meta": "{\"description\": \"Compressed takeoff, airborne gap close, landing thrust, overshoot into loaded BACK TO PLAYER. No idle tail.\", \"cut_type\": \"thrust\", \"contact_frames\": [1, 11, 17, 21, 23, 25, 27, 29, 31, 33, 35, 37, 43, 53, 64], \"grip_frames\": [1, 17, 29, 33, 53, 64], \"active\": [[25, 35]], \"cascade_window\": [10, 34], \"target_point\": [0, -1.8, 1.5], \"end_state\": \"BACK TO PLAYER\", \"flight\": [15, 31], \"scale\": 7.0, \"target\": [0, -2.15, 1.5], \"camera\": [7, -1.7, 3.2]}",
+      "loop_period_frames": 0,
+      "cycle_root_displacement": "<bpy id property array [0]>"
+    },
+    "scene_camera": "Astra_Move_Camera",
+    "objects": 22,
+    "object_names": [
+      "Armature",
+      "Astra_Move_Camera",
+      "Astra_Move_Fill",
+      "Astra_Move_Key",
+      "Astra_Move_Rim",
+      "Astra_Move_Stage",
+      "Astra_Move_Target_Ring",
+      "Astra_Move_blur_25",
+      "Astra_Move_blur_26",
+      "Astra_Move_blur_27",
+      "Astra_Move_blur_28",
+      "Astra_Move_blur_29",
+      "Astra_Move_blur_30",
+      "Astra_Move_blur_31",
+      "Astra_Move_blur_32",
+      "Astra_Move_blur_33",
+      "Astra_Move_blur_34",
+      "Astra_Move_blur_35",
+      "Astra_Undersleeves",
+      "Godwyn_Sword",
+      "Icosphere",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": "Astra_Move_lunge_thrust.002",
+    "actions": [
+      {
+        "name": "Astra_Move_blur_25Action",
+        "frame_range": [
+          1.0,
+          26.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_26Action",
+        "frame_range": [
+          1.0,
+          27.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_27Action",
+        "frame_range": [
+          1.0,
+          28.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_28Action",
+        "frame_range": [
+          1.0,
+          29.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_29Action",
+        "frame_range": [
+          1.0,
+          30.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_30Action",
+        "frame_range": [
+          1.0,
+          31.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_31Action",
+        "frame_range": [
+          1.0,
+          32.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_32Action",
+        "frame_range": [
+          1.0,
+          33.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_33Action",
+        "frame_range": [
+          1.0,
+          34.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_34Action",
+        "frame_range": [
+          1.0,
+          35.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_35Action",
+        "frame_range": [
+          1.0,
+          36.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_lunge_thrust.002",
+        "frame_range": [
+          1.0,
+          64.0
+        ],
+        "fcurves": 847,
+        "keys": 214291,
+        "cyclic_fcurves": 0
+      }
+    ],
+    "meshes": {
+      "char1": {
+        "vertices": 181200,
+        "polygons": 292488,
+        "digest": "7db5eb57776570628485db70ac42151797f2f3810c97477f40827bf1dd057656",
+        "custom": {
+          "astra_move_palm_sliver_faces": 621,
+          "astra_move_hilt_envelope_m": 0.029374360874295236,
+          "astra_move_closed_finger_vertices": 2553,
+          "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+          "astra_move_grip_clean": true,
+          "astra_move_gold_palm_faces": 3442
+        },
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  },
+  "models/astra_move_rising_spin_wip.blend": {
+    "frame_start": 1,
+    "frame_end": 116,
+    "fps": 30,
+    "scene_custom": {
+      "astra_move": "rising_spin",
+      "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "move_meta": "{\"description\": \"Loaded low-to-high diagonal; one 360-degree readable body rotation on alternating short pivot steps; returns toward low hang.\", \"cut_type\": \"slash\", \"contact_frames\": [1, 16, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 48, 60, 72, 84, 96, 104, 116], \"grip_frames\": [1, 24, 30, 36, 60, 84, 116], \"active\": [[24, 40]], \"edge_check_windows\": [[24, 104]], \"cascade_window\": [20, 40], \"body_turn_degrees\": 360, \"body_turn_frames\": [20, 104], \"scale\": 6.1, \"target\": [0, -0.2, 1.82], \"camera\": [4.3, -8.6, 2.7]}",
+      "loop_period_frames": 0,
+      "cycle_root_displacement": "<bpy id property array [0]>"
+    },
+    "scene_camera": "Astra_Move_Camera",
+    "objects": 27,
+    "object_names": [
+      "Armature",
+      "Astra_Move_Camera",
+      "Astra_Move_Fill",
+      "Astra_Move_Key",
+      "Astra_Move_Rim",
+      "Astra_Move_Stage",
+      "Astra_Move_blur_24",
+      "Astra_Move_blur_25",
+      "Astra_Move_blur_26",
+      "Astra_Move_blur_27",
+      "Astra_Move_blur_28",
+      "Astra_Move_blur_29",
+      "Astra_Move_blur_30",
+      "Astra_Move_blur_31",
+      "Astra_Move_blur_32",
+      "Astra_Move_blur_33",
+      "Astra_Move_blur_34",
+      "Astra_Move_blur_35",
+      "Astra_Move_blur_36",
+      "Astra_Move_blur_37",
+      "Astra_Move_blur_38",
+      "Astra_Move_blur_39",
+      "Astra_Move_blur_40",
+      "Astra_Undersleeves",
+      "Godwyn_Sword",
+      "Icosphere",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": "Astra_Move_rising_spin.002",
+    "actions": [
+      {
+        "name": "Astra_Move_blur_24Action",
+        "frame_range": [
+          1.0,
+          25.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_25Action",
+        "frame_range": [
+          1.0,
+          26.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_26Action",
+        "frame_range": [
+          1.0,
+          27.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_27Action",
+        "frame_range": [
+          1.0,
+          28.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_28Action",
+        "frame_range": [
+          1.0,
+          29.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_29Action",
+        "frame_range": [
+          1.0,
+          30.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_30Action",
+        "frame_range": [
+          1.0,
+          31.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_31Action",
+        "frame_range": [
+          1.0,
+          32.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_32Action",
+        "frame_range": [
+          1.0,
+          33.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_33Action",
+        "frame_range": [
+          1.0,
+          34.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_34Action",
+        "frame_range": [
+          1.0,
+          35.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_35Action",
+        "frame_range": [
+          1.0,
+          36.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_36Action",
+        "frame_range": [
+          1.0,
+          37.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_37Action",
+        "frame_range": [
+          1.0,
+          38.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_38Action",
+        "frame_range": [
+          1.0,
+          39.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_39Action",
+        "frame_range": [
+          1.0,
+          40.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_blur_40Action",
+        "frame_range": [
+          1.0,
+          41.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_Move_rising_spin.002",
+        "frame_range": [
+          1.0,
+          116.0
+        ],
+        "fcurves": 847,
+        "keys": 390467,
+        "cyclic_fcurves": 0
+      }
+    ],
+    "meshes": {
+      "char1": {
+        "vertices": 181200,
+        "polygons": 292488,
+        "digest": "7db5eb57776570628485db70ac42151797f2f3810c97477f40827bf1dd057656",
+        "custom": {
+          "astra_move_palm_sliver_faces": 621,
+          "astra_move_hilt_envelope_m": 0.029374360874295236,
+          "astra_move_closed_finger_vertices": 2553,
+          "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+          "astra_move_grip_clean": true,
+          "astra_move_gold_palm_faces": 3442
+        },
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  },
+  "models/astra_xslash_v2_final_wip.blend": {
+    "frame_start": 1,
+    "frame_end": 90,
+    "fps": 30,
+    "scene_custom": {
+      "astra_final_robe_multiply_linear": "<bpy id property array [3]>",
+      "astra_character_source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "astra_motion_source_sha256": "f66a9d6adeb5cf6ba77d52ae01d2be244af686e19c38207d47b9e811bd209edf"
+    },
+    "scene_camera": "Astra_Camera",
+    "objects": 24,
+    "object_names": [
+      "Armature",
+      "Astra_Camera",
+      "Astra_Fill",
+      "Astra_Key",
+      "Astra_Rim",
+      "Astra_Stage",
+      "Astra_Undersleeves",
+      "Astra_v2_blur_38",
+      "Astra_v2_blur_39",
+      "Astra_v2_blur_40",
+      "Astra_v2_blur_41",
+      "Astra_v2_blur_42",
+      "Astra_v2_blur_43",
+      "Astra_v2_blur_44",
+      "Astra_v2_blur_55",
+      "Astra_v2_blur_56",
+      "Astra_v2_blur_57",
+      "Astra_v2_blur_58",
+      "Astra_v2_blur_59",
+      "Astra_v2_blur_60",
+      "Astra_v2_blur_61",
+      "Godwyn_Sword",
+      "Icosphere.001",
+      "char1"
+    ],
+    "bone_count": 121,
+    "active_action": "Astra_Godwyn_XSlash_V2_Final_Naturalness",
+    "actions": [
+      {
+        "name": "Astra_Godwyn_XSlash_V2_Final_Naturalness",
+        "frame_range": [
+          1.0,
+          90.0
+        ],
+        "fcurves": 847,
+        "keys": 307643,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_38Action",
+        "frame_range": [
+          1.0,
+          39.0
+        ],
+        "fcurves": 5,
+        "keys": 11,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_39Action",
+        "frame_range": [
+          1.0,
+          40.0
+        ],
+        "fcurves": 5,
+        "keys": 11,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_40Action",
+        "frame_range": [
+          1.0,
+          41.0
+        ],
+        "fcurves": 5,
+        "keys": 11,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_41Action",
+        "frame_range": [
+          1.0,
+          42.0
+        ],
+        "fcurves": 5,
+        "keys": 11,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_42Action",
+        "frame_range": [
+          1.0,
+          43.0
+        ],
+        "fcurves": 5,
+        "keys": 11,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_43Action",
+        "frame_range": [
+          1.0,
+          44.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_44Action",
+        "frame_range": [
+          1.0,
+          45.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_55Action",
+        "frame_range": [
+          1.0,
+          56.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_56Action",
+        "frame_range": [
+          1.0,
+          57.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_57Action",
+        "frame_range": [
+          1.0,
+          58.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_58Action",
+        "frame_range": [
+          1.0,
+          59.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_59Action",
+        "frame_range": [
+          1.0,
+          60.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_60Action",
+        "frame_range": [
+          1.0,
+          61.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      },
+      {
+        "name": "Astra_v2_blur_61Action",
+        "frame_range": [
+          1.0,
+          62.0
+        ],
+        "fcurves": 2,
+        "keys": 8,
+        "cyclic_fcurves": 0
+      }
+    ],
+    "meshes": {
+      "char1": {
+        "vertices": 181435,
+        "polygons": 293109,
+        "digest": "8a0c89687b1e1475d410c3104730374986156def84f3e976b11bd326f1a39fd1",
+        "custom": {},
+        "groups": [
+          "Hips",
+          "LeftUpLeg",
+          "LeftLeg",
+          "LeftFoot",
+          "LeftToeBase",
+          "phys_robe_back_C_00",
+          "phys_robe_back_C_01",
+          "phys_robe_back_C_02",
+          "phys_robe_back_C_03",
+          "phys_robe_back_C_04",
+          "phys_robe_back_C_05",
+          "phys_robe_back_C_06",
+          "phys_robe_back_C_07",
+          "phys_robe_back_L_00",
+          "phys_robe_back_L_01",
+          "phys_robe_back_L_02",
+          "phys_robe_back_L_03",
+          "phys_robe_back_L_04",
+          "phys_robe_back_L_05",
+          "phys_robe_back_L_06",
+          "phys_robe_back_L_07",
+          "phys_robe_back_R_00",
+          "phys_robe_back_R_01",
+          "phys_robe_back_R_02",
+          "phys_robe_back_R_03",
+          "phys_robe_back_R_04",
+          "phys_robe_back_R_05",
+          "phys_robe_back_R_06",
+          "phys_robe_back_R_07",
+          "phys_robe_front_C_00",
+          "phys_robe_front_C_01",
+          "phys_robe_front_C_02",
+          "phys_robe_front_C_03",
+          "phys_robe_front_C_04",
+          "phys_robe_front_C_05",
+          "phys_robe_front_C_06",
+          "phys_robe_front_C_07",
+          "phys_robe_front_L_00",
+          "phys_robe_front_L_01",
+          "phys_robe_front_L_02",
+          "phys_robe_front_L_03",
+          "phys_robe_front_L_04",
+          "phys_robe_front_L_05",
+          "phys_robe_front_L_06",
+          "phys_robe_front_L_07",
+          "phys_robe_front_R_00",
+          "phys_robe_front_R_01",
+          "phys_robe_front_R_02",
+          "phys_robe_front_R_03",
+          "phys_robe_front_R_04",
+          "phys_robe_front_R_05",
+          "phys_robe_front_R_06",
+          "phys_robe_front_R_07",
+          "phys_robe_side_L_00",
+          "phys_robe_side_L_01",
+          "phys_robe_side_L_02",
+          "phys_robe_side_L_03",
+          "phys_robe_side_L_04",
+          "phys_robe_side_L_05",
+          "phys_robe_side_L_06",
+          "phys_robe_side_L_07",
+          "phys_robe_side_R_00",
+          "phys_robe_side_R_01",
+          "phys_robe_side_R_02",
+          "phys_robe_side_R_03",
+          "phys_robe_side_R_04",
+          "phys_robe_side_R_05",
+          "phys_robe_side_R_06",
+          "phys_robe_side_R_07",
+          "RightUpLeg",
+          "RightLeg",
+          "RightFoot",
+          "RightToeBase",
+          "Spine02",
+          "Spine01",
+          "Spine",
+          "LeftShoulder",
+          "LeftArm",
+          "LeftForeArm",
+          "LeftHand",
+          "neck",
+          "Head",
+          "head_end",
+          "headfront",
+          "phys_hair_back_00",
+          "phys_hair_back_01",
+          "phys_hair_back_02",
+          "phys_hair_back_03",
+          "phys_hair_front_L_00",
+          "phys_hair_front_L_01",
+          "phys_hair_front_L_02",
+          "phys_hair_front_L_03",
+          "phys_hair_front_R_00",
+          "phys_hair_front_R_01",
+          "phys_hair_front_R_02",
+          "phys_hair_front_R_03",
+          "phys_cape_C_00",
+          "phys_cape_C_01",
+          "phys_cape_C_02",
+          "phys_cape_C_03",
+          "phys_cape_C_04",
+          "phys_cape_C_05",
+          "phys_cape_C_06",
+          "phys_cape_L_00",
+          "phys_cape_L_01",
+          "phys_cape_L_02",
+          "phys_cape_L_03",
+          "phys_cape_L_04",
+          "phys_cape_L_05",
+          "phys_cape_L_06",
+          "phys_cape_R_00",
+          "phys_cape_R_01",
+          "phys_cape_R_02",
+          "phys_cape_R_03",
+          "phys_cape_R_04",
+          "phys_cape_R_05",
+          "phys_cape_R_06",
+          "RightShoulder",
+          "RightArm",
+          "RightForeArm",
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra surface polish \u2022 reversible",
+            "SMOOTH",
+            null
+          ],
+          [
+            "Armature",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "polygons": 8179,
+        "digest": "2009b41a76556e20987b12306a2d0d66c74325f80cd7216bca1ddc8a6c72511f",
+        "custom": {},
+        "groups": [
+          "RightHand"
+        ],
+        "modifiers": [
+          [
+            "Astra rigid sword attachment",
+            "ARMATURE",
+            "Armature"
+          ]
+        ]
+      }
+    }
+  }
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

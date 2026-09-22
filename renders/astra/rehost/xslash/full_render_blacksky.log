@@ -1,0 +1,199 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.320  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_wip.blend"
+00:11.609  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER xslash 1
+00:13.352  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/002.png'
+MOVE RENDER xslash 2
+00:15.056  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/003.png'
+MOVE RENDER xslash 3
+00:16.786  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/004.png'
+MOVE RENDER xslash 4
+00:18.496  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/005.png'
+MOVE RENDER xslash 5
+00:20.221  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/006.png'
+MOVE RENDER xslash 6
+00:21.936  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/007.png'
+MOVE RENDER xslash 7
+00:23.664  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/008.png'
+MOVE RENDER xslash 8
+00:25.336  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/009.png'
+MOVE RENDER xslash 9
+00:27.082  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/010.png'
+MOVE RENDER xslash 10
+00:28.797  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/011.png'
+MOVE RENDER xslash 11
+00:30.524  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/012.png'
+MOVE RENDER xslash 12
+00:32.239  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/013.png'
+MOVE RENDER xslash 13
+00:33.985  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/014.png'
+MOVE RENDER xslash 14
+00:35.695  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/015.png'
+MOVE RENDER xslash 15
+00:37.438  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/016.png'
+MOVE RENDER xslash 16
+00:39.176  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/017.png'
+MOVE RENDER xslash 17
+00:40.860  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/018.png'
+MOVE RENDER xslash 18
+00:42.561  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/019.png'
+MOVE RENDER xslash 19
+00:44.285  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/020.png'
+MOVE RENDER xslash 20
+00:45.993  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/021.png'
+MOVE RENDER xslash 21
+00:47.714  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/022.png'
+MOVE RENDER xslash 22
+00:49.448  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/023.png'
+MOVE RENDER xslash 23
+00:51.129  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/024.png'
+MOVE RENDER xslash 24
+00:52.865  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/025.png'
+MOVE RENDER xslash 25
+00:54.609  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/026.png'
+MOVE RENDER xslash 26
+00:56.334  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/027.png'
+MOVE RENDER xslash 27
+00:58.098  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/028.png'
+MOVE RENDER xslash 28
+00:59.802  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/029.png'
+MOVE RENDER xslash 29
+01:01.529  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/030.png'
+MOVE RENDER xslash 30
+01:03.248  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/031.png'
+MOVE RENDER xslash 31
+01:04.930  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/032.png'
+MOVE RENDER xslash 32
+01:06.621  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/033.png'
+MOVE RENDER xslash 33
+01:08.371  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/034.png'
+MOVE RENDER xslash 34
+01:10.091  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/035.png'
+MOVE RENDER xslash 35
+01:11.803  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/036.png'
+MOVE RENDER xslash 36
+01:13.515  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/037.png'
+MOVE RENDER xslash 37
+01:15.520  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/038.png'
+MOVE RENDER xslash 38
+01:17.279  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/039.png'
+MOVE RENDER xslash 39
+01:19.020  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/040.png'
+MOVE RENDER xslash 40
+01:20.774  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/041.png'
+MOVE RENDER xslash 41
+01:22.529  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/042.png'
+MOVE RENDER xslash 42
+01:24.261  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/043.png'
+MOVE RENDER xslash 43
+01:26.039  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/044.png'
+MOVE RENDER xslash 44
+01:27.736  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/045.png'
+MOVE RENDER xslash 45
+01:29.424  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/046.png'
+MOVE RENDER xslash 46
+01:31.152  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/047.png'
+MOVE RENDER xslash 47
+01:32.873  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/048.png'
+MOVE RENDER xslash 48
+01:34.557  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/049.png'
+MOVE RENDER xslash 49
+01:36.292  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/050.png'
+MOVE RENDER xslash 50
+01:38.003  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/051.png'
+MOVE RENDER xslash 51
+01:39.708  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/052.png'
+MOVE RENDER xslash 52
+01:41.420  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/053.png'
+MOVE RENDER xslash 53
+01:43.154  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/054.png'
+MOVE RENDER xslash 54
+01:44.921  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/055.png'
+MOVE RENDER xslash 55
+01:46.708  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/056.png'
+MOVE RENDER xslash 56
+01:48.449  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/057.png'
+MOVE RENDER xslash 57
+01:50.192  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/058.png'
+MOVE RENDER xslash 58
+01:51.936  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/059.png'
+MOVE RENDER xslash 59
+01:53.689  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/060.png'
+MOVE RENDER xslash 60
+01:55.450  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/061.png'
+MOVE RENDER xslash 61
+01:57.158  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/062.png'
+MOVE RENDER xslash 62
+01:58.884  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/063.png'
+MOVE RENDER xslash 63
+02:00.570  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/064.png'
+MOVE RENDER xslash 64
+02:02.299  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/065.png'
+MOVE RENDER xslash 65
+02:04.004  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/066.png'
+MOVE RENDER xslash 66
+02:05.714  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/067.png'
+MOVE RENDER xslash 67
+02:07.466  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/068.png'
+MOVE RENDER xslash 68
+02:09.192  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/069.png'
+MOVE RENDER xslash 69
+02:10.911  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/070.png'
+MOVE RENDER xslash 70
+02:12.672  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/071.png'
+MOVE RENDER xslash 71
+02:14.402  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/072.png'
+MOVE RENDER xslash 72
+02:16.108  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/073.png'
+MOVE RENDER xslash 73
+02:17.874  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/074.png'
+MOVE RENDER xslash 74
+02:19.615  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/075.png'
+MOVE RENDER xslash 75
+02:21.329  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/076.png'
+MOVE RENDER xslash 76
+02:23.045  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/077.png'
+MOVE RENDER xslash 77
+02:24.763  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/078.png'
+MOVE RENDER xslash 78
+02:26.477  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/079.png'
+MOVE RENDER xslash 79
+02:28.210  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/080.png'
+MOVE RENDER xslash 80
+02:29.942  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/081.png'
+MOVE RENDER xslash 81
+02:31.646  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/082.png'
+MOVE RENDER xslash 82
+02:33.384  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/083.png'
+MOVE RENDER xslash 83
+02:35.117  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/084.png'
+MOVE RENDER xslash 84
+02:36.837  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/085.png'
+MOVE RENDER xslash 85
+02:38.556  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/086.png'
+MOVE RENDER xslash 86
+02:40.272  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/087.png'
+MOVE RENDER xslash 87
+02:41.997  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/088.png'
+MOVE RENDER xslash 88
+02:43.719  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/089.png'
+MOVE RENDER xslash 89
+02:45.459  render           | Saved: 'renders/astra/rehost/xslash/xslash/frames/090.png'
+MOVE RENDER xslash 90
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

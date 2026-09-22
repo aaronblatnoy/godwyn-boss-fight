@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.354  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+{
+  "thrust_samples": [],
+  "pre_armature_surface_polish_offset_m": 0.009049025005040656,
+  "closed_finger_mesh_samples": 2396,
+  "max_closed_finger_hand_local_drift_m": 9.499147937253912e-07,
+  "derived_grip_correction": {},
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 357,
+  "hilt_wrist_distance_range_m": [
+    0.16531510314659137,
+    0.16531556338909892
+  ],
+  "max_hand_local_hilt_drift_m": 6.756979808875275e-07,
+  "max_evaluated_tip_error_m": 6.02714670185944e-07,
+  "max_edge_vs_cut_deg": 29.011678194173665,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    31,
+    38,
+    40,
+    46,
+    54,
+    57,
+    61,
+    90
+  ]
+}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

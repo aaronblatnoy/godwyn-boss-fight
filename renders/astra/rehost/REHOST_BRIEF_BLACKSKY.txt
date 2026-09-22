@@ -1,0 +1,22 @@
+RESUME the Godwyn move rehost, but ALL COMPUTE NOW RUNS ON THE SERVER black-sky. The Mac must only orchestrate.
+
+HARD RULE (project owner's direct instruction): never run Blender, ffmpeg, renders, audits, or any heavy Python on this Mac. Every Blender or ffmpeg command is executed remotely as:
+  ssh black-sky "cd ~/godwyn-boss-fight && blender --background --python-exit-code 1 --python scripts/<script>.py -- <args>"
+  ssh black-sky "cd ~/godwyn-boss-fight && python3 scripts/<script>.py <args>"
+Drop the --gpu-backend metal flag (black-sky is Linux, Blender 5.2.0 LTS, NVIDIA CUDA/OptiX, 2x RTX 3060 Ti, 125 GB RAM, ffmpeg at /usr/bin). Headless EEVEE rendering on black-sky was smoke-tested and works. Use nohup for long remote steps and poll their logs; keep each ssh command non-interactive. Do not copy .blend files back to the Mac. Pull back only small evidence (mp4, contact sheets, json, logs) with scp/rsync into the same relative paths under /Users/aaron_7nh0yzm/godwyn-boss-fight/.
+
+STATE ON BLACK-SKY (~/godwyn-boss-fight, already synced from the Mac):
+- models/astra_character_v2.blend (final published character, read-only), models/astra_move_character_base_v2.blend (its frozen copy), the four old-body models/astra_move_<name>_wip.blend and models/astra_xslash_v2_final_wip.blend (read-only), and the REHOSTED files you already produced on the Mac: models/astra_move_{idle_guard,walk_stalk,lunge_thrust,rising_spin}_v2_wip.blend and models/astra_xslash_v2_final_on_char2_wip.blend.
+- scripts/ (all astra_* scripts incl. your astra_rehost_*.py; ffmpeg paths now resolve from PATH).
+- renders/astra/rehost/<name>/ with the audits, probes, head/hair/collar verification, cloth and head-avoidance fixes, transfer_verification.json and preview sheets you already made. Frame and grip PNG directories were NOT synced.
+- renders/astra/moves/ and renders/astra/char2/ evidence for before-vs-after comparison.
+Original brief for the whole task: renders/astra/rehost/REHOST_BRIEF.txt (read it; all its constraints still apply). Your own log from the Mac run is renders/astra/rehost/codex_rehost.log if you need to recall what you decided.
+
+WHERE YOU STOPPED: the transfer, audits, and head/hair/collar fixes were complete for all five moves and you were in the PREVIEW RENDER stage (previews were slow on the Mac because the rehosts carry the full hair groom). No final MP4s, no REHOST_REPORT.md, no delivery_verification.json exist yet.
+
+DO NOW, on black-sky:
+1. Sanity check: open each of the five rehosted .blend files on black-sky, confirm the armature has 121 bones, the expected action is assigned, frame range matches (96/72/64/116/90), and hair/eyebrow meshes are present and parented/skinned. Re-run astra_move_grip.py and the head/hair/collar verification once there so the evidence chain is regenerated on the machine that renders. If any audit result differs from what you recorded on the Mac, investigate before rendering.
+2. Preview render each move (astra_move_render.py -- <name> preview, then astra_move_package.py <name> preview) to renders/astra/rehost/<name>/, inspect the sheet, then full render + package. Use the GPU; the two cards can run two moves concurrently (CUDA_VISIBLE_DEVICES=0 and =1) if EEVEE picks it up, otherwise run serially. Never lower frame counts; lower samples only if a single move exceeds an hour.
+3. Decode each MP4 and inspect frames. Write renders/astra/rehost/REHOST_REPORT.md and renders/astra/rehost/delivery_verification.json exactly as the original brief specifies (method per move, every numeric check before vs after, new head/hair/collar defects and dispositions, SHA256 of every new .blend and .mp4, honest shortfalls). Include a line stating that all rendering and auditing ran on black-sky.
+4. Copy back to the Mac only: renders/astra/rehost/**/*.mp4, *_sheet.png, *.json, *.log, *.md. Nothing else.
+Do not git commit or push. Do not modify the published character or any old-body file. New scripts stay prefixed astra_rehost_.

@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.402  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+{
+  "thrust_samples": [],
+  "pre_armature_surface_polish_offset_m": 0.01499145885213086,
+  "closed_finger_mesh_samples": 2263,
+  "max_closed_finger_hand_local_drift_m": 8.397886216913592e-07,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3434,
+    "astra_move_palm_sliver_faces": 613,
+    "astra_move_closed_finger_vertices": 2563,
+    "astra_move_max_finger_adjustment_m": 0.10574496241936966,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 289,
+  "hilt_wrist_distance_range_m": [
+    0.1653151016501609,
+    0.16531549072163093
+  ],
+  "max_hand_local_hilt_drift_m": 4.614739260458072e-07,
+  "max_evaluated_tip_error_m": 5.709789761288739e-07,
+  "max_edge_vs_cut_deg": null,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    19,
+    37,
+    55,
+    73
+  ]
+}
+00:17.848  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/grip/001.png'
+00:18.766  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/grip/019.png'
+00:19.650  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/grip/037.png'
+00:20.521  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/grip/055.png'
+00:21.377  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/grip/073.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

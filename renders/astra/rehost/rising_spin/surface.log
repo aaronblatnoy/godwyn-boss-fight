@@ -1,0 +1,14 @@
+00:00.721  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+SURFACE rising_spin 20
+SURFACE rising_spin 40
+SURFACE rising_spin 60
+SURFACE rising_spin 80
+SURFACE rising_spin 100
+SURFACE COMPLETE {"name": "rising_spin", "floor_z": -0.014999999664723873, "sole_vertex_counts": {"Left": 1262, "Right": 1419}, "cloth_vertex_counts": {"phys_robe_front_C": 36, "phys_robe_front_L": 1934, "phys_robe_front_R": 1527, "phys_robe_side_L": 6941, "phys_robe_side_R": 6025, "phys_cape_C": 4444, "phys_cape_L": 9866, "phys_cape_R": 9354}, "old_body": {"sole_min_m": 0.0021514309197664255, "cloth_min_m": 0.0020012430474162096}, "v2_body": {"sole_min_m": 0.0026981113478541374, "cloth_min_m": 0.0020589902997016907, "sole_worst_frame": 22, "cloth_worst_frame": 90}, "planted_penetration_frames": {"Left": [], "Right": []}, "cloth_threshold_m": 0.0020012430474162096, "cloth_same_or_better_with_tolerance": true}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,300 @@
+00:00.900  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "thrust_samples": [
+    {
+      "frame": 25.0,
+      "tip_speed_m_s": 5.196885179244743,
+      "axial_tip_speed_m_s": 5.152835048735142,
+      "tip_velocity_vs_axis_deg": 7.465276760673455
+    },
+    {
+      "frame": 25.25,
+      "tip_speed_m_s": 5.392742504031016,
+      "axial_tip_speed_m_s": 5.34759271889925,
+      "tip_velocity_vs_axis_deg": 7.419346665194368
+    },
+    {
+      "frame": 25.5,
+      "tip_speed_m_s": 5.60743633123572,
+      "axial_tip_speed_m_s": 5.560923652723432,
+      "tip_velocity_vs_axis_deg": 7.384847970854469
+    },
+    {
+      "frame": 25.75,
+      "tip_speed_m_s": 5.833037640252481,
+      "axial_tip_speed_m_s": 5.7844876274466515,
+      "tip_velocity_vs_axis_deg": 7.397565429009741
+    },
+    {
+      "frame": 26.0,
+      "tip_speed_m_s": 6.061713875602555,
+      "axial_tip_speed_m_s": 6.010550081729889,
+      "tip_velocity_vs_axis_deg": 7.449474309529682
+    },
+    {
+      "frame": 26.25,
+      "tip_speed_m_s": 6.286464784919654,
+      "axial_tip_speed_m_s": 6.232125788927078,
+      "tip_velocity_vs_axis_deg": 7.5388184764371475
+    },
+    {
+      "frame": 26.5,
+      "tip_speed_m_s": 6.500719287395013,
+      "axial_tip_speed_m_s": 6.442615505307913,
+      "tip_velocity_vs_axis_deg": 7.666236885196117
+    },
+    {
+      "frame": 26.75,
+      "tip_speed_m_s": 6.6990285507205325,
+      "axial_tip_speed_m_s": 6.636498007923365,
+      "tip_velocity_vs_axis_deg": 7.83459718719799
+    },
+    {
+      "frame": 27.0,
+      "tip_speed_m_s": 6.876469212380118,
+      "axial_tip_speed_m_s": 6.808757200837135,
+      "tip_velocity_vs_axis_deg": 8.04716795205019
+    },
+    {
+      "frame": 27.25,
+      "tip_speed_m_s": 7.0286986829691305,
+      "axial_tip_speed_m_s": 6.954904522746801,
+      "tip_velocity_vs_axis_deg": 8.309842583625887
+    },
+    {
+      "frame": 27.5,
+      "tip_speed_m_s": 7.152269922413998,
+      "axial_tip_speed_m_s": 7.071311376988888,
+      "tip_velocity_vs_axis_deg": 8.62895311760115
+    },
+    {
+      "frame": 27.75,
+      "tip_speed_m_s": 7.244492946767444,
+      "axial_tip_speed_m_s": 7.15509620308876,
+      "tip_velocity_vs_axis_deg": 9.010377483725813
+    },
+    {
+      "frame": 28.0,
+      "tip_speed_m_s": 7.303158058349587,
+      "axial_tip_speed_m_s": 7.203765396028757,
+      "tip_velocity_vs_axis_deg": 9.46351787741715
+    },
+    {
+      "frame": 28.25,
+      "tip_speed_m_s": 7.326825984513313,
+      "axial_tip_speed_m_s": 7.215566512197256,
+      "tip_velocity_vs_axis_deg": 9.997691969309846
+    },
+    {
+      "frame": 28.5,
+      "tip_speed_m_s": 7.315100509046919,
+      "axial_tip_speed_m_s": 7.189768493175507,
+      "tip_velocity_vs_axis_deg": 10.621369498244666
+    },
+    {
+      "frame": 28.75,
+      "tip_speed_m_s": 7.267850670321238,
+      "axial_tip_speed_m_s": 7.1258105635643005,
+      "tip_velocity_vs_axis_deg": 11.34620108988378
+    },
+    {
+      "frame": 29.0,
+      "tip_speed_m_s": 7.177559060790813,
+      "axial_tip_speed_m_s": 7.015370652079582,
+      "tip_velocity_vs_axis_deg": 12.2034028478888
+    },
+    {
+      "frame": 29.25,
+      "tip_speed_m_s": 7.038377332629643,
+      "axial_tip_speed_m_s": 6.851668782532215,
+      "tip_velocity_vs_axis_deg": 13.22660724498113
+    },
+    {
+      "frame": 29.5,
+      "tip_speed_m_s": 6.8624039915973984,
+      "axial_tip_speed_m_s": 6.64632773399353,
+      "tip_velocity_vs_axis_deg": 14.416150695088033
+    },
+    {
+      "frame": 29.75,
+      "tip_speed_m_s": 6.661673856762685,
+      "axial_tip_speed_m_s": 6.410879194736481,
+      "tip_velocity_vs_axis_deg": 15.77165732332117
+    },
+    {
+      "frame": 30.0,
+      "tip_speed_m_s": 6.440224668118696,
+      "axial_tip_speed_m_s": 6.148424811661243,
+      "tip_velocity_vs_axis_deg": 17.31342660907223
+    },
+    {
+      "frame": 30.25,
+      "tip_speed_m_s": 6.202797057085341,
+      "axial_tip_speed_m_s": 5.862716518342495,
+      "tip_velocity_vs_axis_deg": 19.060701824352748
+    },
+    {
+      "frame": 30.5,
+      "tip_speed_m_s": 5.954814012975759,
+      "axial_tip_speed_m_s": 5.558175057172775,
+      "tip_velocity_vs_axis_deg": 21.030119787781015
+    },
+    {
+      "frame": 30.75,
+      "tip_speed_m_s": 5.70230896742258,
+      "axial_tip_speed_m_s": 5.23982597142458,
+      "tip_velocity_vs_axis_deg": 23.234869676324678
+    },
+    {
+      "frame": 31.0,
+      "tip_speed_m_s": 5.404117735667194,
+      "axial_tip_speed_m_s": 4.909438151866198,
+      "tip_velocity_vs_axis_deg": 24.706269700357463
+    },
+    {
+      "frame": 31.25,
+      "tip_speed_m_s": 5.015948558484085,
+      "axial_tip_speed_m_s": 4.570106737315655,
+      "tip_velocity_vs_axis_deg": 24.340097956286264
+    },
+    {
+      "frame": 31.5,
+      "tip_speed_m_s": 4.596278118570668,
+      "axial_tip_speed_m_s": 4.23359052464366,
+      "tip_velocity_vs_axis_deg": 22.913899229916048
+    },
+    {
+      "frame": 31.75,
+      "tip_speed_m_s": 4.201273365825461,
+      "axial_tip_speed_m_s": 3.9121877141296864,
+      "tip_velocity_vs_axis_deg": 21.37877002897183
+    },
+    {
+      "frame": 32.0,
+      "tip_speed_m_s": 3.838147012140097,
+      "axial_tip_speed_m_s": 3.614312019199133,
+      "tip_velocity_vs_axis_deg": 19.664104408658048
+    },
+    {
+      "frame": 32.25,
+      "tip_speed_m_s": 3.515068841494251,
+      "axial_tip_speed_m_s": 3.3488894253969193,
+      "tip_velocity_vs_axis_deg": 17.688287541923415
+    },
+    {
+      "frame": 32.5,
+      "tip_speed_m_s": 3.241783729367528,
+      "axial_tip_speed_m_s": 3.1257735528051853,
+      "tip_velocity_vs_axis_deg": 15.374369954299643
+    },
+    {
+      "frame": 32.75,
+      "tip_speed_m_s": 3.029579186335463,
+      "axial_tip_speed_m_s": 2.955634668469429,
+      "tip_velocity_vs_axis_deg": 12.68488908186127
+    },
+    {
+      "frame": 33.0,
+      "tip_speed_m_s": 2.879089574786945,
+      "axial_tip_speed_m_s": 2.8372173216193914,
+      "tip_velocity_vs_axis_deg": 9.783645653970963
+    },
+    {
+      "frame": 33.25,
+      "tip_speed_m_s": 2.7435919406567066,
+      "axial_tip_speed_m_s": 2.7214424926787615,
+      "tip_velocity_vs_axis_deg": 7.28539176167709
+    },
+    {
+      "frame": 33.5,
+      "tip_speed_m_s": 2.571928346863974,
+      "axial_tip_speed_m_s": 2.559252698905766,
+      "tip_velocity_vs_axis_deg": 5.690752762268576
+    },
+    {
+      "frame": 33.75,
+      "tip_speed_m_s": 2.3585333080703546,
+      "axial_tip_speed_m_s": 2.3493050215765834,
+      "tip_velocity_vs_axis_deg": 5.070128008154977
+    },
+    {
+      "frame": 34.0,
+      "tip_speed_m_s": 2.1120171794378915,
+      "axial_tip_speed_m_s": 2.102134299464524,
+      "tip_velocity_vs_axis_deg": 5.544978934717219
+    },
+    {
+      "frame": 34.25,
+      "tip_speed_m_s": 1.8477372198126105,
+      "axial_tip_speed_m_s": 1.8280982123687863,
+      "tip_velocity_vs_axis_deg": 8.361096610368373
+    },
+    {
+      "frame": 34.5,
+      "tip_speed_m_s": 1.6002721007510041,
+      "axial_tip_speed_m_s": 1.5368664395064116,
+      "tip_velocity_vs_axis_deg": 16.182639248528577
+    },
+    {
+      "frame": 34.75,
+      "tip_speed_m_s": 1.4436110817762413,
+      "axial_tip_speed_m_s": 1.2367832232266665,
+      "tip_velocity_vs_axis_deg": 31.04874106500698
+    },
+    {
+      "frame": 35.0,
+      "tip_speed_m_s": 1.4789593936421819,
+      "axial_tip_speed_m_s": 0.9377861693501472,
+      "tip_velocity_vs_axis_deg": 50.647834821538325
+    }
+  ],
+  "pre_armature_surface_polish_offset_m": 0.014991547365497043,
+  "closed_finger_mesh_samples": 2263,
+  "max_closed_finger_hand_local_drift_m": 1.2678130723585776e-06,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3434,
+    "astra_move_palm_sliver_faces": 613,
+    "astra_move_closed_finger_vertices": 2563,
+    "astra_move_max_finger_adjustment_m": 0.10574496241936966,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 253,
+  "hilt_wrist_distance_range_m": [
+    0.16531500394202342,
+    0.1653156437972366
+  ],
+  "max_hand_local_hilt_drift_m": 9.372003565071908e-07,
+  "max_evaluated_tip_error_m": 6.47643620136402e-07,
+  "max_edge_vs_cut_deg": null,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    17,
+    29,
+    33,
+    37,
+    41,
+    45,
+    49,
+    57,
+    64
+  ]
+}
+00:12.392  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/001.png'
+00:15.619  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/017.png'
+00:19.038  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/029.png'
+00:21.824  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/033.png'
+00:24.616  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/037.png'
+00:28.104  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/041.png'
+00:31.329  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/045.png'
+00:34.443  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/049.png'
+00:37.505  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/057.png'
+00:40.636  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/grip/064.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

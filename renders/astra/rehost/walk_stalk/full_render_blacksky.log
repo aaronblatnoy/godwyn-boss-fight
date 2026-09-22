@@ -1,0 +1,163 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.300  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+00:11.230  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER walk_stalk 1
+00:12.635  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/002.png'
+MOVE RENDER walk_stalk 2
+00:14.057  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/003.png'
+MOVE RENDER walk_stalk 3
+00:15.476  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/004.png'
+MOVE RENDER walk_stalk 4
+00:16.885  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/005.png'
+MOVE RENDER walk_stalk 5
+00:18.293  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/006.png'
+MOVE RENDER walk_stalk 6
+00:19.715  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/007.png'
+MOVE RENDER walk_stalk 7
+00:21.134  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/008.png'
+MOVE RENDER walk_stalk 8
+00:22.513  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/009.png'
+MOVE RENDER walk_stalk 9
+00:23.921  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/010.png'
+MOVE RENDER walk_stalk 10
+00:25.318  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/011.png'
+MOVE RENDER walk_stalk 11
+00:26.710  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/012.png'
+MOVE RENDER walk_stalk 12
+00:28.100  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/013.png'
+MOVE RENDER walk_stalk 13
+00:29.501  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/014.png'
+MOVE RENDER walk_stalk 14
+00:30.895  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/015.png'
+MOVE RENDER walk_stalk 15
+00:32.299  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/016.png'
+MOVE RENDER walk_stalk 16
+00:33.701  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/017.png'
+MOVE RENDER walk_stalk 17
+00:35.095  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/018.png'
+MOVE RENDER walk_stalk 18
+00:36.494  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/019.png'
+MOVE RENDER walk_stalk 19
+00:37.865  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/020.png'
+MOVE RENDER walk_stalk 20
+00:39.259  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/021.png'
+MOVE RENDER walk_stalk 21
+00:40.661  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/022.png'
+MOVE RENDER walk_stalk 22
+00:42.058  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/023.png'
+MOVE RENDER walk_stalk 23
+00:43.449  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/024.png'
+MOVE RENDER walk_stalk 24
+00:44.833  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/025.png'
+MOVE RENDER walk_stalk 25
+00:46.238  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/026.png'
+MOVE RENDER walk_stalk 26
+00:47.631  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/027.png'
+MOVE RENDER walk_stalk 27
+00:49.042  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/028.png'
+MOVE RENDER walk_stalk 28
+00:50.411  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/029.png'
+MOVE RENDER walk_stalk 29
+00:51.809  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/030.png'
+MOVE RENDER walk_stalk 30
+00:53.213  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/031.png'
+MOVE RENDER walk_stalk 31
+00:54.603  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/032.png'
+MOVE RENDER walk_stalk 32
+00:55.991  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/033.png'
+MOVE RENDER walk_stalk 33
+00:57.402  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/034.png'
+MOVE RENDER walk_stalk 34
+00:58.798  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/035.png'
+MOVE RENDER walk_stalk 35
+01:00.203  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/036.png'
+MOVE RENDER walk_stalk 36
+01:01.609  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/037.png'
+MOVE RENDER walk_stalk 37
+01:02.981  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/038.png'
+MOVE RENDER walk_stalk 38
+01:04.384  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/039.png'
+MOVE RENDER walk_stalk 39
+01:05.766  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/040.png'
+MOVE RENDER walk_stalk 40
+01:07.145  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/041.png'
+MOVE RENDER walk_stalk 41
+01:08.545  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/042.png'
+MOVE RENDER walk_stalk 42
+01:09.923  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/043.png'
+MOVE RENDER walk_stalk 43
+01:11.343  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/044.png'
+MOVE RENDER walk_stalk 44
+01:12.757  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/045.png'
+MOVE RENDER walk_stalk 45
+01:14.170  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/046.png'
+MOVE RENDER walk_stalk 46
+01:15.586  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/047.png'
+MOVE RENDER walk_stalk 47
+01:16.967  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/048.png'
+MOVE RENDER walk_stalk 48
+01:18.366  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/049.png'
+MOVE RENDER walk_stalk 49
+01:19.762  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/050.png'
+MOVE RENDER walk_stalk 50
+01:21.123  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/051.png'
+MOVE RENDER walk_stalk 51
+01:22.518  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/052.png'
+MOVE RENDER walk_stalk 52
+01:23.899  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/053.png'
+MOVE RENDER walk_stalk 53
+01:25.295  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/054.png'
+MOVE RENDER walk_stalk 54
+01:26.712  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/055.png'
+MOVE RENDER walk_stalk 55
+01:28.086  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/056.png'
+MOVE RENDER walk_stalk 56
+01:29.470  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/057.png'
+MOVE RENDER walk_stalk 57
+01:30.869  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/058.png'
+MOVE RENDER walk_stalk 58
+01:32.257  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/059.png'
+MOVE RENDER walk_stalk 59
+01:33.643  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/060.png'
+MOVE RENDER walk_stalk 60
+01:35.029  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/061.png'
+MOVE RENDER walk_stalk 61
+01:36.420  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/062.png'
+MOVE RENDER walk_stalk 62
+01:37.836  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/063.png'
+MOVE RENDER walk_stalk 63
+01:39.242  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/064.png'
+MOVE RENDER walk_stalk 64
+01:40.629  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/065.png'
+MOVE RENDER walk_stalk 65
+01:42.027  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/066.png'
+MOVE RENDER walk_stalk 66
+01:43.422  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/067.png'
+MOVE RENDER walk_stalk 67
+01:44.855  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/068.png'
+MOVE RENDER walk_stalk 68
+01:46.279  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/069.png'
+MOVE RENDER walk_stalk 69
+01:47.682  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/070.png'
+MOVE RENDER walk_stalk 70
+01:49.059  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/071.png'
+MOVE RENDER walk_stalk 71
+01:50.478  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/frames/072.png'
+MOVE RENDER walk_stalk 72
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

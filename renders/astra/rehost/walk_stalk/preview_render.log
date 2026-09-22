@@ -1,0 +1,34 @@
+00:01.174  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+00:13.776  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/001.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+MOVE RENDER walk_stalk 1
+00:19.703  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/007.png'
+MOVE RENDER walk_stalk 7
+00:26.675  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/013.png'
+MOVE RENDER walk_stalk 13
+00:34.357  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/019.png'
+MOVE RENDER walk_stalk 19
+00:42.310  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/025.png'
+MOVE RENDER walk_stalk 25
+00:49.341  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/031.png'
+MOVE RENDER walk_stalk 31
+00:56.495  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/037.png'
+MOVE RENDER walk_stalk 37
+01:02.003  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/043.png'
+MOVE RENDER walk_stalk 43
+01:07.554  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/049.png'
+MOVE RENDER walk_stalk 49
+01:13.657  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/055.png'
+MOVE RENDER walk_stalk 55
+01:19.474  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/061.png'
+MOVE RENDER walk_stalk 61
+01:25.853  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/067.png'
+MOVE RENDER walk_stalk 67
+01:31.747  render           | Saved: 'renders/astra/rehost/walk_stalk/walk_stalk/preview/073.png'
+MOVE RENDER walk_stalk 73
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

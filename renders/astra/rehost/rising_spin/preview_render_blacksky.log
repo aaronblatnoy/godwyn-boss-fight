@@ -1,0 +1,57 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.313  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+00:12.166  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER rising_spin 1
+00:13.854  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/016.png'
+MOVE RENDER rising_spin 16
+00:15.380  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/022.png'
+MOVE RENDER rising_spin 22
+00:20.709  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/024.png'
+MOVE RENDER rising_spin 24
+00:22.006  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/026.png'
+MOVE RENDER rising_spin 26
+00:23.340  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/028.png'
+MOVE RENDER rising_spin 28
+00:24.683  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/030.png'
+MOVE RENDER rising_spin 30
+00:25.996  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/032.png'
+MOVE RENDER rising_spin 32
+00:27.369  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/034.png'
+MOVE RENDER rising_spin 34
+00:28.701  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/036.png'
+MOVE RENDER rising_spin 36
+00:30.036  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/038.png'
+MOVE RENDER rising_spin 38
+00:31.353  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/040.png'
+MOVE RENDER rising_spin 40
+00:32.671  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/048.png'
+MOVE RENDER rising_spin 48
+00:33.941  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/060.png'
+MOVE RENDER rising_spin 60
+00:35.197  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/072.png'
+MOVE RENDER rising_spin 72
+00:36.411  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/084.png'
+MOVE RENDER rising_spin 84
+00:37.644  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/096.png'
+MOVE RENDER rising_spin 96
+00:38.896  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/104.png'
+MOVE RENDER rising_spin 104
+00:40.018  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/preview/116.png'
+MOVE RENDER rising_spin 116
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

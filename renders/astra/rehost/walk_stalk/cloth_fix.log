@@ -1,0 +1,20 @@
+00:02.400  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+Info: Saved as "astra_move_walk_stalk_v2_wip.blend"
+CLOTH FIX COMPLETE walk_stalk {"phys_robe_side_L": {"vertices": 6941, "max_requested_lift_m": 0.0014024511456489557}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
+00:01.149  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+Info: Saved as "astra_move_walk_stalk_v2_wip.blend"
+CLOTH FIX COMPLETE walk_stalk {"phys_robe_side_L": {"vertices": 6941, "max_requested_lift_m": 0.0008108122898638238}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

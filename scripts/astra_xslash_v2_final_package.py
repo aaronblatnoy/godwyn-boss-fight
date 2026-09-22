@@ -11,7 +11,7 @@ FINAL = ROOT / 'renders/astra/godwyn_xslash_v2_final.mp4'
 
 
 def ffmpeg(args):
-    subprocess.run(['/opt/homebrew/bin/ffmpeg', '-hide_banner', '-loglevel', 'error', '-y'] + args, check=True)
+    subprocess.run([(__import__('shutil').which('ffmpeg') or '/opt/homebrew/bin/ffmpeg'), '-hide_banner', '-loglevel', 'error', '-y'] + args, check=True)
 
 
 def main():
@@ -43,7 +43,7 @@ def main():
             '-fps_mode', 'vfr', str(OUT / 'decoded_sheet_%02d.png')])
     ffmpeg(['-v', 'error', '-xerror', '-i', str(FINAL), '-f', 'null', '-'])
     probe = json.loads(subprocess.check_output([
-        '/opt/homebrew/bin/ffprobe', '-v', 'error', '-count_frames', '-show_streams',
+        (__import__('shutil').which('ffprobe') or '/opt/homebrew/bin/ffprobe'), '-v', 'error', '-count_frames', '-show_streams',
         '-show_format', '-of', 'json', str(FINAL)], text=True))
     video = next(s for s in probe['streams'] if s['codec_type'] == 'video')
     assert video['codec_name'] == 'h264' and video['pix_fmt'] == 'yuv420p'

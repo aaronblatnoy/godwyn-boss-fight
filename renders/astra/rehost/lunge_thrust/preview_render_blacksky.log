@@ -1,0 +1,63 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.324  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_lunge_thrust_v2_wip.blend"
+00:12.976  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER lunge_thrust 1
+00:14.574  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/011.png'
+MOVE RENDER lunge_thrust 11
+00:15.887  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/017.png'
+MOVE RENDER lunge_thrust 17
+00:17.103  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/021.png'
+MOVE RENDER lunge_thrust 21
+00:18.223  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/023.png'
+MOVE RENDER lunge_thrust 23
+00:19.593  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/025.png'
+MOVE RENDER lunge_thrust 25
+00:20.753  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/027.png'
+MOVE RENDER lunge_thrust 27
+00:22.131  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/029.png'
+MOVE RENDER lunge_thrust 29
+00:23.465  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/031.png'
+MOVE RENDER lunge_thrust 31
+00:24.783  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/033.png'
+MOVE RENDER lunge_thrust 33
+00:26.117  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/035.png'
+MOVE RENDER lunge_thrust 35
+00:27.392  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/037.png'
+MOVE RENDER lunge_thrust 37
+00:28.753  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/039.png'
+MOVE RENDER lunge_thrust 39
+00:30.074  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/041.png'
+MOVE RENDER lunge_thrust 41
+00:31.399  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/043.png'
+MOVE RENDER lunge_thrust 43
+00:32.715  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/045.png'
+MOVE RENDER lunge_thrust 45
+00:34.074  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/047.png'
+MOVE RENDER lunge_thrust 47
+00:35.386  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/049.png'
+MOVE RENDER lunge_thrust 49
+00:36.650  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/053.png'
+MOVE RENDER lunge_thrust 53
+00:37.881  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/057.png'
+MOVE RENDER lunge_thrust 57
+00:39.127  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/061.png'
+MOVE RENDER lunge_thrust 61
+00:40.373  render           | Saved: 'renders/astra/rehost/lunge_thrust/lunge_thrust/preview/064.png'
+MOVE RENDER lunge_thrust 64
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

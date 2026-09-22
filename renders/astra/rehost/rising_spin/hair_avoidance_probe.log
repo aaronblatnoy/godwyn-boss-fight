@@ -1,0 +1,80 @@
+00:01.073  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+[
+  {
+    "additional_world_z_deg": -60,
+    "clearance_proxy_m": -0.05123064089050902,
+    "sampled_exact_surface_clearance_m": 0.15783685851097107
+  },
+  {
+    "additional_world_z_deg": -45,
+    "clearance_proxy_m": -0.033553398958984876,
+    "sampled_exact_surface_clearance_m": 0.1653079878091812
+  },
+  {
+    "additional_world_z_deg": -30,
+    "clearance_proxy_m": -0.022488879586619936,
+    "sampled_exact_surface_clearance_m": 0.16542819547653198
+  },
+  {
+    "additional_world_z_deg": -20,
+    "clearance_proxy_m": -0.02001650288617869,
+    "sampled_exact_surface_clearance_m": 0.16077235746383667
+  },
+  {
+    "additional_world_z_deg": -15,
+    "clearance_proxy_m": -0.01947997410458538,
+    "sampled_exact_surface_clearance_m": 0.14799574422836304
+  },
+  {
+    "additional_world_z_deg": -10,
+    "clearance_proxy_m": -0.0171683126018064,
+    "sampled_exact_surface_clearance_m": 0.13428695905208587
+  },
+  {
+    "additional_world_z_deg": 0,
+    "clearance_proxy_m": -0.014882840649696331,
+    "sampled_exact_surface_clearance_m": 0.09587140786647796
+  },
+  {
+    "additional_world_z_deg": 10,
+    "clearance_proxy_m": -0.010466386525873337,
+    "sampled_exact_surface_clearance_m": 0.05625281515717506
+  },
+  {
+    "additional_world_z_deg": 15,
+    "clearance_proxy_m": -0.012487439215486755,
+    "sampled_exact_surface_clearance_m": 0.032655477851629255
+  },
+  {
+    "additional_world_z_deg": 20,
+    "clearance_proxy_m": -0.01815419993051759,
+    "sampled_exact_surface_clearance_m": 0.01322847544401884
+  },
+  {
+    "additional_world_z_deg": 30,
+    "clearance_proxy_m": -0.03096779229463996,
+    "sampled_exact_surface_clearance_m": -0.0016152138628531248
+  },
+  {
+    "additional_world_z_deg": 45,
+    "clearance_proxy_m": -0.023702575358640343,
+    "sampled_exact_surface_clearance_m": -0.0019984451296768384
+  },
+  {
+    "additional_world_z_deg": 60,
+    "clearance_proxy_m": -0.03212522980691834,
+    "sampled_exact_surface_clearance_m": 0.031523831516504286
+  },
+  {
+    "additional_world_z_deg": 90,
+    "clearance_proxy_m": -0.06568255389296512,
+    "sampled_exact_surface_clearance_m": 0.15481828558444977
+  }
+]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

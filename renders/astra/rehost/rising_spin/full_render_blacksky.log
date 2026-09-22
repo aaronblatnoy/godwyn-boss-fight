@@ -1,0 +1,251 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.326  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+00:11.862  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/001.png'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MOVE RENDER rising_spin 1
+00:13.625  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/002.png'
+MOVE RENDER rising_spin 2
+00:15.352  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/003.png'
+MOVE RENDER rising_spin 3
+00:17.144  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/004.png'
+MOVE RENDER rising_spin 4
+00:18.870  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/005.png'
+MOVE RENDER rising_spin 5
+00:20.632  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/006.png'
+MOVE RENDER rising_spin 6
+00:22.403  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/007.png'
+MOVE RENDER rising_spin 7
+00:24.173  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/008.png'
+MOVE RENDER rising_spin 8
+00:25.977  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/009.png'
+MOVE RENDER rising_spin 9
+00:27.745  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/010.png'
+MOVE RENDER rising_spin 10
+00:29.478  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/011.png'
+MOVE RENDER rising_spin 11
+00:31.224  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/012.png'
+MOVE RENDER rising_spin 12
+00:32.974  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/013.png'
+MOVE RENDER rising_spin 13
+00:34.746  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/014.png'
+MOVE RENDER rising_spin 14
+00:36.524  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/015.png'
+MOVE RENDER rising_spin 15
+00:38.274  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/016.png'
+MOVE RENDER rising_spin 16
+00:40.070  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/017.png'
+MOVE RENDER rising_spin 17
+00:41.798  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/018.png'
+MOVE RENDER rising_spin 18
+00:43.565  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/019.png'
+MOVE RENDER rising_spin 19
+00:45.321  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/020.png'
+MOVE RENDER rising_spin 20
+00:47.081  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/021.png'
+MOVE RENDER rising_spin 21
+00:48.819  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/022.png'
+MOVE RENDER rising_spin 22
+00:50.581  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/023.png'
+MOVE RENDER rising_spin 23
+00:52.618  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/024.png'
+MOVE RENDER rising_spin 24
+00:54.449  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/025.png'
+MOVE RENDER rising_spin 25
+00:56.261  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/026.png'
+MOVE RENDER rising_spin 26
+00:58.079  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/027.png'
+MOVE RENDER rising_spin 27
+00:59.896  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/028.png'
+MOVE RENDER rising_spin 28
+01:01.670  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/029.png'
+MOVE RENDER rising_spin 29
+01:03.516  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/030.png'
+MOVE RENDER rising_spin 30
+01:05.294  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/031.png'
+MOVE RENDER rising_spin 31
+01:07.104  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/032.png'
+MOVE RENDER rising_spin 32
+01:08.928  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/033.png'
+MOVE RENDER rising_spin 33
+01:10.735  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/034.png'
+MOVE RENDER rising_spin 34
+01:12.565  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/035.png'
+MOVE RENDER rising_spin 35
+01:14.393  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/036.png'
+MOVE RENDER rising_spin 36
+01:16.197  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/037.png'
+MOVE RENDER rising_spin 37
+01:18.019  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/038.png'
+MOVE RENDER rising_spin 38
+01:19.807  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/039.png'
+MOVE RENDER rising_spin 39
+01:21.627  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/040.png'
+MOVE RENDER rising_spin 40
+01:23.380  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/041.png'
+MOVE RENDER rising_spin 41
+01:25.186  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/042.png'
+MOVE RENDER rising_spin 42
+01:26.952  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/043.png'
+MOVE RENDER rising_spin 43
+01:28.711  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/044.png'
+MOVE RENDER rising_spin 44
+01:30.492  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/045.png'
+MOVE RENDER rising_spin 45
+01:32.229  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/046.png'
+MOVE RENDER rising_spin 46
+01:33.985  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/047.png'
+MOVE RENDER rising_spin 47
+01:35.753  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/048.png'
+MOVE RENDER rising_spin 48
+01:37.511  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/049.png'
+MOVE RENDER rising_spin 49
+01:39.263  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/050.png'
+MOVE RENDER rising_spin 50
+01:41.002  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/051.png'
+MOVE RENDER rising_spin 51
+01:42.733  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/052.png'
+MOVE RENDER rising_spin 52
+01:44.458  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/053.png'
+MOVE RENDER rising_spin 53
+01:46.198  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/054.png'
+MOVE RENDER rising_spin 54
+01:47.908  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/055.png'
+MOVE RENDER rising_spin 55
+01:49.691  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/056.png'
+MOVE RENDER rising_spin 56
+01:51.406  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/057.png'
+MOVE RENDER rising_spin 57
+01:53.143  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/058.png'
+MOVE RENDER rising_spin 58
+01:54.906  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/059.png'
+MOVE RENDER rising_spin 59
+01:56.683  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/060.png'
+MOVE RENDER rising_spin 60
+01:58.436  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/061.png'
+MOVE RENDER rising_spin 61
+02:00.155  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/062.png'
+MOVE RENDER rising_spin 62
+02:01.936  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/063.png'
+MOVE RENDER rising_spin 63
+02:03.719  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/064.png'
+MOVE RENDER rising_spin 64
+02:05.464  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/065.png'
+MOVE RENDER rising_spin 65
+02:07.240  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/066.png'
+MOVE RENDER rising_spin 66
+02:09.012  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/067.png'
+MOVE RENDER rising_spin 67
+02:10.759  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/068.png'
+MOVE RENDER rising_spin 68
+02:12.495  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/069.png'
+MOVE RENDER rising_spin 69
+02:14.257  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/070.png'
+MOVE RENDER rising_spin 70
+02:16.010  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/071.png'
+MOVE RENDER rising_spin 71
+02:17.771  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/072.png'
+MOVE RENDER rising_spin 72
+02:19.499  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/073.png'
+MOVE RENDER rising_spin 73
+02:21.231  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/074.png'
+MOVE RENDER rising_spin 74
+02:22.969  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/075.png'
+MOVE RENDER rising_spin 75
+02:24.740  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/076.png'
+MOVE RENDER rising_spin 76
+02:26.510  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/077.png'
+MOVE RENDER rising_spin 77
+02:28.255  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/078.png'
+MOVE RENDER rising_spin 78
+02:29.985  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/079.png'
+MOVE RENDER rising_spin 79
+02:31.745  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/080.png'
+MOVE RENDER rising_spin 80
+02:33.501  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/081.png'
+MOVE RENDER rising_spin 81
+02:35.223  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/082.png'
+MOVE RENDER rising_spin 82
+02:36.974  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/083.png'
+MOVE RENDER rising_spin 83
+02:38.743  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/084.png'
+MOVE RENDER rising_spin 84
+02:40.490  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/085.png'
+MOVE RENDER rising_spin 85
+02:42.281  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/086.png'
+MOVE RENDER rising_spin 86
+02:44.046  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/087.png'
+MOVE RENDER rising_spin 87
+02:45.825  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/088.png'
+MOVE RENDER rising_spin 88
+02:47.581  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/089.png'
+MOVE RENDER rising_spin 89
+02:49.313  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/090.png'
+MOVE RENDER rising_spin 90
+02:51.134  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/091.png'
+MOVE RENDER rising_spin 91
+02:52.893  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/092.png'
+MOVE RENDER rising_spin 92
+02:54.641  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/093.png'
+MOVE RENDER rising_spin 93
+02:56.369  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/094.png'
+MOVE RENDER rising_spin 94
+02:58.101  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/095.png'
+MOVE RENDER rising_spin 95
+02:59.868  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/096.png'
+MOVE RENDER rising_spin 96
+03:01.610  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/097.png'
+MOVE RENDER rising_spin 97
+03:03.368  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/098.png'
+MOVE RENDER rising_spin 98
+03:05.133  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/099.png'
+MOVE RENDER rising_spin 99
+03:06.874  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/100.png'
+MOVE RENDER rising_spin 100
+03:08.587  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/101.png'
+MOVE RENDER rising_spin 101
+03:10.342  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/102.png'
+MOVE RENDER rising_spin 102
+03:12.081  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/103.png'
+MOVE RENDER rising_spin 103
+03:13.827  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/104.png'
+MOVE RENDER rising_spin 104
+03:15.609  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/105.png'
+MOVE RENDER rising_spin 105
+03:17.353  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/106.png'
+MOVE RENDER rising_spin 106
+03:19.089  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/107.png'
+MOVE RENDER rising_spin 107
+03:20.867  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/108.png'
+MOVE RENDER rising_spin 108
+03:22.624  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/109.png'
+MOVE RENDER rising_spin 109
+03:24.366  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/110.png'
+MOVE RENDER rising_spin 110
+03:26.135  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/111.png'
+MOVE RENDER rising_spin 111
+03:27.889  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/112.png'
+MOVE RENDER rising_spin 112
+03:29.630  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/113.png'
+MOVE RENDER rising_spin 113
+03:31.396  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/114.png'
+MOVE RENDER rising_spin 114
+03:33.162  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/115.png'
+MOVE RENDER rising_spin 115
+03:34.933  render           | Saved: 'renders/astra/rehost/rising_spin/rising_spin/frames/116.png'
+MOVE RENDER rising_spin 116
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

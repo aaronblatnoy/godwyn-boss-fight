@@ -1,0 +1,34 @@
+{
+  "name": "walk_stalk",
+  "floor_z": -0.014999999664723873,
+  "sole_vertex_counts": {
+    "Left": 1262,
+    "Right": 1419
+  },
+  "cloth_vertex_counts": {
+    "phys_robe_front_C": 36,
+    "phys_robe_front_L": 1934,
+    "phys_robe_front_R": 1527,
+    "phys_robe_side_L": 6941,
+    "phys_robe_side_R": 6025,
+    "phys_cape_C": 4444,
+    "phys_cape_L": 9866,
+    "phys_cape_R": 9354
+  },
+  "old_body": {
+    "sole_min_m": 0.001671872437000274,
+    "cloth_min_m": 0.0009464289620518679
+  },
+  "v2_body": {
+    "sole_min_m": 0.0018832357600331306,
+    "cloth_min_m": 0.001032860018312931,
+    "sole_worst_frame": 8,
+    "cloth_worst_frame": 27
+  },
+  "planted_penetration_frames": {
+    "Left": [],
+    "Right": []
+  },
+  "cloth_threshold_m": 0.0009464289620518679,
+  "cloth_same_or_better_with_tolerance": true
+}

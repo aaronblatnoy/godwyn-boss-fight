@@ -1,0 +1,41 @@
+{
+  "name": "lunge_thrust",
+  "method": "complete source staging scene retained; old character replaced by full published char2 assembly; action copied without retargeting",
+  "base": "models/astra_move_character_base_v2.blend",
+  "base_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386",
+  "action_source": "models/astra_move_lunge_thrust_wip.blend",
+  "action_source_sha256": "acb7d7b729f06e466313703e944ff4873bf871e06b40ab6b8c420ae92a935f45",
+  "output": "models/astra_move_lunge_thrust_v2_wip.blend",
+  "output_sha256": "b7a1d6a2fcb852f62217a313fb2f442c73e615660abbe143083ab7cf530ad352",
+  "bone_count": 121,
+  "rest_matrix_max_error": 0.0,
+  "quarter_frame_pose_matrix_max_error": 0.0,
+  "action_digest": "06e6ed299462d7204ccdc39d0bd316bb5dca62832c0725f8bde71ca40150ccc8",
+  "action_data_identical": true,
+  "action_fcurves": 847,
+  "action_keys": 214291,
+  "samples_end": 64,
+  "render_frame_end": 64,
+  "character_objects_retained": 139,
+  "final_scene_objects": 157,
+  "grip_repair": {
+    "astra_move_palm_sliver_faces": 613,
+    "astra_move_hilt_envelope_m": 0.029374360874295236,
+    "astra_move_closed_finger_vertices": 2563,
+    "astra_move_max_finger_adjustment_m": 0.10574496241936966,
+    "astra_move_grip_clean": true,
+    "astra_move_gold_palm_faces": 3434
+  },
+  "blue_material_override": [
+    {
+      "material": "Astra Round2 royal blue undersleeves",
+      "status": "override added"
+    },
+    {
+      "material": "Astra Round2 royal blue and continuous gold trim",
+      "status": "override added"
+    }
+  ],
+  "source_files_unchanged": true,
+  "blender_version": "5.2.1 LTS"
+}

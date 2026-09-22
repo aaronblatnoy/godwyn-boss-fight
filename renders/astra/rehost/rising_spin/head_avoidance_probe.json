@@ -1,0 +1,380 @@
+[
+  {
+    "y_deg": -45,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.19097217917442322
+  },
+  {
+    "y_deg": 45,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18953169882297516
+  },
+  {
+    "y_deg": -35,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18855327367782593
+  },
+  {
+    "y_deg": 35,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18585984408855438
+  },
+  {
+    "y_deg": -25,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1857677400112152
+  },
+  {
+    "y_deg": 25,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1820789873600006
+  },
+  {
+    "y_deg": -15,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18171899020671844
+  },
+  {
+    "y_deg": 15,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.17830020189285278
+  },
+  {
+    "y_deg": 0,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1756623387336731
+  },
+  {
+    "y_deg": 0,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1729135513305664
+  },
+  {
+    "y_deg": 15,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.17004622519016266
+  },
+  {
+    "y_deg": 25,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1668107509613037
+  },
+  {
+    "y_deg": -15,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16663753986358643
+  },
+  {
+    "y_deg": 35,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16323386132717133
+  },
+  {
+    "y_deg": -25,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16254214942455292
+  },
+  {
+    "y_deg": 45,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.15756219625473022
+  },
+  {
+    "y_deg": -35,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.15001517534255981
+  },
+  {
+    "y_deg": -45,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.13741222023963928
+  },
+  {
+    "y_deg": 45,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1310054212808609
+  },
+  {
+    "y_deg": -45,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1266193687915802
+  },
+  {
+    "y_deg": 35,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.12593689560890198
+  },
+  {
+    "y_deg": -35,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.12161543220281601
+  },
+  {
+    "y_deg": 25,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.12065085023641586
+  },
+  {
+    "y_deg": -25,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.11643215268850327
+  },
+  {
+    "y_deg": 15,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.11523711681365967
+  },
+  {
+    "y_deg": -15,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.11137465387582779
+  },
+  {
+    "y_deg": 0,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.10738378018140793
+  },
+  {
+    "y_deg": 0,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1009976714849472
+  },
+  {
+    "y_deg": -15,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.0960538238286972
+  },
+  {
+    "y_deg": 15,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.09266830235719681
+  },
+  {
+    "y_deg": 25,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.0886656790971756
+  },
+  {
+    "y_deg": 35,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.0856994017958641
+  },
+  {
+    "y_deg": -25,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.08303790539503098
+  },
+  {
+    "y_deg": 45,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.07473575323820114
+  },
+  {
+    "y_deg": -35,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.07181178778409958
+  },
+  {
+    "y_deg": -45,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.06372293829917908
+  },
+  {
+    "y_deg": 45,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.050778262317180634
+  },
+  {
+    "y_deg": -45,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.048673029989004135
+  },
+  {
+    "y_deg": 35,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.0461154505610466
+  },
+  {
+    "y_deg": -35,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.04451151192188263
+  },
+  {
+    "y_deg": 25,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.041281722486019135
+  },
+  {
+    "y_deg": -25,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.04044851288199425
+  },
+  {
+    "y_deg": 15,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.03665030002593994
+  },
+  {
+    "y_deg": -15,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.03653445094823837
+  },
+  {
+    "y_deg": 0,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.02932906523346901
+  },
+  {
+    "y_deg": 0,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.029079288244247437
+  },
+  {
+    "y_deg": 15,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.02190324477851391
+  },
+  {
+    "y_deg": -15,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.01999838277697563
+  },
+  {
+    "y_deg": 25,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.017930107191205025
+  },
+  {
+    "y_deg": -25,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.015116991475224495
+  },
+  {
+    "y_deg": 35,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.012987114489078522
+  },
+  {
+    "y_deg": -35,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.011866696178913116
+  },
+  {
+    "y_deg": -45,
+    "z_deg": -15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.010356037877500057
+  },
+  {
+    "y_deg": 45,
+    "z_deg": 15,
+    "overlaps": 0,
+    "sampled_distance_m": 0.009493605233728886
+  },
+  {
+    "y_deg": -45,
+    "z_deg": 0,
+    "overlaps": 0,
+    "sampled_distance_m": 0.0025426337961107492
+  },
+  {
+    "y_deg": -35,
+    "z_deg": 0,
+    "overlaps": 9,
+    "sampled_distance_m": 0.0008465169230476022
+  },
+  {
+    "y_deg": 45,
+    "z_deg": 0,
+    "overlaps": 14,
+    "sampled_distance_m": 0.00010449712863191962
+  },
+  {
+    "y_deg": -25,
+    "z_deg": 0,
+    "overlaps": 15,
+    "sampled_distance_m": 0.00016252364730462432
+  },
+  {
+    "y_deg": -15,
+    "z_deg": 0,
+    "overlaps": 24,
+    "sampled_distance_m": 0.0007303351303562522
+  },
+  {
+    "y_deg": 25,
+    "z_deg": 0,
+    "overlaps": 26,
+    "sampled_distance_m": 0.00038338935701176524
+  },
+  {
+    "y_deg": 35,
+    "z_deg": 0,
+    "overlaps": 30,
+    "sampled_distance_m": 4.1804600186878815e-05
+  },
+  {
+    "y_deg": 0,
+    "z_deg": 0,
+    "overlaps": 31,
+    "sampled_distance_m": 0.0004995964118279517
+  },
+  {
+    "y_deg": 15,
+    "z_deg": 0,
+    "overlaps": 32,
+    "sampled_distance_m": 6.981343176448718e-05
+  }
+]

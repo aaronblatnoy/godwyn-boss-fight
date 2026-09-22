@@ -16,7 +16,7 @@ for name in names:
  required=[ROOT/f'scripts/astra_move_{name}_build.py',ROOT/f'models/astra_move_{name}_wip.blend',OUT/f'{name}.mp4',OUT/f'{name}_contact_sheet.png']
  for p in required:assert p.is_file() and p.stat().st_size>100
  for f in grip['grip_frames']:assert (OUT/name/'grip'/f'{f:03d}.png').is_file()
- video=json.loads(subprocess.check_output(['/opt/homebrew/bin/ffprobe','-v','error','-count_frames','-show_streams','-of','json',str(OUT/f'{name}.mp4')],text=True));v=video['streams'][0]
+ video=json.loads(subprocess.check_output([(__import__('shutil').which('ffprobe') or '/opt/homebrew/bin/ffprobe'),'-v','error','-count_frames','-show_streams','-of','json',str(OUT/f'{name}.mp4')],text=True));v=video['streams'][0]
  assert v['codec_name']=='h264' and v['pix_fmt']=='yuv420p' and v['width']==v['height']==768 and v['r_frame_rate']=='30/1' and int(v['nb_read_frames'])==manifest['frames']
  assert f'## {name} — completed' in (OUT/'physics_audit.md').read_text()
  result['moves'][name]={'frames':manifest['frames'],'deliverables':[str(p.relative_to(ROOT)) for p in required],'sha256':{str(p.relative_to(ROOT)):digest(p) for p in required},'grip_closeups':[str((OUT/name/'grip'/f'{f:03d}.png').relative_to(ROOT)) for f in grip['grip_frames']]}

@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.377  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+{
+  "thrust_samples": [],
+  "pre_armature_surface_polish_offset_m": 0.014991533710816166,
+  "closed_finger_mesh_samples": 2263,
+  "max_closed_finger_hand_local_drift_m": 9.670393940944024e-07,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3434,
+    "astra_move_palm_sliver_faces": 613,
+    "astra_move_closed_finger_vertices": 2563,
+    "astra_move_max_finger_adjustment_m": 0.10574496241936966,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 357,
+  "hilt_wrist_distance_range_m": [
+    0.16531510314659137,
+    0.16531556338909892
+  ],
+  "max_hand_local_hilt_drift_m": 6.756979808875275e-07,
+  "max_evaluated_tip_error_m": 6.02714670185944e-07,
+  "max_edge_vs_cut_deg": 29.011678194173665,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    31,
+    38,
+    40,
+    46,
+    54,
+    57,
+    61,
+    90
+  ]
+}
+00:17.734  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/001.png'
+00:18.815  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/031.png'
+00:20.171  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/038.png'
+00:21.137  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/040.png'
+00:22.165  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/046.png'
+00:23.363  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/054.png'
+00:24.371  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/057.png'
+00:25.397  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/061.png'
+00:26.465  render           | Saved: 'renders/astra/rehost/xslash/xslash/grip/090.png'
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

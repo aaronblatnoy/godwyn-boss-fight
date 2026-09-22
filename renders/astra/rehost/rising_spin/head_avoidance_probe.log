@@ -1,0 +1,128 @@
+00:01.163  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_v2_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+[
+  {
+    "y_deg": -45,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.19097217917442322
+  },
+  {
+    "y_deg": 45,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18953169882297516
+  },
+  {
+    "y_deg": -35,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18855327367782593
+  },
+  {
+    "y_deg": 35,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18585984408855438
+  },
+  {
+    "y_deg": -25,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1857677400112152
+  },
+  {
+    "y_deg": 25,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1820789873600006
+  },
+  {
+    "y_deg": -15,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.18171899020671844
+  },
+  {
+    "y_deg": 15,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.17830020189285278
+  },
+  {
+    "y_deg": 0,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1756623387336731
+  },
+  {
+    "y_deg": 0,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1729135513305664
+  },
+  {
+    "y_deg": 15,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.17004622519016266
+  },
+  {
+    "y_deg": 25,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1668107509613037
+  },
+  {
+    "y_deg": -15,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16663753986358643
+  },
+  {
+    "y_deg": 35,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16323386132717133
+  },
+  {
+    "y_deg": -25,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.16254214942455292
+  },
+  {
+    "y_deg": 45,
+    "z_deg": 45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.15756219625473022
+  },
+  {
+    "y_deg": -35,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.15001517534255981
+  },
+  {
+    "y_deg": -45,
+    "z_deg": -45,
+    "overlaps": 0,
+    "sampled_distance_m": 0.13741222023963928
+  },
+  {
+    "y_deg": 45,
+    "z_deg": -30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1310054212808609
+  },
+  {
+    "y_deg": -45,
+    "z_deg": 30,
+    "overlaps": 0,
+    "sampled_distance_m": 0.1266193687915802
+  }
+]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
