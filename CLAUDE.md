@@ -62,7 +62,7 @@ These violations cause the most bugs. Never break them.
 1. **Headless-only on the server.** Every Blender and Godot operation runs via `ssh <server> "blender --background --python script.py"`. No interactive sessions. No GUI.
 2. **GPU-real rendering.** Blender Cycles MUST use OptiX/CUDA on the RTX 3060 Tis. CPU fallback is a failure, not degraded output. Assert GPU in every render script preamble.
 3. **Spec-fidelity.** All character appearance, damage values, timing, and combat logic come from SPEC.txt. Do not invent. Do not deviate.
-4. **Phase 1 appearance rules.** NO crown, NO dark markings, barefoot, partial armor over exposed chest, no deathroot. These are in SPEC.txt lines 293-341. Phase 2 is different — do not conflate.
+4. **Phase 1 appearance rules.** NO crown, NO dark markings, no deathroot. Ornate near-full gold plate: engraved breastplate (chest COVERED), armored boots (NOT barefoot), deep-blue cloth integrated into the armor. See SPEC.txt "VISUAL DESIGN — PHASE 1" (the authority) and the concept images in body-concepts// face-concepts/. Phase 2 is different — do not conflate.
 5. **Overshoot rule.** Any lunge/thrust/jump that carries Godwyn past the player immediately enters Back-to-Player state. There is no neutral reset from an overshoot.
 6. **Idempotent scripts.** Every bpy script deletes its own objects by name before recreating. Re-running must never duplicate geometry.
 7. **Never auto-push.** Git commits are made on the server after each phase. Push to GitHub only on explicit user instruction.
@@ -98,7 +98,7 @@ Render outputs saved to `renders/character/` (2K portrait, 2048×2560) and `rend
 | Skin base | 0.95, 0.90, 0.82 |
 | Skin emission | 1.0, 0.88, 0.45 @ 2.5 strength |
 | Gold armor | 0.82, 0.65, 0.15 (metallic=1) |
-| Blue robe | 0.08, 0.12, 0.35 |
+| Blue robe | 0.00, 0.03, 0.23 |
 | Key light | 1.0, 0.92, 0.6 |
 | Void bg | near-black |
 | Golden crack | 1.0, 0.85, 0.4 |

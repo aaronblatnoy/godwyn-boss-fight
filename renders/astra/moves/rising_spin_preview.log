@@ -1,0 +1,46 @@
+00:01.506  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_wip.blend"
+00:05.124  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/001.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+MOVE RENDER rising_spin 1
+00:05.710  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/016.png'
+MOVE RENDER rising_spin 16
+00:06.280  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/022.png'
+MOVE RENDER rising_spin 22
+00:06.723  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/024.png'
+MOVE RENDER rising_spin 24
+00:07.310  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/026.png'
+MOVE RENDER rising_spin 26
+00:08.057  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/028.png'
+MOVE RENDER rising_spin 28
+00:09.426  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/030.png'
+MOVE RENDER rising_spin 30
+00:11.439  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/032.png'
+MOVE RENDER rising_spin 32
+00:12.087  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/034.png'
+MOVE RENDER rising_spin 34
+00:12.906  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/036.png'
+MOVE RENDER rising_spin 36
+00:13.674  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/038.png'
+MOVE RENDER rising_spin 38
+00:14.429  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/040.png'
+MOVE RENDER rising_spin 40
+00:15.107  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/048.png'
+MOVE RENDER rising_spin 48
+00:15.868  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/060.png'
+MOVE RENDER rising_spin 60
+00:16.261  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/072.png'
+MOVE RENDER rising_spin 72
+00:16.711  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/084.png'
+MOVE RENDER rising_spin 84
+00:17.049  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/096.png'
+MOVE RENDER rising_spin 96
+00:17.407  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/104.png'
+MOVE RENDER rising_spin 104
+00:17.766  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/preview/116.png'
+MOVE RENDER rising_spin 116
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

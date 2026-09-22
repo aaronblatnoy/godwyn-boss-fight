@@ -1,0 +1,223 @@
+{
+  "source": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_prefix.blend",
+  "target": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend",
+  "changed_bones": [
+    "LeftArm",
+    "LeftFoot",
+    "LeftForeArm",
+    "LeftHand",
+    "LeftLeg",
+    "LeftShoulder",
+    "LeftUpLeg",
+    "RightArm",
+    "RightFoot",
+    "RightForeArm",
+    "RightHand",
+    "RightLeg",
+    "RightUpLeg",
+    "Spine",
+    "Spine01",
+    "Spine02",
+    "phys_cape_C_00",
+    "phys_cape_C_01",
+    "phys_cape_C_02",
+    "phys_cape_C_03",
+    "phys_cape_C_04",
+    "phys_cape_C_05",
+    "phys_cape_C_06",
+    "phys_cape_L_00",
+    "phys_cape_L_01",
+    "phys_cape_L_02",
+    "phys_cape_L_03",
+    "phys_cape_L_04",
+    "phys_cape_L_05",
+    "phys_cape_L_06",
+    "phys_cape_R_00",
+    "phys_cape_R_01",
+    "phys_cape_R_02",
+    "phys_cape_R_03",
+    "phys_cape_R_04",
+    "phys_cape_R_05",
+    "phys_cape_R_06",
+    "phys_robe_back_C_00",
+    "phys_robe_back_C_01",
+    "phys_robe_back_C_02",
+    "phys_robe_back_C_03",
+    "phys_robe_back_C_04",
+    "phys_robe_back_C_05",
+    "phys_robe_back_C_06",
+    "phys_robe_back_C_07",
+    "phys_robe_back_L_00",
+    "phys_robe_back_L_01",
+    "phys_robe_back_L_02",
+    "phys_robe_back_L_03",
+    "phys_robe_back_L_04",
+    "phys_robe_back_L_05",
+    "phys_robe_back_L_06",
+    "phys_robe_back_L_07",
+    "phys_robe_back_R_00",
+    "phys_robe_back_R_01",
+    "phys_robe_back_R_02",
+    "phys_robe_back_R_03",
+    "phys_robe_back_R_04",
+    "phys_robe_back_R_05",
+    "phys_robe_back_R_06",
+    "phys_robe_back_R_07",
+    "phys_robe_front_C_00",
+    "phys_robe_front_C_01",
+    "phys_robe_front_C_02",
+    "phys_robe_front_C_03",
+    "phys_robe_front_C_04",
+    "phys_robe_front_C_05",
+    "phys_robe_front_C_06",
+    "phys_robe_front_C_07",
+    "phys_robe_front_L_00",
+    "phys_robe_front_L_01",
+    "phys_robe_front_L_02",
+    "phys_robe_front_L_03",
+    "phys_robe_front_L_04",
+    "phys_robe_front_L_05",
+    "phys_robe_front_L_06",
+    "phys_robe_front_L_07",
+    "phys_robe_front_R_00",
+    "phys_robe_front_R_01",
+    "phys_robe_front_R_02",
+    "phys_robe_front_R_03",
+    "phys_robe_front_R_04",
+    "phys_robe_front_R_05",
+    "phys_robe_front_R_06",
+    "phys_robe_front_R_07",
+    "phys_robe_side_L_00",
+    "phys_robe_side_L_01",
+    "phys_robe_side_L_02",
+    "phys_robe_side_L_03",
+    "phys_robe_side_L_04",
+    "phys_robe_side_L_05",
+    "phys_robe_side_L_06",
+    "phys_robe_side_L_07",
+    "phys_robe_side_R_00",
+    "phys_robe_side_R_01",
+    "phys_robe_side_R_02",
+    "phys_robe_side_R_03",
+    "phys_robe_side_R_04",
+    "phys_robe_side_R_05",
+    "phys_robe_side_R_06",
+    "phys_robe_side_R_07"
+  ],
+  "quarter_samples": 357,
+  "blade_grip_corrections": [
+    {
+      "frame": 37.0,
+      "delta": [
+        0.0,
+        -0.028124988079071045,
+        0.0
+      ]
+    },
+    {
+      "frame": 38.0,
+      "delta": [
+        0.0,
+        -0.15187501907348633,
+        0.0
+      ]
+    },
+    {
+      "frame": 39.0,
+      "delta": [
+        0.0,
+        -0.1799999475479126,
+        0.0
+      ]
+    },
+    {
+      "frame": 40.0,
+      "delta": [
+        0.0,
+        -0.16128003597259521,
+        0.0
+      ]
+    },
+    {
+      "frame": 41.0,
+      "delta": [
+        0.0,
+        -0.06335997581481934,
+        0.0
+      ]
+    },
+    {
+      "frame": 81.0,
+      "delta": [
+        0.0004715919494628906,
+        -0.0014882087707519531,
+        0.0022559165954589844
+      ]
+    },
+    {
+      "frame": 82.0,
+      "delta": [
+        0.0019584298133850098,
+        -0.006062746047973633,
+        0.009105920791625977
+      ]
+    },
+    {
+      "frame": 83.0,
+      "delta": [
+        0.0076514482498168945,
+        -0.016711056232452393,
+        0.023786544799804688
+      ]
+    },
+    {
+      "frame": 84.0,
+      "delta": [
+        0.01639080047607422,
+        -0.030098319053649902,
+        0.0414884090423584
+      ]
+    },
+    {
+      "frame": 85.0,
+      "delta": [
+        0.02330571413040161,
+        -0.040011823177337646,
+        0.05451083183288574
+      ]
+    },
+    {
+      "frame": 86.0,
+      "delta": [
+        0.02352464199066162,
+        -0.04023820161819458,
+        0.05515742301940918
+      ]
+    },
+    {
+      "frame": 87.0,
+      "delta": [
+        0.01717555522918701,
+        -0.030188679695129395,
+        0.041977882385253906
+      ]
+    },
+    {
+      "frame": 88.0,
+      "delta": [
+        0.009385645389556885,
+        -0.016774356365203857,
+        0.023524761199951172
+      ]
+    },
+    {
+      "frame": 89.0,
+      "delta": [
+        0.0027840137481689453,
+        -0.005032539367675781,
+        0.007097959518432617
+      ]
+    }
+  ],
+  "scope": "existing rig and blur-object animation keys only; saved camera/render/material/mesh untouched"
+}

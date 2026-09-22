@@ -1,0 +1,117 @@
+00:01.443  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+20:13:34 | INFO: Starting glTF 2.0 export
+20:13:34 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+20:13:34 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:13:34 | INFO: Primitives created: 1
+20:13:35 | INFO: Extracting primitive: Astra repaired original surface.001
+20:13:35 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:13:35 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:13:35 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:13:36 | INFO: Primitives created: 3
+20:13:36 | INFO: Extracting primitive: Godwyn_Sword.001
+20:13:36 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:13:36 | INFO: Primitives created: 1
+20:13:36 | INFO: Finished glTF 2.0 export in 1.6176929473876953 s
+
+{
+  "images": [
+    {
+      "name": "astra_character_Astra_Undersleeves_normal_2048",
+      "mimeType": "image/png",
+      "bufferView": 7,
+      "embedded_bytes": 4645678,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "8b05390903f690285273b79aa81cc0f24aaa214fc77af6efe72d8d1b78e9521b"
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_orm_2048",
+      "mimeType": "image/png",
+      "bufferView": 8,
+      "embedded_bytes": 3046467,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "5f95f130635cbc4cb36e0f908487c17160dcb6bfbd45c45e27e1d527ef93ccf4"
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_basecolor_2048",
+      "mimeType": "image/png",
+      "bufferView": 9,
+      "embedded_bytes": 2174019,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "8bdbea2654130458231ab13d299bbe966e408fa6d3beb7d3de72eec2db3535b9"
+    },
+    {
+      "name": "astra_character_char1_normal_4096",
+      "mimeType": "image/png",
+      "bufferView": 18,
+      "embedded_bytes": 16844662,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "0f3eb656c2fe07247d8be86e2ec059cf1319328e45de3a4befa885edd60e8914"
+    },
+    {
+      "name": "astra_character_char1_orm_4096",
+      "mimeType": "image/png",
+      "bufferView": 19,
+      "embedded_bytes": 17236249,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "d9307d578c3894cf5172da5130b465731bcb6d15d9be8a5597e0ed97666896fc"
+    },
+    {
+      "name": "astra_character_char1_basecolor_4096",
+      "mimeType": "image/png",
+      "bufferView": 20,
+      "embedded_bytes": 14051734,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "489d8ee26b6305010ed08471fb6357efab93fe0854a2edd33dab39a79b4a5366"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_normal_2048",
+      "mimeType": "image/png",
+      "bufferView": 42,
+      "embedded_bytes": 940608,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "ed57ae7142de16b3696fff60a4752f2c247f14613219034798d9c3b526375d4f"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_orm_2048",
+      "mimeType": "image/png",
+      "bufferView": 43,
+      "embedded_bytes": 1345565,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "fdb9a5d31fc2922e4de7bdb90d8c43046effe3fd50700c175984d0642316f569"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_basecolor_2048",
+      "mimeType": "image/png",
+      "bufferView": 44,
+      "embedded_bytes": 1040518,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "caeb5aa600a0ce4690e0975ed29b782583dbb9aaf00230a2f6cf9baa9d353f5d"
+    }
+  ],
+  "skins": 1,
+  "source_unchanged": true
+}
+Info: Saved as "astra_character_v2.blend"
+20:13:38 | INFO: Data are loaded, start creating Blender stuff
+20:13:38 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+20:13:38 | INFO: Blender create Mesh node Astra repaired original surface.001
+20:13:39 | INFO: Blender create Mesh node Godwyn_Sword.001
+20:13:39 | INFO: glTF import finished in 1.73s
+00:18.203  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/glb_check_three_quarter.png'
+RENDERED glb_check three_quarter
+00:20.081  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/glb_check_arms_raised.png'
+RENDERED glb_check arms_raised
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

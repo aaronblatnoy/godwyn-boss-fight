@@ -1,0 +1,8 @@
+00:01.078  blend            | Read blend: "/tmp/astra_move_idle_action_source.blend"
+00:05.382  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_character_base.blend"
+REST MATRIX ERROR 0.00067138671875 ACTION ['fbf0c7108313fbe1e5476a2944d962c9db558f8ca47e68ff0e7a1f53a2e6613b', 326095] ['fbf0c7108313fbe1e5476a2944d962c9db558f8ca47e68ff0e7a1f53a2e6613b', 326095]
+00:18.750  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard_stable_source_test.png'
+Info: Saved as "astra_move_idle_guard_wip.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

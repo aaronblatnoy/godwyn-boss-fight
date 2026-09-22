@@ -1,0 +1,6 @@
+{
+  "chased_paths": 26,
+  "radius_m": 0.00065,
+  "surface": "breastplate gold; vertex weights copied from nearest original plate vertex",
+  "existing_baked_relief": "gold +/-0.35mm, cloth trim +0.6mm sampled into original tessellation"
+}

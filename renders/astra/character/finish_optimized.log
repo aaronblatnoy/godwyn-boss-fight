@@ -1,0 +1,47 @@
+00:01.168  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+REUSED completed 4K base
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_orm_4096 elapsed 13
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_normal_4096 elapsed 28
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_finish.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  seedmat=bpy.data.materials.new('Astra sword rebake source');seedmat.use_nodes=True;n=seedmat.node_tree.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images['godwyn_albedo'];sword.data.materials.clear();sword.data.materials.append(seedmat)
+Info: Saved as "astra_character_v2.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_basecolor_2048 elapsed 1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_orm_2048 elapsed 3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_normal_2048 elapsed 4
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_finish.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('Astra sleeve baking source');mat.use_nodes=True;node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=seed;mat.node_tree.links.new(node.outputs[0],mat.node_tree.nodes.get('Principled BSDF').inputs['Base Color']);o.data.materials.append(mat)
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Astra_Undersleeves_basecolor_2048 elapsed 2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Astra_Undersleeves_orm_2048 elapsed 4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Astra_Undersleeves_normal_2048 elapsed 8
+00:45.951  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_front.png'
+Info: Saved as "astra_character_v2.blend"
+RENDERED after front
+00:48.111  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_side.png'
+RENDERED after side
+00:50.279  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_three_quarter.png'
+RENDERED after three_quarter
+00:52.506  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_chest.png'
+RENDERED after chest
+00:54.403  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_face.png'
+RENDERED after face
+00:56.163  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_shoulder.png'
+RENDERED after shoulder
+00:57.353  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_sword.png'
+RENDERED after sword
+00:59.238  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_arms_raised.png'
+RENDERED after arms_raised
+01:00.077  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_hilt_sword.png'
+RENDERED after_hilt sword
+01:01.913  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_shoulder_raised.png'
+Info: Saved as "astra_character_v2.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

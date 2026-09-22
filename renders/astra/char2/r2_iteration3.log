@@ -1,0 +1,8 @@
+00:01.247  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_round2_input.blend"
+Info: Saved as "astra_character_v2_round2_work.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:31.602  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r2_iteration3_face.png'
+COMPARISON r2_iteration3
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

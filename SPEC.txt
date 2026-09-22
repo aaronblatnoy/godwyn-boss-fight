@@ -375,7 +375,7 @@ Material:
   Emission casts light: YES — Godwyn is the room's light source
   Light radius:       12m
   Light color:        Color(1.0, 0.92, 0.6)
-  Blue cloth:         Deep blue, Color(0.08, 0.12, 0.35), no emission —
+  Blue cloth:         Deep blue, Color(0.00, 0.03, 0.23), no emission —
                       INTEGRATED into the armor: torso sash, hanging tabard
                       panels trailing to the floor, underlayer between plates.
   Armor:              Gold, Color(0.82, 0.65, 0.15), slight metallic sheen —

@@ -1,0 +1,131 @@
+{
+  "iteration": 2,
+  "macro": {
+    "gender": 1.0,
+    "age": 0.5,
+    "muscle": 0.58,
+    "weight": 0.34,
+    "proportions": 0.65,
+    "height": 0.5,
+    "cupsize": 0.5,
+    "firmness": 0.5,
+    "race": {
+      "caucasian": 1.0,
+      "asian": 0.0,
+      "african": 0.0
+    }
+  },
+  "targets": {
+    "head/head-rectangular": 0.12,
+    "head/head-oval": 0.2,
+    "head/head-scale-vert-incr": 0.24,
+    "chin/chin-width-incr": 0.06,
+    "chin/chin-bones-incr": 0.18,
+    "chin/chin-prominent-incr": 0.16,
+    "eyebrows/eyebrows-trans-forward": 0.48,
+    "eyebrows/eyebrows-trans-down": 0.12,
+    "nose/nose-greek-incr": 0.28,
+    "nose/nose-width3-decr": 0.16,
+    "mouth/mouth-scale-horiz-incr": 0.2,
+    "mouth/mouth-lowerlip-volume-decr": 0.08,
+    "eyes/l-eye-push2-in": 0.26,
+    "cheek/l-cheek-bones-incr": 0.28,
+    "ears/l-ear-scale-decr": 0.08,
+    "eyes/r-eye-push2-in": 0.26,
+    "cheek/r-cheek-bones-incr": 0.28,
+    "ears/r-ear-scale-decr": 0.08,
+    "nose/nose-scale-vert-incr": 0.15,
+    "mouth/mouth-upperlip-volume-incr": 0.1,
+    "eyes/l-eye-trans-out": 0.28,
+    "eyes/l-eye-height2-decr": 0.14,
+    "eyes/r-eye-trans-out": 0.28,
+    "eyes/r-eye-height2-decr": 0.14
+  },
+  "uniform_scale": 1.6,
+  "translation": [
+    0.0,
+    -0.17108103677630426,
+    0.35296894073486307
+  ],
+  "joints": {
+    "helper-l-eye": [
+      0.048976298545797665,
+      -0.37963035333487727,
+      2.976471068064372
+    ],
+    "helper-r-eye": [
+      -0.048976298545797665,
+      -0.37963035333487727,
+      2.976471068064372
+    ],
+    "joint-head": [
+      0.0,
+      -0.24579605355858805,
+      2.9087252712249754
+    ],
+    "joint-jaw": [
+      0.0,
+      -0.406479114741087,
+      2.8136171913146972
+    ],
+    "joint-l-eye": [
+      0.04898374266922474,
+      -0.3796844755113125,
+      2.9756982421875
+    ],
+    "joint-neck": [
+      0.0,
+      -0.195,
+      2.7584883308410646
+    ],
+    "joint-r-eye": [
+      -0.04898374266922474,
+      -0.3796844755113125,
+      2.9756982421875
+    ]
+  },
+  "eyes": {
+    "L": {
+      "center": [
+        0.04900880856638619,
+        -0.3795658446628794,
+        2.976454091068254
+      ],
+      "radius": 0.025497482718472318,
+      "helper_bounds": [
+        [
+          0.025394439697265625,
+          -0.40536653444170956,
+          2.9537658309936523
+        ],
+        [
+          0.07277109026908875,
+          -0.35384399339556694,
+          2.998766098022461
+        ]
+      ]
+    },
+    "R": {
+      "center": [
+        -0.04900880856638619,
+        -0.3795658446628794,
+        2.976454091068254
+      ],
+      "radius": 0.025497482718472318,
+      "helper_bounds": [
+        [
+          -0.07277109026908875,
+          -0.40536653444170956,
+          2.9537658309936523
+        ],
+        [
+          -0.025394439697265625,
+          -0.35384399339556694,
+          2.998766098022461
+        ]
+      ]
+    }
+  },
+  "head_vertices": 4627,
+  "head_faces": 4599
+}

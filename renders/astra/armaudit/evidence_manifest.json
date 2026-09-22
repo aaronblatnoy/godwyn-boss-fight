@@ -1,0 +1,404 @@
+{
+  "mode": "inherited_render_extractions_NOT_new_camera_renders",
+  "stills": {
+    "xslash": {
+      "entries": [
+        {
+          "frame": 1,
+          "source": "renders/astra/v2_final_on_char/video_frames/001.png",
+          "source_sha256": "5c493abe84b01892859f6ce22d8d5eb0e92461c034177901e6748c7d3ae06181",
+          "output": "renders/astra/armaudit/stills_xslash/001_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 27,
+          "source": "renders/astra/v2_final_on_char/video_frames/027.png",
+          "source_sha256": "8ab8ddcb5bf72121c07a5e18a4c1ba05fbdea19ab1bf76a7c0d1ec281b41f081",
+          "output": "renders/astra/armaudit/stills_xslash/027_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 38,
+          "source": "renders/astra/v2_final_on_char/video_frames/038.png",
+          "source_sha256": "6e1932a52a0a91d00c10a8ed2ac1ceceb77fd5438430058805350289405c5487",
+          "output": "renders/astra/armaudit/stills_xslash/038_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 39,
+          "source": "renders/astra/v2_final_on_char/video_frames/039.png",
+          "source_sha256": "79f879f87e54105411dcce84ba6e814c3c617f782f46f96cefdf15f8bfa9b382",
+          "output": "renders/astra/armaudit/stills_xslash/039_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 47,
+          "source": "renders/astra/v2_final_on_char/video_frames/047.png",
+          "source_sha256": "86b2a89a22a6e12b1ae04ba21bf4405bf449f4c246369dda76d4010d97599694",
+          "output": "renders/astra/armaudit/stills_xslash/047_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 48,
+          "source": "renders/astra/v2_final_on_char/video_frames/048.png",
+          "source_sha256": "adf11159ee4989f570eb3e0f854b425e4f195245a6a2cf59642c948d60f8cf8a",
+          "output": "renders/astra/armaudit/stills_xslash/048_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 54,
+          "source": "renders/astra/v2_final_on_char/video_frames/054.png",
+          "source_sha256": "396742a8daa8b632e9dd1f19c3a8811c65565c0ad9600e69e6c2162fafacd71f",
+          "output": "renders/astra/armaudit/stills_xslash/054_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 61,
+          "source": "renders/astra/v2_final_on_char/video_frames/061.png",
+          "source_sha256": "04a9b71c8276ffbf05e3a9f25c90bb6295228720f62035941b4bbdb2aecf5857",
+          "output": "renders/astra/armaudit/stills_xslash/061_inherited.png",
+          "crop": "crop=560:490:40:35"
+        },
+        {
+          "frame": 90,
+          "source": "renders/astra/v2_final_on_char/video_frames/090.png",
+          "source_sha256": "3c608ad4334ba58abcfdbd02e22149e45a41c40d3872626ca309fb2ac86c570f",
+          "output": "renders/astra/armaudit/stills_xslash/090_inherited.png",
+          "crop": "crop=560:490:40:35"
+        }
+      ],
+      "sheet": "renders/astra/armaudit/sheet_xslash_inherited.png",
+      "order": [
+        1,
+        27,
+        38,
+        39,
+        47,
+        48,
+        54,
+        61,
+        90
+      ],
+      "camera_angles": 1,
+      "missing": "second angle and fresh EEVEE no-motion-blur closeups"
+    },
+    "idle_guard": {
+      "entries": [
+        {
+          "frame": 1,
+          "source": "renders/astra/moves/idle_guard/frames/001.png",
+          "source_sha256": "0c66a999128dd4f7d457b79bc6ea93ea92b07e039477eeb3864ccdeeff841181",
+          "output": "renders/astra/armaudit/stills_idle_guard/001_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 9,
+          "source": "renders/astra/moves/idle_guard/frames/009.png",
+          "source_sha256": "3a20776f8e66c854b44ad8dd9e7290df9fd03b47f75cac89d335a00bcc024e44",
+          "output": "renders/astra/armaudit/stills_idle_guard/009_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 25,
+          "source": "renders/astra/moves/idle_guard/frames/025.png",
+          "source_sha256": "a870f473e7fa3eabbfb4024f8fe7cb05cd1c4a4fbb6780035c77a83adfa1b7b7",
+          "output": "renders/astra/armaudit/stills_idle_guard/025_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 34,
+          "source": "renders/astra/moves/idle_guard/frames/034.png",
+          "source_sha256": "9ccf9cc8f96d05bc4ffd8aa5a14dcf91c0e65819cf8372a81a8dbd22fb06dbfa",
+          "output": "renders/astra/armaudit/stills_idle_guard/034_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 49,
+          "source": "renders/astra/moves/idle_guard/frames/049.png",
+          "source_sha256": "4dc66f7630c403268dfa0a1a823b9d2383dd4e1b816f744a2aa2e43aae87f2c5",
+          "output": "renders/astra/armaudit/stills_idle_guard/049_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 65,
+          "source": "renders/astra/moves/idle_guard/frames/065.png",
+          "source_sha256": "26ddf7a877cbff6334fa2500cb420cf77b34c0e13ceaee72ee7bacae7d7adf6e",
+          "output": "renders/astra/armaudit/stills_idle_guard/065_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 78,
+          "source": "renders/astra/moves/idle_guard/frames/078.png",
+          "source_sha256": "7486bda9e14b21c1743b09e9ce96e795718725cf3c59958e70ddccf95d5bab09",
+          "output": "renders/astra/armaudit/stills_idle_guard/078_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 82,
+          "source": "renders/astra/moves/idle_guard/frames/082.png",
+          "source_sha256": "373af08edacfabb8767ea854a965a86760f9534bba645cfcaf2c00638df9a1be",
+          "output": "renders/astra/armaudit/stills_idle_guard/082_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 96,
+          "source": "renders/astra/moves/idle_guard/frames/096.png",
+          "source_sha256": "0a51a9298fca8256d972ee20ff1c7652e8f60605a9acaa0a05e296bce6ada570",
+          "output": "renders/astra/armaudit/stills_idle_guard/096_inherited.png",
+          "crop": "crop=480:570:140:110"
+        }
+      ],
+      "sheet": "renders/astra/armaudit/sheet_idle_guard_inherited.png",
+      "order": [
+        1,
+        9,
+        25,
+        34,
+        49,
+        65,
+        78,
+        82,
+        96
+      ],
+      "camera_angles": 1,
+      "missing": "second angle and fresh EEVEE no-motion-blur closeups"
+    },
+    "lunge_thrust": {
+      "entries": [
+        {
+          "frame": 1,
+          "source": "renders/astra/moves/lunge_thrust/frames/001.png",
+          "source_sha256": "fb20d42630fdf74938ff923e2eda07794e20d6c36593460b8b9142f9d3f26cee",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/001_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 17,
+          "source": "renders/astra/moves/lunge_thrust/frames/017.png",
+          "source_sha256": "1de9585b88eb4e157f4bbf5fb020674e4e2ce0d3231c18be802d30f746a090e2",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/017_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 25,
+          "source": "renders/astra/moves/lunge_thrust/frames/025.png",
+          "source_sha256": "448e0aa5b71139b905d688a4d1df0000eed4ff3e2622f9d51cec18a7ef8bb16f",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/025_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 29,
+          "source": "renders/astra/moves/lunge_thrust/frames/029.png",
+          "source_sha256": "c505388399908fbd1934e27e238203f99c3b65290d6b54b59d9e2ad586fca8d0",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/029_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 32,
+          "source": "renders/astra/moves/lunge_thrust/frames/032.png",
+          "source_sha256": "0f24a2b3ba87e0b9a4f5cbd30d3203c858b160e98b04a31caced7d778088d6aa",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/032_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 37,
+          "source": "renders/astra/moves/lunge_thrust/frames/037.png",
+          "source_sha256": "1fb732ce63f54b59be923170cf4d5106bd494b27b329d06360bbb78b5e35bf0d",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/037_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 40,
+          "source": "renders/astra/moves/lunge_thrust/frames/040.png",
+          "source_sha256": "10e6b4f730b20e7f070b90a165fa54970aae934c3778a9e40eeca8e1bc8893a2",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/040_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 43,
+          "source": "renders/astra/moves/lunge_thrust/frames/043.png",
+          "source_sha256": "bc761c9900326e279dfedf78ea3501092f736a9076fbf0e7f83741f7916728bc",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/043_inherited.png",
+          "crop": "crop=700:420:20:130"
+        },
+        {
+          "frame": 64,
+          "source": "renders/astra/moves/lunge_thrust/frames/064.png",
+          "source_sha256": "b70a2a8fef65a4affee9319166691c75ad4ee3718e5add9ea54d15d9547f5983",
+          "output": "renders/astra/armaudit/stills_lunge_thrust/064_inherited.png",
+          "crop": "crop=700:420:20:130"
+        }
+      ],
+      "sheet": "renders/astra/armaudit/sheet_lunge_thrust_inherited.png",
+      "order": [
+        1,
+        17,
+        25,
+        29,
+        32,
+        37,
+        40,
+        43,
+        64
+      ],
+      "camera_angles": 1,
+      "missing": "second angle and fresh EEVEE no-motion-blur closeups"
+    },
+    "walk_stalk": {
+      "entries": [
+        {
+          "frame": 1,
+          "source": "renders/astra/moves/walk_stalk/frames/001.png",
+          "source_sha256": "bb5da602717a71741f2951bf44ae6ead6bc9ffec98d1890b8c42b5d567b72987",
+          "output": "renders/astra/armaudit/stills_walk_stalk/001_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 9,
+          "source": "renders/astra/moves/walk_stalk/frames/009.png",
+          "source_sha256": "de91f1dcc4c8f216330c8b66ce2cd4c27d97e897c56d0177166716c7ce76f798",
+          "output": "renders/astra/armaudit/stills_walk_stalk/009_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 23,
+          "source": "renders/astra/moves/walk_stalk/frames/023.png",
+          "source_sha256": "30ffea46095a1eb5653e637b11b1a52c009c1e5faf0f9cff502cd7d36ab304c7",
+          "output": "renders/astra/armaudit/stills_walk_stalk/023_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 36,
+          "source": "renders/astra/moves/walk_stalk/frames/036.png",
+          "source_sha256": "8d5cf67e1bab666fe9eb1f2e26b87188103350b1813caff5263fbe164bfa497a",
+          "output": "renders/astra/armaudit/stills_walk_stalk/036_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 42,
+          "source": "renders/astra/moves/walk_stalk/frames/042.png",
+          "source_sha256": "ece4315839f0220a7bf82186a64cbed144c6a0ee9881d5d7c3ffd71c88688ab7",
+          "output": "renders/astra/armaudit/stills_walk_stalk/042_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 49,
+          "source": "renders/astra/moves/walk_stalk/frames/049.png",
+          "source_sha256": "62d9bf5e45529ea308c7bb30ddb1c8c068d504537058d390854fbc3462aa1326",
+          "output": "renders/astra/armaudit/stills_walk_stalk/049_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 59,
+          "source": "renders/astra/moves/walk_stalk/frames/059.png",
+          "source_sha256": "341f126c4b07f5dcadc9e133b43332a51e907a82f30e72494e22ea56495f25c5",
+          "output": "renders/astra/armaudit/stills_walk_stalk/059_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 68,
+          "source": "renders/astra/moves/walk_stalk/frames/068.png",
+          "source_sha256": "8422c2ce9e966342bc0011d11911d496ea99159f6d0361cc9831b75ec08ed7f4",
+          "output": "renders/astra/armaudit/stills_walk_stalk/068_inherited.png",
+          "crop": "crop=480:570:140:110"
+        },
+        {
+          "frame": 72,
+          "source": "renders/astra/moves/walk_stalk/frames/072.png",
+          "source_sha256": "0589fa093ed65f9af46c757919db1da2d838412e86da2d957b360b16492254c2",
+          "output": "renders/astra/armaudit/stills_walk_stalk/072_inherited.png",
+          "crop": "crop=480:570:140:110"
+        }
+      ],
+      "sheet": "renders/astra/armaudit/sheet_walk_stalk_inherited.png",
+      "order": [
+        1,
+        9,
+        23,
+        36,
+        42,
+        49,
+        59,
+        68,
+        72
+      ],
+      "camera_angles": 1,
+      "missing": "second angle and fresh EEVEE no-motion-blur closeups"
+    }
+  },
+  "clips": {
+    "clips_xslash_strike1_slowmo.mp4": {
+      "source": "renders/astra/godwyn_xslash_v2_final.mp4",
+      "source_sha256": "dc207f98005aa34982afe088da126874a324b7ce7446575724e8b877cbc6f4a0",
+      "source_frames": [
+        30,
+        44
+      ],
+      "speed": 0.5,
+      "duplicate_factor": 2,
+      "probe": {
+        "width": 560,
+        "height": 490,
+        "r_frame_rate": "30/1",
+        "duration": "1.000000",
+        "nb_frames": "30"
+      },
+      "decode_passed": true,
+      "decoded_sheets": [
+        "renders/astra/armaudit/decoded_xslash_strike1/sheet_01.png",
+        "renders/astra/armaudit/decoded_xslash_strike1/sheet_02.png"
+      ],
+      "frame_order": "Every second output frame = consecutive original frames, row-major, eight per sheet; last sheet may contain black padding."
+    },
+    "clips_xslash_strike2_slowmo.mp4": {
+      "source": "renders/astra/godwyn_xslash_v2_final.mp4",
+      "source_sha256": "dc207f98005aa34982afe088da126874a324b7ce7446575724e8b877cbc6f4a0",
+      "source_frames": [
+        47,
+        64
+      ],
+      "speed": 0.5,
+      "duplicate_factor": 2,
+      "probe": {
+        "width": 560,
+        "height": 490,
+        "r_frame_rate": "30/1",
+        "duration": "1.200000",
+        "nb_frames": "36"
+      },
+      "decode_passed": true,
+      "decoded_sheets": [
+        "renders/astra/armaudit/decoded_xslash_strike2/sheet_01.png",
+        "renders/astra/armaudit/decoded_xslash_strike2/sheet_02.png",
+        "renders/astra/armaudit/decoded_xslash_strike2/sheet_03.png"
+      ],
+      "frame_order": "Every second output frame = consecutive original frames, row-major, eight per sheet; last sheet may contain black padding."
+    },
+    "clips_lunge_thrust_strike1_slowmo.mp4": {
+      "source": "renders/astra/moves/lunge_thrust.mp4",
+      "source_sha256": "9ee96cb5a79daff4f0db5e2245f0a4a1859435ee1d579b5aa20d4e40bbd1a95f",
+      "source_frames": [
+        21,
+        44
+      ],
+      "speed": 0.5,
+      "duplicate_factor": 2,
+      "probe": {
+        "width": 700,
+        "height": 420,
+        "r_frame_rate": "30/1",
+        "duration": "1.600000",
+        "nb_frames": "48"
+      },
+      "decode_passed": true,
+      "decoded_sheets": [
+        "renders/astra/armaudit/decoded_lunge_thrust_strike1/sheet_01.png",
+        "renders/astra/armaudit/decoded_lunge_thrust_strike1/sheet_02.png",
+        "renders/astra/armaudit/decoded_lunge_thrust_strike1/sheet_03.png"
+      ],
+      "frame_order": "Every second output frame = consecutive original frames, row-major, eight per sheet; last sheet may contain black padding."
+    }
+  },
+  "inspected": true,
+  "inspection_method": "Four 9-pose sheets plus all eight sequential decoded clip sheets viewed directly with view_image; no real-time video playback or second-angle review claimed."
+}

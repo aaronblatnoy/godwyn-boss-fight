@@ -1,0 +1,9 @@
+source_1.png median [0.63529414 0.5411765  0.49803925] quantile [[0.6156863  0.50549023 0.41137258]
+ [0.8705883  0.75294125 0.52549022]]
+source_2.png median [1.         0.45098042 0.        ] quantile [[1.         0.38039219 0.        ]
+ [1.         0.45098042 1.        ]]
+textures/astra_character_char1_basecolor_4096.png median [0.7019608  0.5686275  0.29803923] quantile [[0.67450982 0.5411765  0.27843139]
+ [0.80784321 0.70980394 0.66274512]]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

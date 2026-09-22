@@ -1,0 +1,83 @@
+00:00.782  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_wip.blend"
+{
+  "frames": 90,
+  "fps": 30,
+  "engine": "BLENDER_EEVEE",
+  "motion_blur": true,
+  "shutter": 0.550000011920929,
+  "speed": {
+    "anticipation": {
+      "mean_tip_m_s": 1.4183443332707761,
+      "peak_tip_m_s": 2.439920140598959
+    },
+    "cut1": {
+      "mean_tip_m_s": 34.95420588303736,
+      "peak_tip_m_s": 48.355846738520526
+    },
+    "connector": {
+      "mean_tip_m_s": 11.64674788631724,
+      "peak_tip_m_s": 14.135284520302756
+    },
+    "cut2": {
+      "mean_tip_m_s": 35.506281717029445,
+      "peak_tip_m_s": 46.13428371903355
+    },
+    "heavy_recovery": {
+      "mean_tip_m_s": 3.341939770443558,
+      "peak_tip_m_s": 11.89481296242953
+    },
+    "settle": {
+      "mean_tip_m_s": 0.5753496796309969,
+      "peak_tip_m_s": 1.104951948125686
+    }
+  },
+  "peak_world_rotation_frame": {
+    "first": {
+      "Hips": 34.25,
+      "Spine02": 34.5,
+      "Spine01": 34.75,
+      "Spine": 35.25,
+      "RightShoulder": 35.75,
+      "RightArm": 39.0,
+      "RightForeArm": 38.5,
+      "RightHand": 39.5
+    },
+    "second": {
+      "Hips": 51.25,
+      "Spine02": 51.5,
+      "Spine01": 51.75,
+      "Spine": 52.25,
+      "RightShoulder": 52.5,
+      "RightArm": 53.75,
+      "RightForeArm": 53.75,
+      "RightHand": 56.25
+    }
+  },
+  "planted_foot_drift_m": {
+    "Left": 1.0687363789702121e-06,
+    "Right": 5.4318973800176935e-06
+  },
+  "left_foot_contact": [
+    0.4167798161506653,
+    -0.6983984112739563,
+    0.1688435971736908
+  ],
+  "hip_contact_heights": {
+    "1": 1.7723115682601929,
+    "34": 1.7723113298416138,
+    "40": 1.6373114585876465,
+    "46": 1.6973111629486084,
+    "57": 1.6173110008239746,
+    "65": 1.6673113107681274,
+    "79": 1.762311339378357,
+    "84": 1.7363117933273315,
+    "90": 1.7473113536834717
+  },
+  "rig_key_interpolation": {
+    "BEZIER": 302379
+  },
+  "animated_secondary_bones": 97
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

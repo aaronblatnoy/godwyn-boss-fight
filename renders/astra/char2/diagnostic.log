@@ -1,0 +1,12 @@
+00:00.946  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_char2_work.blend"
+ATTRS [('astra_hair', 'POINT', 'FLOAT'), ('UVMap', 'CORNER', 'FLOAT2'), ('.select_vert', 'POINT', 'BOOLEAN'), ('.select_edge', 'EDGE', 'BOOLEAN'), ('sharp_edge', 'EDGE', 'BOOLEAN'), ('.select_poly', 'FACE', 'BOOLEAN'), ('.uv_select_vert', 'CORNER', 'BOOLEAN'), ('.uv_select_edge', 'CORNER', 'BOOLEAN'), ('.uv_select_face', 'FACE', 'BOOLEAN'), ('material_index', 'FACE', 'INT'), ('position', 'POINT', 'FLOAT_VECTOR'), ('.edge_verts', 'EDGE', 'INT32_2D'), ('.corner_vert', 'CORNER', 'INT'), ('.corner_edge', 'CORNER', 'INT'), ('sharp_face', 'FACE', 'BOOLEAN'), ('AstraChar2FaceUV', 'CORNER', 'FLOAT2')]
+CUSTOM False
+MOD Astra surface polish • reversible [('name', 'Astra surface polish • reversible'), ('show_viewport', True), ('show_render', True), ('show_in_editmode', False), ('show_on_cage', False), ('show_expanded', True), ('is_active', False), ('use_pin_to_last', False), ('is_override_data', False), ('use_apply_on_spline', False), ('execution_time', 0.0), ('persistent_uid', 486562295), ('use_x', True), ('use_y', True), ('use_z', True), ('factor', 0.30000001192092896), ('iterations', 2), ('vertex_group', ''), ('invert_vertex_group', False)]
+MOD Armature [('name', 'Armature'), ('show_viewport', True), ('show_render', True), ('show_in_editmode', False), ('show_on_cage', False), ('show_expanded', True), ('is_active', True), ('use_pin_to_last', False), ('is_override_data', False), ('use_apply_on_spline', False), ('execution_time', 0.0), ('persistent_uid', 312629205), ('use_bone_envelopes', False), ('use_vertex_groups', True), ('use_deform_preserve_volume', False), ('use_multi_modifier', False), ('vertex_group', ''), ('invert_vertex_group', False)]
+SMOOTH Counter({(1, True): 187855, (2, True): 116753, (0, True): 90475, (3, True): 13023, (4, True): 363})
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:23.082  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/normal_diagnostic_face.png'
+RENDERED normal_diagnostic face
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

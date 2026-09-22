@@ -1,0 +1,23 @@
+18:14:38 | INFO: Data are loaded, start creating Blender stuff
+18:14:38 | INFO: Blender create Mesh node char1
+18:14:40 | INFO: Blender create Mesh node Godwyn_Sword.001
+18:14:40 | INFO: glTF import finished in 2.19s
+00:05.809  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_front.png'
+RENDERED before front
+00:07.475  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_side.png'
+RENDERED before side
+00:09.158  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_three_quarter.png'
+RENDERED before three_quarter
+00:10.747  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_chest.png'
+RENDERED before chest
+00:11.934  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_face.png'
+RENDERED before face
+00:13.430  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_shoulder.png'
+RENDERED before shoulder
+00:14.524  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_sword.png'
+RENDERED before sword
+00:16.112  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_arms_raised.png'
+RENDERED before arms_raised
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

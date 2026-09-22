@@ -1,0 +1,77 @@
+00:01.651  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_round2_input.blend"
+02:28.593  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_round2_work.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+03:14.086  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face_three_quarter.png'
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+03:32.492  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_front.png'
+RENDERED after front
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+22:13:47 | INFO: Starting glTF 2.0 export
+22:13:47 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+22:13:47 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: AstraChar2_Cornea_L
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: AstraChar2_Cornea_R
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: Sphere
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: Sphere.003
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: AstraChar2_Eyebrows_L
+22:13:47 | INFO: Primitives created: 1
+22:13:47 | INFO: Extracting primitive: AstraChar2_Eyebrows_R
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Iris_L
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Iris_R
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Lashes_L
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Lashes_R
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: Sphere.002
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: Sphere.005
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Pupil_L
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_Pupil_R
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_0
+22:13:48 | INFO: Primitives created: 1
+22:13:48 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_1
+22:13:48 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_2
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_3
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_R2_HairlineWisps
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_R2_HairRoots
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: Sphere.001
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: Sphere.004
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_Wetline_L
+22:13:49 | INFO: Primitives created: 1
+22:13:49 | INFO: Extracting primitive: AstraChar2_Wetline_R
+22:13:49 | INFO: Primitives created: 1
+22:13:50 | INFO: Extracting primitive: AstraChar2 refined char1
+22:13:52 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:53 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:55 | INFO: Primitives created: 5
+22:13:55 | INFO: Extracting primitive: Godwyn_Sword.001
+22:13:55 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:13:55 | INFO: Primitives created: 1
+22:13:55 | INFO: Finished glTF 2.0 export in 8.66013789176941 s
+
+Info: Saved as "astra_character_v2.blend"
+ROUND2 DELIVERED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

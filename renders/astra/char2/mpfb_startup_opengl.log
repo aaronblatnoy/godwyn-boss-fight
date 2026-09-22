@@ -1,0 +1,8 @@
+ ArchWarn: ARCH_CACHE_LINE_SIZE != Arch_ObtainCacheLineSize()
+ Function: Arch_ValidateAssumptions
+     File: /Users/jonas/blender-dev-deps/build_darwin/deps_arm64/build/usd/src/external_usd/pxr/base/arch/assumptions.cpp
+     Line: 140
+
+Error: Unrecognized GPU backend for '--gpu-backend', expected one of [metal].
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+Writing: /var/folders/5s/4r9d16055pqb7p4wcpdjqbzr0000gn/T/blender.crash.txt

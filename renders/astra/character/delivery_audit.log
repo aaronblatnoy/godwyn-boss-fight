@@ -1,0 +1,18 @@
+00:01.561  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+{
+  "required_comparison_stills": 16,
+  "resolution": [
+    960,
+    960
+  ],
+  "embedded_images": 9,
+  "source_unchanged": true,
+  "final_spike_edges": 0,
+  "final_longest_edge_m": 0.1177818551659584,
+  "final_stretch_p99": 1.3571218252182007,
+  "blend_bytes": 75300608,
+  "glb_bytes": 86107384
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

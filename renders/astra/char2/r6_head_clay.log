@@ -1,0 +1,13 @@
+00:01.298  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_r6_head.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r6_head_clay.py:12: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('R6 anatomical clay, no textures no emission');m.use_nodes=True;m.node_tree.nodes.clear();out=m.node_tree.nodes.new('ShaderNodeOutputMaterial');d=m.node_tree.nodes.new('ShaderNodeBsdfDiffuse');d.inputs[0].default_value=(.35,.35,.35,1);d.inputs[1].default_value=.45;m.node_tree.links.new(d.outputs[0],out.inputs[0]);s.view_layers[0].material_override=m
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r6_head_clay.py:13: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world=bpy.data.worlds.new('R6 neutral clay world');world.use_nodes=True;world.node_tree.nodes['Background'].inputs[0].default_value=(.08,.08,.08,1);world.node_tree.nodes['Background'].inputs[1].default_value=.3;s.world=world
+00:55.585  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_head_iter02_front.png'
+01:30.431  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_head_iter02_side.png'
+01:44.693  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_head_iter02_three_quarter.png'
+THREE VIEW CLAY COMPLETE 2
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

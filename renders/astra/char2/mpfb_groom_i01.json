@@ -1,0 +1,126 @@
+{
+  "method": "Salvaged R4 guides, fine strands and 6 three-bundle plaits. Geometric scalp projection; UV-independent.",
+  "groups": [
+    {
+      "group": "L_Back_0",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.11418991535902023,
+      "root_movement_mean_m": 0.06987137775868177
+    },
+    {
+      "group": "L_Back_1",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.11459237337112427,
+      "root_movement_mean_m": 0.0695721146547132
+    },
+    {
+      "group": "L_Braids",
+      "strands": 432,
+      "points_per_strand": 256,
+      "chain": "front_L",
+      "root_movement_max_m": 0.1011025458574295,
+      "root_movement_mean_m": 0.06866859373877998
+    },
+    {
+      "group": "L_Front_0",
+      "strands": 1400,
+      "points_per_strand": 64,
+      "chain": "front_L",
+      "root_movement_max_m": 0.052281204611063004,
+      "root_movement_mean_m": 0.03369571248335498
+    },
+    {
+      "group": "L_Front_1",
+      "strands": 1400,
+      "points_per_strand": 64,
+      "chain": "front_L",
+      "root_movement_max_m": 0.05237257108092308,
+      "root_movement_mean_m": 0.03360329841263592
+    },
+    {
+      "group": "L_Side_0",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.07511801272630692,
+      "root_movement_mean_m": 0.04063288001964489
+    },
+    {
+      "group": "L_Side_1",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.07264082133769989,
+      "root_movement_mean_m": 0.040355737927473254
+    },
+    {
+      "group": "R_Back_0",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.11178598552942276,
+      "root_movement_mean_m": 0.07092623373700513
+    },
+    {
+      "group": "R_Back_1",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.11428726464509964,
+      "root_movement_mean_m": 0.07092442528655131
+    },
+    {
+      "group": "R_Braids",
+      "strands": 432,
+      "points_per_strand": 256,
+      "chain": "front_R",
+      "root_movement_max_m": 0.10053444653749466,
+      "root_movement_mean_m": 0.06864397837435482
+    },
+    {
+      "group": "R_Front_0",
+      "strands": 1400,
+      "points_per_strand": 64,
+      "chain": "front_R",
+      "root_movement_max_m": 0.052603840827941895,
+      "root_movement_mean_m": 0.03372881793949221
+    },
+    {
+      "group": "R_Front_1",
+      "strands": 1400,
+      "points_per_strand": 64,
+      "chain": "front_R",
+      "root_movement_max_m": 0.05179665982723236,
+      "root_movement_mean_m": 0.033430685200063245
+    },
+    {
+      "group": "R_Side_0",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.07629906386137009,
+      "root_movement_mean_m": 0.04149892915661136
+    },
+    {
+      "group": "R_Side_1",
+      "strands": 900,
+      "points_per_strand": 64,
+      "chain": "back",
+      "root_movement_max_m": 0.07624256610870361,
+      "root_movement_mean_m": 0.04152437458849616
+    }
+  ],
+  "native_strands": 13664,
+  "hair_bones": 12,
+  "scalp_faces": 3078,
+  "portable_correspondence": "Same per-point displacement applied to native/control and each portable triangle cross-section; quantitative test follows.",
+  "forged_plate_relief": {
+    "objects": 4,
+    "vertices": 83544,
+    "faces": 81534
+  }
+}

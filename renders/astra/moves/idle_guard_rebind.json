@@ -1,0 +1,13 @@
+{
+  "source": "models/astra_character_v2_prechar2.blend",
+  "sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+  "action_before": [
+    "fbf0c7108313fbe1e5476a2944d962c9db558f8ca47e68ff0e7a1f53a2e6613b",
+    326095
+  ],
+  "action_after": [
+    "fbf0c7108313fbe1e5476a2944d962c9db558f8ca47e68ff0e7a1f53a2e6613b",
+    326095
+  ],
+  "max_rest_error": 0.00067138671875
+}

@@ -1,0 +1,25 @@
+00:01.117  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py:32: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('Astra source for portable bake '+o.name);mat.use_nodes=True;g=Graph(mat)
+Traceback (most recent call last):
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 132, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 124, in main
+    charims=bake(char,4096);swordims=bake(sword,2048)
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 79, in bake
+    started=time.time();g,mat,base,orm,bs,out=make_procedural(o,o.name=='Godwyn_Sword');s=bpy.context.scene
+                                              ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 68, in make_procedural
+    rough=g.mix(cloth,rgold,g.add(.77,g.mul(weave,.065)));rough=g.mix(skin,rough,.48);rough=g.mix(hair,rough,g.add(.38,g.mul(noise,.08)))
+                                                                ~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 22, in mix
+    n=self.node('ShaderNodeMixRGB');n.blend_type='MIX';self.set(n.inputs[0],f);self.set(n.inputs[1],a);self.set(n.inputs[2],b);return n.outputs[0]
+                                                                                                       ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py", line 10, in set
+    else:s.default_value=v
+         ^^^^^^^^^^^^^^^
+TypeError: bpy_struct: item.attr = val:
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

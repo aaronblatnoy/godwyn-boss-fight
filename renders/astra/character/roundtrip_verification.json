@@ -1,0 +1,97 @@
+{
+  "images": [
+    {
+      "name": "astra_character_Astra_Undersleeves_basecolor_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_normal_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_orm_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "astra_character_char1_basecolor_4096",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "name": "astra_character_char1_normal_4096",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "name": "astra_character_char1_orm_4096",
+      "size": [
+        4096,
+        4096
+      ]
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_basecolor_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_normal_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_orm_2048",
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Astra_Undersleeves",
+      "vertices": 6946,
+      "materials": [
+        "Astra woven inner sleeves"
+      ]
+    },
+    {
+      "name": "char1",
+      "vertices": 298459,
+      "materials": [
+        "Astra engraved royal gold final",
+        "Astra midnight blue woven silk final",
+        "Astra pale golden skin final"
+      ]
+    },
+    {
+      "name": "Godwyn_Sword",
+      "vertices": 6090,
+      "materials": [
+        "Astra worn steel and gold hilt final"
+      ]
+    },
+    {
+      "name": "Icosphere",
+      "vertices": 42,
+      "materials": []
+    }
+  ]
+}

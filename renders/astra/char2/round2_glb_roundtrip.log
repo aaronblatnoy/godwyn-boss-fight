@@ -1,0 +1,36 @@
+22:15:30 | INFO: Data are loaded, start creating Blender stuff
+22:15:30 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Cornea_L
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Cornea_R
+22:15:30 | INFO: Blender create Mesh node Sphere
+22:15:30 | INFO: Blender create Mesh node Sphere.003
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Eyebrows_L
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Eyebrows_R
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Iris_L
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Iris_R
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Lashes_L
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Lashes_R
+22:15:30 | INFO: Blender create Mesh node Sphere.002
+22:15:30 | INFO: Blender create Mesh node Sphere.005
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Pupil_L
+22:15:30 | INFO: Blender create Mesh node AstraChar2_Pupil_R
+22:15:30 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_0
+22:15:31 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_1
+22:15:31 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_2
+22:15:32 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_3
+22:15:32 | INFO: Blender create Mesh node AstraChar2_R2_HairlineWisps
+22:15:32 | INFO: Blender create Mesh node AstraChar2_R2_HairRoots
+22:15:32 | INFO: Blender create Mesh node Sphere.001
+22:15:32 | INFO: Blender create Mesh node Sphere.004
+22:15:32 | INFO: Blender create Mesh node AstraChar2_Wetline_L
+22:15:32 | INFO: Blender create Mesh node AstraChar2_Wetline_R
+22:15:32 | INFO: Blender create Mesh node AstraChar2 refined char1
+22:15:34 | INFO: Blender create Mesh node Godwyn_Sword.001
+22:15:34 | INFO: glTF import finished in 3.66s
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:25.163  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/round2_glb_roundtrip_face.png'
+COMPARISON round2_glb_roundtrip
+FRESH GLB IMPORT PASSED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

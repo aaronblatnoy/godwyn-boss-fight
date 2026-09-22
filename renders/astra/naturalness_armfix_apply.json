@@ -1,0 +1,27 @@
+{
+  "source": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_prefix2.blend",
+  "target": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_armfix_trial.blend",
+  "changed_existing_quaternion_values": 732,
+  "added_quaternion_keys": 5264,
+  "unchanged_curve_sha256": "eca69f7ebee1c70a645b5201374a525027ba169077c06a27d728d159f9588e1d",
+  "max_hand_head_error_during_solve_m": 5.59934801699398e-07,
+  "edited_bones": [
+    "RightArm",
+    "RightForeArm",
+    "RightHand"
+  ],
+  "edit_windows": {
+    "roll": [
+      34,
+      44
+    ],
+    "pole": [
+      44,
+      53
+    ]
+  },
+  "bake_spacing_frames": 0.03125,
+  "max_elbow_pole_rotation_deg": 31.2667545317818,
+  "max_roll_offset_deg": 23.109548451055957,
+  "geometry_settings_edits": false
+}

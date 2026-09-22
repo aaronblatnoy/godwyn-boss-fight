@@ -1,0 +1,31 @@
+00:01.104  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_idle_guard_wip.blend"
+{
+  "pre_armature_surface_polish_offset_m": 0.014991402521500235,
+  "closed_finger_mesh_samples": 2256,
+  "max_closed_finger_hand_local_drift_m": 9.046469311409977e-07,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3442,
+    "astra_move_palm_sliver_faces": 621,
+    "astra_move_closed_finger_vertices": 2553,
+    "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 385,
+  "hilt_wrist_distance_range_m": [
+    0.1653151745351123,
+    0.16531559159838297
+  ],
+  "max_hand_local_hilt_drift_m": 4.7449490347514626e-07,
+  "max_evaluated_tip_error_m": 5.724839184373184e-07,
+  "max_edge_vs_cut_deg": null,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    49,
+    97
+  ]
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

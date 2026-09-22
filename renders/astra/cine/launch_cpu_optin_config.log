@@ -1,0 +1,5 @@
+CINE_DEVICE_BOUND {"requested_device": "CPU", "bound_backend": "CPU", "engine": "CYCLES", "device": "CPU", "enabled_compute_devices": [{"name": "Apple M1 Pro", "type": "CPU"}]}
+EXPLICIT_CPU_CONFIGURATION_PASS
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

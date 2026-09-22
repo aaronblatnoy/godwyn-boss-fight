@@ -1,0 +1,11 @@
+00:00.543  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_armfix_trial.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+SURFACE armfix floor -0.014999999664723873 counts {'LeftFoot': 1123, 'RightFoot': 1256, 'cloth': 83753}
+FOOT RANGE {'LeftFoot': (0.0010092994198203087, 0.0036208899691700935), 'RightFoot': (0.0013863779604434967, 0.0023763421922922134)}
+CLOTH SWORD []
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

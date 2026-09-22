@@ -1,0 +1,78 @@
+00:00.768  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_prefix2.blend"
+00:02.385  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_armfix_trial.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "max_hand_position_error": {
+    "f": 52.984375,
+    "position_m": 4.8094198945198644e-05,
+    "rotation_deg": 0.0010466074879382306
+  },
+  "max_hand_rotation_error": {
+    "f": 39.171875,
+    "position_m": 1.2006314153891496e-05,
+    "rotation_deg": 0.0028663039092658962
+  },
+  "before_peaks": {
+    "upper_q": {
+      "frame": 38.875,
+      "speed_deg_frame": 58.199395970927206
+    },
+    "fore_q": {
+      "frame": 38.859375,
+      "speed_deg_frame": 58.17979538286603
+    },
+    "hand_q": {
+      "frame": 39.484375,
+      "speed_deg_frame": 46.038123699107906
+    }
+  },
+  "after_peaks": {
+    "upper_q": {
+      "frame": 38.875,
+      "speed_deg_frame": 58.199395970927206
+    },
+    "fore_q": {
+      "frame": 39.28125,
+      "speed_deg_frame": 55.54279205730974
+    },
+    "hand_q": {
+      "frame": 39.484375,
+      "speed_deg_frame": 46.04766229066735
+    }
+  },
+  "after_min_deviation": {
+    "f": 44.890625,
+    "pos": [
+      0.39430689811706543,
+      -0.5480339527130127,
+      1.8947187662124634
+    ],
+    "hand_q": [
+      0.6707166433334351,
+      -0.35114049911499023,
+      0.18922431766986847,
+      -0.6253268122673035
+    ],
+    "upper_q": [
+      0.5100110769271851,
+      -0.6151107549667358,
+      -0.4559651017189026,
+      0.3919483721256256
+    ],
+    "fore_q": [
+      0.28734949231147766,
+      -0.4466463625431061,
+      -0.8454398512840271,
+      -0.056291449815034866
+    ],
+    "deviation": -29.50888997894718,
+    "elbow": 75.64507588813241
+  },
+  "after_max_elbow": 148.2183151781866
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

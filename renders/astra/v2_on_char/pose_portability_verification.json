@@ -1,0 +1,17 @@
+{
+  "windup": {
+    "frame": 30,
+    "bones": 121,
+    "max_matrix_error_on_fresh_character": 0.0
+  },
+  "cross": {
+    "frame": 41,
+    "bones": 121,
+    "max_matrix_error_on_fresh_character": 0.0
+  },
+  "follow": {
+    "frame": 60,
+    "bones": 121,
+    "max_matrix_error_on_fresh_character": 0.0
+  }
+}

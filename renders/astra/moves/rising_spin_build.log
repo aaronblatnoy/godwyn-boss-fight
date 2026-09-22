@@ -1,0 +1,21 @@
+00:02.107  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_character_base.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+HILT ENVELOPE 0.029374360874295236
+GRIP MATERIAL FACES 3442 SLIVER 621
+BAKE rising_spin 30.0
+BAKE rising_spin 60.0
+BAKE rising_spin 90.0
+BAKE rising_spin 30.0
+BAKE rising_spin 60.0
+BAKE rising_spin 90.0
+BAKE rising_spin 30.0
+BAKE rising_spin 60.0
+BAKE rising_spin 90.0
+Info: Saved as "astra_move_rising_spin_wip.blend"
+BUILD SAVED rising_spin
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

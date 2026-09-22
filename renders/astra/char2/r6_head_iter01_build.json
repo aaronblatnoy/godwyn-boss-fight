@@ -1,0 +1,88 @@
+{
+  "iteration": 1,
+  "source": "/Users/aaron_7nh0yzm/Library/Application Support/Blender/5.2/extensions/user_default/mpfb/data/3dobjs/base.obj",
+  "morphs": {
+    "macrodetails/caucasian-male-young": 1.0,
+    "macrodetails/universal-male-young-averagemuscle-averageweight": 1.0,
+    "head/head-fat-decr": 0.22,
+    "head/head-rectangular": 0.16,
+    "head/head-scale-horiz-decr": 0.12,
+    "forehead/forehead-temple-decr": 0.2,
+    "eyebrows/eyebrows-trans-forward": 0.2,
+    "chin/chin-bones-incr": 0.2,
+    "chin/chin-prominent-incr": 0.1,
+    "chin/chin-width-incr": 0.1,
+    "nose/nose-scale-depth-decr": 0.08,
+    "nose/nose-width2-decr": 0.08,
+    "mouth/mouth-upperlip-volume-incr": 0.1,
+    "mouth/mouth-lowerlip-volume-incr": 0.06,
+    "cheek/l-cheek-bones-incr": 0.35,
+    "cheek/l-cheek-volume-decr": 0.22,
+    "eyes/l-eye-push1-in": 0.15,
+    "eyes/l-eye-push2-in": 0.08,
+    "eyes/l-eye-height1-decr": 0.1,
+    "cheek/r-cheek-bones-incr": 0.35,
+    "cheek/r-cheek-volume-decr": 0.22,
+    "eyes/r-eye-push1-in": 0.15,
+    "eyes/r-eye-push2-in": 0.08,
+    "eyes/r-eye-height1-decr": 0.1,
+    "expression/units/caucasian/eyebrows-left-inner-up": 0.06,
+    "expression/units/caucasian/eyebrows-right-inner-up": 0.06
+  },
+  "scale": [
+    0.18,
+    0.18,
+    0.18
+  ],
+  "eye_reference_native": [
+    0.0,
+    8.2164,
+    1.30435
+  ],
+  "eyes": {
+    "L": {
+      "center_world": [
+        0.05151080000000001,
+        -0.3456189000000001,
+        2.974948199999999
+      ]
+    },
+    "R": {
+      "center_world": [
+        -0.05151080000000001,
+        -0.3456189000000001,
+        2.974948199999999
+      ]
+    }
+  },
+  "removed_inherited_head_faces": 126914,
+  "retired_objects": [
+    "AstraChar2_Cornea_L",
+    "AstraChar2_Cornea_R",
+    "AstraChar2_Eyebrows_L",
+    "AstraChar2_Eyebrows_R",
+    "AstraChar2_Iris_L",
+    "AstraChar2_Iris_R",
+    "AstraChar2_Lashes_L",
+    "AstraChar2_Lashes_R",
+    "AstraChar2_Nostril_L",
+    "AstraChar2_Nostril_R",
+    "AstraChar2_Pupil_L",
+    "AstraChar2_Pupil_R",
+    "AstraChar2_R4_Scalp",
+    "AstraChar2_R4_ScalpRoots",
+    "AstraChar2_R6_NeckGraft",
+    "AstraChar2_TearCorner_L",
+    "AstraChar2_TearCorner_R",
+    "AstraChar2_Wetline_L",
+    "AstraChar2_Wetline_R"
+  ],
+  "head_vertices": 69754,
+  "head_faces": 69752,
+  "neck_boundary_caps": 1,
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "gaussian_geometry_used": false,
+  "gate": "PENDING THREE VIEW CLAY"
+}

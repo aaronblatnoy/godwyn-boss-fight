@@ -1,0 +1,21 @@
+00:00.970  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_mpfb_graft_i04.blend"
+GROOM MPFB_L_Front 2400 153600
+GROOM MPFB_L_Side 3000 192000
+GROOM MPFB_L_Back 3600 230400
+GROOM MPFB_L_Braids 450 72000
+GROOM MPFB_R_Front 2400 153600
+GROOM MPFB_R_Side 3000 192000
+GROOM MPFB_R_Back 3600 230400
+GROOM MPFB_R_Braids 450 72000
+00:29.498  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_groom_i08_clay_front.png'
+Info: Saved as "astra_character_v2_mpfb_groom_i08.blend"
+MPFB_RENDER mpfb_groom_i08_clay front
+00:37.797  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_groom_i08_clay_side.png'
+MPFB_RENDER mpfb_groom_i08_clay side
+00:47.269  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_groom_i08_clay_three_quarter.png'
+MPFB_RENDER mpfb_groom_i08_clay three_quarter
+00:55.224  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_groom_i08_clay_body.png'
+MPFB_RENDER mpfb_groom_i08_clay body
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

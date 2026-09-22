@@ -1,0 +1,692 @@
+{
+  "exact_geometry_and_maps_repeat": true,
+  "changed": [],
+  "signature": {
+    "AstraChar2_Cornea_L": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "ce7ce40707c2ffdfda25a89ba6509d06ee44142a9e2837997d3c702241b9e631",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.029160000383853912,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 cornea"
+      ]
+    },
+    "AstraChar2_Cornea_R": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "ed1c10fcd09cfd1c94f77e85340b0956e667b504912cb59f4f05a424c3ed2335",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.02930399961769581,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 cornea"
+      ]
+    },
+    "AstraChar2_Eyeball_L": {
+      "topology_sha256": "e40f31974112ade1a33bc144f6f104b18fe653ce7508158446c113c2742bdd5a",
+      "vertices": 2498,
+      "polygons": 2560,
+      "coordinates_sha256": "c3a50c4db6cdd3818206d5ac57f01cb1123694058d014ed1699a1fa35ff6aeda",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -0.054999999701976776,
+        0.0,
+        1.0,
+        0.0,
+        -0.3930000066757202,
+        0.0,
+        0.0,
+        1.0,
+        2.9811599254608154,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 living sclera"
+      ]
+    },
+    "AstraChar2_Eyeball_R": {
+      "topology_sha256": "1eacc43aff73e1bcfd83c7b52cf2c60151c29a53c06aa7e7e584553eb5ecb3f8",
+      "vertices": 2498,
+      "polygons": 2560,
+      "coordinates_sha256": "e5ee0574b67040572a1f2398411a33f50365785d5acb31eefe566a036296b8c9",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.054999999701976776,
+        0.0,
+        1.0,
+        0.0,
+        -0.3930000066757202,
+        0.0,
+        0.0,
+        1.0,
+        2.9821040630340576,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 living sclera"
+      ]
+    },
+    "AstraChar2_Eyebrows_L": {
+      "topology_sha256": "5dd08ecef648df7a4c644b67f6785791e7cb5a14daf7a6c56f8fc0f5fd42f96f",
+      "vertices": 10750,
+      "polygons": 8600,
+      "coordinates_sha256": "aa423c59405338fff81397067a0f82526ba3cba8ab56f00adc5834b2703270d7",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 warm blonde eyebrows"
+      ]
+    },
+    "AstraChar2_Eyebrows_R": {
+      "topology_sha256": "5dd08ecef648df7a4c644b67f6785791e7cb5a14daf7a6c56f8fc0f5fd42f96f",
+      "vertices": 10750,
+      "polygons": 8600,
+      "coordinates_sha256": "751978ec3b33dab698e67d3e33cf33e91987cb0504fd56356a41ea2cfd830800",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 warm blonde eyebrows"
+      ]
+    },
+    "AstraChar2_Iris_L": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "0ba3fd28a83b3dc77f37795abe2a410615e988f492964902815a4be0b4daf17f",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.029160000383853912,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 hazel green iris"
+      ]
+    },
+    "AstraChar2_Iris_R": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "ce77ca4d40d7830fd5dda2967cb9f9df6deb565e00628fd785aa3b807e864a16",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.02930399961769581,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 hazel green iris"
+      ]
+    },
+    "AstraChar2_Lashes_L": {
+      "topology_sha256": "268ffed9d4af78a6f82ae72de1c24228c73ded4fc040848fff2b37d06f809e0a",
+      "vertices": 2025,
+      "polygons": 1620,
+      "coordinates_sha256": "82a6f29df250eb2e0aa02d7e917268abfb121aafdaaf4fb229562f3709e84e0a",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 blonde lashes"
+      ]
+    },
+    "AstraChar2_Lashes_R": {
+      "topology_sha256": "268ffed9d4af78a6f82ae72de1c24228c73ded4fc040848fff2b37d06f809e0a",
+      "vertices": 2025,
+      "polygons": 1620,
+      "coordinates_sha256": "b517422fcc00dad1f28630a76669a55f918133ac576b3e3d6f99a0c4973d8f95",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 blonde lashes"
+      ]
+    },
+    "AstraChar2_Nostril_L": {
+      "topology_sha256": "47d2f4f757e7e8c32aa1eda9a33e1d693ee125f47e97444026b9c2cf6164c7e0",
+      "vertices": 422,
+      "polygons": 448,
+      "coordinates_sha256": "02ef86b2ef1b194b1a59f1fded0860143983e590e0c411be5f6be44c192188cc",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -0.011800000444054604,
+        0.0,
+        1.0,
+        0.0,
+        -0.43604469299316406,
+        0.0,
+        0.0,
+        1.0,
+        2.882499933242798,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 nostril interior"
+      ]
+    },
+    "AstraChar2_Nostril_R": {
+      "topology_sha256": "a71de8ccf3d19d258f735ade31abc7ff070dc62051fb96d88164ba7ec5a12fcb",
+      "vertices": 422,
+      "polygons": 448,
+      "coordinates_sha256": "7a4184e652e4fa12b42b15811db588358c061a9755aac70e83c58dc8a60cd98c",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.011800000444054604,
+        0.0,
+        1.0,
+        0.0,
+        -0.4291834235191345,
+        0.0,
+        0.0,
+        1.0,
+        2.882499933242798,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 nostril interior"
+      ]
+    },
+    "AstraChar2_Pupil_L": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "6ac6b938700e1d44f54dbdc71fffb8e1287a711939f7aabcf114a6798cdb678b",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.029160000383853912,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 pupil"
+      ]
+    },
+    "AstraChar2_Pupil_R": {
+      "topology_sha256": "08036b0e3ba5edfeb6b1b3afb7e6403b41f96c15acf36506286e2fb217935b73",
+      "vertices": 1677,
+      "polygons": 1536,
+      "coordinates_sha256": "9afdb2453b717362f97a6ca57de2ad130d5203b53b774705aa05d65d6a20c3ff",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.02930399961769581,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 pupil"
+      ]
+    },
+    "AstraChar2_R2_HairFibers_0": {
+      "topology_sha256": "c8f07d420569244be14566a35cce80a3b6c17e4cbb60e372fc734870e8f1baf1",
+      "vertices": 65520,
+      "polygons": 60920,
+      "coordinates_sha256": "f743822c732f7a3893cd3c8a705f81edd297429b991750d8ff74b08a45673280",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 0"
+      ]
+    },
+    "AstraChar2_R2_HairFibers_1": {
+      "topology_sha256": "975b22a9de5075142342e3cc4c3fba24d0b6c3a703ee5105594c9828c95ef0b1",
+      "vertices": 161585,
+      "polygons": 150615,
+      "coordinates_sha256": "1cf4e40bde0a9fab2264cd45136b197d3de8529ebbb738bfb453fa473ffcc9f8",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 1"
+      ]
+    },
+    "AstraChar2_R2_HairFibers_2": {
+      "topology_sha256": "78eb44ea130ca33df2bdc4a101a34e0ac30fb6aab6895308ae65c336e558cddb",
+      "vertices": 157860,
+      "polygons": 147070,
+      "coordinates_sha256": "7839f913f2966f63beffea2cc7b6e688224a4c1643f3ce57c2c29e561c68acd1",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 2"
+      ]
+    },
+    "AstraChar2_R2_HairFibers_3": {
+      "topology_sha256": "31b3b6dd6179fae84d36ef10626e0d982b7aeb3b08b36206db43791bac26d38f",
+      "vertices": 66140,
+      "polygons": 61585,
+      "coordinates_sha256": "91a656fdcf91b6e8818e187722637266b9a9ab7377f81c92c237755a6dbbf1f6",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 3"
+      ]
+    },
+    "AstraChar2_R2_HairlineWisps": {
+      "topology_sha256": "6638a20f6f2a242bca91252094121b3b8386d1ac3a8d7456ef326ff9c720f3a8",
+      "vertices": 16855,
+      "polygons": 15535,
+      "coordinates_sha256": "9747cc2bcb2d21dafb3feddec85d0c9d19cc4ccebc3c8db1077bb7e63a0e8a77",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 2"
+      ]
+    },
+    "AstraChar2_R2_HairRoots": {
+      "topology_sha256": "88711c04d002f5b593cce85ff6442ba1bf7df1caf09a12d56419585043413829",
+      "vertices": 6601,
+      "polygons": 4624,
+      "coordinates_sha256": "9fe528be8656367d566865738b8c5efadd1e38517fba77f01ea1b67119d65bb9",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 R2 hair 0"
+      ]
+    },
+    "AstraChar2_TearCorner_L": {
+      "topology_sha256": "6451bd2a5ce5e81b68c64a85a0e83579cd879d11ac4bf7fa2a148f6102ab95a0",
+      "vertices": 222,
+      "polygons": 240,
+      "coordinates_sha256": "07dedd42761290216335e0eec9eeccaead6315a34b30f7ee6c32e10bd835e222",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -0.033160001039505005,
+        0.0,
+        1.0,
+        0.0,
+        -0.4048594534397125,
+        0.0,
+        0.0,
+        1.0,
+        2.948641538619995,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 lacrimal wetline"
+      ]
+    },
+    "AstraChar2_TearCorner_R": {
+      "topology_sha256": "6451bd2a5ce5e81b68c64a85a0e83579cd879d11ac4bf7fa2a148f6102ab95a0",
+      "vertices": 222,
+      "polygons": 240,
+      "coordinates_sha256": "4acde08a6aedc6ca4c4f511ba41e0ac755309fd65667acff73f882675aee7454",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.033160001039505005,
+        0.0,
+        1.0,
+        0.0,
+        -0.4048594534397125,
+        0.0,
+        0.0,
+        1.0,
+        2.949441432952881,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 lacrimal wetline"
+      ]
+    },
+    "AstraChar2_Wetline_L": {
+      "topology_sha256": "47a5145957c6929543c921b9925186b6ce44c7636b27046c6c715d4c66b1f3a3",
+      "vertices": 650,
+      "polygons": 640,
+      "coordinates_sha256": "d114c91fbeb1dc8062180ecaff4a808ee77ab34286cbf743a3796d6f3fb7640d",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 lacrimal wetline"
+      ]
+    },
+    "AstraChar2_Wetline_R": {
+      "topology_sha256": "47a5145957c6929543c921b9925186b6ce44c7636b27046c6c715d4c66b1f3a3",
+      "vertices": 650,
+      "polygons": 640,
+      "coordinates_sha256": "b42369128d493d1ea9a71064f3f2d4a87300c1da3b126dcc36f81d9c509a718a",
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "AstraChar2 lacrimal wetline"
+      ]
+    },
+    "char1": {
+      "topology_sha256": "a49f87540e704c268cddc5195c4bba7d2e46f82c27f5590674e0ffb15ab0f7f4",
+      "vertices": 367113,
+      "polygons": 424876,
+      "coordinates_sha256": "6194c9e3078a256eeef854859374f0eed1b2d42af5c58d73aba0f9aea9f2dec0",
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "materials": [
+        "Astra Round2 solid champagne gold",
+        "Astra Round2 royal blue and continuous gold trim",
+        "Astra pale golden skin final",
+        "Astra engraved royal gold final",
+        "Astra midnight blue woven silk final"
+      ]
+    },
+    "maps": {
+      "r2_skin_basecolor.png": "040abe64cdb591d9f248a4c0284ac863e8985577ac2ad545164f8bd35b210f18",
+      "r2_skin_normal.png": "2d4f6aee078059cdada04224ddbf972a2128d6b2830239784b2660bb41fa713f",
+      "r2_skin_emission.png": "849a3c771ff265863b0ed8758e4b8f4df866792147dc739cdc1465703c361194",
+      "r2_skin_orm.png": "d6e79d64dd717398b55cc65259abd4c853fe49d489202707445a431d70dbc6a5"
+    }
+  },
+  "method": "Fresh immutable-input rebuild; all char1 and AstraChar2 mesh coordinates, counts, matrices and materials plus PNG map hashes compared."
+}

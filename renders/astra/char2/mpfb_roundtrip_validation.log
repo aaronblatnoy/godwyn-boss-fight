@@ -1,0 +1,61 @@
+01:42:09 | INFO: Data are loaded, start creating Blender stuff
+01:42:09 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+01:42:09 | INFO: Blender create Mesh node Sphere
+01:42:09 | INFO: Blender create Mesh node Sphere.003
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Eyebrows_L
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Eyebrows_R
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Iris_L clean topology.001
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Iris_R clean topology.001
+01:42:09 | INFO: Blender create Mesh node base.001
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Pupil_L clean topology.001
+01:42:09 | INFO: Blender create Mesh node AstraChar2_Pupil_R clean topology.001
+01:42:09 | INFO: Blender create Mesh node AstraChar2_R5_ClavicleMantle clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_Cuirass clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_Gorget clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_GorgetRim clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_L clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_R clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_L clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_R clean topology
+01:42:10 | INFO: Blender create Mesh node AstraChar2_R5_SacredEmblem clean topology
+01:42:10 | INFO: Blender create Mesh node R5 MPFB_L_Back portable individual strands
+01:42:11 | INFO: Blender create Mesh node R5 MPFB_L_Braids portable individual strands
+01:42:12 | INFO: Blender create Mesh node R5 MPFB_L_Front portable individual strands
+01:42:13 | INFO: Blender create Mesh node R5 MPFB_L_Side portable individual strands
+01:42:14 | INFO: Blender create Mesh node R5 MPFB_R_Back portable individual strands
+01:42:15 | INFO: Blender create Mesh node R5 MPFB_R_Braids portable individual strands
+01:42:16 | INFO: Blender create Mesh node R5 MPFB_R_Front portable individual strands
+01:42:17 | INFO: Blender create Mesh node R5 MPFB_R_Side portable individual strands
+01:42:18 | INFO: Blender create Mesh node R5 MPFB_ScalpBed portable individual strands
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_0 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_1 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_2 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_3 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_4 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_5 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_6 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_7 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_8 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_9 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_10 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_11 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_12 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_13 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_14 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_15 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_0 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_1 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_2 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_0 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_1 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_2 clean topology
+01:42:19 | INFO: Blender create Mesh node AstraChar2 refined char1
+01:42:20 | INFO: Blender create Mesh node Godwyn_Sword.001
+01:42:21 | INFO: glTF import finished in 11.66s
+ROUNDTRIP_JOINTS [('phys_cape_L_03', 1.430511474609375e-05), ('phys_cape_L_04', 1.4185905456542969e-05), ('phys_cape_L_02', 1.2278556823730469e-05), ('phys_cape_L_05', 1.150369644165039e-05), ('phys_cape_L_06', 1.150369644165039e-05), ('RightHand', 1.0609626770019531e-05), ('phys_cape_L_01', 9.298324584960938e-06), ('phys_robe_front_R_03', 8.64267349243164e-06), ('phys_cape_R_05', 8.463859558105469e-06), ('phys_robe_side_R_05', 7.987022399902344e-06)]
+00:36.862  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_roundtrip_arms_raised.png'
+00:49.383  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_roundtrip_combat_stress.png'
+MPFB_VALIDATION_PASS mpfb_roundtrip
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,24 @@
+00:02.009  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_preround4.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r4_groom.py:120: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  sm=bpy.data.materials.new('AstraChar2 R4 scalp beneath roots');sm.use_nodes=True;bs=sm.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.08,.038,.017,1);bs.inputs['Roughness'].default_value=.64;scalp.data.materials.append(sm)
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r4_groom.py:18: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.get(name) or bpy.data.materials.new(name);m.use_nodes=True;n=m.node_tree.nodes;n.clear();out=n.new('ShaderNodeOutputMaterial')
+GROOM R_Front_0 1400 89600
+GROOM R_Front_1 1400 89600
+GROOM R_Side_0 900 57600
+GROOM R_Side_1 900 57600
+GROOM R_Back_0 900 57600
+GROOM R_Back_1 900 57600
+GROOM R_Braids 432 110592
+GROOM L_Front_0 1400 89600
+GROOM L_Front_1 1400 89600
+GROOM L_Side_0 900 57600
+GROOM L_Side_1 900 57600
+GROOM L_Back_0 900 57600
+GROOM L_Back_1 900 57600
+GROOM L_Braids 432 110592
+Info: Saved as "astra_character_v2.blend"
+SAVED 13664
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

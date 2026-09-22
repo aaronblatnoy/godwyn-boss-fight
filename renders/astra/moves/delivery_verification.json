@@ -1,0 +1,101 @@
+{
+  "stable_input": "models/astra_character_v2_prechar2.blend",
+  "frozen_snapshot": "models/astra_move_character_base.blend",
+  "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+  "moves": {
+    "idle_guard": {
+      "frames": 96,
+      "deliverables": [
+        "scripts/astra_move_idle_guard_build.py",
+        "models/astra_move_idle_guard_wip.blend",
+        "renders/astra/moves/idle_guard.mp4",
+        "renders/astra/moves/idle_guard_contact_sheet.png"
+      ],
+      "sha256": {
+        "scripts/astra_move_idle_guard_build.py": "13134c4ccd0767ce0933a164045b0a670cd8941cf01a5738b997fb27abb4a679",
+        "models/astra_move_idle_guard_wip.blend": "500571b5e8f587f19aa7ac07a010593acea47569cecf74d521e89fde2576da98",
+        "renders/astra/moves/idle_guard.mp4": "3a543444097fbf7242bd2670b496ff75fdcfa3a15030d5ab472373e94bdda2d7",
+        "renders/astra/moves/idle_guard_contact_sheet.png": "d702d9db4de988357af98572a80ed1b3480e6a6d433f09ac3efc66239e869184"
+      },
+      "grip_closeups": [
+        "renders/astra/moves/idle_guard/grip/001.png",
+        "renders/astra/moves/idle_guard/grip/049.png",
+        "renders/astra/moves/idle_guard/grip/097.png"
+      ]
+    },
+    "walk_stalk": {
+      "frames": 72,
+      "deliverables": [
+        "scripts/astra_move_walk_stalk_build.py",
+        "models/astra_move_walk_stalk_wip.blend",
+        "renders/astra/moves/walk_stalk.mp4",
+        "renders/astra/moves/walk_stalk_contact_sheet.png"
+      ],
+      "sha256": {
+        "scripts/astra_move_walk_stalk_build.py": "ae56707287fa130effc33d9bd618ff5d343d54324e7614ca8f368c272878e201",
+        "models/astra_move_walk_stalk_wip.blend": "39b5f8825121bc5dec1415c92fb27beec072efcbf812649b96f7a20dce7a2dcf",
+        "renders/astra/moves/walk_stalk.mp4": "cda50102dc8be028ddab55f69e08afab3c64faea4eddc636a2071d8adcfcd5d0",
+        "renders/astra/moves/walk_stalk_contact_sheet.png": "218e645fc38fbd7a4ee84762340f76121abfd80aa09fb12a2a817965a46717d4"
+      },
+      "grip_closeups": [
+        "renders/astra/moves/walk_stalk/grip/001.png",
+        "renders/astra/moves/walk_stalk/grip/019.png",
+        "renders/astra/moves/walk_stalk/grip/037.png",
+        "renders/astra/moves/walk_stalk/grip/055.png",
+        "renders/astra/moves/walk_stalk/grip/073.png"
+      ]
+    },
+    "lunge_thrust": {
+      "frames": 64,
+      "deliverables": [
+        "scripts/astra_move_lunge_thrust_build.py",
+        "models/astra_move_lunge_thrust_wip.blend",
+        "renders/astra/moves/lunge_thrust.mp4",
+        "renders/astra/moves/lunge_thrust_contact_sheet.png"
+      ],
+      "sha256": {
+        "scripts/astra_move_lunge_thrust_build.py": "f1ec866cc4ae967d3ff736b5800cc5d2fef68134a87aca7ea3be210acbc86993",
+        "models/astra_move_lunge_thrust_wip.blend": "acb7d7b729f06e466313703e944ff4873bf871e06b40ab6b8c420ae92a935f45",
+        "renders/astra/moves/lunge_thrust.mp4": "5f5b2c6a5b0502eb6c1890475e3673d935369f2b1f13ce58b59cd4c2baece020",
+        "renders/astra/moves/lunge_thrust_contact_sheet.png": "0c48aa4aaf367feaad6372c1af438a0c30bd11cbce0b5282935843210a60787c"
+      },
+      "grip_closeups": [
+        "renders/astra/moves/lunge_thrust/grip/001.png",
+        "renders/astra/moves/lunge_thrust/grip/017.png",
+        "renders/astra/moves/lunge_thrust/grip/029.png",
+        "renders/astra/moves/lunge_thrust/grip/033.png",
+        "renders/astra/moves/lunge_thrust/grip/037.png",
+        "renders/astra/moves/lunge_thrust/grip/041.png",
+        "renders/astra/moves/lunge_thrust/grip/045.png",
+        "renders/astra/moves/lunge_thrust/grip/049.png",
+        "renders/astra/moves/lunge_thrust/grip/057.png",
+        "renders/astra/moves/lunge_thrust/grip/064.png"
+      ]
+    },
+    "rising_spin": {
+      "frames": 116,
+      "deliverables": [
+        "scripts/astra_move_rising_spin_build.py",
+        "models/astra_move_rising_spin_wip.blend",
+        "renders/astra/moves/rising_spin.mp4",
+        "renders/astra/moves/rising_spin_contact_sheet.png"
+      ],
+      "sha256": {
+        "scripts/astra_move_rising_spin_build.py": "f9c6cddf03249c202b3318a90812034220c6f947b047d3a7b57542afe5577c00",
+        "models/astra_move_rising_spin_wip.blend": "f2436e5fcb3d7070593da1ea58a582adaaf5183b9d732430f6d803e2748e6304",
+        "renders/astra/moves/rising_spin.mp4": "276298f3a8fb60f636a7f975302f45db5152724566dc1af70ffbd0d9dfce5eb9",
+        "renders/astra/moves/rising_spin_contact_sheet.png": "f6b519ab717b394ad8347795fc8d56bce3ab895e5f63d6c169fe42ad1771ff4a"
+      },
+      "grip_closeups": [
+        "renders/astra/moves/rising_spin/grip/001.png",
+        "renders/astra/moves/rising_spin/grip/024.png",
+        "renders/astra/moves/rising_spin/grip/030.png",
+        "renders/astra/moves/rising_spin/grip/036.png",
+        "renders/astra/moves/rising_spin/grip/060.png",
+        "renders/astra/moves/rising_spin/grip/084.png",
+        "renders/astra/moves/rising_spin/grip/116.png"
+      ]
+    }
+  },
+  "audit": "renders/astra/moves/physics_audit.md"
+}

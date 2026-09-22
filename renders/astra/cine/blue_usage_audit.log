@@ -1,0 +1,26 @@
+00:00.760  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+USED Godwyn_Sword [('Astra worn steel and gold hilt final', 8179)]
+USED Astra evaluation ground [('Astra charcoal', 1)]
+USED char1 [('Astra Round2 royal blue and continuous gold trim', 187847), ('Astra Round2 solid champagne gold', 90475), ('Astra engraved royal gold final', 12679), ('Astra pale golden skin final', 144293), ('Astra midnight blue woven silk final', 204)]
+USED Astra_Undersleeves [('Astra Round2 royal blue undersleeves', 384)]
+USED AstraChar2_Eyeball_L [('AstraChar2 living sclera', 2560)]
+USED AstraChar2_Iris_L [('AstraChar2 hazel green iris', 1536)]
+USED AstraChar2_Pupil_L [('AstraChar2 pupil', 1536)]
+USED AstraChar2_Cornea_L [('AstraChar2 cornea', 1536)]
+USED AstraChar2_Wetline_L [('AstraChar2 lacrimal wetline', 640)]
+USED AstraChar2_TearCorner_L [('AstraChar2 lacrimal wetline', 240)]
+USED AstraChar2_Eyebrows_L [('AstraChar2 warm blonde eyebrows', 8600)]
+USED AstraChar2_Lashes_L [('AstraChar2 blonde lashes', 1620)]
+USED AstraChar2_Nostril_L [('AstraChar2 nostril interior', 448)]
+USED AstraChar2_Eyeball_R [('AstraChar2 living sclera', 2560)]
+USED AstraChar2_Iris_R [('AstraChar2 hazel green iris', 1536)]
+USED AstraChar2_Pupil_R [('AstraChar2 pupil', 1536)]
+USED AstraChar2_Cornea_R [('AstraChar2 cornea', 1536)]
+USED AstraChar2_Wetline_R [('AstraChar2 lacrimal wetline', 640)]
+USED AstraChar2_TearCorner_R [('AstraChar2 lacrimal wetline', 240)]
+USED AstraChar2_Eyebrows_R [('AstraChar2 warm blonde eyebrows', 8600)]
+USED AstraChar2_Lashes_R [('AstraChar2 blonde lashes', 1620)]
+USED AstraChar2_Nostril_R [('AstraChar2 nostril interior', 448)]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

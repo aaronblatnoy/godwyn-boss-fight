@@ -1,0 +1,49 @@
+00:00.936  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+00:07.449  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_front.png'
+RENDERED round2 front
+00:09.449  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_side.png'
+RENDERED round2 side
+00:11.397  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_three_quarter.png'
+RENDERED round2 three_quarter
+00:13.257  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_chest.png'
+RENDERED round2 chest
+00:14.985  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_face.png'
+RENDERED round2 face
+00:16.774  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_shoulder.png'
+RENDERED round2 shoulder
+00:18.100  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_sword.png'
+RENDERED round2 sword
+00:19.936  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_arms_raised.png'
+RENDERED round2 arms_raised
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+20:33:06 | INFO: Starting glTF 2.0 export
+20:33:06 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+20:33:06 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:06 | INFO: Primitives created: 1
+20:33:06 | INFO: Extracting primitive: Astra repaired original surface.001
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | INFO: Primitives created: 5
+20:33:07 | INFO: Extracting primitive: Godwyn_Sword.001
+20:33:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+20:33:07 | INFO: Primitives created: 1
+20:33:07 | INFO: Finished glTF 2.0 export in 1.521554946899414 s
+
+Info: Saved as "astra_character_v2.blend"
+20:33:08 | INFO: Data are loaded, start creating Blender stuff
+20:33:08 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+20:33:08 | INFO: Blender create Mesh node Astra repaired original surface.001
+20:33:10 | INFO: Blender create Mesh node Godwyn_Sword.001
+20:33:10 | INFO: glTF import finished in 1.30s
+00:28.234  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_glb_check_three_quarter.png'
+RENDERED round2_glb_check three_quarter
+00:30.204  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_glb_check_arms_raised.png'
+RENDERED round2_glb_check arms_raised
+ROUND2 DELIVERED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,38 @@
+{
+  "files": {
+    "models/astra_character_v2.blend": {
+      "bytes": 100019340,
+      "sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e"
+    },
+    "models/astra_character_v2.glb": {
+      "bytes": 103669048,
+      "sha256": "be2ca4af7597a9af5e0629748f0c1c846f6f4be28e683a893e4d9cec079bf7f3"
+    }
+  },
+  "pixel_checks": {
+    "face": {
+      "pixel_box_xyxy": [
+        280,
+        330,
+        680,
+        740
+      ],
+      "mean_absolute_8bit_difference": 0.0,
+      "max_absolute_8bit_difference": 0.0,
+      "pixels_different_fraction": 0.0
+    },
+    "sword": {
+      "pixel_box_xyxy": [
+        0,
+        0,
+        960,
+        960
+      ],
+      "mean_absolute_8bit_difference": 0.0,
+      "max_absolute_8bit_difference": 0.0,
+      "pixels_different_fraction": 0.0
+    }
+  },
+  "quantitative_checks": "passed",
+  "visual_brief": "remaining robe/trim gaps documented"
+}

@@ -1,0 +1,269 @@
+00:00.861  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_r6_collar.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+00:40:12 | INFO: Starting glTF 2.0 export
+00:40:12 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+00:40:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Cornea_L
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Cornea_R
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: Sphere
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: Sphere.003
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Eyebrows_L
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Eyebrows_R
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Iris_L
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Iris_R
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Lashes_L
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Lashes_R
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: Sphere.002
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: Sphere.005
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Pupil_L
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: AstraChar2_Pupil_R
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: Sphere.006
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: R4 anatomical frontal scalp beneath roots
+00:40:13 | INFO: Primitives created: 1
+00:40:13 | INFO: Extracting primitive: R4 L_Back_0 portable individual strands
+00:40:14 | INFO: Primitives created: 1
+00:40:14 | INFO: Extracting primitive: R4 L_Back_1 portable individual strands
+00:40:15 | INFO: Primitives created: 1
+00:40:16 | INFO: Extracting primitive: R4 L_Braids portable individual strands
+00:40:19 | INFO: Primitives created: 1
+00:40:19 | INFO: Extracting primitive: R4 L_Front_0 portable individual strands
+00:40:21 | INFO: Primitives created: 1
+00:40:21 | INFO: Extracting primitive: R4 L_Front_1 portable individual strands
+00:40:24 | INFO: Primitives created: 1
+00:40:24 | INFO: Extracting primitive: R4 L_Side_0 portable individual strands
+00:40:28 | INFO: Primitives created: 1
+00:40:28 | INFO: Extracting primitive: R4 L_Side_1 portable individual strands
+00:40:29 | INFO: Primitives created: 1
+00:40:29 | INFO: Extracting primitive: R4 R_Back_0 portable individual strands
+00:40:30 | INFO: Primitives created: 1
+00:40:31 | INFO: Extracting primitive: R4 R_Back_1 portable individual strands
+00:40:31 | INFO: Primitives created: 1
+00:40:32 | INFO: Extracting primitive: R4 R_Braids portable individual strands
+00:40:33 | INFO: Primitives created: 1
+00:40:34 | INFO: Extracting primitive: R4 R_Front_0 portable individual strands
+00:40:35 | INFO: Primitives created: 1
+00:40:35 | INFO: Extracting primitive: R4 R_Front_1 portable individual strands
+00:40:37 | INFO: Primitives created: 1
+00:40:37 | INFO: Extracting primitive: R4 R_Side_0 portable individual strands
+00:40:38 | INFO: Primitives created: 1
+00:40:38 | INFO: Extracting primitive: R4 R_Side_1 portable individual strands
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_ClavicleMantle clean topology
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_Cuirass clean topology
+00:40:39 | WARNING: AstraChar2_R5_Cuirass clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_Gorget clean topology
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_GorgetRim clean topology
+00:40:39 | WARNING: AstraChar2_R5_GorgetRim clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_L clean topology
+00:40:39 | WARNING: AstraChar2_R5_Pauldron_L clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_R clean topology
+00:40:39 | WARNING: AstraChar2_R5_Pauldron_R clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_L clean topology
+00:40:39 | WARNING: AstraChar2_R5_PauldronRim_L clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_R clean topology
+00:40:39 | WARNING: AstraChar2_R5_PauldronRim_R clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SacredEmblem clean topology
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_0 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_0 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_1 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_1 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_2 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_2 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_3 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_3 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_4 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_4 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_5 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_5 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_6 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_6 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_7 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_7 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_8 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_8 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_9 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_9 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_10 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_10 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_11 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_11 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_12 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_12 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_13 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_13 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_14 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_14 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_SunRay_15 clean topology
+00:40:39 | WARNING: AstraChar2_R5_SunRay_15 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_0 clean topology
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_1 clean topology
+00:40:39 | INFO: Primitives created: 1
+00:40:39 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_2 clean topology
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_0 clean topology
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_1 clean topology
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_2 clean topology
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_R6_NeckGraft clean topology
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: Sphere.001
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: Sphere.004
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_Wetline_L
+00:40:40 | INFO: Primitives created: 1
+00:40:40 | INFO: Extracting primitive: AstraChar2_Wetline_R
+00:40:40 | INFO: Primitives created: 1
+00:40:41 | INFO: Extracting primitive: AstraChar2 refined char1
+00:40:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:42 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:43 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:44 | INFO: Primitives created: 4
+00:40:44 | INFO: Extracting primitive: Godwyn_Sword.001
+00:40:44 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:40:44 | INFO: Primitives created: 1
+00:40:45 | INFO: Finished glTF 2.0 export in 32.324119091033936 s
+
+Warning: AstraChar2_R5_Cuirass clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_GorgetRim clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_Pauldron_L clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_Pauldron_R clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_PauldronRim_L clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_PauldronRim_R clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_0 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_1 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_2 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_3 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_4 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_5 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_6 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_7 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_8 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_9 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_10 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_11 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_12 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_13 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_14 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Warning: AstraChar2_R5_SunRay_15 clean topology: Could not calculate tangents. Please try to triangulate the mesh first.
+Info: Saved as "astra_character_r6_promote.blend"
+00:40:47 | INFO: Data are loaded, start creating Blender stuff
+00:40:47 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+00:40:47 | INFO: Blender create Mesh node AstraChar2_Cornea_L
+00:40:47 | INFO: Blender create Mesh node AstraChar2_Cornea_R
+00:40:47 | INFO: Blender create Mesh node Sphere
+00:40:47 | INFO: Blender create Mesh node Sphere.003
+00:40:47 | INFO: Blender create Mesh node AstraChar2_Eyebrows_L
+00:40:47 | INFO: Blender create Mesh node AstraChar2_Eyebrows_R
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Iris_L
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Iris_R
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Lashes_L
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Lashes_R
+00:40:48 | INFO: Blender create Mesh node Sphere.002
+00:40:48 | INFO: Blender create Mesh node Sphere.005
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Pupil_L
+00:40:48 | INFO: Blender create Mesh node AstraChar2_Pupil_R
+00:40:48 | INFO: Blender create Mesh node Sphere.006
+00:40:48 | INFO: Blender create Mesh node R4 anatomical frontal scalp beneath roots
+00:40:48 | INFO: Blender create Mesh node R4 L_Back_0 portable individual strands
+00:40:49 | INFO: Blender create Mesh node R4 L_Back_1 portable individual strands
+00:40:50 | INFO: Blender create Mesh node R4 L_Braids portable individual strands
+00:40:52 | INFO: Blender create Mesh node R4 L_Front_0 portable individual strands
+00:40:54 | INFO: Blender create Mesh node R4 L_Front_1 portable individual strands
+00:40:55 | INFO: Blender create Mesh node R4 L_Side_0 portable individual strands
+00:40:56 | INFO: Blender create Mesh node R4 L_Side_1 portable individual strands
+00:40:57 | INFO: Blender create Mesh node R4 R_Back_0 portable individual strands
+00:40:58 | INFO: Blender create Mesh node R4 R_Back_1 portable individual strands
+00:41:00 | INFO: Blender create Mesh node R4 R_Braids portable individual strands
+00:41:03 | INFO: Blender create Mesh node R4 R_Front_0 portable individual strands
+00:41:05 | INFO: Blender create Mesh node R4 R_Front_1 portable individual strands
+00:41:07 | INFO: Blender create Mesh node R4 R_Side_0 portable individual strands
+00:41:08 | INFO: Blender create Mesh node R4 R_Side_1 portable individual strands
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_ClavicleMantle clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_Cuirass clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_Gorget clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_GorgetRim clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_L clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_R clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_L clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_R clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SacredEmblem clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_0 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_1 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_2 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_3 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_4 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_5 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_6 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_7 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_8 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_9 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_10 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_11 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_12 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_13 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_14 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_15 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_0 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_1 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_2 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_0 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_1 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_2 clean topology
+00:41:10 | INFO: Blender create Mesh node AstraChar2_R6_NeckGraft clean topology
+00:41:10 | INFO: Blender create Mesh node Sphere.001
+00:41:10 | INFO: Blender create Mesh node Sphere.004
+00:41:10 | INFO: Blender create Mesh node AstraChar2_Wetline_L
+00:41:10 | INFO: Blender create Mesh node AstraChar2_Wetline_R
+00:41:10 | INFO: Blender create Mesh node AstraChar2 refined char1
+00:41:13 | INFO: Blender create Mesh node Godwyn_Sword.001
+00:41:13 | INFO: glTF import finished in 25.56s
+{"path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb", "bytes": 578676340, "skins": 1, "joints": [121], "animations": 0, "extensions": ["KHR_materials_clearcoat", "KHR_materials_transmission", "KHR_materials_emissive_strength", "KHR_materials_specular", "KHR_materials_sheen", "KHR_materials_anisotropy", "KHR_materials_ior"], "hair_nodes": ["phys_hair_back_03", "phys_hair_back_02", "phys_hair_back_01", "phys_hair_back_00", "phys_hair_front_L_03", "phys_hair_front_L_02", "phys_hair_front_L_01", "phys_hair_front_L_00", "phys_hair_front_R_03", "phys_hair_front_R_02", "phys_hair_front_R_01", "phys_hair_front_R_00"], "object_material_slots": {"Astra_Undersleeves": ["Astra Round2 royal blue undersleeves"], "AstraChar2_Cornea_L": ["AstraChar2 cornea"], "AstraChar2_Cornea_R": ["AstraChar2 cornea"], "AstraChar2_Eyeball_L": ["AstraChar2 living sclera"], "AstraChar2_Eyeball_R": ["AstraChar2 living sclera"], "AstraChar2_Eyebrows_L": ["AstraChar2 warm blonde eyebrows"], "AstraChar2_Eyebrows_R": ["AstraChar2 warm blonde eyebrows"], "AstraChar2_Iris_L": ["AstraChar2 hazel green iris"], "AstraChar2_Iris_R": ["AstraChar2 hazel green iris"], "AstraChar2_Lashes_L": ["AstraChar2 blonde lashes"], "AstraChar2_Lashes_R": ["AstraChar2 blonde lashes"], "AstraChar2_Nostril_L": ["AstraChar2 nostril interior"], "AstraChar2_Nostril_R": ["AstraChar2 nostril interior"], "AstraChar2_Pupil_L": ["AstraChar2 pupil"], "AstraChar2_Pupil_R": ["AstraChar2 pupil"], "AstraChar2_R4_Scalp": ["AstraChar2 R4 scalp beneath roots"], "AstraChar2_R4_ScalpRoots": ["AstraChar2 R4 scalp beneath roots"], "AstraChar2_R4_Strands_L_Back_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_L_Back_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R4_Strands_L_Braids": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_L_Front_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_L_Front_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R4_Strands_L_Side_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_L_Side_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R4_Strands_R_Back_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_R_Back_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R4_Strands_R_Braids": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_R_Front_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_R_Front_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R4_Strands_R_Side_0": ["AstraChar2 R4 Portable blonde 1"], "AstraChar2_R4_Strands_R_Side_1": ["AstraChar2 R4 Portable blonde 2"], "AstraChar2_R5_ClavicleMantle": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_Cuirass": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_Gorget": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_GorgetRim": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_Pauldron_L": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_Pauldron_R": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_PauldronRim_L": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_PauldronRim_R": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SacredEmblem": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_0": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_1": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_10": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_11": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_12": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_13": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_14": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_15": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_2": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_3": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_4": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_5": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_6": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_7": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_8": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_SunRay_9": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_L_0": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_L_1": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_L_2": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_R_0": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_R_1": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R5_UpperArm_R_2": ["AstraChar2 R6 clean aged-brass plates", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_R6_NeckGraft": ["Astra Round2 solid champagne gold", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "AstraChar2_TearCorner_L": ["AstraChar2 lacrimal wetline"], "AstraChar2_TearCorner_R": ["AstraChar2 lacrimal wetline"], "AstraChar2_Wetline_L": ["AstraChar2 lacrimal wetline"], "AstraChar2_Wetline_R": ["AstraChar2 lacrimal wetline"], "char1": ["Astra Round2 solid champagne gold", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "Godwyn_Sword": ["Astra worn steel and gold hilt final"]}, "hair_skinned_mesh_nodes": ["AstraChar2_R4_Strands_L_Back_0", "AstraChar2_R4_Strands_L_Back_1", "AstraChar2_R4_Strands_L_Braids", "AstraChar2_R4_Strands_L_Front_0", "AstraChar2_R4_Strands_L_Front_1", "AstraChar2_R4_Strands_L_Side_0", "AstraChar2_R4_Strands_L_Side_1", "AstraChar2_R4_Strands_R_Back_0", "AstraChar2_R4_Strands_R_Back_1", "AstraChar2_R4_Strands_R_Braids", "AstraChar2_R4_Strands_R_Front_0", "AstraChar2_R4_Strands_R_Front_1", "AstraChar2_R4_Strands_R_Side_0", "AstraChar2_R4_Strands_R_Side_1"], "spring_profiles": 12, "reimport_meshes": 70, "reimport_armatures": {"Armature": 121}, "reimport_actions": 0}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

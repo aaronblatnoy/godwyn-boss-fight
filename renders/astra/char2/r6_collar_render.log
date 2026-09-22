@@ -1,0 +1,13 @@
+00:00.959  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_r6_collar.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r6_collar_render.py:15: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('R6 neutral clay');m.use_nodes=True;m.node_tree.nodes.clear();out=m.node_tree.nodes.new('ShaderNodeOutputMaterial');bs=m.node_tree.nodes.new('ShaderNodeBsdfDiffuse');bs.inputs[0].default_value=(.4,.4,.4,1);m.node_tree.links.new(bs.outputs[0],out.inputs[0])
+00:16.676  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_collar_after_clay_front.png'
+00:24.496  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_collar_after_clay_three_quarter.png'
+00:38.789  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_collar_after_textured_front.png'
+00:48.531  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r6_collar_after_textured_three_quarter.png'
+unknown argument, loading as file: --after-only
+00:51.791  reports          | ERROR Cannot read file "/Users/aaron_7nh0yzm/godwyn-boss-fight/--after-only": No such file or directory
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

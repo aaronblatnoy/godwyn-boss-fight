@@ -1,0 +1,5 @@
+Round 3 still review
+
+Opened both every-second-frame cut sheets, both flow sheets, both 640px-pose sheets, both curved-path diagnostics, and individual F40/F57 images. The cut paths are clean after transporting blade orientation: the previous local wiggles and wrist roll are gone. The torso now inclines into contact and holds a more committed stance during recovery. Both arms solve within numerical precision. The cape follows the reversal and then settles; its lower edge retains some imported skinning stiffness. This is the selected motion candidate, pending examination of every encoded video frame.
+
+Full movie review: all 90 decoded frames opened in six sheets and the MP4 opened and played in QuickTime. Slow tell, fast cuts, foot plant, and late cape settling read clearly. A small velocity corner remains where the first low follow-through starts turning upward at F45. Round 4 replaces the quadratic connector with a cubic matching both endpoint velocities. The r3 encoded candidate is preserved here.

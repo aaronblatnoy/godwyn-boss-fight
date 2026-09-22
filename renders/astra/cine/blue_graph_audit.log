@@ -1,0 +1,29 @@
+00:02.775  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+BLUE_GRAPH astra_xslash_v2_final_wip.blend Astra midnight blue woven silk final
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Image Texture', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.18000000715255737)]
+BLUE_GRAPH astra_xslash_v2_final_wip.blend Astra Round2 royal blue and continuous gold trim
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Astra XSlash Final Preserve Gold', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.0)]
+Astra XSlash Final Deep Blue Multiply MIX_RGB [('Color1', [('Image Texture', 'Color')], [0.5, 0.5, 0.5, 1.0]), ('Color2', [], [0.02500000037252903, 0.20000000298023224, 0.6200000047683716, 1.0])]
+Astra XSlash Final Preserve Gold MIX_RGB [('Color1', [('Astra XSlash Final Deep Blue Multiply', 'Color')], [0.5, 0.5, 0.5, 1.0]), ('Color2', [('Image Texture', 'Color')], [0.5, 0.5, 0.5, 1.0])]
+BLUE_GRAPH astra_xslash_v2_final_wip.blend Astra Round2 royal blue undersleeves
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Astra XSlash Final Preserve Gold', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.0)]
+Astra XSlash Final Deep Blue Multiply MIX_RGB [('Color1', [('Image Texture', 'Color')], [0.5, 0.5, 0.5, 1.0]), ('Color2', [], [0.02500000037252903, 0.20000000298023224, 0.6200000047683716, 1.0])]
+Astra XSlash Final Preserve Gold MIX_RGB [('Color1', [('Astra XSlash Final Deep Blue Multiply', 'Color')], [0.5, 0.5, 0.5, 1.0]), ('Color2', [('Image Texture', 'Color')], [0.5, 0.5, 0.5, 1.0])]
+BLUE_GRAPH astra_xslash_v2_final_wip.blend Round2 editable procedural robe
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Mix (Legacy).004', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Map Range.004', 'Result')], 0.0), ('Sheen Weight', [], 0.0)]
+BLUE_GRAPH astra_xslash_v2_final_wip.blend Round2 editable procedural sleeves
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Mix (Legacy).004', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [], 0.0), ('Sheen Weight', [], 0.0)]
+00:04.201  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+BLUE_GRAPH astra_character_v2.blend Astra midnight blue woven silk final
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Image Texture', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.18000000715255737)]
+BLUE_GRAPH astra_character_v2.blend Astra Round2 royal blue and continuous gold trim
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Image Texture', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.0)]
+BLUE_GRAPH astra_character_v2.blend Astra Round2 royal blue undersleeves
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Image Texture', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Separate Color', 'Blue')], 0.0), ('Sheen Weight', [], 0.0)]
+BLUE_GRAPH astra_character_v2.blend Round2 editable procedural robe
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Mix (Legacy).004', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [('Map Range.004', 'Result')], 0.0), ('Sheen Weight', [], 0.0)]
+BLUE_GRAPH astra_character_v2.blend Round2 editable procedural sleeves
+Principled BSDF BSDF_PRINCIPLED [('Base Color', [('Mix (Legacy).004', 'Color')], [0.800000011920929, 0.800000011920929, 0.800000011920929, 1.0]), ('Metallic', [], 0.0), ('Sheen Weight', [], 0.0)]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

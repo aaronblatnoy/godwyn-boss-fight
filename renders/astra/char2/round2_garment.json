@@ -1,0 +1,96 @@
+{
+  "cloth_objects": [
+    "Astra_Undersleeves",
+    "char1"
+  ],
+  "blue_primary_material": "Astra Round2 royal blue and continuous gold trim",
+  "blue_polygons": 187847,
+  "bounds_m": [
+    [
+      -1.020938515663147,
+      1.0200674533843994
+    ],
+    [
+      -0.7815505862236023,
+      0.7981772422790527
+    ],
+    [
+      -0.01716017723083496,
+      2.785292863845825
+    ]
+  ],
+  "dominant_weight_totals": [
+    [
+      "Hips",
+      12576.88557589586
+    ],
+    [
+      "phys_cape_L_06",
+      11032.608333793818
+    ],
+    [
+      "phys_cape_R_06",
+      10439.574578537758
+    ],
+    [
+      "RightForeArm",
+      6370.227500006854
+    ],
+    [
+      "phys_robe_side_L_07",
+      6022.710969581036
+    ],
+    [
+      "phys_robe_side_R_07",
+      5252.725062961923
+    ],
+    [
+      "phys_cape_C_06",
+      5091.671064626469
+    ],
+    [
+      "RightArm",
+      4425.5837499481795
+    ],
+    [
+      "LeftUpLeg",
+      2876.3317729737246
+    ],
+    [
+      "RightHand",
+      2500.188708459338
+    ],
+    [
+      "Spine02",
+      2468.6068463833435
+    ],
+    [
+      "phys_robe_front_L_07",
+      2468.089654401563
+    ],
+    [
+      "RightUpLeg",
+      2456.6467540935555
+    ],
+    [
+      "phys_cape_C_03",
+      2085.2280169621226
+    ],
+    [
+      "phys_robe_front_R_07",
+      2070.98837668544
+    ]
+  ],
+  "cloth_modifiers_on_char1": [
+    [
+      "Astra surface polish \u2022 reversible",
+      "SMOOTH"
+    ],
+    [
+      "Armature",
+      "ARMATURE"
+    ]
+  ],
+  "geometry_changed": false,
+  "assessment": "Blue is assigned inside the combined char1 mesh, plus Astra_Undersleeves. Front waist-to-floor center panel, diagonal torso/left-shoulder drape, and broad side/back floor-length skirt panels. It is not a separate standalone robe object. Visual back/side assessment follows in ROUND2_REPORT.md."
+}

@@ -1,0 +1,213 @@
+00:01.145  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "support_summary": {
+    "outside_frames": [
+      31,
+      36,
+      37,
+      38,
+      51,
+      52,
+      53,
+      54
+    ],
+    "airborne_frames": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "minimum_margin_m": -0.20028918158060122
+  },
+  "planted_ankle_max_planar_step_m": {
+    "Left": 1.4502435994859265e-06,
+    "Right": 6.201461567486767e-06
+  },
+  "cascade": {
+    "Hips": {
+      "world_peak_frame": 21.5,
+      "local_peak_frame": 21.5
+    },
+    "Spine02": {
+      "world_peak_frame": 22.25,
+      "local_peak_frame": 24.75
+    },
+    "Spine01": {
+      "world_peak_frame": 23.25,
+      "local_peak_frame": 25.75
+    },
+    "Spine": {
+      "world_peak_frame": 24.0,
+      "local_peak_frame": 26.75
+    },
+    "RightShoulder": {
+      "world_peak_frame": 25.5,
+      "local_peak_frame": 28.5
+    },
+    "RightArm": {
+      "world_peak_frame": 28.5,
+      "local_peak_frame": 28.75
+    },
+    "RightForeArm": {
+      "world_peak_frame": 20.25,
+      "local_peak_frame": 29.5
+    },
+    "RightHand": {
+      "world_peak_frame": 10.0,
+      "local_peak_frame": 10.0
+    }
+  },
+  "cloth_yaw_lag": {
+    "phys_robe_front_C_06": {
+      "best_delay_frames": 7,
+      "correlations": {
+        "-10": -0.30675371685096714,
+        "-9": -0.3068280383258424,
+        "-8": -0.27175287128164305,
+        "-7": -0.20341285010073662,
+        "-6": -0.1118047059930571,
+        "-5": -0.006327252341589185,
+        "-4": 0.10821717862993854,
+        "-3": 0.22910160857267664,
+        "-2": 0.35225417426269146,
+        "-1": 0.4703614211049412,
+        "0": 0.5748723605806837,
+        "1": 0.6604420423787668,
+        "2": 0.7275055265794617,
+        "3": 0.7790871326306743,
+        "4": 0.8200424338444322,
+        "5": 0.8529238708325279,
+        "6": 0.874848546317351,
+        "7": 0.8763419942483817,
+        "8": 0.8437435295710667,
+        "9": 0.7665706021704818,
+        "10": 0.6470349856679766,
+        "11": 0.49762626716241004,
+        "12": 0.3323094307615509,
+        "13": 0.15834730724953291,
+        "14": -0.02189707987114944,
+        "15": -0.20360820089550435,
+        "16": -0.3669038495279784,
+        "17": -0.4719129025033493,
+        "18": -0.4894876214716979,
+        "19": -0.4296537280761361,
+        "20": -0.319277480087069
+      }
+    },
+    "phys_cape_C_06": {
+      "best_delay_frames": 5,
+      "correlations": {
+        "-10": 0.0637769592064891,
+        "-9": 0.01352460279666768,
+        "-8": -0.017287184072198362,
+        "-7": -0.0251210482567486,
+        "-6": -0.011757196404677954,
+        "-5": 0.01901897634028563,
+        "-4": 0.06437612824107099,
+        "-3": 0.12210192332309068,
+        "-2": 0.1890057370151763,
+        "-1": 0.2599203397681028,
+        "0": 0.327840839751246,
+        "1": 0.38677977062154567,
+        "2": 0.4328683404383896,
+        "3": 0.46380891070219615,
+        "4": 0.47921471994104525,
+        "5": 0.4807044584460674,
+        "6": 0.47123992211361565,
+        "7": 0.4532526597266361,
+        "8": 0.42713167700189913,
+        "9": 0.39140326878107934,
+        "10": 0.34420938995601796,
+        "11": 0.28454902295835705,
+        "12": 0.21230767561706598,
+        "13": 0.1278080060513929,
+        "14": 0.03196367251297053,
+        "15": -0.0737414727269551,
+        "16": -0.1860142754366621,
+        "17": -0.298164142544282,
+        "18": -0.4013766391541814,
+        "19": -0.4900439126369071,
+        "20": -0.5644648901769914
+      }
+    }
+  },
+  "active_windows": {
+    "25-35": {
+      "tip_path_m": 1.7124211639186173,
+      "chord_m": 1.7020484532792826,
+      "path_chord_ratio": 1.0060942510886515,
+      "peak_speed_m_s": 7.29671911458768
+    }
+  },
+  "name": "lunge_thrust",
+  "quarter_samples": 253,
+  "bone_count": 121,
+  "joint_ranges_deg": {
+    "Left_elbow": [
+      33.229717221383446,
+      104.77288134206405
+    ],
+    "Left_wrist": [
+      18.822771315331792,
+      19.24302451948022
+    ],
+    "Left_knee": [
+      30.84459015968819,
+      77.72159146022531
+    ],
+    "Left_shoulder_elevation": [
+      35.437113409165526,
+      75.40776224985484
+    ],
+    "Right_elbow": [
+      49.34254776180058,
+      105.29942175085338
+    ],
+    "Right_wrist": [
+      4.881479941690877,
+      26.356576976346105
+    ],
+    "Right_knee": [
+      34.27801504814673,
+      71.8960886960173
+    ],
+    "Right_shoulder_elevation": [
+      39.67781188066654,
+      97.32877999926977
+    ]
+  },
+  "asymmetry_speed_correlation": {
+    "Shoulder": 0.7963548167574918,
+    "Arm": 0.19550662591251894,
+    "ForeArm": 0.38342363593184936,
+    "Hand": 0.08020237641691058,
+    "UpLeg": 0.45321185707014355
+  },
+  "loop": {},
+  "max_limb_length_error_m": 6.17325556340198e-06,
+  "blade_peak_speed_m_s": 10.107614125833827,
+  "blade_min_z_m": 0.09169602394104004,
+  "peak_hips_yaw_deg_s": 50.306860140533246,
+  "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e"
+}
+FLAGS [{'bone': 'LeftUpLeg', 'frame': 15, 'kinds': ['spike'], 'speed': 10.902906060978774, 'acceleration': 5.777069320577045}, {'bone': 'LeftLeg', 'frame': 13, 'kinds': ['reversal'], 'speed': 1.2950275179962667, 'acceleration': 2.3002215997144018}, {'bone': 'LeftLeg', 'frame': 14, 'kinds': ['spike'], 'speed': 6.290658925902188, 'acceleration': 4.995631408048058}, {'bone': 'LeftLeg', 'frame': 15, 'kinds': ['spike'], 'speed': 17.037104961895363, 'acceleration': 10.746446036002219}, {'bone': 'LeftLeg', 'frame': 32, 'kinds': ['reversal', 'acceleration'], 'speed': 7.530338324370309, 'acceleration': 12.436006607259595}, {'bone': 'LeftLeg', 'frame': 36, 'kinds': ['reversal', 'acceleration'], 'speed': 4.531715109797185, 'acceleration': 14.242166601820582}, {'bone': 'LeftFoot', 'frame': 14, 'kinds': ['reversal'], 'speed': 1.0197823890342088, 'acceleration': 1.7218759989033325}, {'bone': 'LeftFoot', 'frame': 15, 'kinds': ['spike'], 'speed': 5.819140699309847, 'acceleration': 4.799824530548666}, {'bone': 'LeftFoot', 'frame': 32, 'kinds': ['spike'], 'speed': 7.9974970148174895, 'acceleration': 6.882927573582905}, {'bone': 'LeftFoot', 'frame': 35, 'kinds': ['reversal'], 'speed': 5.372281012690677, 'acceleration': 6.644357168576887}, {'bone': 'phys_robe_back_C_07', 'frame': 29, 'kinds': ['reversal'], 'speed': 0.5345836445288842, 'acceleration': 1.0821973827038576}, {'bone': 'phys_robe_back_R_07', 'frame': 30, 'kinds': ['reversal'], 'speed': 0.535444518633295, 'acceleration': 1.082212469856159}, {'bone': 'phys_robe_front_C_07', 'frame': 29, 'kinds': ['reversal'], 'speed': 0.5345897638688818, 'acceleration': 1.0822105917488165}, {'bone': 'phys_robe_front_R_07', 'frame': 30, 'kinds': ['reversal'], 'speed': 0.5354491419624707, 'acceleration': 1.0822259585288818}, {'bone': 'phys_robe_side_R_07', 'frame': 30, 'kinds': ['reversal'], 'speed': 0.5354368595979245, 'acceleration': 1.082207590829379}, {'bone': 'RightUpLeg', 'frame': 14, 'kinds': ['spike'], 'speed': 4.248974406170449, 'acceleration': 2.9496517184489033}, {'bone': 'RightUpLeg', 'frame': 15, 'kinds': ['spike'], 'speed': 8.879772701225143, 'acceleration': 4.630990422301683}, {'bone': 'RightUpLeg', 'frame': 32, 'kinds': ['reversal'], 'speed': 2.7069839692100226, 'acceleration': 4.8376585713316524}, {'bone': 'RightUpLeg', 'frame': 33, 'kinds': ['reversal'], 'speed': 1.6997593948658771, 'acceleration': 4.361948432326447}, {'bone': 'RightUpLeg', 'frame': 44, 'kinds': ['reversal'], 'speed': 1.791271453963604, 'acceleration': 3.6582129214703154}, {'bone': 'RightLeg', 'frame': 15, 'kinds': ['spike'], 'speed': 10.069717357775499, 'acceleration': 6.892253124654934}, {'bone': 'RightLeg', 'frame': 31, 'kinds': ['reversal'], 'speed': 2.625170403305634, 'acceleration': 3.3827513577474337}, {'bone': 'RightLeg', 'frame': 32, 'kinds': ['spike'], 'speed': 13.579858718570467, 'acceleration': 10.954688315621755}, {'bone': 'RightLeg', 'frame': 33, 'kinds': ['spike'], 'speed': 5.525966245755278, 'acceleration': 8.05389247289702}, {'bone': 'RightLeg', 'frame': 35, 'kinds': ['reversal'], 'speed': 0.9866453273528591, 'acceleration': 2.164328001357738}, {'bone': 'RightLeg', 'frame': 44, 'kinds': ['reversal'], 'speed': 2.486621368931072, 'acceleration': 4.630364471581966}, {'bone': 'RightLeg', 'frame': 49, 'kinds': ['reversal'], 'speed': 1.2773500849932102, 'acceleration': 6.511347478419904}, {'bone': 'RightFoot', 'frame': 15, 'kinds': ['reversal'], 'speed': 0.9099845448939544, 'acceleration': 2.1080579117954326}, {'bone': 'RightFoot', 'frame': 16, 'kinds': ['reversal'], 'speed': 3.2547709862791936, 'acceleration': 4.161928970493605}, {'bone': 'RightFoot', 'frame': 30, 'kinds': ['reversal'], 'speed': 1.2025799797435195, 'acceleration': 2.998218683555767}, {'bone': 'RightFoot', 'frame': 44, 'kinds': ['reversal'], 'speed': 0.8654516072151874, 'acceleration': 1.3598655786912153}, {'bone': 'RightFoot', 'frame': 48, 'kinds': ['reversal'], 'speed': 1.947883953265167, 'acceleration': 3.238112323629128}, {'bone': 'RightForeArm', 'frame': 33, 'kinds': ['reversal'], 'speed': 0.6443993817469206, 'acceleration': 3.2131470735960614}, {'bone': 'RightHand', 'frame': 49, 'kinds': ['reversal'], 'speed': 2.4096829161257802, 'acceleration': 2.7206692791688356}, {'bone': 'RightHand', 'frame': 61, 'kinds': ['reversal'], 'speed': 2.9538739095277626, 'acceleration': 4.504776770236503}]
+CONTACT {'before': {'Left': [0.013920494341291487, 0.48661570191383363], 'Right': [0.0004007111862301821, 0.4773757302761078]}, 'after': {'Left': [0.0018665663525462145, 0.4712997817993164], 'Right': [0.0024738827347755427, 0.4713509523868561]}}
+HEM 0.002092293798923492
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,240 @@
+00:01.507  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_wip.blend"
+00:17.951  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/001.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+MOVE RENDER rising_spin 1
+00:20.050  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/002.png'
+MOVE RENDER rising_spin 2
+00:21.041  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/003.png'
+MOVE RENDER rising_spin 3
+00:22.408  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/004.png'
+MOVE RENDER rising_spin 4
+00:25.707  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/005.png'
+MOVE RENDER rising_spin 5
+00:26.973  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/006.png'
+MOVE RENDER rising_spin 6
+00:28.073  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/007.png'
+MOVE RENDER rising_spin 7
+00:29.199  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/008.png'
+MOVE RENDER rising_spin 8
+00:30.104  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/009.png'
+MOVE RENDER rising_spin 9
+00:30.933  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/010.png'
+MOVE RENDER rising_spin 10
+00:31.786  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/011.png'
+MOVE RENDER rising_spin 11
+00:32.653  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/012.png'
+MOVE RENDER rising_spin 12
+00:33.540  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/013.png'
+MOVE RENDER rising_spin 13
+00:34.494  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/014.png'
+MOVE RENDER rising_spin 14
+00:35.487  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/015.png'
+MOVE RENDER rising_spin 15
+00:36.655  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/016.png'
+MOVE RENDER rising_spin 16
+00:37.703  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/017.png'
+MOVE RENDER rising_spin 17
+00:38.782  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/018.png'
+MOVE RENDER rising_spin 18
+00:39.728  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/019.png'
+MOVE RENDER rising_spin 19
+00:40.630  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/020.png'
+MOVE RENDER rising_spin 20
+00:41.529  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/021.png'
+MOVE RENDER rising_spin 21
+00:42.419  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/022.png'
+MOVE RENDER rising_spin 22
+00:43.456  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/023.png'
+MOVE RENDER rising_spin 23
+00:45.087  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/024.png'
+MOVE RENDER rising_spin 24
+00:46.643  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/025.png'
+MOVE RENDER rising_spin 25
+00:48.232  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/026.png'
+MOVE RENDER rising_spin 26
+00:50.156  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/027.png'
+MOVE RENDER rising_spin 27
+00:53.958  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/028.png'
+MOVE RENDER rising_spin 28
+00:57.267  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/029.png'
+MOVE RENDER rising_spin 29
+00:59.839  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/030.png'
+MOVE RENDER rising_spin 30
+01:01.549  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/031.png'
+MOVE RENDER rising_spin 31
+01:05.580  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/032.png'
+MOVE RENDER rising_spin 32
+01:09.902  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/033.png'
+MOVE RENDER rising_spin 33
+01:11.637  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/034.png'
+MOVE RENDER rising_spin 34
+01:14.548  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/035.png'
+MOVE RENDER rising_spin 35
+01:19.749  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/036.png'
+MOVE RENDER rising_spin 36
+01:25.151  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/037.png'
+MOVE RENDER rising_spin 37
+01:32.602  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/038.png'
+MOVE RENDER rising_spin 38
+01:36.957  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/039.png'
+MOVE RENDER rising_spin 39
+01:39.499  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/040.png'
+MOVE RENDER rising_spin 40
+01:41.949  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/041.png'
+MOVE RENDER rising_spin 41
+01:44.957  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/042.png'
+MOVE RENDER rising_spin 42
+01:47.803  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/043.png'
+MOVE RENDER rising_spin 43
+01:49.958  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/044.png'
+MOVE RENDER rising_spin 44
+01:52.975  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/045.png'
+MOVE RENDER rising_spin 45
+01:56.052  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/046.png'
+MOVE RENDER rising_spin 46
+02:01.439  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/047.png'
+MOVE RENDER rising_spin 47
+02:05.595  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/048.png'
+MOVE RENDER rising_spin 48
+02:07.031  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/049.png'
+MOVE RENDER rising_spin 49
+02:08.500  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/050.png'
+MOVE RENDER rising_spin 50
+02:10.958  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/051.png'
+MOVE RENDER rising_spin 51
+02:13.940  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/052.png'
+MOVE RENDER rising_spin 52
+02:17.563  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/053.png'
+MOVE RENDER rising_spin 53
+02:20.893  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/054.png'
+MOVE RENDER rising_spin 54
+02:23.916  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/055.png'
+MOVE RENDER rising_spin 55
+02:26.927  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/056.png'
+MOVE RENDER rising_spin 56
+02:30.462  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/057.png'
+MOVE RENDER rising_spin 57
+02:34.260  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/058.png'
+MOVE RENDER rising_spin 58
+02:35.949  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/059.png'
+MOVE RENDER rising_spin 59
+02:37.151  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/060.png'
+MOVE RENDER rising_spin 60
+02:39.098  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/061.png'
+MOVE RENDER rising_spin 61
+02:42.269  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/062.png'
+MOVE RENDER rising_spin 62
+02:45.067  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/063.png'
+MOVE RENDER rising_spin 63
+02:47.404  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/064.png'
+MOVE RENDER rising_spin 64
+02:49.179  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/065.png'
+MOVE RENDER rising_spin 65
+02:50.923  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/066.png'
+MOVE RENDER rising_spin 66
+02:52.389  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/067.png'
+MOVE RENDER rising_spin 67
+02:54.158  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/068.png'
+MOVE RENDER rising_spin 68
+02:55.758  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/069.png'
+MOVE RENDER rising_spin 69
+02:56.686  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/070.png'
+MOVE RENDER rising_spin 70
+02:57.613  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/071.png'
+MOVE RENDER rising_spin 71
+02:58.516  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/072.png'
+MOVE RENDER rising_spin 72
+02:59.395  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/073.png'
+MOVE RENDER rising_spin 73
+03:00.316  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/074.png'
+MOVE RENDER rising_spin 74
+03:01.290  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/075.png'
+MOVE RENDER rising_spin 75
+03:02.295  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/076.png'
+MOVE RENDER rising_spin 76
+03:03.389  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/077.png'
+MOVE RENDER rising_spin 77
+03:04.906  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/078.png'
+MOVE RENDER rising_spin 78
+03:06.202  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/079.png'
+MOVE RENDER rising_spin 79
+03:07.197  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/080.png'
+MOVE RENDER rising_spin 80
+03:08.598  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/081.png'
+MOVE RENDER rising_spin 81
+03:09.718  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/082.png'
+MOVE RENDER rising_spin 82
+03:10.929  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/083.png'
+MOVE RENDER rising_spin 83
+03:12.105  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/084.png'
+MOVE RENDER rising_spin 84
+03:12.969  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/085.png'
+MOVE RENDER rising_spin 85
+03:13.889  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/086.png'
+MOVE RENDER rising_spin 86
+03:14.747  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/087.png'
+MOVE RENDER rising_spin 87
+03:15.607  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/088.png'
+MOVE RENDER rising_spin 88
+03:16.425  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/089.png'
+MOVE RENDER rising_spin 89
+03:17.263  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/090.png'
+MOVE RENDER rising_spin 90
+03:18.117  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/091.png'
+MOVE RENDER rising_spin 91
+03:18.964  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/092.png'
+MOVE RENDER rising_spin 92
+03:19.809  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/093.png'
+MOVE RENDER rising_spin 93
+03:20.653  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/094.png'
+MOVE RENDER rising_spin 94
+03:21.481  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/095.png'
+MOVE RENDER rising_spin 95
+03:22.320  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/096.png'
+MOVE RENDER rising_spin 96
+03:23.207  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/097.png'
+MOVE RENDER rising_spin 97
+03:24.056  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/098.png'
+MOVE RENDER rising_spin 98
+03:24.893  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/099.png'
+MOVE RENDER rising_spin 99
+03:25.732  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/100.png'
+MOVE RENDER rising_spin 100
+03:26.644  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/101.png'
+MOVE RENDER rising_spin 101
+03:27.493  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/102.png'
+MOVE RENDER rising_spin 102
+03:28.348  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/103.png'
+MOVE RENDER rising_spin 103
+03:29.223  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/104.png'
+MOVE RENDER rising_spin 104
+03:30.195  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/105.png'
+MOVE RENDER rising_spin 105
+03:31.183  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/106.png'
+MOVE RENDER rising_spin 106
+03:32.217  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/107.png'
+MOVE RENDER rising_spin 107
+03:33.237  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/108.png'
+MOVE RENDER rising_spin 108
+03:34.729  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/109.png'
+MOVE RENDER rising_spin 109
+03:36.028  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/110.png'
+MOVE RENDER rising_spin 110
+03:37.519  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/111.png'
+MOVE RENDER rising_spin 111
+03:39.731  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/112.png'
+MOVE RENDER rising_spin 112
+03:41.681  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/113.png'
+MOVE RENDER rising_spin 113
+03:42.829  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/114.png'
+MOVE RENDER rising_spin 114
+03:43.998  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/115.png'
+MOVE RENDER rising_spin 115
+03:45.201  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/frames/116.png'
+MOVE RENDER rising_spin 116
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

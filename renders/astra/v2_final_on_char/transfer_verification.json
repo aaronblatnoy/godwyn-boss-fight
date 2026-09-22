@@ -1,0 +1,245 @@
+{
+  "character_source": "models/astra_character_v2.blend",
+  "character_source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+  "motion_source": "models/astra_xslash_v2_wip.blend",
+  "motion_source_sha256": "f66a9d6adeb5cf6ba77d52ae01d2be244af686e19c38207d47b9e811bd209edf",
+  "derived_file": "models/astra_xslash_v2_final_wip.blend",
+  "source_files_unchanged": true,
+  "action_data_identical": true,
+  "action_digest": {
+    "sha256": "8c5bd9822b668c8e5480297060ec88d7ca6e8426340ed436b75794f47f009115",
+    "fcurves": 847,
+    "keys": 302379
+  },
+  "bone_count": 121,
+  "rest_matrix_max_error": 0.0,
+  "all_bones_357_subframes_max_matrix_error": 0.0,
+  "secondary_bones": 97,
+  "secondary_peak_degrees": {
+    "phys_robe_back_C_00": 6.689604666986848,
+    "phys_robe_back_C_01": 6.321623102810533,
+    "phys_robe_back_C_02": 5.953806743834769,
+    "phys_robe_back_C_03": 5.585903299947086,
+    "phys_robe_back_C_04": 5.217890999919507,
+    "phys_robe_back_C_05": 4.850062688112694,
+    "phys_robe_back_C_06": 4.482110152240352,
+    "phys_robe_back_C_07": 4.114187071558806,
+    "phys_robe_back_L_00": 6.689487699997311,
+    "phys_robe_back_L_01": 6.321623102810533,
+    "phys_robe_back_L_02": 5.953675262693246,
+    "phys_robe_back_L_03": 5.585763281069101,
+    "phys_robe_back_L_04": 5.217740735757767,
+    "phys_robe_back_L_05": 4.850062688112694,
+    "phys_robe_back_L_06": 4.481935555529694,
+    "phys_robe_back_L_07": 4.113996680035692,
+    "phys_robe_back_R_00": 6.689487699997311,
+    "phys_robe_back_R_01": 6.321623102810533,
+    "phys_robe_back_R_02": 5.953806743834769,
+    "phys_robe_back_R_03": 5.585763281069101,
+    "phys_robe_back_R_04": 5.217890999919507,
+    "phys_robe_back_R_05": 4.850062688112694,
+    "phys_robe_back_R_06": 4.482110152240352,
+    "phys_robe_back_R_07": 4.114187071558806,
+    "phys_robe_front_C_00": 6.689604666986848,
+    "phys_robe_front_C_01": 6.321623102810533,
+    "phys_robe_front_C_02": 5.953806743834769,
+    "phys_robe_front_C_03": 5.586043745711895,
+    "phys_robe_front_C_04": 5.217890999919507,
+    "phys_robe_front_C_05": 4.849900898006729,
+    "phys_robe_front_C_06": 4.482110152240352,
+    "phys_robe_front_C_07": 4.114377036195097,
+    "phys_robe_front_L_00": 6.689604666986848,
+    "phys_robe_front_L_01": 6.321747326876063,
+    "phys_robe_front_L_02": 5.953806743834769,
+    "phys_robe_front_L_03": 5.585763281069101,
+    "phys_robe_front_L_04": 5.217890999919507,
+    "phys_robe_front_L_05": 4.849900898006729,
+    "phys_robe_front_L_06": 4.482110152240352,
+    "phys_robe_front_L_07": 4.114187071558806,
+    "phys_robe_front_R_00": 6.689487699997311,
+    "phys_robe_front_R_01": 6.321623102810533,
+    "phys_robe_front_R_02": 5.953938224976292,
+    "phys_robe_front_R_03": 5.585763281069101,
+    "phys_robe_front_R_04": 5.217890999919507,
+    "phys_robe_front_R_05": 4.850062688112694,
+    "phys_robe_front_R_06": 4.4822847489510105,
+    "phys_robe_front_R_07": 4.114187071558806,
+    "phys_robe_side_L_00": 6.689604666986848,
+    "phys_robe_side_L_01": 6.321747326876063,
+    "phys_robe_side_L_02": 5.953675262693246,
+    "phys_robe_side_L_03": 5.585763281069101,
+    "phys_robe_side_L_04": 5.217890999919507,
+    "phys_robe_side_L_05": 4.849900898006729,
+    "phys_robe_side_L_06": 4.482110152240352,
+    "phys_robe_side_L_07": 4.114187071558806,
+    "phys_robe_side_R_00": 6.689604666986848,
+    "phys_robe_side_R_01": 6.321623102810533,
+    "phys_robe_side_R_02": 5.953806743834769,
+    "phys_robe_side_R_03": 5.585903299947086,
+    "phys_robe_side_R_04": 5.218040837194424,
+    "phys_robe_side_R_05": 4.849900898006729,
+    "phys_robe_side_R_06": 4.482110152240352,
+    "phys_robe_side_R_07": 4.114187071558806,
+    "phys_hair_back_00": 10.702680179393724,
+    "phys_hair_back_01": 10.114207302204704,
+    "phys_hair_back_02": 9.525674660860448,
+    "phys_hair_back_03": 8.937052373283333,
+    "phys_hair_front_L_00": 10.702680179393724,
+    "phys_hair_front_L_01": 10.114129608802896,
+    "phys_hair_front_L_02": 9.525591844816761,
+    "phys_hair_front_L_03": 8.937052373283333,
+    "phys_hair_front_R_00": 10.702753603927302,
+    "phys_hair_front_R_01": 10.114129608802896,
+    "phys_hair_front_R_02": 9.525591844816761,
+    "phys_hair_front_R_03": 8.936965288371415,
+    "phys_cape_C_00": 13.377589725366757,
+    "phys_cape_C_01": 12.641984328171906,
+    "phys_cape_C_02": 11.906501020608472,
+    "phys_cape_C_03": 11.170778656424085,
+    "phys_cape_C_04": 10.435184358286637,
+    "phys_cape_C_05": 9.699552494108755,
+    "phys_cape_C_06": 8.96383866766083,
+    "phys_cape_L_00": 13.377589725366757,
+    "phys_cape_L_01": 12.641984328171906,
+    "phys_cape_L_02": 11.90643528003771,
+    "phys_cape_L_03": 11.170848665863078,
+    "phys_cape_L_04": 10.435109226205768,
+    "phys_cape_L_05": 9.699552494108755,
+    "phys_cape_L_06": 8.963750728975267,
+    "phys_cape_R_00": 13.377589725366757,
+    "phys_cape_R_01": 12.641984328171906,
+    "phys_cape_R_02": 11.90643528003771,
+    "phys_cape_R_03": 11.170848665863078,
+    "phys_cape_R_04": 10.435184358286637,
+    "phys_cape_R_05": 9.699391130889612,
+    "phys_cape_R_06": 8.963750728975267
+  },
+  "retargeting": false,
+  "character_mesh_weight_texture_edits": false,
+  "blue_override": [
+    {
+      "material": "Astra Round2 royal blue undersleeves",
+      "multiply_linear": [
+        0.025,
+        0.2,
+        0.62
+      ],
+      "original_color": [
+        "Image Texture",
+        "Color"
+      ],
+      "unchanged_metallic_mask": [
+        "Separate Color",
+        "Blue"
+      ]
+    },
+    {
+      "material": "Astra Round2 royal blue and continuous gold trim",
+      "multiply_linear": [
+        0.025,
+        0.2,
+        0.62
+      ],
+      "original_color": [
+        "Image Texture",
+        "Color"
+      ],
+      "unchanged_metallic_mask": [
+        "Separate Color",
+        "Blue"
+      ]
+    }
+  ],
+  "other_character_materials_unchanged": {
+    "Astra worn steel and gold hilt final": true,
+    "Astra Round2 solid champagne gold": true,
+    "Astra pale golden skin final": true,
+    "Astra midnight blue woven silk final": true,
+    "Astra engraved royal gold final": true
+  },
+  "native_sword_attachment": "ARMATURE modifier; RightHand weight 1.0; unchanged",
+  "sword_evaluator_max_error_m": 7.552698789521567e-07,
+  "ribbons_resampled": 14,
+  "engine": "BLENDER_EEVEE",
+  "blender_version": "5.2.1 LTS",
+  "exposure": -0.699999988079071,
+  "shutter": 0.550000011920929,
+  "image_packing": [
+    {
+      "name": "astra_character_Astra_Undersleeves_basecolor_2048.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_normal_2048.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_orm_2048.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_basecolor_4096",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_normal_4096",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_orm_4096",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_robe_basecolor_4096.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_robe_normal_4096.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_char1_robe_orm_4096.png",
+      "packed": true
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_basecolor_2048.001",
+      "packed": true
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_normal_2048.001",
+      "packed": true
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_orm_2048.001",
+      "packed": true
+    },
+    {
+      "name": "cavity_4096.png",
+      "packed": true
+    },
+    {
+      "name": "godwyn_albedo",
+      "packed": true
+    },
+    {
+      "name": "godwyn_metallic-godwyn_roughness",
+      "packed": true
+    },
+    {
+      "name": "Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head astra_charact",
+      "packed": true
+    },
+    {
+      "name": "Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head astra_characte",
+      "packed": true
+    },
+    {
+      "name": "Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head Round1 head astra_character",
+      "packed": true
+    },
+    {
+      "name": "source_trim_mask.png",
+      "packed": true
+    }
+  ]
+}

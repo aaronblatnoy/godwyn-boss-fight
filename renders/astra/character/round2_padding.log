@@ -1,0 +1,17 @@
+{
+  "astra_character_char1": {
+    "same_material_extended_texels": 7846023,
+    "atlas_pixels": 16777216,
+    "metallic_padding": 1
+  },
+  "astra_character_char1_robe": {
+    "same_material_extended_texels": 7846023,
+    "atlas_pixels": 16777216,
+    "metallic_padding": "nearest same-atlas class"
+  },
+  "astra_character_Astra_Undersleeves": {
+    "same_material_extended_texels": 755732,
+    "atlas_pixels": 4194304,
+    "metallic_padding": "nearest same-atlas class"
+  }
+}

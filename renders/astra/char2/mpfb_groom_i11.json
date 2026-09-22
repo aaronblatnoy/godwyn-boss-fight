@@ -1,0 +1,11 @@
+{
+  "source": "groom_i10",
+  "addition": {
+    "name": "MPFB_ScalpBed",
+    "curves": 14000,
+    "points": 252000,
+    "export_vertices": 420000,
+    "chain": "back"
+  },
+  "short_layers": "14,000 fine scalp-rooted strands, 18\u201350 mm, attached to Head; long groom retains all 12 hair bones."
+}

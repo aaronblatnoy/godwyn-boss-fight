@@ -1,0 +1,156 @@
+00:07.011  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+00:07.276  cycles           | Added device "Apple M1 Pro (GPU - 14 cores)" with id "METAL_Apple M1 Pro (GPU - 14 cores)".
+00:07.276  cycles           | Device with id "METAL_Apple M1 Pro (GPU - 14 cores)" supports OpenImageDenoise.
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py:91: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py:117: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new(PREFIX+'Obsidian'); mat.use_nodes=True
+CINE_BLADE_LIGHT [-1.1470835208892822, 1.50765061378479, 2.5044913291931152] plane_normal [-0.6898646354675293, -0.12025396525859833, -0.7138807773590088]
+CINE_GPU_PROOF {"engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [960, 540], "samples_max": 32, "adaptive_threshold": 0.08, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 7.617213356221517, "camera_push_percent": 4, "camera_lens": 42, "camera_height_m": 0.6608563332119957, "camera_aim_height_m": 1.5034841299057007, "body_reference_frame": 40, "body_reference_height_fraction": 0.8999999761581421, "horizontal_shift": -0.02, "camera_upward_angle_degrees": 6.312481418831026, "fill_multiplier": 0.6, "rake_multiplier": 0.6, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+00:07.935  cycles           | Using default CPU kernels.
+00:08.715  cycles           | Total time spent synchronizing data: 0.747925
+00:11.122  cycles           | Effective scene passes:
+00:11.122  cycles           | - type: combined, name: "Combined", mode: DENOISED, is_written: True
+00:11.122  cycles           | - type: combined, name: "Noisy Image", mode: NOISY, is_written: True
+00:11.122  cycles           | - type: adaptive_aux_buffer, name: "", mode: NOISY, is_written: True
+00:11.122  cycles           | - type: denoising_albedo, name: "", mode: NOISY, is_written: True
+00:11.122  cycles           | - type: denoising_normal, name: "", mode: NOISY, is_written: True
+00:11.122  cycles           | - type: sample_count, name: "", mode: NOISY, is_written: True
+00:11.122  cycles           | Requested features:
+00:11.122  cycles           | Use BSDF True
+00:11.122  cycles           | Use Emission True
+00:11.122  cycles           | Use Volume False
+00:11.122  cycles           | Use Bump False
+00:11.122  cycles           | Use Voronoi False
+00:11.122  cycles           | Use Shader Raytrace False
+00:11.122  cycles           | Use MNEE False
+00:11.122  cycles           | Use Transparent True
+00:11.122  cycles           | Use Denoising True
+00:11.122  cycles           | Use Path Tracing True
+00:11.122  cycles           | Use Hair False
+00:11.122  cycles           | Use Pointclouds False
+00:11.122  cycles           | Use Object Motion True
+00:11.122  cycles           | Use Baking False
+00:11.122  cycles           | Use Subsurface True
+00:11.122  cycles           | Use Volume False
+00:11.122  cycles           | Use Shadow Catcher False
+00:11.122  cycles           | Use Portal Node False
+00:11.248  cycles           | Total 20 shaders.
+00:11.251  cycles           | Shader manager updated 20 shaders in 0.00250133 seconds.
+00:11.253  cycles           | Total 12 objects.
+00:11.255  cycles           | Total 0 particle systems.
+00:11.255  cycles           | Total 12 meshes.
+00:11.979  cycles           | Using BVH2 layout.
+00:12.860  cycles           | Total 11 lookup tables.
+00:12.861  cycles           | Total 7 lights.
+00:12.861  cycles           | Background MIS has been disabled.
+00:12.861  cycles           | Number of lights sent to the device: 6
+00:12.862  cycles           | Use light tree with 55 emitters and 110 nodes.
+00:12.862  cycles           | Specialized light tree for light linking, with 4 additional nodes.
+00:12.862  cycles           | Total 12 lookup tables.
+00:35.934  cycles           | System memory statistics after full device sync:
+                            |   Usage: 806,804,346 (769.43M)
+                            |   Peak: 885,345,546 (844.33M)
+00:37.717  cycles           | Rendered 1 samples in 1.69136 seconds (1.69136 seconds per sample), occupancy: 0.00681438
+00:37.903  cycles           | Total 12 lookup tables.
+00:38.180  cycles           | System memory statistics after full device sync:
+                            |   Usage: 806,806,914 (769.43M)
+                            |   Peak: 885,345,546 (844.33M)
+00:40.515  cycles           | Rendered 31 samples in 2.33498 seconds (0.0753218 seconds per sample), occupancy: 0.128081
+00:41.824  cycles           | Rendering in main loop is done in 5.82269 seconds.
+00:41.824  cycles           | Full path tracing report:
+                            | 
+                            | Path tracing on: Apple M1 Pro (GPU - 14 cores) (Metal) (display) [METAL_Apple M1 Pro (GPU - 14 cores)]
+                            |                      Hardware Ray-Tracing: Off
+                            | 
+                            | Denoising on: Apple M1 Pro (GPU - 14 cores) (Metal) (display) [METAL_Apple M1 Pro (GPU - 14 cores)]
+                            |                   Hardware Ray-Tracing: Off
+                            | 
+                            | Render Scheduler Summary
+                            | 
+                            | Mode: Headless
+                            | Resolution: 960x540
+                            | 
+                            | Adaptive sampling:
+                            |   Use: True
+                            |   Step: 16
+                            |   Min Samples: 32
+                            |   Threshold: 0.400000
+                            | 
+                            | Denoiser:
+                            |   Use: True
+                            |   Type: OpenImageDenoise
+                            |   Start Sample: 0
+                            |   Passes: Color, Albedo, Normal
+                            | 
+                            | Time (in seconds):
+                            |                                        Wall              Average
+                            |           Path Tracing             4.186521             0.130829
+                            |        Adaptive Filter             0.000000             0.000000
+                            |               Denoiser             1.291703             1.291703
+                            |         Display Update             0.000001             0.000001
+                            | 
+                            |   Total: 5.478225
+                            | 
+                            | Rendered 32 samples in 5.820989 seconds
+                            | 
+00:41.824  cycles           | Total render time: 33.8633
+00:41.824  cycles           | Render time (without synchronization): 5.82308
+00:41.941  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/gate3_preview_a_f040.png'
+CINE_FRAME {"frame": 40, "wall_seconds": 34.60797254112549, "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/gate3_preview_a_f040.png"}
+CINE_COMPLETE no blend files or preferences saved
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Metal dispatch stats:
+-------------------------------------------------------------------------------------------------------
+Kernel name                                 Total threads   Dispatches     Avg. T/D    Time/s    Time/%
+-------------------------------------------------------------------------------------------------------
+film_convert_float3                                518400            1       518400    0.0004     24.93
+filter_guiding_preprocess                          518400            1       518400    0.0007     42.52
+filter_color_postprocess                           518400            1       518400    0.0005     32.54
+-------------------------------------------------------------------------------------------------------
+                                                                     3                 0.0016    100.00
+-------------------------------------------------------------------------------------------------------
+
+
+Metal path-tracing dispatch stats:
+-------------------------------------------------------------------------------------------------------
+Kernel name                                 Total threads   Dispatches     Avg. T/D    Time/s    Time/%
+-------------------------------------------------------------------------------------------------------
+integrator_init_from_camera                      21489920            6      3581653    0.0324      1.29
+integrator_init_from_bake                               0            0            0    0.0000      0.00
+integrator_intersect_closest                     24405215           29       841559    1.2894     51.15
+integrator_intersect_shadow                       6764833           28       241601    0.6804     26.99
+integrator_intersect_subsurface                      8620            4         2155    0.0064      0.25
+integrator_intersect_volume_stack                       0            0            0    0.0000      0.00
+integrator_intersect_dedicated_light                    0            0            0    0.0000      0.00
+integrator_intersect_mnee                               0            0            0    0.0000      0.00
+integrator_shade_background                      15230900           22       692313    0.0923      3.66
+integrator_shade_light_nee                         152013            9        16890    0.0009      0.04
+integrator_shade_light_forward                     230445            7        32920    0.0026      0.10
+integrator_shade_surface                          8078134           25       323125    0.3709     14.71
+integrator_shade_surface_raytrace                       0            0            0    0.0000      0.00
+integrator_shade_volume                                 0            0            0    0.0000      0.00
+integrator_shade_volume_ray_marching                    0            0            0    0.0000      0.00
+integrator_shade_shadow                           4903680           23       213203    0.0178      0.70
+integrator_shade_dedicated_light                        0            0            0    0.0000      0.00
+integrator_shadow_path_mnee_pending                     0            0            0    0.0000      0.00
+integrator_queued_paths_array                   119695991           60      1994933    0.0083      0.33
+integrator_queued_shadow_paths_array             16056735           59       272148    0.0019      0.08
+integrator_active_paths_array                           0            0            0    0.0000      0.00
+integrator_terminated_paths_array                 3123897            4       780974    0.0002      0.01
+integrator_sorted_paths_array                           0            0            0    0.0000      0.00
+integrator_sort_bucket_pass                       1638400           25        65536    0.0021      0.08
+integrator_sort_write_pass                        1638400           25        65536    0.0018      0.07
+integrator_compact_paths_array                   16605198            4      4151299    0.0010      0.04
+integrator_compact_states                         2473892            4       618473    0.0102      0.40
+integrator_terminated_shadow_paths_array           192196            8        24024    0.0001      0.00
+integrator_compact_shadow_paths_array             6558179            8       819772    0.0004      0.02
+integrator_compact_shadow_states                   109033            8        13629    0.0016      0.06
+integrator_reset                                  8388608            2      4194304    0.0003      0.01
+-------------------------------------------------------------------------------------------------------
+                                                                   360                 2.5210    100.00
+-------------------------------------------------------------------------------------------------------
+
+
+Blender quit

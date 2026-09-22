@@ -1,0 +1,21 @@
+{
+  "status": "BLOCKED_BEFORE_BLENDER_PYTHON",
+  "metal_default_device": null,
+  "metal_device_count": 0,
+  "probe_python_syntax": "PASS; execution not reached",
+  "files": {
+    "astra_character_v2.blend": {
+      "bytes": 306799061,
+      "sha256": "a21c747e5e66380e7dacc08f1193f768608ce99facb1cb5f2f67fe15d39aa9d4"
+    },
+    "astra_character_v2.glb": {
+      "bytes": 573672856,
+      "sha256": "cabeb770eafc09247799512c862409bfda2f0c6dd74d102c28f2fea13fc5ebaa"
+    },
+    "astra_character_v2_premfpb.blend": {
+      "bytes": 306799061,
+      "sha256": "a21c747e5e66380e7dacc08f1193f768608ce99facb1cb5f2f67fe15d39aa9d4"
+    }
+  },
+  "canonical_blend_equals_pristine_backup": true
+}

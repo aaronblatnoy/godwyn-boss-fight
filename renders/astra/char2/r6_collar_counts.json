@@ -1,0 +1,19 @@
+{
+  "removed_inherited_armor_faces": 29267,
+  "removed_fractured_neck_faces": 6675,
+  "removed_zero_area_faces": 0,
+  "retired_ornament_objects": [
+    "AstraChar2_R3_ChasedLaurel"
+  ],
+  "welded_vertices": 32,
+  "closed_boundary_loops": 0,
+  "reoriented_faces": 0,
+  "new_plate_boundary_edges": 0,
+  "new_plate_nonmanifold_edges": 0,
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "cloth_topology_rest_vertices_unchanged": true,
+  "local_armor_contact_fit_vertices": 3915,
+  "last_collar_strays_removed": 103
+}

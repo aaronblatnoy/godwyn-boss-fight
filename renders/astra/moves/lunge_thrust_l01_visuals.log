@@ -1,0 +1,17 @@
+00:00.727  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_wip.blend"
+00:05.581  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/000.png'
+00:07.538  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/001.png'
+00:08.722  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/002.png'
+00:09.456  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/003.png'
+00:10.465  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/004.png'
+00:11.659  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/005.png'
+00:12.817  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/006.png'
+00:14.480  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/007.png'
+00:15.268  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/lunge_thrust/l01_clearance/008.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

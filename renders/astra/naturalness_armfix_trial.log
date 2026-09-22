@@ -1,0 +1,39 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+BASE PEAKS (39.0, 57.77102348615797) (39.0, 57.741779147282855) (39.5, 45.625063719402775)
+TRIAL {"delay": 0.5, "window": [34, 37, 40.5, 44], "peak": [39.5, 56.13235167552504], "max_roll_deg": 25.457780800341943, "max_acceleration": 37.055435790933196}
+TRIAL {"delay": 0.5, "window": [34, 36, 41, 44], "peak": [39.5, 56.13235167552504], "max_roll_deg": 25.457780800341943, "max_acceleration": 37.055435790933196}
+TRIAL {"delay": 0.5, "window": [35, 37, 41, 44], "peak": [39.5, 56.13235167552504], "max_roll_deg": 25.457780800341943, "max_acceleration": 37.055435790933196}
+TRIAL {"delay": 0.5, "window": [35, 37, 40, 43], "peak": [39.5, 56.13235167552504], "max_roll_deg": 25.457780800341943, "max_acceleration": 37.055435790933196}
+TRIAL {"delay": 0.625, "window": [34, 37, 40.5, 44], "peak": [39.5, 54.75902554131394], "max_roll_deg": 31.25090594696445, "max_acceleration": 34.12080192091234}
+TRIAL {"delay": 0.625, "window": [34, 36, 41, 44], "peak": [39.5, 54.75902554131394], "max_roll_deg": 31.25090594696445, "max_acceleration": 34.12080192091234}
+TRIAL {"delay": 0.625, "window": [35, 37, 41, 44], "peak": [39.5, 54.75902554131394], "max_roll_deg": 31.25090594696445, "max_acceleration": 34.12080192091234}
+TRIAL {"delay": 0.625, "window": [35, 37, 40, 43], "peak": [39.5, 54.75902554131394], "max_roll_deg": 31.25090594696445, "max_acceleration": 34.173242251447185}
+TRIAL {"delay": 0.75, "window": [34, 37, 40.5, 44], "peak": [39.75, 55.70883581091497], "max_roll_deg": 37.43096738195083, "max_acceleration": 36.6755694526997}
+TRIAL {"delay": 0.75, "window": [34, 36, 41, 44], "peak": [39.75, 55.70883581091497], "max_roll_deg": 37.43096738195083, "max_acceleration": 36.6755694526997}
+TRIAL {"delay": 0.75, "window": [35, 37, 41, 44], "peak": [39.75, 55.70883581091497], "max_roll_deg": 37.43096738195083, "max_acceleration": 36.6755694526997}
+TRIAL {"delay": 0.75, "window": [35, 37, 40, 43], "peak": [39.75, 55.70883581091497], "max_roll_deg": 37.43096738195083, "max_acceleration": 38.793684139438355}
+TRIAL {"delay": 0.875, "window": [34, 37, 40.5, 44], "peak": [39.75, 54.32477932787792], "max_roll_deg": 42.960426339850635, "max_acceleration": 34.63333071343902}
+TRIAL {"delay": 0.875, "window": [34, 36, 41, 44], "peak": [39.75, 54.32477932787792], "max_roll_deg": 42.960426339850635, "max_acceleration": 34.63333071343902}
+TRIAL {"delay": 0.875, "window": [35, 37, 41, 44], "peak": [39.75, 54.32477932787792], "max_roll_deg": 42.960426339850635, "max_acceleration": 34.63333071343902}
+TRIAL {"delay": 0.875, "window": [35, 37, 40, 43], "peak": [39.75, 54.32477932787792], "max_roll_deg": 42.960426339850635, "max_acceleration": 40.23540005339485}
+TRIAL {"delay": 1, "window": [34, 37, 40.5, 44], "peak": [40.0, 55.855653797170376], "max_roll_deg": 48.48988529775045, "max_acceleration": 37.07735557508018}
+TRIAL {"delay": 1, "window": [34, 36, 41, 44], "peak": [40.0, 55.855653797170376], "max_roll_deg": 48.48988529775045, "max_acceleration": 37.07735557508018}
+TRIAL {"delay": 1, "window": [35, 37, 41, 44], "peak": [40.0, 55.855653797170376], "max_roll_deg": 48.48988529775045, "max_acceleration": 37.07735557508018}
+TRIAL {"delay": 1, "window": [35, 37, 40, 43], "peak": [40.0, 55.855653797170376], "max_roll_deg": 48.48988529775045, "max_acceleration": 44.40463629395835}
+TRIAL {"delay": 1.125, "window": [34, 37, 40.5, 44], "peak": [40.0, 54.4753313859521], "max_roll_deg": 53.55638394637582, "max_acceleration": 37.874050811360135}
+TRIAL {"delay": 1.125, "window": [34, 36, 41, 44], "peak": [40.0, 54.4753313859521], "max_roll_deg": 53.55638394637582, "max_acceleration": 37.14244219824503}
+TRIAL {"delay": 1.125, "window": [35, 37, 41, 44], "peak": [40.0, 54.4753313859521], "max_roll_deg": 53.55638394637582, "max_acceleration": 37.14244219824503}
+TRIAL {"delay": 1.125, "window": [35, 37, 40, 43], "peak": [40.25, 55.39997371330878], "max_roll_deg": 53.55638394637582, "max_acceleration": 46.45586670396154}
+TRIAL {"delay": 1.25, "window": [34, 37, 40.5, 44], "peak": [40.25, 56.46677927417523], "max_roll_deg": 58.62288259500119, "max_acceleration": 40.50183093136085}
+TRIAL {"delay": 1.25, "window": [34, 36, 41, 44], "peak": [40.25, 56.46677927417523], "max_roll_deg": 58.62288259500119, "max_acceleration": 38.06193909078115}
+TRIAL {"delay": 1.25, "window": [35, 37, 41, 44], "peak": [40.25, 56.46677927417523], "max_roll_deg": 58.62288259500119, "max_acceleration": 38.06193909078115}
+TRIAL {"delay": 1.25, "window": [35, 37, 40, 43], "peak": [40.5, 58.479301500701375], "max_roll_deg": 58.62288259500119, "max_acceleration": 51.831088354788534}
+WRIST -28.164386024828726 1.5 max theta 0 31.264929195305307
+ELBOW DELTAS [(44.0, [np.float64(0.0), np.float64(0.0), np.float64(0.0)]), (45.0, [np.float64(-0.036155237608638396), np.float64(0.04374844143741119), np.float64(-0.00896235182861238)]), (46.0, [np.float64(-0.10462270151130063), np.float64(0.10499992810230896), np.float64(-0.023678570695857104)]), (47.0, [np.float64(-0.1319754589944741), np.float64(0.11942740394050022), np.float64(-0.03154722832221246)]), (47.25, [np.float64(-0.1332155107592819), np.float64(0.11887447236630289), np.float64(-0.03288946081073263)]), (48.0, [np.float64(-0.12638855513823655), np.float64(0.11044078337443985), np.float64(-0.036475852326049996)]), (49.0, [np.float64(-0.09672748725395536), np.float64(0.09225130749312715), np.float64(-0.041528667926482576)]), (50.0, [np.float64(-0.06296040661593483), np.float64(0.08097562364425714), np.float64(-0.04335380218022111)]), (51.0, [np.float64(-0.03588609531767353), np.float64(0.0734274817084366), np.float64(-0.03955613110483691)]), (52.0, [np.float64(-0.006671127220458872), np.float64(0.027516481256290803), np.float64(-0.013337010636688795)]), (53.0, [np.float64(0.0), np.float64(0.0), np.float64(0.0)])]
+SELECTED {'delay': 0.5, 'window': (34, 37, 40.5, 44), 'peak': (39.5, 56.13235167552504), 'max_roll_deg': 25.457780800341943, 'max_acceleration': 37.055435790933196}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

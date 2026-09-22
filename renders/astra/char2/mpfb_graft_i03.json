@@ -1,0 +1,54 @@
+{
+  "head_source_iteration": 4,
+  "graft_iteration": 3,
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "stable_existing_names_and_material_slots": true,
+  "original_cloth_rest_vertices_exact": true,
+  "protected_cloth_vertex_count": 111479,
+  "removed_faces_by_material": {
+    "1": 12071,
+    "0": 29267,
+    "2": 133438,
+    "4": 151
+  },
+  "neck_bridge_vertices_per_ring": 56,
+  "neck_bridge_rows": 12,
+  "seam": "Closed MPFB neck extended to z=2.605m inside original body/collar; overlapping armor-concealed seam, no claim of body topology weld.",
+  "eyes": {
+    "L": {
+      "old_center": [
+        -0.05499999225139618,
+        -0.3848000168800354,
+        2.997084617614746
+      ],
+      "new_center": [
+        -0.05283600649087557,
+        -0.37956584470070526,
+        2.976550030704933
+      ],
+      "radius_scale": 0.7726511359214783
+    },
+    "R": {
+      "old_center": [
+        0.05500000715255737,
+        -0.3848000168800354,
+        2.998082160949707
+      ],
+      "new_center": [
+        0.05283600649087557,
+        -0.37956584470070526,
+        2.976550030704933
+      ],
+      "radius_scale": 0.7726511359214783
+    }
+  },
+  "eyebrow_vertices_projected": 21500,
+  "collar_fit_candidate_vertices": 8187,
+  "visible_body_hair_weights_cleaned": 0,
+  "new_head_vertices": 79522,
+  "new_head_faces": 79520,
+  "clay_gate": "PENDING",
+  "protected_cloth_scope": "All original cloth faces entirely below z=2.15m; damaged upper fragments explicitly removed."
+}

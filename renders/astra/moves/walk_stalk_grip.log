@@ -1,0 +1,38 @@
+00:00.962  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_wip.blend"
+{
+  "pre_armature_surface_polish_offset_m": 0.014991477141291468,
+  "closed_finger_mesh_samples": 2256,
+  "max_closed_finger_hand_local_drift_m": 8.477515634553368e-07,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3442,
+    "astra_move_palm_sliver_faces": 621,
+    "astra_move_closed_finger_vertices": 2553,
+    "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 289,
+  "hilt_wrist_distance_range_m": [
+    0.1653151016501609,
+    0.16531549072163093
+  ],
+  "max_hand_local_hilt_drift_m": 4.614739260458072e-07,
+  "max_evaluated_tip_error_m": 5.709789761288739e-07,
+  "max_edge_vs_cut_deg": null,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    19,
+    37,
+    55,
+    73
+  ]
+}
+00:08.720  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/walk_stalk/grip/001.png'
+00:09.865  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/walk_stalk/grip/019.png'
+00:10.715  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/walk_stalk/grip/037.png'
+00:11.394  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/walk_stalk/grip/055.png'
+00:12.248  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/walk_stalk/grip/073.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

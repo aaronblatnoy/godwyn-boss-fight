@@ -1,0 +1,13 @@
+00:01.042  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_mpfb_fit_i02.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_mpfb_surface.py:46: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not mat or not mat.use_nodes:continue
+02:17:23.821  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_textured_i02_front.png'
+Info: Saved as "astra_character_v2_mpfb_textured_i02.blend"
+MPFB_RENDER mpfb_textured_i02 front
+02:51:14.697  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_textured_i02_side.png'
+MPFB_RENDER mpfb_textured_i02 side
+02:51:51.098  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_textured_i02_three_quarter.png'
+MPFB_RENDER mpfb_textured_i02 three_quarter
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

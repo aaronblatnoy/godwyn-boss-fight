@@ -1,0 +1,14 @@
+00:00.811  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+MATERIAL_GAP Astra engraved royal gold final {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra midnight blue woven silk final {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.18000000715255737, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra pale golden skin final {"Emission Strength": 2.5, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [["AstraChar2 emission", "Color"]], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra Round2 royal blue and continuous gold trim {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra Round2 royal blue undersleeves {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra Round2 solid champagne gold {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Astra worn steel and gold hilt final {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Round2 editable procedural gold {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Round2 editable procedural robe {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+MATERIAL_GAP Round2 editable procedural sleeves {"Emission Strength": 0.0, "Anisotropic": 0.0, "Sheen Weight": 0.0, "emission_color_links": [], "displacement_connected": false, "strand_shader": false}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,63 @@
+{
+  "method": "Regenerated scalp-native guides, fine clumps and six three-bundle interwoven braids; R5 binding/export machinery",
+  "groups": [
+    {
+      "name": "MPFB_L_Front",
+      "curves": 2400,
+      "points": 153600,
+      "export_vertices": 237600,
+      "chain": "front_L"
+    },
+    {
+      "name": "MPFB_L_Side",
+      "curves": 3000,
+      "points": 192000,
+      "export_vertices": 297000,
+      "chain": "back"
+    },
+    {
+      "name": "MPFB_L_Back",
+      "curves": 3600,
+      "points": 230400,
+      "export_vertices": 356400,
+      "chain": "back"
+    },
+    {
+      "name": "MPFB_L_Braids",
+      "curves": 675,
+      "points": 108000,
+      "export_vertices": 164025,
+      "chain": "front_L"
+    },
+    {
+      "name": "MPFB_R_Front",
+      "curves": 2400,
+      "points": 153600,
+      "export_vertices": 237600,
+      "chain": "front_R"
+    },
+    {
+      "name": "MPFB_R_Side",
+      "curves": 3000,
+      "points": 192000,
+      "export_vertices": 297000,
+      "chain": "back"
+    },
+    {
+      "name": "MPFB_R_Back",
+      "curves": 3600,
+      "points": 230400,
+      "export_vertices": 356400,
+      "chain": "back"
+    },
+    {
+      "name": "MPFB_R_Braids",
+      "curves": 675,
+      "points": 108000,
+      "export_vertices": 164025,
+      "chain": "front_R"
+    }
+  ],
+  "total_strands": 19350,
+  "body_source": "approved collar bank + corrected graft04"
+}

@@ -1,0 +1,345 @@
+00:00.740  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_pre_l01.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "baseline_sha256": "5644b867b5eafa282eb47a94ff893ac0ed57009ee9299624b3e2883b89b0be9f",
+  "before": {
+    "RightArm": {
+      "local": {
+        "active": {
+          "frame": 28.75,
+          "speed": 8.06372545314038
+        },
+        "recovery": {
+          "frame": 39.5,
+          "speed": 16.055184671402532
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 10.422992815984983
+        },
+        "full": {
+          "frame": 39.5,
+          "speed": 16.055184671402532
+        },
+        "acceleration_deg_frame2": {
+          "frame": 38.75,
+          "speed": 5.33603612039937
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 28.5,
+          "speed": 9.090449273552206
+        },
+        "recovery": {
+          "frame": 39.5,
+          "speed": 15.503168881574867
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 9.304417557129035
+        },
+        "full": {
+          "frame": 39.5,
+          "speed": 15.503168881574867
+        },
+        "acceleration_deg_frame2": {
+          "frame": 38.5,
+          "speed": 4.787003778778216
+        }
+      }
+    },
+    "RightForeArm": {
+      "local": {
+        "active": {
+          "frame": 29.5,
+          "speed": 8.381170299627447
+        },
+        "recovery": {
+          "frame": 36.5,
+          "speed": 7.435728449814829
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 1.8446510322388106
+        },
+        "full": {
+          "frame": 29.5,
+          "speed": 8.381170299627447
+        },
+        "acceleration_deg_frame2": {
+          "frame": 31.25,
+          "speed": 4.194305416419013
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 27.25,
+          "speed": 3.6588431091588967
+        },
+        "recovery": {
+          "frame": 39.5,
+          "speed": 15.404237050777878
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 9.173007895549748
+        },
+        "full": {
+          "frame": 39.5,
+          "speed": 15.404237050777878
+        },
+        "acceleration_deg_frame2": {
+          "frame": 41.0,
+          "speed": 4.645203247144675
+        }
+      }
+    },
+    "RightHand": {
+      "local": {
+        "active": {
+          "frame": 27.5,
+          "speed": 3.378840311441154
+        },
+        "recovery": {
+          "frame": 39.75,
+          "speed": 16.239799567914122
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 10.771400308375501
+        },
+        "full": {
+          "frame": 39.75,
+          "speed": 16.239799567914122
+        },
+        "acceleration_deg_frame2": {
+          "frame": 42.75,
+          "speed": 5.441710495777208
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 35.0,
+          "speed": 1.3762024382197138
+        },
+        "recovery": {
+          "frame": 39.5,
+          "speed": 17.480540431147645
+        },
+        "settle": {
+          "frame": 51.25,
+          "speed": 12.860240441289815
+        },
+        "full": {
+          "frame": 39.5,
+          "speed": 17.480540431147645
+        },
+        "acceleration_deg_frame2": {
+          "frame": 37.75,
+          "speed": 5.034480192094692
+        }
+      }
+    }
+  },
+  "after": {
+    "RightArm": {
+      "local": {
+        "active": {
+          "frame": 28.75,
+          "speed": 8.06372545314038
+        },
+        "recovery": {
+          "frame": 40.75,
+          "speed": 11.623395138356123
+        },
+        "settle": {
+          "frame": 55.5,
+          "speed": 8.131335479293307
+        },
+        "full": {
+          "frame": 40.75,
+          "speed": 11.623395138356123
+        },
+        "acceleration_deg_frame2": {
+          "frame": 60.5,
+          "speed": 4.596035387221304
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 28.5,
+          "speed": 9.090449273552206
+        },
+        "recovery": {
+          "frame": 40.75,
+          "speed": 10.841353202689316
+        },
+        "settle": {
+          "frame": 55.25,
+          "speed": 7.8666590903118045
+        },
+        "full": {
+          "frame": 40.75,
+          "speed": 10.841353202689316
+        },
+        "acceleration_deg_frame2": {
+          "frame": 60.5,
+          "speed": 4.54824537366555
+        }
+      }
+    },
+    "RightForeArm": {
+      "local": {
+        "active": {
+          "frame": 29.5,
+          "speed": 8.381170299627447
+        },
+        "recovery": {
+          "frame": 36.5,
+          "speed": 7.035391474188305
+        },
+        "settle": {
+          "frame": 53.75,
+          "speed": 2.845673970900998
+        },
+        "full": {
+          "frame": 29.5,
+          "speed": 8.381170299627447
+        },
+        "acceleration_deg_frame2": {
+          "frame": 31.25,
+          "speed": 4.194305416419013
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 27.25,
+          "speed": 3.6588431091588967
+        },
+        "recovery": {
+          "frame": 41.25,
+          "speed": 10.779361767035263
+        },
+        "settle": {
+          "frame": 55.5,
+          "speed": 8.101980806785823
+        },
+        "full": {
+          "frame": 41.25,
+          "speed": 10.779361767035263
+        },
+        "acceleration_deg_frame2": {
+          "frame": 60.5,
+          "speed": 3.9332123099603926
+        }
+      }
+    },
+    "RightHand": {
+      "local": {
+        "active": {
+          "frame": 27.5,
+          "speed": 3.378840311441154
+        },
+        "recovery": {
+          "frame": 41.75,
+          "speed": 11.656847076976039
+        },
+        "settle": {
+          "frame": 56.25,
+          "speed": 9.74410027819896
+        },
+        "full": {
+          "frame": 41.75,
+          "speed": 11.656847076976039
+        },
+        "acceleration_deg_frame2": {
+          "frame": 59.75,
+          "speed": 5.9585008217566555
+        }
+      },
+      "world": {
+        "active": {
+          "frame": 35.0,
+          "speed": 1.3762024382197138
+        },
+        "recovery": {
+          "frame": 41.75,
+          "speed": 12.230978551125316
+        },
+        "settle": {
+          "frame": 55.5,
+          "speed": 11.994763871555415
+        },
+        "full": {
+          "frame": 41.75,
+          "speed": 12.230978551125316
+        },
+        "acceleration_deg_frame2": {
+          "frame": 40.75,
+          "speed": 5.513140156346196
+        }
+      }
+    }
+  },
+  "changed_fcurves": [
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      3
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      3
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      3
+    ]
+  ],
+  "untouched_fcurve_count": 835,
+  "max_unmodified_pose_component_error": 0.0,
+  "timing": "World quaternion trajectories: old F37\u201344 -> F37\u201347; distal offsets 0.5/1f. Re-express in parent-local quaternion keys to retain visible sequencing. Extend later redirection slightly; reclaim original F53\u201364 settle; F64 preserved.",
+  "clearance_correction": "Shared upper-arm/forearm/hand world rotation ramps after F43: outward Y up to 25deg and forward X down to -12deg; smoothly returns to zero at F64. Quaternion F-curves only; no mesh, cloth, foot or root edits."
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

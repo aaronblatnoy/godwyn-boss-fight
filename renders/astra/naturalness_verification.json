@@ -1,0 +1,185 @@
+{
+  "invariants": {
+    "mesh_vertices_topology_weights_sha256": true,
+    "cameras": true,
+    "lights": true,
+    "render": true,
+    "eevee": true,
+    "image_settings": true,
+    "view_settings": true,
+    "world": true,
+    "rest": true,
+    "used_material_shader_data": true
+  },
+  "unused_material_ids_dropped_by_blender_save": [
+    "Astra charcoal",
+    "GodwynGameMat"
+  ],
+  "unchanged_camera_location": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.04624679312109947,
+      -0.998930037021637,
+      -11.0
+    ],
+    [
+      0.0,
+      0.998930037021637,
+      0.04624679312109947,
+      2.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "newly_rendered_frames": 90,
+  "video": {
+    "final_mp4": "renders/astra/godwyn_xslash_v2_final.mp4",
+    "sha256": "dc207f98005aa34982afe088da126874a324b7ce7446575724e8b877cbc6f4a0",
+    "frames": 90,
+    "fps": 30,
+    "duration": 3.0,
+    "resolution": [
+      640,
+      640
+    ],
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "full_decode_error_free": true,
+    "camera": "unchanged saved front camera; prior MP4 temporary three-quarter override intentionally not reapplied under strict scope",
+    "evaluation_frames": [
+      1,
+      13,
+      27,
+      31,
+      34,
+      36,
+      38,
+      39,
+      40,
+      43,
+      46,
+      53,
+      54,
+      57,
+      61,
+      79,
+      80,
+      84,
+      86,
+      90
+    ],
+    "evidence_order": {
+      "01_arm_pops": [
+        36,
+        38,
+        39,
+        53,
+        54
+      ],
+      "02_sword_wrist": [
+        1,
+        13,
+        80,
+        90
+      ],
+      "03_elbow_fold": [
+        38,
+        39,
+        40
+      ],
+      "04_off_arm_kink": [
+        36,
+        40,
+        43,
+        46
+      ],
+      "05_shoulder_timing": [
+        34,
+        36,
+        38,
+        40
+      ],
+      "06_off_hand_rigidity": [
+        27,
+        43,
+        57,
+        90
+      ],
+      "07_counterlean": [
+        13,
+        27,
+        31
+      ],
+      "08_settle_bob": [
+        80,
+        84,
+        86,
+        90
+      ],
+      "09_foot_contact": [
+        27,
+        46,
+        57,
+        90
+      ],
+      "10_cloth_lag": [
+        38,
+        43,
+        61,
+        90
+      ],
+      "11_hem_floor": [
+        39,
+        46,
+        57,
+        90
+      ]
+    },
+    "decoded_sheets": [
+      "naturalness_decoded_01.png",
+      "naturalness_decoded_02.png",
+      "naturalness_decoded_03.png",
+      "naturalness_decoded_04.png",
+      "naturalness_decoded_05.png",
+      "naturalness_decoded_06.png"
+    ]
+  },
+  "visual_review_complete": true,
+  "scope": "only existing rig/blur translation F-curves edited; no camera/light/render-engine/geometry/weights/rest-hierarchy changes",
+  "source_blend_sha256": "5bc3fa86b7e0ade1c95ddd9fa7b6d118af8e08c73b6e246860f1b2e8c35d910f",
+  "fixed_blend_sha256": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c",
+  "segment_length_error_m": {
+    "LeftArm-LeftForeArm": 5.79320250609916e-06,
+    "LeftForeArm-LeftHand": 9.408293609181051e-07,
+    "LeftUpLeg-LeftLeg": 9.13217865994298e-07,
+    "LeftLeg-LeftFoot": 4.987839227421631e-06,
+    "RightArm-RightForeArm": 5.932920742357517e-06,
+    "RightForeArm-RightHand": 5.326601722144275e-06,
+    "RightUpLeg-RightLeg": 5.0683174530608e-06,
+    "RightLeg-RightFoot": 7.201435936909917e-06
+  },
+  "visually_inspected": [
+    "all six original decoded sheets, F1\u201390",
+    "all six corrected MP4 decoded sheets, F1\u201390",
+    "matching front-camera before/after evaluation sheets, 20 poses each",
+    "full-resolution corrected F1, F39, F46, F54, F57",
+    "full-resolution original F39 and original front F46"
+  ],
+  "visual_findings": {
+    "arm_flips": "large source flips absent; continuous sweep retained",
+    "sword_wrist": "guard wrist supported; no backward folding seen in final",
+    "cloth_hem": "hem remains visible and pools during crouch; numerical residual up to 12 mm retained",
+    "cloth_leg": "no clear exposed leg breakthrough in reviewed front frames; hidden contact not certified",
+    "camera": "front view is the unchanged saved camera"
+  }
+}

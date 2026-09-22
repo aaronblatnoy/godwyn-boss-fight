@@ -1,0 +1,11 @@
+00:01.101  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.blend"
+FACE SCULPT 253776 vertices; local refined vertices 64642
+Info: Saved as "astra_character_v2_char2_work.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:28.137  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft8_face.png'
+RENDERED draft8 face
+00:38.754  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft8_face_three_quarter.png'
+RENDERED draft8 face_three_quarter
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

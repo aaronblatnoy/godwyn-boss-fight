@@ -1,0 +1,58 @@
+{
+  "engine": "CYCLES",
+  "device": "GPU",
+  "compute_backend": "METAL",
+  "enabled_compute_devices": [
+    {
+      "name": "Apple M1 Pro (GPU - 14 cores)",
+      "type": "METAL"
+    }
+  ],
+  "all_devices": [
+    {
+      "name": "Apple M1 Pro",
+      "type": "CPU",
+      "enabled": false
+    },
+    {
+      "name": "Apple M1 Pro (GPU - 14 cores)",
+      "type": "METAL",
+      "enabled": true
+    }
+  ],
+  "resolution": [
+    960,
+    540
+  ],
+  "samples_max": 32,
+  "adaptive_threshold": 0.08,
+  "denoiser": "OPENIMAGEDENOISE",
+  "haze_density": 0,
+  "camera_distance_start": 12.204296884076674,
+  "camera_push_percent": 4,
+  "camera_lens": 48,
+  "fstop": 5.6,
+  "shutter": 0.4,
+  "view_transform": "AgX",
+  "exposure": -0.35,
+  "key_linear_rgb": [
+    1,
+    0.92,
+    0.6
+  ],
+  "source": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend",
+  "source_sha256": "5bc3fa86b7e0ade1c95ddd9fa7b6d118af8e08c73b6e246860f1b2e8c35d910f",
+  "blender": "5.2.1 LTS",
+  "frames": [
+    {
+      "frame": 40,
+      "wall_seconds": 5.583397875074297,
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/preview_e_clear_f040.png"
+    },
+    {
+      "frame": 40,
+      "wall_seconds": 2.6037779999896884,
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/preview_e_clear_f040.png"
+    }
+  ]
+}

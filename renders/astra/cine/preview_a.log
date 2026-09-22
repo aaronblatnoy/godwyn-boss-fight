@@ -1,0 +1,102 @@
+00:02.482  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+00:02.751  cycles           | Added device "Apple M1 Pro (GPU - 14 cores)" with id "METAL_Apple M1 Pro (GPU - 14 cores)".
+00:02.751  cycles           | Device with id "METAL_Apple M1 Pro (GPU - 14 cores)" supports OpenImageDenoise.
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py:85: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py:104: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new(PREFIX+'Obsidian'); mat.use_nodes=True
+CINE_GPU_PROOF {"engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [960, 540], "samples_max": 32, "adaptive_threshold": 0.08, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 15.48707636517428, "camera_push_percent": 4, "camera_lens": 48, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+00:03.527  cycles           | Using default CPU kernels.
+00:03.795  cycles           | Total time spent synchronizing data: 0.263345
+00:05.253  cycles           | Effective scene passes:
+00:05.253  cycles           | - type: combined, name: "Combined", mode: DENOISED, is_written: True
+00:05.253  cycles           | - type: combined, name: "Noisy Image", mode: NOISY, is_written: True
+00:05.253  cycles           | - type: adaptive_aux_buffer, name: "", mode: NOISY, is_written: True
+00:05.253  cycles           | - type: denoising_albedo, name: "", mode: NOISY, is_written: True
+00:05.253  cycles           | - type: denoising_normal, name: "", mode: NOISY, is_written: True
+00:05.253  cycles           | - type: sample_count, name: "", mode: NOISY, is_written: True
+00:05.255  cycles           | Requested features:
+00:05.255  cycles           | Use BSDF True
+00:05.255  cycles           | Use Emission True
+00:05.255  cycles           | Use Volume False
+00:05.255  cycles           | Use Bump False
+00:05.255  cycles           | Use Voronoi False
+00:05.255  cycles           | Use Shader Raytrace False
+00:05.255  cycles           | Use MNEE False
+00:05.255  cycles           | Use Transparent True
+00:05.255  cycles           | Use Denoising True
+00:05.255  cycles           | Use Path Tracing True
+00:05.255  cycles           | Use Hair False
+00:05.255  cycles           | Use Pointclouds False
+00:05.255  cycles           | Use Object Motion True
+00:05.255  cycles           | Use Baking False
+00:05.255  cycles           | Use Subsurface True
+00:05.255  cycles           | Use Volume False
+00:05.255  cycles           | Use Shadow Catcher False
+00:05.255  cycles           | Use Portal Node False
+00:05.357  cycles           | Total 16 shaders.
+00:05.359  cycles           | Shader manager updated 16 shaders in 0.00219937 seconds.
+00:05.360  cycles           | Total 8 objects.
+00:05.360  cycles           | Total 0 particle systems.
+00:05.360  cycles           | Total 8 meshes.
+00:05.628  cycles           | Using BVH2 layout.
+00:06.083  cycles           | Total 11 lookup tables.
+00:06.083  cycles           | Total 3 lights.
+00:06.083  cycles           | Background MIS has been disabled.
+00:06.083  cycles           | Number of lights sent to the device: 2
+00:06.083  cycles           | Use light tree with 51 emitters and 102 nodes.
+00:06.084  cycles           | Total 12 lookup tables.
+00:06.095  cycles           | System memory statistics after full device sync:
+                            |   Usage: 806,752,562 (769.38M)
+                            |   Peak: 885,292,250 (844.28M)
+03:50.267  cycles           | Rendered 1 samples in 2.28262 seconds (2.28262 seconds per sample), occupancy: 0.00726916
+03:50.274  cycles           | Total 12 lookup tables.
+03:50.320  cycles           | System memory statistics after full device sync:
+                            |   Usage: 806,755,042 (769.38M)
+                            |   Peak: 885,292,250 (844.28M)
+03:51.831  cycles           | Rendered 31 samples in 1.50927 seconds (0.0486861 seconds per sample), occupancy: 0.142897
+03:54.776  cycles           | Rendering in main loop is done in 6.83505 seconds.
+03:54.780  cycles           | Full path tracing report:
+                            | 
+                            | Path tracing on: Apple M1 Pro (GPU - 14 cores) (Metal) (display) [METAL_Apple M1 Pro (GPU - 14 cores)]
+                            |                      Hardware Ray-Tracing: Off
+                            | 
+                            | Denoising on: Apple M1 Pro (CPU) (8 threads) [CPU]
+                            |                   Hardware Ray-Tracing: Off
+                            | 
+                            | Render Scheduler Summary
+                            | 
+                            | Mode: Headless
+                            | Resolution: 960x540
+                            | 
+                            | Adaptive sampling:
+                            |   Use: True
+                            |   Step: 16
+                            |   Min Samples: 32
+                            |   Threshold: 0.400000
+                            | 
+                            | Denoiser:
+                            |   Use: True
+                            |   Type: OpenImageDenoise
+                            |   Start Sample: 0
+                            |   Passes: Color, Albedo, Normal
+                            | 
+                            | Time (in seconds):
+                            |                                        Wall              Average
+                            |           Path Tracing             3.795987             0.118625
+                            |        Adaptive Filter             0.000000             0.000000
+                            |               Denoiser             2.900923             2.900923
+                            |         Display Update             0.000151             0.000151
+                            | 
+                            |   Total: 6.697061
+                            | 
+                            | Rendered 32 samples in 6.829655 seconds
+                            | 
+03:54.785  cycles           | Total render time: 231.265
+03:54.785  cycles           | Render time (without synchronization): 6.84434
+03:55.248  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/preview_a_f040.png'
+CINE_FRAME {"frame": 40, "wall_seconds": 232.04914329084568, "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/preview_a_f040.png"}
+CINE_COMPLETE no blend files or preferences saved
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

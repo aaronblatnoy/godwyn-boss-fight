@@ -1,0 +1,59 @@
+{
+  "method": "Manual approved-image pixel landmarks against projected 3D iris centers and baseline UV anchors and rebuilt surface mouth seam/nose prominence; NOT a photorealism score. 848x1264, fixed camera. Approximate nose/mouth UV anchor correspondence.",
+  "reference": {
+    "iris_L": [
+      315,
+      447
+    ],
+    "iris_R": [
+      535,
+      443
+    ],
+    "mouth_center": [
+      424,
+      680
+    ],
+    "nose_tip": [
+      424,
+      580
+    ]
+  },
+  "before": {
+    "iris_L": [
+      317.0461544256944,
+      474.1746967022237
+    ],
+    "iris_R": [
+      530.9538455743057,
+      472.3391758845404
+    ],
+    "mouth_center": [
+      423.39477494129767,
+      708.8946451040416
+    ],
+    "nose_tip": [
+      424.4208706641713,
+      590.10274212177
+    ]
+  },
+  "after": {
+    "iris_L": [
+      317.0461544256944,
+      443.2077589768631
+    ],
+    "iris_R": [
+      530.9538455743057,
+      441.26792086087755
+    ],
+    "mouth_center": [
+      424.0,
+      678.4761845515326
+    ],
+    "nose_tip": [
+      424.0,
+      579.3010336068961
+    ]
+  },
+  "before_mean_error_px": 23.9702432730533,
+  "after_mean_error_px": 2.7332814994126946
+}

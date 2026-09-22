@@ -1,0 +1,9 @@
+17:38:55 | INFO: Data are loaded, start creating Blender stuff
+17:38:55 | INFO: Blender create Mesh node char1
+17:38:56 | INFO: Blender create Mesh node Godwyn_Sword.001
+17:38:56 | INFO: glTF import finished in 1.26s
+Info: Saved as "astra_xslash_wip.blend"
+ASTRA BUILD {"fps": 30, "frames": 61, "duration_seconds": 2.033333333333333, "max_hips_yaw_deg_s": 86.66666666666664, "blade_length": 2.041911534378305, "max_wrist_reach_error": 1.1920928955078125e-07}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

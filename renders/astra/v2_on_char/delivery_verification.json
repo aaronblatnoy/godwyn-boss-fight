@@ -1,0 +1,20 @@
+{
+  "pose_pngs": 3,
+  "pose_png_size": [
+    640,
+    640
+  ],
+  "evaluation_stills": 16,
+  "contact_frames": 52,
+  "diagnostic_paths": 2,
+  "video_frames": 90,
+  "video_codec": "h264",
+  "video_pixel_format": "yuv420p",
+  "video_duration_seconds": 3.0,
+  "video_decodes_without_errors": true,
+  "baseline_files_checked": 200,
+  "changed_inputs_since_task_start": [
+    "models/astra_character_v2.blend"
+  ],
+  "original_motion_outputs_preserved": true
+}

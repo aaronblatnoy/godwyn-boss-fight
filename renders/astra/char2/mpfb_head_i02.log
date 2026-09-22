@@ -1,0 +1,15 @@
+00:04.344  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_head_i02_clay_front.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+Info: Saved as "astra_character_mpfb_head_i02.blend"
+MPFB_RENDER mpfb_head_i02_clay front
+00:07.095  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_head_i02_clay_side.png'
+MPFB_RENDER mpfb_head_i02_clay side
+00:09.985  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_head_i02_clay_three_quarter.png'
+MPFB_RENDER mpfb_head_i02_clay three_quarter
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+OBJ import of 'base.obj' took 13.07 ms
+
+Blender quit

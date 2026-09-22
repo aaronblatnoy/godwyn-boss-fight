@@ -1,0 +1,70 @@
+{
+  "quaternion_antipode_test": true,
+  "known_10_degree_rotation_test": true,
+  "right_angle_test": true,
+  "blender_capture_runtime_test": "BLOCKED before Python; syntax-only validation",
+  "source_hashes": {
+    "xslash": {
+      "before": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c",
+      "after": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c",
+      "unchanged": true
+    },
+    "idle_guard": {
+      "before": "500571b5e8f587f19aa7ac07a010593acea47569cecf74d521e89fde2576da98",
+      "after": "500571b5e8f587f19aa7ac07a010593acea47569cecf74d521e89fde2576da98",
+      "unchanged": true
+    },
+    "lunge_thrust": {
+      "before": "5644b867b5eafa282eb47a94ff893ac0ed57009ee9299624b3e2883b89b0be9f",
+      "after": "5644b867b5eafa282eb47a94ff893ac0ed57009ee9299624b3e2883b89b0be9f",
+      "unchanged": true
+    },
+    "walk_stalk": {
+      "before": "39b5f8825121bc5dec1415c92fb27beec072efcbf812649b96f7a20dce7a2dcf",
+      "after": "39b5f8825121bc5dec1415c92fb27beec072efcbf812649b96f7a20dce7a2dcf",
+      "unchanged": true
+    }
+  },
+  "syntax_checked": [
+    "scripts/astra_armaudit_analyze.py",
+    "scripts/astra_armaudit_capture.py",
+    "scripts/astra_armaudit_inspect.py",
+    "scripts/astra_armaudit_package.py",
+    "scripts/astra_armaudit_report.py"
+  ],
+  "prior_integer_sentinel_reproduction": {
+    "elbow_max_deg": 147.92103831556304,
+    "wrist_max_deg": 70.53885222326495,
+    "passed": true
+  },
+  "wrist_axis_sensitivity_f47_25": [
+    {
+      "axis_roll_offset_deg": -15,
+      "deviation_deg": -58.407216530891716
+    },
+    {
+      "axis_roll_offset_deg": -10,
+      "deviation_deg": -54.76823047503337
+    },
+    {
+      "axis_roll_offset_deg": -5,
+      "deviation_deg": -50.86316993715841
+    },
+    {
+      "axis_roll_offset_deg": 0,
+      "deviation_deg": -46.76526078837113
+    },
+    {
+      "axis_roll_offset_deg": 5,
+      "deviation_deg": -42.525736155840285
+    },
+    {
+      "axis_roll_offset_deg": 10,
+      "deviation_deg": -38.18079929616331
+    },
+    {
+      "axis_roll_offset_deg": 15,
+      "deviation_deg": -33.75647877583453
+    }
+  ]
+}

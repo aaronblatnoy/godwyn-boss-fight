@@ -1,0 +1,27 @@
+{
+  "blend_sha256": "acb7d7b729f06e466313703e944ff4873bf871e06b40ab6b8c420ae92a935f45",
+  "matching_fresh_metric_hashes": true,
+  "idempotent_curve_replay": true,
+  "upper_arm_full_local_peak": {
+    "frame": 40.75,
+    "speed": 11.623395138356123
+  },
+  "whole_clip_world_peak_frames": [
+    40.75,
+    41.25,
+    41.75
+  ],
+  "unmodified_f64_and_active_pose": true,
+  "integer_recovery_blade_collisions": 0,
+  "visual_inspection": [
+    "lunge_thrust_contact_sheet.png",
+    "lunge_thrust/decoded_01.png",
+    "lunge_thrust_l01_grip_sheet.png",
+    "lunge_thrust_l01_clearance_sheet.png"
+  ],
+  "deliverables": {
+    "lunge_thrust.mp4": "5f5b2c6a5b0502eb6c1890475e3673d935369f2b1f13ce58b59cd4c2baece020",
+    "lunge_thrust_contact_sheet.png": "0c48aa4aaf367feaad6372c1af438a0c30bd11cbce0b5282935843210a60787c",
+    "physics_audit.md": "1836ced86cd7b63902ee6ea72a790c7125058a513956c7a5d3aece4b5b06ed24"
+  }
+}

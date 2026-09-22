@@ -1,0 +1,7 @@
+00:00.639  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+SURFACE after floor -0.014999999664723873 counts {'LeftFoot': 1123, 'RightFoot': 1256, 'cloth': 83753}
+FOOT RANGE {'LeftFoot': (0.0010092994198203087, 0.0036208899691700935), 'RightFoot': (0.0013863779604434967, 0.0023763421922922134)}
+CLOTH SWORD []
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

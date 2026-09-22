@@ -1,0 +1,258 @@
+00:01.262  cycles           | Added device "Apple M1 Pro (GPU - 14 cores)" with id "METAL_Apple M1 Pro (GPU - 14 cores)".
+00:01.262  cycles           | Device with id "METAL_Apple M1 Pro (GPU - 14 cores)" supports OpenImageDenoise.
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+00:03.683  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+CINE_INPUTS {"animation_path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend", "animation_sha256": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c", "character_path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend", "character_sha256": "102b7d4a49d9de21f8772b9216b846baa0f10c4f6a095206518d9d87fd1334c7", "assembly": "in-memory fresh character objects on unchanged compatible animation rig", "character_objects": ["AstraChar2_Cornea_L", "AstraChar2_Cornea_R", "AstraChar2_Eyeball_L", "AstraChar2_Eyeball_R", "AstraChar2_Eyebrows_L", "AstraChar2_Eyebrows_R", "AstraChar2_Iris_L", "AstraChar2_Iris_R", "AstraChar2_Lashes_L", "AstraChar2_Lashes_R", "AstraChar2_Nostril_L", "AstraChar2_Nostril_R", "AstraChar2_Pupil_L", "AstraChar2_Pupil_R", "AstraChar2_TearCorner_L", "AstraChar2_TearCorner_R", "AstraChar2_Wetline_L", "AstraChar2_Wetline_R", "Astra_Undersleeves", "Godwyn_Sword", "char1"], "rest_transform_max_error": 0.0, "animation_action_sha256": "3225b9f4afcdfcb4cb9be51343b53cb0e4b5b1fa6b08dbc636c368bbaf4409d3", "source_files_saved": false}
+CINE_BLUE_OVERRIDE [{"material": "Astra Round2 royal blue and continuous gold trim.001", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves.001", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}]
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+CINE_BLADE_LIGHT [-1.1108533143997192, 1.5234804153442383, 2.5002920627593994] plane_normal [-0.6898646354675293, -0.12025396525859833, -0.7138807773590088]
+CINE_GPU_PROOF {"blue_override": [{"material": "Astra Round2 royal blue and continuous gold trim.001", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves.001", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}], "bound_backend": "METAL", "requested_device": "METAL", "engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [1920, 1080], "samples_max": 512, "adaptive_threshold": 0.01, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 7.9491082978121055, "camera_push_percent": 4, "camera_lens": 42, "camera_height_m": 0.6608563332119957, "camera_aim_height_m": 1.5047948360443115, "body_reference_frame": 40, "body_reference_height_fraction": 0.85999995470047, "horizontal_shift": -0.02, "camera_upward_angle_degrees": 6.060259300410478, "fill_multiplier": 0.6, "rake_multiplier": 0.6, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+CINE_BLUE_OVERRIDE [{"material": "Astra Round2 royal blue and continuous gold trim.001", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves.001", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}]
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+CINE_BLADE_LIGHT [-1.1108533143997192, 1.5234804153442383, 2.5002920627593994] plane_normal [-0.6898646354675293, -0.12025396525859833, -0.7138807773590088]
+CINE_GPU_PROOF {"blue_override": [{"material": "Astra Round2 royal blue and continuous gold trim.001", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves.001", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}], "bound_backend": "METAL", "requested_device": "METAL", "engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [1920, 1080], "samples_max": 512, "adaptive_threshold": 0.01, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 7.9491082978121055, "camera_push_percent": 4, "camera_lens": 42, "camera_height_m": 0.6608563332119957, "camera_aim_height_m": 1.5047948360443115, "body_reference_frame": 40, "body_reference_height_fraction": 0.85999995470047, "horizontal_shift": -0.02, "camera_upward_angle_degrees": 6.060259300410478, "fill_multiplier": 0.6, "rake_multiplier": 0.6, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+CINE IDEMPOTENCE PASS: second application identical; no duplicate objects
+00:13.039  cycles           | Using default CPU kernels.
+00:13.408  cycles           | Total time spent synchronizing data: 0.32991
+00:14.567  cycles           | Effective scene passes:
+00:14.567  cycles           | - type: combined, name: "Combined", mode: DENOISED, is_written: True
+00:14.567  cycles           | - type: combined, name: "Noisy Image", mode: NOISY, is_written: True
+00:14.567  cycles           | - type: adaptive_aux_buffer, name: "", mode: NOISY, is_written: True
+00:14.567  cycles           | - type: denoising_albedo, name: "", mode: NOISY, is_written: True
+00:14.567  cycles           | - type: denoising_normal, name: "", mode: NOISY, is_written: True
+00:14.567  cycles           | - type: sample_count, name: "", mode: NOISY, is_written: True
+00:14.567  cycles           | Requested features:
+00:14.567  cycles           | Use BSDF True
+00:14.567  cycles           | Use Emission True
+00:14.567  cycles           | Use Volume False
+00:14.567  cycles           | Use Bump False
+00:14.567  cycles           | Use Voronoi False
+00:14.567  cycles           | Use Shader Raytrace False
+00:14.567  cycles           | Use MNEE False
+00:14.567  cycles           | Use Transparent True
+00:14.567  cycles           | Use Denoising True
+00:14.567  cycles           | Use Path Tracing True
+00:14.567  cycles           | Use Hair False
+00:14.567  cycles           | Use Pointclouds False
+00:14.567  cycles           | Use Object Motion True
+00:14.567  cycles           | Use Baking False
+00:14.567  cycles           | Use Subsurface True
+00:14.567  cycles           | Use Volume False
+00:14.567  cycles           | Use Shadow Catcher False
+00:14.567  cycles           | Use Portal Node False
+00:14.642  cycles           | Total 28 shaders.
+00:14.644  cycles           | Shader manager updated 28 shaders in 0.00186983 seconds.
+00:14.645  cycles           | Total 30 objects.
+00:14.645  cycles           | Total 0 particle systems.
+00:14.645  cycles           | Total 30 meshes.
+00:15.085  cycles           | Using BVH2 layout.
+00:15.588  cycles           | Total 11 lookup tables.
+00:15.588  cycles           | Total 7 lights.
+00:15.588  cycles           | Background MIS has been disabled.
+00:15.588  cycles           | Number of lights sent to the device: 6
+00:15.732  cycles           | Use light tree with 144510 emitters and 289017 nodes.
+00:15.757  cycles           | Specialized light tree for light linking, with 4 additional nodes.
+00:15.788  cycles           | Total 12 lookup tables.
+00:15.798  cycles           | System memory statistics after full device sync:
+                            |   Usage: 932,565,517 (889.36M)
+                            |   Peak: 1,084,154,497 (1.01G)
+00:16.622  cycles           | Rendered 1 samples in 0.77959 seconds (0.77959 seconds per sample), occupancy: 0.00929206
+00:16.624  cycles           | Total 12 lookup tables.
+00:16.641  cycles           | System memory statistics after full device sync:
+                            |   Usage: 932,568,381 (889.37M)
+                            |   Peak: 1,084,154,497 (1.01G)
+00:17.303  cycles           | Rendered 47 samples in 0.660984 seconds (0.0140635 seconds per sample), occupancy: 0.225745
+00:17.353  cycles           | Rendered 16 samples in 0.046163 seconds (0.00288518 seconds per sample), occupancy: 0.000802196
+00:17.374  cycles           | Rendered 16 samples in 0.0186785 seconds (0.00116741 seconds per sample), occupancy: 0.000417157
+00:17.390  cycles           | Rendered 16 samples in 0.0136383 seconds (0.000852391 seconds per sample), occupancy: 0.000295371
+00:17.407  cycles           | Rendered 16 samples in 0.0148602 seconds (0.00092876 seconds per sample), occupancy: 0.000176946
+00:17.425  cycles           | Rendered 16 samples in 0.0154519 seconds (0.000965742 seconds per sample), occupancy: 0.000188634
+00:17.596  cycles           | Rendered 1 samples in 0.109156 seconds (0.109156 seconds per sample), occupancy: 0.00695195
+00:19.914  cycles           | Rendered 47 samples in 2.31731 seconds (0.0493045 seconds per sample), occupancy: 0.171604
+00:20.598  cycles           | Rendered 16 samples in 0.681746 seconds (0.0426091 seconds per sample), occupancy: 0.0499152
+00:21.250  cycles           | Rendered 16 samples in 0.650059 seconds (0.0406287 seconds per sample), occupancy: 0.0484845
+00:21.887  cycles           | Rendered 16 samples in 0.634198 seconds (0.0396374 seconds per sample), occupancy: 0.0409113
+00:22.494  cycles           | Rendered 16 samples in 0.605991 seconds (0.0378744 seconds per sample), occupancy: 0.0465175
+00:23.192  cycles           | Rendered 16 samples in 0.609259 seconds (0.0380787 seconds per sample), occupancy: 0.0438467
+00:23.782  cycles           | Rendered 16 samples in 0.587877 seconds (0.0367423 seconds per sample), occupancy: 0.0425422
+00:24.355  cycles           | Rendered 16 samples in 0.571591 seconds (0.0357244 seconds per sample), occupancy: 0.0413378
+00:24.917  cycles           | Rendered 16 samples in 0.55955 seconds (0.0349719 seconds per sample), occupancy: 0.0439118
+00:25.468  cycles           | Rendered 16 samples in 0.550158 seconds (0.0343849 seconds per sample), occupancy: 0.0393942
+00:26.010  cycles           | Rendered 16 samples in 0.539598 seconds (0.0337249 seconds per sample), occupancy: 0.0372074
+00:26.551  cycles           | Rendered 16 samples in 0.53812 seconds (0.0336325 seconds per sample), occupancy: 0.0415989
+00:27.078  cycles           | Rendered 16 samples in 0.524295 seconds (0.0327684 seconds per sample), occupancy: 0.0429021
+00:27.593  cycles           | Rendered 16 samples in 0.510471 seconds (0.0319044 seconds per sample), occupancy: 0.0389886
+00:28.079  cycles           | Rendered 16 samples in 0.483752 seconds (0.0302345 seconds per sample), occupancy: 0.0436931
+00:28.558  cycles           | Rendered 16 samples in 0.477457 seconds (0.029841 seconds per sample), occupancy: 0.0392316
+00:29.035  cycles           | Rendered 16 samples in 0.475036 seconds (0.0296898 seconds per sample), occupancy: 0.0390866
+00:29.522  cycles           | Rendered 16 samples in 0.484895 seconds (0.030306 seconds per sample), occupancy: 0.0367497
+00:30.110  cycles           | Rendered 16 samples in 0.585814 seconds (0.0366134 seconds per sample), occupancy: 0.0358656
+00:30.594  cycles           | Rendered 16 samples in 0.48046 seconds (0.0300287 seconds per sample), occupancy: 0.0406934
+00:31.160  cycles           | Rendered 16 samples in 0.557503 seconds (0.0348439 seconds per sample), occupancy: 0.0381084
+00:31.717  cycles           | Rendered 16 samples in 0.541793 seconds (0.0338621 seconds per sample), occupancy: 0.0336697
+00:32.245  cycles           | Rendered 16 samples in 0.52438 seconds (0.0327738 seconds per sample), occupancy: 0.0347864
+00:32.679  cycles           | Rendered 16 samples in 0.42341 seconds (0.0264631 seconds per sample), occupancy: 0.0348729
+00:33.097  cycles           | Rendered 16 samples in 0.412471 seconds (0.0257794 seconds per sample), occupancy: 0.0309708
+00:33.515  cycles           | Rendered 16 samples in 0.412964 seconds (0.0258102 seconds per sample), occupancy: 0.0317245
+00:33.907  cycles           | Rendered 16 samples in 0.389339 seconds (0.0243337 seconds per sample), occupancy: 0.0331055
+00:34.295  cycles           | Rendered 16 samples in 0.386412 seconds (0.0241508 seconds per sample), occupancy: 0.0264588
+00:34.665  cycles           | Rendered 16 samples in 0.368068 seconds (0.0230042 seconds per sample), occupancy: 0.0320071
+00:35.035  cycles           | Rendered 16 samples in 0.367591 seconds (0.0229744 seconds per sample), occupancy: 0.0284945
+00:35.188  cycles           | Rendered 1 samples in 0.0999508 seconds (0.0999508 seconds per sample), occupancy: 0.00580746
+00:37.403  cycles           | Rendered 47 samples in 2.21441 seconds (0.0471152 seconds per sample), occupancy: 0.16678
+00:38.032  cycles           | Rendered 16 samples in 0.625822 seconds (0.0391139 seconds per sample), occupancy: 0.0348317
+00:38.630  cycles           | Rendered 16 samples in 0.586226 seconds (0.0366391 seconds per sample), occupancy: 0.036452
+00:39.201  cycles           | Rendered 16 samples in 0.567678 seconds (0.0354799 seconds per sample), occupancy: 0.0364065
+00:39.778  cycles           | Rendered 16 samples in 0.57321 seconds (0.0358256 seconds per sample), occupancy: 0.0343695
+00:40.327  cycles           | Rendered 16 samples in 0.546086 seconds (0.0341304 seconds per sample), occupancy: 0.037945
+00:40.868  cycles           | Rendered 16 samples in 0.538633 seconds (0.0336646 seconds per sample), occupancy: 0.0380021
+00:41.419  cycles           | Rendered 16 samples in 0.547882 seconds (0.0342426 seconds per sample), occupancy: 0.0326607
+00:41.960  cycles           | Rendered 16 samples in 0.537783 seconds (0.0336114 seconds per sample), occupancy: 0.0364661
+00:42.494  cycles           | Rendered 16 samples in 0.532163 seconds (0.0332602 seconds per sample), occupancy: 0.0374266
+00:43.020  cycles           | Rendered 16 samples in 0.523785 seconds (0.0327366 seconds per sample), occupancy: 0.03446
+00:43.543  cycles           | Rendered 16 samples in 0.521933 seconds (0.0326208 seconds per sample), occupancy: 0.0364793
+00:44.071  cycles           | Rendered 16 samples in 0.52574 seconds (0.0328588 seconds per sample), occupancy: 0.0347003
+00:44.583  cycles           | Rendered 16 samples in 0.510108 seconds (0.0318817 seconds per sample), occupancy: 0.0309074
+00:45.097  cycles           | Rendered 16 samples in 0.51141 seconds (0.0319631 seconds per sample), occupancy: 0.0339332
+00:45.606  cycles           | Rendered 16 samples in 0.507776 seconds (0.031736 seconds per sample), occupancy: 0.0354803
+00:46.106  cycles           | Rendered 16 samples in 0.496872 seconds (0.0310545 seconds per sample), occupancy: 0.0298778
+00:46.598  cycles           | Rendered 16 samples in 0.490463 seconds (0.0306539 seconds per sample), occupancy: 0.0315854
+00:47.089  cycles           | Rendered 16 samples in 0.488504 seconds (0.0305315 seconds per sample), occupancy: 0.0317706
+00:47.571  cycles           | Rendered 16 samples in 0.479446 seconds (0.0299654 seconds per sample), occupancy: 0.0319222
+00:48.056  cycles           | Rendered 16 samples in 0.482892 seconds (0.0301807 seconds per sample), occupancy: 0.0314261
+00:48.530  cycles           | Rendered 16 samples in 0.471902 seconds (0.0294939 seconds per sample), occupancy: 0.0316424
+00:49.018  cycles           | Rendered 16 samples in 0.48546 seconds (0.0303412 seconds per sample), occupancy: 0.0331215
+00:49.491  cycles           | Rendered 16 samples in 0.470897 seconds (0.029431 seconds per sample), occupancy: 0.030845
+00:49.956  cycles           | Rendered 16 samples in 0.458735 seconds (0.0286709 seconds per sample), occupancy: 0.0311137
+00:50.416  cycles           | Rendered 16 samples in 0.459096 seconds (0.0286935 seconds per sample), occupancy: 0.0301982
+00:50.876  cycles           | Rendered 16 samples in 0.456786 seconds (0.0285491 seconds per sample), occupancy: 0.0282367
+00:51.332  cycles           | Rendered 16 samples in 0.45411 seconds (0.0283819 seconds per sample), occupancy: 0.0264251
+00:51.846  cycles           | Rendered 16 samples in 0.512692 seconds (0.0320432 seconds per sample), occupancy: 0.0268586
+00:52.342  cycles           | Rendered 16 samples in 0.487594 seconds (0.0304746 seconds per sample), occupancy: 0.0248249
+00:52.472  cycles           | Rendered 1 samples in 0.0573002 seconds (0.0573002 seconds per sample), occupancy: 0.00614473
+00:53.450  cycles           | Rendered 47 samples in 0.97873 seconds (0.0208241 seconds per sample), occupancy: 0.131233
+00:53.493  cycles           | Rendered 16 samples in 0.0410111 seconds (0.00256319 seconds per sample), occupancy: 0.00144231
+00:53.529  cycles           | Rendered 16 samples in 0.0341197 seconds (0.00213248 seconds per sample), occupancy: 0.00104764
+00:53.560  cycles           | Rendered 16 samples in 0.0301995 seconds (0.00188747 seconds per sample), occupancy: 0.000745664
+00:53.586  cycles           | Rendered 16 samples in 0.024409 seconds (0.00152557 seconds per sample), occupancy: 0.000517856
+00:53.611  cycles           | Rendered 16 samples in 0.0235335 seconds (0.00147085 seconds per sample), occupancy: 0.000322323
+00:53.636  cycles           | Rendered 16 samples in 0.0238512 seconds (0.0014907 seconds per sample), occupancy: 0.000229685
+00:53.691  cycles           | Rendered 1 samples in 0.00487596 seconds (0.00487596 seconds per sample), occupancy: 0.0319862
+00:53.860  cycles           | Rendered 47 samples in 0.167818 seconds (0.0035706 seconds per sample), occupancy: 0.375838
+00:54.021  cycles           | Rendered 1 samples in 0.139438 seconds (0.139438 seconds per sample), occupancy: 0.00351284
+00:56.733  cycles           | Rendered 47 samples in 2.71105 seconds (0.0576819 seconds per sample), occupancy: 0.112119
+00:57.719  cycles           | Rendered 16 samples in 0.982168 seconds (0.0613855 seconds per sample), occupancy: 0.0307993
+00:58.705  cycles           | Rendered 16 samples in 0.979488 seconds (0.061218 seconds per sample), occupancy: 0.0284823
+00:59.677  cycles           | Rendered 16 samples in 0.967597 seconds (0.0604748 seconds per sample), occupancy: 0.0300008
+01:00.657  cycles           | Rendered 16 samples in 0.97507 seconds (0.0609419 seconds per sample), occupancy: 0.0291947
+01:01.625  cycles           | Rendered 16 samples in 0.964429 seconds (0.0602768 seconds per sample), occupancy: 0.0288048
+01:02.577  cycles           | Rendered 16 samples in 0.950148 seconds (0.0593843 seconds per sample), occupancy: 0.0290997
+01:03.527  cycles           | Rendered 16 samples in 0.948369 seconds (0.059273 seconds per sample), occupancy: 0.0293704
+01:04.476  cycles           | Rendered 16 samples in 0.942888 seconds (0.0589305 seconds per sample), occupancy: 0.0308035
+01:05.418  cycles           | Rendered 16 samples in 0.940812 seconds (0.0588008 seconds per sample), occupancy: 0.0294604
+01:06.364  cycles           | Rendered 16 samples in 0.944124 seconds (0.0590077 seconds per sample), occupancy: 0.0324819
+01:07.304  cycles           | Rendered 16 samples in 0.938284 seconds (0.0586427 seconds per sample), occupancy: 0.0327383
+01:08.237  cycles           | Rendered 16 samples in 0.930791 seconds (0.0581744 seconds per sample), occupancy: 0.0330249
+01:09.225  cycles           | Rendered 16 samples in 0.986641 seconds (0.061665 seconds per sample), occupancy: 0.0343595
+01:10.182  cycles           | Rendered 16 samples in 0.947762 seconds (0.0592351 seconds per sample), occupancy: 0.0322509
+01:11.197  cycles           | Rendered 16 samples in 1.00289 seconds (0.0626808 seconds per sample), occupancy: 0.0308563
+01:12.626  cycles           | Rendered 16 samples in 1.39009 seconds (0.0868808 seconds per sample), occupancy: 0.0340399
+01:14.069  cycles           | Rendered 16 samples in 1.42266 seconds (0.0889164 seconds per sample), occupancy: 0.0311109
+01:15.919  cycles           | Rendered 16 samples in 1.84487 seconds (0.115304 seconds per sample), occupancy: 0.031797
+01:17.589  cycles           | Rendered 16 samples in 1.65806 seconds (0.103628 seconds per sample), occupancy: 0.0290198
+01:19.456  cycles           | Rendered 16 samples in 1.86063 seconds (0.116289 seconds per sample), occupancy: 0.0284633
+01:21.216  cycles           | Rendered 16 samples in 1.74947 seconds (0.109342 seconds per sample), occupancy: 0.0274333
+01:23.347  cycles           | Rendered 16 samples in 2.12103 seconds (0.132564 seconds per sample), occupancy: 0.0270649
+01:25.311  cycles           | Rendered 16 samples in 1.95064 seconds (0.121915 seconds per sample), occupancy: 0.0297827
+01:26.828  cycles           | Rendered 16 samples in 1.50986 seconds (0.094366 seconds per sample), occupancy: 0.0295558
+01:29.030  cycles           | Rendered 16 samples in 2.19364 seconds (0.137103 seconds per sample), occupancy: 0.0273632
+01:31.987  cycles           | Rendered 16 samples in 2.93375 seconds (0.183359 seconds per sample), occupancy: 0.0283785
+01:34.720  cycles           | Rendered 16 samples in 2.64095 seconds (0.16506 seconds per sample), occupancy: 0.0293985
+01:37.987  cycles           | Rendered 16 samples in 2.29481 seconds (0.143426 seconds per sample), occupancy: 0.0269085
+01:40.151  cycles           | Rendered 16 samples in 2.10862 seconds (0.131789 seconds per sample), occupancy: 0.0289929
+01:42.652  cycles           | Rendered 1 samples in 0.462209 seconds (0.462209 seconds per sample), occupancy: 0.00260789
+01:48.185  cycles           | Rendered 47 samples in 5.51027 seconds (0.11724 seconds per sample), occupancy: 0.0874535
+01:49.830  cycles           | Rendered 16 samples in 1.53254 seconds (0.0957837 seconds per sample), occupancy: 0.0266211
+01:51.618  cycles           | Rendered 16 samples in 1.7623 seconds (0.110144 seconds per sample), occupancy: 0.025371
+01:53.330  cycles           | Rendered 16 samples in 1.5137 seconds (0.0946062 seconds per sample), occupancy: 0.0225136
+01:54.301  cycles           | Rendered 16 samples in 0.853316 seconds (0.0533323 seconds per sample), occupancy: 0.0228163
+01:55.018  cycles           | Rendered 16 samples in 0.7078 seconds (0.0442375 seconds per sample), occupancy: 0.023442
+01:55.795  cycles           | Rendered 16 samples in 0.766549 seconds (0.0479093 seconds per sample), occupancy: 0.0237342
+01:56.551  cycles           | Rendered 16 samples in 0.746174 seconds (0.0466359 seconds per sample), occupancy: 0.0247801
+01:57.325  cycles           | Rendered 16 samples in 0.753529 seconds (0.0470956 seconds per sample), occupancy: 0.0228244
+01:58.179  cycles           | Rendered 16 samples in 0.783678 seconds (0.0489799 seconds per sample), occupancy: 0.0220488
+01:58.946  cycles           | Rendered 16 samples in 0.740496 seconds (0.046281 seconds per sample), occupancy: 0.0256514
+01:59.777  cycles           | Rendered 16 samples in 0.766424 seconds (0.0479015 seconds per sample), occupancy: 0.0246852
+02:00.531  cycles           | Rendered 16 samples in 0.737359 seconds (0.0460849 seconds per sample), occupancy: 0.0234388
+02:01.334  cycles           | Rendered 16 samples in 0.742355 seconds (0.0463972 seconds per sample), occupancy: 0.0222229
+02:02.042  cycles           | Rendered 16 samples in 0.696511 seconds (0.0435319 seconds per sample), occupancy: 0.0251756
+02:02.849  cycles           | Rendered 16 samples in 0.743015 seconds (0.0464385 seconds per sample), occupancy: 0.0234389
+02:03.588  cycles           | Rendered 16 samples in 0.713827 seconds (0.0446142 seconds per sample), occupancy: 0.0215852
+02:04.352  cycles           | Rendered 16 samples in 0.743135 seconds (0.0464459 seconds per sample), occupancy: 0.0225073
+02:05.072  cycles           | Rendered 16 samples in 0.698241 seconds (0.04364 seconds per sample), occupancy: 0.0216959
+02:05.803  cycles           | Rendered 16 samples in 0.698859 seconds (0.0436787 seconds per sample), occupancy: 0.0216279
+02:06.525  cycles           | Rendered 16 samples in 0.673089 seconds (0.0420681 seconds per sample), occupancy: 0.0221959
+02:07.223  cycles           | Rendered 16 samples in 0.686362 seconds (0.0428976 seconds per sample), occupancy: 0.020818
+02:07.970  cycles           | Rendered 16 samples in 0.664905 seconds (0.0415565 seconds per sample), occupancy: 0.022314
+02:08.655  cycles           | Rendered 16 samples in 0.683729 seconds (0.0427331 seconds per sample), occupancy: 0.020915
+02:09.321  cycles           | Rendered 16 samples in 0.663229 seconds (0.0414518 seconds per sample), occupancy: 0.0218279
+02:10.176  cycles           | Rendered 16 samples in 0.73966 seconds (0.0462288 seconds per sample), occupancy: 0.0214072
+02:10.897  cycles           | Rendered 16 samples in 0.703296 seconds (0.043956 seconds per sample), occupancy: 0.0203314
+02:11.642  cycles           | Rendered 16 samples in 0.674705 seconds (0.0421691 seconds per sample), occupancy: 0.0202453
+02:12.308  cycles           | Rendered 16 samples in 0.651169 seconds (0.040698 seconds per sample), occupancy: 0.0206957
+02:12.975  cycles           | Rendered 16 samples in 0.64415 seconds (0.0402594 seconds per sample), occupancy: 0.0215571
+02:14.456  cycles           | Rendered 1 samples in 0.136521 seconds (0.136521 seconds per sample), occupancy: 0.0240517
+02:14.607  cycles           | Rendered 47 samples in 0.150904 seconds (0.00321073 seconds per sample), occupancy: 0.376809
+02:14.831  cycles           | Rendered 1 samples in 0.00688383 seconds (0.00688383 seconds per sample), occupancy: 0.00369072
+02:14.871  cycles           | Rendered 47 samples in 0.0392267 seconds (0.000834612 seconds per sample), occupancy: 0.173464
+02:15.030  cycles           | Rendered 1 samples in 0.00447167 seconds (0.00447167 seconds per sample), occupancy: 0.00371933
+02:15.070  cycles           | Rendered 47 samples in 0.0300166 seconds (0.000638651 seconds per sample), occupancy: 0.174809
+02:15.199  cycles           | Rendered 1 samples in 0.00650658 seconds (0.00650658 seconds per sample), occupancy: 0.00371933
+02:15.236  cycles           | Rendered 47 samples in 0.0354915 seconds (0.000755138 seconds per sample), occupancy: 0.174809
+02:15.346  cycles           | Rendered 1 samples in 0.00878862 seconds (0.00878862 seconds per sample), occupancy: 0.00277519
+02:15.381  cycles           | Rendered 47 samples in 0.0355809 seconds (0.00075704 seconds per sample), occupancy: 0.130434
+02:15.473  cycles           | Rendering in main loop is done in 119.603 seconds.
+02:15.486  cycles           | Full path tracing report:
+                            | 
+                            | Path tracing on: Apple M1 Pro (GPU - 14 cores) (Metal) (display) [METAL_Apple M1 Pro (GPU - 14 cores)]
+                            |                      Hardware Ray-Tracing: Off
+                            | 
+                            | Denoising on: Apple M1 Pro (GPU - 14 cores) (Metal) (display) [METAL_Apple M1 Pro (GPU - 14 cores)]
+                            |                   Hardware Ray-Tracing: Off
+                            | 
+                            | Render Scheduler Summary
+                            | 
+                            | Mode: Headless
+                            | Resolution: 1920x1080
+                            | 
+                            | Adaptive sampling:
+                            |   Use: True
+                            |   Step: 16
+                            |   Min Samples: 32
+                            |   Threshold: 0.050000
+                            | 
+                            | Denoiser:
+                            |   Use: True
+                            |   Type: OpenImageDenoise
+                            |   Start Sample: 0
+                            |   Passes: Color, Albedo, Normal
+                            | 
+                            | Time (in seconds):
+                            |                                        Wall              Average
+                            |           Path Tracing             0.044516             0.000927
+                            |        Adaptive Filter             0.015128             0.000322
+                            |               Denoiser             0.000000             0.000000
+                            |         Display Update             0.000004             0.000004
+                            | 
+                            |   Total: 0.059648
+                            | 
+                            | Rendered 48 samples in 0.220019 seconds
+                            | 
+02:15.521  cycles           | Total render time: 122.448
+02:15.521  cycles           | Render time (without synchronization): 119.65
+03:39.939  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/blue_corrected/blue_verify_f041.png'
+CINE_HERO_FRAME {"frame": 41, "phase": "CUT 1", "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/blue_corrected/blue_verify_f041.png", "wall_seconds": 208.5791786671616, "camera_location": [2.1507067680358887, -7.673392295837402, 0.660856306552887], "camera_rotation": [1.6785328388214111, 3.0359226244058846e-09, 0.27925267815589905]}
+CINE_HERO_COMPLETE /Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/cine/blue_corrected/blue_verify_metrics.json; no input files saved
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

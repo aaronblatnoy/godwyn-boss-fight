@@ -1,0 +1,325 @@
+{
+  "quality_gate": "NOT_MET",
+  "technical_validation": "PASS",
+  "files": [
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend",
+      "bytes": 127578318,
+      "sha256": "102b7d4a49d9de21f8772b9216b846baa0f10c4f6a095206518d9d87fd1334c7"
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb",
+      "bytes": 124216260,
+      "sha256": "56f3484b1f6e990ba304cdc6f5531669b8c2584af7a587e55bf6e74151c8dde0"
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_char2_work.blend",
+      "bytes": 127578458,
+      "sha256": "c9606a8b6f343f915861eacef2f129f7bb9deea3853b430db15c419d108f317b"
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.blend",
+      "bytes": 100019340,
+      "sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e"
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.glb",
+      "bytes": 103669048,
+      "sha256": "be2ca4af7597a9af5e0629748f0c1c846f6f4be28e683a893e4d9cec079bf7f3"
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/REPORT.md",
+      "bytes": 8422
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face.png",
+      "bytes": 1094273
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face_three_quarter.png",
+      "bytes": 1083723
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_front.png",
+      "bytes": 1268478
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_after_face.png",
+      "bytes": 1599377
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_face.png",
+      "bytes": 1070763
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_front.png",
+      "bytes": 1270007
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_render.log",
+      "bytes": 525
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build.log",
+      "bytes": 497
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build2.log",
+      "bytes": 499
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build3.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build4.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build5.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build6.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build7.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/build8.log",
+      "bytes": 662
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/delivery.log",
+      "bytes": 5690
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/diagnostic.log",
+      "bytes": 2187
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft2_face.png",
+      "bytes": 1089063
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft3_face.png",
+      "bytes": 1079038
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft3_face_three_quarter.png",
+      "bytes": 1072965
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft4_face.png",
+      "bytes": 1098596
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft4_face_three_quarter.png",
+      "bytes": 1090410
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft5_face.png",
+      "bytes": 1096443
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft5_face_three_quarter.png",
+      "bytes": 1086740
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft6_face.png",
+      "bytes": 1095287
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft6_face_three_quarter.png",
+      "bytes": 1085642
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft7_face.png",
+      "bytes": 1095262
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft7_face_three_quarter.png",
+      "bytes": 1084486
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft8_face.png",
+      "bytes": 1094309
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft8_face_three_quarter.png",
+      "bytes": 1083649
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/draft_face.png",
+      "bytes": 1086948
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/export_final.log",
+      "bytes": 4984
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/exported_gltf.json",
+      "bytes": 118819
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/finalize.log",
+      "bytes": 277
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/glb_check.log",
+      "bytes": 1850
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/glb_check_face.png",
+      "bytes": 1090225
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/head_samples.json",
+      "bytes": 931822
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/idempotence.json",
+      "bytes": 4016
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/idempotence.log",
+      "bytes": 3516
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/idempotence_differences.json",
+      "bytes": 5190
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/iris_hazel_768.png",
+      "bytes": 115738
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/normal_diagnostic_face.png",
+      "bytes": 1089526
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/recon.json",
+      "bytes": 178323
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/recon.log",
+      "bytes": 179974
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/skin_basecolor_1536.png",
+      "bytes": 1599386
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/skin_emission_1536.png",
+      "bytes": 66696
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/skin_normal_1536.png",
+      "bytes": 3629603
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/skin_orm_1536.png",
+      "bytes": 2167939
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/surface.log",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/surface_samples.json",
+      "bytes": 584273
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/three_quarter_iterations.png",
+      "bytes": 719446
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/uv_recon.log",
+      "bytes": 697
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/validation.json",
+      "bytes": 3647
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/validation.log",
+      "bytes": 1377
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/written_paths.txt",
+      "bytes": 5973
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_audit.py",
+      "bytes": 3856
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_build.py",
+      "bytes": 844
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_check.py",
+      "bytes": 294
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_deliver.py",
+      "bytes": 3068
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_diagnose.py",
+      "bytes": 1187
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_face.py",
+      "bytes": 14991
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_finalize.py",
+      "bytes": 2276
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_glb_check.py",
+      "bytes": 1067
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_idempotence.py",
+      "bytes": 2188
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_recon.py",
+      "bytes": 3086
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_render.py",
+      "bytes": 1567
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_sample_surface.py",
+      "bytes": 1071
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_skin.py",
+      "bytes": 7226
+    },
+    {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_uv_recon.py",
+      "bytes": 1832
+    },
+    {
+      "path": "/tmp/astra_char2_body_refs.png",
+      "bytes": 1311685
+    },
+    {
+      "path": "/tmp/astra_char2_sample.txt",
+      "bytes": 135656
+    }
+  ],
+  "transient_written_paths": [
+    "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_char2_export.glb"
+  ],
+  "no_git_network_or_install_commands": true,
+  "local_renderer": "Cycles METAL Apple M1 Pro, 32 samples",
+  "review": "REPORT.md"
+}

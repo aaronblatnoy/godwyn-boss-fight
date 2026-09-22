@@ -1,0 +1,4 @@
+00:00.903  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_round2_input.blend"
+00:06.476  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_round2_work.blend"
+ROUND2 VALIDATION {"original_object_names_preserved": true, "original_material_slots_preserved": true, "bone_rest_and_names_preserved": true, "vertex_groups_preserved": true, "cloth_vertex_max_change_m": 0.0, "body_below_2_78_max_change_m": 0.0, "cloth_weights_exactly_preserved": true, "actions": 0, "all_added_meshes_head_weighted": true, "quality_gate": "NOT_MET: progress toward approved portrait, still visibly synthetic; see ROUND2_REPORT.md", "new_objects": ["AstraChar2_R2_HairFibers_0", "AstraChar2_R2_HairFibers_1", "AstraChar2_R2_HairFibers_2", "AstraChar2_R2_HairFibers_3", "AstraChar2_R2_HairRoots", "AstraChar2_R2_HairlineWisps"]}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)

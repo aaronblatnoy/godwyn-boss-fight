@@ -1,0 +1,6 @@
+00:01.455  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_on_char_wip.blend"
+00:03.270  blend            | Read blend: "/tmp/astra_xslash_v2_character_input.blend"
+FRESH_CHARACTER_POSES_PASS {"windup": {"frame": 30, "bones": 121, "max_matrix_error_on_fresh_character": 0.0}, "cross": {"frame": 41, "bones": 121, "max_matrix_error_on_fresh_character": 0.0}, "follow": {"frame": 60, "bones": 121, "max_matrix_error_on_fresh_character": 0.0}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

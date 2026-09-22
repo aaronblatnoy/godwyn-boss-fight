@@ -1,0 +1,18 @@
+00:00.577  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_preround4.blend"
+00:01.511  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+{'iteration': 0, 'error': 0.00147247314453125, 'bone': 'RightFoot'}
+{'iteration': 1, 'error': 0.0014801025390625, 'bone': 'phys_cape_R_05'}
+{'iteration': 2, 'error': 0.00054931640625, 'bone': 'phys_cape_R_05'}
+{'iteration': 3, 'error': 0.00145721435546875, 'bone': 'phys_cape_R_04'}
+{'iteration': 4, 'error': 0.001220703125, 'bone': 'phys_cape_R_06'}
+{'iteration': 5, 'error': 0.000598907470703125, 'bone': 'RightToeBase'}
+{'iteration': 6, 'error': 0.0007171630859375, 'bone': 'phys_cape_R_03'}
+{'iteration': 7, 'error': 0.001422882080078125, 'bone': 'phys_cape_R_06'}
+{'iteration': 8, 'error': 0.0012054443359375, 'bone': 'phys_cape_R_06'}
+{'iteration': 9, 'error': 0.00090789794921875, 'bone': 'phys_cape_R_06'}
+{'iteration': 10, 'error': 0.001010894775390625, 'bone': 'phys_cape_R_06'}
+{'iteration': 11, 'error': 0.0006103515625, 'bone': 'phys_robe_front_R_06'}
+NO SAVE: tolerance not reached
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

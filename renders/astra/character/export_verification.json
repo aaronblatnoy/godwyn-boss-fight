@@ -1,0 +1,350 @@
+{
+  "source_sha256_unchanged": "bb258f2fa1f7c8466b295c87b4396e441487c06beab73420aed88b483dc7bc21",
+  "glb_bytes": 86107384,
+  "images": [
+    {
+      "name": "astra_character_Astra_Undersleeves_normal_2048",
+      "mimeType": "image/png",
+      "bufferView": 7,
+      "embedded_bytes": 4645678,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "8b05390903f690285273b79aa81cc0f24aaa214fc77af6efe72d8d1b78e9521b"
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_orm_2048",
+      "mimeType": "image/png",
+      "bufferView": 8,
+      "embedded_bytes": 3046467,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "5f95f130635cbc4cb36e0f908487c17160dcb6bfbd45c45e27e1d527ef93ccf4"
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_basecolor_2048",
+      "mimeType": "image/png",
+      "bufferView": 9,
+      "embedded_bytes": 2174019,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "8bdbea2654130458231ab13d299bbe966e408fa6d3beb7d3de72eec2db3535b9"
+    },
+    {
+      "name": "astra_character_char1_normal_4096",
+      "mimeType": "image/png",
+      "bufferView": 18,
+      "embedded_bytes": 16844662,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "0f3eb656c2fe07247d8be86e2ec059cf1319328e45de3a4befa885edd60e8914"
+    },
+    {
+      "name": "astra_character_char1_orm_4096",
+      "mimeType": "image/png",
+      "bufferView": 19,
+      "embedded_bytes": 17236249,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "d9307d578c3894cf5172da5130b465731bcb6d15d9be8a5597e0ed97666896fc"
+    },
+    {
+      "name": "astra_character_char1_basecolor_4096",
+      "mimeType": "image/png",
+      "bufferView": 20,
+      "embedded_bytes": 14051734,
+      "width": 4096,
+      "height": 4096,
+      "sha256": "489d8ee26b6305010ed08471fb6357efab93fe0854a2edd33dab39a79b4a5366"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_normal_2048",
+      "mimeType": "image/png",
+      "bufferView": 42,
+      "embedded_bytes": 940608,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "ed57ae7142de16b3696fff60a4752f2c247f14613219034798d9c3b526375d4f"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_orm_2048",
+      "mimeType": "image/png",
+      "bufferView": 43,
+      "embedded_bytes": 1345565,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "fdb9a5d31fc2922e4de7bdb90d8c43046effe3fd50700c175984d0642316f569"
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_basecolor_2048",
+      "mimeType": "image/png",
+      "bufferView": 44,
+      "embedded_bytes": 1040518,
+      "width": 2048,
+      "height": 2048,
+      "sha256": "caeb5aa600a0ce4690e0975ed29b782583dbb9aaf00230a2f6cf9baa9d353f5d"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_sheen": {
+          "sheenColorFactor": [
+            0.10000000149011612,
+            0.14000000059604645,
+            0.30000001192092896
+          ],
+          "sheenRoughnessFactor": 0.699999988079071
+        }
+      },
+      "name": "Astra woven inner sleeves",
+      "normalTexture": {
+        "index": 0
+      },
+      "occlusionTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Astra engraved royal gold final",
+      "normalTexture": {
+        "index": 3
+      },
+      "occlusionTexture": {
+        "index": 4
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 5
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_sheen": {
+          "sheenColorFactor": [
+            0.10000000149011612,
+            0.14000000059604645,
+            0.30000001192092896
+          ],
+          "sheenRoughnessFactor": 0.699999988079071
+        }
+      },
+      "name": "Astra midnight blue woven silk final",
+      "normalTexture": {
+        "index": 6
+      },
+      "occlusionTexture": {
+        "index": 7
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 8
+        },
+        "metallicRoughnessTexture": {
+          "index": 7
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "emissiveFactor": [
+        0.014000000432133675,
+        0.009099999947100867,
+        0.0021000001482665565
+      ],
+      "name": "Astra pale golden skin final",
+      "normalTexture": {
+        "index": 9
+      },
+      "occlusionTexture": {
+        "index": 10
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 11
+        },
+        "metallicRoughnessTexture": {
+          "index": 10
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Astra worn steel and gold hilt final",
+      "normalTexture": {
+        "index": 12
+      },
+      "occlusionTexture": {
+        "index": 13
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 14
+        },
+        "metallicRoughnessTexture": {
+          "index": 13
+        }
+      }
+    }
+  ],
+  "skins": 1,
+  "mesh_names": [
+    "Astra tailored inner sleeve surface",
+    "Astra repaired original surface.001",
+    "Godwyn_Sword.001"
+  ],
+  "texture_statistics": [
+    {
+      "name": "astra_character_char1_basecolor_4096",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "colorspace": "sRGB",
+      "rgb_std_on_nonblack": [
+        0.33813297748565674,
+        0.23986122012138367,
+        0.08473435789346695
+      ],
+      "nonblack_fraction": 0.6172108054161072
+    },
+    {
+      "name": "astra_character_char1_orm_4096",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.3672086298465729,
+        0.22025646269321442,
+        0.44049975275993347
+      ],
+      "nonblack_fraction": 0.6172252297401428
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_basecolor_2048.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "sRGB",
+      "rgb_std_on_nonblack": [
+        0.0971725657582283,
+        0.05790330097079277,
+        0.21411722898483276
+      ],
+      "nonblack_fraction": 0.3470945358276367
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_orm_2048.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.20028500258922577,
+        0.0450860820710659,
+        0.08349304646253586
+      ],
+      "nonblack_fraction": 0.34709835052490234
+    },
+    {
+      "name": "astra_character_char1_normal_4096",
+      "size": [
+        4096,
+        4096
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.019266391173005104,
+        0.02136971987783909,
+        0.0066817756742239
+      ],
+      "nonblack_fraction": 1.0
+    },
+    {
+      "name": "astra_character_Godwyn_Sword_normal_2048.001",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.026186473667621613,
+        0.017614934593439102,
+        0.07310889661312103
+      ],
+      "nonblack_fraction": 1.0
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_basecolor_2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "sRGB",
+      "rgb_std_on_nonblack": [
+        0.005200549494475126,
+        0.005583459977060556,
+        0.014023201540112495
+      ],
+      "nonblack_fraction": 0.8389720916748047
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_orm_2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.1272234320640564,
+        0.04061983525753021,
+        0.0
+      ],
+      "nonblack_fraction": 0.8389720916748047
+    },
+    {
+      "name": "astra_character_Astra_Undersleeves_normal_2048",
+      "size": [
+        2048,
+        2048
+      ],
+      "packed": true,
+      "colorspace": "Non-Color",
+      "rgb_std_on_nonblack": [
+        0.023093366995453835,
+        0.030124347656965256,
+        0.009788828901946545
+      ],
+      "nonblack_fraction": 1.0
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_sheen"
+  ]
+}

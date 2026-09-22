@@ -1,0 +1,14 @@
+00:01.033  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:23.813  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face.png'
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:33.882  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_gold.png'
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+00:43.633  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_cloth.png'
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+01:05.638  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face_three_quarter.png'
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+01:16.571  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_front.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

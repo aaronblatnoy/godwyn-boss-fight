@@ -1,0 +1,62 @@
+00:00.870  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_char2_work.blend"
+VALIDATED {"original_face_skin_triangles_above_2_78": 1632, "original_face_edge_median_m": 0.009823618708793128, "original_face_edge_p95_m": 0.02685337362844001, "original_topology": "Irregular triangulated combined body/head mesh, not facial animation edge loops. Local subdivision needed for anatomical detail; whole-character remesh would risk UVs and skinning.", "original_head_boundary_edges": 50, "new_char1_vertices": 253776, "new_char1_faces": 435498, "added_uv": "AstraChar2FaceUV, planar front face atlas; original UV retained/interpolated", "original_material_slots_preserved": true, "original_object_names_preserved": true, "armature_bones_rest_positions_preserved": true, "original_vertex_group_names_preserved": true, "body_original_vertex_max_change_local": 3.860982815240277e-06, "actions": 0, "all_bone_basis_identity": true, "new_meshes_head_weighted": true, "render": {"engine": "Cycles", "device": "local METAL Apple M1 Pro; no network", "samples": 32, "view_transform": "AgX", "exposure": -0.35}, "portable_limit": "GLB carries skin albedo/normal/roughness/emission and eye transmission; Cycles random-walk subsurface has no exact core glTF equivalent."}
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_deliver.py:19: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if m and m.use_nodes:
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+21:21:10 | INFO: Starting glTF 2.0 export
+21:21:10 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+21:21:10 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Cornea_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Cornea_R
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere.003
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Eyebrows_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Eyebrows_R
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Iris_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Iris_R
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Lashes_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Lashes_R
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere.002
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere.005
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Pupil_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Pupil_R
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere.001
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: Sphere.004
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Wetline_L
+21:21:10 | INFO: Primitives created: 1
+21:21:10 | INFO: Extracting primitive: AstraChar2_Wetline_R
+21:21:10 | INFO: Primitives created: 1
+21:21:11 | INFO: Extracting primitive: AstraChar2 refined char1
+21:21:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:13 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:14 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:15 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:16 | INFO: Primitives created: 5
+21:21:16 | INFO: Extracting primitive: Godwyn_Sword.001
+21:21:16 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+21:21:16 | INFO: Primitives created: 1
+21:21:16 | INFO: Finished glTF 2.0 export in 6.679101943969727 s
+
+Info: Saved as "astra_character_v2.blend"
+CHAR2 DELIVERED
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

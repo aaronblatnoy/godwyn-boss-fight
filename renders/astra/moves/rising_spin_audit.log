@@ -1,0 +1,231 @@
+00:01.516  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "support_summary": {
+    "outside_frames": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      42,
+      43,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      63,
+      64,
+      65,
+      67,
+      68,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      81,
+      82,
+      83,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92
+    ],
+    "airborne_frames": [],
+    "minimum_margin_m": -0.11712482862745052
+  },
+  "planted_ankle_max_planar_step_m": {
+    "Left": 5.438413498072225e-07,
+    "Right": 6.712340491553446e-06
+  },
+  "cascade": {
+    "Hips": {
+      "world_peak_frame": 40.0,
+      "local_peak_frame": 40.0
+    },
+    "Spine02": {
+      "world_peak_frame": 40.0,
+      "local_peak_frame": 30.0
+    },
+    "Spine01": {
+      "world_peak_frame": 40.0,
+      "local_peak_frame": 31.0
+    },
+    "Spine": {
+      "world_peak_frame": 33.5,
+      "local_peak_frame": 32.0
+    },
+    "RightShoulder": {
+      "world_peak_frame": 33.75,
+      "local_peak_frame": 33.75
+    },
+    "RightArm": {
+      "world_peak_frame": 35.0,
+      "local_peak_frame": 35.25
+    },
+    "RightForeArm": {
+      "world_peak_frame": 34.75,
+      "local_peak_frame": 26.25
+    },
+    "RightHand": {
+      "world_peak_frame": 30.5,
+      "local_peak_frame": 31.0
+    }
+  },
+  "cloth_yaw_lag": {
+    "phys_robe_front_C_06": {
+      "best_delay_frames": 2,
+      "correlations": {
+        "-10": 0.7355806594098913,
+        "-9": 0.777099508065598,
+        "-8": 0.8147559271961881,
+        "-7": 0.8485805409474046,
+        "-6": 0.8786770269997104,
+        "-5": 0.9051656478790605,
+        "-4": 0.9281394204900417,
+        "-3": 0.9476449119382852,
+        "-2": 0.9636880243344528,
+        "-1": 0.9762620200290119,
+        "0": 0.985389220133697,
+        "1": 0.991002137433173,
+        "2": 0.9934182777407966,
+        "3": 0.992595974879091,
+        "4": 0.9884880470035742,
+        "5": 0.9810215546750943,
+        "6": 0.9700885571120109,
+        "7": 0.9555486407015656,
+        "8": 0.9372430662324024,
+        "9": 0.9150221086395708,
+        "10": 0.8887931073857724,
+        "11": 0.8585162385883883,
+        "12": 0.8241733205357357,
+        "13": 0.7857743115464527,
+        "14": 0.7433737813455458,
+        "15": 0.6970484307123146,
+        "16": 0.6468719458647016,
+        "17": 0.592937567495491,
+        "18": 0.5353904647154588,
+        "19": 0.47445033299093264,
+        "20": 0.4104220442897006
+      }
+    },
+    "phys_cape_C_06": {
+      "best_delay_frames": 0,
+      "correlations": {
+        "-10": 0.7850522207627773,
+        "-9": 0.8181115411662806,
+        "-8": 0.8472565023340357,
+        "-7": 0.8726410864608352,
+        "-6": 0.8944850459154342,
+        "-5": 0.9130089444553804,
+        "-4": 0.928387845020361,
+        "-3": 0.9407320398608034,
+        "-2": 0.9500927787640666,
+        "-1": 0.956488905395594,
+        "0": 0.9599464310080988,
+        "1": 0.9599010217709734,
+        "2": 0.956931760317127,
+        "3": 0.9509531532907917,
+        "4": 0.9418816063807718,
+        "5": 0.9296392075626444,
+        "6": 0.9141661705579077,
+        "7": 0.8954166141034986,
+        "8": 0.8733371222746416,
+        "9": 0.8478433557748802,
+        "10": 0.8188530502107632,
+        "11": 0.7862662308769061,
+        "12": 0.7498764808579472,
+        "13": 0.7094096031070982,
+        "14": 0.6645985542346036,
+        "15": 0.615184824068714,
+        "16": 0.560882605715821,
+        "17": 0.5013895206975837,
+        "18": 0.43656578787208106,
+        "19": 0.36658960182015426,
+        "20": 0.2917604575001699
+      }
+    }
+  },
+  "active_windows": {
+    "24-40": {
+      "tip_path_m": 6.772393391963951,
+      "chord_m": 4.636956618281742,
+      "path_chord_ratio": 1.4605255018481305,
+      "peak_speed_m_s": 19.396220004372047
+    }
+  },
+  "name": "rising_spin",
+  "quarter_samples": 461,
+  "bone_count": 121,
+  "joint_ranges_deg": {
+    "Left_elbow": [
+      36.88840424117956,
+      103.4314213072275
+    ],
+    "Left_wrist": [
+      18.822772690150877,
+      19.351038115718765
+    ],
+    "Left_knee": [
+      40.866255410534734,
+      64.87470830592717
+    ],
+    "Left_shoulder_elevation": [
+      41.256792377456634,
+      71.4328830000868
+    ],
+    "Right_elbow": [
+      18.21299185496885,
+      133.49315720863595
+    ],
+    "Right_wrist": [
+      7.7852565013199975,
+      55.00006537048956
+    ],
+    "Right_knee": [
+      42.779405413841616,
+      66.9887044121103
+    ],
+    "Right_shoulder_elevation": [
+      0.7064353513605505,
+      81.77318696738247
+    ]
+  },
+  "asymmetry_speed_correlation": {
+    "Shoulder": 0.8759956665817481,
+    "Arm": 0.18805692601902385,
+    "ForeArm": 0.4575488844236435,
+    "Hand": 0.25148956155416674,
+    "UpLeg": 0.17065035004545817
+  },
+  "loop": {},
+  "max_limb_length_error_m": 7.760220386621164e-06,
+  "blade_peak_speed_m_s": 19.396220004372047,
+  "blade_min_z_m": 0.014984890818595886,
+  "peak_hips_yaw_deg_s": 241.06753287324918,
+  "source_sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e"
+}
+FLAGS [{'bone': 'LeftUpLeg', 'frame': 51, 'kinds': ['reversal'], 'speed': 5.383900274839969, 'acceleration': 9.488734135123151}, {'bone': 'LeftUpLeg', 'frame': 59, 'kinds': ['reversal'], 'speed': 0.5845266721610022, 'acceleration': 1.2918766769446228}, {'bone': 'LeftLeg', 'frame': 49, 'kinds': ['reversal'], 'speed': 4.270872911170209, 'acceleration': 5.082820027127843}, {'bone': 'LeftLeg', 'frame': 50, 'kinds': ['spike'], 'speed': 10.00267588016116, 'acceleration': 5.731802969002629}, {'bone': 'LeftLeg', 'frame': 51, 'kinds': ['reversal', 'acceleration'], 'speed': 2.818752422071306, 'acceleration': 12.821428302224115}, {'bone': 'LeftLeg', 'frame': 53, 'kinds': ['reversal'], 'speed': 0.7228583983428379, 'acceleration': 5.687991435967434}, {'bone': 'LeftLeg', 'frame': 65, 'kinds': ['reversal', 'spike'], 'speed': 5.716901038651046, 'acceleration': 7.491455602330539}, {'bone': 'LeftLeg', 'frame': 66, 'kinds': ['spike'], 'speed': 6.051061063800764, 'acceleration': 0.33416002535862377}, {'bone': 'LeftLeg', 'frame': 67, 'kinds': ['reversal', 'spike', 'acceleration'], 'speed': 7.537101588475433, 'acceleration': 13.588162652273278}, {'bone': 'LeftLeg', 'frame': 83, 'kinds': ['reversal'], 'speed': 3.758108169263791, 'acceleration': 4.379994276397405}, {'bone': 'LeftLeg', 'frame': 86, 'kinds': ['reversal'], 'speed': 3.054991523494027, 'acceleration': 5.305160800525586}, {'bone': 'RightUpLeg', 'frame': 40, 'kinds': ['reversal'], 'speed': 0.7745871989248319, 'acceleration': 2.987077559041875}, {'bone': 'RightLeg', 'frame': 40, 'kinds': ['reversal'], 'speed': 1.3037305359105853, 'acceleration': 5.757856846944514}, {'bone': 'RightLeg', 'frame': 57, 'kinds': ['reversal'], 'speed': 0.6372146451022085, 'acceleration': 2.558913848216974}, {'bone': 'RightLeg', 'frame': 58, 'kinds': ['spike'], 'speed': 10.28585162609799, 'acceleration': 9.648636981452036}, {'bone': 'RightLeg', 'frame': 59, 'kinds': ['reversal', 'acceleration'], 'speed': 2.300405282983974, 'acceleration': 12.586256907806579}, {'bone': 'RightLeg', 'frame': 60, 'kinds': ['spike'], 'speed': 4.06711538501416, 'acceleration': 1.7667101027995664}, {'bone': 'RightLeg', 'frame': 61, 'kinds': ['reversal'], 'speed': 0.6870125147998905, 'acceleration': 4.754127899239762}, {'bone': 'RightLeg', 'frame': 73, 'kinds': ['reversal'], 'speed': 6.554473039943783, 'acceleration': 7.909142682265956}, {'bone': 'RightLeg', 'frame': 75, 'kinds': ['reversal', 'acceleration'], 'speed': 6.111587295984516, 'acceleration': 12.405886154745772}, {'bone': 'RightFoot', 'frame': 40, 'kinds': ['reversal'], 'speed': 0.7159288153594764, 'acceleration': 2.9904953165476464}, {'bone': 'RightFoot', 'frame': 67, 'kinds': ['reversal'], 'speed': 0.8526582033690164, 'acceleration': 1.3522623453367044}, {'bone': 'RightArm', 'frame': 114, 'kinds': ['reversal', 'spike'], 'speed': 7.72837511548557, 'acceleration': 8.24158455227084}, {'bone': 'RightArm', 'frame': 115, 'kinds': ['spike'], 'speed': 5.913757132948067, 'acceleration': 1.8151336621995422}, {'bone': 'RightForeArm', 'frame': 21, 'kinds': ['reversal'], 'speed': 0.5013644224409641, 'acceleration': 1.6387532652143928}, {'bone': 'RightForeArm', 'frame': 36, 'kinds': ['reversal'], 'speed': 1.068956075600582, 'acceleration': 8.625631399917054}, {'bone': 'RightForeArm', 'frame': 59, 'kinds': ['reversal'], 'speed': 0.7861197329078697, 'acceleration': 1.8804502518884942}, {'bone': 'RightForeArm', 'frame': 62, 'kinds': ['reversal'], 'speed': 1.2093982868161057, 'acceleration': 2.4590573337022756}, {'bone': 'RightHand', 'frame': 10, 'kinds': ['reversal'], 'speed': 1.4975237081664552, 'acceleration': 3.639617125805234}, {'bone': 'RightHand', 'frame': 34, 'kinds': ['acceleration'], 'speed': 7.860612372943575, 'acceleration': 12.787278897390232}, {'bone': 'RightHand', 'frame': 114, 'kinds': ['reversal'], 'speed': 3.9798925233869435, 'acceleration': 10.79145388223002}]
+CONTACT {'before': {'Left': [0.0141401526494883, 0.09474173128604889], 'Right': [0.004370143972337245, 0.085165254175663]}, 'after': {'Left': [0.0021514309197664255, 0.08521638005971909], 'Right': [0.00251758225262165, 0.085343017578125]}}
+HEM 0.0020012430474162096
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

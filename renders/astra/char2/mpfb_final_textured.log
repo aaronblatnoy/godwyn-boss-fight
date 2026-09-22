@@ -1,0 +1,12 @@
+00:00.909  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_mpfb_surface_finish_i03.blend"
+00:48.059  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_final_textured_front.png'
+MPFB_RENDER mpfb_final_textured front
+01:39.989  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_final_textured_side.png'
+MPFB_RENDER mpfb_final_textured side
+02:46.975  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_final_textured_three_quarter.png'
+MPFB_RENDER mpfb_final_textured three_quarter
+03:30.004  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_final_textured_body.png'
+MPFB_RENDER mpfb_final_textured body
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

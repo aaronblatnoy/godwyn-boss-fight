@@ -1,0 +1,8 @@
+{
+  "weight_vertices_smoothed": 21903,
+  "iterations": 40,
+  "world_region": "2.10 < z < 2.78m; |x| < 0.8m, 6cm feather",
+  "geometry_changed": false,
+  "hair_faces_reassigned_to_existing_hair_slot": 140,
+  "max_influences": 4
+}

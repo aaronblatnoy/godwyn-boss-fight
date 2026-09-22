@@ -1,0 +1,168 @@
+00:01.039  cycles           | Added device "Apple M1 Pro (GPU - 14 cores)" with id "METAL_Apple M1 Pro (GPU - 14 cores)".
+00:01.039  cycles           | Device with id "METAL_Apple M1 Pro (GPU - 14 cores)" supports OpenImageDenoise.
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+00:05.024  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+CINE_INPUTS {"animation_path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend", "animation_sha256": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c", "character_path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend", "character_sha256": "102b7d4a49d9de21f8772b9216b846baa0f10c4f6a095206518d9d87fd1334c7", "assembly": "in-memory fresh character objects on unchanged compatible animation rig", "character_objects": ["AstraChar2_Cornea_L", "AstraChar2_Cornea_R", "AstraChar2_Eyeball_L", "AstraChar2_Eyeball_R", "AstraChar2_Eyebrows_L", "AstraChar2_Eyebrows_R", "AstraChar2_Iris_L", "AstraChar2_Iris_R", "AstraChar2_Lashes_L", "AstraChar2_Lashes_R", "AstraChar2_Nostril_L", "AstraChar2_Nostril_R", "AstraChar2_Pupil_L", "AstraChar2_Pupil_R", "AstraChar2_TearCorner_L", "AstraChar2_TearCorner_R", "AstraChar2_Wetline_L", "AstraChar2_Wetline_R", "Astra_Undersleeves", "Godwyn_Sword", "char1"], "rest_transform_max_error": 0.0, "animation_action_sha256": "3225b9f4afcdfcb4cb9be51343b53cb0e4b5b1fa6b08dbc636c368bbaf4409d3", "source_files_saved": false}
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+CINE_BLADE_LIGHT [-1.1108533143997192, 1.5234804153442383, 2.5002920627593994] plane_normal [-0.6898646354675293, -0.12025396525859833, -0.7138807773590088]
+CINE_GPU_PROOF {"bound_backend": "METAL", "requested_device": "METAL", "engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [1920, 1080], "samples_max": 512, "adaptive_threshold": 0.01, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 7.9491082978121055, "camera_push_percent": 4, "camera_lens": 42, "camera_height_m": 0.6608563332119957, "camera_aim_height_m": 1.5047948360443115, "body_reference_frame": 40, "body_reference_height_fraction": 0.85999995470047, "horizontal_shift": -0.02, "camera_upward_angle_degrees": 6.060259300410478, "fill_multiplier": 0.6, "rake_multiplier": 0.6, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+CINE_DEVICE_BOUND {"requested_device": "METAL", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+CINE_BLADE_LIGHT [-1.1108533143997192, 1.5234804153442383, 2.5002920627593994] plane_normal [-0.6898646354675293, -0.12025396525859833, -0.7138807773590088]
+CINE_GPU_PROOF {"bound_backend": "METAL", "requested_device": "METAL", "engine": "CYCLES", "device": "GPU", "compute_backend": "METAL", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}], "all_devices": [{"name": "Apple M1 Pro", "type": "CPU", "enabled": false}, {"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL", "enabled": true}], "resolution": [1920, 1080], "samples_max": 512, "adaptive_threshold": 0.01, "denoiser": "OPENIMAGEDENOISE", "haze_density": 0, "camera_distance_start": 7.9491082978121055, "camera_push_percent": 4, "camera_lens": 42, "camera_height_m": 0.6608563332119957, "camera_aim_height_m": 1.5047948360443115, "body_reference_frame": 40, "body_reference_height_fraction": 0.85999995470047, "horizontal_shift": -0.02, "camera_upward_angle_degrees": 6.060259300410478, "fill_multiplier": 0.6, "rake_multiplier": 0.6, "fstop": 5.6, "shutter": 0.4, "view_transform": "AgX", "exposure": -0.35, "key_linear_rgb": [1, 0.92, 0.6]}
+CINE IDEMPOTENCE PASS: second application identical; no duplicate objects
+00:13.690  cycles           | Using default CPU kernels.
+00:14.332  cycles           | Total time spent synchronizing data: 0.639382
+00:16.288  cycles           | Effective scene passes:
+00:16.288  cycles           | - type: combined, name: "Combined", mode: DENOISED, is_written: True
+00:16.288  cycles           | - type: combined, name: "Noisy Image", mode: NOISY, is_written: True
+00:16.288  cycles           | - type: adaptive_aux_buffer, name: "", mode: NOISY, is_written: True
+00:16.288  cycles           | - type: denoising_albedo, name: "", mode: NOISY, is_written: True
+00:16.288  cycles           | - type: denoising_normal, name: "", mode: NOISY, is_written: True
+00:16.288  cycles           | - type: sample_count, name: "", mode: NOISY, is_written: True
+00:16.288  cycles           | Requested features:
+00:16.288  cycles           | Use BSDF True
+00:16.288  cycles           | Use Emission True
+00:16.288  cycles           | Use Volume False
+00:16.288  cycles           | Use Bump False
+00:16.288  cycles           | Use Voronoi False
+00:16.288  cycles           | Use Shader Raytrace False
+00:16.288  cycles           | Use MNEE False
+00:16.288  cycles           | Use Transparent True
+00:16.288  cycles           | Use Denoising True
+00:16.288  cycles           | Use Path Tracing True
+00:16.288  cycles           | Use Hair False
+00:16.288  cycles           | Use Pointclouds False
+00:16.288  cycles           | Use Object Motion True
+00:16.288  cycles           | Use Baking False
+00:16.288  cycles           | Use Subsurface True
+00:16.288  cycles           | Use Volume False
+00:16.288  cycles           | Use Shadow Catcher False
+00:16.288  cycles           | Use Portal Node False
+00:16.397  cycles           | Total 28 shaders.
+00:16.402  cycles           | Shader manager updated 28 shaders in 0.00486242 seconds.
+00:16.403  cycles           | Total 30 objects.
+00:16.404  cycles           | Total 0 particle systems.
+00:16.404  cycles           | Total 30 meshes.
+00:16.971  cycles           | Using BVH2 layout.
+00:17.817  cycles           | Total 11 lookup tables.
+00:17.818  cycles           | Total 7 lights.
+00:17.818  cycles           | Background MIS has been disabled.
+00:17.818  cycles           | Number of lights sent to the device: 6
+00:18.019  cycles           | Use light tree with 144510 emitters and 289017 nodes.
+00:18.054  cycles           | Specialized light tree for light linking, with 4 additional nodes.
+00:18.110  cycles           | Total 12 lookup tables.
+00:32.711  cycles           | System memory statistics after full device sync:
+                            |   Usage: 932,565,293 (889.36M)
+                            |   Peak: 1,084,154,273 (1.01G)
+00:34.026  cycles           | Rendered 1 samples in 1.20888 seconds (1.20888 seconds per sample), occupancy: 0.02417
+00:34.151  cycles           | Total 12 lookup tables.
+00:34.165  cycles           | System memory statistics after full device sync:
+                            |   Usage: 932,568,157 (889.37M)
+                            |   Peak: 1,090,163,485 (1.01G)
+00:40.805  cycles           | Rendered 29 samples in 6.63985 seconds (0.22896 seconds per sample), occupancy: 0.229381
+00:45.411  cycles           | Rendered 18 samples in 4.60519 seconds (0.255844 seconds per sample), occupancy: 0.218551
+00:48.568  cycles           | Rendered 16 samples in 3.13771 seconds (0.196107 seconds per sample), occupancy: 0.11047
+00:51.633  cycles           | Rendered 16 samples in 3.04409 seconds (0.190256 seconds per sample), occupancy: 0.108894
+00:54.770  cycles           | Rendered 16 samples in 3.11891 seconds (0.194932 seconds per sample), occupancy: 0.0934171
+00:57.849  cycles           | Rendered 16 samples in 3.06168 seconds (0.191355 seconds per sample), occupancy: 0.0958241
+01:00.809  cycles           | Rendered 16 samples in 2.94227 seconds (0.183892 seconds per sample), occupancy: 0.0925862
+01:03.471  cycles           | Rendered 16 samples in 2.64467 seconds (0.165292 seconds per sample), occupancy: 0.0923532
+01:06.133  cycles           | Rendered 16 samples in 2.6454 seconds (0.165337 seconds per sample), occupancy: 0.0899552
+01:08.779  cycles           | Rendered 16 samples in 2.62787 seconds (0.164242 seconds per sample), occupancy: 0.0912355
+01:11.425  cycles           | Rendered 16 samples in 2.62703 seconds (0.164189 seconds per sample), occupancy: 0.0843873
+01:14.061  cycles           | Rendered 16 samples in 2.61767 seconds (0.163604 seconds per sample), occupancy: 0.0844213
+01:16.684  cycles           | Rendered 16 samples in 2.60446 seconds (0.162779 seconds per sample), occupancy: 0.0819564
+01:19.394  cycles           | Rendered 16 samples in 2.68716 seconds (0.167947 seconds per sample), occupancy: 0.0863477
+01:22.044  cycles           | Rendered 16 samples in 2.62887 seconds (0.164304 seconds per sample), occupancy: 0.0904931
+01:24.936  cycles           | Rendered 16 samples in 2.86355 seconds (0.178972 seconds per sample), occupancy: 0.086467
+01:28.170  cycles           | Rendered 16 samples in 3.20983 seconds (0.200614 seconds per sample), occupancy: 0.0843176
+01:33.133  cycles           | Rendered 16 samples in 4.93841 seconds (0.308651 seconds per sample), occupancy: 0.0860332
+01:39.450  cycles           | Rendered 16 samples in 6.29574 seconds (0.393484 seconds per sample), occupancy: 0.0840177
+01:41.134  cycles           | ERROR Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+                            | Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+                            | 
+01:41.134  cycles           | ERROR Refer to the Cycles GPU rendering documentation for possible solutions:
+                            | https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html
+                            | 
+01:41.134  cycles           | ERROR Command buffer not completed. status = 5. (PSO_SPECIALIZED_INTERSECT.integrator_intersect_closest):
+                            | Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+                            | 
+01:41.212  cycles           | Rendered 16 samples in 1.72873 seconds (0.108046 seconds per sample), occupancy: 0.22476
+01:41.212  cycles           | ERROR Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+                            | Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a08930 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+                            | 
+01:41.212  cycles           | ERROR Command buffer not completed. status = 5. (PSO_SPECIALIZED_INTERSECT.integrator_intersect_closest):
+                            | Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a08930 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+                            | 
+01:41.219  cycles           | ERROR Error preprocessing guiding passes.
+01:41.225  cycles           | Total render time: 87.5329
+01:41.225  cycles           | Render time (without synchronization): 68.4888
+Traceback (most recent call last):
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_hero_render.py", line 159, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_hero_render.py", line 151, in main
+    start=time.perf_counter();bpy.ops.render.render(write_still=True);elapsed=time.perf_counter()-start
+                              ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+RuntimeError: Error: Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+
+Error: Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+
+
+Error: Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+
+Error: Command buffer not completed. status = 5. (PSO_GENERIC.integrator_queued_paths_array):
+Error Domain=MTLCommandBufferErrorDomain Code=1 "Internal Error (0000000e:Internal Error)" UserInfo={NSLocalizedDescription=Internal Error (0000000e:Internal Error), NSUnderlyingError=0x600000a088a0 {Error Domain=IOGPUCommandQueueErrorDomain Code=14 "(null)"}}
+
+
+Error: script failed, file: 'scripts/astra_cine_hero_render.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Metal path-tracing dispatch stats:
+-------------------------------------------------------------------------------------------------------
+Kernel name                                 Total threads   Dispatches     Avg. T/D    Time/s    Time/%
+-------------------------------------------------------------------------------------------------------
+integrator_init_from_camera                     715505664          201      3559729    0.4376      0.67
+integrator_init_from_bake                               0            0            0    0.0000      0.00
+integrator_intersect_closest                    369679784          537       688416   33.5336     51.71
+integrator_intersect_shadow                     146332885          370       395494   15.9266     24.56
+integrator_intersect_subsurface                    970179           73        13290    0.5553      0.86
+integrator_intersect_volume_stack                       0            0            0    0.0000      0.00
+integrator_intersect_dedicated_light                    0            0            0    0.0000      0.00
+integrator_intersect_mnee                               0            0            0    0.0000      0.00
+integrator_shade_background                     142063245          295       481570    0.8451      1.30
+integrator_shade_light_nee                        7028607           88        79870    0.1211      0.19
+integrator_shade_light_forward                    8218215          101        81368    0.0807      0.12
+integrator_shade_surface                        191311985          486       393646   11.4490     17.66
+integrator_shade_surface_raytrace                       0            0            0    0.0000      0.00
+integrator_shade_volume                                 0            0            0    0.0000      0.00
+integrator_shade_volume_ray_marching                    0            0            0    0.0000      0.00
+integrator_shade_shadow                          87354123          300       291180    0.3851      0.59
+integrator_shade_dedicated_light                        0            0            0    0.0000      0.00
+integrator_shadow_path_mnee_pending                     0            0            0    0.0000      0.00
+integrator_queued_paths_array                  2541351651         1003      2533750    0.2490      0.38
+integrator_queued_shadow_paths_array            394160542          729       540686    0.1002      0.15
+integrator_active_paths_array                           0            0            0    0.0000      0.00
+integrator_terminated_paths_array               108157734          180       600876    0.0281      0.04
+integrator_sorted_paths_array                           0            0            0    0.0000      0.00
+integrator_sort_bucket_pass                      31850496          486        65536    0.1155      0.18
+integrator_sort_write_pass                       31850496          486        65536    0.1167      0.18
+integrator_compact_paths_array                  750561641          180      4169786    0.0593      0.09
+integrator_compact_states                        68790113          180       382167    0.3424      0.53
+integrator_terminated_shadow_paths_array         22123228          205       107918    0.0293      0.05
+integrator_compact_shadow_paths_array           151449834          205       738779    0.0411      0.06
+integrator_compact_shadow_states                 13589579          205        66290    0.1266      0.20
+integrator_reset                                 88080384           21      4194304    0.0059      0.01
+-------------------------------------------------------------------------------------------------------
+adaptive_sampling_convergence_check              37324800           18      2073600    0.0229      0.04
+adaptive_sampling_filter_x                          19440           18         1080    0.2483      0.38
+adaptive_sampling_filter_y                          34560           18         1920    0.0287      0.04
+-------------------------------------------------------------------------------------------------------
+                                                                  6385                64.8481    100.00
+-------------------------------------------------------------------------------------------------------
+
+
+Blender quit

@@ -1,0 +1,47 @@
+00:01.506  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_rising_spin_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "thrust_samples": [],
+  "pre_armature_surface_polish_offset_m": 0.014991546250385943,
+  "closed_finger_mesh_samples": 2256,
+  "max_closed_finger_hand_local_drift_m": 1.0488358208804185e-06,
+  "derived_grip_correction": {
+    "astra_move_gold_palm_faces": 3442,
+    "astra_move_palm_sliver_faces": 621,
+    "astra_move_closed_finger_vertices": 2553,
+    "astra_move_max_finger_adjustment_m": 0.10574495361211689,
+    "astra_move_hilt_envelope_m": 0.029374360874295236
+  },
+  "binding": "OBJECT parent Armature + one ARMATURE modifier; every sword vertex RightHand=1.0; no sword action or constraints",
+  "quarter_samples": 461,
+  "hilt_wrist_distance_range_m": [
+    0.1653151896754605,
+    0.16531569617212374
+  ],
+  "max_hand_local_hilt_drift_m": 7.566250326489137e-07,
+  "max_evaluated_tip_error_m": 6.76978629326853e-07,
+  "max_edge_vs_cut_deg": 6.899353312346861,
+  "two_handed": false,
+  "grip_frames": [
+    1,
+    24,
+    30,
+    36,
+    60,
+    84,
+    116
+  ]
+}
+00:13.606  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/001.png'
+00:14.582  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/024.png'
+00:15.529  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/030.png'
+00:17.517  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/036.png'
+00:18.295  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/060.png'
+00:19.370  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/084.png'
+00:20.239  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/rising_spin/grip/116.png'
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

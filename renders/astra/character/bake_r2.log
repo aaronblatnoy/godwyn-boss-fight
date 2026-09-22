@@ -1,0 +1,29 @@
+00:00.918  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py:32: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('Astra source for portable bake '+o.name);mat.use_nodes=True;g=Graph(mat)
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_basecolor_4096 elapsed 66
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_orm_4096 elapsed 156
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_normal_4096 elapsed 302
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_basecolor_2048 elapsed 7
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_orm_2048 elapsed 13
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_normal_2048 elapsed 25
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_bake.py:95: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new(name);m.use_nodes=True;g=Graph(m);out=g.node('ShaderNodeOutputMaterial');bs=g.node('ShaderNodeBsdfPrincipled');g.set(out.inputs['Surface'],bs.outputs[0])
+05:35.412  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r2_front.png'
+Info: Saved as "astra_character_v2.blend"
+RENDERED r2 front
+05:37.499  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r2_chest.png'
+RENDERED r2 chest
+05:39.235  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r2_face.png'
+RENDERED r2 face
+05:40.998  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r2_shoulder.png'
+RENDERED r2 shoulder
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,77 @@
+00:03.411  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_wip.blend"
+EDGE 0.008 1.469
+VERT 108561 (-0.4, -0.11, 1.49) [('Hips', 0.886), ('phys_robe_side_R_00', 0.059), ('phys_robe_side_R_01', 0.029), ('phys_robe_front_R_00', 0.026)]
+VERT 110303 (-0.403, -0.118, 1.491) [('RightHand', 1.0)]
+EDGE 0.052 1.512
+VERT 108553 (-0.414, -0.107, 1.442) [('Hips', 0.765), ('phys_robe_side_R_01', 0.102), ('phys_robe_side_R_00', 0.098), ('phys_robe_front_R_00', 0.035)]
+VERT 110303 (-0.403, -0.118, 1.491) [('RightHand', 1.0)]
+EDGE 0.028 1.486
+VERT 110303 (-0.403, -0.118, 1.491) [('RightHand', 1.0)]
+VERT 112134 (-0.415, -0.116, 1.466) [('Hips', 0.833), ('phys_robe_side_R_00', 0.08), ('phys_robe_side_R_01', 0.047), ('phys_robe_front_R_00', 0.04)]
+EDGE 0.028 1.481
+VERT 112134 (-0.415, -0.116, 1.466) [('Hips', 0.833), ('phys_robe_side_R_00', 0.08), ('phys_robe_side_R_01', 0.047), ('phys_robe_front_R_00', 0.04)]
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+EDGE 0.036 1.488
+VERT 112129 (-0.42, -0.119, 1.457) [('Hips', 0.803), ('phys_robe_side_R_00', 0.093), ('phys_robe_side_R_01', 0.066), ('phys_robe_front_R_00', 0.039)]
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+EDGE 0.062 1.509
+VERT 112130 (-0.432, -0.118, 1.432) [('Hips', 0.726), ('phys_robe_side_R_01', 0.114), ('phys_robe_side_R_00', 0.107), ('phys_robe_front_R_01', 0.053)]
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+EDGE 0.014 1.459
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+VERT 115907 (-0.42, -0.135, 1.483) [('Hips', 0.876), ('phys_robe_side_R_00', 0.062), ('phys_robe_front_R_00', 0.037), ('phys_robe_side_R_01', 0.025)]
+EDGE 0.036 1.479
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+VERT 115905 (-0.425, -0.138, 1.46) [('Hips', 0.821), ('phys_robe_side_R_00', 0.082), ('phys_robe_side_R_01', 0.056), ('phys_robe_front_R_00', 0.041)]
+EDGE 0.063 1.506
+VERT 113984 (-0.421, -0.125, 1.492) [('RightHand', 1.0)]
+VERT 115897 (-0.434, -0.132, 1.431) [('Hips', 0.692), ('phys_robe_side_R_01', 0.142), ('phys_robe_side_R_00', 0.09), ('phys_robe_front_R_01', 0.075)]
+EDGE 0.025 1.464
+VERT 110303 (-0.403, -0.118, 1.491) [('RightHand', 1.0)]
+VERT 112142 (-0.398, -0.095, 1.5) [('Hips', 0.927), ('phys_robe_side_R_00', 0.042), ('phys_robe_front_R_00', 0.023)]
+EDGE 0.038 1.477
+VERT 112134 (-0.415, -0.116, 1.466) [('Hips', 0.833), ('phys_robe_side_R_00', 0.08), ('phys_robe_side_R_01', 0.047), ('phys_robe_front_R_00', 0.04)]
+VERT 112139 (-0.405, -0.119, 1.502) [('RightHand', 1.0)]
+EDGE 0.026 1.455
+VERT 112139 (-0.405, -0.119, 1.502) [('RightHand', 1.0)]
+VERT 112142 (-0.398, -0.095, 1.5) [('Hips', 0.927), ('phys_robe_side_R_00', 0.042), ('phys_robe_front_R_00', 0.023)]
+EDGE 0.014 1.441
+VERT 128250 (-0.379, -0.168, 1.478) [('Hips', 0.877), ('phys_robe_front_R_00', 0.054), ('phys_robe_side_R_00', 0.053), ('phys_robe_side_R_01', 0.016)]
+VERT 128253 (-0.377, -0.17, 1.491) [('RightHand', 1.0)]
+EDGE 0.007 1.433
+VERT 128252 (-0.377, -0.163, 1.487) [('Hips', 0.903), ('phys_robe_front_R_00', 0.044), ('phys_robe_side_R_00', 0.044)]
+VERT 128253 (-0.377, -0.17, 1.491) [('RightHand', 1.0)]
+EDGE 0.027 1.451
+VERT 128261 (-0.377, -0.148, 1.477) [('Hips', 0.915), ('phys_robe_front_R_00', 0.041), ('phys_robe_side_R_00', 0.036)]
+VERT 128264 (-0.378, -0.146, 1.504) [('RightHand', 1.0)]
+EDGE 0.019 1.442
+VERT 128253 (-0.377, -0.17, 1.491) [('RightHand', 1.0)]
+VERT 128256 (-0.379, -0.177, 1.474) [('Hips', 0.901), ('phys_robe_front_R_00', 0.047), ('phys_robe_side_R_00', 0.04), ('phys_robe_front_R_01', 0.012)]
+EDGE 0.027 1.45
+VERT 112141 (-0.389, -0.127, 1.488) [('Hips', 0.91), ('phys_robe_side_R_00', 0.047), ('phys_robe_front_R_00', 0.024), ('phys_robe_side_R_01', 0.019)]
+VERT 112144 (-0.403, -0.125, 1.51) [('RightHand', 1.0)]
+EDGE 0.03 1.452
+VERT 110302 (-0.407, -0.108, 1.487) [('Hips', 0.91), ('phys_robe_side_R_00', 0.047), ('phys_robe_front_R_00', 0.024), ('phys_robe_side_R_01', 0.019)]
+VERT 112144 (-0.403, -0.125, 1.51) [('RightHand', 1.0)]
+EDGE 0.018 1.44
+VERT 128251 (-0.383, -0.177, 1.476) [('Hips', 0.871), ('phys_robe_front_R_00', 0.059), ('phys_robe_side_R_00', 0.053), ('phys_robe_front_R_01', 0.018)]
+VERT 128253 (-0.377, -0.17, 1.491) [('RightHand', 1.0)]
+EDGE 0.01 1.431
+VERT 128252 (-0.377, -0.163, 1.487) [('Hips', 0.903), ('phys_robe_front_R_00', 0.044), ('phys_robe_side_R_00', 0.044)]
+VERT 128255 (-0.374, -0.168, 1.495) [('RightHand', 1.0)]
+EDGE 0.013 1.431
+VERT 128252 (-0.377, -0.163, 1.487) [('Hips', 0.903), ('phys_robe_front_R_00', 0.044), ('phys_robe_side_R_00', 0.044)]
+VERT 128259 (-0.376, -0.161, 1.5) [('RightHand', 1.0)]
+EDGE 0.028 1.445
+VERT 128255 (-0.374, -0.168, 1.495) [('RightHand', 1.0)]
+VERT 128261 (-0.377, -0.148, 1.477) [('Hips', 0.915), ('phys_robe_front_R_00', 0.041), ('phys_robe_side_R_00', 0.036)]
+EDGE 0.024 1.44
+VERT 128255 (-0.374, -0.168, 1.495) [('RightHand', 1.0)]
+VERT 128256 (-0.379, -0.177, 1.474) [('Hips', 0.901), ('phys_robe_front_R_00', 0.047), ('phys_robe_side_R_00', 0.04), ('phys_robe_front_R_01', 0.012)]
+EDGE 0.021 1.435
+VERT 128253 (-0.377, -0.17, 1.491) [('RightHand', 1.0)]
+VERT 130053 (-0.366, -0.185, 1.483) [('Hips', 0.89), ('phys_robe_front_R_00', 0.051), ('phys_robe_side_R_00', 0.041), ('phys_robe_front_R_01', 0.018)]
+BAD EDGES 5454
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

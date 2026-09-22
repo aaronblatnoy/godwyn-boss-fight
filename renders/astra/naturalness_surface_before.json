@@ -1,0 +1,4838 @@
+{
+  "floor_z": -0.014999999664723873,
+  "foot_sole_vertex_counts": {
+    "LeftFoot": 1123,
+    "RightFoot": 1256,
+    "cloth": 83753
+  },
+  "cloth_families": {
+    "phys_robe_back_C": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_back_L": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_back_R": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_front_C": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_front_L": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_front_R": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_side_L": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_robe_side_R": {
+      "root_parent": "Hips",
+      "count": 8
+    },
+    "phys_hair_back": {
+      "root_parent": "Head",
+      "count": 4
+    },
+    "phys_hair_front_L": {
+      "root_parent": "Head",
+      "count": 4
+    },
+    "phys_hair_front_R": {
+      "root_parent": "Head",
+      "count": 4
+    },
+    "phys_cape_C": {
+      "root_parent": "Spine",
+      "count": 7
+    },
+    "phys_cape_L": {
+      "root_parent": "Spine",
+      "count": 7
+    },
+    "phys_cape_R": {
+      "root_parent": "Spine",
+      "count": 7
+    }
+  },
+  "rows": [
+    {
+      "frame": 1,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0037004919722676277,
+          "p05_clearance_m": 0.011213818565011024,
+          "centroid": [
+            0.30859044194221497,
+            -0.37910667061805725,
+            0.04671118035912514
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.009592033922672272,
+          "p05_clearance_m": 0.014011252671480179,
+          "centroid": [
+            -0.28778785467147827,
+            -0.36412081122398376,
+            0.04831496998667717
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5345548391342163,
+        -1.3351423740386963,
+        3.1028313636779785
+      ],
+      "sword_grip": [
+        -0.6798967719078064,
+        -0.6514564156532288,
+        2.1222035884857178
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.979991614818573,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.041564423590898514,
+          "vertices_within_0_065m": 100
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0035684427712112665,
+          "vertices_within_0_065m": 423
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.057066500186920166,
+          "vertices_within_0_065m": 15
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0015725037083029747,
+          "vertices_within_0_065m": 309
+        }
+      },
+      "cloth_min_z": -0.05132032185792923
+    },
+    {
+      "frame": 2,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0036275386810302734,
+          "p05_clearance_m": 0.011170880869030952,
+          "centroid": [
+            0.308564156293869,
+            -0.3790884017944336,
+            0.04670509696006775
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.009612033143639565,
+          "p05_clearance_m": 0.014031166210770607,
+          "centroid": [
+            -0.28780999779701233,
+            -0.36412736773490906,
+            0.04831623658537865
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5380502939224243,
+        -1.3293746709823608,
+        3.1084671020507812
+      ],
+      "sword_grip": [
+        -0.6817131638526917,
+        -0.6492748260498047,
+        2.1268110275268555
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.9843829274177551,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.04114033654332161,
+          "vertices_within_0_065m": 104
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.003713818732649088,
+          "vertices_within_0_065m": 423
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.05610502511262894,
+          "vertices_within_0_065m": 23
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0013697439571842551,
+          "vertices_within_0_065m": 306
+        }
+      },
+      "cloth_min_z": -0.051529377698898315
+    },
+    {
+      "frame": 3,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.003421277739107609,
+          "p05_clearance_m": 0.011120165698230267,
+          "centroid": [
+            0.3084894120693207,
+            -0.3790355622768402,
+            0.04668832942843437
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.009671471081674099,
+          "p05_clearance_m": 0.014089957810938358,
+          "centroid": [
+            -0.28787386417388916,
+            -0.3641446530818939,
+            0.04832123965024948
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5479671955108643,
+        -1.3128360509872437,
+        3.124521017074585
+      ],
+      "sword_grip": [
+        -0.6868615746498108,
+        -0.6430280208587646,
+        2.1399643421173096
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.9969556331634521,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.03992673382163048,
+          "vertices_within_0_065m": 105
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0030029774643480778,
+          "vertices_within_0_065m": 426
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0533570721745491,
+          "vertices_within_0_065m": 44
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0019841426983475685,
+          "vertices_within_0_065m": 299
+        }
+      },
+      "cloth_min_z": -0.0520840622484684
+    },
+    {
+      "frame": 4,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0031029675155878067,
+          "p05_clearance_m": 0.01104508526623249,
+          "centroid": [
+            0.30837196111679077,
+            -0.3789513111114502,
+            0.04666336998343468
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.009767785668373108,
+          "p05_clearance_m": 0.014132860116660595,
+          "centroid": [
+            -0.28797489404678345,
+            -0.3641716539859772,
+            0.0483291819691658
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5634055137634277,
+        -1.2866394519805908,
+        3.1496613025665283
+      ],
+      "sword_grip": [
+        -0.6948851346969604,
+        -0.633162260055542,
+        2.1606526374816895
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0168639421463013,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.037988170981407166,
+          "vertices_within_0_065m": 113
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0027787962462753057,
+          "vertices_within_0_065m": 435
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.04898856580257416,
+          "vertices_within_0_065m": 66
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0041643958538770676,
+          "vertices_within_0_065m": 282
+        }
+      },
+      "cloth_min_z": -0.05289195105433464
+    },
+    {
+      "frame": 5,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0026948191225528717,
+          "p05_clearance_m": 0.01081504113972187,
+          "centroid": [
+            0.3082180917263031,
+            -0.37883859872817993,
+            0.046631913632154465
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.009900670498609543,
+          "p05_clearance_m": 0.01420376356691122,
+          "centroid": [
+            -0.28810906410217285,
+            -0.3642055094242096,
+            0.04834035411477089
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.583424687385559,
+        -1.2518773078918457,
+        3.182509660720825
+      ],
+      "sword_grip": [
+        -0.7053229808807373,
+        -0.6201244592666626,
+        2.1878623962402344
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0432580709457397,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.035412561148405075,
+          "vertices_within_0_065m": 126
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0029864998068660498,
+          "vertices_within_0_065m": 438
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.04323126748204231,
+          "vertices_within_0_065m": 76
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010377200320363045,
+          "vertices_within_0_065m": 252
+        }
+      },
+      "cloth_min_z": -0.05473910644650459
+    },
+    {
+      "frame": 6,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.002221503295004368,
+          "p05_clearance_m": 0.010470237582921982,
+          "centroid": [
+            0.3080345094203949,
+            -0.3787003457546234,
+            0.04659700393676758
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.010069881565868855,
+          "p05_clearance_m": 0.014334199018776417,
+          "centroid": [
+            -0.28827252984046936,
+            -0.3642445504665375,
+            0.04835490882396698
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.6070663928985596,
+        -1.2096368074417114,
+        3.2216720581054688
+      ],
+      "sword_grip": [
+        -0.717712938785553,
+        -0.6043609380722046,
+        2.2205772399902344
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0752732753753662,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.03229869157075882,
+          "vertices_within_0_065m": 135
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0048232488334178925,
+          "vertices_within_0_065m": 436
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.03632792830467224,
+          "vertices_within_0_065m": 86
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01833358034491539,
+          "vertices_within_0_065m": 236
+        }
+      },
+      "cloth_min_z": -0.05730515345931053
+    },
+    {
+      "frame": 7,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0016459394246339798,
+          "p05_clearance_m": 0.00999535620212555,
+          "centroid": [
+            0.30782750248908997,
+            -0.3785398006439209,
+            0.04656028002500534
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.010276580229401588,
+          "p05_clearance_m": 0.014583143405616283,
+          "centroid": [
+            -0.2884606719017029,
+            -0.3642864227294922,
+            0.04837432876229286
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.633373498916626,
+        -1.1610196828842163,
+        3.2657551765441895
+      ],
+      "sword_grip": [
+        -0.7315928339958191,
+        -0.5863193273544312,
+        2.257782459259033
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.1120280027389526,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.028769025579094887,
+          "vertices_within_0_065m": 149
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.006488062907010317,
+          "vertices_within_0_065m": 445
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.02850990928709507,
+          "vertices_within_0_065m": 108
+        },
+        "RightLeg": {
+          "min_distance_m": 0.016662560403347015,
+          "vertices_within_0_065m": 202
+        }
+      },
+      "cloth_min_z": -0.060614150017499924
+    },
+    {
+      "frame": 8,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.001032790169119835,
+          "p05_clearance_m": 0.0096491239964962,
+          "centroid": [
+            0.3076031804084778,
+            -0.37835952639579773,
+            0.04652518779039383
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.010518662631511688,
+          "p05_clearance_m": 0.014799271710216999,
+          "centroid": [
+            -0.28866973519325256,
+            -0.364328533411026,
+            0.04839801788330078
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.661409854888916,
+        -1.1071544885635376,
+        3.3133955001831055
+      ],
+      "sword_grip": [
+        -0.7465035319328308,
+        -0.5664488673210144,
+        2.2984659671783447
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.1526005268096924,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.024998929351568222,
+          "vertices_within_0_065m": 161
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.007073214743286371,
+          "vertices_within_0_065m": 446
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.020016344264149666,
+          "vertices_within_0_065m": 131
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01984596811234951,
+          "vertices_within_0_065m": 137
+        }
+      },
+      "cloth_min_z": -0.06465470790863037
+    },
+    {
+      "frame": 9,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.0004150262102484703,
+          "p05_clearance_m": 0.009278484620153904,
+          "centroid": [
+            0.3073679506778717,
+            -0.37816330790519714,
+            0.04649221524596214
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.010793514549732208,
+          "p05_clearance_m": 0.014979968778789043,
+          "centroid": [
+            -0.28889432549476624,
+            -0.3643694221973419,
+            0.048425935208797455
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.6902742385864258,
+        -1.0492050647735596,
+        3.363267421722412
+      ],
+      "sword_grip": [
+        -0.7619889378547668,
+        -0.5452011823654175,
+        2.3416202068328857
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.1960337162017822,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.02124073915183544,
+          "vertices_within_0_065m": 172
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0029720275197178125,
+          "vertices_within_0_065m": 453
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.011071614921092987,
+          "vertices_within_0_065m": 152
+        },
+        "RightLeg": {
+          "min_distance_m": 0.016034139320254326,
+          "vertices_within_0_065m": 81
+        }
+      },
+      "cloth_min_z": -0.06917021423578262
+    },
+    {
+      "frame": 10,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0001873299479484558,
+          "p05_clearance_m": 0.008682243525981903,
+          "centroid": [
+            0.30712783336639404,
+            -0.37795490026474,
+            0.04646328091621399
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.011097938753664494,
+          "p05_clearance_m": 0.015186282806098461,
+          "centroid": [
+            -0.2891300618648529,
+            -0.364406943321228,
+            0.048458486795425415
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7191126346588135,
+        -0.9883723258972168,
+        3.41410231590271
+      ],
+      "sword_grip": [
+        -0.7775967717170715,
+        -0.5230275988578796,
+        2.3862407207489014
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.241325855255127,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.017882797867059708,
+          "vertices_within_0_065m": 194
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.002244210336357355,
+          "vertices_within_0_065m": 480
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0019605839625000954,
+          "vertices_within_0_065m": 159
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01350646372884512,
+          "vertices_within_0_065m": 40
+        }
+      },
+      "cloth_min_z": -0.07406110316514969
+    },
+    {
+      "frame": 11,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0007579335942864418,
+          "p05_clearance_m": 0.008054046891629696,
+          "centroid": [
+            0.30688875913619995,
+            -0.3777381479740143,
+            0.046440109610557556
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.011408476158976555,
+          "p05_clearance_m": 0.015457957983016968,
+          "centroid": [
+            -0.2893715798854828,
+            -0.3644394874572754,
+            0.04849487170577049
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7471349239349365,
+        -0.9258964657783508,
+        3.4646990299224854
+      ],
+      "sword_grip": [
+        -0.7928867936134338,
+        -0.5003819465637207,
+        2.431333065032959
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.2874547243118286,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.015468612313270569,
+          "vertices_within_0_065m": 220
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0018239286728203297,
+          "vertices_within_0_065m": 494
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.002455152338370681,
+          "vertices_within_0_065m": 182
+        },
+        "RightLeg": {
+          "min_distance_m": 0.017750317230820656,
+          "vertices_within_0_065m": 38
+        }
+      },
+      "cloth_min_z": -0.07919587939977646
+    },
+    {
+      "frame": 12,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0012852223590016365,
+          "p05_clearance_m": 0.007880792953073978,
+          "centroid": [
+            0.3066559135913849,
+            -0.3775175213813782,
+            0.04642225429415703
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.011721367947757244,
+          "p05_clearance_m": 0.01565755344927311,
+          "centroid": [
+            -0.2896134555339813,
+            -0.36446598172187805,
+            0.04853387549519539
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7736130952835083,
+        -0.8630504608154297,
+        3.513928174972534
+      ],
+      "sword_grip": [
+        -0.8074197173118591,
+        -0.4777173101902008,
+        2.4759082794189453
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.333361268043518,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.014591946266591549,
+          "vertices_within_0_065m": 241
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0038163161370903254,
+          "vertices_within_0_065m": 509
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004720059689134359,
+          "vertices_within_0_065m": 195
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0254010371863842,
+          "vertices_within_0_065m": 39
+        }
+      },
+      "cloth_min_z": -0.08446334302425385
+    },
+    {
+      "frame": 13,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0017613684758543968,
+          "p05_clearance_m": 0.007632276974618435,
+          "centroid": [
+            0.3064335882663727,
+            -0.3772978186607361,
+            0.046409547328948975
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.012042702175676823,
+          "p05_clearance_m": 0.015828333795070648,
+          "centroid": [
+            -0.2898505926132202,
+            -0.36448585987091064,
+            0.04857518896460533
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7978923320770264,
+        -0.8011378049850464,
+        3.560734987258911
+      ],
+      "sword_grip": [
+        -0.8207658529281616,
+        -0.4554871916770935,
+        2.5189828872680664
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.3779689073562622,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.015446578152477741,
+          "vertices_within_0_065m": 264
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.002177452901378274,
+          "vertices_within_0_065m": 527
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.01016666367650032,
+          "vertices_within_0_065m": 207
+        },
+        "RightLeg": {
+          "min_distance_m": 0.03387005999684334,
+          "vertices_within_0_065m": 44
+        }
+      },
+      "cloth_min_z": -0.08973492681980133
+    },
+    {
+      "frame": 14,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0021805213764309883,
+          "p05_clearance_m": 0.007392182480543852,
+          "centroid": [
+            0.30622708797454834,
+            -0.3770836293697357,
+            0.046402398496866226
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.012361709028482437,
+          "p05_clearance_m": 0.01602759398519993,
+          "centroid": [
+            -0.29007694125175476,
+            -0.3644986152648926,
+            0.04861710965633392
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8193873167037964,
+        -0.7414787411689758,
+        3.6041407585144043
+      ],
+      "sword_grip": [
+        -0.8325018882751465,
+        -0.4341435134410858,
+        2.5595834255218506
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.4201856851577759,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.01405568327754736,
+          "vertices_within_0_065m": 296
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.00479993736371398,
+          "vertices_within_0_065m": 556
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.002793137449771166,
+          "vertices_within_0_065m": 221
+        },
+        "RightLeg": {
+          "min_distance_m": 0.029792513698339462,
+          "vertices_within_0_065m": 57
+        }
+      },
+      "cloth_min_z": -0.09490133076906204
+    },
+    {
+      "frame": 15,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0025411387905478477,
+          "p05_clearance_m": 0.007017115131020546,
+          "centroid": [
+            0.30603939294815063,
+            -0.37688127160072327,
+            0.04640037938952446
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0126512935385108,
+          "p05_clearance_m": 0.016241779550909996,
+          "centroid": [
+            -0.290287047624588,
+            -0.3645043969154358,
+            0.048657968640327454
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8375800848007202,
+        -0.6854080557823181,
+        3.6432361602783203
+      ],
+      "sword_grip": [
+        -0.8422123193740845,
+        -0.4141370952129364,
+        2.59674072265625
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.4589109420776367,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.011012658476829529,
+          "vertices_within_0_065m": 318
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.004714760463684797,
+          "vertices_within_0_065m": 569
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.003244036575779319,
+          "vertices_within_0_065m": 237
+        },
+        "RightLeg": {
+          "min_distance_m": 0.022272462025284767,
+          "vertices_within_0_065m": 71
+        }
+      },
+      "cloth_min_z": -0.09985535591840744
+    },
+    {
+      "frame": 16,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0028449883684515953,
+          "p05_clearance_m": 0.006613272242248058,
+          "centroid": [
+            0.30587464570999146,
+            -0.37669527530670166,
+            0.04640179127454758
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.012899362482130527,
+          "p05_clearance_m": 0.01636585406959057,
+          "centroid": [
+            -0.29047539830207825,
+            -0.3645032048225403,
+            0.04869619756937027
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8520114421844482,
+        -0.6342637538909912,
+        3.67716908454895
+      ],
+      "sword_grip": [
+        -0.8494856357574463,
+        -0.39591601490974426,
+        2.629490613937378
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.4930366277694702,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.008565295487642288,
+          "vertices_within_0_065m": 339
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.006508404389023781,
+          "vertices_within_0_065m": 585
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0053175888024270535,
+          "vertices_within_0_065m": 247
+        },
+        "RightLeg": {
+          "min_distance_m": 0.015276800841093063,
+          "vertices_within_0_065m": 90
+        }
+      },
+      "cloth_min_z": -0.10442803800106049
+    },
+    {
+      "frame": 17,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003095521591603756,
+          "p05_clearance_m": 0.006376440636813641,
+          "centroid": [
+            0.3057355284690857,
+            -0.37653109431266785,
+            0.04640575870871544
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013110393658280373,
+          "p05_clearance_m": 0.016526779159903526,
+          "centroid": [
+            -0.29063645005226135,
+            -0.3644959330558777,
+            0.04872919246554375
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8622695207595825,
+        -0.5893797278404236,
+        3.705134868621826
+      ],
+      "sword_grip": [
+        -0.853917121887207,
+        -0.3799266219139099,
+        2.656872510910034
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.521456241607666,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.005995553452521563,
+          "vertices_within_0_065m": 358
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.004755526781082153,
+          "vertices_within_0_065m": 601
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.007401356007903814,
+          "vertices_within_0_065m": 259
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010395016521215439,
+          "vertices_within_0_065m": 107
+        }
+      },
+      "cloth_min_z": -0.10847228765487671
+    },
+    {
+      "frame": 18,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0032985424622893333,
+          "p05_clearance_m": 0.006181772798299789,
+          "centroid": [
+            0.3056250810623169,
+            -0.37639501690864563,
+            0.0464094839990139
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013271903619170189,
+          "p05_clearance_m": 0.016702421009540558,
+          "centroid": [
+            -0.29076462984085083,
+            -0.36448371410369873,
+            0.04875505343079567
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8702067136764526,
+        -0.5481875538825989,
+        3.7297353744506836
+      ],
+      "sword_grip": [
+        -0.8573383688926697,
+        -0.3627159595489502,
+        2.681309461593628
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.5467582941055298,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0037172434385865927,
+          "vertices_within_0_065m": 373
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.002109931316226721,
+          "vertices_within_0_065m": 607
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.005159232299774885,
+          "vertices_within_0_065m": 275
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008844721131026745,
+          "vertices_within_0_065m": 119
+        }
+      },
+      "cloth_min_z": -0.11187410354614258
+    },
+    {
+      "frame": 19,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003456861712038517,
+          "p05_clearance_m": 0.006040937267243862,
+          "centroid": [
+            0.3055464029312134,
+            -0.3762914538383484,
+            0.04641380161046982
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013370070606470108,
+          "p05_clearance_m": 0.016805829480290413,
+          "centroid": [
+            -0.29085490107536316,
+            -0.3644663691520691,
+            0.04877094551920891
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8777735233306885,
+        -0.5088224411010742,
+        3.7538845539093018
+      ],
+      "sword_grip": [
+        -0.8616717457771301,
+        -0.3415452241897583,
+        2.70552659034729
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.5720146894454956,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0024974020197987556,
+          "vertices_within_0_065m": 387
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0004790644161403179,
+          "vertices_within_0_065m": 609
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0069718859158456326,
+          "vertices_within_0_065m": 274
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008928137831389904,
+          "vertices_within_0_065m": 128
+        }
+      },
+      "cloth_min_z": -0.11463192850351334
+    },
+    {
+      "frame": 20,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003576294519007206,
+          "p05_clearance_m": 0.005925131030380726,
+          "centroid": [
+            0.3055024743080139,
+            -0.37622570991516113,
+            0.04641557112336159
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013393732719123363,
+          "p05_clearance_m": 0.016843628138303757,
+          "centroid": [
+            -0.2909017503261566,
+            -0.3644447326660156,
+            0.048776205629110336
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8847057819366455,
+        -0.4736712872982025,
+        3.777250051498413
+      ],
+      "sword_grip": [
+        -0.8666383624076843,
+        -0.3179355561733246,
+        2.7290210723876953
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.596846580505371,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.003179573453962803,
+          "vertices_within_0_065m": 386
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0011046385625377297,
+          "vertices_within_0_065m": 609
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.007034945301711559,
+          "vertices_within_0_065m": 281
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010085168294608593,
+          "vertices_within_0_065m": 133
+        }
+      },
+      "cloth_min_z": -0.11717130988836288
+    },
+    {
+      "frame": 21,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0036745062097907066,
+          "p05_clearance_m": 0.005832219496369362,
+          "centroid": [
+            0.3054701089859009,
+            -0.37617477774620056,
+            0.04641669616103172
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013399887830018997,
+          "p05_clearance_m": 0.016859421506524086,
+          "centroid": [
+            -0.2909351885318756,
+            -0.3644242286682129,
+            0.04877852648496628
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8906962871551514,
+        -0.44510775804519653,
+        3.7994542121887207
+      ],
+      "sword_grip": [
+        -0.8719574809074402,
+        -0.29340726137161255,
+        2.751286029815674
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6207301616668701,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.002888626651838422,
+          "vertices_within_0_065m": 384
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0025166980922222137,
+          "vertices_within_0_065m": 613
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.008038066327571869,
+          "vertices_within_0_065m": 281
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01144325453788042,
+          "vertices_within_0_065m": 134
+        }
+      },
+      "cloth_min_z": -0.12106119841337204
+    },
+    {
+      "frame": 22,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0037644775584340096,
+          "p05_clearance_m": 0.0057719917967915535,
+          "centroid": [
+            0.30542606115341187,
+            -0.37611502408981323,
+            0.046419914811849594
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013447321020066738,
+          "p05_clearance_m": 0.0168890580534935,
+          "centroid": [
+            -0.2909848392009735,
+            -0.3644103705883026,
+            0.04878678917884827
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8968957662582397,
+        -0.41476160287857056,
+        3.8196284770965576
+      ],
+      "sword_grip": [
+        -0.8772646188735962,
+        -0.2684980630874634,
+        2.771554946899414
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6427127122879028,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0026081502437591553,
+          "vertices_within_0_065m": 387
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0034747126046568155,
+          "vertices_within_0_065m": 611
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.00804186426103115,
+          "vertices_within_0_065m": 282
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01255040429532528,
+          "vertices_within_0_065m": 136
+        }
+      },
+      "cloth_min_z": -0.12646184861660004
+    },
+    {
+      "frame": 23,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003842155449092388,
+          "p05_clearance_m": 0.005737537518143654,
+          "centroid": [
+            0.3053755462169647,
+            -0.3760514259338379,
+            0.04642454907298088
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013525941409170628,
+          "p05_clearance_m": 0.01693643257021904,
+          "centroid": [
+            -0.291044682264328,
+            -0.3644019663333893,
+            0.04879983142018318
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9041093587875366,
+        -0.3758132755756378,
+        3.836836099624634
+      ],
+      "sword_grip": [
+        -0.8821955323219299,
+        -0.24389225244522095,
+        2.7890822887420654
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.661948323249817,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0018173593562096357,
+          "vertices_within_0_065m": 394
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.004268469754606485,
+          "vertices_within_0_065m": 612
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0055794245563447475,
+          "vertices_within_0_065m": 283
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01364132110029459,
+          "vertices_within_0_065m": 143
+        }
+      },
+      "cloth_min_z": -0.13079167902469635
+    },
+    {
+      "frame": 24,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0039046788588166237,
+          "p05_clearance_m": 0.005677941255271435,
+          "centroid": [
+            0.3053232729434967,
+            -0.37598803639411926,
+            0.046429626643657684
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013623652048408985,
+          "p05_clearance_m": 0.016988083720207214,
+          "centroid": [
+            -0.29110848903656006,
+            -0.3643980920314789,
+            0.04881509765982628
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.911429762840271,
+        -0.33295387029647827,
+        3.850522041320801
+      ],
+      "sword_grip": [
+        -0.8864589333534241,
+        -0.22133320569992065,
+        2.8033952713012695
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6778090000152588,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0015560464235022664,
+          "vertices_within_0_065m": 400
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.003209842601791024,
+          "vertices_within_0_065m": 617
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0036242110654711723,
+          "vertices_within_0_065m": 276
+        },
+        "RightLeg": {
+          "min_distance_m": 0.012712209485471249,
+          "vertices_within_0_065m": 150
+        }
+      },
+      "cloth_min_z": -0.13424654304981232
+    },
+    {
+      "frame": 25,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003948512487113476,
+          "p05_clearance_m": 0.0055843256413936615,
+          "centroid": [
+            0.3052736818790436,
+            -0.3759308457374573,
+            0.04643518850207329
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013730407692492008,
+          "p05_clearance_m": 0.01705016940832138,
+          "centroid": [
+            -0.2911716103553772,
+            -0.36439836025238037,
+            0.04883210361003876
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9179974794387817,
+        -0.29088976979255676,
+        3.860180616378784
+      ],
+      "sword_grip": [
+        -0.8897689580917358,
+        -0.20256581902503967,
+        2.814023733139038
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6895983219146729,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0010857487795874476,
+          "vertices_within_0_065m": 407
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0022119255736470222,
+          "vertices_within_0_065m": 622
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0032803481444716454,
+          "vertices_within_0_065m": 277
+        },
+        "RightLeg": {
+          "min_distance_m": 0.011003601364791393,
+          "vertices_within_0_065m": 156
+        }
+      },
+      "cloth_min_z": -0.1370108425617218
+    },
+    {
+      "frame": 26,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003972009755671024,
+          "p05_clearance_m": 0.005524219013750553,
+          "centroid": [
+            0.30523183941841125,
+            -0.37588393688201904,
+            0.04644010588526726
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013833546079695225,
+          "p05_clearance_m": 0.01710500195622444,
+          "centroid": [
+            -0.2912265360355377,
+            -0.3644016981124878,
+            0.04884795844554901
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9230728149414062,
+        -0.2543331980705261,
+        3.8654253482818604
+      ],
+      "sword_grip": [
+        -0.891851007938385,
+        -0.18932895362377167,
+        2.8205063343048096
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6966155767440796,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0007095788605511189,
+          "vertices_within_0_065m": 417
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.002004921669140458,
+          "vertices_within_0_065m": 625
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.00453121168538928,
+          "vertices_within_0_065m": 274
+        },
+        "RightLeg": {
+          "min_distance_m": 0.009354842826724052,
+          "vertices_within_0_065m": 167
+        }
+      },
+      "cloth_min_z": -0.13908369839191437
+    },
+    {
+      "frame": 27,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0038068564608693123,
+          "p05_clearance_m": 0.0057405028492212296,
+          "centroid": [
+            0.3052050769329071,
+            -0.3759133219718933,
+            0.04644729942083359
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.01402369700372219,
+          "p05_clearance_m": 0.017189189791679382,
+          "centroid": [
+            -0.29126375913619995,
+            -0.3644596040248871,
+            0.04887588322162628
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9260635375976562,
+        -0.22800429165363312,
+        3.866015911102295
+      ],
+      "sword_grip": [
+        -0.8924462795257568,
+        -0.18335703015327454,
+        2.8223962783813477
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.69635808467865,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0005344297969713807,
+          "vertices_within_0_065m": 416
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0005613543326035142,
+          "vertices_within_0_065m": 623
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0033084929455071688,
+          "vertices_within_0_065m": 282
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00804251991212368,
+          "vertices_within_0_065m": 167
+        }
+      },
+      "cloth_min_z": -0.13866135478019714
+    },
+    {
+      "frame": 28,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003355138935148716,
+          "p05_clearance_m": 0.005994297564029694,
+          "centroid": [
+            0.30519795417785645,
+            -0.3760567903518677,
+            0.04645881429314613
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.014349129050970078,
+          "p05_clearance_m": 0.017269497737288475,
+          "centroid": [
+            -0.2912749648094177,
+            -0.36459997296333313,
+            0.04892268404364586
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9285491704940796,
+        -0.21107441186904907,
+        3.8650763034820557
+      ],
+      "sword_grip": [
+        -0.893360435962677,
+        -0.18083103001117706,
+        2.8224987983703613
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.691197156906128,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0038042832165956497,
+          "vertices_within_0_065m": 407
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0016288456972688437,
+          "vertices_within_0_065m": 623
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.001456175115890801,
+          "vertices_within_0_065m": 286
+        },
+        "RightLeg": {
+          "min_distance_m": 0.006083490327000618,
+          "vertices_within_0_065m": 163
+        }
+      },
+      "cloth_min_z": -0.13470801711082458
+    },
+    {
+      "frame": 29,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0027069086208939552,
+          "p05_clearance_m": 0.0062676286324858665,
+          "centroid": [
+            0.30521029233932495,
+            -0.37628173828125,
+            0.04647533595561981
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.014743809588253498,
+          "p05_clearance_m": 0.017419451847672462,
+          "centroid": [
+            -0.29125991463661194,
+            -0.36479079723358154,
+            0.04898041859269142
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9319006204605103,
+        -0.20221540331840515,
+        3.8659093379974365
+      ],
+      "sword_grip": [
+        -0.8961420059204102,
+        -0.17743678390979767,
+        2.823753595352173
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.685866355895996,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.004387655295431614,
+          "vertices_within_0_065m": 377
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.001678778906352818,
+          "vertices_within_0_065m": 623
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0024767459835857153,
+          "vertices_within_0_065m": 279
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004608431365340948,
+          "vertices_within_0_065m": 135
+        }
+      },
+      "cloth_min_z": -0.12848475575447083
+    },
+    {
+      "frame": 30,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.00569562055170536,
+          "p05_clearance_m": 0.014759831130504608,
+          "centroid": [
+            0.3070874512195587,
+            -0.38628828525543213,
+            0.05474771186709404
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.015124082565307617,
+          "p05_clearance_m": 0.017544079571962357,
+          "centroid": [
+            -0.29121875762939453,
+            -0.36500686407089233,
+            0.049043912440538406
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9361072778701782,
+        -0.194563627243042,
+        3.8674840927124023
+      ],
+      "sword_grip": [
+        -0.9000003933906555,
+        -0.17319588363170624,
+        2.8255984783172607
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6810318231582642,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.005903529468923807,
+          "vertices_within_0_065m": 393
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.004327469505369663,
+          "vertices_within_0_065m": 629
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.009372369386255741,
+          "vertices_within_0_065m": 249
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010006929747760296,
+          "vertices_within_0_065m": 99
+        }
+      },
+      "cloth_min_z": -0.11773767322301865
+    },
+    {
+      "frame": 31,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.027143124490976334,
+          "p05_clearance_m": 0.036510370671749115,
+          "centroid": [
+            0.31217995285987854,
+            -0.41315606236457825,
+            0.07699830830097198
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.015379272401332855,
+          "p05_clearance_m": 0.017590735107660294,
+          "centroid": [
+            -0.29114288091659546,
+            -0.36521464586257935,
+            0.04909845441579819
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9409822225570679,
+        -0.18232589960098267,
+        3.868781566619873
+      ],
+      "sword_grip": [
+        -0.9041522741317749,
+        -0.1682264506816864,
+        2.8274919986724854
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6752179861068726,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0031793066300451756,
+          "vertices_within_0_065m": 486
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.009619862772524357,
+          "vertices_within_0_065m": 614
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.007139231078326702,
+          "vertices_within_0_065m": 225
+        },
+        "RightLeg": {
+          "min_distance_m": 0.023716477677226067,
+          "vertices_within_0_065m": 61
+        }
+      },
+      "cloth_min_z": -0.10068986564874649
+    },
+    {
+      "frame": 32,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.05734545737504959,
+          "p05_clearance_m": 0.06755363941192627,
+          "centroid": [
+            0.31999674439430237,
+            -0.45328694581985474,
+            0.10808412730693817
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.01500884909182787,
+          "p05_clearance_m": 0.017323657870292664,
+          "centroid": [
+            -0.2907031178474426,
+            -0.3652880787849426,
+            0.0490141324698925
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9454307556152344,
+        -0.1710919886827469,
+        3.869948148727417
+      ],
+      "sword_grip": [
+        -0.9079595804214478,
+        -0.1636674702167511,
+        2.829228401184082
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.658773422241211,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007842035964131355,
+          "vertices_within_0_065m": 373
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.005940141621977091,
+          "vertices_within_0_065m": 350
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004342462867498398,
+          "vertices_within_0_065m": 184
+        },
+        "RightLeg": {
+          "min_distance_m": 0.03576275333762169,
+          "vertices_within_0_065m": 37
+        }
+      },
+      "cloth_min_z": -0.0890808254480362
+    },
+    {
+      "frame": 33,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.08989226818084717,
+          "p05_clearance_m": 0.10031698644161224,
+          "centroid": [
+            0.32997894287109375,
+            -0.5029188990592957,
+            0.14042337238788605
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.013259709812700748,
+          "p05_clearance_m": 0.016470471397042274,
+          "centroid": [
+            -0.28975754976272583,
+            -0.3650416135787964,
+            0.04874049499630928
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.948417067527771,
+        -0.16644394397735596,
+        3.871180772781372
+      ],
+      "sword_grip": [
+        -0.9107924699783325,
+        -0.16065077483654022,
+        2.830603837966919
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.6357907056808472,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.030259273946285248,
+          "vertices_within_0_065m": 110
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.044226374477148056,
+          "vertices_within_0_065m": 116
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.01971402019262314,
+          "vertices_within_0_065m": 123
+        },
+        "RightLeg": {
+          "min_distance_m": 0.022754032164812088,
+          "vertices_within_0_065m": 50
+        }
+      },
+      "cloth_min_z": -0.08310537040233612
+    },
+    {
+      "frame": 34,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.11697190999984741,
+          "p05_clearance_m": 0.12691378593444824,
+          "centroid": [
+            0.34125787019729614,
+            -0.5578046441078186,
+            0.1653253436088562
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.010634232312440872,
+          "p05_clearance_m": 0.014959106221795082,
+          "centroid": [
+            -0.2885974645614624,
+            -0.3643737733364105,
+            0.048406053334474564
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9488904476165771,
+        -0.17396622896194458,
+        3.872666597366333
+      ],
+      "sword_grip": [
+        -0.9120174050331116,
+        -0.16031189262866974,
+        2.8314146995544434
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.618558645248413,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.005838095210492611,
+          "vertices_within_0_065m": 44
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1062132716178894,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.03866805508732796,
+          "vertices_within_0_065m": 67
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0028195001650601625,
+          "vertices_within_0_065m": 127
+        }
+      },
+      "cloth_min_z": -0.06580618768930435
+    },
+    {
+      "frame": 35,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.13086652755737305,
+          "p05_clearance_m": 0.13985323905944824,
+          "centroid": [
+            0.3528325855731964,
+            -0.6132879853248596,
+            0.17626729607582092
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.007024936378002167,
+          "p05_clearance_m": 0.012351431883871555,
+          "centroid": [
+            -0.2875387668609619,
+            -0.36302080750465393,
+            0.04807629436254501
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9395487308502197,
+        -0.2553148567676544,
+        3.858409881591797
+      ],
+      "sword_grip": [
+        -0.9049170017242432,
+        -0.2198587954044342,
+        2.815443277359009
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.606948971748352,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.03717641159892082,
+          "vertices_within_0_065m": 40
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.13413888216018677,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0354037769138813,
+          "vertices_within_0_065m": 14
+        },
+        "RightLeg": {
+          "min_distance_m": 0.009719736874103546,
+          "vertices_within_0_065m": 212
+        }
+      },
+      "cloth_min_z": -0.074944406747818
+    },
+    {
+      "frame": 36,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.1270366758108139,
+          "p05_clearance_m": 0.13547302782535553,
+          "centroid": [
+            0.3653465807437897,
+            -0.6745436191558838,
+            0.16982771456241608
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0032226070761680603,
+          "p05_clearance_m": 0.009409463033080101,
+          "centroid": [
+            -0.2868024408817291,
+            -0.3612574636936188,
+            0.047925062477588654
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8967909812927246,
+        -0.43463966250419617,
+        3.812180995941162
+      ],
+      "sword_grip": [
+        -0.8669000267982483,
+        -0.35901522636413574,
+        2.76666522026062
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.569053053855896,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0027588766533881426,
+          "vertices_within_0_065m": 51
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.14765454828739166,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.046733517199754715,
+          "vertices_within_0_065m": 5
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00527509581297636,
+          "vertices_within_0_065m": 321
+        }
+      },
+      "cloth_min_z": -0.10662475973367691
+    },
+    {
+      "frame": 37,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.10060766339302063,
+          "p05_clearance_m": 0.10810823738574982,
+          "centroid": [
+            0.3784824311733246,
+            -0.7423276305198669,
+            0.14113213121891022
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0005134334787726402,
+          "p05_clearance_m": 0.007168714888393879,
+          "centroid": [
+            -0.28648191690444946,
+            -0.35971277952194214,
+            0.047982729971408844
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7787845134735107,
+        -0.7591269016265869,
+        3.735234498977661
+      ],
+      "sword_grip": [
+        -0.7739936113357544,
+        -0.5317666530609131,
+        2.687283754348755
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.4799137115478516,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007437095511704683,
+          "vertices_within_0_065m": 61
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1688094437122345,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.037813834846019745,
+          "vertices_within_0_065m": 8
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0017623566091060638,
+          "vertices_within_0_065m": 474
+        }
+      },
+      "cloth_min_z": -0.14380747079849243
+    },
+    {
+      "frame": 38,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.06015941873192787,
+          "p05_clearance_m": 0.06642433255910873,
+          "centroid": [
+            0.39024022221565247,
+            -0.8052164316177368,
+            0.09889502823352814
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0012380173429846764,
+          "p05_clearance_m": 0.005271892063319683,
+          "centroid": [
+            -0.2863980531692505,
+            -0.3585563898086548,
+            0.04813322424888611
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.3993135690689087,
+        -1.4850741624832153,
+        3.523649215698242
+      ],
+      "sword_grip": [
+        -0.5746345520019531,
+        -0.7404190301895142,
+        2.561936378479004
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.3757715225219727,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.006842524278908968,
+          "vertices_within_0_065m": 81
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1573680341243744,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.03420666232705116,
+          "vertices_within_0_065m": 12
+        },
+        "RightLeg": {
+          "min_distance_m": 0.002479070331901312,
+          "vertices_within_0_065m": 623
+        }
+      },
+      "cloth_min_z": -0.17882949113845825
+    },
+    {
+      "frame": 39,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.02507806196808815,
+          "p05_clearance_m": 0.03027048148214817,
+          "centroid": [
+            0.3988792896270752,
+            -0.8515535593032837,
+            0.0622161366045475
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0022467365488409996,
+          "p05_clearance_m": 0.00411843229085207,
+          "centroid": [
+            -0.2863225042819977,
+            -0.35775482654571533,
+            0.048301611095666885
+          ]
+        }
+      },
+      "sword_tip": [
+        -0.523422360420227,
+        -2.315275192260742,
+        2.8674821853637695
+      ],
+      "sword_grip": [
+        -0.2751002311706543,
+        -0.9548609852790833,
+        2.370384931564331
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.272876501083374,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.005163146182894707,
+          "vertices_within_0_065m": 115
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1411137580871582,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.02974599413573742,
+          "vertices_within_0_065m": 17
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00016382517060264945,
+          "vertices_within_0_065m": 720
+        }
+      },
+      "cloth_min_z": -0.2059742659330368
+    },
+    {
+      "frame": 40,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011106867343187332,
+          "p05_clearance_m": 0.01580965891480446,
+          "centroid": [
+            0.40230968594551086,
+            -0.8696014881134033,
+            0.047449514269828796
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0025769462808966637,
+          "p05_clearance_m": 0.003743208944797516,
+          "centroid": [
+            -0.2862509489059448,
+            -0.3574221432209015,
+            0.04839222505688667
+          ]
+        }
+      },
+      "sword_tip": [
+        0.5708063244819641,
+        -2.3899333477020264,
+        1.8380708694458008
+      ],
+      "sword_grip": [
+        0.026710674166679382,
+        -1.0583454370498657,
+        2.1386232376098633
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0554349422454834,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.004367285408079624,
+          "vertices_within_0_065m": 132
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1305864453315735,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.02805025316774845,
+          "vertices_within_0_065m": 29
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0017882250249385834,
+          "vertices_within_0_065m": 847
+        }
+      },
+      "cloth_min_z": -0.21757282316684723
+    },
+    {
+      "frame": 41,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.01160391978919506,
+          "p05_clearance_m": 0.016051597893238068,
+          "centroid": [
+            0.40241116285324097,
+            -0.8696778416633606,
+            0.04750550538301468
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.002457127906382084,
+          "p05_clearance_m": 0.00376852136105299,
+          "centroid": [
+            -0.2861899435520172,
+            -0.35746583342552185,
+            0.04838887229561806
+          ]
+        }
+      },
+      "sword_tip": [
+        1.2173395156860352,
+        -1.709631323814392,
+        1.0972347259521484
+      ],
+      "sword_grip": [
+        0.24359261989593506,
+        -1.0027270317077637,
+        1.9407997131347656
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.792908787727356,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.002348770387470722,
+          "vertices_within_0_065m": 155
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.121821828186512,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.020128363743424416,
+          "vertices_within_0_065m": 45
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0013409267412498593,
+          "vertices_within_0_065m": 954
+        }
+      },
+      "cloth_min_z": -0.2136249840259552
+    },
+    {
+      "frame": 42,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.012295914813876152,
+          "p05_clearance_m": 0.016407988965511322,
+          "centroid": [
+            0.4024684429168701,
+            -0.8698481917381287,
+            0.047582242637872696
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.002150389365851879,
+          "p05_clearance_m": 0.00418196152895689,
+          "centroid": [
+            -0.28614890575408936,
+            -0.357673704624176,
+            0.04834248870611191
+          ]
+        }
+      },
+      "sword_tip": [
+        1.4303772449493408,
+        -1.0604523420333862,
+        0.7947156429290771
+      ],
+      "sword_grip": [
+        0.38195985555648804,
+        -0.8825011849403381,
+        1.8089404106140137
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5870323181152344,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.008238120004534721,
+          "vertices_within_0_065m": 194
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.10759323090314865,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.02153824083507061,
+          "vertices_within_0_065m": 135
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0012832945212721825,
+          "vertices_within_0_065m": 1010
+        }
+      },
+      "cloth_min_z": -0.20161262154579163
+    },
+    {
+      "frame": 43,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013096306473016739,
+          "p05_clearance_m": 0.01668573170900345,
+          "centroid": [
+            0.4024890065193176,
+            -0.8700761795043945,
+            0.0476713664829731
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0016994709149003029,
+          "p05_clearance_m": 0.004660747945308685,
+          "centroid": [
+            -0.28612539172172546,
+            -0.35799625515937805,
+            0.048272404819726944
+          ]
+        }
+      },
+      "sword_tip": [
+        1.4596970081329346,
+        -0.5930545330047607,
+        0.6957650184631348
+      ],
+      "sword_grip": [
+        0.4417854845523834,
+        -0.7610142230987549,
+        1.7422561645507812
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.3995845317840576,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.002410427900031209,
+          "vertices_within_0_065m": 235
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.08859501779079437,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0060603744350373745,
+          "vertices_within_0_065m": 334
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0010110961738973856,
+          "vertices_within_0_065m": 1016
+        }
+      },
+      "cloth_min_z": -0.1974102109670639
+    },
+    {
+      "frame": 44,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013888995163142681,
+          "p05_clearance_m": 0.016907861456274986,
+          "centroid": [
+            0.4024807810783386,
+            -0.8703190684318542,
+            0.04776232689619064
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.001166067086160183,
+          "p05_clearance_m": 0.005196320824325085,
+          "centroid": [
+            -0.2861192524433136,
+            -0.3583730161190033,
+            0.04819856956601143
+          ]
+        }
+      },
+      "sword_tip": [
+        1.4257316589355469,
+        -0.28261610865592957,
+        0.6877689361572266
+      ],
+      "sword_grip": [
+        0.45315346121788025,
+        -0.6522724032402039,
+        1.7255282402038574
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.3042012155056,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0021130037494003773,
+          "vertices_within_0_065m": 282
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06967033445835114,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.021212322637438774,
+          "vertices_within_0_065m": 535
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0010604799026623368,
+          "vertices_within_0_065m": 1012
+        }
+      },
+      "cloth_min_z": -0.1996588259935379
+    },
+    {
+      "frame": 45,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.014419957995414734,
+          "p05_clearance_m": 0.017110975459218025,
+          "centroid": [
+            0.4024336040019989,
+            -0.8705089688301086,
+            0.047823715955019
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0006773928180336952,
+          "p05_clearance_m": 0.005744246765971184,
+          "centroid": [
+            -0.286138653755188,
+            -0.3587205111980438,
+            0.048137012869119644
+          ]
+        }
+      },
+      "sword_tip": [
+        1.3962455987930298,
+        -0.07230738550424576,
+        0.7213400602340698
+      ],
+      "sword_grip": [
+        0.45571455359458923,
+        -0.5465518236160278,
+        1.7460318803787231
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.3030548095703125,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0014371848665177822,
+          "vertices_within_0_065m": 303
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.05561654642224312,
+          "vertices_within_0_065m": 17
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.022709982469677925,
+          "vertices_within_0_065m": 607
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0030350438319146633,
+          "vertices_within_0_065m": 944
+        }
+      },
+      "cloth_min_z": -0.19955405592918396
+    },
+    {
+      "frame": 46,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.014396429993212223,
+          "p05_clearance_m": 0.01706818677484989,
+          "centroid": [
+            0.4023529887199402,
+            -0.8705592155456543,
+            0.047819606959819794
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.00044812075793743134,
+          "p05_clearance_m": 0.006140546873211861,
+          "centroid": [
+            -0.28618523478507996,
+            -0.3589080572128296,
+            0.048103224486112595
+          ]
+        }
+      },
+      "sword_tip": [
+        1.4169001579284668,
+        0.09964753687381744,
+        0.8513305187225342
+      ],
+      "sword_grip": [
+        0.4572862982749939,
+        -0.4501267075538635,
+        1.8190020322799683
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.3796846568584442,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.004043650813400745,
+          "vertices_within_0_065m": 294
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0533023439347744,
+          "vertices_within_0_065m": 24
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.026072505861520767,
+          "vertices_within_0_065m": 557
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0029772429261356592,
+          "vertices_within_0_065m": 894
+        }
+      },
+      "cloth_min_z": -0.1995532065629959
+    },
+    {
+      "frame": 47,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013929616659879684,
+          "p05_clearance_m": 0.016874704509973526,
+          "centroid": [
+            0.4022884964942932,
+            -0.8704724311828613,
+            0.04776453971862793
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0005396557971835136,
+          "p05_clearance_m": 0.006033724173903465,
+          "centroid": [
+            -0.28622087836265564,
+            -0.35888901352882385,
+            0.04810125753283501
+          ]
+        }
+      },
+      "sword_tip": [
+        1.5107966661453247,
+        0.2591874599456787,
+        1.1428782939910889
+      ],
+      "sword_grip": [
+        0.4593859612941742,
+        -0.3775593638420105,
+        1.9482274055480957
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5590513348579407,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0007757635903544724,
+          "vertices_within_0_065m": 266
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.05736829712986946,
+          "vertices_within_0_065m": 14
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.028473757207393646,
+          "vertices_within_0_065m": 454
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008523963391780853,
+          "vertices_within_0_065m": 930
+        }
+      },
+      "cloth_min_z": -0.2004801332950592
+    },
+    {
+      "frame": 48,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013371730223298073,
+          "p05_clearance_m": 0.016829954460263252,
+          "centroid": [
+            0.4022749066352844,
+            -0.8703281283378601,
+            0.04770240560173988
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0008066734299063683,
+          "p05_clearance_m": 0.0056401463225483894,
+          "centroid": [
+            -0.2862120568752289,
+            -0.3587389588356018,
+            0.048124685883522034
+          ]
+        }
+      },
+      "sword_tip": [
+        1.6372507810592651,
+        0.3959926962852478,
+        1.622572422027588
+      ],
+      "sword_grip": [
+        0.46020111441612244,
+        -0.3330290913581848,
+        2.1150963306427
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.8126024603843689,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.004248224198818207,
+          "vertices_within_0_065m": 242
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06645315140485764,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.03421095013618469,
+          "vertices_within_0_065m": 299
+        },
+        "RightLeg": {
+          "min_distance_m": 0.007926106452941895,
+          "vertices_within_0_065m": 886
+        }
+      },
+      "cloth_min_z": -0.20024049282073975
+    },
+    {
+      "frame": 49,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.01164223998785019,
+          "p05_clearance_m": 0.016003742814064026,
+          "centroid": [
+            0.4019145667552948,
+            -0.8700764775276184,
+            0.04750507324934006
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0011709006503224373,
+          "p05_clearance_m": 0.005347647704184055,
+          "centroid": [
+            -0.2863982617855072,
+            -0.3586565852165222,
+            0.04811559617519379
+          ]
+        }
+      },
+      "sword_tip": [
+        1.6959201097488403,
+        0.4782343804836273,
+        2.2776007652282715
+      ],
+      "sword_grip": [
+        0.4564224183559418,
+        -0.31076502799987793,
+        2.3025460243225098
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0684573650360107,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.003572952700778842,
+          "vertices_within_0_065m": 168
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.09323898702859879,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.03024529665708542,
+          "vertices_within_0_065m": 104
+        },
+        "RightLeg": {
+          "min_distance_m": 0.016120610758662224,
+          "vertices_within_0_065m": 609
+        }
+      },
+      "cloth_min_z": -0.19732536375522614
+    },
+    {
+      "frame": 50,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.007970089092850685,
+          "p05_clearance_m": 0.014312324114143848,
+          "centroid": [
+            0.40099090337753296,
+            -0.8695849180221558,
+            0.04712177813053131
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0013609649613499641,
+          "p05_clearance_m": 0.005499589256942272,
+          "centroid": [
+            -0.28697869181632996,
+            -0.3587566614151001,
+            0.04804825782775879
+          ]
+        }
+      },
+      "sword_tip": [
+        1.6037688255310059,
+        0.4699002802371979,
+        2.9223506450653076
+      ],
+      "sword_grip": [
+        0.43969741463661194,
+        -0.30803579092025757,
+        2.4759767055511475
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.2171783447265625,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.020534364506602287,
+          "vertices_within_0_065m": 96
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.14206385612487793,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.042521677911281586,
+          "vertices_within_0_065m": 38
+        },
+        "RightLeg": {
+          "min_distance_m": 0.012236647307872772,
+          "vertices_within_0_065m": 288
+        }
+      },
+      "cloth_min_z": -0.18756890296936035
+    },
+    {
+      "frame": 51,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.003366740420460701,
+          "p05_clearance_m": 0.01202946063131094,
+          "centroid": [
+            0.39981895685195923,
+            -0.8687846660614014,
+            0.04670814424753189
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": -0.0009197099134325981,
+          "p05_clearance_m": 0.006457538343966007,
+          "centroid": [
+            -0.28786349296569824,
+            -0.35891756415367126,
+            0.047996461391448975
+          ]
+        }
+      },
+      "sword_tip": [
+        1.4448387622833252,
+        0.40248897671699524,
+        3.3591935634613037
+      ],
+      "sword_grip": [
+        0.4178137183189392,
+        -0.3160015344619751,
+        2.5920629501342773
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.3107433319091797,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.013068731874227524,
+          "vertices_within_0_065m": 43
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.1393718272447586,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.05384053662419319,
+          "vertices_within_0_065m": 10
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004430050496011972,
+          "vertices_within_0_065m": 279
+        }
+      },
+      "cloth_min_z": -0.17487119138240814
+    },
+    {
+      "frame": 52,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0007800357416272163,
+          "p05_clearance_m": 0.009071331471204758,
+          "centroid": [
+            0.39873024821281433,
+            -0.8677679896354675,
+            0.04639985412359238
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.00026269350200891495,
+          "p05_clearance_m": 0.00797208584845066,
+          "centroid": [
+            -0.2888680398464203,
+            -0.3590157926082611,
+            0.0480225533246994
+          ]
+        }
+      },
+      "sword_tip": [
+        1.3110617399215698,
+        0.31903302669525146,
+        3.604387044906616
+      ],
+      "sword_grip": [
+        0.3853387236595154,
+        -0.329860657453537,
+        2.665520191192627
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.368209719657898,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.04278864711523056,
+          "vertices_within_0_065m": 40
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0680432915687561,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.006355017889291048,
+          "vertices_within_0_065m": 161
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010441090911626816,
+          "vertices_within_0_065m": 352
+        }
+      },
+      "cloth_min_z": -0.18901824951171875
+    },
+    {
+      "frame": 53,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003981639631092548,
+          "p05_clearance_m": 0.007131790742278099,
+          "centroid": [
+            0.3979763090610504,
+            -0.8668099641799927,
+            0.046240855008363724
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0016322918236255646,
+          "p05_clearance_m": 0.009854022413492203,
+          "centroid": [
+            -0.2897176444530487,
+            -0.358988493680954,
+            0.04812033101916313
+          ]
+        }
+      },
+      "sword_tip": [
+        1.2406158447265625,
+        0.20214590430259705,
+        3.70279860496521
+      ],
+      "sword_grip": [
+        0.3427796959877014,
+        -0.37793096899986267,
+        2.6943843364715576
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.401401162147522,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007066238205879927,
+          "vertices_within_0_065m": 133
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.023192815482616425,
+          "vertices_within_0_065m": 141
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.009981789626181126,
+          "vertices_within_0_065m": 253
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0029845230747014284,
+          "vertices_within_0_065m": 326
+        }
+      },
+      "cloth_min_z": -0.20399673283100128
+    },
+    {
+      "frame": 54,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.005576536990702152,
+          "p05_clearance_m": 0.006120031699538231,
+          "centroid": [
+            0.3976937532424927,
+            -0.8662365674972534,
+            0.04618711397051811
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002376144751906395,
+          "p05_clearance_m": 0.010933749377727509,
+          "centroid": [
+            -0.29011568427085876,
+            -0.35886430740356445,
+            0.04820086061954498
+          ]
+        }
+      },
+      "sword_tip": [
+        1.1888002157211304,
+        -0.09599347412586212,
+        3.7002084255218506
+      ],
+      "sword_grip": [
+        0.2657586932182312,
+        -0.5329904556274414,
+        2.6435506343841553
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.390910029411316,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0014299124013632536,
+          "vertices_within_0_065m": 188
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.024358106777071953,
+          "vertices_within_0_065m": 164
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0017114949878305197,
+          "vertices_within_0_065m": 259
+        },
+        "RightLeg": {
+          "min_distance_m": 0.006071181036531925,
+          "vertices_within_0_065m": 323
+        }
+      },
+      "cloth_min_z": -0.2168683409690857
+    },
+    {
+      "frame": 55,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006264251656830311,
+          "p05_clearance_m": 0.005922782234847546,
+          "centroid": [
+            0.3976815938949585,
+            -0.8659908771514893,
+            0.046168431639671326
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0024498989805579185,
+          "p05_clearance_m": 0.011142035946249962,
+          "centroid": [
+            -0.29018571972846985,
+            -0.3587338626384735,
+            0.048233285546302795
+          ]
+        }
+      },
+      "sword_tip": [
+        1.039229154586792,
+        -0.9373310804367065,
+        3.6702561378479004
+      ],
+      "sword_grip": [
+        0.1253182739019394,
+        -0.7911186218261719,
+        2.5288145542144775
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.3807194232940674,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0016388619551435113,
+          "vertices_within_0_065m": 199
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.03608814626932144,
+          "vertices_within_0_065m": 118
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.003797737881541252,
+          "vertices_within_0_065m": 262
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0009807284222915769,
+          "vertices_within_0_065m": 315
+        }
+      },
+      "cloth_min_z": -0.22725854814052582
+    },
+    {
+      "frame": 56,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006734381429851055,
+          "p05_clearance_m": 0.005801641382277012,
+          "centroid": [
+            0.39766302704811096,
+            -0.8658159375190735,
+            0.04615732282400131
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002550938166677952,
+          "p05_clearance_m": 0.011348665691912174,
+          "centroid": [
+            -0.2902480959892273,
+            -0.35865333676338196,
+            0.048257194459438324
+          ]
+        }
+      },
+      "sword_tip": [
+        0.4506854712963104,
+        -2.0411715507507324,
+        3.238424777984619
+      ],
+      "sword_grip": [
+        -0.08043134212493896,
+        -1.009141445159912,
+        2.3371329307556152
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.2475523948669434,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007780362386256456,
+          "vertices_within_0_065m": 204
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.03691916912794113,
+          "vertices_within_0_065m": 151
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0020641672890633345,
+          "vertices_within_0_065m": 284
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0032801406923681498,
+          "vertices_within_0_065m": 338
+        }
+      },
+      "cloth_min_z": -0.23527324199676514
+    },
+    {
+      "frame": 57,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006983558647334576,
+          "p05_clearance_m": 0.005649247206747532,
+          "centroid": [
+            0.39761894941329956,
+            -0.8657117486000061,
+            0.04615398123860359
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0027139149606227875,
+          "p05_clearance_m": 0.011484067887067795,
+          "centroid": [
+            -0.2903178334236145,
+            -0.35863420367240906,
+            0.04827345535159111
+          ]
+        }
+      },
+      "sword_tip": [
+        -0.5547013282775879,
+        -2.481567859649658,
+        2.286709785461426
+      ],
+      "sword_grip": [
+        -0.3249697685241699,
+        -1.0447524785995483,
+        2.081083297729492
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.02741539478302,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0026839927304536104,
+          "vertices_within_0_065m": 212
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.03277849033474922,
+          "vertices_within_0_065m": 236
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0009917120914906263,
+          "vertices_within_0_065m": 300
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0011324272491037846,
+          "vertices_within_0_065m": 359
+        }
+      },
+      "cloth_min_z": -0.23951475322246552
+    },
+    {
+      "frame": 58,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006986540742218494,
+          "p05_clearance_m": 0.005643456242978573,
+          "centroid": [
+            0.3975735604763031,
+            -0.8656962513923645,
+            0.04615461081266403
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002908601425588131,
+          "p05_clearance_m": 0.011607231572270393,
+          "centroid": [
+            -0.29037490487098694,
+            -0.3586808741092682,
+            0.048276957124471664
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.354457974433899,
+        -2.076112985610962,
+        1.4085710048675537
+      ],
+      "sword_grip": [
+        -0.5357494354248047,
+        -0.934373676776886,
+        1.839436650276184
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.8147513270378113,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007261601276695728,
+          "vertices_within_0_065m": 222
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.017821434885263443,
+          "vertices_within_0_065m": 340
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0011253695702180266,
+          "vertices_within_0_065m": 307
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00011061898112529889,
+          "vertices_within_0_065m": 367
+        }
+      },
+      "cloth_min_z": -0.23891334235668182
+    },
+    {
+      "frame": 59,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006763706915080547,
+          "p05_clearance_m": 0.005711407400667667,
+          "centroid": [
+            0.39755451679229736,
+            -0.8657692074775696,
+            0.04615895822644234
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0030803782865405083,
+          "p05_clearance_m": 0.01161195244640112,
+          "centroid": [
+            -0.2903963327407837,
+            -0.35877904295921326,
+            0.048265643417835236
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.7238909006118774,
+        -1.5121874809265137,
+        0.9383727312088013
+      ],
+      "sword_grip": [
+        -0.6752356886863708,
+        -0.7836366295814514,
+        1.6657207012176514
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.6669498085975647,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.009608183056116104,
+          "vertices_within_0_065m": 241
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0011912137269973755,
+          "vertices_within_0_065m": 442
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004913780838251114,
+          "vertices_within_0_065m": 304
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0012083748588338494,
+          "vertices_within_0_065m": 376
+        }
+      },
+      "cloth_min_z": -0.2339017242193222
+    },
+    {
+      "frame": 60,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.006370645947754383,
+          "p05_clearance_m": 0.005902471020817757,
+          "centroid": [
+            0.39755484461784363,
+            -0.8659082055091858,
+            0.04616747051477432
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0032365936785936356,
+          "p05_clearance_m": 0.011711535975337029,
+          "centroid": [
+            -0.2903915047645569,
+            -0.35891464352607727,
+            0.04824479669332504
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8666338920593262,
+        -1.0532326698303223,
+        0.7138843536376953
+      ],
+      "sword_grip": [
+        -0.7418777942657471,
+        -0.6511893272399902,
+        1.5699121952056885
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5788936018943787,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0036899568513035774,
+          "vertices_within_0_065m": 268
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0014448575675487518,
+          "vertices_within_0_065m": 515
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0016929695848375559,
+          "vertices_within_0_065m": 285
+        },
+        "RightLeg": {
+          "min_distance_m": 0.003543850965797901,
+          "vertices_within_0_065m": 377
+        }
+      },
+      "cloth_min_z": -0.22593824565410614
+    },
+    {
+      "frame": 61,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.005863823927938938,
+          "p05_clearance_m": 0.006065811961889267,
+          "centroid": [
+            0.3975668251514435,
+            -0.8660889863967896,
+            0.04618003964424133
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.003383955918252468,
+          "p05_clearance_m": 0.011857676319777966,
+          "centroid": [
+            -0.29036980867385864,
+            -0.35907217860221863,
+            0.04821956902742386
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8995550870895386,
+        -0.7209822535514832,
+        0.6282650828361511
+      ],
+      "sword_grip": [
+        -0.7583508491516113,
+        -0.5429943799972534,
+        1.5368202924728394
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5429891347885132,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.00485981022939086,
+          "vertices_within_0_065m": 295
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.001631604740396142,
+          "vertices_within_0_065m": 598
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.006649610586464405,
+          "vertices_within_0_065m": 285
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0020175545942038298,
+          "vertices_within_0_065m": 384
+        }
+      },
+      "cloth_min_z": -0.2308177500963211
+    },
+    {
+      "frame": 62,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.005310644395649433,
+          "p05_clearance_m": 0.0061997296288609505,
+          "centroid": [
+            0.3975844383239746,
+            -0.8662844300270081,
+            0.04619544744491577
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0035243025049567223,
+          "p05_clearance_m": 0.011923914775252342,
+          "centroid": [
+            -0.2903411388397217,
+            -0.35923314094543457,
+            0.04819418862462044
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9004002809524536,
+        -0.4931434988975525,
+        0.6029404401779175
+      ],
+      "sword_grip": [
+        -0.7613318562507629,
+        -0.44383904337882996,
+        1.530082106590271
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5389902591705322,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0030244779773056507,
+          "vertices_within_0_065m": 327
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.003571127075701952,
+          "vertices_within_0_065m": 662
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004506546538323164,
+          "vertices_within_0_065m": 264
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0005606863414868712,
+          "vertices_within_0_065m": 392
+        }
+      },
+      "cloth_min_z": -0.23394764959812164
+    },
+    {
+      "frame": 63,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.004794330336153507,
+          "p05_clearance_m": 0.006322628818452358,
+          "centroid": [
+            0.39760011434555054,
+            -0.866463840007782,
+            0.046211473643779755
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.003653573803603649,
+          "p05_clearance_m": 0.01194546464830637,
+          "centroid": [
+            -0.2903148829936981,
+            -0.35937678813934326,
+            0.04817328602075577
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8928769826889038,
+        -0.3547499179840088,
+        0.6051392555236816
+      ],
+      "sword_grip": [
+        -0.7573637962341309,
+        -0.36243683099746704,
+        1.5379033088684082
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5122188329696655,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0021682321093976498,
+          "vertices_within_0_065m": 338
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.000883530592545867,
+          "vertices_within_0_065m": 692
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004281686153262854,
+          "vertices_within_0_065m": 253
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0016125960974022746,
+          "vertices_within_0_065m": 401
+        }
+      },
+      "cloth_min_z": -0.23487403988838196
+    },
+    {
+      "frame": 64,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.004333545453846455,
+          "p05_clearance_m": 0.00675798486918211,
+          "centroid": [
+            0.39763882756233215,
+            -0.8666280508041382,
+            0.0462283231317997
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.00366087444126606,
+          "p05_clearance_m": 0.01189403235912323,
+          "centroid": [
+            -0.2902590036392212,
+            -0.3594781160354614,
+            0.048152368515729904
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.886112093925476,
+        -0.2868916392326355,
+        0.6160352826118469
+      ],
+      "sword_grip": [
+        -0.7516145706176758,
+        -0.307361364364624,
+        1.5498418807983398
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.4939691424369812,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0014368057018145919,
+          "vertices_within_0_065m": 368
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.004206059500575066,
+          "vertices_within_0_065m": 687
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.005459588952362537,
+          "vertices_within_0_065m": 258
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004079754464328289,
+          "vertices_within_0_065m": 400
+        }
+      },
+      "cloth_min_z": -0.23143969476222992
+    },
+    {
+      "frame": 65,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.003961543552577496,
+          "p05_clearance_m": 0.007136988453567028,
+          "centroid": [
+            0.3977232873439789,
+            -0.8667715191841125,
+            0.04624180123209953
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.003447389230132103,
+          "p05_clearance_m": 0.011687546968460083,
+          "centroid": [
+            -0.29014554619789124,
+            -0.359510213136673,
+            0.04812898859381676
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8835738897323608,
+        -0.2710741460323334,
+        0.6225237250328064
+      ],
+      "sword_grip": [
+        -0.7487313151359558,
+        -0.2873164117336273,
+        1.5559948682785034
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.4867655038833618,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0013522005174309015,
+          "vertices_within_0_065m": 383
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.00370342331007123,
+          "vertices_within_0_065m": 709
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0119741540402174,
+          "vertices_within_0_065m": 258
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0038316179998219013,
+          "vertices_within_0_065m": 411
+        }
+      },
+      "cloth_min_z": -0.2256583720445633
+    },
+    {
+      "frame": 66,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0035022562369704247,
+          "p05_clearance_m": 0.0077391816303133965,
+          "centroid": [
+            0.3978334665298462,
+            -0.8669426441192627,
+            0.04626083001494408
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.003133934922516346,
+          "p05_clearance_m": 0.011348030529916286,
+          "centroid": [
+            -0.28999149799346924,
+            -0.35953304171562195,
+            0.04810062423348427
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.884955644607544,
+        -0.2847675085067749,
+        0.6253761053085327
+      ],
+      "sword_grip": [
+        -0.7491316795349121,
+        -0.28832942247390747,
+        1.5577871799468994
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.4832345247268677,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0006883427267894149,
+          "vertices_within_0_065m": 398
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.002414389979094267,
+          "vertices_within_0_065m": 754
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.014254733920097351,
+          "vertices_within_0_065m": 261
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004190002102404833,
+          "vertices_within_0_065m": 425
+        }
+      },
+      "cloth_min_z": -0.21598798036575317
+    },
+    {
+      "frame": 67,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0027239983901381493,
+          "p05_clearance_m": 0.008302390575408936,
+          "centroid": [
+            0.39795544743537903,
+            -0.8672075271606445,
+            0.04629617929458618
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002851029857993126,
+          "p05_clearance_m": 0.010932955890893936,
+          "centroid": [
+            -0.28981077671051025,
+            -0.3596121668815613,
+            0.04806521534919739
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8867753744125366,
+        -0.30807846784591675,
+        0.6330244541168213
+      ],
+      "sword_grip": [
+        -0.7494903802871704,
+        -0.29050806164741516,
+        1.5634933710098267
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.48134297132492065,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.001908850041218102,
+          "vertices_within_0_065m": 397
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0039140041917562485,
+          "vertices_within_0_065m": 777
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.007037617731839418,
+          "vertices_within_0_065m": 262
+        },
+        "RightLeg": {
+          "min_distance_m": 0.006993657443672419,
+          "vertices_within_0_065m": 417
+        }
+      },
+      "cloth_min_z": -0.20128321647644043
+    },
+    {
+      "frame": 68,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.0016525117680430412,
+          "p05_clearance_m": 0.008627652190625668,
+          "centroid": [
+            0.398087739944458,
+            -0.8675490617752075,
+            0.046350330114364624
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002619713544845581,
+          "p05_clearance_m": 0.010453560389578342,
+          "centroid": [
+            -0.2896127998828888,
+            -0.3597356677055359,
+            0.0480269193649292
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8879539966583252,
+        -0.3423094153404236,
+        0.6461936235427856
+      ],
+      "sword_grip": [
+        -0.7489922046661377,
+        -0.2951675057411194,
+        1.5735783576965332
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.4818022549152374,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.005843228194862604,
+          "vertices_within_0_065m": 371
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0021125320345163345,
+          "vertices_within_0_065m": 797
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.004113461822271347,
+          "vertices_within_0_065m": 245
+        },
+        "RightLeg": {
+          "min_distance_m": 0.0046663181856274605,
+          "vertices_within_0_065m": 397
+        }
+      },
+      "cloth_min_z": -0.1840832233428955
+    },
+    {
+      "frame": 69,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": -0.00031373463571071625,
+          "p05_clearance_m": 0.009510712698101997,
+          "centroid": [
+            0.398227721452713,
+            -0.8679510354995728,
+            0.046425577253103256
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002465294674038887,
+          "p05_clearance_m": 0.010191140696406364,
+          "centroid": [
+            -0.289406418800354,
+            -0.35989654064178467,
+            0.047989677637815475
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8873001337051392,
+        -0.3887457549571991,
+        0.6657270193099976
+      ],
+      "sword_grip": [
+        -0.7468143105506897,
+        -0.3036225438117981,
+        1.5885189771652222
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.48501160740852356,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.00031543098157271743,
+          "vertices_within_0_065m": 352
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0008556913235224783,
+          "vertices_within_0_065m": 797
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.002663820516318083,
+          "vertices_within_0_065m": 216
+        },
+        "RightLeg": {
+          "min_distance_m": 0.007696244399994612,
+          "vertices_within_0_065m": 370
+        }
+      },
+      "cloth_min_z": -0.16662633419036865
+    },
+    {
+      "frame": 70,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.001110968180000782,
+          "p05_clearance_m": 0.01011224091053009,
+          "centroid": [
+            0.39837121963500977,
+            -0.8683977723121643,
+            0.046523671597242355
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0024082185700535774,
+          "p05_clearance_m": 0.009986293502151966,
+          "centroid": [
+            -0.28920015692710876,
+            -0.36009106040000916,
+            0.0479561984539032
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8834987878799438,
+        -0.4486351013183594,
+        0.6925747990608215
+      ],
+      "sword_grip": [
+        -0.7421185970306396,
+        -0.317188560962677,
+        1.6088014841079712
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.4913591146469116,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.002093113027513027,
+          "vertices_within_0_065m": 328
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0011490352917462587,
+          "vertices_within_0_065m": 781
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.01941225305199623,
+          "vertices_within_0_065m": 172
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004635117948055267,
+          "vertices_within_0_065m": 330
+        }
+      },
+      "cloth_min_z": -0.14930200576782227
+    },
+    {
+      "frame": 71,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.002714855596423149,
+          "p05_clearance_m": 0.011649963445961475,
+          "centroid": [
+            0.3985133171081543,
+            -0.8688730597496033,
+            0.04664486274123192
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002463527023792267,
+          "p05_clearance_m": 0.009939616546034813,
+          "centroid": [
+            -0.28900280594825745,
+            -0.3603157103061676,
+            0.047928567975759506
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9022291898727417,
+        -0.4745388627052307,
+        0.7513461709022522
+      ],
+      "sword_grip": [
+        -0.7376774549484253,
+        -0.33205413818359375,
+        1.636228084564209
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5040820240974426,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0046524833887815475,
+          "vertices_within_0_065m": 285
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.0017945412546396255,
+          "vertices_within_0_065m": 683
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.040946345776319504,
+          "vertices_within_0_065m": 115
+        },
+        "RightLeg": {
+          "min_distance_m": 0.006384511478245258,
+          "vertices_within_0_065m": 264
+        }
+      },
+      "cloth_min_z": -0.13554449379444122
+    },
+    {
+      "frame": 72,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.004461656324565411,
+          "p05_clearance_m": 0.012454794719815254,
+          "centroid": [
+            0.3986474573612213,
+            -0.8693627119064331,
+            0.04678817093372345
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002639399841427803,
+          "p05_clearance_m": 0.009877811186015606,
+          "centroid": [
+            -0.28882208466529846,
+            -0.3605681359767914,
+            0.0479079969227314
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9602315425872803,
+        -0.5285457968711853,
+        0.8789485096931458
+      ],
+      "sword_grip": [
+        -0.7362161874771118,
+        -0.35491013526916504,
+        1.673388957977295
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5278913974761963,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.012035014107823372,
+          "vertices_within_0_065m": 238
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.00041595741640776396,
+          "vertices_within_0_065m": 644
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.06479447335004807,
+          "vertices_within_0_065m": 1
+        },
+        "RightLeg": {
+          "min_distance_m": 0.007145640440285206,
+          "vertices_within_0_065m": 187
+        }
+      },
+      "cloth_min_z": -0.123167023062706
+    },
+    {
+      "frame": 73,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.006294090300798416,
+          "p05_clearance_m": 0.013778076507151127,
+          "centroid": [
+            0.3987657129764557,
+            -0.8698526620864868,
+            0.04694977402687073
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002938569523394108,
+          "p05_clearance_m": 0.009973905980587006,
+          "centroid": [
+            -0.28866511583328247,
+            -0.3608449101448059,
+            0.04789719730615616
+          ]
+        }
+      },
+      "sword_tip": [
+        -2.0359082221984863,
+        -0.6081340312957764,
+        1.0741310119628906
+      ],
+      "sword_grip": [
+        -0.736066997051239,
+        -0.38619011640548706,
+        1.7227081060409546
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.5644463896751404,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.02227846346795559,
+          "vertices_within_0_065m": 195
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.00028652118635363877,
+          "vertices_within_0_065m": 583
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.08767347782850266,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008502810262143612,
+          "vertices_within_0_065m": 139
+        }
+      },
+      "cloth_min_z": -0.11105217039585114
+    },
+    {
+      "frame": 74,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.008140796795487404,
+          "p05_clearance_m": 0.014424052089452744,
+          "centroid": [
+            0.3988608717918396,
+            -0.8703255653381348,
+            0.047123029828071594
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0033528730273246765,
+          "p05_clearance_m": 0.010285827331244946,
+          "centroid": [
+            -0.2885391414165497,
+            -0.36114221811294556,
+            0.04789608344435692
+          ]
+        }
+      },
+      "sword_tip": [
+        -2.1052258014678955,
+        -0.7077929973602295,
+        1.3317854404449463
+      ],
+      "sword_grip": [
+        -0.7362774610519409,
+        -0.42410174012184143,
+        1.7845516204833984
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.6141114830970764,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.03166358172893524,
+          "vertices_within_0_065m": 211
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.017863400280475616,
+          "vertices_within_0_065m": 534
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0914105772972107,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.004384801257401705,
+          "vertices_within_0_065m": 102
+        }
+      },
+      "cloth_min_z": -0.09942270070314407
+    },
+    {
+      "frame": 75,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.009969634935259819,
+          "p05_clearance_m": 0.015174620784819126,
+          "centroid": [
+            0.3989403545856476,
+            -0.8707770705223083,
+            0.04730528965592384
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0038457289338111877,
+          "p05_clearance_m": 0.010685106739401817,
+          "centroid": [
+            -0.2884337306022644,
+            -0.361447811126709,
+            0.0479043610394001
+          ]
+        }
+      },
+      "sword_tip": [
+        -2.1445441246032715,
+        -0.8204158544540405,
+        1.6386399269104004
+      ],
+      "sword_grip": [
+        -0.7350029945373535,
+        -0.4665253758430481,
+        1.856477975845337
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.6748110055923462,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.02492898516356945,
+          "vertices_within_0_065m": 238
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.030978171154856682,
+          "vertices_within_0_065m": 494
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07969063520431519,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00945048313587904,
+          "vertices_within_0_065m": 95
+        }
+      },
+      "cloth_min_z": -0.08882376551628113
+    },
+    {
+      "frame": 76,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011705036275088787,
+          "p05_clearance_m": 0.015785004943609238,
+          "centroid": [
+            0.3990197777748108,
+            -0.8711990118026733,
+            0.047491978853940964
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.004362653009593487,
+          "p05_clearance_m": 0.011085346341133118,
+          "centroid": [
+            -0.28833508491516113,
+            -0.3617432713508606,
+            0.047919098287820816
+          ]
+        }
+      },
+      "sword_tip": [
+        -2.1362826824188232,
+        -0.9376121759414673,
+        1.974312424659729
+      ],
+      "sword_grip": [
+        -0.7305546998977661,
+        -0.5111242532730103,
+        1.9351418018341064
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.743116557598114,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.016920655965805054,
+          "vertices_within_0_065m": 240
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.04014362394809723,
+          "vertices_within_0_065m": 367
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.0743178054690361,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00774750579148531,
+          "vertices_within_0_065m": 69
+        }
+      },
+      "cloth_min_z": -0.0800837054848671
+    },
+    {
+      "frame": 77,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013175996951758862,
+          "p05_clearance_m": 0.016575593501329422,
+          "centroid": [
+            0.3991015553474426,
+            -0.8715684413909912,
+            0.047668784856796265
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.004846393130719662,
+          "p05_clearance_m": 0.011347511783242226,
+          "centroid": [
+            -0.2882404625415802,
+            -0.36200422048568726,
+            0.047938644886016846
+          ]
+        }
+      },
+      "sword_tip": [
+        -2.073178291320801,
+        -1.0506019592285156,
+        2.3133046627044678
+      ],
+      "sword_grip": [
+        -0.7218834161758423,
+        -0.5553761720657349,
+        2.016234874725342
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.8149605393409729,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0056969341821968555,
+          "vertices_within_0_065m": 226
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.045469071716070175,
+          "vertices_within_0_065m": 264
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07626739144325256,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010054804384708405,
+          "vertices_within_0_065m": 67
+        }
+      },
+      "cloth_min_z": -0.0757419764995575
+    },
+    {
+      "frame": 78,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.01434332225471735,
+          "p05_clearance_m": 0.01708001084625721,
+          "centroid": [
+            0.3991905748844147,
+            -0.8718486428260803,
+            0.047813981771469116
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0052030738443136215,
+          "p05_clearance_m": 0.011493215337395668,
+          "centroid": [
+            -0.2881483733654022,
+            -0.36219239234924316,
+            0.04795599728822708
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.9603416919708252,
+        -1.1515278816223145,
+        2.629366636276245
+      ],
+      "sword_grip": [
+        -0.7090061902999878,
+        -0.5966789126396179,
+        2.09476375579834
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.8857712745666504,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0019896719604730606,
+          "vertices_within_0_065m": 216
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.048925694078207016,
+          "vertices_within_0_065m": 195
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07321306318044662,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.003066092962399125,
+          "vertices_within_0_065m": 71
+        }
+      },
+      "cloth_min_z": -0.07338093966245651
+    },
+    {
+      "frame": 79,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.014926766976714134,
+          "p05_clearance_m": 0.017402412369847298,
+          "centroid": [
+            0.39929142594337463,
+            -0.8719969987869263,
+            0.0478978157043457
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.005308627150952816,
+          "p05_clearance_m": 0.011541380546987057,
+          "centroid": [
+            -0.2880564033985138,
+            -0.3622582256793976,
+            0.04796173796057701
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.8143104314804077,
+        -1.234629511833191,
+        2.9003822803497314
+      ],
+      "sword_grip": [
+        -0.693199634552002,
+        -0.6324896812438965,
+        2.165511131286621
+      ],
+      "cloth_sword_min_vertex_centerline_m": 0.9508832097053528,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.001429953146725893,
+          "vertices_within_0_065m": 207
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.05230944976210594,
+          "vertices_within_0_065m": 136
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.06995970755815506,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008824399672448635,
+          "vertices_within_0_065m": 75
+        }
+      },
+      "cloth_min_z": -0.07269605249166489
+    },
+    {
+      "frame": 80,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.014726227149367332,
+          "p05_clearance_m": 0.017336340621113777,
+          "centroid": [
+            0.3994128108024597,
+            -0.8719145655632019,
+            0.04786572977900505
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.004924490116536617,
+          "p05_clearance_m": 0.011295181699097157,
+          "centroid": [
+            -0.2879655361175537,
+            -0.3620959222316742,
+            0.04794236272573471
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.6595087051391602,
+        -1.2968064546585083,
+        3.1117732524871826
+      ],
+      "sword_grip": [
+        -0.6768841743469238,
+        -0.6604370474815369,
+        2.223527669906616
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0071858167648315,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0008515711524523795,
+          "vertices_within_0_065m": 212
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.05801108479499817,
+          "vertices_within_0_065m": 56
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07141440361738205,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00909993052482605,
+          "vertices_within_0_065m": 66
+        }
+      },
+      "cloth_min_z": -0.07531558722257614
+    },
+    {
+      "frame": 81,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.013778229244053364,
+          "p05_clearance_m": 0.01680964231491089,
+          "centroid": [
+            0.39953944087028503,
+            -0.8716495633125305,
+            0.04774438962340355
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.004181087017059326,
+          "p05_clearance_m": 0.010629881173372269,
+          "centroid": [
+            -0.28788354992866516,
+            -0.36175596714019775,
+            0.04791110008955002
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5234956741333008,
+        -1.3373388051986694,
+        3.2570104598999023
+      ],
+      "sword_grip": [
+        -0.6632382869720459,
+        -0.678367018699646,
+        2.264432430267334
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0504354238510132,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0033876781817525625,
+          "vertices_within_0_065m": 213
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06499557942152023,
+          "vertices_within_0_065m": 1
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07690265774726868,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010088972747325897,
+          "vertices_within_0_065m": 52
+        }
+      },
+      "cloth_min_z": -0.08049816638231277
+    },
+    {
+      "frame": 82,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.012688999064266682,
+          "p05_clearance_m": 0.016436181962490082,
+          "centroid": [
+            0.39964577555656433,
+            -0.871349573135376,
+            0.047612279653549194
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0034371931105852127,
+          "p05_clearance_m": 0.00989525392651558,
+          "centroid": [
+            -0.28782057762145996,
+            -0.36139851808547974,
+            0.04788840562105179
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.432631492614746,
+        -1.3568092584609985,
+        3.334895610809326
+      ],
+      "sword_grip": [
+        -0.6556670665740967,
+        -0.6842902898788452,
+        2.2843997478485107
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0745840072631836,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.00747852586209774,
+          "vertices_within_0_065m": 201
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06939081847667694,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07817330956459045,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.009416284039616585,
+          "vertices_within_0_065m": 45
+        }
+      },
+      "cloth_min_z": -0.0861118957400322
+    },
+    {
+      "frame": 83,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011829627677798271,
+          "p05_clearance_m": 0.015871794894337654,
+          "centroid": [
+            0.3997105360031128,
+            -0.8711111545562744,
+            0.047510743141174316
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0029016435146331787,
+          "p05_clearance_m": 0.009425606578588486,
+          "centroid": [
+            -0.2877861559391022,
+            -0.3611297011375427,
+            0.04787767678499222
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.4104965925216675,
+        -1.355758786201477,
+        3.3454513549804688
+      ],
+      "sword_grip": [
+        -0.6587835550308228,
+        -0.6765317916870117,
+        2.2809908390045166
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0752873420715332,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.002257378539070487,
+          "vertices_within_0_065m": 196
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.07065141946077347,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07494143396615982,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.01237545721232891,
+          "vertices_within_0_065m": 40
+        }
+      },
+      "cloth_min_z": -0.09193086624145508
+    },
+    {
+      "frame": 84,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011453548446297646,
+          "p05_clearance_m": 0.015704454854130745,
+          "centroid": [
+            0.39972159266471863,
+            -0.8710085153579712,
+            0.0474674329161644
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0027032382786273956,
+          "p05_clearance_m": 0.009290017187595367,
+          "centroid": [
+            -0.2877843379974365,
+            -0.36102643609046936,
+            0.04787485674023628
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.4338042736053467,
+        -1.342641830444336,
+        3.3174617290496826
+      ],
+      "sword_grip": [
+        -0.6698243618011475,
+        -0.6604619026184082,
+        2.263676404953003
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.060010313987732,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.004711722023785114,
+          "vertices_within_0_065m": 192
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06977949291467667,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07439770549535751,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.009457848966121674,
+          "vertices_within_0_065m": 38
+        }
+      },
+      "cloth_min_z": -0.09375438839197159
+    },
+    {
+      "frame": 85,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011494945734739304,
+          "p05_clearance_m": 0.01572274975478649,
+          "centroid": [
+            0.399692177772522,
+            -0.8710262179374695,
+            0.047471631318330765
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.002779504284262657,
+          "p05_clearance_m": 0.009362809360027313,
+          "centroid": [
+            -0.28780609369277954,
+            -0.3610634207725525,
+            0.047875966876745224
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.4626082181930542,
+        -1.3283922672271729,
+        3.2853734493255615
+      ],
+      "sword_grip": [
+        -0.6811456084251404,
+        -0.6444386839866638,
+        2.2456514835357666
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0417332649230957,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0042831869795918465,
+          "vertices_within_0_065m": 192
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06874522566795349,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07472290098667145,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.00843445397913456,
+          "vertices_within_0_065m": 39
+        }
+      },
+      "cloth_min_z": -0.09176578372716904
+    },
+    {
+      "frame": 86,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.011674061417579651,
+          "p05_clearance_m": 0.015800435096025467,
+          "centroid": [
+            0.39964452385902405,
+            -0.8710836172103882,
+            0.047491852194070816
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0029555056244134903,
+          "p05_clearance_m": 0.009447919204831123,
+          "centroid": [
+            -0.28783929347991943,
+            -0.36115023493766785,
+            0.04787815734744072
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.4883675575256348,
+        -1.3208085298538208,
+        3.260453939437866
+      ],
+      "sword_grip": [
+        -0.6869623064994812,
+        -0.636073112487793,
+        2.2365474700927734
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0316048860549927,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.00412118062376976,
+          "vertices_within_0_065m": 198
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06749680638313293,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07521866261959076,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.008726929314434528,
+          "vertices_within_0_065m": 39
+        }
+      },
+      "cloth_min_z": -0.08841480314731598
+    },
+    {
+      "frame": 87,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.01193639263510704,
+          "p05_clearance_m": 0.01596047729253769,
+          "centroid": [
+            0.3995899260044098,
+            -0.8711647391319275,
+            0.04752203822135925
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0031877849251031876,
+          "p05_clearance_m": 0.009624218568205833,
+          "centroid": [
+            -0.28787708282470703,
+            -0.3612639904022217,
+            0.04788215458393097
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5076611042022705,
+        -1.322129249572754,
+        3.247859001159668
+      ],
+      "sword_grip": [
+        -0.6865009069442749,
+        -0.637352466583252,
+        2.2397546768188477
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.033212423324585,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0013223865535110235,
+          "vertices_within_0_065m": 200
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06616703420877457,
+          "vertices_within_0_065m": 0
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07593496143817902,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.009834865108132362,
+          "vertices_within_0_065m": 40
+        }
+      },
+      "cloth_min_z": -0.08450989425182343
+    },
+    {
+      "frame": 88,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.012220832519233227,
+          "p05_clearance_m": 0.016163203865289688,
+          "centroid": [
+            0.3995375335216522,
+            -0.8712493777275085,
+            0.04755532369017601
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0034274496138095856,
+          "p05_clearance_m": 0.009956245310604572,
+          "centroid": [
+            -0.287912517786026,
+            -0.36138004064559937,
+            0.047887302935123444
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.5222090482711792,
+        -1.3271527290344238,
+        3.242908000946045
+      ],
+      "sword_grip": [
+        -0.6840004920959473,
+        -0.642765998840332,
+        2.248664379119873
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.040574550628662,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.0046205236576497555,
+          "vertices_within_0_065m": 200
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06435117870569229,
+          "vertices_within_0_065m": 4
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07683926820755005,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.011076056398451328,
+          "vertices_within_0_065m": 42
+        }
+      },
+      "cloth_min_z": -0.08077888190746307
+    },
+    {
+      "frame": 89,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.01245354488492012,
+          "p05_clearance_m": 0.0163620263338089,
+          "centroid": [
+            0.3994983732700348,
+            -0.8713172078132629,
+            0.04758273437619209
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.0036182748153805733,
+          "p05_clearance_m": 0.01022074930369854,
+          "centroid": [
+            -0.28793877363204956,
+            -0.36147138476371765,
+            0.04789242148399353
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.531367301940918,
+        -1.332588791847229,
+        3.2423083782196045
+      ],
+      "sword_grip": [
+        -0.6812134981155396,
+        -0.6486785411834717,
+        2.2579290866851807
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.0487070083618164,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.007927125319838524,
+          "vertices_within_0_065m": 204
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.063006192445755,
+          "vertices_within_0_065m": 13
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07770552486181259,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.011241445317864418,
+          "vertices_within_0_065m": 44
+        }
+      },
+      "cloth_min_z": -0.07792530953884125
+    },
+    {
+      "frame": 90,
+      "feet": {
+        "LeftFoot": {
+          "min_clearance_m": 0.012549905106425285,
+          "p05_clearance_m": 0.016393911093473434,
+          "centroid": [
+            0.39948299527168274,
+            -0.871345579624176,
+            0.04759389907121658
+          ]
+        },
+        "RightFoot": {
+          "min_clearance_m": 0.003696523606777191,
+          "p05_clearance_m": 0.010275043547153473,
+          "centroid": [
+            -0.28794893622398376,
+            -0.3615085184574127,
+            0.04789506271481514
+          ]
+        }
+      },
+      "sword_tip": [
+        -1.534555435180664,
+        -1.3351410627365112,
+        3.2428319454193115
+      ],
+      "sword_grip": [
+        -0.6798967719078064,
+        -0.6514561176300049,
+        2.262204170227051
+      ],
+      "cloth_sword_min_vertex_centerline_m": 1.052551031112671,
+      "cloth_leg_capsule_candidates": {
+        "LeftUpLeg": {
+          "min_distance_m": 0.009287560358643532,
+          "vertices_within_0_065m": 206
+        },
+        "LeftLeg": {
+          "min_distance_m": 0.06248646602034569,
+          "vertices_within_0_065m": 16
+        },
+        "RightUpLeg": {
+          "min_distance_m": 0.07809960097074509,
+          "vertices_within_0_065m": 0
+        },
+        "RightLeg": {
+          "min_distance_m": 0.010959791950881481,
+          "vertices_within_0_065m": 45
+        }
+      },
+      "cloth_min_z": -0.07665722817182541
+    }
+  ]
+}

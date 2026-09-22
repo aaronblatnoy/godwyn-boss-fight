@@ -1,0 +1,114 @@
+00:01.439  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+22:48:54 | INFO: Starting glTF 2.0 export
+22:48:54 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+22:48:54 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Cornea_L
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Cornea_R
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: Sphere
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: Sphere.003
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Eyebrows_L
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Eyebrows_R
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Iris_L
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Iris_R
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Lashes_L
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Lashes_R
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: Sphere.002
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: Sphere.005
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Pupil_L
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_Pupil_R
+22:48:54 | INFO: Primitives created: 1
+22:48:54 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_0
+22:48:55 | INFO: Primitives created: 1
+22:48:55 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_1
+22:48:55 | INFO: Primitives created: 1
+22:48:55 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_2
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R2_HairFibers_3
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R2_HairlineWisps
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R2_HairRoots
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R3_ChasedLaurel
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R3_Flow_L
+22:48:56 | INFO: Primitives created: 1
+22:48:56 | INFO: Extracting primitive: AstraChar2_R3_Flow_R
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: AstraChar2_R3_Plait_L
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: AstraChar2_R3_Plait_R
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: Sphere.001
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: Sphere.004
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: AstraChar2_Wetline_L
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: AstraChar2_Wetline_R
+22:48:57 | INFO: Primitives created: 1
+22:48:57 | INFO: Extracting primitive: AstraChar2 refined char1
+22:48:59 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:48:59 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:49:01 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:49:01 | INFO: Primitives created: 5
+22:49:02 | INFO: Extracting primitive: Godwyn_Sword.001
+22:49:02 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:49:02 | INFO: Primitives created: 1
+22:49:02 | INFO: Finished glTF 2.0 export in 8.509900093078613 s
+
+Info: Saved as "astra_character_v2.blend"
+22:49:05 | INFO: Data are loaded, start creating Blender stuff
+22:49:05 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Cornea_L
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Cornea_R
+22:49:05 | INFO: Blender create Mesh node Sphere
+22:49:05 | INFO: Blender create Mesh node Sphere.003
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Eyebrows_L
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Eyebrows_R
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Iris_L
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Iris_R
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Lashes_L
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Lashes_R
+22:49:05 | INFO: Blender create Mesh node Sphere.002
+22:49:05 | INFO: Blender create Mesh node Sphere.005
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Pupil_L
+22:49:05 | INFO: Blender create Mesh node AstraChar2_Pupil_R
+22:49:05 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_0
+22:49:05 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_1
+22:49:06 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_2
+22:49:06 | INFO: Blender create Mesh node AstraChar2_R2_HairFibers_3
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R2_HairlineWisps
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R2_HairRoots
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R3_ChasedLaurel
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R3_Flow_L
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R3_Flow_R
+22:49:07 | INFO: Blender create Mesh node AstraChar2_R3_Plait_L
+22:49:08 | INFO: Blender create Mesh node AstraChar2_R3_Plait_R
+22:49:08 | INFO: Blender create Mesh node Sphere.001
+22:49:08 | INFO: Blender create Mesh node Sphere.004
+22:49:08 | INFO: Blender create Mesh node AstraChar2_Wetline_L
+22:49:08 | INFO: Blender create Mesh node AstraChar2_Wetline_R
+22:49:08 | INFO: Blender create Mesh node AstraChar2 refined char1
+22:49:09 | INFO: Blender create Mesh node Godwyn_Sword.001
+22:49:09 | INFO: glTF import finished in 4.52s
+{"path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb", "bytes": 187126684, "skins": 1, "joints": [121], "animations": 0, "extensions": ["KHR_materials_clearcoat", "KHR_materials_transmission", "KHR_materials_emissive_strength", "KHR_materials_specular", "KHR_materials_sheen", "KHR_materials_anisotropy", "KHR_materials_ior"], "hair_nodes": ["phys_hair_back_03", "phys_hair_back_02", "phys_hair_back_01", "phys_hair_back_00", "phys_hair_front_L_03", "phys_hair_front_L_02", "phys_hair_front_L_01", "phys_hair_front_L_00", "phys_hair_front_R_03", "phys_hair_front_R_02", "phys_hair_front_R_01", "phys_hair_front_R_00"], "object_material_slots": {"Astra_Undersleeves": ["Astra Round2 royal blue undersleeves"], "AstraChar2_Cornea_L": ["AstraChar2 cornea"], "AstraChar2_Cornea_R": ["AstraChar2 cornea"], "AstraChar2_Eyeball_L": ["AstraChar2 living sclera"], "AstraChar2_Eyeball_R": ["AstraChar2 living sclera"], "AstraChar2_Eyebrows_L": ["AstraChar2 warm blonde eyebrows"], "AstraChar2_Eyebrows_R": ["AstraChar2 warm blonde eyebrows"], "AstraChar2_Iris_L": ["AstraChar2 hazel green iris"], "AstraChar2_Iris_R": ["AstraChar2 hazel green iris"], "AstraChar2_Lashes_L": ["AstraChar2 blonde lashes"], "AstraChar2_Lashes_R": ["AstraChar2 blonde lashes"], "AstraChar2_Nostril_L": ["AstraChar2 nostril interior"], "AstraChar2_Nostril_R": ["AstraChar2 nostril interior"], "AstraChar2_Pupil_L": ["AstraChar2 pupil"], "AstraChar2_Pupil_R": ["AstraChar2 pupil"], "AstraChar2_R2_HairFibers_0": ["AstraChar2 R2 hair 0"], "AstraChar2_R2_HairFibers_1": ["AstraChar2 R2 hair 1"], "AstraChar2_R2_HairFibers_2": ["AstraChar2 R2 hair 2"], "AstraChar2_R2_HairFibers_3": ["AstraChar2 R2 hair 3"], "AstraChar2_R2_HairlineWisps": ["AstraChar2 R2 hair 2"], "AstraChar2_R2_HairRoots": ["AstraChar2 R2 hair 0"], "AstraChar2_R3_ChasedLaurel": ["AstraChar2 R3 chased antique brass"], "AstraChar2_R3_Flow_L": ["AstraChar2 R2 hair 1"], "AstraChar2_R3_Flow_R": ["AstraChar2 R2 hair 1"], "AstraChar2_R3_Plait_L": ["AstraChar2 R2 hair 1"], "AstraChar2_R3_Plait_R": ["AstraChar2 R2 hair 1"], "AstraChar2_TearCorner_L": ["AstraChar2 lacrimal wetline"], "AstraChar2_TearCorner_R": ["AstraChar2 lacrimal wetline"], "AstraChar2_Wetline_L": ["AstraChar2 lacrimal wetline"], "AstraChar2_Wetline_R": ["AstraChar2 lacrimal wetline"], "char1": ["Astra Round2 solid champagne gold", "Astra Round2 royal blue and continuous gold trim", "Astra pale golden skin final", "Astra engraved royal gold final", "Astra midnight blue woven silk final"], "Godwyn_Sword": ["Astra worn steel and gold hilt final"]}, "reimport_meshes": 33, "reimport_armatures": {"Armature": 121}, "reimport_actions": 0}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

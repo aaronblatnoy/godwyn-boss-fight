@@ -1,0 +1,10 @@
+00:00.997  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+AstraChar2_R4_Curves_L_Front_0 CURVES hide_render False matrix [Vector((1.0, 0.0, 0.0, 0.0)), Vector((0.0, 1.0, 0.0, 0.0)), Vector((0.0, 0.0, 1.0, 0.0)), Vector((0.0, 0.0, 0.0, 1.0))] scale [1.0, 1.0, 1.0]
+RADIUS [2.19160165215726e-06, 6.646050314884633e-05, 8.997352415462956e-05] POS [0.1652975082397461, -0.384562611579895, 2.9200594425201416]
+RADIUS [2.19160165215726e-06, 6.646050314884633e-05, 8.997352415462956e-05] POS [0.1652974635362625, -0.38456255197525024, 2.9200594425201416]
+AstraChar2_R4_Control_L_Front_0 MESH hide_render True matrix [Vector((1.0, 0.0, 0.0, 0.0)), Vector((0.0, 1.0, 0.0, 0.0)), Vector((0.0, 0.0, 1.0, 0.0)), Vector((0.0, 0.0, 0.0, 1.0))] scale [1.0, 1.0, 1.0]
+AstraChar2_R4_Strands_L_Front_0 MESH hide_render True matrix [Vector((1.0, 0.0, 0.0, 0.0)), Vector((0.0, 1.0, 0.0, 0.0)), Vector((0.0, 0.0, 1.0, 0.0)), Vector((0.0, 0.0, 0.0, 1.0))] scale [1.0, 1.0, 1.0]
+CYCLES [('debug_use_hair_bvh', 'True')]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

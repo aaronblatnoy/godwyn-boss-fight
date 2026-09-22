@@ -1,0 +1,196 @@
+00:01.068  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_idle_guard_wip.blend"
+00:05.729  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/001.png'
+MOVE RENDER idle_guard 1
+00:07.022  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/002.png'
+MOVE RENDER idle_guard 2
+00:08.497  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/003.png'
+MOVE RENDER idle_guard 3
+00:09.539  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/004.png'
+MOVE RENDER idle_guard 4
+00:10.523  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/005.png'
+MOVE RENDER idle_guard 5
+00:11.485  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/006.png'
+MOVE RENDER idle_guard 6
+00:12.378  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/007.png'
+MOVE RENDER idle_guard 7
+00:13.361  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/008.png'
+MOVE RENDER idle_guard 8
+00:14.328  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/009.png'
+MOVE RENDER idle_guard 9
+00:15.311  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/010.png'
+MOVE RENDER idle_guard 10
+00:16.318  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/011.png'
+MOVE RENDER idle_guard 11
+00:17.344  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/012.png'
+MOVE RENDER idle_guard 12
+00:18.370  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/013.png'
+MOVE RENDER idle_guard 13
+00:19.308  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/014.png'
+MOVE RENDER idle_guard 14
+00:20.225  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/015.png'
+MOVE RENDER idle_guard 15
+00:21.116  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/016.png'
+MOVE RENDER idle_guard 16
+00:22.025  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/017.png'
+MOVE RENDER idle_guard 17
+00:22.939  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/018.png'
+MOVE RENDER idle_guard 18
+00:23.821  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/019.png'
+MOVE RENDER idle_guard 19
+00:24.757  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/020.png'
+MOVE RENDER idle_guard 20
+00:25.689  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/021.png'
+MOVE RENDER idle_guard 21
+00:26.746  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/022.png'
+MOVE RENDER idle_guard 22
+00:28.284  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/023.png'
+MOVE RENDER idle_guard 23
+00:29.503  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/024.png'
+MOVE RENDER idle_guard 24
+00:30.411  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/025.png'
+MOVE RENDER idle_guard 25
+00:31.298  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/026.png'
+MOVE RENDER idle_guard 26
+00:32.203  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/027.png'
+MOVE RENDER idle_guard 27
+00:33.052  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/028.png'
+MOVE RENDER idle_guard 28
+00:33.915  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/029.png'
+MOVE RENDER idle_guard 29
+00:34.770  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/030.png'
+MOVE RENDER idle_guard 30
+00:35.656  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/031.png'
+MOVE RENDER idle_guard 31
+00:36.557  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/032.png'
+MOVE RENDER idle_guard 32
+00:37.441  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/033.png'
+MOVE RENDER idle_guard 33
+00:38.301  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/034.png'
+MOVE RENDER idle_guard 34
+00:39.192  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/035.png'
+MOVE RENDER idle_guard 35
+00:40.079  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/036.png'
+MOVE RENDER idle_guard 36
+00:41.428  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/037.png'
+MOVE RENDER idle_guard 37
+00:42.644  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/038.png'
+MOVE RENDER idle_guard 38
+00:44.037  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/039.png'
+MOVE RENDER idle_guard 39
+00:45.245  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/040.png'
+MOVE RENDER idle_guard 40
+00:46.611  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/041.png'
+MOVE RENDER idle_guard 41
+00:47.876  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/042.png'
+MOVE RENDER idle_guard 42
+00:49.077  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/043.png'
+MOVE RENDER idle_guard 43
+00:50.430  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/044.png'
+MOVE RENDER idle_guard 44
+00:51.607  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/045.png'
+MOVE RENDER idle_guard 45
+00:52.862  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/046.png'
+MOVE RENDER idle_guard 46
+00:53.992  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/047.png'
+MOVE RENDER idle_guard 47
+00:55.022  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/048.png'
+MOVE RENDER idle_guard 48
+00:55.973  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/049.png'
+MOVE RENDER idle_guard 49
+00:57.060  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/050.png'
+MOVE RENDER idle_guard 50
+00:58.383  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/051.png'
+MOVE RENDER idle_guard 51
+00:59.408  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/052.png'
+MOVE RENDER idle_guard 52
+01:00.342  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/053.png'
+MOVE RENDER idle_guard 53
+01:01.299  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/054.png'
+MOVE RENDER idle_guard 54
+01:02.215  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/055.png'
+MOVE RENDER idle_guard 55
+01:03.092  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/056.png'
+MOVE RENDER idle_guard 56
+01:03.973  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/057.png'
+MOVE RENDER idle_guard 57
+01:04.865  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/058.png'
+MOVE RENDER idle_guard 58
+01:05.774  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/059.png'
+MOVE RENDER idle_guard 59
+01:06.637  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/060.png'
+MOVE RENDER idle_guard 60
+01:07.466  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/061.png'
+MOVE RENDER idle_guard 61
+01:08.356  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/062.png'
+MOVE RENDER idle_guard 62
+01:09.245  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/063.png'
+MOVE RENDER idle_guard 63
+01:10.142  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/064.png'
+MOVE RENDER idle_guard 64
+01:11.077  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/065.png'
+MOVE RENDER idle_guard 65
+01:12.027  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/066.png'
+MOVE RENDER idle_guard 66
+01:13.006  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/067.png'
+MOVE RENDER idle_guard 67
+01:14.094  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/068.png'
+MOVE RENDER idle_guard 68
+01:15.034  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/069.png'
+MOVE RENDER idle_guard 69
+01:16.310  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/070.png'
+MOVE RENDER idle_guard 70
+01:17.485  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/071.png'
+MOVE RENDER idle_guard 71
+01:18.614  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/072.png'
+MOVE RENDER idle_guard 72
+01:19.549  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/073.png'
+MOVE RENDER idle_guard 73
+01:20.505  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/074.png'
+MOVE RENDER idle_guard 74
+01:21.446  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/075.png'
+MOVE RENDER idle_guard 75
+01:22.457  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/076.png'
+MOVE RENDER idle_guard 76
+01:23.386  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/077.png'
+MOVE RENDER idle_guard 77
+01:24.357  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/078.png'
+MOVE RENDER idle_guard 78
+01:25.277  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/079.png'
+MOVE RENDER idle_guard 79
+01:26.200  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/080.png'
+MOVE RENDER idle_guard 80
+01:27.055  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/081.png'
+MOVE RENDER idle_guard 81
+01:27.976  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/082.png'
+MOVE RENDER idle_guard 82
+01:29.064  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/083.png'
+MOVE RENDER idle_guard 83
+01:30.091  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/084.png'
+MOVE RENDER idle_guard 84
+01:31.207  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/085.png'
+MOVE RENDER idle_guard 85
+01:32.336  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/086.png'
+MOVE RENDER idle_guard 86
+01:33.546  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/087.png'
+MOVE RENDER idle_guard 87
+01:35.436  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/088.png'
+MOVE RENDER idle_guard 88
+01:36.521  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/089.png'
+MOVE RENDER idle_guard 89
+01:37.526  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/090.png'
+MOVE RENDER idle_guard 90
+01:38.629  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/091.png'
+MOVE RENDER idle_guard 91
+01:39.735  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/092.png'
+MOVE RENDER idle_guard 92
+01:41.229  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/093.png'
+MOVE RENDER idle_guard 93
+01:42.287  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/094.png'
+MOVE RENDER idle_guard 94
+01:45.308  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/095.png'
+MOVE RENDER idle_guard 95
+01:52.228  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard/frames/096.png'
+MOVE RENDER idle_guard 96
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

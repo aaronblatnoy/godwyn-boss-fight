@@ -1,0 +1,6 @@
+00:00.683  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+{'new_fibers': 1351, 'braid_bundles': 6, 'bone_chain_names': ['phys_hair_front_R_00', 'phys_hair_front_R_01', 'phys_hair_front_R_02', 'phys_hair_front_R_03', 'phys_hair_front_L_00', 'phys_hair_front_L_01', 'phys_hair_front_L_02', 'phys_hair_front_L_03'], 'limitation': 'Existing bone rest transforms preserved; adding weighted fibers does not validate spring/jiggle dynamics. Old underlying solid hair remains.'}
+Info: Saved as "astra_character_v2.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

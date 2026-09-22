@@ -1,0 +1,6 @@
+00:03.216  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_wip.blend"
+Info: Saved as "astra_xslash_v2_on_char_wip.blend"
+ASTRA_TRANSFER_COMPLETE {"character_source": "models/astra_character_v2.blend", "character_source_sha256_at_load": "24d473858493d2ee54001be6bf3be76ad246f0b783f629f11e52acfb95427bc8", "character_snapshot": "/tmp/astra_xslash_v2_character_input.blend", "action_source": "models/astra_xslash_v2_wip.blend", "source_action": "Astra_Godwyn_XSlash_V2", "action_data_identical": true, "action_digest": {"sha256": "8c5bd9822b668c8e5480297060ec88d7ca6e8426340ed436b75794f47f009115", "fcurves": 847, "keys": 302379}, "bone_count": 121, "rest_matrix_max_error": 0.0, "all_bones_357_subframes_max_matrix_error": 0.0, "secondary_bones": 97, "retargeting": false, "weight_material_geometry_edits": false, "native_sword_attachment": "ARMATURE modifier; RightHand weight 1.0; unchanged", "sword_evaluator_max_error_m": 7.552698789521567e-07, "ribbons_resampled": 14, "sword_blade_length_m": 1.4695250587405206, "comparison_staging": "Original v2 scene, lights, world, AgX look, exposure -0.7 and shutter 0.55 retained"}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

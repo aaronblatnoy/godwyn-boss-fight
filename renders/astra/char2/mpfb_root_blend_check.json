@@ -1,0 +1,65 @@
+{
+  "MPFB_L_Front": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 2400,
+    "segment_stretch_max": 1.053126573562622,
+    "segment_stretch_p99": 1.0464577674865723
+  },
+  "MPFB_L_Side": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 3000,
+    "segment_stretch_max": 1.3647836446762085,
+    "segment_stretch_p99": 1.3085243701934814
+  },
+  "MPFB_L_Back": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 3600,
+    "segment_stretch_max": 1.5030980110168457,
+    "segment_stretch_p99": 1.3686457872390747
+  },
+  "MPFB_L_Braids": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 7.152557373046875e-07,
+    "strands": 450,
+    "segment_stretch_max": 1.1290584802627563,
+    "segment_stretch_p99": 1.1108404397964478
+  },
+  "MPFB_R_Front": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 2400,
+    "segment_stretch_max": 1.0549991130828857,
+    "segment_stretch_p99": 1.0458712577819824
+  },
+  "MPFB_R_Side": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 1.1920928955078125e-06,
+    "strands": 3000,
+    "segment_stretch_max": 1.3712371587753296,
+    "segment_stretch_p99": 1.3031195402145386
+  },
+  "MPFB_R_Back": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 3600,
+    "segment_stretch_max": 1.5044702291488647,
+    "segment_stretch_p99": 1.3700950145721436
+  },
+  "MPFB_R_Braids": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 9.5367431640625e-07,
+    "strands": 450,
+    "segment_stretch_max": 1.1267224550247192,
+    "segment_stretch_p99": 1.109196424484253
+  },
+  "MPFB_ScalpBed": {
+    "native_control_max_error_m": 0.0,
+    "portable_center_max_error_m": 7.152557373046875e-07,
+    "strands": 14000,
+    "segment_stretch_max": 1.000446081161499,
+    "segment_stretch_p99": 1.0002033710479736
+  }
+}

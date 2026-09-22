@@ -1,0 +1,15 @@
+CINE DEVICE FAILURE: requested OPTIX; no matching GPU backend/device bound. CPU fallback is FORBIDDEN. OPTIX: bpy_struct: item.attr = val: enum "OPTIX" not found in ('NONE', 'METAL')
+Traceback (most recent call last):
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_hero_render.py", line 159, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_hero_render.py", line 122, in main
+    bound=cine.configure_device(bpy.context.scene,args.device,args.allow_cpu)
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py", line 62, in configure_device
+    raise RuntimeError(message)
+RuntimeError: CINE DEVICE FAILURE: requested OPTIX; no matching GPU backend/device bound. CPU fallback is FORBIDDEN. OPTIX: bpy_struct: item.attr = val: enum "OPTIX" not found in ('NONE', 'METAL')
+
+Error: script failed, file: 'scripts/astra_cine_hero_render.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,14 @@
+{
+  "quality_gate": "NOT_MET",
+  "hero_model": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend",
+  "files": {
+    "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend": {
+      "bytes": 189726847,
+      "sha256": "3d36b1f0193ec196d9655f96398766cc678dbd2cbf06163d87592c90eac24f02"
+    },
+    "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb": {
+      "bytes": 187126684,
+      "sha256": "7f474ac9bf4622d1c0ba4bc4df6c25ba1429971d5dd17679b6fcb33743b9996f"
+    }
+  }
+}

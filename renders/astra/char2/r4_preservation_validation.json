@@ -1,0 +1,424 @@
+{
+  "missing_original_objects": [],
+  "changed_original_types_or_slots": [],
+  "changed_nonhair_geometry": [],
+  "bone_names_stable": true,
+  "bone_parents_stable": true,
+  "max_rest_matrix_difference": 0.0,
+  "changed_bone_lengths": [],
+  "bones": 121,
+  "actions": 0,
+  "neutral": true,
+  "details": {
+    "before_nonhair": {
+      "Astra evaluation ground": {
+        "vertices": 4,
+        "coordinates": "f69cbb67088dc9a345cdb801e2d5ecfdca2581181cb7cf0748038cb79debda84",
+        "faces": 1,
+        "topology": "a1fa54b0eae7dbbd49cbbb07b8d2dcdd965bf80940bcb09238c4d5f99491aaa0",
+        "uv": {
+          "UVMap": "eeb394f1726eac2bb9656979b5b3190f0fc2bfc9a3df8e179d13da2ebc8c513a"
+        }
+      },
+      "Astra_Undersleeves": {
+        "vertices": 448,
+        "coordinates": "871ffbb3d203285bdbe2e4aae24ed0afa416b81f2063cb73cb44a59d879b989c",
+        "faces": 384,
+        "topology": "874197cc499b6e79e6ab205b4c472dfc8c64d423be11fd5fdf3e08033b870794",
+        "uv": {
+          "UVMap": "c7879b2e04d314d0e57bf766467f8aec798a823a14f666ea56a17913d752e70b"
+        }
+      },
+      "AstraChar2_Cornea_L": {
+        "vertices": 1677,
+        "coordinates": "ce7ce40707c2ffdfda25a89ba6509d06ee44142a9e2837997d3c702241b9e631",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Cornea_R": {
+        "vertices": 1677,
+        "coordinates": "ed1c10fcd09cfd1c94f77e85340b0956e667b504912cb59f4f05a424c3ed2335",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Eyeball_L": {
+        "vertices": 2498,
+        "coordinates": "c3a50c4db6cdd3818206d5ac57f01cb1123694058d014ed1699a1fa35ff6aeda",
+        "faces": 2560,
+        "topology": "567689cc750026e25861e14364cb98a02cdfebdf68e8a4c7736324d0986f8def",
+        "uv": {
+          "UVMap": "964e38fe3f48b42b8d76cc1f657b133c9175f9bf3662fefb4cca006bbe2c90b7"
+        }
+      },
+      "AstraChar2_Eyeball_R": {
+        "vertices": 2498,
+        "coordinates": "e5ee0574b67040572a1f2398411a33f50365785d5acb31eefe566a036296b8c9",
+        "faces": 2560,
+        "topology": "000e65f1285edc204c7f1bd557d9ecdd26f2db352d7eccf348a412dcbdbdc25f",
+        "uv": {
+          "UVMap": "aaec9b9fe9a6d69bdd335d714b61372adf8921e1c035c36cc364d014eca29d0e"
+        }
+      },
+      "AstraChar2_Eyebrows_L": {
+        "vertices": 10750,
+        "coordinates": "aa423c59405338fff81397067a0f82526ba3cba8ab56f00adc5834b2703270d7",
+        "faces": 8600,
+        "topology": "81c3ce15c962c692636c0228204527a8b71946a522625394f36a7e4b6d929f0e",
+        "uv": {}
+      },
+      "AstraChar2_Eyebrows_R": {
+        "vertices": 10750,
+        "coordinates": "751978ec3b33dab698e67d3e33cf33e91987cb0504fd56356a41ea2cfd830800",
+        "faces": 8600,
+        "topology": "81c3ce15c962c692636c0228204527a8b71946a522625394f36a7e4b6d929f0e",
+        "uv": {}
+      },
+      "AstraChar2_Iris_L": {
+        "vertices": 1677,
+        "coordinates": "0ba3fd28a83b3dc77f37795abe2a410615e988f492964902815a4be0b4daf17f",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Iris_R": {
+        "vertices": 1677,
+        "coordinates": "ce77ca4d40d7830fd5dda2967cb9f9df6deb565e00628fd785aa3b807e864a16",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Lashes_L": {
+        "vertices": 2025,
+        "coordinates": "82a6f29df250eb2e0aa02d7e917268abfb121aafdaaf4fb229562f3709e84e0a",
+        "faces": 1620,
+        "topology": "551ed8b7b5dab65406dfee40ccefafca25e154b3873385bf1779c1fe4fdd42cc",
+        "uv": {}
+      },
+      "AstraChar2_Lashes_R": {
+        "vertices": 2025,
+        "coordinates": "b517422fcc00dad1f28630a76669a55f918133ac576b3e3d6f99a0c4973d8f95",
+        "faces": 1620,
+        "topology": "551ed8b7b5dab65406dfee40ccefafca25e154b3873385bf1779c1fe4fdd42cc",
+        "uv": {}
+      },
+      "AstraChar2_Nostril_L": {
+        "vertices": 422,
+        "coordinates": "02ef86b2ef1b194b1a59f1fded0860143983e590e0c411be5f6be44c192188cc",
+        "faces": 448,
+        "topology": "8485d42393e943bb29ea4c86363a5defce1c3daee47ba448f1a324d1192acb30",
+        "uv": {
+          "UVMap": "c95d7d3b55abdd558b25e3d3518548c01c390e169176ae896424a92ce8e58a22"
+        }
+      },
+      "AstraChar2_Nostril_R": {
+        "vertices": 422,
+        "coordinates": "7a4184e652e4fa12b42b15811db588358c061a9755aac70e83c58dc8a60cd98c",
+        "faces": 448,
+        "topology": "d6d1df802c6f59cf5af8e2db44c16d57ef707b8cd6f42afdf97c1584749d1a91",
+        "uv": {
+          "UVMap": "e48aaa35ec216344547c19158b6203c51cda7b9781edce1dd62e9701173e9be6"
+        }
+      },
+      "AstraChar2_Pupil_L": {
+        "vertices": 1677,
+        "coordinates": "6ac6b938700e1d44f54dbdc71fffb8e1287a711939f7aabcf114a6798cdb678b",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Pupil_R": {
+        "vertices": 1677,
+        "coordinates": "9afdb2453b717362f97a6ca57de2ad130d5203b53b774705aa05d65d6a20c3ff",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_R3_ChasedLaurel": {
+        "vertices": 6370,
+        "coordinates": "9ed98d7eaf6fa3a7d8e9ee970ada502dec10097c18e8b1357f4c4cbf2687ba3d",
+        "faces": 6240,
+        "topology": "531de9b8e8da79e83c6d7aa1570d439123f48f2479f55fa8ddd65d7613d0d242",
+        "uv": {}
+      },
+      "AstraChar2_TearCorner_L": {
+        "vertices": 222,
+        "coordinates": "07dedd42761290216335e0eec9eeccaead6315a34b30f7ee6c32e10bd835e222",
+        "faces": 240,
+        "topology": "3433759ff9013e873f2eefb4b43ef2d682bb574496f3c0a5564a72f57f5904ed",
+        "uv": {
+          "UVMap": "78dd77b2c8bbbdf2345006dcf68e674b58170c3c15126003e5f725fb7b0837ca"
+        }
+      },
+      "AstraChar2_TearCorner_R": {
+        "vertices": 222,
+        "coordinates": "4acde08a6aedc6ca4c4f511ba41e0ac755309fd65667acff73f882675aee7454",
+        "faces": 240,
+        "topology": "3433759ff9013e873f2eefb4b43ef2d682bb574496f3c0a5564a72f57f5904ed",
+        "uv": {
+          "UVMap": "78dd77b2c8bbbdf2345006dcf68e674b58170c3c15126003e5f725fb7b0837ca"
+        }
+      },
+      "AstraChar2_Wetline_L": {
+        "vertices": 650,
+        "coordinates": "d114c91fbeb1dc8062180ecaff4a808ee77ab34286cbf743a3796d6f3fb7640d",
+        "faces": 640,
+        "topology": "b2e785befbdf022c106a86fa3e2538afdea90f44236588a0015c6109387e2d6b",
+        "uv": {}
+      },
+      "AstraChar2_Wetline_R": {
+        "vertices": 650,
+        "coordinates": "b42369128d493d1ea9a71064f3f2d4a87300c1da3b126dcc36f81d9c509a718a",
+        "faces": 640,
+        "topology": "b2e785befbdf022c106a86fa3e2538afdea90f44236588a0015c6109387e2d6b",
+        "uv": {}
+      },
+      "char1": {
+        "vertices": 366392,
+        "coordinates": "871e56426bef1497e6229c22c654ef2f32335a4cfec317c72b47d27e7ea8f1b6",
+        "faces": 407198,
+        "topology": "d52273f022cbdd37b2a149c7e868d2c4a9baa557bde4112dcb595e02b5bde6f5",
+        "uv": {
+          "UVMap": "5e6df32d0948894744776028ab7fa44b5d49c5cf92cea613f2f2761cdf463dd5",
+          "AstraChar2FaceUV": "9184f4e06160099872d4a8b160133a56bfb50cb64b06124877541ce5c553f063"
+        }
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "coordinates": "cb87fa3ae5a5f93a0108786f9386134e35df535cb89d8603448e878a9552d701",
+        "faces": 8179,
+        "topology": "6230df89478d7a52586c0566bf21a505d0447b9ecd97a395fc0c8e4166c1654a",
+        "uv": {
+          "AstraSwordUV": "8616f4cb175f41821e43cf32016de4f06b8f760745bbb0cb52ebb7042cc30e1e"
+        }
+      },
+      "Icosphere": {
+        "vertices": 42,
+        "coordinates": "6a46b8216ee826d01a26612877cae0267201bd1301346dd6b32a3e6376875a20",
+        "faces": 80,
+        "topology": "d5ac385b2b7c1b211e431b21c6efc24bf5e2b803c8346898d435d75e7d01862c",
+        "uv": {
+          "UVMap": "1917750558146767e7df1ddee6cf309f1dbc4d1681cea08c908cb0f922e52b78"
+        }
+      }
+    },
+    "after_nonhair": {
+      "Astra evaluation ground": {
+        "vertices": 4,
+        "coordinates": "f69cbb67088dc9a345cdb801e2d5ecfdca2581181cb7cf0748038cb79debda84",
+        "faces": 1,
+        "topology": "a1fa54b0eae7dbbd49cbbb07b8d2dcdd965bf80940bcb09238c4d5f99491aaa0",
+        "uv": {
+          "UVMap": "eeb394f1726eac2bb9656979b5b3190f0fc2bfc9a3df8e179d13da2ebc8c513a"
+        }
+      },
+      "Astra_Undersleeves": {
+        "vertices": 448,
+        "coordinates": "871ffbb3d203285bdbe2e4aae24ed0afa416b81f2063cb73cb44a59d879b989c",
+        "faces": 384,
+        "topology": "874197cc499b6e79e6ab205b4c472dfc8c64d423be11fd5fdf3e08033b870794",
+        "uv": {
+          "UVMap": "c7879b2e04d314d0e57bf766467f8aec798a823a14f666ea56a17913d752e70b"
+        }
+      },
+      "AstraChar2_Cornea_L": {
+        "vertices": 1677,
+        "coordinates": "ce7ce40707c2ffdfda25a89ba6509d06ee44142a9e2837997d3c702241b9e631",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Cornea_R": {
+        "vertices": 1677,
+        "coordinates": "ed1c10fcd09cfd1c94f77e85340b0956e667b504912cb59f4f05a424c3ed2335",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Eyeball_L": {
+        "vertices": 2498,
+        "coordinates": "c3a50c4db6cdd3818206d5ac57f01cb1123694058d014ed1699a1fa35ff6aeda",
+        "faces": 2560,
+        "topology": "567689cc750026e25861e14364cb98a02cdfebdf68e8a4c7736324d0986f8def",
+        "uv": {
+          "UVMap": "964e38fe3f48b42b8d76cc1f657b133c9175f9bf3662fefb4cca006bbe2c90b7"
+        }
+      },
+      "AstraChar2_Eyeball_R": {
+        "vertices": 2498,
+        "coordinates": "e5ee0574b67040572a1f2398411a33f50365785d5acb31eefe566a036296b8c9",
+        "faces": 2560,
+        "topology": "000e65f1285edc204c7f1bd557d9ecdd26f2db352d7eccf348a412dcbdbdc25f",
+        "uv": {
+          "UVMap": "aaec9b9fe9a6d69bdd335d714b61372adf8921e1c035c36cc364d014eca29d0e"
+        }
+      },
+      "AstraChar2_Eyebrows_L": {
+        "vertices": 10750,
+        "coordinates": "aa423c59405338fff81397067a0f82526ba3cba8ab56f00adc5834b2703270d7",
+        "faces": 8600,
+        "topology": "81c3ce15c962c692636c0228204527a8b71946a522625394f36a7e4b6d929f0e",
+        "uv": {}
+      },
+      "AstraChar2_Eyebrows_R": {
+        "vertices": 10750,
+        "coordinates": "751978ec3b33dab698e67d3e33cf33e91987cb0504fd56356a41ea2cfd830800",
+        "faces": 8600,
+        "topology": "81c3ce15c962c692636c0228204527a8b71946a522625394f36a7e4b6d929f0e",
+        "uv": {}
+      },
+      "AstraChar2_Iris_L": {
+        "vertices": 1677,
+        "coordinates": "0ba3fd28a83b3dc77f37795abe2a410615e988f492964902815a4be0b4daf17f",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Iris_R": {
+        "vertices": 1677,
+        "coordinates": "ce77ca4d40d7830fd5dda2967cb9f9df6deb565e00628fd785aa3b807e864a16",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Lashes_L": {
+        "vertices": 2025,
+        "coordinates": "82a6f29df250eb2e0aa02d7e917268abfb121aafdaaf4fb229562f3709e84e0a",
+        "faces": 1620,
+        "topology": "551ed8b7b5dab65406dfee40ccefafca25e154b3873385bf1779c1fe4fdd42cc",
+        "uv": {}
+      },
+      "AstraChar2_Lashes_R": {
+        "vertices": 2025,
+        "coordinates": "b517422fcc00dad1f28630a76669a55f918133ac576b3e3d6f99a0c4973d8f95",
+        "faces": 1620,
+        "topology": "551ed8b7b5dab65406dfee40ccefafca25e154b3873385bf1779c1fe4fdd42cc",
+        "uv": {}
+      },
+      "AstraChar2_Nostril_L": {
+        "vertices": 422,
+        "coordinates": "02ef86b2ef1b194b1a59f1fded0860143983e590e0c411be5f6be44c192188cc",
+        "faces": 448,
+        "topology": "8485d42393e943bb29ea4c86363a5defce1c3daee47ba448f1a324d1192acb30",
+        "uv": {
+          "UVMap": "c95d7d3b55abdd558b25e3d3518548c01c390e169176ae896424a92ce8e58a22"
+        }
+      },
+      "AstraChar2_Nostril_R": {
+        "vertices": 422,
+        "coordinates": "7a4184e652e4fa12b42b15811db588358c061a9755aac70e83c58dc8a60cd98c",
+        "faces": 448,
+        "topology": "d6d1df802c6f59cf5af8e2db44c16d57ef707b8cd6f42afdf97c1584749d1a91",
+        "uv": {
+          "UVMap": "e48aaa35ec216344547c19158b6203c51cda7b9781edce1dd62e9701173e9be6"
+        }
+      },
+      "AstraChar2_Pupil_L": {
+        "vertices": 1677,
+        "coordinates": "6ac6b938700e1d44f54dbdc71fffb8e1287a711939f7aabcf114a6798cdb678b",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_Pupil_R": {
+        "vertices": 1677,
+        "coordinates": "9afdb2453b717362f97a6ca57de2ad130d5203b53b774705aa05d65d6a20c3ff",
+        "faces": 1536,
+        "topology": "8536721140a9da690a12f1949b539750f29508fc6a7f3c927e17e65043cd791e",
+        "uv": {
+          "UVMap": "889986822efa5bef07c8a50ce24b3d74ba65081b6ecf3c9302d832b2f5c17a06"
+        }
+      },
+      "AstraChar2_R3_ChasedLaurel": {
+        "vertices": 6370,
+        "coordinates": "9ed98d7eaf6fa3a7d8e9ee970ada502dec10097c18e8b1357f4c4cbf2687ba3d",
+        "faces": 6240,
+        "topology": "531de9b8e8da79e83c6d7aa1570d439123f48f2479f55fa8ddd65d7613d0d242",
+        "uv": {}
+      },
+      "AstraChar2_TearCorner_L": {
+        "vertices": 222,
+        "coordinates": "07dedd42761290216335e0eec9eeccaead6315a34b30f7ee6c32e10bd835e222",
+        "faces": 240,
+        "topology": "3433759ff9013e873f2eefb4b43ef2d682bb574496f3c0a5564a72f57f5904ed",
+        "uv": {
+          "UVMap": "78dd77b2c8bbbdf2345006dcf68e674b58170c3c15126003e5f725fb7b0837ca"
+        }
+      },
+      "AstraChar2_TearCorner_R": {
+        "vertices": 222,
+        "coordinates": "4acde08a6aedc6ca4c4f511ba41e0ac755309fd65667acff73f882675aee7454",
+        "faces": 240,
+        "topology": "3433759ff9013e873f2eefb4b43ef2d682bb574496f3c0a5564a72f57f5904ed",
+        "uv": {
+          "UVMap": "78dd77b2c8bbbdf2345006dcf68e674b58170c3c15126003e5f725fb7b0837ca"
+        }
+      },
+      "AstraChar2_Wetline_L": {
+        "vertices": 650,
+        "coordinates": "d114c91fbeb1dc8062180ecaff4a808ee77ab34286cbf743a3796d6f3fb7640d",
+        "faces": 640,
+        "topology": "b2e785befbdf022c106a86fa3e2538afdea90f44236588a0015c6109387e2d6b",
+        "uv": {}
+      },
+      "AstraChar2_Wetline_R": {
+        "vertices": 650,
+        "coordinates": "b42369128d493d1ea9a71064f3f2d4a87300c1da3b126dcc36f81d9c509a718a",
+        "faces": 640,
+        "topology": "b2e785befbdf022c106a86fa3e2538afdea90f44236588a0015c6109387e2d6b",
+        "uv": {}
+      },
+      "char1": {
+        "vertices": 366392,
+        "coordinates": "871e56426bef1497e6229c22c654ef2f32335a4cfec317c72b47d27e7ea8f1b6",
+        "faces": 407198,
+        "topology": "d52273f022cbdd37b2a149c7e868d2c4a9baa557bde4112dcb595e02b5bde6f5",
+        "uv": {
+          "UVMap": "5e6df32d0948894744776028ab7fa44b5d49c5cf92cea613f2f2761cdf463dd5",
+          "AstraChar2FaceUV": "9184f4e06160099872d4a8b160133a56bfb50cb64b06124877541ce5c553f063"
+        }
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "coordinates": "cb87fa3ae5a5f93a0108786f9386134e35df535cb89d8603448e878a9552d701",
+        "faces": 8179,
+        "topology": "6230df89478d7a52586c0566bf21a505d0447b9ecd97a395fc0c8e4166c1654a",
+        "uv": {
+          "AstraSwordUV": "8616f4cb175f41821e43cf32016de4f06b8f760745bbb0cb52ebb7042cc30e1e"
+        }
+      },
+      "Icosphere": {
+        "vertices": 42,
+        "coordinates": "6a46b8216ee826d01a26612877cae0267201bd1301346dd6b32a3e6376875a20",
+        "faces": 80,
+        "topology": "d5ac385b2b7c1b211e431b21c6efc24bf5e2b803c8346898d435d75e7d01862c",
+        "uv": {
+          "UVMap": "1917750558146767e7df1ddee6cf309f1dbc4d1681cea08c908cb0f922e52b78"
+        }
+      }
+    }
+  }
+}

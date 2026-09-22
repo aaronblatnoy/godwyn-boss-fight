@@ -1,0 +1,21 @@
+00:01.149  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_r5_groom_clay.blend"
+Could not read preference mpfb_user_data
+
+Initializing MPFB log service. Logs can be found in /Users/aaron_7nh0yzm/Library/Application Support/Blender/5.2/mpfb/logs
+
+[INFO ] mpfb.init ..............................: Build info 20230708
+[INFO ] services.locationservice ...............: mh_user_dir is not explicitly set but autodiscovery is disabled
+[INFO ] services.uiservice .....................: Rebuilding the list of available importer presets (for presets panel)
+[INFO ] services.uiservice .....................: Rebuilding the list of available importer presets (for importer panel)
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+HAIR VALIDATED neutral
+Traceback (most recent call last):
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r5_validate.py", line 32, in <module>
+    state['body_max_displacement_m']=float(np.linalg.norm(verts(body)-bodyrest,axis=1).max()*.01);assert state['body_max_displacement_m']<1e-6
+                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+Error: script failed, file: 'scripts/astra_char2_r5_validate.py', exiting.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

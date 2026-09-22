@@ -1,0 +1,43 @@
+{
+  "coverage": {
+    "valid_tangent_normal_fraction_on_painted_texels": 0.999914324449735,
+    "roughness_coverage_on_painted_texels": 0.9994251914322132
+  },
+  "gold": {
+    "source_interior_pixels": 603553,
+    "source_color_std": [
+      0.008211049251258373,
+      0.007615962065756321,
+      0.006431085057556629
+    ],
+    "source_roughness_mean": 0.3805016875267029,
+    "source_roughness_std": 0.014144642278552055,
+    "final_roughness_mean": 0.35680949687957764,
+    "final_roughness_std": 0.09771271049976349,
+    "normal_xy_std": [
+      0.02463488094508648,
+      0.023585505783557892
+    ],
+    "normal_perturbed_fraction": 0.29996909964824964
+  },
+  "robe": {
+    "source_interior_pixels": 1300448,
+    "source_color_std": [
+      0.007232242729514837,
+      0.002363783773034811,
+      0.0021111040841788054
+    ],
+    "source_roughness_mean": 0.6979480385780334,
+    "source_roughness_std": 0.0019078546902164817,
+    "final_roughness_mean": 0.7628073692321777,
+    "final_roughness_std": 0.18781273066997528,
+    "normal_xy_std": [
+      0.02395555004477501,
+      0.029538491740822792
+    ],
+    "normal_perturbed_fraction": 0.8189206719530501
+  }
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,243 @@
+{
+  "removed_shell_faces": 12200,
+  "retired_groom_objects": [
+    "AstraChar2_R2_HairFibers_0",
+    "AstraChar2_R2_HairFibers_1",
+    "AstraChar2_R2_HairFibers_2",
+    "AstraChar2_R2_HairFibers_3",
+    "AstraChar2_R2_HairlineWisps",
+    "AstraChar2_R2_HairRoots",
+    "AstraChar2_R3_Flow_L",
+    "AstraChar2_R3_Flow_R",
+    "AstraChar2_R3_Plait_L",
+    "AstraChar2_R3_Plait_R"
+  ],
+  "bone_lengths": [
+    {
+      "name": "phys_hair_back_00",
+      "blender_display_length_m": 16.839345703125,
+      "physical_segment_length_m": 0.16839317203267756,
+      "physical_tail_world": [
+        -1.4156896099848382e-07,
+        0.1324968934059143,
+        2.7599921226501465
+      ]
+    },
+    {
+      "name": "phys_hair_back_01",
+      "blender_display_length_m": 16.433448486328125,
+      "physical_segment_length_m": 0.16433449214377227,
+      "physical_tail_world": [
+        -1.438219072724678e-07,
+        0.169996976852417,
+        2.5999934673309326
+      ]
+    },
+    {
+      "name": "phys_hair_back_02",
+      "blender_display_length_m": 16.157532958984376,
+      "physical_segment_length_m": 0.16157512861120663,
+      "physical_tail_world": [
+        -1.4587739372018405e-07,
+        0.19249732792377472,
+        2.439992666244507
+      ]
+    },
+    {
+      "name": "phys_hair_back_03",
+      "blender_display_length_m": 16.1575341796875,
+      "physical_segment_length_m": 0.5999999597280584,
+      "physical_tail_world": [
+        -1.528372308712278e-07,
+        0.2205914855003357,
+        1.8406507968902588
+      ]
+    },
+    {
+      "name": "phys_hair_front_L_00",
+      "blender_display_length_m": 22.38190185546875,
+      "physical_segment_length_m": 0.22381888664072316,
+      "physical_tail_world": [
+        0.17374902963638306,
+        -0.3875029385089874,
+        2.664994478225708
+      ]
+    },
+    {
+      "name": "phys_hair_front_L_01",
+      "blender_display_length_m": 21.9762841796875,
+      "physical_segment_length_m": 0.21976279271300858,
+      "physical_tail_world": [
+        0.189999520778656,
+        -0.43000274896621704,
+        2.44999361038208
+      ]
+    },
+    {
+      "name": "phys_hair_front_L_02",
+      "blender_display_length_m": 21.69311279296875,
+      "physical_segment_length_m": 0.21693116720751313,
+      "physical_tail_world": [
+        0.19874946773052216,
+        -0.45750316977500916,
+        2.2349905967712402
+      ]
+    },
+    {
+      "name": "phys_hair_front_L_03",
+      "blender_display_length_m": 21.693115234375,
+      "physical_segment_length_m": 0.4000000042721694,
+      "physical_tail_world": [
+        0.2010711133480072,
+        -0.48071956634521484,
+        1.8356716632843018
+      ]
+    },
+    {
+      "name": "phys_hair_front_R_00",
+      "blender_display_length_m": 22.440900878906252,
+      "physical_segment_length_m": 0.22440892298526102,
+      "physical_tail_world": [
+        -0.17875033617019653,
+        -0.3875013291835785,
+        2.6649880409240723
+      ]
+    },
+    {
+      "name": "phys_hair_front_R_01",
+      "blender_display_length_m": 22.01859619140625,
+      "physical_segment_length_m": 0.22018573407617228,
+      "physical_tail_world": [
+        -0.20000050961971283,
+        -0.43000131845474243,
+        2.4499905109405518
+      ]
+    },
+    {
+      "name": "phys_hair_front_R_02",
+      "blender_display_length_m": 21.7187158203125,
+      "physical_segment_length_m": 0.21718703526417793,
+      "physical_tail_world": [
+        -0.21375010907649994,
+        -0.4575021266937256,
+        2.2349908351898193
+      ]
+    },
+    {
+      "name": "phys_hair_front_R_03",
+      "blender_display_length_m": 21.71871337890625,
+      "physical_segment_length_m": 0.40000004165922076,
+      "physical_tail_world": [
+        -0.2253536581993103,
+        -0.4807092249393463,
+        1.835833191871643
+      ]
+    }
+  ],
+  "native_display_tail_status": "Inherited oversized display tails retained to preserve exact animation rest matrices; physical lengths and endpoints are corrected in spring metadata and GLB node extras.",
+  "orphan_hair_influences_cleaned": 2920,
+  "groups": [
+    {
+      "name": "R_Front_0",
+      "curves": 1400,
+      "points": 89600,
+      "export_vertices": 268800,
+      "chain": "front_R"
+    },
+    {
+      "name": "R_Front_1",
+      "curves": 1400,
+      "points": 89600,
+      "export_vertices": 268800,
+      "chain": "front_R"
+    },
+    {
+      "name": "R_Side_0",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "R_Side_1",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "R_Back_0",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "R_Back_1",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "R_Braids",
+      "curves": 432,
+      "points": 110592,
+      "export_vertices": 331776,
+      "chain": "front_R"
+    },
+    {
+      "name": "L_Front_0",
+      "curves": 1400,
+      "points": 89600,
+      "export_vertices": 268800,
+      "chain": "front_L"
+    },
+    {
+      "name": "L_Front_1",
+      "curves": 1400,
+      "points": 89600,
+      "export_vertices": 268800,
+      "chain": "front_L"
+    },
+    {
+      "name": "L_Side_0",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "L_Side_1",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "L_Back_0",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "L_Back_1",
+      "curves": 900,
+      "points": 57600,
+      "export_vertices": 172800,
+      "chain": "back"
+    },
+    {
+      "name": "L_Braids",
+      "curves": 432,
+      "points": 110592,
+      "export_vertices": 331776,
+      "chain": "front_L"
+    }
+  ],
+  "total_native_curves": 13664,
+  "native_points": 1040384,
+  "portable_vertices": 3121152,
+  "removed_misclassified_crown_fragments": 53
+}

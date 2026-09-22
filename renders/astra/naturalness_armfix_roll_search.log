@@ -1,0 +1,17 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{'delay': 0.5, 'gain': 0.9000000000000002, 'peak': 39.5, 'speed': 54.88044280651587, 'max_roll': 22.912000919221036, 'max_local_acc': 26.80291683030791, 'max_world_acc': 35.290908887093394}
+{'delay': 0.625, 'gain': 0.8000000000000003, 'peak': 39.5, 'speed': 52.541979617291005, 'max_roll': 25.00071849006794, 'max_local_acc': 27.46290951046634, 'max_world_acc': 31.804725513904657}
+{'delay': 0.5, 'gain': 1.0000000000000002, 'peak': 39.5, 'speed': 56.13234804748141, 'max_roll': 25.457778799134488, 'max_local_acc': 28.305103949956653, 'max_world_acc': 37.055264226778405}
+{'delay': 0.625, 'gain': 0.9000000000000002, 'peak': 39.5, 'speed': 53.64862639048845, 'max_roll': 28.125808301326433, 'max_local_acc': 29.28259201078916, 'max_world_acc': 32.91936016443397}
+{'delay': 0.75, 'gain': 0.8000000000000003, 'peak': 39.75, 'speed': 51.75129860665142, 'max_roll': 29.944765472236075, 'max_local_acc': 29.70316188680568, 'max_world_acc': 31.939202935363177}
+{'delay': 0.625, 'gain': 1.0000000000000002, 'peak': 39.5, 'speed': 54.75907360274549, 'max_roll': 31.250898112584924, 'max_local_acc': 31.190980290124006, 'max_world_acc': 34.120823752029835}
+{'delay': 0.875, 'gain': 0.8000000000000003, 'peak': 39.75, 'speed': 50.65563134809485, 'max_roll': 34.36833394420052, 'max_local_acc': 31.39628972426831, 'max_world_acc': 31.54314761365787}
+{'delay': 0.75, 'gain': 0.9000000000000002, 'peak': 39.75, 'speed': 53.7249004431022, 'max_roll': 33.68786115626558, 'max_local_acc': 31.9304568011636, 'max_world_acc': 33.95041581644902}
+{'delay': 0.875, 'gain': 0.9000000000000002, 'peak': 39.75, 'speed': 52.48541405421103, 'max_roll': 38.66437568722558, 'max_local_acc': 33.91872770659862, 'max_world_acc': 32.70165460801499}
+{'delay': 0.75, 'gain': 1.0000000000000002, 'peak': 39.75, 'speed': 55.70885324828139, 'max_roll': 37.43095684029509, 'max_local_acc': 34.24882895538378, 'max_world_acc': 36.67560137185667}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

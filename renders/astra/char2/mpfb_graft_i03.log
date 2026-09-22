@@ -1,0 +1,15 @@
+00:01.778  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_premfpb.blend"
+01:17.423  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_graft_i03_clay_front.png'
+Info: Saved as "astra_character_v2_mpfb_graft_i03.blend"
+MPFB_RENDER mpfb_graft_i03_clay front
+01:30.746  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_graft_i03_clay_side.png'
+MPFB_RENDER mpfb_graft_i03_clay side
+01:35.550  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_graft_i03_clay_three_quarter.png'
+MPFB_RENDER mpfb_graft_i03_clay three_quarter
+01:43.723  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_graft_i03_clay_collar.png'
+MPFB_RENDER mpfb_graft_i03_clay collar
+01:51.526  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/mpfb_graft_i03_clay_body.png'
+MPFB_RENDER mpfb_graft_i03_clay body
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

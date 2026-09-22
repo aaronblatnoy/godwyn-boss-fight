@@ -1,0 +1,8 @@
+00:20.247  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_wip.blend"
+00:25.375  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/pose_stress_windup.png'
+00:26.826  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/pose_stress_cross.png'
+00:28.689  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/pose_stress_follow.png'
+TASK_A_COMPLETE {"windup": {"hips_world_z": 1.755311369895935, "frame": 30, "max_pose_matrix_error": 0.0}, "cross": {"hips_world_z": 1.6417560577392578, "frame": 41, "max_pose_matrix_error": 0.0}, "follow": {"hips_world_z": 1.6331316232681274, "frame": 60, "max_pose_matrix_error": 0.0}}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

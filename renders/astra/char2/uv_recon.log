@@ -1,0 +1,5 @@
+00:00.909  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.blend"
+{"layer": "UVMap", "head_polygons": 12430, "uv_continuous_components_within_head_subset": 549, "bounds": [[0.0009879999561235309, 0.9963780045509338], [0.0, 0.998865008354187]], "summed_head_uv_area": 0.011232924070997026, "summed_original_skin_slot_uv_area": 0.0018174726926685342, "note": "Head shares the original full-character 4K atlas. Component count is within the clipped head subset, not a whole-body UV island count. Skin-colored forehead triangles also occur in original gold slot."}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,83 @@
+{
+  "models": {
+    "astra_character_v2.blend": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend",
+      "bytes": 306799061,
+      "sha256": "a21c747e5e66380e7dacc08f1193f768608ce99facb1cb5f2f67fe15d39aa9d4"
+    },
+    "astra_character_v2.glb": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb",
+      "bytes": 573672856,
+      "sha256": "cabeb770eafc09247799512c862409bfda2f0c6dd74d102c28f2fea13fc5ebaa"
+    }
+  },
+  "images": {
+    "after_face.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face.png",
+      "width": 1080,
+      "height": 1610
+    },
+    "after_hair.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_hair.png",
+      "width": 1080,
+      "height": 1080
+    },
+    "after_front.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_front.png",
+      "width": 1080,
+      "height": 1080
+    },
+    "after_face_three_quarter.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face_three_quarter.png",
+      "width": 1080,
+      "height": 1610
+    },
+    "sidebyside_face.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/sidebyside_face.png",
+      "width": 2160,
+      "height": 1610
+    },
+    "sidebyside_hair.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/sidebyside_hair.png",
+      "width": 2160,
+      "height": 1080
+    },
+    "r4_before_hair.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r4_before_hair.png",
+      "width": 1080,
+      "height": 1080
+    },
+    "r4_hair_spring_peak.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r4_hair_spring_peak.png",
+      "width": 1080,
+      "height": 1080
+    },
+    "r4_hair_spring_settled.png": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/r4_hair_spring_settled.png",
+      "width": 1080,
+      "height": 1080
+    }
+  },
+  "native_curves": 13664,
+  "native_control_points": 1040384,
+  "portable_hair_vertices": 3121152,
+  "removed_shell_faces": 12200,
+  "removed_crown_fragments": 53,
+  "bones": 121,
+  "animations": 0,
+  "hair_bone_chain_status": "OUTSTANDING_FULL_PHYSICS_READINESS",
+  "working_asset_rig": "Three existing four-bone chains drive 14 native curve groups and 14 matching skinned GLB meshes.",
+  "outstanding": [
+    "Native Blender oversized display tails retained for exact animation rest compatibility; corrected physical endpoints/lengths are explicit spring metadata.",
+    "Engine spring/collision solver integration and collision/multi-axis validation.",
+    "Photoreal concept-art gate; groom is still too regular at the crown and roots.",
+    "Runtime LOD/performance work for the large individual-strand GLB."
+  ],
+  "hero_assembly_pass": true,
+  "hero_rest_error": 0.0,
+  "spring_peak_displacement_m": 0.4002567231655121,
+  "spring_native_control_error_m": 0.0,
+  "spring_portable_center_error_m": 1.195440972878714e-06,
+  "spring_body_displacement_m": 0.0,
+  "visual_gate": "NOT_MET"
+}

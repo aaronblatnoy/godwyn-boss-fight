@@ -1,0 +1,8 @@
+00:00.603  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_r6_collar.blend"
+LOCAL CYCLES GPU ['Apple M1 Pro (GPU - 14 cores)']
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r6_stress.py:13: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('R5 stress plain diffuse');m.use_nodes=True;m.node_tree.nodes.clear();out=m.node_tree.nodes.new('ShaderNodeOutputMaterial');d=m.node_tree.nodes.new('ShaderNodeBsdfDiffuse');d.inputs[0].default_value=(.4,.4,.4,1);m.node_tree.links.new(d.outputs[0],out.inputs[0]);s.view_layers[0].material_override=m
+STRUCTURAL STRESS COMPLETE
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

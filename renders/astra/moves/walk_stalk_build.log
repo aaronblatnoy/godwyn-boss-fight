@@ -1,0 +1,14 @@
+00:01.769  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_character_base.blend"
+HILT ENVELOPE 0.029374360874295236
+GRIP MATERIAL FACES 3442 SLIVER 621
+BAKE walk_stalk 30.0
+BAKE walk_stalk 60.0
+BAKE walk_stalk 30.0
+BAKE walk_stalk 60.0
+BAKE walk_stalk 30.0
+BAKE walk_stalk 60.0
+Info: Saved as "astra_move_walk_stalk_wip.blend"
+BUILD SAVED walk_stalk
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

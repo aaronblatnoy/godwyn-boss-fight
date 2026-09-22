@@ -1,0 +1,18 @@
+00:05.181  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_basecolor_4096 elapsed 2567
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_orm_4096 elapsed 4208
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_normal_4096 elapsed 4242
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_finish.py:50: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  seedmat=bpy.data.materials.new('Astra sword rebake source');seedmat.use_nodes=True;n=seedmat.node_tree.nodes.new('ShaderNodeTexImage');n.image=bpy.data.images['godwyn_albedo'];sword.data.materials.clear();sword.data.materials.append(seedmat)
+Info: Saved as "astra_character_v2.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_basecolor_2048 elapsed 8
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_orm_2048 elapsed 17
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_Godwyn_Sword_normal_2048 elapsed 31
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_finish.py:34: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('Astra sleeve baking source');mat.use_nodes=True;node=mat.node_tree.nodes.new('ShaderNodeTexImage');node.image=seed;mat.node_tree.links.new(node.outputs[0],mat.node_tree.nodes.get('Principled BSDF').inputs['Base Color']);o.data.materials.append(mat)

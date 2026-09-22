@@ -1,0 +1,11 @@
+00:02.737  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_character_base.blend"
+HILT ENVELOPE 0.029374360874295236
+GRIP MATERIAL FACES 3442 SLIVER 621
+00:05.390  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_idle_guard_wip.blend"
+HILT ENVELOPE 0.029374360874295236
+GRIP MATERIAL FACES 3442 SLIVER 621
+00:20.316  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/moves/idle_guard_stable_source_test.png'
+Info: Saved as "astra_move_idle_guard_wip.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

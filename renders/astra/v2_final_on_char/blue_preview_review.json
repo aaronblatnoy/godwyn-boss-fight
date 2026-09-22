@@ -1,0 +1,14 @@
+{
+  "stills_inspected": [
+    "blue_preview_front_f27.png",
+    "blue_preview_three_quarter_f64.png"
+  ],
+  "selected_multiply_linear": [
+    0.025,
+    0.2,
+    0.62
+  ],
+  "adjustment_needed": false,
+  "visual_judgment": "Deep saturated royal/cobalt blue in the lit robe; darker navy fold recesses remain readable. Neither pale cornflower nor overall black. Gold remains bright and separated.",
+  "decision": "Proceed to full render after visual inspection of both PNGs."
+}

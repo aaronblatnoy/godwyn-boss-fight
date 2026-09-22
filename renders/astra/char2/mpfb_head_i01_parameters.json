@@ -1,0 +1,125 @@
+{
+  "iteration": 1,
+  "macro": {
+    "gender": 1.0,
+    "age": 0.3,
+    "muscle": 0.6,
+    "weight": 0.4,
+    "proportions": 0.65,
+    "height": 0.5,
+    "cupsize": 0.5,
+    "firmness": 0.5,
+    "race": {
+      "caucasian": 1.0,
+      "asian": 0.0,
+      "african": 0.0
+    }
+  },
+  "targets": {
+    "head/head-rectangular": 0.25,
+    "head/head-oval": 0.1,
+    "head/head-scale-vert-incr": 0.12,
+    "chin/chin-width-incr": 0.25,
+    "chin/chin-bones-incr": 0.3,
+    "chin/chin-prominent-incr": 0.1,
+    "eyebrows/eyebrows-trans-forward": 0.3,
+    "eyebrows/eyebrows-trans-down": 0.1,
+    "nose/nose-greek-incr": 0.2,
+    "nose/nose-width3-decr": 0.12,
+    "mouth/mouth-scale-horiz-incr": 0.1,
+    "mouth/mouth-lowerlip-volume-decr": 0.08,
+    "eyes/l-eye-push2-in": 0.15,
+    "cheek/l-cheek-bones-incr": 0.2,
+    "ears/l-ear-scale-decr": 0.08,
+    "eyes/r-eye-push2-in": 0.15,
+    "cheek/r-cheek-bones-incr": 0.2,
+    "ears/r-ear-scale-decr": 0.08
+  },
+  "uniform_scale": 1.6,
+  "translation": [
+    0.0,
+    -0.17530666895210745,
+    0.7572702026367186
+  ],
+  "joints": {
+    "helper-l-eye": [
+      0.0445819702413347,
+      -0.3711025624556674,
+      2.987192703882853
+    ],
+    "helper-r-eye": [
+      -0.0445819702413347,
+      -0.3711025624556674,
+      2.987192703882853
+    ],
+    "joint-head": [
+      0.0,
+      -0.25093425668776037,
+      2.9205499267578126
+    ],
+    "joint-jaw": [
+      0.0,
+      -0.39656150646507743,
+      2.8438237285614014
+    ],
+    "joint-l-eye": [
+      0.044666871428489685,
+      -0.37110880471765995,
+      2.9868699407577513
+    ],
+    "joint-neck": [
+      0.0,
+      -0.195,
+      2.7923054313659668
+    ],
+    "joint-r-eye": [
+      -0.044666871428489685,
+      -0.37110880471765995,
+      2.9868699407577513
+    ]
+  },
+  "eyes": {
+    "L": {
+      "center": [
+        0.044610236876611364,
+        -0.3710558429456545,
+        2.987177576094415
+      ],
+      "radius": 0.02524894488252306,
+      "helper_bounds": [
+        [
+          0.021204313635826113,
+          -0.3965120226889849,
+          2.9644832229614257
+        ],
+        [
+          0.06807398200035096,
+          -0.3456992537528277,
+          3.0095849609375
+        ]
+      ]
+    },
+    "R": {
+      "center": [
+        -0.044610236876611364,
+        -0.3710558429456545,
+        2.987177576094415
+      ],
+      "radius": 0.02524894488252306,
+      "helper_bounds": [
+        [
+          -0.06807398200035096,
+          -0.3965120226889849,
+          2.9644832229614257
+        ],
+        [
+          -0.021204313635826113,
+          -0.3456992537528277,
+          3.0095849609375
+        ]
+      ]
+    }
+  },
+  "head_vertices": 4833,
+  "head_faces": 4793
+}

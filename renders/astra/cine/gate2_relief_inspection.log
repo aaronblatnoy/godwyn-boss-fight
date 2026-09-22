@@ -1,0 +1,6 @@
+00:00.740  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+<string>:1: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+RELIEF_SHADERS [('Astra Round2 solid champagne gold', [('Principled BSDF', 'BSDF_PRINCIPLED', [('Normal Map', 'Normal')])]), ('Astra Round2 royal blue and continuous gold trim', [('Principled BSDF', 'BSDF_PRINCIPLED', [('Normal Map', 'Normal')])]), ('Astra pale golden skin final', [('Principled BSDF', 'BSDF_PRINCIPLED', [('Normal Map', 'Normal')])]), ('Astra engraved royal gold final', [('Principled BSDF', 'BSDF_PRINCIPLED', [('Normal Map', 'Normal')])]), ('Astra midnight blue woven silk final', [('Principled BSDF', 'BSDF_PRINCIPLED', [('Normal Map', 'Normal')])])]
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

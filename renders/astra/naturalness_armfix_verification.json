@@ -1,0 +1,359 @@
+{
+  "gates": {
+    "wrist_within_30": true,
+    "elbow_within_150": true,
+    "forearm_delayed": true,
+    "hand_preserved": true,
+    "blade_preserved": true,
+    "feet_preserved": true,
+    "cloth_preserved": true,
+    "balance_no_new_violation_or_material_loss": true,
+    "endpoints_exact": true,
+    "no_unrelated_curves": true
+  },
+  "balance_comparison_tolerance_m": 0.001,
+  "balance_tolerance_reason": "Approximate segment mass model; report all deltas explicitly. A sub-millimetre margin change is below this proxy precision; feet/support geometry must remain exact and no new violation is allowed.",
+  "ranges": {
+    "wrist_deviation_deg": {
+      "before": {
+        "min": -46.76526132779784,
+        "min_frame": 47.25,
+        "max": 14.62358774951995,
+        "max_frame": 77.0
+      },
+      "after": {
+        "min": -29.368724473135966,
+        "min_frame": 45.0,
+        "max": 14.62358774951995,
+        "max_frame": 77.0
+      }
+    },
+    "wrist_flexion_deg": {
+      "before": {
+        "min": -62.5817353792246,
+        "min_frame": 48.5,
+        "max": 53.21919042525796,
+        "max_frame": 1.0
+      },
+      "after": {
+        "min": -56.88372390564399,
+        "min_frame": 41.0,
+        "max": 53.21919042525796,
+        "max_frame": 1.0
+      }
+    },
+    "wrist_total_bend_deg": {
+      "before": {
+        "min": 5.921854265123803,
+        "min_frame": 66.0,
+        "max": 70.71061255244587,
+        "max_frame": 48.25
+      },
+      "after": {
+        "min": 5.921854265123803,
+        "min_frame": 66.0,
+        "max": 59.72252523462034,
+        "max_frame": 48.25
+      }
+    },
+    "elbow_flexion_deg": {
+      "before": {
+        "min": 14.98118836889152,
+        "min_frame": 61.25,
+        "max": 148.21668959316415,
+        "max_frame": 38.75
+      },
+      "after": {
+        "min": 14.98118836889152,
+        "min_frame": 61.25,
+        "max": 148.21666227240746,
+        "max_frame": 38.75
+      }
+    }
+  },
+  "first_cut": {
+    "RightShoulder": {
+      "before": {
+        "local_peak_frame": 38.25,
+        "local_peak_deg_frame": 2.7687226245116157,
+        "world_peak_frame": 35.5,
+        "world_peak_deg_frame": 21.829115227368444
+      },
+      "after": {
+        "local_peak_frame": 38.25,
+        "local_peak_deg_frame": 2.7687226245116157,
+        "world_peak_frame": 35.5,
+        "world_peak_deg_frame": 21.829115227368444
+      }
+    },
+    "RightArm": {
+      "before": {
+        "local_peak_frame": 39.0,
+        "local_peak_deg_frame": 49.966563434498084,
+        "world_peak_frame": 39.0,
+        "world_peak_deg_frame": 57.77102348615797
+      },
+      "after": {
+        "local_peak_frame": 39.0,
+        "local_peak_deg_frame": 49.966563434498084,
+        "world_peak_frame": 39.0,
+        "world_peak_deg_frame": 57.77102348615797
+      }
+    },
+    "RightForeArm": {
+      "before": {
+        "local_peak_frame": 41.75,
+        "local_peak_deg_frame": 20.17085289267254,
+        "world_peak_frame": 39.0,
+        "world_peak_deg_frame": 57.741779147282855
+      },
+      "after": {
+        "local_peak_frame": 41.75,
+        "local_peak_deg_frame": 21.56110875699458,
+        "world_peak_frame": 39.5,
+        "world_peak_deg_frame": 54.830518487707984
+      }
+    },
+    "RightHand": {
+      "before": {
+        "local_peak_frame": 38.75,
+        "local_peak_deg_frame": 20.801615138519036,
+        "world_peak_frame": 39.5,
+        "world_peak_deg_frame": 45.625063719402775
+      },
+      "after": {
+        "local_peak_frame": 37.0,
+        "local_peak_deg_frame": 16.82037640279408,
+        "world_peak_frame": 39.5,
+        "world_peak_deg_frame": 45.62507249131491
+      }
+    }
+  },
+  "local_peaks": {
+    "RightArm": {
+      "before": {
+        "speed_deg_frame": 44.12638642304249,
+        "frame": 39,
+        "accel_deg_frame2": 31.14236343766279,
+        "accel_frame": 37
+      },
+      "after": {
+        "speed_deg_frame": 44.12638642304249,
+        "frame": 39,
+        "accel_deg_frame2": 31.14236343766279,
+        "accel_frame": 37
+      }
+    },
+    "RightForeArm": {
+      "before": {
+        "speed_deg_frame": 24.093612238792897,
+        "frame": 59,
+        "accel_deg_frame2": 19.117397226952523,
+        "accel_frame": 39
+      },
+      "after": {
+        "speed_deg_frame": 24.093612238792897,
+        "frame": 59,
+        "accel_deg_frame2": 26.801414611884375,
+        "accel_frame": 39
+      }
+    },
+    "RightHand": {
+      "before": {
+        "speed_deg_frame": 21.895637742537083,
+        "frame": 54,
+        "accel_deg_frame2": 25.774592720126524,
+        "accel_frame": 55
+      },
+      "after": {
+        "speed_deg_frame": 21.895637742537083,
+        "frame": 54,
+        "accel_deg_frame2": 25.774592720126524,
+        "accel_frame": 55
+      }
+    }
+  },
+  "new_integer_rotation_events": [
+    {
+      "bone": "RightArm",
+      "frame": 52,
+      "kind": "angular_acceleration",
+      "accel": 12.299113207762543
+    },
+    {
+      "bone": "RightForeArm",
+      "frame": 45,
+      "kind": "angular_acceleration",
+      "accel": 14.215650362311392
+    },
+    {
+      "bone": "RightForeArm",
+      "frame": 46,
+      "kind": "angular_acceleration",
+      "accel": 19.559912737021424
+    },
+    {
+      "bone": "RightHand",
+      "frame": 40,
+      "kind": "reversal",
+      "before_speed": 12.08461772557054,
+      "after_speed": 4.771120249789986,
+      "direction_dot": -0.9735855968309859
+    },
+    {
+      "bone": "RightHand",
+      "frame": 45,
+      "kind": "angular_acceleration",
+      "accel": 12.744723883624433
+    },
+    {
+      "bone": "RightHand",
+      "frame": 53,
+      "kind": "angular_acceleration",
+      "accel": 12.140860731998844
+    }
+  ],
+  "hand_world_position_max_error_m": 5.213277245919675e-07,
+  "hand_world_rotation_max_error_deg": 2.8074097598234598e-05,
+  "blade_max_error_m": {
+    "sword_tip": 8.046627044677734e-07,
+    "sword_grip": 5.63098300328588e-07
+  },
+  "unaffected_heads_max_error_m": 5.213277245919675e-07,
+  "foot_clearance_max_error_m": 0.0,
+  "cloth_floor_max_error_m": 0.0,
+  "cloth_metrics_exactly_equal": true,
+  "balance_minima": {
+    "whole": {
+      "before": -0.3076440054159394,
+      "after": -0.3076440057997933
+    },
+    "low_pose": {
+      "before": 0.1833765952391489,
+      "after": 0.18287658312624042
+    }
+  },
+  "balance_frame_changes": [
+    {
+      "frame": 45,
+      "before": 0.18870938984573576,
+      "after": 0.18852019637670214,
+      "change_m": -0.00018919346903362166
+    },
+    {
+      "frame": 46,
+      "before": 0.18447538613873157,
+      "after": 0.18389769272804973,
+      "change_m": -0.0005776934106818399
+    },
+    {
+      "frame": 47,
+      "before": 0.1833765952391489,
+      "after": 0.18287658312624042,
+      "change_m": -0.0005000121129084822
+    },
+    {
+      "frame": 48,
+      "before": 0.18689126379302684,
+      "after": 0.18648144845077408,
+      "change_m": -0.00040981534225276173
+    },
+    {
+      "frame": 49,
+      "before": 0.19507745637461668,
+      "after": 0.194628087199507,
+      "change_m": -0.0004493691751096818
+    },
+    {
+      "frame": 50,
+      "before": 0.2074600536731216,
+      "after": 0.2068000174103214,
+      "change_m": -0.000660036262800201
+    },
+    {
+      "frame": 51,
+      "before": 0.22255137541357223,
+      "after": 0.22169621976721046,
+      "change_m": -0.000855155646361766
+    },
+    {
+      "frame": 52,
+      "before": 0.23844036991699746,
+      "after": 0.23818563751499064,
+      "change_m": -0.00025473240200682423
+    }
+  ],
+  "endpoints_exact": {
+    "44.0": true,
+    "53.0": true
+  },
+  "changed_curves": [
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightArm\"].rotation_quaternion",
+      3
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightForeArm\"].rotation_quaternion",
+      3
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      0
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      1
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      2
+    ],
+    [
+      "pose.bones[\"RightHand\"].rotation_quaternion",
+      3
+    ]
+  ],
+  "invariant_differences": [],
+  "source_sha256": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c",
+  "candidate_sha256": "0c6746a55fb56b2bb8ca1adecc4a8891f5790e18dd773a28d8b3b02fef7b7425",
+  "published_final_scene": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend",
+  "published_scene_sha256": "0c6746a55fb56b2bb8ca1adecc4a8891f5790e18dd773a28d8b3b02fef7b7425",
+  "visual_pose_review": "F36-41 and F44-53 rendered with saved camera; paired F38-40 and F46-48 inspected. Blade path and silhouette retained; arm pole correction visible. Hidden collision clearance not certified.",
+  "final_visual_review": {
+    "complete": true,
+    "frames_reviewed": 90,
+    "decoded_sheets": [
+      "v2_final_on_char/armfix_decoded_01.png",
+      "v2_final_on_char/armfix_decoded_02.png",
+      "v2_final_on_char/armfix_decoded_03.png",
+      "v2_final_on_char/armfix_decoded_04.png",
+      "v2_final_on_char/armfix_decoded_05.png",
+      "v2_final_on_char/armfix_decoded_06.png"
+    ],
+    "findings": "All 90 decoded frames and both focused before/after comparisons inspected. Blade path, contact, cloth behavior and approved timing read consistently. No new exposed geometry breakthrough seen; occluded intersections remain unverified."
+  }
+}

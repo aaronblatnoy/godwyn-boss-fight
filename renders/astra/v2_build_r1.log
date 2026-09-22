@@ -1,0 +1,14 @@
+18:01:10 | INFO: Data are loaded, start creating Blender stuff
+18:01:10 | INFO: Blender create Mesh node char1
+18:01:11 | INFO: Blender create Mesh node Godwyn_Sword.001
+18:01:11 | INFO: glTF import finished in 1.18s
+ASTRA WIP WEIGHT REPAIRS 30231
+ASTRA SMOOTH BINDINGS 103259
+MOTION_BLUR True
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_xslash_v2_build.py:278: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat=bpy.data.materials.new('Astra V2 temporal blade blur');mat.use_nodes=True
+Info: Saved as "astra_xslash_v2_wip.blend"
+ASTRA V2 BUILD {"version": "r1", "fps": 30, "frames": 90, "duration_seconds": 3.0, "cuts": [[37, 42], [54, 59]], "secondary_bones": 97, "blade_length": 1.6490675349306188, "max_wrist_reach_error": 0.05290410186271804}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

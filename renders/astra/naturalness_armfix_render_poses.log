@@ -1,0 +1,40 @@
+00:00.779  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_armfix_trial.blend"
+00:03.539  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/036.png'
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+ARMFIX POSE 36
+00:04.628  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/037.png'
+ARMFIX POSE 37
+00:05.756  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/038.png'
+ARMFIX POSE 38
+00:07.160  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/039.png'
+ARMFIX POSE 39
+00:08.553  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/040.png'
+ARMFIX POSE 40
+00:09.915  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/041.png'
+ARMFIX POSE 41
+00:11.304  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/044.png'
+ARMFIX POSE 44
+00:12.276  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/045.png'
+ARMFIX POSE 45
+00:13.235  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/046.png'
+ARMFIX POSE 46
+00:14.189  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/047.png'
+ARMFIX POSE 47
+00:15.135  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/048.png'
+ARMFIX POSE 48
+00:16.089  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/049.png'
+ARMFIX POSE 49
+00:17.028  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/050.png'
+ARMFIX POSE 50
+00:18.024  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/051.png'
+ARMFIX POSE 51
+00:19.006  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/052.png'
+ARMFIX POSE 52
+00:20.005  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/v2_final_on_char/armfix_after/053.png'
+ARMFIX POSE 53
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

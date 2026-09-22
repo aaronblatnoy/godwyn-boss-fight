@@ -1,0 +1,7 @@
+00:54.832  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend"
+CINE_BLUE_OVERRIDE [{"material": "Astra Round2 royal blue and continuous gold trim", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}]
+CINE_BLUE_OVERRIDE [{"material": "Astra Round2 royal blue and continuous gold trim", "canonical_material": "Astra Round2 royal blue and continuous gold trim", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}, {"material": "Astra Round2 royal blue undersleeves", "canonical_material": "Astra Round2 royal blue undersleeves", "multiply_linear": [0.025, 0.2, 0.62], "original_color": ["Image Texture", "Color"], "unchanged_metallic_mask": ["Separate Color", "Blue"]}]
+CINE DIRECT BLUE PASS: existing motion tint preserved, no double multiplication or node growth; both calls identical
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

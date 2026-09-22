@@ -1,0 +1,12 @@
+CINE_DEVICE_BOUND {"requested_device": "AUTO", "bound_backend": "METAL", "engine": "CYCLES", "device": "GPU", "enabled_compute_devices": [{"name": "Apple M1 Pro (GPU - 14 cores)", "type": "METAL"}]}
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_cine_render.py", line 79, in enforce_local_hold
+    raise RuntimeError('CINE HARD HOLD: Mac runs are limited to three frames. The 90-frame hero belongs on the Linux GPU server.')
+RuntimeError: CINE HARD HOLD: Mac runs are limited to three frames. The 90-frame hero belongs on the Linux GPU server.
+
+Error: script failed, expr: 'import sys; sys.dont_write_bytecode=True; sys.path.insert(0,'scripts'); import bpy,astra_cine_render as c; p=c.configure_device(bpy.context.scene,'AUTO'); assert p['bound_backend']=='METAL'; c.enforce_local_hold([27,41,90]); print('AUTO_GPU_AND_THREE_FRAME_HOLD_PASS'); c.enforce_local_hold(list(range(1,91)))', exiting.
+AUTO_GPU_AND_THREE_FRAME_HOLD_PASS
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

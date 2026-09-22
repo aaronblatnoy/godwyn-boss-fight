@@ -1,0 +1,82 @@
+{
+  "windup": {
+    "AstraChar2_R5_Cuirass": {
+      "edge_stretch_max": 1.0656540393829346,
+      "edge_stretch_p99": 1.0423681735992432
+    },
+    "AstraChar2_R5_Gorget": {
+      "edge_stretch_max": 1.0002410411834717,
+      "edge_stretch_p99": 1.0001100301742554
+    },
+    "AstraChar2_R5_GorgetRim": {
+      "edge_stretch_max": 1.0003619194030762,
+      "edge_stretch_p99": 1.000232219696045
+    },
+    "AstraChar2_R5_Pauldron_L": {
+      "edge_stretch_max": 1.0002776384353638,
+      "edge_stretch_p99": 1.0000667572021484
+    },
+    "AstraChar2_R5_Pauldron_R": {
+      "edge_stretch_max": 1.0003681182861328,
+      "edge_stretch_p99": 1.0000715255737305
+    },
+    "AstraChar2_R6_NeckGraft": {
+      "edge_stretch_max": 1.259602665901184,
+      "edge_stretch_p99": 1.238900899887085
+    }
+  },
+  "cross": {
+    "AstraChar2_R5_Cuirass": {
+      "edge_stretch_max": 1.0834872722625732,
+      "edge_stretch_p99": 1.0753017663955688
+    },
+    "AstraChar2_R5_Gorget": {
+      "edge_stretch_max": 1.000175952911377,
+      "edge_stretch_p99": 1.000070571899414
+    },
+    "AstraChar2_R5_GorgetRim": {
+      "edge_stretch_max": 1.0002741813659668,
+      "edge_stretch_p99": 1.000159502029419
+    },
+    "AstraChar2_R5_Pauldron_L": {
+      "edge_stretch_max": 1.0002144575119019,
+      "edge_stretch_p99": 1.0000566244125366
+    },
+    "AstraChar2_R5_Pauldron_R": {
+      "edge_stretch_max": 1.0001299381256104,
+      "edge_stretch_p99": 1.0000457763671875
+    },
+    "AstraChar2_R6_NeckGraft": {
+      "edge_stretch_max": 1.3091747760772705,
+      "edge_stretch_p99": 1.2750121355056763
+    }
+  },
+  "follow": {
+    "AstraChar2_R5_Cuirass": {
+      "edge_stretch_max": 1.0990371704101562,
+      "edge_stretch_p99": 1.08918035030365
+    },
+    "AstraChar2_R5_Gorget": {
+      "edge_stretch_max": 1.000213384628296,
+      "edge_stretch_p99": 1.0000735521316528
+    },
+    "AstraChar2_R5_GorgetRim": {
+      "edge_stretch_max": 1.000317096710205,
+      "edge_stretch_p99": 1.000188946723938
+    },
+    "AstraChar2_R5_Pauldron_L": {
+      "edge_stretch_max": 1.0002692937850952,
+      "edge_stretch_p99": 1.0000569820404053
+    },
+    "AstraChar2_R5_Pauldron_R": {
+      "edge_stretch_max": 1.00027334690094,
+      "edge_stretch_p99": 1.0000585317611694
+    },
+    "AstraChar2_R6_NeckGraft": {
+      "edge_stretch_max": 1.3627361059188843,
+      "edge_stretch_p99": 1.327078938484192
+    }
+  },
+  "actions_after": 0,
+  "neutral_restored": true
+}

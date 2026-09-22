@@ -1,0 +1,65 @@
+{
+  "groups": [
+    {
+      "name": "L_Front",
+      "curves": 4500,
+      "points": 288000,
+      "export_vertices": 445500,
+      "chain": "front_L"
+    },
+    {
+      "name": "L_Side",
+      "curves": 7000,
+      "points": 448000,
+      "export_vertices": 693000,
+      "chain": "front_L"
+    },
+    {
+      "name": "L_Back",
+      "curves": 6500,
+      "points": 416000,
+      "export_vertices": 643500,
+      "chain": "back"
+    },
+    {
+      "name": "L_Braids",
+      "curves": 1350,
+      "points": 194400,
+      "export_vertices": 295650,
+      "chain": "front_L"
+    },
+    {
+      "name": "R_Front",
+      "curves": 4500,
+      "points": 288000,
+      "export_vertices": 445500,
+      "chain": "front_R"
+    },
+    {
+      "name": "R_Side",
+      "curves": 7000,
+      "points": 448000,
+      "export_vertices": 693000,
+      "chain": "front_R"
+    },
+    {
+      "name": "R_Back",
+      "curves": 6500,
+      "points": 416000,
+      "export_vertices": 643500,
+      "chain": "back"
+    },
+    {
+      "name": "R_Braids",
+      "curves": 1350,
+      "points": 194400,
+      "export_vertices": 295650,
+      "chain": "front_R"
+    }
+  ],
+  "native_strands": 38700,
+  "braid_count": 6,
+  "interwoven_bundles_per_braid": 3,
+  "materials": "Existing hair materials referenced unchanged; all gates rendered with diffuse clay override.",
+  "rig": "Original 121 bones and rest transforms preserved."
+}

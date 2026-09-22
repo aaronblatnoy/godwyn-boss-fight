@@ -1,0 +1,175 @@
+{
+  "poses": {
+    "windup": {
+      "shoulder": {
+        "edge_ratio_p50_p95_p99_max": [
+          0.9999992251396179,
+          1.2283836841583244,
+          1.723212065696718,
+          3.375016927719116
+        ],
+        "edges_over_2x": 47,
+        "edges_measured": 9833,
+        "target": [
+          -0.2981072962284088,
+          0.18808358907699585,
+          2.526420831680298
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.1859971284866333,
+          "edges_over_2x": 18,
+          "edges_measured": 9695
+        },
+        "armor_only": {
+          "edge_ratio_p95": 2.1653404235839844,
+          "edges_over_2x": 32,
+          "edges_measured": 403
+        }
+      },
+      "cape_root": {
+        "edge_ratio_p50_p95_p99_max": [
+          1.010199248790741,
+          1.9189486920833576,
+          2.8104726505279545,
+          8.209609985351562
+        ],
+        "edges_over_2x": 321,
+        "edges_measured": 7534,
+        "target": [
+          0.26282957196235657,
+          0.11000490933656693,
+          2.329616069793701
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.6415667533874512,
+          "edges_over_2x": 20,
+          "edges_measured": 526
+        },
+        "armor_only": {
+          "edge_ratio_p95": 1.8871749639511108,
+          "edges_over_2x": 228,
+          "edges_measured": 5713
+        }
+      }
+    },
+    "cross": {
+      "shoulder": {
+        "edge_ratio_p50_p95_p99_max": [
+          1.0000027418136597,
+          1.6052314400672891,
+          2.1176530981063837,
+          4.241283893585205
+        ],
+        "edges_over_2x": 147,
+        "edges_measured": 10152,
+        "target": [
+          0.409950852394104,
+          -0.19049251079559326,
+          2.4442873001098633
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.3546202182769775,
+          "edges_over_2x": 8,
+          "edges_measured": 1783
+        },
+        "armor_only": {
+          "edge_ratio_p95": 1.6267526149749756,
+          "edges_over_2x": 142,
+          "edges_measured": 9031
+        }
+      },
+      "cape_root": {
+        "edge_ratio_p50_p95_p99_max": [
+          1.0703325271606445,
+          1.9024432301521295,
+          2.6489690971374515,
+          7.9113054275512695
+        ],
+        "edges_over_2x": 310,
+        "edges_measured": 7534,
+        "target": [
+          -0.10522281378507614,
+          -0.2573951482772827,
+          2.2575671672821045
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.664911150932312,
+          "edges_over_2x": 19,
+          "edges_measured": 526
+        },
+        "armor_only": {
+          "edge_ratio_p95": 1.8834949731826782,
+          "edges_over_2x": 227,
+          "edges_measured": 5713
+        }
+      }
+    },
+    "follow": {
+      "shoulder": {
+        "edge_ratio_p50_p95_p99_max": [
+          1.0000030398368835,
+          1.4914693415164946,
+          2.089610271453857,
+          4.096898078918457
+        ],
+        "edges_over_2x": 125,
+        "edges_measured": 10152,
+        "target": [
+          0.25848448276519775,
+          -0.7245411276817322,
+          2.4107022285461426
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.3182809352874756,
+          "edges_over_2x": 1,
+          "edges_measured": 1783
+        },
+        "armor_only": {
+          "edge_ratio_p95": 1.5217063426971436,
+          "edges_over_2x": 125,
+          "edges_measured": 9031
+        }
+      },
+      "cape_root": {
+        "edge_ratio_p50_p95_p99_max": [
+          1.028638243675232,
+          2.0118857145309446,
+          2.891037244796753,
+          8.923995971679688
+        ],
+        "edges_over_2x": 386,
+        "edges_measured": 7534,
+        "target": [
+          0.1556350439786911,
+          -0.3080783486366272,
+          2.255755662918091
+        ],
+        "cloth_only": {
+          "edge_ratio_p95": 1.8776819705963135,
+          "edges_over_2x": 24,
+          "edges_measured": 526
+        },
+        "armor_only": {
+          "edge_ratio_p95": 1.9846240282058716,
+          "edges_over_2x": 277,
+          "edges_measured": 5713
+        }
+      }
+    }
+  },
+  "weight_sums": {
+    "char1": {
+      "zero": 0,
+      "nonunit": 0,
+      "min": 0.9999951124191284,
+      "max": 1.0000002086162567
+    },
+    "Astra_Undersleeves": {
+      "zero": 0,
+      "nonunit": 0,
+      "min": 0.9999999776482582,
+      "max": 1.0000000298023224
+    }
+  },
+  "neutral_restored_in_memory": true
+}

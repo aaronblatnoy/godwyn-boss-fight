@@ -1,0 +1,72 @@
+{
+  "source": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend",
+  "source_sha256": "68cf6f8cacd807822238f66bbed73faa98afa0308f8c516c7292b1a65085b56e",
+  "head_source": "astra_character_mpfb_head_i04.blend",
+  "head_phenotype_unchanged": true,
+  "banked_armor_mesh_and_weight_hashes": {
+    "Astra_Undersleeves": "67fe1cd794c0f14d41c0bfec9f7d8886a7715b5d6753397e2255f63e67d794bb",
+    "AstraChar2_R5_ClavicleMantle": "917e3da7ac3424d8dfe1fcd3a5e0f776f135838d1d9991ae08ef88583fb0fd58",
+    "AstraChar2_R5_ClothFitEnvelope": "9fc48eaccc264994bbfbd625c9953d43894312e7b20d0ae4279e8e67688a7887",
+    "AstraChar2_R5_Cuirass": "a8c5825f49023775ad2500c9645c8ddfaf85901a61518c283bc9a68b4298216e",
+    "AstraChar2_R5_Gorget": "728a3640b5f4c17620ea013b8e8db65a9d2d0fd7a5462bd2c7bc322dd3606d92",
+    "AstraChar2_R5_GorgetRim": "a013de46eb0bd3f4a8b70443e613885cb4073152029676a42afb23d57e611605",
+    "AstraChar2_R5_Pauldron_L": "0798ec8a273fbf7144f155c473b6d3e6ec52a82749246f49c00b8a761a1ee002",
+    "AstraChar2_R5_Pauldron_R": "e82a4d0f95c17f89c096b93e579b0c9fb7b7235d8053c54b52360ae80f0b32fb",
+    "AstraChar2_R5_PauldronRim_L": "a0664097a6a6804176d8ef9c28b62d6335f362e298bbed1f9fa789276c91f3c9",
+    "AstraChar2_R5_PauldronRim_R": "dd7ddcabd51aff0a3280257254a97d19e6a44be2d52c14689481b0cc478b4490",
+    "AstraChar2_R5_SacredEmblem": "29c1963f9fd3eeb97d08cc720b1fe14b35eab52910179ccdc16bf04adee3d4b5",
+    "AstraChar2_R5_SunRay_0": "1caa2cb40e9da9e500caa56b42592a71e68a40ec88fee29f913a0bcd30b5180c",
+    "AstraChar2_R5_SunRay_1": "1985136e803b63a14fe7020c3970239d05b615715bd056f9fb9c85e687471deb",
+    "AstraChar2_R5_SunRay_10": "d35734d470e27089523a99cae1c3fab8adb7933d51efcfe5723e52ed20b68809",
+    "AstraChar2_R5_SunRay_11": "bb475dfa7ddc1c0fefc1b0bd956a0af1625d59ff2cd9aa770a583047ed0df320",
+    "AstraChar2_R5_SunRay_12": "032bc615ef3a076202cd8b86b9a9f4385e5f2b4198443efff4ffa9202fb0bdc7",
+    "AstraChar2_R5_SunRay_13": "fa4151ea01446f3148d7b76f2d521630aa7d58b627743dbbec7b0ec00925c7df",
+    "AstraChar2_R5_SunRay_14": "4057d96b3e3e216065e3042430f9f836a357b01335976b7fe584047373d99c5a",
+    "AstraChar2_R5_SunRay_15": "a579a2ba1125053e6f63d3d996b0e09574d5911f7c687cab6d08eb36267312d5",
+    "AstraChar2_R5_SunRay_2": "902013274b7ce891b800ea8a48eade262df801958b0692aabe3f98c9c2d7c0ce",
+    "AstraChar2_R5_SunRay_3": "6ac3219cf35569d3a82744211d8bc7d78327aa3a02328a40ac3d1111c861e22e",
+    "AstraChar2_R5_SunRay_4": "05c11342adc667e0a16682b7ec4d8886c2a7d42737781a53a9f80714633bc336",
+    "AstraChar2_R5_SunRay_5": "bda543270b26a3cdfc0b38d48c70a38c92b0f1b354bff34913d6f6543a8bbb09",
+    "AstraChar2_R5_SunRay_6": "040bf29d1a973fbda4875fcb5a2b53289de70fa894c7cdff6900582ccaf54ea5",
+    "AstraChar2_R5_SunRay_7": "a66092bc59ffa4e1c2eb97992b8a4754c19affe29cf269a70342d82877812cdb",
+    "AstraChar2_R5_SunRay_8": "b6eb42ebf149972a2750185f14b56695495552a87eb986ca655c7176c1de70d8",
+    "AstraChar2_R5_SunRay_9": "fa025b853f652a2a7ea201a56f723d1cd9384fb358b45eec902ce560a273adf6",
+    "AstraChar2_R5_UpperArm_L_0": "a3a124aee65b10fa1b80a5aa291db3fc5c94c680d36fedb524f05adfc55d5f25",
+    "AstraChar2_R5_UpperArm_L_1": "a50a88dc9b676bcdaf31fcec8ad3cba84499426141395a2121d9dad6436027bc",
+    "AstraChar2_R5_UpperArm_L_2": "0fb7f3bbed70de24637c73fb8b8b69cc76315c5398902512c9c5ac75c9cd25cd",
+    "AstraChar2_R5_UpperArm_R_0": "56cbcc6d2211c3b4d3673580a9f8b43fbc7121b2a12d99406c0eebc0b8de679a",
+    "AstraChar2_R5_UpperArm_R_1": "4b9823810af62b78f0a3d1e87af1b3534d01a6a1e5282e8b5bdd011d685de2e6",
+    "AstraChar2_R5_UpperArm_R_2": "9762e97a27e24ade1ef184137fb29a52338a710217a75eb30e5440553af1c03d",
+    "Godwyn_Sword": "0c84522c99adbb4fb89b80be2f4cf77da2faf9e1df242f62ff6ec4e447cb3303"
+  },
+  "banked_armor_geometry_weights_world_matrices_exact": true,
+  "banked_body_all_rest_vertices_and_weights_exact": true,
+  "banked_body_non_head_polygons_exact": true,
+  "removed_obsolete_head_skin_faces": 126763,
+  "temporary_banked_neck": "Object and data retained hidden; replaced visibly by continuous MPFB neck extension.",
+  "own_armor_rebuild_executed": false,
+  "existing_object_names_and_material_slots_preserved": true,
+  "neck_bridge_ring_vertices": 56,
+  "rest_matrix_error": 0.0,
+  "bones": 121,
+  "actions": 0,
+  "eyes": {
+    "L": {
+      "center": [
+        -0.05283600649087557,
+        -0.37956584470070526,
+        2.976550030704933
+      ],
+      "radius": 0.025497482070351556
+    },
+    "R": {
+      "center": [
+        0.05283600649087557,
+        -0.37956584470070526,
+        2.976550030704933
+      ],
+      "radius": 0.025497482070351556
+    }
+  },
+  "clay_gate": "PASS head/neck/collar preservation; see mpfb_clay_verdicts.md for inherited lower-body qualifications"
+}

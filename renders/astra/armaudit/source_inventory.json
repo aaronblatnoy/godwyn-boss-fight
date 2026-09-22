@@ -1,0 +1,31 @@
+{
+  "session_id": "01a074ee-75d1-74e2-ac80-8378dbd1609c",
+  "status": "Blender startup blocked before Python",
+  "targets": {
+    "xslash": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_xslash_v2_final_wip.blend",
+      "size": 103564724,
+      "mtime_ns": 1788657775164002939,
+      "sha256": "a029446fa54910887382f52f2479d9d3e95cf765f32ff1de6cb5f47f289e653c"
+    },
+    "idle_guard": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_idle_guard_wip.blend",
+      "size": 103661601,
+      "mtime_ns": 1788666353154256749,
+      "sha256": "500571b5e8f587f19aa7ac07a010593acea47569cecf74d521e89fde2576da98"
+    },
+    "lunge_thrust": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_wip.blend",
+      "size": 102444610,
+      "mtime_ns": 1788667848221422815,
+      "sha256": "5644b867b5eafa282eb47a94ff893ac0ed57009ee9299624b3e2883b89b0be9f"
+    },
+    "walk_stalk": {
+      "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_walk_stalk_wip.blend",
+      "size": 102919230,
+      "mtime_ns": 1788666906517756025,
+      "sha256": "39b5f8825121bc5dec1415c92fb27beec072efcbf812649b96f7a20dce7a2dcf"
+    }
+  },
+  "missing": []
+}

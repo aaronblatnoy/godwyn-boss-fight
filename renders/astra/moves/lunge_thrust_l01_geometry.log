@@ -1,0 +1,352 @@
+00:01.145  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_pre_l01.blend"
+00:13.453  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_move_lunge_thrust_wip.blend"
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "max_contact_change_m": 0.0,
+  "before_clearance": [
+    {
+      "frame": 37,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370602056384087,
+      "blade_floor_clearance_m": 1.6351347112655639
+    },
+    {
+      "frame": 38,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370508924126625,
+      "blade_floor_clearance_m": 1.3911837482452392
+    },
+    {
+      "frame": 39,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370527550578117,
+      "blade_floor_clearance_m": 1.0657031679153441
+    },
+    {
+      "frame": 40,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370406478643417,
+      "blade_floor_clearance_m": 0.7529262447357178
+    },
+    {
+      "frame": 41,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837054431438446,
+      "blade_floor_clearance_m": 0.5520658040046692
+    },
+    {
+      "frame": 42,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370633721351624,
+      "blade_floor_clearance_m": 0.4610257589817047
+    },
+    {
+      "frame": 43,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370460495352745,
+      "blade_floor_clearance_m": 0.4260044836997986
+    },
+    {
+      "frame": 44,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837042696774006,
+      "blade_floor_clearance_m": 0.41223974466323854
+    },
+    {
+      "frame": 45,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837040275335312,
+      "blade_floor_clearance_m": 0.40531150937080385
+    },
+    {
+      "frame": 46,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370510786771774,
+      "blade_floor_clearance_m": 0.39505399703979494
+    },
+    {
+      "frame": 47,
+      "blade_body_triangle_overlap_pairs": 234,
+      "min_sampled_blade_vertex_body_distance_m": 0.00012158427125541493,
+      "blade_floor_clearance_m": 0.3759227240085602
+    },
+    {
+      "frame": 48,
+      "blade_body_triangle_overlap_pairs": 1411,
+      "min_sampled_blade_vertex_body_distance_m": 6.054567620594753e-06,
+      "blade_floor_clearance_m": 0.3529608988761902
+    },
+    {
+      "frame": 49,
+      "blade_body_triangle_overlap_pairs": 1531,
+      "min_sampled_blade_vertex_body_distance_m": 1.953223363670986e-05,
+      "blade_floor_clearance_m": 0.34738235116004945
+    },
+    {
+      "frame": 50,
+      "blade_body_triangle_overlap_pairs": 2752,
+      "min_sampled_blade_vertex_body_distance_m": 8.174900358426385e-06,
+      "blade_floor_clearance_m": 0.39463396310806276
+    },
+    {
+      "frame": 51,
+      "blade_body_triangle_overlap_pairs": 484,
+      "min_sampled_blade_vertex_body_distance_m": 4.373578121885657e-05,
+      "blade_floor_clearance_m": 0.5158761882781983
+    },
+    {
+      "frame": 52,
+      "blade_body_triangle_overlap_pairs": 75,
+      "min_sampled_blade_vertex_body_distance_m": 1.933838393597398e-05,
+      "blade_floor_clearance_m": 0.6796389365196228
+    },
+    {
+      "frame": 53,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.011629896238446236,
+      "blade_floor_clearance_m": 0.8273318552970886
+    },
+    {
+      "frame": 54,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.005043509881943464,
+      "blade_floor_clearance_m": 0.9245450639724732
+    },
+    {
+      "frame": 55,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.0124198654666543,
+      "blade_floor_clearance_m": 0.9686325335502625
+    },
+    {
+      "frame": 56,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02083314023911953,
+      "blade_floor_clearance_m": 0.9784681344032288
+    },
+    {
+      "frame": 57,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370553627610207,
+      "blade_floor_clearance_m": 0.9845999622344971
+    },
+    {
+      "frame": 58,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370672836899757,
+      "blade_floor_clearance_m": 0.9978798174858093
+    },
+    {
+      "frame": 59,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837064489722252,
+      "blade_floor_clearance_m": 1.018579258918762
+    },
+    {
+      "frame": 60,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370283544063568,
+      "blade_floor_clearance_m": 1.043550386428833
+    },
+    {
+      "frame": 61,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370333835482597,
+      "blade_floor_clearance_m": 1.0677635812759398
+    },
+    {
+      "frame": 62,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370333835482597,
+      "blade_floor_clearance_m": 1.0860391998291015
+    },
+    {
+      "frame": 63,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370369225740433,
+      "blade_floor_clearance_m": 1.095093502998352
+    },
+    {
+      "frame": 64,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370730578899384,
+      "blade_floor_clearance_m": 1.095671191215515
+    }
+  ],
+  "after_clearance": [
+    {
+      "frame": 37,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370503336191177,
+      "blade_floor_clearance_m": 1.6553990983963012
+    },
+    {
+      "frame": 38,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837056666612625,
+      "blade_floor_clearance_m": 1.5378490829467772
+    },
+    {
+      "frame": 39,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370652347803116,
+      "blade_floor_clearance_m": 1.4275410318374633
+    },
+    {
+      "frame": 40,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370292857289314,
+      "blade_floor_clearance_m": 1.2993352556228637
+    },
+    {
+      "frame": 41,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370296582579613,
+      "blade_floor_clearance_m": 1.1150080108642577
+    },
+    {
+      "frame": 42,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370367363095284,
+      "blade_floor_clearance_m": 0.88441397190094
+    },
+    {
+      "frame": 43,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370408341288567,
+      "blade_floor_clearance_m": 0.6964169883728027
+    },
+    {
+      "frame": 44,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370467945933342,
+      "blade_floor_clearance_m": 0.5741261982917786
+    },
+    {
+      "frame": 45,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837049774825573,
+      "blade_floor_clearance_m": 0.5044891977310181
+    },
+    {
+      "frame": 46,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837074175477028,
+      "blade_floor_clearance_m": 0.46768988609313966
+    },
+    {
+      "frame": 47,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837054617702961,
+      "blade_floor_clearance_m": 0.45369468569755556
+    },
+    {
+      "frame": 48,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370419517159462,
+      "blade_floor_clearance_m": 0.45264334917068483
+    },
+    {
+      "frame": 49,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370531275868416,
+      "blade_floor_clearance_m": 0.45038913130760194
+    },
+    {
+      "frame": 50,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837030403316021,
+      "blade_floor_clearance_m": 0.44637973546981813
+    },
+    {
+      "frame": 51,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370384126901627,
+      "blade_floor_clearance_m": 0.4401857399940491
+    },
+    {
+      "frame": 52,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370486572384834,
+      "blade_floor_clearance_m": 0.4198643410205841
+    },
+    {
+      "frame": 53,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370359912514687,
+      "blade_floor_clearance_m": 0.39492969155311586
+    },
+    {
+      "frame": 54,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370417654514313,
+      "blade_floor_clearance_m": 0.3958315694332123
+    },
+    {
+      "frame": 55,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370771557092667,
+      "blade_floor_clearance_m": 0.4499951148033142
+    },
+    {
+      "frame": 56,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837044559419155,
+      "blade_floor_clearance_m": 0.5677400374412537
+    },
+    {
+      "frame": 57,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370480984449387,
+      "blade_floor_clearance_m": 0.7079722428321839
+    },
+    {
+      "frame": 58,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370220214128494,
+      "blade_floor_clearance_m": 0.827129557132721
+    },
+    {
+      "frame": 59,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370307758450508,
+      "blade_floor_clearance_m": 0.919470443725586
+    },
+    {
+      "frame": 60,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370264917612076,
+      "blade_floor_clearance_m": 0.9598202252388001
+    },
+    {
+      "frame": 61,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370458632707596,
+      "blade_floor_clearance_m": 0.9876125001907349
+    },
+    {
+      "frame": 62,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.02837042324244976,
+      "blade_floor_clearance_m": 1.0511448526382445
+    },
+    {
+      "frame": 63,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370393440127373,
+      "blade_floor_clearance_m": 1.0867103481292724
+    },
+    {
+      "frame": 64,
+      "blade_body_triangle_overlap_pairs": 0,
+      "min_sampled_blade_vertex_body_distance_m": 0.028370730578899384,
+      "blade_floor_clearance_m": 1.095671191215515
+    }
+  ]
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

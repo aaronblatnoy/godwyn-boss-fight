@@ -1,0 +1,275 @@
+{
+  "protected_file_count": 57,
+  "all_protected_files_byte_identical": true,
+  "protected_files": {
+    "models/astra_character_v2.blend": {
+      "sha256": "de09639b845c1cfe6c167737de8a53010980c8c9126748f7520b22f0fa2a608e",
+      "size": 100019340
+    },
+    "models/astra_character_v2.blend1": {
+      "sha256": "ce144261b9f5e010cc766f4513cb5550d2353485b908fca7a27b7395b5acb530",
+      "size": 126617938
+    },
+    "models/astra_character_v2.glb": {
+      "sha256": "be2ca4af7597a9af5e0629748f0c1c846f6f4be28e683a893e4d9cec079bf7f3",
+      "size": 103669048
+    },
+    "renders/astra/character/round1_backup/astra_character_v2.blend": {
+      "sha256": "24d473858493d2ee54001be6bf3be76ad246f0b783f629f11e52acfb95427bc8",
+      "size": 75300608
+    },
+    "renders/astra/character/round1_backup/astra_character_v2.glb": {
+      "sha256": "5ebf83c4164ffcecebc80491a0a283b2b780f14ebac94ccb38e595cb744b8cbc",
+      "size": 86107384
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Astra_Undersleeves_basecolor_2048.png": {
+      "sha256": "8bdbea2654130458231ab13d299bbe966e408fa6d3beb7d3de72eec2db3535b9",
+      "size": 2174019
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Astra_Undersleeves_normal_2048.png": {
+      "sha256": "8b05390903f690285273b79aa81cc0f24aaa214fc77af6efe72d8d1b78e9521b",
+      "size": 4645678
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Astra_Undersleeves_orm_2048.png": {
+      "sha256": "5f95f130635cbc4cb36e0f908487c17160dcb6bfbd45c45e27e1d527ef93ccf4",
+      "size": 3046467
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Godwyn_Sword_basecolor_2048.png": {
+      "sha256": "caeb5aa600a0ce4690e0975ed29b782583dbb9aaf00230a2f6cf9baa9d353f5d",
+      "size": 1040518
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Godwyn_Sword_normal_2048.png": {
+      "sha256": "ed57ae7142de16b3696fff60a4752f2c247f14613219034798d9c3b526375d4f",
+      "size": 940608
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_Godwyn_Sword_orm_2048.png": {
+      "sha256": "fdb9a5d31fc2922e4de7bdb90d8c43046effe3fd50700c175984d0642316f569",
+      "size": 1345565
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_char1_basecolor_4096.png": {
+      "sha256": "489d8ee26b6305010ed08471fb6357efab93fe0854a2edd33dab39a79b4a5366",
+      "size": 14051734
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_char1_normal_4096.png": {
+      "sha256": "0f3eb656c2fe07247d8be86e2ec059cf1319328e45de3a4befa885edd60e8914",
+      "size": 16844662
+    },
+    "renders/astra/character/round1_backup/textures/astra_character_char1_orm_4096.png": {
+      "sha256": "d9307d578c3894cf5172da5130b465731bcb6d15d9be8a5597e0ed97666896fc",
+      "size": 17236249
+    },
+    "renders/astra/character/textures/astra_character_Astra_Undersleeves_basecolor_2048.png": {
+      "sha256": "f5507e9f8e1384c82cb4b5dd6a57075638590366d092e16f1fc391591edcba27",
+      "size": 81320
+    },
+    "renders/astra/character/textures/astra_character_Astra_Undersleeves_normal_2048.png": {
+      "sha256": "6490e77d3e2a4228d445feae4922a9cbff2116d810f404a310eca88f5fbca097",
+      "size": 16914
+    },
+    "renders/astra/character/textures/astra_character_Astra_Undersleeves_orm_2048.png": {
+      "sha256": "133819b74bfedf3aba297c15bd22363e64aa9b2c54209844fa281df7b032d408",
+      "size": 1157871
+    },
+    "renders/astra/character/textures/astra_character_Godwyn_Sword_basecolor_2048.png": {
+      "sha256": "caeb5aa600a0ce4690e0975ed29b782583dbb9aaf00230a2f6cf9baa9d353f5d",
+      "size": 1040518
+    },
+    "renders/astra/character/textures/astra_character_Godwyn_Sword_normal_2048.png": {
+      "sha256": "ed57ae7142de16b3696fff60a4752f2c247f14613219034798d9c3b526375d4f",
+      "size": 940608
+    },
+    "renders/astra/character/textures/astra_character_Godwyn_Sword_orm_2048.png": {
+      "sha256": "fdb9a5d31fc2922e4de7bdb90d8c43046effe3fd50700c175984d0642316f569",
+      "size": 1345565
+    },
+    "renders/astra/character/textures/astra_character_char1_basecolor_4096.png": {
+      "sha256": "9ca5d2bc510119d325778c080d848bd1c636358c140875a06776c6eecddc6493",
+      "size": 1060216
+    },
+    "renders/astra/character/textures/astra_character_char1_normal_4096.png": {
+      "sha256": "127cfc9237a1ce95a015683f1e1b4d162eb6c704270069e00efa21c48774b19b",
+      "size": 1190222
+    },
+    "renders/astra/character/textures/astra_character_char1_orm_4096.png": {
+      "sha256": "9040b05bae02693eee2e5a4552ceb833b17afdd6ee07ce5fef35ded0c057cfc3",
+      "size": 10522578
+    },
+    "renders/astra/character/textures/astra_character_char1_robe_basecolor_4096.png": {
+      "sha256": "3f38cf5c65ce1ae7cd977915f4fc9cab136c6b9cc86c4caa6b359364417163ba",
+      "size": 1929170
+    },
+    "renders/astra/character/textures/astra_character_char1_robe_normal_4096.png": {
+      "sha256": "67c139f27c86a4da51c814e231f6cc7957b3e6dcf3cc2322c4e14a85616eea33",
+      "size": 72030
+    },
+    "renders/astra/character/textures/astra_character_char1_robe_orm_4096.png": {
+      "sha256": "f4e9a316fbe00cfd4d33a5d51cbc58fb8010d6e95dd6479bc2ec4c4dd48d029b",
+      "size": 11786514
+    },
+    "scripts/__pycache__/astra_character_bake.cpython-313.pyc": {
+      "sha256": "0214dbdc5f87d1327a07db0190cc95d314a9c05476b7e2e4b9e101caa63a8754",
+      "size": 33642
+    },
+    "scripts/__pycache__/astra_character_common.cpython-313.pyc": {
+      "sha256": "8a6631a012117e66a20448fd335d62a73b641b04006c41249c0118b9ed35148e",
+      "size": 12275
+    },
+    "scripts/__pycache__/astra_character_geometry.cpython-313.pyc": {
+      "sha256": "29e20a42b4069c8489ec5142320aa841bac8cf6f2c03f5431a9110de24735d27",
+      "size": 14431
+    },
+    "scripts/__pycache__/astra_character_round2_diagnostic.cpython-313.pyc": {
+      "sha256": "dfff274186becef18f0e048040ca62a3522ade942581eabb502d22fe986e5450",
+      "size": 19006
+    },
+    "scripts/__pycache__/astra_character_sword.cpython-313.pyc": {
+      "sha256": "3e82163980413bce21cbf1e48ce4fd71e4a45009c79fae68d8d8d4fe7e75eaac",
+      "size": 7296
+    },
+    "scripts/astra_character_bake.py": {
+      "sha256": "f00132ba615c65e7937bac79d3f8cf978423ecea644367141f44fd5f8972cc0d",
+      "size": 12515
+    },
+    "scripts/astra_character_baselines.py": {
+      "sha256": "7bf8d0fa6559491c65026e4e33a97c93521ca880ca759481b02c31845cf9c591",
+      "size": 417
+    },
+    "scripts/astra_character_before.py": {
+      "sha256": "6c4784e60b039a1ebf1521afd714d86d447090fcb20051295ef5f58237cd4a4c",
+      "size": 591
+    },
+    "scripts/astra_character_common.py": {
+      "sha256": "2b3b57539535c2ea6a0e20cac4a2df9b3d5a4b7e27a8912b46a59c0611a6ab31",
+      "size": 4321
+    },
+    "scripts/astra_character_components.py": {
+      "sha256": "43b7a6d42e9eef1b296242fd8d30553429207174c2e6be9c3389f7d0573e32d9",
+      "size": 1161
+    },
+    "scripts/astra_character_delivery_audit.py": {
+      "sha256": "21aca0b1896bd7ad6722ffe1b43a2839be8ac9c2e788df3d8ef9e9c301cdd2ce",
+      "size": 1373
+    },
+    "scripts/astra_character_export.py": {
+      "sha256": "925df282bbdc3665532e941f927a724bd0a8e6caea410c3d3d16f07af334c59a",
+      "size": 4614
+    },
+    "scripts/astra_character_finish.py": {
+      "sha256": "5717ac29f41bf0a317c3bf80e027deee7cc92d9c49f16d4d0e4a52b5cde7c79f",
+      "size": 5256
+    },
+    "scripts/astra_character_geometry.py": {
+      "sha256": "5a56260720bec0661ee82b68cb7d8d61ff569be2da6d612d2284ff2842439629",
+      "size": 5580
+    },
+    "scripts/astra_character_inspect.py": {
+      "sha256": "688e8b73f66e5f8a38b08a22154067dca2a4f4b5fa14023c4b214dd86f64da92",
+      "size": 2937
+    },
+    "scripts/astra_character_limb_stats.py": {
+      "sha256": "80086056184118dd33bd5d3e73ad24dc8b07a0aefb3aa2c8a7c0df9082fb627f",
+      "size": 689
+    },
+    "scripts/astra_character_polish.py": {
+      "sha256": "073131d888263d2a1c51e943c69fe0aedf3e709a4fa6cfd6149da9ab8d71521e",
+      "size": 2903
+    },
+    "scripts/astra_character_round2_blue_option.py": {
+      "sha256": "b9f66cea3b66b30aa479d35022183ea094daa1a009ceeae0138e4e1c48d7990b",
+      "size": 1130
+    },
+    "scripts/astra_character_round2_build.py": {
+      "sha256": "ad82cb7872bcc59e8561752c8ba902b1376a5edc2386e0285857b2e3617754a5",
+      "size": 9424
+    },
+    "scripts/astra_character_round2_deliver.py": {
+      "sha256": "2922f6389fbbe6f02b48c66c37ecf6f9d1644670be63fea1bcbe7e3005edc127",
+      "size": 4014
+    },
+    "scripts/astra_character_round2_diagnostic.py": {
+      "sha256": "3fe67c467c088cf20b0d7edc02c03770989110bdead5fa3c3d8c0e2a0296f5f1",
+      "size": 6242
+    },
+    "scripts/astra_character_round2_padding.py": {
+      "sha256": "f8d98cdb75361d68465c2f05f93b47fb59b18716dabd9856156e9e6ac925b737",
+      "size": 1952
+    },
+    "scripts/astra_character_round2_prepare.py": {
+      "sha256": "9bad40530404cb3ce46383832ccf5b8f450211affc68421a6d88c44006832e47",
+      "size": 2742
+    },
+    "scripts/astra_character_round2_reload.py": {
+      "sha256": "dd2b375fd497970126c009d6c5ed68acd4ed42f3623685ba2cca2e9b0a4b153d",
+      "size": 673
+    },
+    "scripts/astra_character_round2_report.py": {
+      "sha256": "2ef79ca82161b9a64ce796367a125fb63ea101452bde0a735a7d0b6a25d9d481",
+      "size": 11738
+    },
+    "scripts/astra_character_round2_verify_textures.py": {
+      "sha256": "16788556c5beb7f9e36f6c1e1a7fe8773faaa7ed05efbe2450ac93efab952f75",
+      "size": 4231
+    },
+    "scripts/astra_character_skin_probe.py": {
+      "sha256": "0318057273d37e076c4cca59917b2c02f908fcfcf3484c473e361beda84e1273",
+      "size": 790
+    },
+    "scripts/astra_character_sword.py": {
+      "sha256": "a6cbf66c9b41ee64c89deae4048ec4d8f6288addce5d82c0192157b6fcac4ae8",
+      "size": 2793
+    },
+    "scripts/astra_character_texture_audit.py": {
+      "sha256": "3ddb05fef3931dcaa09d6efcbf2122453778adffc29fdee3e591debce5455113",
+      "size": 1976
+    },
+    "scripts/astra_character_weight_finish.py": {
+      "sha256": "173b2bfa4c2206ea0a2359d099f47416a38b6319e77330ed71576dd1f68f314d",
+      "size": 4069
+    },
+    "scripts/astra_character_weight_refine.py": {
+      "sha256": "e4ca0ef852af607f8e06be09c28abdb73f75aee92cb0d6a0556d167bf86e578a",
+      "size": 4352
+    }
+  },
+  "prior_motion_deliverables_unchanged": {
+    "models/astra_xslash_v2_wip.blend": true,
+    "renders/astra/godwyn_xslash_v2.mp4": true,
+    "models/astra_xslash_v2_on_char_wip.blend": true,
+    "renders/astra/godwyn_xslash_v2_on_char.mp4": true
+  },
+  "evaluation_counts": {
+    "front": {
+      "poses": 8,
+      "contact_frames": 26
+    },
+    "three_quarter": {
+      "poses": 8,
+      "contact_frames": 26
+    }
+  },
+  "video": {
+    "frames": 90,
+    "fps": 30,
+    "duration_seconds": 3.0,
+    "resolution": [
+      640,
+      640
+    ],
+    "codec": "h264",
+    "encoder": "libx264",
+    "pixel_format": "yuv420p",
+    "complete_decode_error_free": true
+  },
+  "visually_inspected": [
+    "both_blue_preview_stills",
+    "both_pose_sheets_all_16_poses",
+    "both_cut_sheets",
+    "both_flow_sheets",
+    "all_six_decoded_sheets_all_90_frames"
+  ],
+  "tint_linear": [
+    0.025,
+    0.2,
+    0.62
+  ]
+}

@@ -1,0 +1,25 @@
+00:01.095  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round1_backup/astra_character_v2.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_character_round2_build.py:14: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  m=bpy.data.materials.new('Round2 editable procedural '+kind);m.use_nodes=True;m.use_fake_user=True;g=Graph(m)
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_basecolor_4096.png
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_orm_4096.png
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_normal_4096.png
+REUSE astra_character_char1_robe_basecolor_4096.png
+REUSE astra_character_char1_robe_orm_4096.png
+REUSE astra_character_char1_robe_normal_4096.png
+REUSE astra_character_Astra_Undersleeves_basecolor_2048.png
+REUSE astra_character_Astra_Undersleeves_orm_2048.png
+REUSE astra_character_Astra_Undersleeves_normal_2048.png
+00:31.545  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_preview_three_quarter.png'
+Info: Saved as "astra_character_v2.blend"
+RENDERED round2_preview three_quarter
+00:33.474  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_preview_chest.png'
+RENDERED round2_preview chest
+00:35.485  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/round2_preview_shoulder.png'
+RENDERED round2_preview shoulder
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

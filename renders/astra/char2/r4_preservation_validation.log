@@ -1,0 +1,6 @@
+00:00.794  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_preround4.blend"
+00:08.226  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+{"missing_original_objects": [], "changed_original_types_or_slots": [], "changed_nonhair_geometry": [], "bone_names_stable": true, "bone_parents_stable": true, "max_rest_matrix_difference": 0.0, "changed_bone_lengths": [], "bones": 121, "actions": 0, "neutral": true}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

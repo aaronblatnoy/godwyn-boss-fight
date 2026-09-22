@@ -1,0 +1,8 @@
+00:03.729  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_mpfb_surface_finish_i03.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_mpfb_publish.py:24: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  s.world.use_nodes=True;s.world.node_tree.nodes['Background'].inputs[0].default_value=(.075,.075,.075,1);s.world.node_tree.nodes['Background'].inputs[1].default_value=.32
+Info: Saved as "astra_character_v2.blend"
+MPFB_PUBLISHED {'astra_character_v2.blend': 'c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386', 'astra_character_v2.glb': '74674393fbc8447b084d62f4ed89f6c44b6b145a720f840926e10ac225fe8775', 'validated_candidate': 'models/astra_character_v2_mpfb_surface_finish_i03.blend', 'roundtrip_glb': 'models/astra_character_v2_mpfb_candidate_i03.glb'}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,135 @@
+[INFO ] services.locationservice ...............: Not adding link to MakeHuman user data, since neither explicit path nor auto-discovery is set in preferences.
+[INFO ] mpfb.init ..............................: Build info FROM_SOURCE
+[INFO ] mpfb.init ..............................: Online access preference is not enabled. Not checking if MakeHuman is online.
+[INFO ] mpfb.init ..............................: MPFB initialization has finished.
+{
+  "before_ranges": {
+    "elbow_flexion_deg": {
+      "min": 49.34254776180058,
+      "min_frame": 1.0,
+      "max": 105.51010761971224,
+      "max_frame": 25.5
+    },
+    "wrist_total_bend_deg": {
+      "min": 4.881485071187331,
+      "min_frame": 32.0,
+      "max": 26.356582756036282,
+      "max_frame": 64.0
+    },
+    "wrist_flexion_proxy_deg": {
+      "min": -24.03911313777502,
+      "min_frame": 16.5,
+      "max": 13.570071382941899,
+      "max_frame": 55.25
+    },
+    "wrist_deviation_proxy_deg": {
+      "min": -24.016498296161096,
+      "min_frame": 64.0,
+      "max": 8.161792787809768,
+      "max_frame": 27.25
+    },
+    "shoulder_elevation_deg": {
+      "min": 39.540574461893335,
+      "min_frame": 27.5,
+      "max": 78.29939763170495,
+      "max_frame": 43.0
+    },
+    "shoulder_flexion_projection_deg": {
+      "min": -19.407875898954657,
+      "min_frame": 39.25,
+      "max": 63.207327089574406,
+      "max_frame": 44.0
+    },
+    "shoulder_abduction_projection_deg": {
+      "min": 39.39061172563914,
+      "min_frame": 28.0,
+      "max": 77.52658519230484,
+      "max_frame": 42.75
+    }
+  },
+  "after_ranges": {
+    "elbow_flexion_deg": {
+      "min": 49.34254776180058,
+      "min_frame": 1.0,
+      "max": 105.51010761971224,
+      "max_frame": 25.5
+    },
+    "wrist_total_bend_deg": {
+      "min": 4.881485071187331,
+      "min_frame": 32.0,
+      "max": 26.356582756036282,
+      "max_frame": 64.0
+    },
+    "wrist_flexion_proxy_deg": {
+      "min": -24.03911313777502,
+      "min_frame": 16.5,
+      "max": 13.561130758686069,
+      "max_frame": 59.75
+    },
+    "wrist_deviation_proxy_deg": {
+      "min": -24.016498296161096,
+      "min_frame": 64.0,
+      "max": 8.161792787809768,
+      "max_frame": 27.25
+    },
+    "shoulder_elevation_deg": {
+      "min": 39.540574461893335,
+      "min_frame": 27.5,
+      "max": 97.34978494979471,
+      "max_frame": 50.75
+    },
+    "shoulder_flexion_projection_deg": {
+      "min": -19.326639844825838,
+      "min_frame": 40.25,
+      "max": 108.4814532769562,
+      "max_frame": 51.5
+    },
+    "shoulder_abduction_projection_deg": {
+      "min": 39.39061172563914,
+      "min_frame": 28.0,
+      "max": 98.10611534253763,
+      "max_frame": 50.5
+    }
+  },
+  "before_spikes": [],
+  "after_spikes": [],
+  "invariants": {
+    "secondary": 0.0,
+    "ground_chain": 0.0
+  },
+  "blade": {
+    "before": {
+      "max_blade_axis_hand_local_drift_deg": 3.4150945850064256e-05,
+      "hilt_wrist_variation_mm": 0.0005366017544472523
+    },
+    "after": {
+      "max_blade_axis_hand_local_drift_deg": 2.829071444942783e-05,
+      "hilt_wrist_variation_mm": 0.0006398552131747781
+    }
+  },
+  "roll_ranges": {
+    "before": {
+      "active_roll": [
+        45.483492799309396,
+        89.63040151531494
+      ],
+      "recovery_roll": [
+        8.876573618408566,
+        89.53880514504928
+      ]
+    },
+    "after": {
+      "active_roll": [
+        45.483492799309396,
+        89.63040151531494
+      ],
+      "recovery_roll": [
+        10.129036653366477,
+        87.82889893822146
+      ]
+    }
+  }
+}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,204 @@
+{
+  "path": "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb",
+  "bytes": 573672856,
+  "skins": 1,
+  "joints": [
+    121
+  ],
+  "animations": 0,
+  "extensions": [
+    "KHR_materials_clearcoat",
+    "KHR_materials_transmission",
+    "KHR_materials_emissive_strength",
+    "KHR_materials_specular",
+    "KHR_materials_sheen",
+    "KHR_materials_anisotropy",
+    "KHR_materials_ior"
+  ],
+  "hair_nodes": [
+    "phys_hair_back_03",
+    "phys_hair_back_02",
+    "phys_hair_back_01",
+    "phys_hair_back_00",
+    "phys_hair_front_L_03",
+    "phys_hair_front_L_02",
+    "phys_hair_front_L_01",
+    "phys_hair_front_L_00",
+    "phys_hair_front_R_03",
+    "phys_hair_front_R_02",
+    "phys_hair_front_R_01",
+    "phys_hair_front_R_00"
+  ],
+  "object_material_slots": {
+    "Astra_Undersleeves": [
+      "Astra Round2 royal blue undersleeves"
+    ],
+    "AstraChar2_Cornea_L": [
+      "AstraChar2 cornea"
+    ],
+    "AstraChar2_Cornea_R": [
+      "AstraChar2 cornea"
+    ],
+    "AstraChar2_Eyeball_L": [
+      "AstraChar2 living sclera"
+    ],
+    "AstraChar2_Eyeball_R": [
+      "AstraChar2 living sclera"
+    ],
+    "AstraChar2_Eyebrows_L": [
+      "AstraChar2 warm blonde eyebrows"
+    ],
+    "AstraChar2_Eyebrows_R": [
+      "AstraChar2 warm blonde eyebrows"
+    ],
+    "AstraChar2_Iris_L": [
+      "AstraChar2 hazel green iris"
+    ],
+    "AstraChar2_Iris_R": [
+      "AstraChar2 hazel green iris"
+    ],
+    "AstraChar2_Lashes_L": [
+      "AstraChar2 blonde lashes"
+    ],
+    "AstraChar2_Lashes_R": [
+      "AstraChar2 blonde lashes"
+    ],
+    "AstraChar2_Nostril_L": [
+      "AstraChar2 nostril interior"
+    ],
+    "AstraChar2_Nostril_R": [
+      "AstraChar2 nostril interior"
+    ],
+    "AstraChar2_Pupil_L": [
+      "AstraChar2 pupil"
+    ],
+    "AstraChar2_Pupil_R": [
+      "AstraChar2 pupil"
+    ],
+    "AstraChar2_R2_HairFibers_0": [
+      "AstraChar2 R2 hair 0"
+    ],
+    "AstraChar2_R2_HairFibers_1": [
+      "AstraChar2 R2 hair 1"
+    ],
+    "AstraChar2_R2_HairFibers_2": [
+      "AstraChar2 R2 hair 2"
+    ],
+    "AstraChar2_R2_HairFibers_3": [
+      "AstraChar2 R2 hair 3"
+    ],
+    "AstraChar2_R2_HairlineWisps": [
+      "AstraChar2 R2 hair 2"
+    ],
+    "AstraChar2_R2_HairRoots": [
+      "AstraChar2 R2 hair 0"
+    ],
+    "AstraChar2_R3_ChasedLaurel": [
+      "AstraChar2 R3 chased antique brass"
+    ],
+    "AstraChar2_R3_Flow_L": [
+      "AstraChar2 R2 hair 1"
+    ],
+    "AstraChar2_R3_Flow_R": [
+      "AstraChar2 R2 hair 1"
+    ],
+    "AstraChar2_R3_Plait_L": [
+      "AstraChar2 R2 hair 1"
+    ],
+    "AstraChar2_R3_Plait_R": [
+      "AstraChar2 R2 hair 1"
+    ],
+    "AstraChar2_R4_Scalp": [
+      "AstraChar2 R4 scalp beneath roots"
+    ],
+    "AstraChar2_R4_ScalpRoots": [
+      "AstraChar2 R4 scalp beneath roots"
+    ],
+    "AstraChar2_R4_Strands_L_Back_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_L_Back_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_R4_Strands_L_Braids": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_L_Front_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_L_Front_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_R4_Strands_L_Side_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_L_Side_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_R4_Strands_R_Back_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_R_Back_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_R4_Strands_R_Braids": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_R_Front_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_R_Front_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_R4_Strands_R_Side_0": [
+      "AstraChar2 R4 Portable blonde 1"
+    ],
+    "AstraChar2_R4_Strands_R_Side_1": [
+      "AstraChar2 R4 Portable blonde 2"
+    ],
+    "AstraChar2_TearCorner_L": [
+      "AstraChar2 lacrimal wetline"
+    ],
+    "AstraChar2_TearCorner_R": [
+      "AstraChar2 lacrimal wetline"
+    ],
+    "AstraChar2_Wetline_L": [
+      "AstraChar2 lacrimal wetline"
+    ],
+    "AstraChar2_Wetline_R": [
+      "AstraChar2 lacrimal wetline"
+    ],
+    "char1": [
+      "Astra Round2 solid champagne gold",
+      "Astra Round2 royal blue and continuous gold trim",
+      "Astra pale golden skin final",
+      "Astra engraved royal gold final",
+      "Astra midnight blue woven silk final"
+    ],
+    "Godwyn_Sword": [
+      "Astra worn steel and gold hilt final"
+    ]
+  },
+  "hair_skinned_mesh_nodes": [
+    "AstraChar2_R4_Strands_L_Back_0",
+    "AstraChar2_R4_Strands_L_Back_1",
+    "AstraChar2_R4_Strands_L_Braids",
+    "AstraChar2_R4_Strands_L_Front_0",
+    "AstraChar2_R4_Strands_L_Front_1",
+    "AstraChar2_R4_Strands_L_Side_0",
+    "AstraChar2_R4_Strands_L_Side_1",
+    "AstraChar2_R4_Strands_R_Back_0",
+    "AstraChar2_R4_Strands_R_Back_1",
+    "AstraChar2_R4_Strands_R_Braids",
+    "AstraChar2_R4_Strands_R_Front_0",
+    "AstraChar2_R4_Strands_R_Front_1",
+    "AstraChar2_R4_Strands_R_Side_0",
+    "AstraChar2_R4_Strands_R_Side_1"
+  ],
+  "spring_profiles": 12,
+  "reimport_meshes": 39,
+  "reimport_armatures": {
+    "Armature": 121
+  },
+  "reimport_actions": 0
+}

@@ -1,0 +1,31 @@
+00:01.613  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_basecolor_4096 elapsed 13
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_orm_4096 elapsed 21
+Info: Baking map saved to internal image, save it externally or pack it
+BAKED astra_character_char1_normal_4096 elapsed 35
+00:43.008  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_front.png'
+Info: Saved as "astra_character_v2.blend"
+RENDERED after front
+00:45.068  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_side.png'
+RENDERED after side
+00:47.086  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_three_quarter.png'
+RENDERED after three_quarter
+00:49.044  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_chest.png'
+RENDERED after chest
+00:50.927  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_face.png'
+RENDERED after face
+00:53.038  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_shoulder.png'
+RENDERED after shoulder
+00:54.398  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_sword.png'
+RENDERED after sword
+00:56.224  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_arms_raised.png'
+RENDERED after arms_raised
+00:56.981  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_hilt_sword.png'
+RENDERED after_hilt sword
+00:58.915  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/after_shoulder_raised.png'
+Info: Saved as "astra_character_v2.blend"
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

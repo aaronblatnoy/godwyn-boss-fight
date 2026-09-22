@@ -1,0 +1,8 @@
+00:01.636  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_preround6.blend"
+/Users/aaron_7nh0yzm/godwyn-boss-fight/scripts/astra_char2_r6_collar.py:47: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  gold=bpy.data.materials.new('AstraChar2 R6 clean aged-brass plates');gold.use_nodes=True;bs=gold.node_tree.nodes.get('Principled BSDF');bs.inputs['Base Color'].default_value=(.48,.34,.14,1);bs.inputs['Metallic'].default_value=1;bs.inputs['Roughness'].default_value=.36
+Info: Saved as "astra_character_r6_collar.blend"
+{"removed_inherited_armor_faces": 29267, "removed_fractured_neck_faces": 6572, "removed_zero_area_faces": 0, "retired_ornament_objects": ["AstraChar2_R3_ChasedLaurel"], "welded_vertices": 32, "closed_boundary_loops": 0, "reoriented_faces": 0, "new_plate_boundary_edges": 0, "new_plate_nonmanifold_edges": 0, "bones": 121, "actions": 0, "rest_matrix_error": 0.0, "cloth_topology_rest_vertices_unchanged": true, "local_armor_contact_fit_vertices": 3915}
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

@@ -1,0 +1,17 @@
+{
+  "windup": {
+    "hips_world_z": 1.755311369895935,
+    "frame": 30,
+    "max_pose_matrix_error": 0.0
+  },
+  "cross": {
+    "hips_world_z": 1.6417560577392578,
+    "frame": 41,
+    "max_pose_matrix_error": 0.0
+  },
+  "follow": {
+    "hips_world_z": 1.6331316232681274,
+    "frame": 60,
+    "max_pose_matrix_error": 0.0
+  }
+}

@@ -1,0 +1,22 @@
+00:01.042  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+WORLD char1 [(-1.020938515663147, -0.7815505862236023, -0.0171602014452219), (-1.020938515663147, -0.7815505862236023, 3.1999990940093994), (-1.020938515663147, 0.798177182674408, 3.1999990940093994), (-1.020938515663147, 0.798177182674408, -0.0171602014452219), (1.0200674533843994, -0.7815505862236023, -0.0171602014452219), (1.0200674533843994, -0.7815505862236023, 3.1999990940093994), (1.0200674533843994, 0.798177182674408, 3.1999990940093994), (1.0200674533843994, 0.798177182674408, -0.0171602014452219)] parent Armature OBJECT 
+WORLD Godwyn_Sword [(4.14614725112915, -0.9503834843635559, -46.90909957885742), (4.551588535308838, -0.4446426331996918, -44.84664535522461), (4.590292930603027, -0.020795218646526337, -44.958187103271484), (4.184852123260498, -0.5265360474586487, -47.0206413269043), (4.5173726081848145, -1.0002683401107788, -46.96984100341797), (4.922813892364502, -0.4945274591445923, -44.90739059448242), (4.96151876449585, -0.07068006694316864, -45.0189323425293), (4.556077480316162, -0.5764209032058716, -47.081382751464844)] parent Armature BONE RightHand
+00:06.161  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_front.png'
+RENDERED before front
+00:08.553  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_side.png'
+RENDERED before side
+00:10.989  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_three_quarter.png'
+RENDERED before three_quarter
+00:13.557  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_chest.png'
+RENDERED before chest
+00:15.145  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_face.png'
+RENDERED before face
+00:17.350  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_shoulder.png'
+RENDERED before shoulder
+00:19.055  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_sword.png'
+RENDERED before sword
+00:21.168  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/before_arms_raised.png'
+RENDERED before arms_raised
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit

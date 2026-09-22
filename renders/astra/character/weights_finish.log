@@ -1,0 +1,10 @@
+00:00.793  blend            | Read blend: "/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend"
+{"max_edge": 2.1810550689697266, "spike_edges": 4179, "stretch_p99": 2.423595428466797, "bridge_faces_removed": 4018, "bridge_surface_area_percent": 2.7465145891488296, "limb_vertices": 15125, "cape_arm_influences": 0}
+00:08.941  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r3geo_arms_raised.png'
+Info: Saved as "astra_character_v2.blend"
+RENDERED r3geo arms_raised
+00:10.431  render           | Saved: '/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/character/r3geo_shoulder.png'
+RENDERED r3geo shoulder
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+
+Blender quit
