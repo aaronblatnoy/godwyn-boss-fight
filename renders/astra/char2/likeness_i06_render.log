@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.316  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_likeness_i06.blend"
+00:07.329  cycles           | WARNING HIPEW initialization failed: Error opening HIP dynamic library
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+LIKENESS_GPU_ASSERT [{'name': 'NVIDIA GeForce RTX 3060 Ti', 'type': 'OPTIX'}, {'name': 'NVIDIA GeForce RTX 3060 Ti', 'type': 'OPTIX'}]
+/home/aaron/godwyn-boss-fight/scripts/astra_likeness_render.py:51: DeprecationWarning: 'World.use_nodes' is expected to be removed in Blender 6.0
+  world.use_nodes = True
+00:30.829  render           | Saved: '/home/aaron/godwyn-boss-fight/renders/astra/char2/likeness_i06_front.png'
+LIKENESS_RENDER_PASS 6 front
+00:50.473  render           | Saved: '/home/aaron/godwyn-boss-fight/renders/astra/char2/likeness_i06_side.png'
+LIKENESS_RENDER_PASS 6 side
+01:14.181  render           | Saved: '/home/aaron/godwyn-boss-fight/renders/astra/char2/likeness_i06_three_quarter.png'
+LIKENESS_RENDER_PASS 6 three_quarter
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

@@ -1,0 +1,155 @@
+{
+  "source": "models/astra_character_v2_likeness_i06.blend",
+  "bones": 121,
+  "actions": 0,
+  "roundtrip": false,
+  "existing_character_names_and_slots_preserved": true,
+  "rest_matrix_error": 0.0,
+  "banked_armor_hashes_preserved": true,
+  "weights": {
+    "referenced_skinned_vertices": 2842705,
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 0.0009765625,
+    "bad_examples": [],
+    "hair_bones_used": [
+      "phys_hair_back_00",
+      "phys_hair_back_01",
+      "phys_hair_back_02",
+      "phys_hair_back_03",
+      "phys_hair_front_L_00",
+      "phys_hair_front_L_01",
+      "phys_hair_front_L_02",
+      "phys_hair_front_L_03",
+      "phys_hair_front_R_00",
+      "phys_hair_front_R_01",
+      "phys_hair_front_R_02",
+      "phys_hair_front_R_03"
+    ]
+  },
+  "hair_correspondence_combat_pose": {
+    "MPFB_L_Front": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 2400,
+      "segment_stretch_max": 1.0752509832382202,
+      "segment_stretch_p99": 1.0655765533447266
+    },
+    "MPFB_L_Side": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 3000,
+      "segment_stretch_max": 1.3748276233673096,
+      "segment_stretch_p99": 1.3000601530075073
+    },
+    "MPFB_L_Back": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 3600,
+      "segment_stretch_max": 1.5617529153823853,
+      "segment_stretch_p99": 1.2937017679214478
+    },
+    "MPFB_L_Braids": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 4.76837158203125e-07,
+      "strands": 450,
+      "segment_stretch_max": 1.0006436109542847,
+      "segment_stretch_p99": 1.0001490116119385
+    },
+    "MPFB_R_Front": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 2400,
+      "segment_stretch_max": 1.0761860609054565,
+      "segment_stretch_p99": 1.065375566482544
+    },
+    "MPFB_R_Side": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 3000,
+      "segment_stretch_max": 1.3711137771606445,
+      "segment_stretch_p99": 1.298097848892212
+    },
+    "MPFB_R_Back": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 9.5367431640625e-07,
+      "strands": 3600,
+      "segment_stretch_max": 1.571057677268982,
+      "segment_stretch_p99": 1.292403221130371
+    },
+    "MPFB_R_Braids": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 4.76837158203125e-07,
+      "strands": 450,
+      "segment_stretch_max": 1.0004810094833374,
+      "segment_stretch_p99": 1.000271201133728
+    },
+    "MPFB_ScalpBed": {
+      "native_control_max_error_m": 0.0,
+      "portable_center_max_error_m": 4.76837158203125e-07,
+      "strands": 14000,
+      "segment_stretch_max": 1.0002223253250122,
+      "segment_stretch_p99": 1.0001304149627686
+    }
+  },
+  "head_topology": {
+    "vertices": 79522,
+    "faces": 79520,
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0
+  },
+  "poses": {
+    "arms_raised": {
+      "AstraChar2_R5_Cuirass": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_Gorget": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_GorgetRim": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_Pauldron_L": {
+        "edge_stretch_max": 1.0005184412002563,
+        "edge_stretch_p99": 1.000130534172058
+      },
+      "AstraChar2_R5_Pauldron_R": {
+        "edge_stretch_max": 1.0005438327789307,
+        "edge_stretch_p99": 1.0001500844955444
+      },
+      "AstraChar2_Mpfb_Head": {
+        "edge_stretch_max": 1.1425062417984009,
+        "edge_stretch_p99": 1.0470843315124512
+      }
+    },
+    "combat_stress": {
+      "AstraChar2_R5_Cuirass": {
+        "edge_stretch_max": 1.1996026039123535,
+        "edge_stretch_p99": 1.1741321086883545
+      },
+      "AstraChar2_R5_Gorget": {
+        "edge_stretch_max": 1.0000554323196411,
+        "edge_stretch_p99": 1.0000123977661133
+      },
+      "AstraChar2_R5_GorgetRim": {
+        "edge_stretch_max": 1.0000190734863281,
+        "edge_stretch_p99": 1.0000104904174805
+      },
+      "AstraChar2_R5_Pauldron_L": {
+        "edge_stretch_max": 1.0005927085876465,
+        "edge_stretch_p99": 1.0001351833343506
+      },
+      "AstraChar2_R5_Pauldron_R": {
+        "edge_stretch_max": 1.0008326768875122,
+        "edge_stretch_p99": 1.0001640319824219
+      },
+      "AstraChar2_Mpfb_Head": {
+        "edge_stretch_max": 1.2951570749282837,
+        "edge_stretch_p99": 1.113741159439087
+      }
+    }
+  },
+  "neutral_restored": true
+}

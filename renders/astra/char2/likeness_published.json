@@ -1,0 +1,8 @@
+{
+  "astra_character_v2.blend": "955d11c06ae9d43a236d46cb038a214f87bfdfc9a554e792f83e8272b3969c63",
+  "astra_character_v2.glb": "bdb404abe7f6f6e8bcfc04eb8b8bafce344a1f24f2f5e18948b06c981ba54ee6",
+  "validated_candidate": "models/astra_character_v2_likeness_i06.blend",
+  "validated_roundtrip_glb": "/tmp/astra_character_v2_likeness_i06.glb",
+  "pre_likeness_blend_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386",
+  "pre_likeness_glb_sha256": "74674393fbc8447b084d62f4ed89f6c44b6b145a720f840926e10ac225fe8775"
+}

@@ -1,0 +1,74 @@
+{
+  "iteration": 6,
+  "source": "models/astra_character_v2_mpfb_surface_finish_i03.blend",
+  "output": "models/astra_character_v2_likeness_i06.blend",
+  "bones": 121,
+  "actions": 0,
+  "protected_armor_cloth_body_geometry_unchanged": true,
+  "hair_groups": [
+    {
+      "group": "MPFB_L_Back",
+      "strands": 3600,
+      "max_displacement_m": 0.10500000417232513
+    },
+    {
+      "group": "MPFB_L_Braids",
+      "strands": 450,
+      "max_displacement_m": 0.8849653868074218
+    },
+    {
+      "group": "MPFB_L_Front",
+      "strands": 2400,
+      "max_displacement_m": 0.10500001907348633
+    },
+    {
+      "group": "MPFB_L_Side",
+      "strands": 3000,
+      "max_displacement_m": 0.10841453820466995
+    },
+    {
+      "group": "MPFB_R_Back",
+      "strands": 3600,
+      "max_displacement_m": 0.10500000417232513
+    },
+    {
+      "group": "MPFB_R_Braids",
+      "strands": 450,
+      "max_displacement_m": 0.8849617005422429
+    },
+    {
+      "group": "MPFB_R_Front",
+      "strands": 2400,
+      "max_displacement_m": 0.10500001907348633
+    },
+    {
+      "group": "MPFB_R_Side",
+      "strands": 3000,
+      "max_displacement_m": 0.10841453820466995
+    }
+  ],
+  "skin": {
+    "sss_weight": 0.24,
+    "sss_scale_m": 0.0032,
+    "radius": [
+      1.0,
+      0.42,
+      0.18
+    ],
+    "spec_anchor": [
+      0.95,
+      0.9,
+      0.82
+    ],
+    "masked_emission_strength": 2.5
+  },
+  "lid_soft_tissue_vertices_adjusted": 6613,
+  "features": {
+    "lid_meshes": 6,
+    "lash_lines": 2,
+    "individual_lashes": 20,
+    "tear_ducts": 2,
+    "brow_fill_layers": 4,
+    "closed_lip_shell": true
+  }
+}

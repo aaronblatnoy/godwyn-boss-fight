@@ -1,0 +1,206 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.321  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_likeness_i06.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+INFO Draco is available, use library at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.so
+ERROR MeshOptimizer is not available because library could not be found at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.so
+22:11:52 | INFO: Starting glTF 2.0 export
+22:11:52 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+22:11:52 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:11:52 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: Sphere
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: Sphere.003
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_L
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_R
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Iris_L clean topology.001
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Iris_R clean topology.001
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_L.001
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_L.002
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_R.001
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Eyebrows_R.002
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_00 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_01 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_02 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_03 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_04 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_05 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_06 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_07 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_08 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_L_09 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_00 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_01 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_02 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_03 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_04 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_05 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_06 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_07 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_08 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lash_R_09 Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_LashLine_L Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_LashLine_R Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_Lips Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_LowerLid_L Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_LowerLid_R Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_MouthSeam Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: Sphere.007
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: Sphere.008
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_UpperLid_L Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_UpperLid_R Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_UpperLidPatch_L Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: AstraChar2_Likeness_UpperLidPatch_R Mesh
+22:11:53 | INFO: Primitives created: 1
+22:11:53 | INFO: Extracting primitive: base.001
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_Pupil_L clean topology.001
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_Pupil_R clean topology.001
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_ClavicleMantle clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_Cuirass clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_Gorget clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_GorgetRim clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_L clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_R clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_L clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_R clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:54 | INFO: Extracting primitive: AstraChar2_R5_SacredEmblem clean topology
+22:11:54 | INFO: Primitives created: 1
+22:11:55 | INFO: Extracting primitive: R5 MPFB_L_Back portable individual strands
+22:11:57 | INFO: Primitives created: 1
+22:11:57 | INFO: Extracting primitive: R5 MPFB_L_Braids portable individual strands
+22:11:57 | INFO: Primitives created: 1
+22:11:57 | INFO: Extracting primitive: R5 MPFB_L_Front portable individual strands
+22:11:59 | INFO: Primitives created: 1
+22:11:59 | INFO: Extracting primitive: R5 MPFB_L_Side portable individual strands
+22:12:01 | INFO: Primitives created: 1
+22:12:01 | INFO: Extracting primitive: R5 MPFB_R_Back portable individual strands
+22:12:03 | INFO: Primitives created: 1
+22:12:03 | INFO: Extracting primitive: R5 MPFB_R_Braids portable individual strands
+22:12:04 | INFO: Primitives created: 1
+22:12:04 | INFO: Extracting primitive: R5 MPFB_R_Front portable individual strands
+22:12:05 | INFO: Primitives created: 1
+22:12:05 | INFO: Extracting primitive: R5 MPFB_R_Side portable individual strands
+22:12:07 | INFO: Primitives created: 1
+22:12:07 | INFO: Extracting primitive: R5 MPFB_ScalpBed portable individual strands
+22:12:09 | INFO: Primitives created: 1
+22:12:09 | INFO: Extracting primitive: AstraChar2_R5_SunRay_0 clean topology
+22:12:09 | INFO: Primitives created: 1
+22:12:09 | INFO: Extracting primitive: AstraChar2_R5_SunRay_1 clean topology
+22:12:09 | INFO: Primitives created: 1
+22:12:09 | INFO: Extracting primitive: AstraChar2_R5_SunRay_2 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_3 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_4 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_5 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_6 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_7 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_8 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_9 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_10 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_11 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_12 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_13 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_14 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_SunRay_15 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_0 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_1 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_2 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_0 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_1 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_2 clean topology
+22:12:10 | INFO: Primitives created: 1
+22:12:10 | INFO: Extracting primitive: AstraChar2 refined char1
+22:12:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:12:12 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:12:13 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:12:14 | INFO: Primitives created: 3
+22:12:14 | INFO: Extracting primitive: Godwyn_Sword.001
+22:12:14 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+22:12:14 | INFO: Primitives created: 1
+22:12:14 | INFO: Finished glTF 2.0 export in 21.992745637893677 s
+
+LIKENESS_EXPORT_PASS /tmp/astra_character_v2_likeness_i06.glb
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

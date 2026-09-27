@@ -1,0 +1,24 @@
+{
+  "animation": "models/astra_move_rising_spin_v2_wip.blend",
+  "published_character": "models/astra_character_v2.blend",
+  "frame": 40,
+  "reason": "Existing exact blade-to-head minimum frame from the rehost audit.",
+  "blade_head_exact_triangle_overlaps": 0,
+  "blade_head_exact_sampled_surface_distance_m": 0.0014493854250758886,
+  "blade_hair_exact_sampled_surface_clearance_m": 0.01756154219806194,
+  "hair_fiber_radius_assumption_m": 0.002,
+  "hair_control_points_sampled": 45532,
+  "assembly_rest_transform_max_error": 0.0,
+  "bones": 121,
+  "optix_devices": [
+    [
+      "NVIDIA GeForce RTX 3060 Ti",
+      "OPTIX"
+    ],
+    [
+      "NVIDIA GeForce RTX 3060 Ti",
+      "OPTIX"
+    ]
+  ],
+  "image": "renders/astra/char2/likeness_rising_spin_f040.png"
+}

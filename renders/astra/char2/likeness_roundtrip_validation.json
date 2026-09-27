@@ -1,0 +1,130 @@
+{
+  "source": "/tmp/astra_character_v2_likeness_i06.glb",
+  "bones": 121,
+  "actions": 0,
+  "roundtrip": true,
+  "world_joint_position_max_error_m": 1.430511474609375e-05,
+  "joint_error_top10": [
+    [
+      "phys_cape_L_03",
+      1.430511474609375e-05
+    ],
+    [
+      "phys_cape_L_04",
+      1.4185905456542969e-05
+    ],
+    [
+      "phys_cape_L_02",
+      1.2278556823730469e-05
+    ],
+    [
+      "phys_cape_L_05",
+      1.150369644165039e-05
+    ],
+    [
+      "phys_cape_L_06",
+      1.150369644165039e-05
+    ],
+    [
+      "RightHand",
+      1.0609626770019531e-05
+    ],
+    [
+      "phys_cape_L_01",
+      9.298324584960938e-06
+    ],
+    [
+      "phys_robe_front_R_03",
+      8.64267349243164e-06
+    ],
+    [
+      "phys_cape_R_05",
+      8.463859558105469e-06
+    ],
+    [
+      "phys_robe_side_R_05",
+      7.987022399902344e-06
+    ]
+  ],
+  "world_joint_position_tolerance_m": 5e-05,
+  "bone_names_and_hierarchy_preserved": true,
+  "glb_skin_joint_counts": [
+    121
+  ],
+  "glb_animations": 0,
+  "weights": {
+    "referenced_skinned_vertices": 2951222,
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 1.3969838619232178e-07,
+    "bad_examples": [],
+    "hair_bones_used": [
+      "phys_hair_back_00",
+      "phys_hair_back_01",
+      "phys_hair_back_02",
+      "phys_hair_back_03",
+      "phys_hair_front_L_00",
+      "phys_hair_front_L_01",
+      "phys_hair_front_L_02",
+      "phys_hair_front_L_03",
+      "phys_hair_front_R_00",
+      "phys_hair_front_R_01",
+      "phys_hair_front_R_02",
+      "phys_hair_front_R_03"
+    ]
+  },
+  "poses": {
+    "arms_raised": {
+      "AstraChar2_Mpfb_Head": {
+        "edge_stretch_max": 1.240994930267334,
+        "edge_stretch_p99": 1.0605543851852417
+      },
+      "AstraChar2_R5_Cuirass": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_Gorget": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_GorgetRim": {
+        "edge_stretch_max": 1.0,
+        "edge_stretch_p99": 1.0
+      },
+      "AstraChar2_R5_Pauldron_L": {
+        "edge_stretch_max": 1.0007749795913696,
+        "edge_stretch_p99": 1.000114917755127
+      },
+      "AstraChar2_R5_Pauldron_R": {
+        "edge_stretch_max": 1.0006769895553589,
+        "edge_stretch_p99": 1.0001119375228882
+      }
+    },
+    "combat_stress": {
+      "AstraChar2_Mpfb_Head": {
+        "edge_stretch_max": 1.4404218196868896,
+        "edge_stretch_p99": 1.1628448963165283
+      },
+      "AstraChar2_R5_Cuirass": {
+        "edge_stretch_max": 1.310306429862976,
+        "edge_stretch_p99": 1.2913398742675781
+      },
+      "AstraChar2_R5_Gorget": {
+        "edge_stretch_max": 1.0000717639923096,
+        "edge_stretch_p99": 1.0000097751617432
+      },
+      "AstraChar2_R5_GorgetRim": {
+        "edge_stretch_max": 1.0000189542770386,
+        "edge_stretch_p99": 1.000008225440979
+      },
+      "AstraChar2_R5_Pauldron_L": {
+        "edge_stretch_max": 1.0007537603378296,
+        "edge_stretch_p99": 1.000103235244751
+      },
+      "AstraChar2_R5_Pauldron_R": {
+        "edge_stretch_max": 1.0009993314743042,
+        "edge_stretch_p99": 1.000122308731079
+      }
+    }
+  },
+  "neutral_restored": true
+}
