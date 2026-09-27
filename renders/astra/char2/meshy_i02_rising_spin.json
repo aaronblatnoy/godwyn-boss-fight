@@ -1,0 +1,17 @@
+{
+  "animation": "models/astra_move_rising_spin_v2_wip.blend",
+  "candidate": "models/astra_character_v2_meshy_i02.blend",
+  "frame": 40,
+  "blade_head_exact_triangle_overlaps": 0,
+  "blade_hair_exact_triangle_overlaps": 0,
+  "blade_head_sampled_surface_distance_m": 0.007494333665817976,
+  "blade_hair_sampled_surface_distance_m": 0.006555685307830572,
+  "mesh_partition": "meshy_hair_mask face-corner attribute; complement plus neck band is head/skin/other",
+  "head_triangles_or_polygons": 38975,
+  "hair_triangles_or_polygons": 114547,
+  "blade_triangles_or_polygons": 6096,
+  "assembly_rest_transform_max_error": 0.0,
+  "bones": 121,
+  "numeric_only": true,
+  "render_calls": 0
+}

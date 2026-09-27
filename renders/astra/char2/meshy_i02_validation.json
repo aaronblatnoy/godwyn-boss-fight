@@ -1,0 +1,55 @@
+{
+  "source": "models/astra_character_v2_meshy_i02.blend",
+  "source_bytes": 187108213,
+  "source_sha256": "a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255",
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "meshy_head_present": true,
+  "legacy_head_absent": true,
+  "numeric_only": true,
+  "render_calls": 0,
+  "weights": {
+    "referenced_skinned_vertices": 422814,
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 4.887580871582031e-06,
+    "bad_examples": []
+  },
+  "poses": {
+    "rendering": "disabled; numeric evaluated-mesh checks only",
+    "arms_raised": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_count_tested": 293540,
+        "edge_stretch_max": 1.000674843788147,
+        "edge_stretch_p99": 1.000158429145813
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_count_tested": 1152,
+        "edge_stretch_max": 1.1442304849624634,
+        "edge_stretch_p99": 1.1370779275894165
+      }
+    },
+    "combat_stress": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_count_tested": 293540,
+        "edge_stretch_max": 1.000112533569336,
+        "edge_stretch_p99": 1.0000176429748535
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_count_tested": 1152,
+        "edge_stretch_max": 1.3955484628677368,
+        "edge_stretch_p99": 1.3780243396759033
+      }
+    },
+    "neutral_restored": true
+  },
+  "cut_gate": {
+    "cut_plane_margin_below_visible_rim_m": 0.1435001087188721,
+    "minimum_required_margin_m": 0.025,
+    "planar_cut_pass": true,
+    "cap_or_bridge_pass": true,
+    "skin_cut_boundary_vertices_above_rim_minus_25mm": 0,
+    "skin_cut_boundary_outside_inner_radius_above_rim_violations": 0,
+    "hair_full_length_preserved_except_explicit_sub15mm_floating_rule": true
+  }
+}

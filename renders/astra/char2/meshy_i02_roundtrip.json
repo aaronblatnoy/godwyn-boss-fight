@@ -1,0 +1,112 @@
+{
+  "source": "models/astra_character_v2_meshy_i02.glb",
+  "source_bytes": 146416944,
+  "source_sha256": "17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5",
+  "bones": 121,
+  "actions": 0,
+  "world_joint_position_max_error_m": 1.430511474609375e-05,
+  "world_joint_position_tolerance_m": 5e-05,
+  "bone_names_and_hierarchy_preserved": true,
+  "glb_skin_joint_counts": [
+    121
+  ],
+  "glb_animations": 0,
+  "numeric_only": true,
+  "render_calls": 0,
+  "materials": [
+    "Astra Round2 royal blue undersleeves",
+    "AstraChar2 Meshy i02 original hair and non-skin PBR",
+    "AstraChar2 Meshy i02 corrected skin PBR",
+    "AstraChar2 Meshy i02 skin blend",
+    "AstraChar2 R6 clean aged-brass plates",
+    "Astra Round2 solid champagne gold",
+    "Astra Round2 royal blue and continuous gold trim",
+    "Astra midnight blue woven silk final",
+    "Astra worn steel and gold hilt final"
+  ],
+  "images": [
+    "astra_character_Astra_Undersleeves_normal_2048",
+    "r3_sleeves_orm",
+    "r3_sleeves_basecolor",
+    "Image_3",
+    "normal",
+    "Image_0",
+    "Image_1",
+    "Image_0_Meshy_i02_skin_corrected",
+    "astra_character_char1_normal_4096",
+    "r3_gold_orm",
+    "r3_gold_basecolor",
+    "astra_character_char1_robe_normal_4096",
+    "r3_cloth_orm",
+    "r3_cloth_basecolor",
+    "astra_character_char1_normal_4096",
+    "astra_character_char1_orm_4096",
+    "astra_character_char1_basecolor_4096",
+    "astra_character_Godwyn_Sword_normal_2048",
+    "astra_character_Godwyn_Sword_orm_2048",
+    "astra_character_Godwyn_Sword_basecolor_2048"
+  ],
+  "meshy_material_export": {
+    "mask_source": "meshy_skin_mask face-corner attribute from the build classification",
+    "hair_base_color_unchanged": true,
+    "skin_texture_correction": {
+      "multiply_rgb": [
+        0.949999988079071,
+        0.8999999761581421,
+        0.8199999928474426
+      ],
+      "hue": 0.485,
+      "saturation": 1.15,
+      "value": 0.92
+    },
+    "glb_safe_face_material_split": true,
+    "roundtrip_texture_slots": {
+      "AstraChar2 Meshy i02 original hair and non-skin PBR": {
+        "base_color_texture": true,
+        "metallic_roughness_texture": true,
+        "normal_texture": true,
+        "emissive_texture": true
+      },
+      "AstraChar2 Meshy i02 corrected skin PBR": {
+        "base_color_texture": true,
+        "metallic_roughness_texture": true,
+        "normal_texture": true,
+        "emissive_texture": true
+      }
+    }
+  },
+  "weights": {
+    "referenced_skinned_vertices": 532389,
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 1.3969838619232178e-07,
+    "bad_examples": []
+  },
+  "poses": {
+    "rendering": "disabled; numeric evaluated-mesh checks only",
+    "arms_raised": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_count_tested": 296200,
+        "edge_stretch_max": 1.0010534524917603,
+        "edge_stretch_p99": 1.0002447366714478
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_count_tested": 1664,
+        "edge_stretch_max": 1.288557767868042,
+        "edge_stretch_p99": 1.279547929763794
+      }
+    },
+    "combat_stress": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_count_tested": 296200,
+        "edge_stretch_max": 1.0010522603988647,
+        "edge_stretch_p99": 1.0002447366714478
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_count_tested": 1664,
+        "edge_stretch_max": 1.3956036567687988,
+        "edge_stretch_p99": 1.3745108842849731
+      }
+    },
+    "neutral_restored": true
+  }
+}

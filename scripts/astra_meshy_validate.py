@@ -17,6 +17,9 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import astra_likeness_render as renderlib
 import astra_cine_hero_render as hero
 
+ARGS = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+METRICS_ONLY = "metrics" in ARGS
+
 
 def reset(arm):
     for b in arm.pose.bones:
@@ -99,8 +102,11 @@ def stress(arm, label):
     reset(arm)
     rest = {o.name: evaluated(o)[0] for o in obs}
     edges = {o.name: np.array([e.vertices[:] for e in o.data.edges], int) for o in obs}
-    scene, devices = renderlib.studio()
-    scene.cycles.samples = 32
+    scene = None
+    devices = []
+    if not METRICS_ONLY:
+        scene, devices = renderlib.studio()
+        scene.cycles.samples = 32
     result = {"optix_devices": devices}
     for label_pose in ("arms_raised", "combat_stress"):
         pose(arm, label_pose)
@@ -117,7 +123,8 @@ def stress(arm, label):
                 "edge_stretch_p99": float(np.quantile(ratio, .99))}
             print("MESHY_STRESS_METRIC", label_pose, ob.name, float(ratio.max()), flush=True)
             assert ratio.max() < 100
-        draw(scene, f"meshy_{label}_{label_pose}")
+        if not METRICS_ONLY:
+            draw(scene, f"meshy_{label}_{label_pose}")
     reset(arm)
     return result
 
@@ -293,18 +300,20 @@ def rising_spin():
             samples.append({"hair_world": co[list(hair_faces[hi])].mean(0).tolist(), "blade_world": sco[list(blade_faces[bi])].mean(0).tolist()})
         print("MESHY_RISING_OVERLAP_SAMPLES", json.dumps(samples), flush=True)
     assert not head_overlap and not hair_overlap and head_distance > 0 and hair_distance > 0
-    for ob in list(scene.objects):
-        if ob.type in {"CAMERA", "LIGHT"}:
-            bpy.data.objects.remove(ob, do_unlink=True)
-    scene, devices = renderlib.studio()
-    target = co.mean(0)
-    scene.camera.data.type = "ORTHO"
-    scene.camera.data.ortho_scale = 1.42
-    scene.camera.location = Vector(target) + Vector((3.15, -5.6, 1.20))
-    renderlib.aim(scene.camera, target + np.array((0, 0, -.10)))
-    scene.render.resolution_x = scene.render.resolution_y = 1000
-    scene.render.filepath = str(OUT / "meshy_rising_spin_f040.png")
-    bpy.ops.render.render(write_still=True)
+    devices = []
+    if not METRICS_ONLY:
+        for ob in list(scene.objects):
+            if ob.type in {"CAMERA", "LIGHT"}:
+                bpy.data.objects.remove(ob, do_unlink=True)
+        scene, devices = renderlib.studio()
+        target = co.mean(0)
+        scene.camera.data.type = "ORTHO"
+        scene.camera.data.ortho_scale = 1.42
+        scene.camera.location = Vector(target) + Vector((3.15, -5.6, 1.20))
+        renderlib.aim(scene.camera, target + np.array((0, 0, -.10)))
+        scene.render.resolution_x = scene.render.resolution_y = 1000
+        scene.render.filepath = str(OUT / "meshy_rising_spin_f040.png")
+        bpy.ops.render.render(write_still=True)
     report = {"animation": str(animation.relative_to(ROOT)), "candidate": CANDIDATE, "frame": 40,
         "blade_head_exact_triangle_overlaps": len(head_overlap), "blade_hair_exact_triangle_overlaps": len(hair_overlap),
         "blade_head_exact_sampled_surface_distance_m": float(head_distance),
@@ -317,6 +326,6 @@ def rising_spin():
 
 
 if __name__ == "__main__":
-    stage = sys.argv[sys.argv.index("--") + 1]
+    stage = ARGS[0]
     {"native": validate_native, "export": export_glb, "roundtrip": validate_roundtrip,
      "hero": hero_gate, "rising": rising_spin}[stage]()

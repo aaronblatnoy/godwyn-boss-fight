@@ -59,10 +59,13 @@ def trim_lower_bust(ob):
         # triangle soup as the face and hair.  Keep the darker long hair but
         # remove pale skin/garment islands below the prior MPFB neck cut.
         central_front = abs(c.x) < .46 and c.y < .32
-        bust_skin = central_front and luma > .64
-        shoulder_skin = broad and c.y > -.10 and luma > .655
+        # Preserve Meshy's own narrow neck down into the gorget.  Only trim
+        # the lower central chest and upward-facing shoulder/collar facets.
+        bust_skin = central_front and c.z < -.55 and luma > .60
+        shoulder_skin = broad and face.normal.z > .25 and luma > .58
+        geometric_bust = c.z < -.50 and abs(c.x) < .38
         old_lower = c.z < -.43
-        if bust_skin or shoulder_skin or (old_lower and deep and luma > .70) or (old_lower and goldish and luma > .74):
+        if bust_skin or shoulder_skin or geometric_bust or (old_lower and deep and luma > .70) or (old_lower and goldish and luma > .74):
             kill.append(face)
     removed = len(kill)
     bmesh.ops.delete(bm, geom=kill, context="FACES")
@@ -135,10 +138,10 @@ def neck_band(arm, mat):
     rows, sides = 9, 64
     for i in range(rows):
         t = i / (rows - 1)
-        z = NECK_BASE + (2.800 - NECK_BASE) * t
-        rx = .103 + .012 * t
-        ry = .095 + .015 * t
-        cy = -.245 - .035 * t
+        z = NECK_BASE + (2.700 - NECK_BASE) * t
+        rx = .090 + .005 * t
+        ry = .070 + .008 * t
+        cy = -.235 - .008 * t
         for j in range(sides):
             a = math.tau * j / sides
             verts.append((rx * math.cos(a), cy + ry * math.sin(a), z))
@@ -159,8 +162,8 @@ def neck_band(arm, mat):
     for group in bpy.data.objects["char1"].vertex_groups:
         ob.vertex_groups.new(name=group.name)
     for v in ob.data.vertices:
-        if v.co.z >= 2.72:
-            t = min(1.0, (v.co.z - 2.72) / .08)
+        if v.co.z >= 2.66:
+            t = min(1.0, (v.co.z - 2.66) / .04)
             ob.vertex_groups["neck"].add([v.index], 1 - t, "REPLACE")
             ob.vertex_groups["Head"].add([v.index], t, "REPLACE")
         else:
@@ -254,7 +257,7 @@ def main():
         "weighting": {"method": "inseparable Meshy head+hair rigid Head binding; separate hidden neck band uses the proven Head/neck/Spine blend",
                       "counts": weight_counts},
         "neck_blend": {"object": band.name, "rows": 9, "sides": 64,
-                       "z_range_m": [NECK_BASE, 2.800], "inside_gorget": True},
+                       "z_range_m": [NECK_BASE, 2.700], "inside_gorget": True},
         "material": {"name": mat.name, "pbr_maps_preserved": True, "repainted": False,
                      "subsurface_added": False,
                      "reason": "Single fused skin/hair/eyes material has no reliable skin-only mask; only the separate neck blend uses a modest 0.025 SSS weight."},

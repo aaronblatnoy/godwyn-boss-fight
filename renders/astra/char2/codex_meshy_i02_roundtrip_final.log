@@ -1,0 +1,73 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 909, in register
+    bl_extension_ops.register()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/bl_extension_ops.py", line 4108, in register
+    bpy.utils.register_class(cls)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+ValueError: register_class(...): already registered as a subclass 'EXTENSIONS_OT_repo_sync'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+13:14:38 | INFO: Data are loaded, start creating Blender stuff
+13:14:38 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+13:14:38 | INFO: Blender create Mesh node AstraChar2 Meshy i02 head hair planar cut
+13:14:39 | INFO: Blender create Mesh node AstraChar2 Meshy i02 neck blend mesh
+13:14:39 | INFO: Blender create Mesh node AstraChar2_R5_ClavicleMantle clean topology
+13:14:39 | INFO: Blender create Mesh node AstraChar2_R5_Cuirass clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_Gorget clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_GorgetRim clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_L clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_R clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_L clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_R clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SacredEmblem clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_0 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_1 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_2 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_3 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_4 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_5 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_6 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_7 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_8 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_9 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_10 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_11 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_12 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_13 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_14 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_15 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_0 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_1 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_2 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_0 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_1 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_2 clean topology
+13:14:40 | INFO: Blender create Mesh node AstraChar2 refined char1
+13:14:42 | INFO: Blender create Mesh node Godwyn_Sword.001
+13:14:42 | INFO: glTF import finished in 3.60s
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_HeadHair 1.0010534524917603
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_NeckBlend 1.288557767868042
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_HeadHair 1.0010522603988647
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_NeckBlend 1.3956036567687988
+MESHY_I02_ROUNDTRIP_PASS {"bones": 121, "joint_error_m": 1.430511474609375e-05, "unweighted": 0}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.369  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_pre_likeness.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+01:39:34 | INFO: Data are loaded, start creating Blender stuff
+01:39:34 | INFO: Blender create Mesh node Mesh_0
+01:39:35 | INFO: glTF import finished in 0.45s
+/home/aaron/godwyn-boss-fight/scripts/astra_meshy_i02_build.py:377: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  mat.use_nodes = True
+Info: Saved as "astra_character_v2_meshy_i02.blend"
+MESHY_I02_BUILD_PASS {"candidate": "models/astra_character_v2_meshy_i02.blend", "cut_z_m": 2.605, "rim_z_m": 2.748500108718872, "hair_faces": 115340, "floating_hair_components_removed": 232, "gorget_shards": 0, "neck_band": "AstraChar2_Meshy_NeckBlend"}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

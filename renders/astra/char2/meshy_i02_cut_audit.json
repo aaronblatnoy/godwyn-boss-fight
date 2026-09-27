@@ -1,0 +1,3810 @@
+{
+  "candidate": "models/astra_character_v2_meshy_i02.blend",
+  "source_body_read_only": "models/astra_character_v2_pre_likeness.blend",
+  "source_meshy_read_only": "models/meshy_head_approved.glb",
+  "rim_measurement": {
+    "object": "AstraChar2_R5_GorgetRim",
+    "visible_upper_rim_z_m": 2.748500108718872,
+    "xy_center_m": [
+      0.0,
+      -0.19599968194961548
+    ],
+    "inner_radius_global_p10_m": 0.09243419733159032,
+    "inner_radius_by_sector_m": [
+      0.0905251452066286,
+      0.0913850718214413,
+      0.09380153778399788,
+      0.09771892276809267,
+      0.10112610146371077,
+      0.10447413286291504,
+      0.10447413286291504,
+      0.10112610146371077,
+      0.09771892276809267,
+      0.09380153778399788,
+      0.0913850718214413,
+      0.0905251452066286,
+      0.09052517462001786,
+      0.09138524504812363,
+      0.09380189021842783,
+      0.09772603609278246,
+      null,
+      null,
+      null,
+      null,
+      0.09772603609278246,
+      0.09380189021842783,
+      0.09138524504812363,
+      0.09052517462001786
+    ],
+    "top_band_definition_m": 0.004
+  },
+  "cut_plane_z_m": 2.605,
+  "cut_plane_margin_below_visible_rim_m": 0.1435001087188721,
+  "minimum_required_margin_m": 0.025,
+  "planar_cut_pass": true,
+  "cap": {
+    "source_faces_crossing_plane": 258,
+    "bisect_result_items": 557,
+    "bisect_cut_edges": 258,
+    "boundary_edges_before_fill": 258,
+    "cap_faces_created": 0,
+    "cut_plane_vertices": 299,
+    "neck_blend_planar_cap_faces": 64,
+    "cap_strategy": "direct holes_fill where possible plus a closed planar bottom cap on the overlapping neck-blend bridge",
+    "cap_or_bridge_pass": true
+  },
+  "classification": {
+    "method": "per-face mean base-color texel plus raw-source geometry; hair requires warm/dark texels outside face/neck core",
+    "hair_thresholds": {
+      "luma_weights": [
+        0.2126,
+        0.7152,
+        0.0722
+      ],
+      "ordinary_luma_max": 0.665,
+      "strong_luma_max": 0.595,
+      "r_minus_b_min": 0.175,
+      "g_minus_b_min": 0.085,
+      "face_core_raw": {
+        "abs_x_lt": 0.305,
+        "y_lt": -0.205,
+        "z_gt": -0.18,
+        "z_lt": 0.54
+      },
+      "neck_core_raw": {
+        "abs_x_lt": 0.235,
+        "y_lt": 0.1,
+        "z_gt": -0.92,
+        "z_lte": -0.18
+      },
+      "hair_geometry_raw": "z>0.54 OR |x|>0.305 OR y>-0.080 OR (z<-0.18 AND (|x|>0.205 OR y>0.015))"
+    },
+    "skin_thresholds": {
+      "luma_min": 0.43,
+      "r_minus_b_min": 0.105,
+      "not_hair_required": true
+    },
+    "source_faces": 155683,
+    "hair_faces": 115340,
+    "skin_faces": 20930,
+    "other_skin_or_garment_faces": 19413,
+    "hair_luma_quantiles": [
+      0.3942761942744255,
+      0.55858513712883,
+      0.6501867413520813
+    ],
+    "skin_luma_quantiles": [
+      0.5275460481643677,
+      0.6952182948589325,
+      0.8070142686367034
+    ],
+    "mask_attributes": {
+      "hair": "meshy_hair_mask",
+      "skin": "meshy_skin_mask"
+    },
+    "hair_bounds_before_fragment_cleanup_m": [
+      [
+        -0.2952662408351898,
+        -0.3920449912548065,
+        2.5607752799987793
+      ],
+      [
+        0.2985921800136566,
+        -0.026007577776908875,
+        3.1490283012390137
+      ]
+    ],
+    "hair_bounds_after_fragment_cleanup_m": [
+      [
+        -0.2952662408351898,
+        -0.3920449912548065,
+        2.5607752799987793
+      ],
+      [
+        0.2985921800136566,
+        -0.026007577776908875,
+        3.1490283012390137
+      ]
+    ],
+    "hair_z_min_change_m": 0.0,
+    "hair_z_max_change_m": 0.0,
+    "hair_full_length_preserved_except_explicit_sub15mm_floating_rule": true
+  },
+  "skin_cut_boundary_by_angular_sector": [
+    {
+      "sector": 0,
+      "angle_start_deg": 0.0,
+      "angle_end_deg": 15.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.0905251452066286,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 1,
+      "angle_start_deg": 15.0,
+      "angle_end_deg": 30.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.0913850718214413,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 2,
+      "angle_start_deg": 30.0,
+      "angle_end_deg": 45.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09380153778399788,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 3,
+      "angle_start_deg": 45.0,
+      "angle_end_deg": 60.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09771892276809267,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 4,
+      "angle_start_deg": 60.0,
+      "angle_end_deg": 75.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.10112610146371077,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 5,
+      "angle_start_deg": 75.0,
+      "angle_end_deg": 90.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.10447413286291504,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 6,
+      "angle_start_deg": 90.0,
+      "angle_end_deg": 105.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.10447413286291504,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 7,
+      "angle_start_deg": 105.0,
+      "angle_end_deg": 120.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.10112610146371077,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 8,
+      "angle_start_deg": 120.0,
+      "angle_end_deg": 135.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09771892276809267,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 9,
+      "angle_start_deg": 135.0,
+      "angle_end_deg": 150.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09380153778399788,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 10,
+      "angle_start_deg": 150.0,
+      "angle_end_deg": 165.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.0913850718214413,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 11,
+      "angle_start_deg": 165.0,
+      "angle_end_deg": 180.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.0905251452066286,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 12,
+      "angle_start_deg": 180.0,
+      "angle_end_deg": 195.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09052517462001786,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 13,
+      "angle_start_deg": 195.0,
+      "angle_end_deg": 210.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09138524504812363,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 14,
+      "angle_start_deg": 210.0,
+      "angle_end_deg": 225.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09380189021842783,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 15,
+      "angle_start_deg": 225.0,
+      "angle_end_deg": 240.0,
+      "skin_cut_vertices": 1,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09772603609278246,
+      "skin_cut_vertices_outside_inner_radius": 1,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 16,
+      "angle_start_deg": 240.0,
+      "angle_end_deg": 255.0,
+      "skin_cut_vertices": 11,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09243419733159032,
+      "skin_cut_vertices_outside_inner_radius": 11,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 17,
+      "angle_start_deg": 255.0,
+      "angle_end_deg": 270.0,
+      "skin_cut_vertices": 12,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09243419733159032,
+      "skin_cut_vertices_outside_inner_radius": 12,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 18,
+      "angle_start_deg": 270.0,
+      "angle_end_deg": 285.0,
+      "skin_cut_vertices": 16,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09243419733159032,
+      "skin_cut_vertices_outside_inner_radius": 16,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 19,
+      "angle_start_deg": 285.0,
+      "angle_end_deg": 300.0,
+      "skin_cut_vertices": 8,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09243419733159032,
+      "skin_cut_vertices_outside_inner_radius": 8,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 20,
+      "angle_start_deg": 300.0,
+      "angle_end_deg": 315.0,
+      "skin_cut_vertices": 2,
+      "max_skin_cut_z_m": 2.6050000190734863,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": 0.14350008964538574,
+      "inner_radius_m": 0.09772603609278246,
+      "skin_cut_vertices_outside_inner_radius": 2,
+      "max_skin_cut_z_outside_inner_radius_m": 2.6050000190734863,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 21,
+      "angle_start_deg": 315.0,
+      "angle_end_deg": 330.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09380189021842783,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 22,
+      "angle_start_deg": 330.0,
+      "angle_end_deg": 345.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09138524504812363,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    },
+    {
+      "sector": 23,
+      "angle_start_deg": 345.0,
+      "angle_end_deg": 360.0,
+      "skin_cut_vertices": 0,
+      "max_skin_cut_z_m": null,
+      "rim_z_m": 2.748500108718872,
+      "margin_below_rim_m": null,
+      "inner_radius_m": 0.09052517462001786,
+      "skin_cut_vertices_outside_inner_radius": 0,
+      "max_skin_cut_z_outside_inner_radius_m": null,
+      "outside_inner_radius_above_rim_violations": 0
+    }
+  ],
+  "skin_cut_boundary_vertices_above_rim_minus_25mm": 0,
+  "skin_cut_boundary_outside_inner_radius_above_rim_violations": 0,
+  "floating_hair_component_rule": {
+    "entire_bbox_below_cut": true,
+    "max_bbox_dimension_m": 0.015
+  },
+  "floating_hair_components_removed": 232,
+  "floating_hair_components": [
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1149236336350441,
+        -0.36773988604545593,
+        2.597032308578491
+      ],
+      "max_world_m": [
+        -0.1143084317445755,
+        -0.36492887139320374,
+        2.597581148147583
+      ],
+      "max_dimension_m": 0.0028110146522521973
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.11148504912853241,
+        -0.36768946051597595,
+        2.580457925796509
+      ],
+      "max_world_m": [
+        -0.11058081686496735,
+        -0.3669619560241699,
+        2.5843186378479004
+      ],
+      "max_dimension_m": 0.0038607120513916016
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.11076666414737701,
+        -0.3674297034740448,
+        2.580457925796509
+      ],
+      "max_world_m": [
+        -0.11051278561353683,
+        -0.3671911358833313,
+        2.583113431930542
+      ],
+      "max_dimension_m": 0.002655506134033203
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.11122368276119232,
+        -0.3785119652748108,
+        2.584914207458496
+      ],
+      "max_world_m": [
+        -0.10970424860715866,
+        -0.3775784373283386,
+        2.5854275226593018
+      ],
+      "max_dimension_m": 0.0015194341540336609
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.11122368276119232,
+        -0.37824898958206177,
+        2.5842339992523193
+      ],
+      "max_world_m": [
+        -0.10994704812765121,
+        -0.37712374329566956,
+        2.5854275226593018
+      ],
+      "max_dimension_m": 0.0012766346335411072
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.11125003546476364,
+        -0.3755766451358795,
+        2.5809121131896973
+      ],
+      "max_world_m": [
+        -0.11029990762472153,
+        -0.3729833960533142,
+        2.5815937519073486
+      ],
+      "max_dimension_m": 0.0025932490825653076
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10970424860715866,
+        -0.38017532229423523,
+        2.5852291584014893
+      ],
+      "max_world_m": [
+        -0.1096736490726471,
+        -0.3785119652748108,
+        2.588027238845825
+      ],
+      "max_dimension_m": 0.0027980804443359375
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        -0.11120902001857758,
+        -0.369444876909256,
+        2.5797600746154785
+      ],
+      "max_world_m": [
+        -0.10951024293899536,
+        -0.3683391511440277,
+        2.5820469856262207
+      ],
+      "max_dimension_m": 0.0022869110107421875
+    },
+    {
+      "vertices": 7,
+      "min_world_m": [
+        -0.11111854761838913,
+        -0.3775784373283386,
+        2.581070899963379
+      ],
+      "max_world_m": [
+        -0.10920688509941101,
+        -0.3754366636276245,
+        2.584914207458496
+      ],
+      "max_dimension_m": 0.0038433074951171875
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.11076666414737701,
+        -0.3678886592388153,
+        2.580457925796509
+      ],
+      "max_world_m": [
+        -0.11024683713912964,
+        -0.3671911358833313,
+        2.583113431930542
+      ],
+      "max_dimension_m": 0.002655506134033203
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.11039853096008301,
+        -0.374199777841568,
+        2.58078670501709
+      ],
+      "max_world_m": [
+        -0.10981003195047379,
+        -0.37224480509757996,
+        2.5812082290649414
+      ],
+      "max_dimension_m": 0.001954972743988037
+    },
+    {
+      "vertices": 26,
+      "min_world_m": [
+        -0.11052319407463074,
+        -0.37705570459365845,
+        2.5791332721710205
+      ],
+      "max_world_m": [
+        -0.10507921129465103,
+        -0.36866629123687744,
+        2.5906710624694824
+      ],
+      "max_dimension_m": 0.011537790298461914
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.10994704812765121,
+        -0.3785119652748108,
+        2.584001302719116
+      ],
+      "max_world_m": [
+        -0.10920688509941101,
+        -0.3774951100349426,
+        2.5852291584014893
+      ],
+      "max_dimension_m": 0.0012278556823730469
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1100521832704544,
+        -0.37022966146469116,
+        2.577970504760742
+      ],
+      "max_world_m": [
+        -0.10926416516304016,
+        -0.369159072637558,
+        2.5797982215881348
+      ],
+      "max_dimension_m": 0.0018277168273925781
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1100521832704544,
+        -0.369444876909256,
+        2.5797600746154785
+      ],
+      "max_world_m": [
+        -0.10926416516304016,
+        -0.3684947192668915,
+        2.5797982215881348
+      ],
+      "max_dimension_m": 0.000950157642364502
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10982466489076614,
+        -0.3703426122665405,
+        2.577970504760742
+      ],
+      "max_world_m": [
+        -0.10901743918657303,
+        -0.3700438141822815,
+        2.579824209213257
+      ],
+      "max_dimension_m": 0.0018537044525146484
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.10939892381429672,
+        -0.37022966146469116,
+        2.577970504760742
+      ],
+      "max_world_m": [
+        -0.10842794924974442,
+        -0.3688986897468567,
+        2.581289768218994
+      ],
+      "max_dimension_m": 0.003319263458251953
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10970845818519592,
+        -0.36901065707206726,
+        2.578460216522217
+      ],
+      "max_world_m": [
+        -0.10724249482154846,
+        -0.36805596947669983,
+        2.581482172012329
+      ],
+      "max_dimension_m": 0.0030219554901123047
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        -0.11007530987262726,
+        -0.3776400089263916,
+        2.5819013118743896
+      ],
+      "max_world_m": [
+        -0.10661198943853378,
+        -0.376254677772522,
+        2.58796763420105
+      ],
+      "max_dimension_m": 0.006066322326660156
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.10939892381429672,
+        -0.3703426122665405,
+        2.577970504760742
+      ],
+      "max_world_m": [
+        -0.10842794924974442,
+        -0.3688986897468567,
+        2.581289768218994
+      ],
+      "max_dimension_m": 0.003319263458251953
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.10920688509941101,
+        -0.37952983379364014,
+        2.584001302719116
+      ],
+      "max_world_m": [
+        -0.10823721438646317,
+        -0.3774951100349426,
+        2.587048292160034
+      ],
+      "max_dimension_m": 0.0030469894409179688
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10901743918657303,
+        -0.3703426122665405,
+        2.5791332721710205
+      ],
+      "max_world_m": [
+        -0.10784237086772919,
+        -0.3687075972557068,
+        2.5821290016174316
+      ],
+      "max_dimension_m": 0.002995729446411133
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10912907868623734,
+        -0.36901065707206726,
+        2.5801894664764404
+      ],
+      "max_world_m": [
+        -0.10784237086772919,
+        -0.3687075972557068,
+        2.5821290016174316
+      ],
+      "max_dimension_m": 0.001939535140991211
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10771379619836807,
+        -0.3731399476528168,
+        2.5836119651794434
+      ],
+      "max_world_m": [
+        -0.10699184983968735,
+        -0.37112608551979065,
+        2.5854315757751465
+      ],
+      "max_dimension_m": 0.002013862133026123
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10771379619836807,
+        -0.37321579456329346,
+        2.584973096847534
+      ],
+      "max_world_m": [
+        -0.10586237162351608,
+        -0.3730924129486084,
+        2.587817430496216
+      ],
+      "max_dimension_m": 0.0028443336486816406
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10517425090074539,
+        -0.3749598264694214,
+        2.5905330181121826
+      ],
+      "max_world_m": [
+        -0.10463099181652069,
+        -0.37383782863616943,
+        2.594080686569214
+      ],
+      "max_dimension_m": 0.00354766845703125
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10395167768001556,
+        -0.38138291239738464,
+        2.601863145828247
+      ],
+      "max_world_m": [
+        -0.10294458270072937,
+        -0.3796870708465576,
+        2.6026830673217773
+      ],
+      "max_dimension_m": 0.0016958415508270264
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1034497544169426,
+        -0.369730681180954,
+        2.597034215927124
+      ],
+      "max_world_m": [
+        -0.10260345786809921,
+        -0.36849701404571533,
+        2.597837448120117
+      ],
+      "max_dimension_m": 0.0012336671352386475
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10349532961845398,
+        -0.36869460344314575,
+        2.5942025184631348
+      ],
+      "max_world_m": [
+        -0.10260345786809921,
+        -0.36849701404571533,
+        2.597837448120117
+      ],
+      "max_dimension_m": 0.003634929656982422
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1028420478105545,
+        -0.3695080280303955,
+        2.5995028018951416
+      ],
+      "max_world_m": [
+        -0.10165137052536011,
+        -0.36857837438583374,
+        2.602057695388794
+      ],
+      "max_dimension_m": 0.0025548934936523438
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10211357474327087,
+        -0.3712201714515686,
+        2.6018733978271484
+      ],
+      "max_world_m": [
+        -0.10151336342096329,
+        -0.36857837438583374,
+        2.602931499481201
+      ],
+      "max_dimension_m": 0.0026417970657348633
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.10150197148323059,
+        -0.3691695034503937,
+        2.604322910308838
+      ],
+      "max_world_m": [
+        -0.10105603188276291,
+        -0.3685438930988312,
+        2.6046745777130127
+      ],
+      "max_dimension_m": 0.0006256103515625
+    },
+    {
+      "vertices": 15,
+      "min_world_m": [
+        -0.097071573138237,
+        -0.37920498847961426,
+        2.589310884475708
+      ],
+      "max_world_m": [
+        -0.09022663533687592,
+        -0.37285807728767395,
+        2.6031112670898438
+      ],
+      "max_dimension_m": 0.013800382614135742
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09460005909204483,
+        -0.3786613941192627,
+        2.598236083984375
+      ],
+      "max_world_m": [
+        -0.09380943328142166,
+        -0.37776628136634827,
+        2.5995378494262695
+      ],
+      "max_dimension_m": 0.0013017654418945312
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09394124895334244,
+        -0.3724687695503235,
+        2.595412254333496
+      ],
+      "max_world_m": [
+        -0.09303994476795197,
+        -0.370953232049942,
+        2.5971567630767822
+      ],
+      "max_dimension_m": 0.0017445087432861328
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09315191954374313,
+        -0.3724687695503235,
+        2.594951868057251
+      ],
+      "max_world_m": [
+        -0.09195603430271149,
+        -0.370953232049942,
+        2.5956473350524902
+      ],
+      "max_dimension_m": 0.0015155375003814697
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09315191954374313,
+        -0.372337281703949,
+        2.594212532043457
+      ],
+      "max_world_m": [
+        -0.09195603430271149,
+        -0.370953232049942,
+        2.595412254333496
+      ],
+      "max_dimension_m": 0.001384049654006958
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09242669492959976,
+        -0.372337281703949,
+        2.594212532043457
+      ],
+      "max_world_m": [
+        -0.09087666869163513,
+        -0.37115374207496643,
+        2.594951868057251
+      ],
+      "max_dimension_m": 0.0015500262379646301
+    },
+    {
+      "vertices": 33,
+      "min_world_m": [
+        -0.09522990137338638,
+        -0.3832109272480011,
+        2.589834213256836
+      ],
+      "max_world_m": [
+        -0.08931362628936768,
+        -0.37587904930114746,
+        2.6017112731933594
+      ],
+      "max_dimension_m": 0.011877059936523438
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09195603430271149,
+        -0.37281739711761475,
+        2.594616174697876
+      ],
+      "max_world_m": [
+        -0.09087666869163513,
+        -0.3717386722564697,
+        2.594951868057251
+      ],
+      "max_dimension_m": 0.001079365611076355
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.09111557900905609,
+        -0.3832109272480011,
+        2.5975940227508545
+      ],
+      "max_world_m": [
+        -0.09068949520587921,
+        -0.3826175332069397,
+        2.601149797439575
+      ],
+      "max_dimension_m": 0.003555774688720703
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09136199206113815,
+        -0.3813178241252899,
+        2.590238094329834
+      ],
+      "max_world_m": [
+        -0.0902910903096199,
+        -0.38101184368133545,
+        2.594071626663208
+      ],
+      "max_dimension_m": 0.0038335323333740234
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.09109410643577576,
+        -0.37321481108665466,
+        2.594616174697876
+      ],
+      "max_world_m": [
+        -0.09022209048271179,
+        -0.3717386722564697,
+        2.5949573516845703
+      ],
+      "max_dimension_m": 0.0014761388301849365
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.09054889529943466,
+        -0.3808819651603699,
+        2.589834213256836
+      ],
+      "max_world_m": [
+        -0.08944284170866013,
+        -0.37920498847961426,
+        2.5903079509735107
+      ],
+      "max_dimension_m": 0.0016769766807556152
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.09054889529943466,
+        -0.3798508048057556,
+        2.589198589324951
+      ],
+      "max_world_m": [
+        -0.08939433842897415,
+        -0.37729334831237793,
+        2.589954137802124
+      ],
+      "max_dimension_m": 0.0025574564933776855
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09034968912601471,
+        -0.37321481108665466,
+        2.5948896408081055
+      ],
+      "max_world_m": [
+        -0.08998773247003555,
+        -0.37233757972717285,
+        2.596423625946045
+      ],
+      "max_dimension_m": 0.0015339851379394531
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.09005249291658401,
+        -0.3798508048057556,
+        2.589198589324951
+      ],
+      "max_world_m": [
+        -0.08939433842897415,
+        -0.37775033712387085,
+        2.5903079509735107
+      ],
+      "max_dimension_m": 0.0021004676818847656
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.0888032466173172,
+        -0.3725719451904297,
+        2.5994679927825928
+      ],
+      "max_world_m": [
+        -0.08808843791484833,
+        -0.3719743490219116,
+        2.604283571243286
+      ],
+      "max_dimension_m": 0.004815578460693359
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.0888032466173172,
+        -0.3725719451904297,
+        2.5994679927825928
+      ],
+      "max_world_m": [
+        -0.08792275935411453,
+        -0.37170058488845825,
+        2.604283571243286
+      ],
+      "max_dimension_m": 0.004815578460693359
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.08826258033514023,
+        -0.37270572781562805,
+        2.590243101119995
+      ],
+      "max_world_m": [
+        0.09204749017953873,
+        -0.37125593423843384,
+        2.5993690490722656
+      ],
+      "max_dimension_m": 0.009125947952270508
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.08833321183919907,
+        -0.3731370270252228,
+        2.5973246097564697
+      ],
+      "max_world_m": [
+        0.08877003192901611,
+        -0.37242645025253296,
+        2.5993690490722656
+      ],
+      "max_dimension_m": 0.0020444393157958984
+    },
+    {
+      "vertices": 7,
+      "min_world_m": [
+        0.08882275223731995,
+        -0.3812771439552307,
+        2.589200258255005
+      ],
+      "max_world_m": [
+        0.08988909423351288,
+        -0.3771345019340515,
+        2.589900255203247
+      ],
+      "max_dimension_m": 0.004142642021179199
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        0.08853307366371155,
+        -0.37316370010375977,
+        2.5936176776885986
+      ],
+      "max_world_m": [
+        0.09139454364776611,
+        -0.3720723092556,
+        2.5973246097564697
+      ],
+      "max_dimension_m": 0.0037069320678710938
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.08890283107757568,
+        -0.38133764266967773,
+        2.589841842651367
+      ],
+      "max_world_m": [
+        0.08961371332406998,
+        -0.3809252381324768,
+        2.591294050216675
+      ],
+      "max_dimension_m": 0.0014522075653076172
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.08889665454626083,
+        -0.3777884244918823,
+        2.589200258255005
+      ],
+      "max_world_m": [
+        0.09057915955781937,
+        -0.37467628717422485,
+        2.592214345932007
+      ],
+      "max_dimension_m": 0.0031121373176574707
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.08853307366371155,
+        -0.3731370270252228,
+        2.596423864364624
+      ],
+      "max_world_m": [
+        0.08958574384450912,
+        -0.37242645025253296,
+        2.597360134124756
+      ],
+      "max_dimension_m": 0.001052670180797577
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.08928628265857697,
+        -0.38133764266967773,
+        2.589900255203247
+      ],
+      "max_world_m": [
+        0.08966189622879028,
+        -0.3809356689453125,
+        2.591294050216675
+      ],
+      "max_dimension_m": 0.0013937950134277344
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.08928628265857697,
+        -0.3812771439552307,
+        2.5897932052612305
+      ],
+      "max_world_m": [
+        0.08988909423351288,
+        -0.37905722856521606,
+        2.590236186981201
+      ],
+      "max_dimension_m": 0.0022199153900146484
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.08952745795249939,
+        -0.3819372355937958,
+        2.5897932052612305
+      ],
+      "max_world_m": [
+        0.08988909423351288,
+        -0.37905722856521606,
+        2.5930323600769043
+      ],
+      "max_dimension_m": 0.003239154815673828
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.0902429148554802,
+        -0.37250816822052,
+        2.5936176776885986
+      ],
+      "max_world_m": [
+        0.09204749017953873,
+        -0.37125593423843384,
+        2.594334125518799
+      ],
+      "max_dimension_m": 0.0018045753240585327
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.09034186601638794,
+        -0.37316370010375977,
+        2.594313621520996
+      ],
+      "max_world_m": [
+        0.09139454364776611,
+        -0.3722708821296692,
+        2.5943918228149414
+      ],
+      "max_dimension_m": 0.0010526776313781738
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.09024161845445633,
+        -0.37467628717422485,
+        2.592214345932007
+      ],
+      "max_world_m": [
+        0.09139454364776611,
+        -0.37276074290275574,
+        2.5947415828704834
+      ],
+      "max_dimension_m": 0.0025272369384765625
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.0908874124288559,
+        -0.3722708821296692,
+        2.594208002090454
+      ],
+      "max_world_m": [
+        0.09204749017953873,
+        -0.37125593423843384,
+        2.5947012901306152
+      ],
+      "max_dimension_m": 0.0011600777506828308
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.0908874124288559,
+        -0.373258113861084,
+        2.594334125518799
+      ],
+      "max_world_m": [
+        0.09356757253408432,
+        -0.37179726362228394,
+        2.5963878631591797
+      ],
+      "max_dimension_m": 0.002680160105228424
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.17205993831157684,
+        -0.36670416593551636,
+        2.5972414016723633
+      ],
+      "max_world_m": [
+        -0.16977591812610626,
+        -0.3654874265193939,
+        2.6039772033691406
+      ],
+      "max_dimension_m": 0.006735801696777344
+    },
+    {
+      "vertices": 14,
+      "min_world_m": [
+        -0.1714327186346054,
+        -0.36986640095710754,
+        2.595895528793335
+      ],
+      "max_world_m": [
+        -0.16702251136302948,
+        -0.36580026149749756,
+        2.604426145553589
+      ],
+      "max_dimension_m": 0.008530616760253906
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16967210173606873,
+        -0.3696518838405609,
+        2.5959622859954834
+      ],
+      "max_world_m": [
+        -0.16750523447990417,
+        -0.3688430190086365,
+        2.5967161655426025
+      ],
+      "max_dimension_m": 0.0021668672561645508
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1682223081588745,
+        -0.36986640095710754,
+        2.5966269969940186
+      ],
+      "max_world_m": [
+        -0.16750523447990417,
+        -0.3692241907119751,
+        2.5993800163269043
+      ],
+      "max_dimension_m": 0.002753019332885742
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16836942732334137,
+        -0.36066192388534546,
+        2.5979583263397217
+      ],
+      "max_world_m": [
+        -0.16644150018692017,
+        -0.35792022943496704,
+        2.598317861557007
+      ],
+      "max_dimension_m": 0.002741694450378418
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1676214188337326,
+        -0.3716677129268646,
+        2.5989832878112793
+      ],
+      "max_world_m": [
+        -0.16633276641368866,
+        -0.36986640095710754,
+        2.5993800163269043
+      ],
+      "max_dimension_m": 0.00180131196975708
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16717354953289032,
+        -0.3622148633003235,
+        2.597320318222046
+      ],
+      "max_world_m": [
+        -0.16644150018692017,
+        -0.35825711488723755,
+        2.598317861557007
+      ],
+      "max_dimension_m": 0.0039577484130859375
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16700753569602966,
+        -0.3622148633003235,
+        2.597320318222046
+      ],
+      "max_world_m": [
+        -0.16533835232257843,
+        -0.3565462827682495,
+        2.598317861557007
+      ],
+      "max_dimension_m": 0.005668580532073975
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16602975130081177,
+        -0.372490257024765,
+        2.5952930450439453
+      ],
+      "max_world_m": [
+        -0.1648947149515152,
+        -0.3700864315032959,
+        2.5954296588897705
+      ],
+      "max_dimension_m": 0.002403825521469116
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.16602975130081177,
+        -0.3729326128959656,
+        2.595332384109497
+      ],
+      "max_world_m": [
+        -0.16259896755218506,
+        -0.36796775460243225,
+        2.5962226390838623
+      ],
+      "max_dimension_m": 0.004964858293533325
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16534064710140228,
+        -0.373247355222702,
+        2.5952930450439453
+      ],
+      "max_world_m": [
+        -0.1642661839723587,
+        -0.37154173851013184,
+        2.596099853515625
+      ],
+      "max_dimension_m": 0.0017056167125701904
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16539403796195984,
+        -0.35718491673469543,
+        2.59838604927063
+      ],
+      "max_world_m": [
+        -0.16396835446357727,
+        -0.3523356318473816,
+        2.5989606380462646
+      ],
+      "max_dimension_m": 0.004849284887313843
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1648947149515152,
+        -0.373247355222702,
+        2.5953686237335205
+      ],
+      "max_world_m": [
+        -0.16363178193569183,
+        -0.37154173851013184,
+        2.596099853515625
+      ],
+      "max_dimension_m": 0.0017056167125701904
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1642661839723587,
+        -0.3736685514450073,
+        2.5955686569213867
+      ],
+      "max_world_m": [
+        -0.16363178193569183,
+        -0.3729326128959656,
+        2.5971944332122803
+      ],
+      "max_dimension_m": 0.0016257762908935547
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16311456263065338,
+        -0.3655102252960205,
+        2.5966451168060303
+      ],
+      "max_world_m": [
+        -0.1617097109556198,
+        -0.3634452521800995,
+        2.597174644470215
+      ],
+      "max_dimension_m": 0.0020649731159210205
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16142487525939941,
+        -0.36027684807777405,
+        2.5976145267486572
+      ],
+      "max_world_m": [
+        -0.16086795926094055,
+        -0.35462355613708496,
+        2.5984339714050293
+      ],
+      "max_dimension_m": 0.005653291940689087
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16111241281032562,
+        -0.37659674882888794,
+        2.594162940979004
+      ],
+      "max_world_m": [
+        -0.15936903655529022,
+        -0.37074458599090576,
+        2.5954158306121826
+      ],
+      "max_dimension_m": 0.005852162837982178
+    },
+    {
+      "vertices": 10,
+      "min_world_m": [
+        -0.15930978953838348,
+        -0.3473232388496399,
+        2.5989322662353516
+      ],
+      "max_world_m": [
+        -0.1537521928548813,
+        -0.3425234258174896,
+        2.600266218185425
+      ],
+      "max_dimension_m": 0.005557596683502197
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.15966522693634033,
+        -0.3769001364707947,
+        2.5947699546813965
+      ],
+      "max_world_m": [
+        -0.15623967349529266,
+        -0.3761797845363617,
+        2.5955588817596436
+      ],
+      "max_dimension_m": 0.0034255534410476685
+    },
+    {
+      "vertices": 19,
+      "min_world_m": [
+        -0.15836161375045776,
+        -0.3633957803249359,
+        2.596613645553589
+      ],
+      "max_world_m": [
+        -0.15276268124580383,
+        -0.3488807678222656,
+        2.5992047786712646
+      ],
+      "max_dimension_m": 0.014515012502670288
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15836161375045776,
+        -0.3633957803249359,
+        2.596613645553589
+      ],
+      "max_world_m": [
+        -0.15621526539325714,
+        -0.362522155046463,
+        2.5972065925598145
+      ],
+      "max_dimension_m": 0.0021463483572006226
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1568148285150528,
+        -0.3580237329006195,
+        2.597750663757324
+      ],
+      "max_world_m": [
+        -0.15550436079502106,
+        -0.35755598545074463,
+        2.5983710289001465
+      ],
+      "max_dimension_m": 0.0013104677200317383
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15674550831317902,
+        -0.3770833909511566,
+        2.5941247940063477
+      ],
+      "max_world_m": [
+        -0.1550913006067276,
+        -0.3761797845363617,
+        2.5955588817596436
+      ],
+      "max_dimension_m": 0.001654207706451416
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15550436079502106,
+        -0.35755598545074463,
+        2.597750663757324
+      ],
+      "max_world_m": [
+        -0.15490511059761047,
+        -0.35462290048599243,
+        2.5983548164367676
+      ],
+      "max_dimension_m": 0.0029330849647521973
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        -0.15550436079502106,
+        -0.3684820532798767,
+        2.595773696899414
+      ],
+      "max_world_m": [
+        -0.15389476716518402,
+        -0.35755598545074463,
+        2.597750663757324
+      ],
+      "max_dimension_m": 0.01092606782913208
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1548585742712021,
+        -0.35263410210609436,
+        2.5987677574157715
+      ],
+      "max_world_m": [
+        -0.15414606034755707,
+        -0.3488807678222656,
+        2.5992796421051025
+      ],
+      "max_dimension_m": 0.0037533342838287354
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1548585742712021,
+        -0.3488807678222656,
+        2.5991435050964355
+      ],
+      "max_world_m": [
+        -0.153532475233078,
+        -0.3473232388496399,
+        2.599539279937744
+      ],
+      "max_dimension_m": 0.0015575289726257324
+    },
+    {
+      "vertices": 11,
+      "min_world_m": [
+        -0.1534055471420288,
+        -0.37812238931655884,
+        2.5933985710144043
+      ],
+      "max_world_m": [
+        -0.15138059854507446,
+        -0.37105610966682434,
+        2.597503900527954
+      ],
+      "max_dimension_m": 0.007066279649734497
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1532408446073532,
+        -0.37811294198036194,
+        2.5933985710144043
+      ],
+      "max_world_m": [
+        -0.15298499166965485,
+        -0.37682199478149414,
+        2.5950028896331787
+      ],
+      "max_dimension_m": 0.001604318618774414
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.15280044078826904,
+        -0.37812238931655884,
+        2.596015214920044
+      ],
+      "max_world_m": [
+        -0.15039139986038208,
+        -0.3766641318798065,
+        2.597503900527954
+      ],
+      "max_dimension_m": 0.002409040927886963
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.15219436585903168,
+        -0.36564889550209045,
+        2.597053050994873
+      ],
+      "max_world_m": [
+        -0.1506277322769165,
+        -0.3604513108730316,
+        2.5977094173431396
+      ],
+      "max_dimension_m": 0.005197584629058838
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.15227898955345154,
+        -0.36140957474708557,
+        2.5976967811584473
+      ],
+      "max_world_m": [
+        -0.15110979974269867,
+        -0.3555574119091034,
+        2.5990123748779297
+      ],
+      "max_dimension_m": 0.005852162837982178
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.15232129395008087,
+        -0.37270182371139526,
+        2.595823287963867
+      ],
+      "max_world_m": [
+        -0.1501857042312622,
+        -0.36322328448295593,
+        2.597053050994873
+      ],
+      "max_dimension_m": 0.009478539228439331
+    },
+    {
+      "vertices": 12,
+      "min_world_m": [
+        -0.15226270258426666,
+        -0.37748798727989197,
+        2.5950164794921875
+      ],
+      "max_world_m": [
+        -0.14600791037082672,
+        -0.3675709664821625,
+        2.596831798553467
+      ],
+      "max_dimension_m": 0.009917020797729492
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15218979120254517,
+        -0.36140957474708557,
+        2.597195625305176
+      ],
+      "max_world_m": [
+        -0.1506277322769165,
+        -0.3604513108730316,
+        2.5977094173431396
+      ],
+      "max_dimension_m": 0.0015620589256286621
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.152121439576149,
+        -0.36564889550209045,
+        2.5966074466705322
+      ],
+      "max_world_m": [
+        -0.1506381332874298,
+        -0.36322328448295593,
+        2.597078323364258
+      ],
+      "max_dimension_m": 0.0024256110191345215
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15114623308181763,
+        -0.3643859624862671,
+        2.5966074466705322
+      ],
+      "max_world_m": [
+        -0.1506277322769165,
+        -0.3604513108730316,
+        2.597195625305176
+      ],
+      "max_dimension_m": 0.003934651613235474
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.15043048560619354,
+        -0.35793259739875793,
+        2.5977301597595215
+      ],
+      "max_world_m": [
+        -0.14975637197494507,
+        -0.3526914119720459,
+        2.5982236862182617
+      ],
+      "max_dimension_m": 0.005241185426712036
+    },
+    {
+      "vertices": 13,
+      "min_world_m": [
+        -0.1518024504184723,
+        -0.37748798727989197,
+        2.5958592891693115
+      ],
+      "max_world_m": [
+        -0.1474882811307907,
+        -0.3749549388885498,
+        2.6028475761413574
+      ],
+      "max_dimension_m": 0.0069882869720458984
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14975637197494507,
+        -0.3528828024864197,
+        2.5976099967956543
+      ],
+      "max_world_m": [
+        -0.1486298143863678,
+        -0.3520543873310089,
+        2.5988388061523438
+      ],
+      "max_dimension_m": 0.0012288093566894531
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14745767414569855,
+        -0.3588830530643463,
+        2.5977671146392822
+      ],
+      "max_world_m": [
+        -0.14714714884757996,
+        -0.35583996772766113,
+        2.5983378887176514
+      ],
+      "max_dimension_m": 0.0030430853366851807
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.1483287215232849,
+        -0.37748798727989197,
+        2.594942092895508
+      ],
+      "max_world_m": [
+        -0.143464133143425,
+        -0.37358686327934265,
+        2.5958592891693115
+      ],
+      "max_dimension_m": 0.004864588379859924
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14745767414569855,
+        -0.35583996772766113,
+        2.5976173877716064
+      ],
+      "max_world_m": [
+        -0.14720313251018524,
+        -0.35417044162750244,
+        2.5983524322509766
+      ],
+      "max_dimension_m": 0.0016695261001586914
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.14745767414569855,
+        -0.3588602542877197,
+        2.5977258682250977
+      ],
+      "max_world_m": [
+        -0.14340195059776306,
+        -0.3550555109977722,
+        2.5985605716705322
+      ],
+      "max_dimension_m": 0.004055723547935486
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.14737467467784882,
+        -0.35582074522972107,
+        2.596774101257324
+      ],
+      "max_world_m": [
+        -0.14466586709022522,
+        -0.35407477617263794,
+        2.5985605716705322
+      ],
+      "max_dimension_m": 0.002708807587623596
+    },
+    {
+      "vertices": 9,
+      "min_world_m": [
+        -0.1472952663898468,
+        -0.36659055948257446,
+        2.5964813232421875
+      ],
+      "max_world_m": [
+        -0.14340195059776306,
+        -0.35700133442878723,
+        2.5983378887176514
+      ],
+      "max_dimension_m": 0.009589225053787231
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14714714884757996,
+        -0.35742709040641785,
+        2.597752094268799
+      ],
+      "max_world_m": [
+        -0.14579632878303528,
+        -0.35695481300354004,
+        2.5983378887176514
+      ],
+      "max_dimension_m": 0.0013508200645446777
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.14617294073104858,
+        -0.36659055948257446,
+        2.5964813232421875
+      ],
+      "max_world_m": [
+        -0.14440546929836273,
+        -0.3598940670490265,
+        2.597177505493164
+      ],
+      "max_dimension_m": 0.006696492433547974
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1464492827653885,
+        -0.35456496477127075,
+        2.596774101257324
+      ],
+      "max_world_m": [
+        -0.14368091523647308,
+        -0.35407477617263794,
+        2.597649335861206
+      ],
+      "max_dimension_m": 0.0027683675289154053
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14605674147605896,
+        -0.3588602542877197,
+        2.5977258682250977
+      ],
+      "max_world_m": [
+        -0.14340195059776306,
+        -0.35695481300354004,
+        2.5983362197875977
+      ],
+      "max_dimension_m": 0.0026547908782958984
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14350122213363647,
+        -0.37407219409942627,
+        2.5950942039489746
+      ],
+      "max_world_m": [
+        -0.14254751801490784,
+        -0.37358686327934265,
+        2.597623348236084
+      ],
+      "max_dimension_m": 0.002529144287109375
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14340195059776306,
+        -0.3588602542877197,
+        2.5977258682250977
+      ],
+      "max_world_m": [
+        -0.14167386293411255,
+        -0.35816922783851624,
+        2.5983519554138184
+      ],
+      "max_dimension_m": 0.0017280876636505127
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14350122213363647,
+        -0.3736347258090973,
+        2.5950942039489746
+      ],
+      "max_world_m": [
+        -0.14135487377643585,
+        -0.37319397926330566,
+        2.597623348236084
+      ],
+      "max_dimension_m": 0.002529144287109375
+    },
+    {
+      "vertices": 10,
+      "min_world_m": [
+        -0.1433505117893219,
+        -0.3736347258090973,
+        2.5951077938079834
+      ],
+      "max_world_m": [
+        -0.14076116681098938,
+        -0.3699347674846649,
+        2.600510597229004
+      ],
+      "max_dimension_m": 0.005402803421020508
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14156842231750488,
+        -0.37029898166656494,
+        2.5959465503692627
+      ],
+      "max_world_m": [
+        -0.1400519162416458,
+        -0.36940255761146545,
+        2.5965921878814697
+      ],
+      "max_dimension_m": 0.0015165060758590698
+    },
+    {
+      "vertices": 13,
+      "min_world_m": [
+        -0.1433505117893219,
+        -0.37293586134910583,
+        2.5959672927856445
+      ],
+      "max_world_m": [
+        -0.13752146065235138,
+        -0.36738771200180054,
+        2.602383852005005
+      ],
+      "max_dimension_m": 0.0064165592193603516
+    },
+    {
+      "vertices": 7,
+      "min_world_m": [
+        -0.14023061096668243,
+        -0.36032500863075256,
+        2.5976924896240234
+      ],
+      "max_world_m": [
+        -0.13332803547382355,
+        -0.35630151629447937,
+        2.5982754230499268
+      ],
+      "max_dimension_m": 0.006902575492858887
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.13883747160434723,
+        -0.36787205934524536,
+        2.596330165863037
+      ],
+      "max_world_m": [
+        -0.1370716243982315,
+        -0.3589920997619629,
+        2.598299026489258
+      ],
+      "max_dimension_m": 0.00887995958328247
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13841789960861206,
+        -0.3606739640235901,
+        2.5979740619659424
+      ],
+      "max_world_m": [
+        -0.1380419284105301,
+        -0.3589920997619629,
+        2.598294734954834
+      ],
+      "max_dimension_m": 0.0016818642616271973
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13841789960861206,
+        -0.36278384923934937,
+        2.597721815109253
+      ],
+      "max_world_m": [
+        -0.13785836100578308,
+        -0.3589920997619629,
+        2.598294734954834
+      ],
+      "max_dimension_m": 0.0037917494773864746
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.14023061096668243,
+        -0.35918378829956055,
+        2.5979740619659424
+      ],
+      "max_world_m": [
+        -0.1380419284105301,
+        -0.35708826780319214,
+        2.5982754230499268
+      ],
+      "max_dimension_m": 0.0021886825561523438
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.13867178559303284,
+        -0.3685198128223419,
+        2.5959672927856445
+      ],
+      "max_world_m": [
+        -0.13741078972816467,
+        -0.3666136860847473,
+        2.59745717048645
+      ],
+      "max_dimension_m": 0.0019061267375946045
+    },
+    {
+      "vertices": 11,
+      "min_world_m": [
+        -0.13812363147735596,
+        -0.3644217550754547,
+        2.5972506999969482
+      ],
+      "max_world_m": [
+        -0.13384822010993958,
+        -0.35918378829956055,
+        2.5986642837524414
+      ],
+      "max_dimension_m": 0.005237966775894165
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1375553160905838,
+        -0.3659115731716156,
+        2.598210334777832
+      ],
+      "max_world_m": [
+        -0.13652543723583221,
+        -0.3644217550754547,
+        2.5990102291107178
+      ],
+      "max_dimension_m": 0.0014898180961608887
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13749736547470093,
+        -0.3647264242172241,
+        2.598210334777832
+      ],
+      "max_world_m": [
+        -0.13652543723583221,
+        -0.36373528838157654,
+        2.5986642837524414
+      ],
+      "max_dimension_m": 0.000991135835647583
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1380419284105301,
+        -0.3627359867095947,
+        2.597503185272217
+      ],
+      "max_world_m": [
+        -0.13514269888401031,
+        -0.35918378829956055,
+        2.5983381271362305
+      ],
+      "max_dimension_m": 0.0035521984100341797
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13749119639396667,
+        -0.36514177918434143,
+        2.5982890129089355
+      ],
+      "max_world_m": [
+        -0.13501575589179993,
+        -0.36411577463150024,
+        2.6001169681549072
+      ],
+      "max_dimension_m": 0.002475440502166748
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.1380419284105301,
+        -0.3627359867095947,
+        2.5972506999969482
+      ],
+      "max_world_m": [
+        -0.1338612288236618,
+        -0.35918378829956055,
+        2.5982754230499268
+      ],
+      "max_dimension_m": 0.004180699586868286
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13643234968185425,
+        -0.3578779101371765,
+        2.5965840816497803
+      ],
+      "max_world_m": [
+        -0.13343775272369385,
+        -0.3571386933326721,
+        2.5978314876556396
+      ],
+      "max_dimension_m": 0.0029945969581604004
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.13518959283828735,
+        -0.35682979226112366,
+        2.6021387577056885
+      ],
+      "max_world_m": [
+        -0.13362883031368256,
+        -0.35576149821281433,
+        2.604494094848633
+      ],
+      "max_dimension_m": 0.002355337142944336
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1338612288236618,
+        -0.36032500863075256,
+        2.597883939743042
+      ],
+      "max_world_m": [
+        -0.13332803547382355,
+        -0.358103483915329,
+        2.5982160568237305
+      ],
+      "max_dimension_m": 0.002221524715423584
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13423098623752594,
+        -0.361929714679718,
+        2.5972506999969482
+      ],
+      "max_world_m": [
+        -0.13384822010993958,
+        -0.36032500863075256,
+        2.597883939743042
+      ],
+      "max_dimension_m": 0.001604706048965454
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.13368934392929077,
+        -0.35893481969833374,
+        2.600071668624878
+      ],
+      "max_world_m": [
+        -0.13267900049686432,
+        -0.35645124316215515,
+        2.6021387577056885
+      ],
+      "max_dimension_m": 0.002483576536178589
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1338612288236618,
+        -0.36032500863075256,
+        2.597883939743042
+      ],
+      "max_world_m": [
+        -0.13320402801036835,
+        -0.3581952452659607,
+        2.5984976291656494
+      ],
+      "max_dimension_m": 0.00212976336479187
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.1338612288236618,
+        -0.36032500863075256,
+        2.597883939743042
+      ],
+      "max_world_m": [
+        -0.13262659311294556,
+        -0.35732585191726685,
+        2.6008079051971436
+      ],
+      "max_dimension_m": 0.0029991567134857178
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13343775272369385,
+        -0.358103483915329,
+        2.5975584983825684
+      ],
+      "max_world_m": [
+        -0.13262659311294556,
+        -0.3577219843864441,
+        2.5983798503875732
+      ],
+      "max_dimension_m": 0.0008213520050048828
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.13267900049686432,
+        -0.35779815912246704,
+        2.5983798503875732
+      ],
+      "max_world_m": [
+        -0.13252146542072296,
+        -0.3565160036087036,
+        2.602573871612549
+      ],
+      "max_dimension_m": 0.004194021224975586
+    },
+    {
+      "vertices": 10,
+      "min_world_m": [
+        -0.1548585742712021,
+        -0.35553526878356934,
+        2.5978238582611084
+      ],
+      "max_world_m": [
+        -0.1512884944677353,
+        -0.34750714898109436,
+        2.5992796421051025
+      ],
+      "max_dimension_m": 0.008028119802474976
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.19854195415973663,
+        -0.30191436409950256,
+        2.5942940711975098
+      ],
+      "max_world_m": [
+        -0.19722826778888702,
+        -0.30104073882102966,
+        2.6002919673919678
+      ],
+      "max_dimension_m": 0.005997896194458008
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.19475121796131134,
+        -0.29757416248321533,
+        2.5644779205322266
+      ],
+      "max_world_m": [
+        -0.19235680997371674,
+        -0.29027774930000305,
+        2.566646099090576
+      ],
+      "max_dimension_m": 0.00729641318321228
+    },
+    {
+      "vertices": 27,
+      "min_world_m": [
+        -0.1753292828798294,
+        -0.36097896099090576,
+        2.5969271659851074
+      ],
+      "max_world_m": [
+        -0.1679820865392685,
+        -0.3466654121875763,
+        2.5991106033325195
+      ],
+      "max_dimension_m": 0.014313548803329468
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.1753292828798294,
+        -0.3571106791496277,
+        2.597214698791504
+      ],
+      "max_world_m": [
+        -0.1739465445280075,
+        -0.35313862562179565,
+        2.597851037979126
+      ],
+      "max_dimension_m": 0.003972053527832031
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.17465873062610626,
+        -0.3582274913787842,
+        2.59757924079895
+      ],
+      "max_world_m": [
+        -0.1739465445280075,
+        -0.3571048378944397,
+        2.597851037979126
+      ],
+      "max_dimension_m": 0.0011226534843444824
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        -0.17354129254817963,
+        -0.36145907640457153,
+        2.5969595909118652
+      ],
+      "max_world_m": [
+        -0.1717839241027832,
+        -0.35897648334503174,
+        2.598798990249634
+      ],
+      "max_dimension_m": 0.002482593059539795
+    },
+    {
+      "vertices": 8,
+      "min_world_m": [
+        -0.1727125644683838,
+        -0.3666533827781677,
+        2.5963330268859863
+      ],
+      "max_world_m": [
+        -0.1709747314453125,
+        -0.36138713359832764,
+        2.600193738937378
+      ],
+      "max_dimension_m": 0.005266249179840088
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.17214198410511017,
+        -0.3593344986438751,
+        2.597060203552246
+      ],
+      "max_world_m": [
+        -0.17039795219898224,
+        -0.35432735085487366,
+        2.597810745239258
+      ],
+      "max_dimension_m": 0.005007147789001465
+    },
+    {
+      "vertices": 7,
+      "min_world_m": [
+        -0.1727125644683838,
+        -0.3666533827781677,
+        2.5963330268859863
+      ],
+      "max_world_m": [
+        -0.1709747314453125,
+        -0.36027780175209045,
+        2.598461389541626
+      ],
+      "max_dimension_m": 0.0063755810260772705
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1725732684135437,
+        -0.3620869517326355,
+        2.598968267440796
+      ],
+      "max_world_m": [
+        -0.17157331109046936,
+        -0.36138713359832764,
+        2.601181983947754
+      ],
+      "max_dimension_m": 0.002213716506958008
+    },
+    {
+      "vertices": 15,
+      "min_world_m": [
+        -0.17214198410511017,
+        -0.3646222651004791,
+        2.596449613571167
+      ],
+      "max_world_m": [
+        -0.16717354953289032,
+        -0.35432735085487366,
+        2.5983030796051025
+      ],
+      "max_dimension_m": 0.010294914245605469
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        -0.1721728891134262,
+        -0.3666533827781677,
+        2.5963330268859863
+      ],
+      "max_world_m": [
+        -0.16885995864868164,
+        -0.3612670302391052,
+        2.59675931930542
+      ],
+      "max_dimension_m": 0.0053863525390625
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1714327186346054,
+        -0.3681926727294922,
+        2.595895528793335
+      ],
+      "max_world_m": [
+        -0.1713200956583023,
+        -0.3665098547935486,
+        2.5972414016723633
+      ],
+      "max_dimension_m": 0.0016828179359436035
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1714327186346054,
+        -0.36818453669548035,
+        2.595895528793335
+      ],
+      "max_world_m": [
+        -0.1709747314453125,
+        -0.3665098547935486,
+        2.5972414016723633
+      ],
+      "max_dimension_m": 0.0016746819019317627
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1714327186346054,
+        -0.36818453669548035,
+        2.595895528793335
+      ],
+      "max_world_m": [
+        -0.17014861106872559,
+        -0.3666533827781677,
+        2.5963330268859863
+      ],
+      "max_dimension_m": 0.001531153917312622
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.1712907999753952,
+        -0.33809271454811096,
+        2.6000232696533203
+      ],
+      "max_world_m": [
+        -0.1695871353149414,
+        -0.3353627324104309,
+        2.6008102893829346
+      ],
+      "max_dimension_m": 0.0027299821376800537
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.1695871353149414,
+        -0.3353627324104309,
+        2.600766658782959
+      ],
+      "max_world_m": [
+        -0.1671019345521927,
+        -0.3334367871284485,
+        2.6011977195739746
+      ],
+      "max_dimension_m": 0.0024852007627487183
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16893775761127472,
+        -0.35792022943496704,
+        2.597825050354004
+      ],
+      "max_world_m": [
+        -0.16747918725013733,
+        -0.3564792275428772,
+        2.5983030796051025
+      ],
+      "max_dimension_m": 0.0014585703611373901
+    },
+    {
+      "vertices": 12,
+      "min_world_m": [
+        -0.16924729943275452,
+        -0.35825711488723755,
+        2.597792148590088
+      ],
+      "max_world_m": [
+        -0.16539403796195984,
+        -0.34842994809150696,
+        2.5990993976593018
+      ],
+      "max_dimension_m": 0.00982716679573059
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16552162170410156,
+        -0.35718491673469543,
+        2.598207950592041
+      ],
+      "max_world_m": [
+        -0.16431337594985962,
+        -0.3523356318473816,
+        2.598407506942749
+      ],
+      "max_dimension_m": 0.004849284887313843
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        -0.16488754749298096,
+        -0.35140499472618103,
+        2.5989441871643066
+      ],
+      "max_world_m": [
+        -0.16366952657699585,
+        -0.35054701566696167,
+        2.599579334259033
+      ],
+      "max_dimension_m": 0.0012180209159851074
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        -0.16445139050483704,
+        -0.35299181938171387,
+        2.598414421081543
+      ],
+      "max_world_m": [
+        -0.1628050059080124,
+        -0.34821414947509766,
+        2.599579334259033
+      ],
+      "max_dimension_m": 0.004777669906616211
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        -0.16394750773906708,
+        -0.340056449174881,
+        2.6000783443450928
+      ],
+      "max_world_m": [
+        -0.1612963080406189,
+        -0.3375888466835022,
+        2.6007916927337646
+      ],
+      "max_dimension_m": 0.002651199698448181
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.09108661860227585,
+        -0.37187668681144714,
+        2.594208002090454
+      ],
+      "max_world_m": [
+        0.09204749017953873,
+        -0.37125593423843384,
+        2.595339775085449
+      ],
+      "max_dimension_m": 0.0011317729949951172
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.09108661860227585,
+        -0.373258113861084,
+        2.5947012901306152
+      ],
+      "max_world_m": [
+        0.09428921341896057,
+        -0.3703559637069702,
+        2.5968449115753174
+      ],
+      "max_dimension_m": 0.003202594816684723
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.09139454364776611,
+        -0.37410539388656616,
+        2.5943918228149414
+      ],
+      "max_world_m": [
+        0.09356757253408432,
+        -0.37316370010375977,
+        2.5963878631591797
+      ],
+      "max_dimension_m": 0.002173028886318207
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.09428921341896057,
+        -0.370643675327301,
+        2.596834897994995
+      ],
+      "max_world_m": [
+        0.09731147438287735,
+        -0.36969712376594543,
+        2.603349208831787
+      ],
+      "max_dimension_m": 0.006514310836791992
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1099812388420105,
+        -0.3806108236312866,
+        2.593658685684204
+      ],
+      "max_world_m": [
+        0.11101633310317993,
+        -0.37955912947654724,
+        2.5969552993774414
+      ],
+      "max_dimension_m": 0.0032966136932373047
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11104270070791245,
+        -0.3889774680137634,
+        2.601138114929199
+      ],
+      "max_world_m": [
+        0.11177832633256912,
+        -0.38765984773635864,
+        2.603945016860962
+      ],
+      "max_dimension_m": 0.0028069019317626953
+    },
+    {
+      "vertices": 21,
+      "min_world_m": [
+        0.11113383620977402,
+        -0.3824085593223572,
+        2.5809414386749268
+      ],
+      "max_world_m": [
+        0.11568855494260788,
+        -0.3768916726112366,
+        2.5927658081054688
+      ],
+      "max_dimension_m": 0.011824369430541992
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11233493685722351,
+        -0.38261526823043823,
+        2.5898807048797607
+      ],
+      "max_world_m": [
+        0.11325869709253311,
+        -0.382094144821167,
+        2.5910723209381104
+      ],
+      "max_dimension_m": 0.0011916160583496094
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1138673722743988,
+        -0.3817071318626404,
+        2.5874505043029785
+      ],
+      "max_world_m": [
+        0.11434391885995865,
+        -0.3805880546569824,
+        2.588468551635742
+      ],
+      "max_dimension_m": 0.001119077205657959
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.11367110162973404,
+        -0.38207656145095825,
+        2.584811210632324
+      ],
+      "max_world_m": [
+        0.11554891616106033,
+        -0.38095033168792725,
+        2.588468551635742
+      ],
+      "max_dimension_m": 0.0036573410034179688
+    },
+    {
+      "vertices": 17,
+      "min_world_m": [
+        0.11382051557302475,
+        -0.39013105630874634,
+        2.584240198135376
+      ],
+      "max_world_m": [
+        0.1182977706193924,
+        -0.38451844453811646,
+        2.5962235927581787
+      ],
+      "max_dimension_m": 0.011983394622802734
+    },
+    {
+      "vertices": 18,
+      "min_world_m": [
+        0.11367110162973404,
+        -0.38464927673339844,
+        2.5814225673675537
+      ],
+      "max_world_m": [
+        0.11730857193470001,
+        -0.37944620847702026,
+        2.5887367725372314
+      ],
+      "max_dimension_m": 0.007314205169677734
+    },
+    {
+      "vertices": 27,
+      "min_world_m": [
+        0.11175098270177841,
+        -0.3762269914150238,
+        2.586380958557129
+      ],
+      "max_world_m": [
+        0.11889246106147766,
+        -0.36853116750717163,
+        2.600125789642334
+      ],
+      "max_dimension_m": 0.013744831085205078
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11424952745437622,
+        -0.37985795736312866,
+        2.5849311351776123
+      ],
+      "max_world_m": [
+        0.11568855494260788,
+        -0.379219651222229,
+        2.585822105407715
+      ],
+      "max_dimension_m": 0.001439027488231659
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11386445164680481,
+        -0.37985795736312866,
+        2.5849311351776123
+      ],
+      "max_world_m": [
+        0.11568855494260788,
+        -0.37943023443222046,
+        2.5864241123199463
+      ],
+      "max_dimension_m": 0.00182410329580307
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11424952745437622,
+        -0.3795415759086609,
+        2.5849311351776123
+      ],
+      "max_world_m": [
+        0.11506488919258118,
+        -0.379219651222229,
+        2.585186719894409
+      ],
+      "max_dimension_m": 0.0008153617382049561
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1138673722743988,
+        -0.3817071318626404,
+        2.5867834091186523
+      ],
+      "max_world_m": [
+        0.11554891616106033,
+        -0.3805880546569824,
+        2.587658405303955
+      ],
+      "max_dimension_m": 0.0016815438866615295
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11423780024051666,
+        -0.38464927673339844,
+        2.584653377532959
+      ],
+      "max_world_m": [
+        0.1153021827340126,
+        -0.3838251233100891,
+        2.587580442428589
+      ],
+      "max_dimension_m": 0.002927064895629883
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.1150343120098114,
+        -0.3792417645454407,
+        2.5839011669158936
+      ],
+      "max_world_m": [
+        0.1152217835187912,
+        -0.37877988815307617,
+        2.585186719894409
+      ],
+      "max_dimension_m": 0.001285552978515625
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11533018201589584,
+        -0.37883391976356506,
+        2.5809414386749268
+      ],
+      "max_world_m": [
+        0.1155567392706871,
+        -0.3768916726112366,
+        2.582904815673828
+      ],
+      "max_dimension_m": 0.001963376998901367
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.1149236187338829,
+        -0.38451844453811646,
+        2.5831098556518555
+      ],
+      "max_world_m": [
+        0.1166575700044632,
+        -0.3834003806114197,
+        2.5850234031677246
+      ],
+      "max_dimension_m": 0.0019135475158691406
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.11506488919258118,
+        -0.37944620847702026,
+        2.583834648132324
+      ],
+      "max_world_m": [
+        0.11625004559755325,
+        -0.37816697359085083,
+        2.585186719894409
+      ],
+      "max_dimension_m": 0.001352071762084961
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.11533018201589584,
+        -0.379225492477417,
+        2.578817367553711
+      ],
+      "max_world_m": [
+        0.11642029136419296,
+        -0.37648805975914,
+        2.582669258117676
+      ],
+      "max_dimension_m": 0.0038518905639648438
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.1150343120098114,
+        -0.3792417645454407,
+        2.582669258117676
+      ],
+      "max_world_m": [
+        0.11615370213985443,
+        -0.37753844261169434,
+        2.5839011669158936
+      ],
+      "max_dimension_m": 0.0017033219337463379
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.11516254395246506,
+        -0.37882286310195923,
+        2.583834648132324
+      ],
+      "max_world_m": [
+        0.11615370213985443,
+        -0.37816697359085083,
+        2.584980010986328
+      ],
+      "max_dimension_m": 0.0011453628540039062
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11502942442893982,
+        -0.3767862021923065,
+        2.58140230178833
+      ],
+      "max_world_m": [
+        0.1163291409611702,
+        -0.3730165958404541,
+        2.583561897277832
+      ],
+      "max_dimension_m": 0.003769606351852417
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.11502942442893982,
+        -0.37552326917648315,
+        2.5786356925964355
+      ],
+      "max_world_m": [
+        0.11708331108093262,
+        -0.37261947989463806,
+        2.583561897277832
+      ],
+      "max_dimension_m": 0.004926204681396484
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.1155567392706871,
+        -0.379225492477417,
+        2.5816831588745117
+      ],
+      "max_world_m": [
+        0.11646877974271774,
+        -0.37753844261169434,
+        2.5827202796936035
+      ],
+      "max_dimension_m": 0.0016870498657226562
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11506488919258118,
+        -0.37985795736312866,
+        2.5849642753601074
+      ],
+      "max_world_m": [
+        0.11625004559755325,
+        -0.379219651222229,
+        2.585822105407715
+      ],
+      "max_dimension_m": 0.0011851564049720764
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11596588045358658,
+        -0.37886321544647217,
+        2.580587863922119
+      ],
+      "max_world_m": [
+        0.11685221642255783,
+        -0.3782353401184082,
+        2.5813069343566895
+      ],
+      "max_dimension_m": 0.0008863359689712524
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11596588045358658,
+        -0.379225492477417,
+        2.580610513687134
+      ],
+      "max_world_m": [
+        0.11677182465791702,
+        -0.3782353401184082,
+        2.5816831588745117
+      ],
+      "max_dimension_m": 0.0010726451873779297
+    },
+    {
+      "vertices": 21,
+      "min_world_m": [
+        0.11596588045358658,
+        -0.38270998001098633,
+        2.5802931785583496
+      ],
+      "max_world_m": [
+        0.11770208925008774,
+        -0.3773724138736725,
+        2.5849642753601074
+      ],
+      "max_dimension_m": 0.005337566137313843
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11570189893245697,
+        -0.37690240144729614,
+        2.576815128326416
+      ],
+      "max_world_m": [
+        0.11649936437606812,
+        -0.37577390670776367,
+        2.578817367553711
+      ],
+      "max_dimension_m": 0.002002239227294922
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11570189893245697,
+        -0.3782353401184082,
+        2.578817367553711
+      ],
+      "max_world_m": [
+        0.11652020364999771,
+        -0.37648805975914,
+        2.580610513687134
+      ],
+      "max_dimension_m": 0.0017931461334228516
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11610649526119232,
+        -0.37690240144729614,
+        2.576815128326416
+      ],
+      "max_world_m": [
+        0.11649936437606812,
+        -0.37577390670776367,
+        2.578181266784668
+      ],
+      "max_dimension_m": 0.0013661384582519531
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11570189893245697,
+        -0.37766146659851074,
+        2.578181266784668
+      ],
+      "max_world_m": [
+        0.11652020364999771,
+        -0.37648805975914,
+        2.5802931785583496
+      ],
+      "max_dimension_m": 0.0021119117736816406
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.11585911363363266,
+        -0.376720130443573,
+        2.576815128326416
+      ],
+      "max_world_m": [
+        0.11745993793010712,
+        -0.37574559450149536,
+        2.580367088317871
+      ],
+      "max_dimension_m": 0.003551959991455078
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.11564234644174576,
+        -0.37310805916786194,
+        2.5786356925964355
+      ],
+      "max_world_m": [
+        0.11708331108093262,
+        -0.37188971042633057,
+        2.5820436477661133
+      ],
+      "max_dimension_m": 0.0034079551696777344
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.1158682331442833,
+        -0.37816697359085083,
+        2.5820956230163574
+      ],
+      "max_world_m": [
+        0.11646877974271774,
+        -0.37753844261169434,
+        2.583834648132324
+      ],
+      "max_dimension_m": 0.0017390251159667969
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.11585911363363266,
+        -0.376720130443573,
+        2.580252170562744
+      ],
+      "max_world_m": [
+        0.11808162182569504,
+        -0.37597569823265076,
+        2.5813241004943848
+      ],
+      "max_dimension_m": 0.002222508192062378
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.11610649526119232,
+        -0.37766146659851074,
+        2.5766124725341797
+      ],
+      "max_world_m": [
+        0.11712335795164108,
+        -0.37594056129455566,
+        2.5802931785583496
+      ],
+      "max_dimension_m": 0.003680706024169922
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11625004559755325,
+        -0.37633246183395386,
+        2.5766124725341797
+      ],
+      "max_world_m": [
+        0.11660093069076538,
+        -0.37577390670776367,
+        2.5770647525787354
+      ],
+      "max_dimension_m": 0.0005585551261901855
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.1164209395647049,
+        -0.37416136264801025,
+        2.5779290199279785
+      ],
+      "max_world_m": [
+        0.11713864654302597,
+        -0.3730452358722687,
+        2.5809693336486816
+      ],
+      "max_dimension_m": 0.003040313720703125
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11616995930671692,
+        -0.37597569823265076,
+        2.581206798553467
+      ],
+      "max_world_m": [
+        0.1165846511721611,
+        -0.3747912049293518,
+        2.58140230178833
+      ],
+      "max_dimension_m": 0.0011844933032989502
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.11616995930671692,
+        -0.37644606828689575,
+        2.5810794830322266
+      ],
+      "max_world_m": [
+        0.11808162182569504,
+        -0.3747912049293518,
+        2.5813241004943848
+      ],
+      "max_dimension_m": 0.001911662518978119
+    },
+    {
+      "vertices": 23,
+      "min_world_m": [
+        0.11597923189401627,
+        -0.372641921043396,
+        2.5878899097442627
+      ],
+      "max_world_m": [
+        0.12269655615091324,
+        -0.3677884042263031,
+        2.59941029548645
+      ],
+      "max_dimension_m": 0.0115203857421875
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1164209395647049,
+        -0.3747912049293518,
+        2.5803122520446777
+      ],
+      "max_world_m": [
+        0.11723924428224564,
+        -0.37390032410621643,
+        2.581206798553467
+      ],
+      "max_dimension_m": 0.0008945465087890625
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11649936437606812,
+        -0.37594056129455566,
+        2.5766124725341797
+      ],
+      "max_world_m": [
+        0.11720213294029236,
+        -0.37574559450149536,
+        2.5772814750671387
+      ],
+      "max_dimension_m": 0.0007027685642242432
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.1164209395647049,
+        -0.37416136264801025,
+        2.5779290199279785
+      ],
+      "max_world_m": [
+        0.11759240925312042,
+        -0.37372976541519165,
+        2.5809693336486816
+      ],
+      "max_dimension_m": 0.003040313720703125
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11677182465791702,
+        -0.37923526763916016,
+        2.580587863922119
+      ],
+      "max_world_m": [
+        0.11701756715774536,
+        -0.37860801815986633,
+        2.5813069343566895
+      ],
+      "max_dimension_m": 0.0007190704345703125
+    },
+    {
+      "vertices": 5,
+      "min_world_m": [
+        0.1165638193488121,
+        -0.37392863631248474,
+        2.5779290199279785
+      ],
+      "max_world_m": [
+        0.11738312244415283,
+        -0.3730452358722687,
+        2.5797979831695557
+      ],
+      "max_dimension_m": 0.0018689632415771484
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11614327132701874,
+        -0.38451844453811646,
+        2.5824921131134033
+      ],
+      "max_world_m": [
+        0.1167474165558815,
+        -0.3827441334724426,
+        2.584240198135376
+      ],
+      "max_dimension_m": 0.0017743110656738281
+    },
+    {
+      "vertices": 9,
+      "min_world_m": [
+        0.11652020364999771,
+        -0.37766146659851074,
+        2.5766124725341797
+      ],
+      "max_world_m": [
+        0.11747002601623535,
+        -0.37574559450149536,
+        2.580367088317871
+      ],
+      "max_dimension_m": 0.0037546157836914062
+    },
+    {
+      "vertices": 17,
+      "min_world_m": [
+        0.1165846511721611,
+        -0.37644606828689575,
+        2.5786356925964355
+      ],
+      "max_world_m": [
+        0.1210944652557373,
+        -0.36974695324897766,
+        2.591151475906372
+      ],
+      "max_dimension_m": 0.012515783309936523
+    },
+    {
+      "vertices": 9,
+      "min_world_m": [
+        0.11722719669342041,
+        -0.3805617094039917,
+        2.5791566371917725
+      ],
+      "max_world_m": [
+        0.11913982778787613,
+        -0.37428635358810425,
+        2.5819103717803955
+      ],
+      "max_dimension_m": 0.006275355815887451
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.11708331108093262,
+        -0.3738059103488922,
+        2.5781500339508057
+      ],
+      "max_world_m": [
+        0.11759240925312042,
+        -0.37310805916786194,
+        2.579662799835205
+      ],
+      "max_dimension_m": 0.001512765884399414
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11708331108093262,
+        -0.3735058009624481,
+        2.5786356925964355
+      ],
+      "max_world_m": [
+        0.1180611327290535,
+        -0.37301626801490784,
+        2.5816526412963867
+      ],
+      "max_dimension_m": 0.003016948699951172
+    },
+    {
+      "vertices": 6,
+      "min_world_m": [
+        0.1165846511721611,
+        -0.3747912049293518,
+        2.578235149383545
+      ],
+      "max_world_m": [
+        0.1180611327290535,
+        -0.37301626801490784,
+        2.5816526412963867
+      ],
+      "max_dimension_m": 0.003417491912841797
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11747749894857407,
+        -0.38829946517944336,
+        2.58889102935791
+      ],
+      "max_world_m": [
+        0.11786647886037827,
+        -0.3862178921699524,
+        2.5941905975341797
+      ],
+      "max_dimension_m": 0.005299568176269531
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.11728188395500183,
+        -0.38173478841781616,
+        2.581225872039795
+      ],
+      "max_world_m": [
+        0.11790065467357635,
+        -0.3801707625389099,
+        2.5814852714538574
+      ],
+      "max_dimension_m": 0.00156402587890625
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1182977706193924,
+        -0.3883548080921173,
+        2.593773365020752
+      ],
+      "max_world_m": [
+        0.11960986256599426,
+        -0.3849240243434906,
+        2.596202850341797
+      ],
+      "max_dimension_m": 0.003430783748626709
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.1210944652557373,
+        -0.3749604821205139,
+        2.5900425910949707
+      ],
+      "max_world_m": [
+        0.12147855013608932,
+        -0.3724163770675659,
+        2.590703010559082
+      ],
+      "max_dimension_m": 0.002544105052947998
+    },
+    {
+      "vertices": 11,
+      "min_world_m": [
+        0.16532012820243835,
+        -0.34073740243911743,
+        2.5609991550445557
+      ],
+      "max_world_m": [
+        0.17482441663742065,
+        -0.326654314994812,
+        2.574187755584717
+      ],
+      "max_dimension_m": 0.01408308744430542
+    },
+    {
+      "vertices": 4,
+      "min_world_m": [
+        0.19513270258903503,
+        -0.2999483346939087,
+        2.5818819999694824
+      ],
+      "max_world_m": [
+        0.1969011127948761,
+        -0.2993985712528229,
+        2.587618589401245
+      ],
+      "max_dimension_m": 0.005736589431762695
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.19544875621795654,
+        -0.2999483346939087,
+        2.5827395915985107
+      ],
+      "max_world_m": [
+        0.1969011127948761,
+        -0.29984843730926514,
+        2.587618589401245
+      ],
+      "max_dimension_m": 0.004878997802734375
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.19682009518146515,
+        -0.30120542645454407,
+        2.5912420749664307
+      ],
+      "max_world_m": [
+        0.1973959058523178,
+        -0.30099156498908997,
+        2.5954761505126953
+      ],
+      "max_dimension_m": 0.0042340755462646484
+    },
+    {
+      "vertices": 3,
+      "min_world_m": [
+        0.19702287018299103,
+        -0.30182909965515137,
+        2.5952513217926025
+      ],
+      "max_world_m": [
+        0.1973959058523178,
+        -0.3009971082210541,
+        2.5954761505126953
+      ],
+      "max_dimension_m": 0.00083199143409729
+    }
+  ],
+  "hair_vertex_count_after": 117291,
+  "skin_vertex_count_after": 21705,
+  "gorget_shards": {
+    "definition": "current disconnected component with <=12 triangles and maximum bbox dimension <30 mm",
+    "interpretation": "The count is geometric, not a visual guess. Connected cracked/coarse triangles are not mislabeled as detached shards.",
+    "objects": [
+      {
+        "name": "AstraChar2_R5_Gorget",
+        "component_count": 1,
+        "shard_count": 0,
+        "bounds_world_m": [
+          [
+            -0.13954129815101624,
+            -0.3375493288040161,
+            2.623046398162842
+          ],
+          [
+            0.13954129815101624,
+            -0.018550459295511246,
+            2.7455644607543945
+          ]
+        ],
+        "centroid_world_m": [
+          -1.3502602295526836e-10,
+          -0.1869389054957234,
+          2.6826982464889686
+        ],
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      },
+      {
+        "name": "AstraChar2_R5_GorgetRim",
+        "component_count": 1,
+        "shard_count": 0,
+        "bounds_world_m": [
+          [
+            -0.09542687237262726,
+            -0.3064993619918823,
+            2.7135050296783447
+          ],
+          [
+            0.09542687237262726,
+            -0.08550000190734863,
+            2.748500108718872
+          ]
+        ],
+        "centroid_world_m": [
+          0.0,
+          -0.19667817892000852,
+          2.7421028187361016
+        ],
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0
+      }
+    ],
+    "count": 0,
+    "locations": [],
+    "banked_repair_record": {
+      "source": "renders/astra/char2/r6_collar_counts.json",
+      "removed_fractured_neck_faces": 6675,
+      "last_collar_strays_removed": 103,
+      "note": "Historical removal counts are context only; those faces are not present shard locations in the i02 source."
+    }
+  },
+  "material_correction": {
+    "base_color_image": "Image_0",
+    "hair_color_unchanged": true,
+    "normal_roughness_emission_maps_preserved": true,
+    "skin_mask_attribute": "meshy_skin_mask",
+    "nodes": {
+      "multiply": {
+        "node": "Meshy i02 SPEC multiply",
+        "blend_type": "MULTIPLY",
+        "factor": 1.0,
+        "color2_rgba": [
+          0.95,
+          0.9,
+          0.82,
+          1.0
+        ]
+      },
+      "hue_saturation_value": {
+        "node": "Meshy i02 warm HSV",
+        "hue": 0.485,
+        "saturation": 1.15,
+        "value": 0.92,
+        "factor": 1.0
+      },
+      "masked_mix": {
+        "node": "Meshy i02 skin mix",
+        "blend_type": "MIX",
+        "factor_source": "meshy_skin_mask"
+      }
+    }
+  },
+  "binding": {
+    "meshy": "rigid Head 1.0",
+    "neck_blend": "Spine/neck/Head",
+    "neck_band_z_range_m": [
+      2.605,
+      2.735
+    ]
+  },
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0
+}

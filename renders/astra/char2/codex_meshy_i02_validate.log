@@ -1,0 +1,169 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.371  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_meshy_i02.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_HeadHair 1.000674843788147
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_NeckBlend 1.1442304849624634
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_HeadHair 1.000112533569336
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_NeckBlend 1.3955484628677368
+MESHY_I02_NATIVE_PASS {"bones": 121, "rest": 0.0, "unweighted": 0}
+00:03.728  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_meshy_i02.blend"
+INFO Draco is available, use library at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.so
+ERROR MeshOptimizer is not available because library could not be found at /usr/lib/blender/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.so
+08:30:02 | INFO: Starting glTF 2.0 export
+08:30:02 | INFO: Extracting primitive: Astra tailored inner sleeve surface
+08:30:02 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:02 | INFO: Primitives created: 1
+08:30:03 | INFO: Extracting primitive: AstraChar2 Meshy i02 head hair planar cut
+08:30:03 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:03 | WARNING: The active Vertex Color will not be exported, as it is not used in the node tree of the material
+08:30:03 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:04 | INFO: Primitives created: 2
+08:30:04 | INFO: Extracting primitive: AstraChar2 Meshy i02 neck blend mesh
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_ClavicleMantle clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_Cuirass clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_Gorget clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_GorgetRim clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_L clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_Pauldron_R clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_L clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_PauldronRim_R clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SacredEmblem clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_0 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_1 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_2 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_3 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_4 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_5 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_6 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_7 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_8 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_9 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_10 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_11 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_12 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_13 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_14 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_SunRay_15 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_0 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_1 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_L_2 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_0 clean topology
+08:30:04 | INFO: Primitives created: 1
+08:30:04 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_1 clean topology
+08:30:05 | INFO: Primitives created: 1
+08:30:05 | INFO: Extracting primitive: AstraChar2_R5_UpperArm_R_2 clean topology
+08:30:05 | INFO: Primitives created: 1
+08:30:05 | INFO: Extracting primitive: AstraChar2 refined char1
+08:30:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:07 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:08 | INFO: Primitives created: 3
+08:30:08 | INFO: Extracting primitive: Godwyn_Sword.001
+08:30:08 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+08:30:09 | INFO: Primitives created: 1
+08:30:09 | INFO: Finished glTF 2.0 export in 6.4061806201934814 s
+
+MESHY_I02_EXPORT_PASS 146416944 17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5 {"skin_faces": 20857, "other_faces": 132089, "skin_image": "Image_0_Meshy_i02_skin_corrected", "hair_image": "Image_0", "hair_material": "AstraChar2 Meshy i02 original hair and non-skin PBR", "skin_material": "AstraChar2 Meshy i02 corrected skin PBR"}
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 909, in register
+    bl_extension_ops.register()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/bl_extension_ops.py", line 4108, in register
+    bpy.utils.register_class(cls)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+ValueError: register_class(...): already registered as a subclass 'EXTENSIONS_OT_repo_sync'
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+08:30:09 | INFO: Data are loaded, start creating Blender stuff
+08:30:09 | INFO: Blender create Mesh node Astra tailored inner sleeve surface
+08:30:09 | INFO: Blender create Mesh node AstraChar2 Meshy i02 head hair planar cut
+08:30:10 | INFO: Blender create Mesh node AstraChar2 Meshy i02 neck blend mesh
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_ClavicleMantle clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_Cuirass clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_Gorget clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_GorgetRim clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_L clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_Pauldron_R clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_L clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_PauldronRim_R clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SacredEmblem clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_0 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_1 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_2 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_3 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_4 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_5 clean topology
+08:30:10 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_6 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_7 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_8 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_9 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_10 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_11 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_12 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_13 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_14 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_SunRay_15 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_0 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_1 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_L_2 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_0 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_1 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2_R5_UpperArm_R_2 clean topology
+08:30:11 | INFO: Blender create Mesh node AstraChar2 refined char1
+08:30:12 | INFO: Blender create Mesh node Godwyn_Sword.001
+08:30:13 | INFO: glTF import finished in 3.55s
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_HeadHair 1.0010534524917603
+MESHY_I02_STRESS arms_raised AstraChar2_Meshy_NeckBlend 1.288557767868042
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_HeadHair 1.0010522603988647
+MESHY_I02_STRESS combat_stress AstraChar2_Meshy_NeckBlend 1.3956036567687988
+MESHY_I02_ROUNDTRIP_PASS {"bones": 121, "joint_error_m": 1.430511474609375e-05, "unweighted": 0}
+00:22.635  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_meshy_i02.blend"
+MESHY_I02_RISING_PASS {"animation": "models/astra_move_rising_spin_v2_wip.blend", "candidate": "models/astra_character_v2_meshy_i02.blend", "frame": 40, "blade_head_exact_triangle_overlaps": 0, "blade_hair_exact_triangle_overlaps": 0, "blade_head_sampled_surface_distance_m": 0.007494333665817976, "blade_hair_sampled_surface_distance_m": 0.006555685307830572, "mesh_partition": "meshy_hair_mask face-corner attribute; complement plus neck band is head/skin/other", "head_triangles_or_polygons": 38975, "hair_triangles_or_polygons": 114547, "blade_triangles_or_polygons": 6096, "assembly_rest_transform_max_error": 0.0, "bones": 121, "numeric_only": true, "render_calls": 0}
+MESHY_I02_NOTES_PASS /home/aaron/godwyn-boss-fight/renders/astra/char2/MESHY_GRAFT_I02_NOTES.md
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

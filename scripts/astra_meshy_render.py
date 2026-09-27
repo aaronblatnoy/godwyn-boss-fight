@@ -29,7 +29,30 @@ def optix(scene):
 
 
 def main():
+    args = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    only = next((a.split("=", 1)[1] for a in args if a.startswith("only=")), None)
+    hide = next((a.split("=", 1)[1] for a in args if a.startswith("hide=")), None)
+    isolate = next((a.split("=", 1)[1] for a in args if a.startswith("isolate=")), None)
+    debug = "debug" in args
+    global CANDIDATE
+    cand = next((a.split("=", 1)[1] for a in args if a.startswith("candidate=")), None)
+    if cand:
+        CANDIDATE = ROOT / cand
+    prefix_arg = next((a.split("=", 1)[1] for a in args if a.startswith("prefix=")), None)
     bpy.ops.wm.open_mainfile(filepath=str(CANDIDATE))
+    if hide and hide in bpy.data.objects:
+        bpy.data.objects[hide].hide_render = True
+    if isolate:
+        for ob in bpy.data.objects:
+            if ob.type == "MESH" and ob.name != isolate:
+                ob.hide_render = True
+    if not debug and not hide and not isolate:
+        keep = ("AstraChar2_Meshy_", "AstraChar2_R5_ClavicleMantle",
+                "AstraChar2_R5_Cuirass", "AstraChar2_R5_Gorget",
+                "AstraChar2_R5_GorgetRim", "AstraChar2_R5_Pauldron")
+        for ob in list(bpy.data.objects):
+            if ob.type == "MESH" and not ob.name.startswith(keep):
+                bpy.data.objects.remove(ob, do_unlink=True)
     arm = bpy.data.objects["Armature"]
     for bone in arm.pose.bones:
         bone.matrix_basis.identity()
@@ -39,8 +62,8 @@ def main():
     for ob in list(scene.objects):
         if ob.type in {"CAMERA", "LIGHT"}:
             bpy.data.objects.remove(ob, do_unlink=True)
-    scene.render.engine = "CYCLES"
-    devices = optix(scene)
+    scene.render.engine = "BLENDER_WORKBENCH" if debug else "CYCLES"
+    devices = [] if debug else optix(scene)
     scene.cycles.samples = 64
     scene.cycles.use_denoising = True
     scene.cycles.max_bounces = 7
@@ -78,12 +101,15 @@ def main():
         "collar": ((1.8, -5.2, 2.72), (0, -.20, 2.72), .55),
     }
     for name, (location, target, scale) in views.items():
+        if only and name != only:
+            continue
         camera.location = location
         aim(camera, target)
         camera.data.ortho_scale = scale
         scene.render.resolution_x = 850
         scene.render.resolution_y = 1266
-        scene.render.filepath = str(OUT / f"meshy_graft_{name}.png")
+        prefix = prefix_arg or ("meshy_debug" if debug else "meshy_graft")
+        scene.render.filepath = str(OUT / f"{prefix}_{name}.png")
         bpy.ops.render.render(write_still=True)
         print("MESHY_RENDER_PASS", name, flush=True)
     (OUT / "meshy_render.json").write_text(json.dumps({"candidate": str(CANDIDATE.relative_to(ROOT)),
