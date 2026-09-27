@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.709  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+XSLASH CLOTH FIX MEASURE 0 {"phys_cape_C": 0.005888964049518108, "phys_cape_L": 0.00322799663990736, "phys_cape_R": 0.0016214726492762566, "phys_robe_front_C": 0.2674280107021332, "phys_robe_front_L": 0.007325094658881426, "phys_robe_front_R": 0.004366295412182808, "phys_robe_side_L": -0.00458043348044157, "phys_robe_side_R": -0.0024022450670599937}
+XSLASH CLOTH FIX MEASURE 1 {"phys_cape_C": 0.005888964049518108, "phys_cape_L": 0.00322799663990736, "phys_cape_R": 0.0033146096393465996, "phys_robe_front_C": 0.2674280107021332, "phys_robe_front_L": 0.007962165400385857, "phys_robe_front_R": 0.004374518059194088, "phys_robe_side_L": 0.0023567508906126022, "phys_robe_side_R": 0.002268977463245392}
+Info: Saved as "astra_xslash_v2_final_on_char2_cloth_wip.blend"
+XSLASH CLOTH FIX COMPLETE {"output": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend", "output_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354", "after_minimum_clearance_m": 0.002268977463245392, "modified_bones": ["phys_cape_R_03", "phys_cape_R_04", "phys_cape_R_05", "phys_cape_R_06", "phys_robe_side_L_03", "phys_robe_side_L_04", "phys_robe_side_L_05", "phys_robe_side_L_06", "phys_robe_side_L_07", "phys_robe_side_R_03", "phys_robe_side_R_04", "phys_robe_side_R_05", "phys_robe_side_R_06", "phys_robe_side_R_07"]}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

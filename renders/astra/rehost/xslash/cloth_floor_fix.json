@@ -1,0 +1,86 @@
+{
+  "source": "models/astra_xslash_v2_final_on_char2_wip.blend",
+  "source_sha256": "23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf",
+  "output": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+  "output_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+  "action": "Astra_Godwyn_XSlash_V2_Final_Naturalness_OnChar2",
+  "frame_range": [
+    1,
+    90
+  ],
+  "sample_step_frames": 0.25,
+  "required_clearance_m": 0.002,
+  "target_clearance_m": 0.00225,
+  "selected_families": [
+    "phys_cape_R",
+    "phys_robe_side_L",
+    "phys_robe_side_R"
+  ],
+  "modified_bones": [
+    "phys_cape_R_03",
+    "phys_cape_R_04",
+    "phys_cape_R_05",
+    "phys_cape_R_06",
+    "phys_robe_side_L_03",
+    "phys_robe_side_L_04",
+    "phys_robe_side_L_05",
+    "phys_robe_side_L_06",
+    "phys_robe_side_L_07",
+    "phys_robe_side_R_03",
+    "phys_robe_side_R_04",
+    "phys_robe_side_R_05",
+    "phys_robe_side_R_06",
+    "phys_robe_side_R_07"
+  ],
+  "untouched_channels": "every curve except location on the listed distal robe/cape bones",
+  "noncloth_action_digest_before": "3f29c1e007a1e833635dff7800f08c84aad4486c45fb5441298037767e93865a",
+  "noncloth_action_digest_after": "3f29c1e007a1e833635dff7800f08c84aad4486c45fb5441298037767e93865a",
+  "all_action_digest_before": "0a95739343e36a1fa753466dd2f5d8c9170edae73cee5dc98483128408695192",
+  "all_action_digest_after": "a92c8e2c31bc81bf76d18ad241006e2f330bb73f2b80e1840624a5c18a759778",
+  "rest_digest_before": "688e0dfc0cdfb42ba7abf9fe6fb20e06115d36c6c547009418daceab9f100536",
+  "rest_digest_after": "688e0dfc0cdfb42ba7abf9fe6fb20e06115d36c6c547009418daceab9f100536",
+  "before_minimum_clearance_m": -0.00458043348044157,
+  "before_worst_frame": 57.5,
+  "after_minimum_clearance_m": 0.002268977463245392,
+  "family_minimum_clearance_m": {
+    "phys_robe_front_C": 0.2674280107021332,
+    "phys_robe_front_L": 0.007962165400385857,
+    "phys_robe_front_R": 0.004374518059194088,
+    "phys_robe_side_L": 0.0023567508906126022,
+    "phys_robe_side_R": 0.002268977463245392,
+    "phys_cape_C": 0.005888964049518108,
+    "phys_cape_L": 0.00322799663990736,
+    "phys_cape_R": 0.0033146096393465996
+  },
+  "passes": [
+    {
+      "pass": 0,
+      "family_minimum_clearance_m": {
+        "phys_robe_front_C": 0.2674280107021332,
+        "phys_robe_front_L": 0.007325094658881426,
+        "phys_robe_front_R": 0.004366295412182808,
+        "phys_robe_side_L": -0.00458043348044157,
+        "phys_robe_side_R": -0.0024022450670599937,
+        "phys_cape_C": 0.005888964049518108,
+        "phys_cape_L": 0.00322799663990736,
+        "phys_cape_R": 0.0016214726492762566
+      },
+      "global_minimum_clearance_m": -0.00458043348044157
+    },
+    {
+      "pass": 1,
+      "family_minimum_clearance_m": {
+        "phys_robe_front_C": 0.2674280107021332,
+        "phys_robe_front_L": 0.007962165400385857,
+        "phys_robe_front_R": 0.004374518059194088,
+        "phys_robe_side_L": 0.0023567508906126022,
+        "phys_robe_side_R": 0.002268977463245392,
+        "phys_cape_C": 0.005888964049518108,
+        "phys_cape_L": 0.00322799663990736,
+        "phys_cape_R": 0.0033146096393465996
+      },
+      "global_minimum_clearance_m": 0.002268977463245392
+    }
+  ],
+  "method": "quarter-frame evaluated-surface deficits; short conservative envelope; progressively distributed world-Z gathering over distal chain links 03 through tip; no scale or rest edit"
+}

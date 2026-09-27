@@ -158,10 +158,26 @@ Method: complete source staging scene retained; old character replaced by full p
 | Exact blade/head intersection frames | n/a | 0 |
 | Decoded MP4 frames | n/a | 90 at 30/1 |
 
-Head/hair/collar disposition: The inherited old-body cloth-floor penetration remains visible numerically but improves by 7.844 mm; exact blade/head/hair checks pass. Brows and all nine hair-control families are armature-bound, fully weighted, and follow the 121-bone rig. Preview, final contact sheet, and frames decoded from the actual MP4 were inspected.
+Head/hair/collar disposition: The dedicated cloth-floor follow-up below supersedes the residual penetration recorded here; exact blade/head/hair checks continue to pass. Brows and all nine hair-control families are armature-bound, fully weighted, and follow the 121-bone rig. Preview, final contact sheet, and frames decoded from the actual MP4 were inspected.
 
 Final SHA-256: `23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf` (`models/astra_xslash_v2_final_on_char2_wip.blend`); `23eebae113faa713614701e59127b44c397cb3ab8a458f5555a71b230b9fd0e7` (`renders/astra/rehost/xslash/xslash.mp4`).
 
+
+## X-slash cloth-floor fix
+
+All Blender, audit, render, ffmpeg, and packaging compute for this follow-up ran on **black-sky**. The immutable input remained `models/astra_xslash_v2_final_on_char2_wip.blend` (SHA-256 `23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf`); the fixed scene is `models/astra_xslash_v2_final_on_char2_cloth_wip.blend`.
+
+The new deformed-geometry probe checked all **357 quarter-frame samples**. The true before minimum was **-4.580 mm at F57.50**, slightly below the earlier integer-only −4.122 mm record. Exactly four robe-hem vertices penetrated: **49060, 49875, 50781, 50786**, owned by `phys_robe_side_L` / `phys_robe_side_R`; cape and arm-bound undersleeves had no penetrating vertices. Complete vertex/frame/coordinate evidence is in `renders/astra/rehost/xslash/cloth_floor_before.json`.
+
+Method: measured quarter-frame deficits were given a short conservative envelope, then distributed progressively in world Z over existing distal secondary links 03 through each affected chain tip. Only location curves on `phys_cape_R_03..06`, `phys_robe_side_L_03..07`, and `phys_robe_side_R_03..07` changed. The 90-frame action range, every body/arm/sword/head/foot channel, the rest rig, mesh, weights, and limb lengths were untouched; the non-cloth action and rest-rig digests are exact matches. This is distal cloth gathering, not limb scaling or a body translation.
+
+After save/reload, the minimum across all 357 samples is **+2.269 mm** (gate +2.000 mm), with zero penetrating cloth vertices or frames. The independent integer-frame surface audit is **+2.282 mm**. Sole clearance remains exactly **1.342 mm**. Grip remains 0.676 µm hand-local / 0.603 µm evaluated tip; exact blade-to-head and blade-to-hair clearances remain **95.966 mm / 41.765 mm**. Robe/cape lag stays **+1 / +2 frames**. Move, grip, attack, and head/hair/collar JSON are byte-equivalent to their pre-fix baselines; all non-cloth naturalness and surface fields are exact.
+
+The complete 90-frame clip was rendered at 768×768, 32 samples, 30 fps with the existing attack render settings and decoded without error. All six consecutive decoded sheets (F1–90), the contact sheet, and the three full-resolution worst-sample pairs (left before / right after: F57.50, F56.50, F57.25) were inspected; no new pop, discontinuity, exposed breakthrough, or head/hair/collar defect was found.
+
+Final SHA-256: `83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354` (`models/astra_xslash_v2_final_on_char2_cloth_wip.blend`); `66cce6aaa64031fb295e8b0beb247a1fb2d1ef809dac87e929ed86b7166afcd5` (`renders/astra/rehost/xslash/xslash_cloth.mp4`).
+
+Retained limitation: clearance is certified at quarter-frame samples, not continuously between samples. Cloth remains deterministic kinematic secondary motion rather than fabric simulation, and the front view still reads as lightly ground-pooled because the certified gap is only 2.269 mm with contact shadows.
 
 ## New head/hair/collar defects and dispositions
 
@@ -172,7 +188,7 @@ Final SHA-256: `23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf
 
 ## Honest shortfalls
 
-- X-slash retains a sampled cloth-floor minimum of -4.122 mm. This is materially better than the old body's -11.966 mm and passes the required same-or-better threshold, but it is still penetration and is not described as clean clearance.
+- X-slash's prior -4.122 mm integer-frame residual is superseded by the dedicated cloth-floor fix: +2.269 mm minimum at quarter frames and zero sampled penetration. Continuous-time collision between quarter samples remains uncertified.
 - The closest exact Rising Spin blade-to-head sample is only 1.449 mm. It passes the asserted no-intersection test, but is visually and geometrically tight.
 - Cloth remains deterministic kinematic secondary motion, not a fabric simulation. The audits do not certify continuous-time collision, hidden full-body triangle clearance, material fidelity outside the retained views, torque, or gameplay balance.
 - The published body still carries the inherited garment/armor qualifications documented in `renders/astra/char2/MPFB_GRAFT_REPORT.md`; the rehost did not rebuild those surfaces.
@@ -180,4 +196,4 @@ Final SHA-256: `23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf
 
 ## Delivery
 
-The five final `.blend` files remain only on black-sky. MP4s, preview/contact/decoded sheets, JSON, logs, and Markdown evidence are the only rehost artifacts copied back to the Mac. No Git commit or push was made.
+Final `.blend` deliverables remain only on black-sky; the original X-slash input is retained there read-only alongside the new cloth-fixed file. MP4s, preview/contact/decoded sheets, JSON, logs, and Markdown evidence are the only rehost artifacts copied back to the Mac. No Git commit or push was made.

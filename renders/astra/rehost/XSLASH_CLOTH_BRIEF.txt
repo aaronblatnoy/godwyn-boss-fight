@@ -1,0 +1,16 @@
+TASK: eliminate the X-slash cloth-floor penetration on the rehosted (char2-body) X-slash, on black-sky only.
+
+HARD RULE: no Blender, ffmpeg, or heavy compute on this Mac. Everything runs as
+  ssh black-sky "cd ~/godwyn-boss-fight && blender --background --python-exit-code 1 --python scripts/<script>.py -- <args>"
+Pull back only small evidence (mp4, sheets, json, logs, md) into the same relative paths on the Mac. Never copy .blend files to the Mac.
+
+CONTEXT (read first): renders/astra/rehost/REHOST_REPORT.md (xslash section), renders/astra/rehost/xslash/*.json, scripts/astra_rehost_cloth_fix.py (the cloth-floor fix you already applied to the moves), scripts/astra_move_common.py (the cloth gathering / clearance approach: measured on deformed vertices, distal gathering, no limb stretching), renders/astra/naturalness_audit.md (the old-body xslash acceptance record and its cloth-floor numbers).
+
+CURRENT STATE on black-sky ~/godwyn-boss-fight: models/astra_xslash_v2_final_on_char2_wip.blend is the rehosted X-slash (90 frames, action Astra_Godwyn_XSlash_V2_Final_Naturalness). Its minimum cloth-floor clearance is -4.122 mm (was -11.966 mm on the old body). Every other X-slash check passed: grip drift sub-micrometer, sole clearance 1.342 mm, blade-to-head 95.966 mm, hair 41.765 mm.
+
+DO:
+1. Identify exactly which cloth vertices (robe hem, cape, undersleeves) penetrate the floor and on which frames, from deformed geometry at quarter frames. Write renders/astra/rehost/xslash/cloth_floor_before.json.
+2. Fix it in the same spirit as the move pipeline: adjust the cloth secondary bones / gathering so the hem clears the floor by at least +2.0 mm on every sampled frame, without touching any body, arm, sword, head, or foot channel and without stretching limbs. Do NOT change the 90 body-animation frames. Save as a NEW file models/astra_xslash_v2_final_on_char2_cloth_wip.blend; the input file stays read-only.
+3. Re-run the full X-slash audit set on the new file (grip, sole clearance, blade-to-head and hair, cloth lag correlations, naturalness metrics, video verification) and confirm every previously passing number is unchanged or better. Render the full 90 frames with the existing render settings and package to renders/astra/rehost/xslash/xslash_cloth.mp4 plus a contact sheet. Decode and inspect the frames; also render 3 full-resolution stills at the previously worst cloth-floor frames, before and after, side by side.
+4. Update renders/astra/rehost/REHOST_REPORT.md with an "X-slash cloth-floor fix" section (before/after numbers, method, SHA256 of the new blend and mp4, any retained limitation) and update delivery_verification.json to point the xslash entry at the new file. State that all compute ran on black-sky.
+New scripts prefixed astra_rehost_xslash_. Do not git commit or push. Work autonomously to completion.

@@ -1,0 +1,122 @@
+{
+  "status": "PASS",
+  "execution_host": "black-sky",
+  "input_unchanged": true,
+  "input_sha256": "23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf",
+  "fixed_blend": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+  "fixed_blend_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+  "mp4": "renders/astra/rehost/xslash/xslash_cloth.mp4",
+  "mp4_sha256": "66cce6aaa64031fb295e8b0beb247a1fb2d1ef809dac87e929ed86b7166afcd5",
+  "cloth_floor": {
+    "quarter_frame_samples": 357,
+    "before_minimum_m": -0.00458043348044157,
+    "before_worst_frame": 57.5,
+    "before_worst_vertex": 50781,
+    "before_penetrating_vertices": {
+      "components": {
+        "robe_hem": [
+          49060,
+          49875,
+          50781,
+          50786
+        ]
+      },
+      "families": {
+        "phys_robe_side_L": [
+          49875,
+          50781
+        ],
+        "phys_robe_side_R": [
+          49060,
+          50786
+        ]
+      }
+    },
+    "after_minimum_m": 0.002268977463245392,
+    "after_worst_frame": 29.5,
+    "after_penetrating_frames": [],
+    "integer_frame_minimum_m": 0.002282150089740753,
+    "gate_m": 0.002
+  },
+  "channel_invariants": {
+    "noncloth_action_digest_exact": true,
+    "rest_rig_digest_exact": true,
+    "frame_range": [
+      1,
+      90
+    ],
+    "modified_bones": [
+      "phys_cape_R_03",
+      "phys_cape_R_04",
+      "phys_cape_R_05",
+      "phys_cape_R_06",
+      "phys_robe_side_L_03",
+      "phys_robe_side_L_04",
+      "phys_robe_side_L_05",
+      "phys_robe_side_L_06",
+      "phys_robe_side_L_07",
+      "phys_robe_side_R_03",
+      "phys_robe_side_R_04",
+      "phys_robe_side_R_05",
+      "phys_robe_side_R_06",
+      "phys_robe_side_R_07"
+    ],
+    "limb_stretch_introduced": false
+  },
+  "regressions": {
+    "move_metrics_byte_equivalent_json": true,
+    "grip_metrics_byte_equivalent_json": true,
+    "attack_verification_byte_equivalent_json": true,
+    "head_hair_collar_byte_equivalent_json": true,
+    "sole_minimum_exact": true,
+    "naturalness_noncloth_exact": true,
+    "naturalness_surface_noncloth_exact": true,
+    "cloth_lag_best_delays_exact": true,
+    "cloth_lag_max_correlation_absolute_delta": 6.997553136933732e-08,
+    "cloth_end_world_speed_max_absolute_delta_deg_frame": 3.4188109659591404e-06
+  },
+  "key_metrics": {
+    "grip_hand_local_hilt_drift_m": 6.756979808875275e-07,
+    "grip_evaluated_tip_error_m": 6.02714670185944e-07,
+    "grip_closed_finger_drift_m": 9.670393940944024e-07,
+    "sole_minimum_m": 0.0013416530564427376,
+    "blade_head_exact_minimum_m": 0.09596602618694305,
+    "blade_hair_exact_minimum_m": 0.04176522451639175,
+    "robe_lag_frames": 1,
+    "cape_lag_frames": 2
+  },
+  "video": {
+    "source_frames": 90,
+    "decoded_frames": 90,
+    "decode_error_free": true,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "resolution": [
+      768,
+      768
+    ],
+    "fps": "30/1",
+    "before_after_stills": [
+      {
+        "frame": 57.5,
+        "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_01.png",
+        "layout": "left=before, right=after"
+      },
+      {
+        "frame": 56.5,
+        "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_02.png",
+        "layout": "left=before, right=after"
+      },
+      {
+        "frame": 57.25,
+        "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_03.png",
+        "layout": "left=before, right=after"
+      }
+    ]
+  },
+  "retained_limitations": [
+    "Clearance is certified at quarter-frame samples, not continuous time between samples.",
+    "Cloth remains deterministic kinematic secondary motion, not fabric simulation.",
+    "The front-view hem still reads as ground-pooled because the certified gap is only 2.269 mm and contact shadows remain."
+  ]
+}

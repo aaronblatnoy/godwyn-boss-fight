@@ -1,0 +1,7 @@
+{
+  "report": "renders/astra/rehost/REHOST_REPORT.md",
+  "delivery": "renders/astra/rehost/delivery_verification.json",
+  "manifest": "renders/astra/rehost/xslash/xslash_manifest.json",
+  "blend_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+  "mp4_sha256": "66cce6aaa64031fb295e8b0beb247a1fb2d1ef809dac87e929ed86b7166afcd5"
+}

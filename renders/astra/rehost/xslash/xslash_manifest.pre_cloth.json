@@ -1,6 +1,6 @@
 {
   "name": "xslash",
-  "description": "Naturalness-approved two-cut X-slash rehosted onto final char2; quarter-frame cloth-floor clearance fixed.",
+  "description": "Naturalness-approved two-cut X-slash rehosted onto final char2.",
   "cut_type": "slash",
   "contact_frames": [
     1,
@@ -251,14 +251,7 @@
     0.0
   ],
   "source": "models/astra_move_character_base_v2.blend",
-  "model": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+  "model": "models/astra_xslash_v2_final_on_char2_wip.blend",
   "rehosted_from": "models/astra_xslash_v2_final_wip.blend",
-  "source_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386",
-  "cloth_floor_fix": {
-    "source": "models/astra_xslash_v2_final_on_char2_wip.blend",
-    "source_sha256": "23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf",
-    "model_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
-    "minimum_quarter_frame_clearance_m": 0.002268977463245392,
-    "required_clearance_m": 0.002
-  }
+  "source_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386"
 }

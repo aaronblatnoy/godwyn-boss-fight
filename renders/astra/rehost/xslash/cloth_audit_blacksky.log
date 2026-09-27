@@ -1,0 +1,216 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.365  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_cloth_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+{
+  "support_summary": {
+    "outside_frames": [
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "airborne_frames": [],
+    "minimum_margin_m": -0.3276440057997933
+  },
+  "planted_ankle_max_planar_step_m": {
+    "Left": 8.765125971944774e-07,
+    "Right": 2.4001973407992806e-06
+  },
+  "cascade": {
+    "Hips": {
+      "world_peak_frame": 34.25,
+      "local_peak_frame": 34.25
+    },
+    "Spine02": {
+      "world_peak_frame": 34.5,
+      "local_peak_frame": 35.25
+    },
+    "Spine01": {
+      "world_peak_frame": 34.75,
+      "local_peak_frame": 36.25
+    },
+    "Spine": {
+      "world_peak_frame": 35.25,
+      "local_peak_frame": 37.25
+    },
+    "RightShoulder": {
+      "world_peak_frame": 35.5,
+      "local_peak_frame": 38.25
+    },
+    "RightArm": {
+      "world_peak_frame": 39.0,
+      "local_peak_frame": 39.0
+    },
+    "RightForeArm": {
+      "world_peak_frame": 39.5,
+      "local_peak_frame": 59.25
+    },
+    "RightHand": {
+      "world_peak_frame": 39.5,
+      "local_peak_frame": 54.0
+    }
+  },
+  "cloth_yaw_lag": {
+    "phys_robe_front_C_06": {
+      "best_delay_frames": 1,
+      "correlations": {
+        "-10": -0.2315677207620527,
+        "-9": -0.20419534266472358,
+        "-8": -0.17455003163822025,
+        "-7": -0.13922766576007187,
+        "-6": -0.09558747709087646,
+        "-5": -0.032777462510101704,
+        "-4": 0.06847744954213586,
+        "-3": 0.22615291083527245,
+        "-2": 0.44476087810665565,
+        "-1": 0.6888524152381736,
+        "0": 0.8725876650982284,
+        "1": 0.9203833379894673,
+        "2": 0.8312081692492367,
+        "3": 0.6602665102695159,
+        "4": 0.4856224217961415,
+        "5": 0.3720178284783181,
+        "6": 0.3258090888742992,
+        "7": 0.3100690921741563,
+        "8": 0.30197932805335537,
+        "9": 0.2978551607757592,
+        "10": 0.2906224111635231,
+        "11": 0.27216540585522814,
+        "12": 0.23285676782902406,
+        "13": 0.16216852865419115,
+        "14": 0.05161558052752255,
+        "15": -0.10014278936378199,
+        "16": -0.2726617072541501,
+        "17": -0.41755338328311226,
+        "18": -0.4903405743054088,
+        "19": -0.48564616534633354,
+        "20": -0.42946430865691676
+      }
+    },
+    "phys_cape_C_06": {
+      "best_delay_frames": 2,
+      "correlations": {
+        "-10": -0.226388789516379,
+        "-9": -0.170637015601827,
+        "-8": -0.1258508378523567,
+        "-7": -0.08513609358814878,
+        "-6": -0.045800540149639545,
+        "-5": -0.0016170918942677208,
+        "-4": 0.05884294975118996,
+        "-3": 0.1495036229347144,
+        "-2": 0.2931095382091373,
+        "-1": 0.4988499013229815,
+        "0": 0.7243593150796431,
+        "1": 0.8971338240392562,
+        "2": 0.962670246863187,
+        "3": 0.8996965338885791,
+        "4": 0.7395792625446993,
+        "5": 0.5574414719358849,
+        "6": 0.4085966285620783,
+        "7": 0.30316917853597586,
+        "8": 0.2339528764329835,
+        "9": 0.19064565650104962,
+        "10": 0.1621759306810545,
+        "11": 0.1428412189613069,
+        "12": 0.12599547893852533,
+        "13": 0.10117239532944808,
+        "14": 0.0567527685207274,
+        "15": -0.024223267482845964,
+        "16": -0.15116196751710168,
+        "17": -0.30266068504869975,
+        "18": -0.4374411199683877,
+        "19": -0.5208425373376405,
+        "20": -0.5337872952604004
+      }
+    }
+  },
+  "active_windows": {
+    "37-42": {
+      "tip_path_m": 5.905431579332433,
+      "chord_m": 4.3611974891532705,
+      "path_chord_ratio": 1.3540848801320795,
+      "peak_speed_m_s": 45.10145668735111
+    },
+    "54-59": {
+      "tip_path_m": 5.7081739268498035,
+      "chord_m": 4.256422698955622,
+      "path_chord_ratio": 1.3410730866204597,
+      "peak_speed_m_s": 43.5828548074092
+    }
+  },
+  "name": "xslash",
+  "quarter_samples": 357,
+  "bone_count": 121,
+  "joint_ranges_deg": {
+    "Left_elbow": [
+      37.04000150955334,
+      137.2832872312698
+    ],
+    "Left_wrist": [
+      18.822713132109122,
+      19.350993715671198
+    ],
+    "Left_knee": [
+      8.55284728105584,
+      55.7018158560488
+    ],
+    "Left_shoulder_elevation": [
+      38.501906289169206,
+      101.89807607182021
+    ],
+    "Right_elbow": [
+      15.262664963931096,
+      147.92102751064468
+    ],
+    "Right_wrist": [
+      5.921878581688607,
+      59.40729856135371
+    ],
+    "Right_knee": [
+      15.69284101484273,
+      56.593573704745324
+    ],
+    "Right_shoulder_elevation": [
+      8.884462289238682,
+      75.24266751498054
+    ]
+  },
+  "asymmetry_speed_correlation": {
+    "Shoulder": 0.642579179025577,
+    "Arm": 0.6632612493669547,
+    "ForeArm": 0.5365813128796891,
+    "Hand": 0.412728641551258,
+    "UpLeg": 0.8235767388819607
+  },
+  "loop": {},
+  "max_limb_length_error_m": 2.7945106640947515e-06,
+  "blade_peak_speed_m_s": 45.10145668735111,
+  "blade_min_z_m": 0.6029398441314697,
+  "peak_hips_yaw_deg_s": 346.03545899630393,
+  "source_sha256": "c5a691c624a67ff299f2bb2822fd04346e4bb6184e0273a2fa8dba9869a86386"
+}
+FLAGS [{'bone': 'LeftUpLeg', 'frame': 80, 'kinds': ['reversal'], 'speed': 1.2214621822907858, 'acceleration': 2.2046191268430286}, {'bone': 'LeftLeg', 'frame': 47, 'kinds': ['reversal'], 'speed': 1.0512167143677866, 'acceleration': 1.6700477825908664}, {'bone': 'LeftLeg', 'frame': 80, 'kinds': ['reversal'], 'speed': 2.142559851998368, 'acceleration': 4.2888771427858625}, {'bone': 'RightLeg', 'frame': 47, 'kinds': ['reversal'], 'speed': 0.8728252504362768, 'acceleration': 2.1637686619766243}, {'bone': 'RightLeg', 'frame': 80, 'kinds': ['reversal'], 'speed': 1.3461318156010258, 'acceleration': 2.536360655261346}, {'bone': 'LeftArm', 'frame': 44, 'kinds': ['reversal'], 'speed': 8.155908223539448, 'acceleration': 10.663047449499416}, {'bone': 'LeftForeArm', 'frame': 44, 'kinds': ['reversal'], 'speed': 8.75393145716158, 'acceleration': 11.311570832590972}, {'bone': 'LeftForeArm', 'frame': 53, 'kinds': ['reversal'], 'speed': 2.5865353576888843, 'acceleration': 5.0694363201163295}, {'bone': 'LeftForeArm', 'frame': 59, 'kinds': ['reversal'], 'speed': 0.974663956761677, 'acceleration': 2.192047426140869}, {'bone': 'RightArm', 'frame': 37, 'kinds': ['acceleration'], 'speed': 24.3502877873114, 'acceleration': 12.432463758993983}, {'bone': 'RightArm', 'frame': 38, 'kinds': ['acceleration'], 'speed': 28.17446615347034, 'acceleration': 31.14236343766279}, {'bone': 'RightArm', 'frame': 39, 'kinds': ['acceleration'], 'speed': 44.12638642304249, 'acceleration': 24.06781787141722}, {'bone': 'RightArm', 'frame': 40, 'kinds': ['acceleration'], 'speed': 35.38894554643015, 'acceleration': 14.496455180947416}, {'bone': 'RightArm', 'frame': 53, 'kinds': ['acceleration'], 'speed': 10.842205641760385, 'acceleration': 12.299113207762543}, {'bone': 'RightArm', 'frame': 54, 'kinds': ['acceleration'], 'speed': 19.050515392066536, 'acceleration': 17.534955206822247}, {'bone': 'RightArm', 'frame': 55, 'kinds': ['acceleration'], 'speed': 30.356804361978988, 'acceleration': 16.18828151564322}, {'bone': 'RightArm', 'frame': 56, 'kinds': ['acceleration'], 'speed': 20.15703469298878, 'acceleration': 13.35815292062939}, {'bone': 'RightArm', 'frame': 63, 'kinds': ['acceleration'], 'speed': 9.559089670308861, 'acceleration': 12.573747559088808}, {'bone': 'RightForeArm', 'frame': 40, 'kinds': ['reversal', 'acceleration'], 'speed': 16.068824370246, 'acceleration': 26.801414611884375}, {'bone': 'RightForeArm', 'frame': 46, 'kinds': ['acceleration'], 'speed': 20.653961605166238, 'acceleration': 14.215650362311392}, {'bone': 'RightForeArm', 'frame': 47, 'kinds': ['acceleration'], 'speed': 9.029322103951788, 'acceleration': 19.559912737021424}, {'bone': 'RightForeArm', 'frame': 55, 'kinds': ['reversal', 'acceleration'], 'speed': 2.1974046753934817, 'acceleration': 13.99325251833258}, {'bone': 'RightForeArm', 'frame': 56, 'kinds': ['acceleration'], 'speed': 15.837472113977084, 'acceleration': 13.640067438864186}, {'bone': 'RightForeArm', 'frame': 61, 'kinds': ['acceleration'], 'speed': 10.123503311758839, 'acceleration': 13.813697165825328}, {'bone': 'RightForeArm', 'frame': 62, 'kinds': ['reversal', 'acceleration'], 'speed': 3.3896881223915294, 'acceleration': 13.5131914341491}, {'bone': 'RightHand', 'frame': 39, 'kinds': ['acceleration'], 'speed': 11.706911298419605, 'acceleration': 19.027363717073975}, {'bone': 'RightHand', 'frame': 41, 'kinds': ['reversal', 'acceleration'], 'speed': 4.771120249789986, 'acceleration': 16.76514072487962}, {'bone': 'RightHand', 'frame': 46, 'kinds': ['acceleration'], 'speed': 9.05593071186059, 'acceleration': 12.744723883624433}, {'bone': 'RightHand', 'frame': 54, 'kinds': ['acceleration'], 'speed': 21.895637742537083, 'acceleration': 12.140860731998844}, {'bone': 'RightHand', 'frame': 56, 'kinds': ['acceleration'], 'speed': 10.850239347624663, 'acceleration': 25.774592720126524}, {'bone': 'RightHand', 'frame': 63, 'kinds': ['acceleration'], 'speed': 10.225244646997941, 'acceleration': 12.830035884538177}]
+CONTACT {'before': {'Left': [0.0013416530564427376, 0.12777280807495117], 'Right': [0.001687401905655861, 0.0028866222128272057]}, 'after': {'Left': [0.0013416530564427376, 0.12777280807495117], 'Right': [0.001687401905655861, 0.0028866222128272057]}}
+HEM 0.002282150089740753
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

@@ -21,9 +21,9 @@
   },
   "v2_body": {
     "sole_min_m": 0.0013416530564427376,
-    "cloth_min_m": 0.002282150089740753,
+    "cloth_min_m": -0.004121948964893818,
     "sole_worst_frame": 62,
-    "cloth_worst_frame": 44
+    "cloth_worst_frame": 57
   },
   "planted_penetration_frames": {
     "Left": [],

@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.351  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_xslash_v2_final_on_char2_cloth_wip.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+XSLASH CLOTH PROBE cloth_floor_after.json 5.0 min=0.002484776
+XSLASH CLOTH PROBE cloth_floor_after.json 10.0 min=0.002570550
+XSLASH CLOTH PROBE cloth_floor_after.json 15.0 min=0.002493599
+XSLASH CLOTH PROBE cloth_floor_after.json 20.0 min=0.002315548
+XSLASH CLOTH PROBE cloth_floor_after.json 25.0 min=0.002368297
+XSLASH CLOTH PROBE cloth_floor_after.json 30.0 min=0.002517331
+XSLASH CLOTH PROBE cloth_floor_after.json 35.0 min=0.002412948
+XSLASH CLOTH PROBE cloth_floor_after.json 40.0 min=0.004730020
+XSLASH CLOTH PROBE cloth_floor_after.json 45.0 min=0.002282271
+XSLASH CLOTH PROBE cloth_floor_after.json 50.0 min=0.002994048
+XSLASH CLOTH PROBE cloth_floor_after.json 55.0 min=0.002692284
+XSLASH CLOTH PROBE cloth_floor_after.json 60.0 min=0.002553768
+XSLASH CLOTH PROBE cloth_floor_after.json 65.0 min=0.002710486
+XSLASH CLOTH PROBE cloth_floor_after.json 70.0 min=0.002846449
+XSLASH CLOTH PROBE cloth_floor_after.json 75.0 min=0.002688055
+XSLASH CLOTH PROBE cloth_floor_after.json 80.0 min=0.002573809
+XSLASH CLOTH PROBE cloth_floor_after.json 85.0 min=0.002533469
+XSLASH CLOTH PROBE cloth_floor_after.json 90.0 min=0.002458259
+XSLASH CLOTH PROBE COMPLETE {"destination": "renders/astra/rehost/xslash/cloth_floor_after.json", "minimum_clearance_m": 0.002268977463245392, "worst_frame": 29.5, "worst_vertex": 51642, "worst_component": "robe_hem", "worst_family": "phys_robe_side_R", "penetrating_frames": [], "penetrating_vertex_counts": {}}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

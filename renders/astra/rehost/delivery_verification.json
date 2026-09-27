@@ -14,7 +14,7 @@
     "fps": 30,
     "samples": 32,
     "motion_blur": "enabled for attacks, disabled for loops by the existing renderer",
-    "device_note": "EEVEE did not bind separate CUDA_VISIBLE_DEVICES; full renders were run serially on black-sky."
+    "device_note": "All Blender, audit, render, ffmpeg, and packaging compute ran on black-sky; the cloth-fixed X-slash full render was serial."
   },
   "moves": {
     "idle_guard": {
@@ -2399,20 +2399,42 @@
     "xslash": {
       "frames": 90,
       "deliverables": [
-        "models/astra_xslash_v2_final_on_char2_wip.blend",
-        "renders/astra/rehost/xslash/xslash.mp4",
-        "renders/astra/rehost/xslash/xslash_contact_sheet.png",
-        "renders/astra/rehost/xslash/xslash_preview_sheet.png",
-        "renders/astra/rehost/xslash/xslash_decoded_sheet.png",
-        "renders/astra/rehost/xslash/xslash_video_verification.json"
+        "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+        "renders/astra/rehost/xslash/xslash_cloth.mp4",
+        "renders/astra/rehost/xslash/xslash_cloth_contact_sheet.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_sheet.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_01.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_02.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_03.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_04.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_05.png",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_06.png",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_01.png",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_02.png",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_03.png",
+        "renders/astra/rehost/xslash/cloth_floor_before.json",
+        "renders/astra/rehost/xslash/cloth_floor_after.json",
+        "renders/astra/rehost/xslash/xslash_cloth_video_verification.json",
+        "renders/astra/rehost/xslash/xslash_cloth_audit_verification.json"
       ],
       "sha256": {
-        "models/astra_xslash_v2_final_on_char2_wip.blend": "23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf",
-        "renders/astra/rehost/xslash/xslash.mp4": "23eebae113faa713614701e59127b44c397cb3ab8a458f5555a71b230b9fd0e7",
-        "renders/astra/rehost/xslash/xslash_contact_sheet.png": "ebec3a6e91eca23f7fc2e167e1551b60399d9b6067c3be439aa3ebab75973f48",
-        "renders/astra/rehost/xslash/xslash_preview_sheet.png": "2bf073c92fe822a630195cb5b6dd984f3140f0745c429262eb544cc728e01766",
-        "renders/astra/rehost/xslash/xslash_decoded_sheet.png": "eb787ec839a3d96ffc75c5e2fabd89030240029c577bb1b27bfbd26cb381df0c",
-        "renders/astra/rehost/xslash/xslash_video_verification.json": "339ca6da35417f82919f572d89090d5b9961d1893da817e2aa7c176a57b56b1a"
+        "models/astra_xslash_v2_final_on_char2_cloth_wip.blend": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+        "renders/astra/rehost/xslash/xslash_cloth.mp4": "66cce6aaa64031fb295e8b0beb247a1fb2d1ef809dac87e929ed86b7166afcd5",
+        "renders/astra/rehost/xslash/xslash_cloth_contact_sheet.png": "d5a5845f20102a689a1eaaf514b14f831f0c7899d1c0596ebf1a5aeb16f287da",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_sheet.png": "1fa4492fbc4214c1fa47cf72d25e4ce5fe750f1c8ff3dc49e170f6f8f7a0d0bf",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_01.png": "b20376419cde136b7a456b1510308ebe1fb2a813ffb264b2fcf77c9142bb7d76",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_02.png": "4f894a5970f8aff3666cea3ba0c0db5161897b64563106dadc32fb4a6d2dfcf5",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_03.png": "3e028f91af06697b6fde4bafdce1699d63716f4d611c8e83522e1d7bcd024177",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_04.png": "10db1a204ddf988dc77f5d24328c1a628d68bf450b39252d86a36f514ac13c5e",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_05.png": "b4041c948f6451a584c4d0dee5574440d83c48d0eb5c5a9f4515b9cad8a6ce73",
+        "renders/astra/rehost/xslash/xslash_cloth_decoded_06.png": "58817337471e07517c2f86b36661c82333bd74906965ea31be055fec10240cdd",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_01.png": "82f00480d87a90940c196c6da36902ad6df18fa9e9835c51dd25d440cd2734e7",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_02.png": "4c8eaeda2207ea50c01208623a1e8374b89ec4b0d3add273419ba1fbad1375a0",
+        "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_03.png": "0a55b32e5a5826aae01f3aeb41b912c12684a5fa4984a4bc9fac24d90acddd3e",
+        "renders/astra/rehost/xslash/cloth_floor_before.json": "96211486c1e5f128bb6de0fde51729945355521bb27c07b7dbb31df89a117c95",
+        "renders/astra/rehost/xslash/cloth_floor_after.json": "22e7d76d48b196b4f1ab5a0e1d9a671317588613c7f24a5b3915744cbc5aee5f",
+        "renders/astra/rehost/xslash/xslash_cloth_video_verification.json": "8031a6acbaeca2301ec3a26b0cf091193ebe03b0f1898037c6d4c2eef7ebb479",
+        "renders/astra/rehost/xslash/xslash_cloth_audit_verification.json": "bafb598c75263dca8ddb076c149a1ec8d5b831f9c951ec2a279b7ecb7e22d1f1"
       },
       "grip_closeups": [
         "renders/astra/rehost/xslash/xslash/grip/001.png",
@@ -23267,9 +23289,9 @@
           },
           "v2_body": {
             "sole_min_m": 0.0013416530564427376,
-            "cloth_min_m": -0.004121948964893818,
+            "cloth_min_m": 0.002282150089740753,
             "sole_worst_frame": 62,
-            "cloth_worst_frame": 57
+            "cloth_worst_frame": 44
           },
           "planted_penetration_frames": {
             "Left": [],
@@ -23441,11 +23463,34 @@
           "duration_s": 3.0
         },
         "visual_inspection": {
-          "preview_sheet_inspected": true,
-          "decoded_mp4_sheet_inspected": true,
-          "new_visible_head_hair_collar_defect": false
+          "all_six_consecutive_decoded_mp4_sheets_inspected": true,
+          "three_full_resolution_before_after_pairs_inspected": true,
+          "new_visible_animation_or_surface_defect": false,
+          "inspection_location": "Mac, using only evidence rendered/decoded on black-sky"
         },
-        "derived_rehost_only_fixes": {},
+        "derived_rehost_only_fixes": {
+          "cloth_floor": {
+            "method": "quarter-frame evaluated-surface deficits; short conservative envelope; progressively distributed world-Z gathering over distal chain links 03 through tip; no scale or rest edit",
+            "modified_bones": [
+              "phys_cape_R_03",
+              "phys_cape_R_04",
+              "phys_cape_R_05",
+              "phys_cape_R_06",
+              "phys_robe_side_L_03",
+              "phys_robe_side_L_04",
+              "phys_robe_side_L_05",
+              "phys_robe_side_L_06",
+              "phys_robe_side_L_07",
+              "phys_robe_side_R_03",
+              "phys_robe_side_R_04",
+              "phys_robe_side_R_05",
+              "phys_robe_side_R_06",
+              "phys_robe_side_R_07"
+            ],
+            "noncloth_action_digest_exact": true,
+            "rest_rig_digest_exact": true
+          }
+        },
         "attack_after": {
           "name": "xslash",
           "hips_yaw_peak_deg_s": 346.03545899630393,
@@ -23516,6 +23561,128 @@
               "next_supported_frame": 40,
               "next_additional_foot_contact": 40
             }
+          ]
+        },
+        "cloth_floor_fix": {
+          "status": "PASS",
+          "execution_host": "black-sky",
+          "input_unchanged": true,
+          "input_sha256": "23ac6ae2e6305c471847b432a16770340802e30c93a482ee27f0480154b75bbf",
+          "fixed_blend": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+          "fixed_blend_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+          "mp4": "renders/astra/rehost/xslash/xslash_cloth.mp4",
+          "mp4_sha256": "66cce6aaa64031fb295e8b0beb247a1fb2d1ef809dac87e929ed86b7166afcd5",
+          "cloth_floor": {
+            "quarter_frame_samples": 357,
+            "before_minimum_m": -0.00458043348044157,
+            "before_worst_frame": 57.5,
+            "before_worst_vertex": 50781,
+            "before_penetrating_vertices": {
+              "components": {
+                "robe_hem": [
+                  49060,
+                  49875,
+                  50781,
+                  50786
+                ]
+              },
+              "families": {
+                "phys_robe_side_L": [
+                  49875,
+                  50781
+                ],
+                "phys_robe_side_R": [
+                  49060,
+                  50786
+                ]
+              }
+            },
+            "after_minimum_m": 0.002268977463245392,
+            "after_worst_frame": 29.5,
+            "after_penetrating_frames": [],
+            "integer_frame_minimum_m": 0.002282150089740753,
+            "gate_m": 0.002
+          },
+          "channel_invariants": {
+            "noncloth_action_digest_exact": true,
+            "rest_rig_digest_exact": true,
+            "frame_range": [
+              1,
+              90
+            ],
+            "modified_bones": [
+              "phys_cape_R_03",
+              "phys_cape_R_04",
+              "phys_cape_R_05",
+              "phys_cape_R_06",
+              "phys_robe_side_L_03",
+              "phys_robe_side_L_04",
+              "phys_robe_side_L_05",
+              "phys_robe_side_L_06",
+              "phys_robe_side_L_07",
+              "phys_robe_side_R_03",
+              "phys_robe_side_R_04",
+              "phys_robe_side_R_05",
+              "phys_robe_side_R_06",
+              "phys_robe_side_R_07"
+            ],
+            "limb_stretch_introduced": false
+          },
+          "regressions": {
+            "move_metrics_byte_equivalent_json": true,
+            "grip_metrics_byte_equivalent_json": true,
+            "attack_verification_byte_equivalent_json": true,
+            "head_hair_collar_byte_equivalent_json": true,
+            "sole_minimum_exact": true,
+            "naturalness_noncloth_exact": true,
+            "naturalness_surface_noncloth_exact": true,
+            "cloth_lag_best_delays_exact": true,
+            "cloth_lag_max_correlation_absolute_delta": 6.997553136933732e-08,
+            "cloth_end_world_speed_max_absolute_delta_deg_frame": 3.4188109659591404e-06
+          },
+          "key_metrics": {
+            "grip_hand_local_hilt_drift_m": 6.756979808875275e-07,
+            "grip_evaluated_tip_error_m": 6.02714670185944e-07,
+            "grip_closed_finger_drift_m": 9.670393940944024e-07,
+            "sole_minimum_m": 0.0013416530564427376,
+            "blade_head_exact_minimum_m": 0.09596602618694305,
+            "blade_hair_exact_minimum_m": 0.04176522451639175,
+            "robe_lag_frames": 1,
+            "cape_lag_frames": 2
+          },
+          "video": {
+            "source_frames": 90,
+            "decoded_frames": 90,
+            "decode_error_free": true,
+            "codec": "h264",
+            "pixel_format": "yuv420p",
+            "resolution": [
+              768,
+              768
+            ],
+            "fps": "30/1",
+            "before_after_stills": [
+              {
+                "frame": 57.5,
+                "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_01.png",
+                "layout": "left=before, right=after"
+              },
+              {
+                "frame": 56.5,
+                "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_02.png",
+                "layout": "left=before, right=after"
+              },
+              {
+                "frame": 57.25,
+                "path": "renders/astra/rehost/xslash/xslash_cloth_floor_before_after_03.png",
+                "layout": "left=before, right=after"
+              }
+            ]
+          },
+          "retained_limitations": [
+            "Clearance is certified at quarter-frame samples, not continuous time between samples.",
+            "Cloth remains deterministic kinematic secondary motion, not fabric simulation.",
+            "The front-view hem still reads as ground-pooled because the certified gap is only 2.269 mm and contact shadows remain."
           ]
         }
       }
