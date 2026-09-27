@@ -1,0 +1,201 @@
+{
+  "source": "models/meshy_head_approved.glb",
+  "candidate": "models/astra_character_v2_meshy_i01.blend",
+  "orientation": "GLB already upright and facing -Y; no rotation applied.",
+  "uniform_scale": 0.31,
+  "translation_m": [
+    0.00043,
+    -0.2519,
+    2.8552
+  ],
+  "postfit_xy_scale_about_eye_line": 1.05,
+  "mpfb": {
+    "eye_centers_world_m": {
+      "L": [
+        -0.05283600743860006,
+        -0.37956584990024567,
+        2.9765501022338867
+      ],
+      "R": [
+        0.05283600743860006,
+        -0.37956584990024567,
+        2.9765501022338867
+      ]
+    },
+    "eye_line_z_m": 2.9765501022338867,
+    "chin_proxy_z_m": 2.78,
+    "crown_z_m": 3.1583993434906006,
+    "ear_width_m": 0.27401216343045237,
+    "prior_neck_cut_z_m": 2.745,
+    "collar_hidden_base_z_m": 2.605
+  },
+  "meshy_raw_landmark_proxies": {
+    "eye_line_z_proxy_raw": 0.391,
+    "chin_z_proxy_raw": -0.163,
+    "crown_z_raw": 0.9478329420089722,
+    "ear_width_proxy_raw": 1.0,
+    "neck_seam_proxy_raw": -0.807
+  },
+  "meshy_transformed_landmark_proxies": {
+    "eye_line_z_proxy_world_m": 2.97641,
+    "chin_z_proxy_world_m": 2.8046699999999998,
+    "crown_z_world_m": 3.1490282120227815,
+    "ear_width_proxy_world_m": 0.31,
+    "neck_seam_proxy_world_m": 2.60503,
+    "eye_center_x_world_m": 0.00043
+  },
+  "raw_bounds": [
+    [
+      -0.9238200187683105,
+      -0.6305680274963379,
+      -0.950736939907074
+    ],
+    [
+      0.9210720062255859,
+      0.6356808543205261,
+      0.9478329420089722
+    ]
+  ],
+  "post_trim_world_bounds": [
+    [
+      -0.2952662408351898,
+      -0.4381715655326843,
+      2.5609946250915527
+    ],
+    [
+      0.2985921800136566,
+      -0.026007577776908875,
+      3.1490283012390137
+    ]
+  ],
+  "removed_lower_bust_faces": 12895,
+  "removed_legacy_objects": [
+    "AstraChar2_Cornea_L",
+    "AstraChar2_Cornea_R",
+    "AstraChar2_Eyeball_L",
+    "AstraChar2_Eyeball_R",
+    "AstraChar2_Eyebrows_L",
+    "AstraChar2_Eyebrows_R",
+    "AstraChar2_Iris_L",
+    "AstraChar2_Iris_R",
+    "AstraChar2_Lashes_L",
+    "AstraChar2_Lashes_R",
+    "AstraChar2_Mpfb_Head",
+    "AstraChar2_Nostril_L",
+    "AstraChar2_Nostril_R",
+    "AstraChar2_Pupil_L",
+    "AstraChar2_Pupil_R",
+    "AstraChar2_R2_HairFibers_0",
+    "AstraChar2_R2_HairFibers_1",
+    "AstraChar2_R2_HairFibers_2",
+    "AstraChar2_R2_HairFibers_3",
+    "AstraChar2_R2_HairlineWisps",
+    "AstraChar2_R2_HairRoots",
+    "AstraChar2_R3_Flow_L",
+    "AstraChar2_R3_Flow_R",
+    "AstraChar2_R3_Plait_L",
+    "AstraChar2_R3_Plait_R",
+    "AstraChar2_R4_Control_L_Back_0",
+    "AstraChar2_R4_Control_L_Back_1",
+    "AstraChar2_R4_Control_L_Braids",
+    "AstraChar2_R4_Control_L_Front_0",
+    "AstraChar2_R4_Control_L_Front_1",
+    "AstraChar2_R4_Control_L_Side_0",
+    "AstraChar2_R4_Control_L_Side_1",
+    "AstraChar2_R4_Control_R_Back_0",
+    "AstraChar2_R4_Control_R_Back_1",
+    "AstraChar2_R4_Control_R_Braids",
+    "AstraChar2_R4_Control_R_Front_0",
+    "AstraChar2_R4_Control_R_Front_1",
+    "AstraChar2_R4_Control_R_Side_0",
+    "AstraChar2_R4_Control_R_Side_1",
+    "AstraChar2_R4_Curves_L_Back_0",
+    "AstraChar2_R4_Curves_L_Back_1",
+    "AstraChar2_R4_Curves_L_Braids",
+    "AstraChar2_R4_Curves_L_Front_0",
+    "AstraChar2_R4_Curves_L_Front_1",
+    "AstraChar2_R4_Curves_L_Side_0",
+    "AstraChar2_R4_Curves_L_Side_1",
+    "AstraChar2_R4_Curves_R_Back_0",
+    "AstraChar2_R4_Curves_R_Back_1",
+    "AstraChar2_R4_Curves_R_Braids",
+    "AstraChar2_R4_Curves_R_Front_0",
+    "AstraChar2_R4_Curves_R_Front_1",
+    "AstraChar2_R4_Curves_R_Side_0",
+    "AstraChar2_R4_Curves_R_Side_1",
+    "AstraChar2_R4_Scalp",
+    "AstraChar2_R4_ScalpRoots",
+    "AstraChar2_R4_Strands_L_Back_0",
+    "AstraChar2_R4_Strands_L_Back_1",
+    "AstraChar2_R4_Strands_L_Braids",
+    "AstraChar2_R4_Strands_L_Front_0",
+    "AstraChar2_R4_Strands_L_Front_1",
+    "AstraChar2_R4_Strands_L_Side_0",
+    "AstraChar2_R4_Strands_L_Side_1",
+    "AstraChar2_R4_Strands_R_Back_0",
+    "AstraChar2_R4_Strands_R_Back_1",
+    "AstraChar2_R4_Strands_R_Braids",
+    "AstraChar2_R4_Strands_R_Front_0",
+    "AstraChar2_R4_Strands_R_Front_1",
+    "AstraChar2_R4_Strands_R_Side_0",
+    "AstraChar2_R4_Strands_R_Side_1",
+    "AstraChar2_R5_Control_MPFB_L_Back",
+    "AstraChar2_R5_Control_MPFB_L_Braids",
+    "AstraChar2_R5_Control_MPFB_L_Front",
+    "AstraChar2_R5_Control_MPFB_L_Side",
+    "AstraChar2_R5_Control_MPFB_R_Back",
+    "AstraChar2_R5_Control_MPFB_R_Braids",
+    "AstraChar2_R5_Control_MPFB_R_Front",
+    "AstraChar2_R5_Control_MPFB_R_Side",
+    "AstraChar2_R5_Control_MPFB_ScalpBed",
+    "AstraChar2_R5_Curves_MPFB_L_Back",
+    "AstraChar2_R5_Curves_MPFB_L_Braids",
+    "AstraChar2_R5_Curves_MPFB_L_Front",
+    "AstraChar2_R5_Curves_MPFB_L_Side",
+    "AstraChar2_R5_Curves_MPFB_R_Back",
+    "AstraChar2_R5_Curves_MPFB_R_Braids",
+    "AstraChar2_R5_Curves_MPFB_R_Front",
+    "AstraChar2_R5_Curves_MPFB_R_Side",
+    "AstraChar2_R5_Curves_MPFB_ScalpBed",
+    "AstraChar2_R5_Strands_MPFB_L_Back",
+    "AstraChar2_R5_Strands_MPFB_L_Braids",
+    "AstraChar2_R5_Strands_MPFB_L_Front",
+    "AstraChar2_R5_Strands_MPFB_L_Side",
+    "AstraChar2_R5_Strands_MPFB_R_Back",
+    "AstraChar2_R5_Strands_MPFB_R_Braids",
+    "AstraChar2_R5_Strands_MPFB_R_Front",
+    "AstraChar2_R5_Strands_MPFB_R_Side",
+    "AstraChar2_R5_Strands_MPFB_ScalpBed",
+    "AstraChar2_TearCorner_L",
+    "AstraChar2_TearCorner_R",
+    "AstraChar2_Wetline_L",
+    "AstraChar2_Wetline_R"
+  ],
+  "weighting": {
+    "method": "inseparable Meshy head+hair rigid Head binding; separate hidden neck band uses the proven Head/neck/Spine blend",
+    "counts": {
+      "head": 141332,
+      "neck_blend": 0
+    }
+  },
+  "neck_blend": {
+    "object": "AstraChar2_Meshy_NeckBlend",
+    "rows": 9,
+    "sides": 64,
+    "z_range_m": [
+      2.605,
+      2.8
+    ],
+    "inside_gorget": true
+  },
+  "material": {
+    "name": "AstraChar2 Meshy approved PBR head+hair",
+    "pbr_maps_preserved": true,
+    "repainted": false,
+    "subsurface_added": false,
+    "reason": "Single fused skin/hair/eyes material has no reliable skin-only mask; only the separate neck blend uses a modest 0.025 SSS weight."
+  },
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0
+}

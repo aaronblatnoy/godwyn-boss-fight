@@ -1,0 +1,51 @@
+{
+  "source": "models/astra_character_v2_meshy_i01.glb",
+  "bones": 121,
+  "actions": 0,
+  "world_joint_position_max_error_m": 1.430511474609375e-05,
+  "world_joint_position_tolerance_m": 5e-05,
+  "bone_names_and_hierarchy_preserved": true,
+  "glb_skin_joint_counts": [
+    121
+  ],
+  "glb_animations": 0,
+  "weights": {
+    "referenced_skinned_vertices": 517555,
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 1.3969838619232178e-07,
+    "bad_examples": []
+  },
+  "poses": {
+    "optix_devices": [
+      {
+        "name": "NVIDIA GeForce RTX 3060 Ti",
+        "type": "OPTIX"
+      },
+      {
+        "name": "NVIDIA GeForce RTX 3060 Ti",
+        "type": "OPTIX"
+      }
+    ],
+    "arms_raised": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_stretch_max": 1.0010534524917603,
+        "edge_stretch_p99": 1.0002466440200806
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_stretch_max": 1.1600948572158813,
+        "edge_stretch_p99": 1.1537948846817017
+      }
+    },
+    "combat_stress": {
+      "AstraChar2_Meshy_HeadHair": {
+        "edge_stretch_max": 1.0010522603988647,
+        "edge_stretch_p99": 1.0002464056015015
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "edge_stretch_max": 1.1589596271514893,
+        "edge_stretch_p99": 1.1340728998184204
+      }
+    }
+  },
+  "neutral_restored": true
+}

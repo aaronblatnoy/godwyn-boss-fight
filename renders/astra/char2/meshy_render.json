@@ -1,0 +1,22 @@
+{
+  "candidate": "models/astra_character_v2_meshy_i01.blend",
+  "engine": "Cycles",
+  "device": "OptiX",
+  "samples": 64,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "views": [
+    "front",
+    "side",
+    "three_quarter",
+    "collar"
+  ]
+}

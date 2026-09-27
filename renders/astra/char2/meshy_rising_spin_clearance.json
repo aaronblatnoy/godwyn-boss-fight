@@ -1,0 +1,24 @@
+{
+  "animation": "models/astra_move_rising_spin_v2_wip.blend",
+  "candidate": "models/astra_character_v2_meshy_i01.blend",
+  "frame": 40,
+  "blade_head_exact_triangle_overlaps": 0,
+  "blade_hair_exact_triangle_overlaps": 0,
+  "blade_head_exact_sampled_surface_distance_m": 0.006523085292428732,
+  "blade_hair_exact_sampled_surface_distance_m": 0.006523085292428732,
+  "fused_mesh_partition": "Geometric triangle partition: central anterior skin envelope plus neck band=head; remainder=hair. No fiber allowance.",
+  "head_triangles": 512,
+  "hair_triangles": 147232,
+  "assembly_rest_transform_max_error": 0.0,
+  "bones": 121,
+  "optix_devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ]
+}

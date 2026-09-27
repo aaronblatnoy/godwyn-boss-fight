@@ -1,0 +1,1264 @@
+{
+  "base": {
+    "bones": 121,
+    "actions": 0,
+    "objects": [
+      {
+        "name": "Armature",
+        "type": "ARMATURE",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "Godwyn_Sword",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 4235,
+        "faces": 8179
+      },
+      {
+        "name": "Astra key",
+        "type": "LIGHT",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "Astra fill",
+        "type": "LIGHT",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "Astra rim",
+        "type": "LIGHT",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "Astra face",
+        "type": "LIGHT",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "Astra evaluation ground",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 4,
+        "faces": 1
+      },
+      {
+        "name": "Astra evaluation camera",
+        "type": "CAMERA",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "char1",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 366392,
+        "faces": 244493
+      },
+      {
+        "name": "Astra_Undersleeves",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 448,
+        "faces": 384
+      },
+      {
+        "name": "AstraChar2_Eyeball_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 2498,
+        "faces": 2560
+      },
+      {
+        "name": "AstraChar2_Iris_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Pupil_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Cornea_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Wetline_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 650,
+        "faces": 640
+      },
+      {
+        "name": "AstraChar2_TearCorner_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 222,
+        "faces": 240
+      },
+      {
+        "name": "AstraChar2_Eyebrows_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 10750,
+        "faces": 8600
+      },
+      {
+        "name": "AstraChar2_Lashes_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 2025,
+        "faces": 1620
+      },
+      {
+        "name": "AstraChar2_Nostril_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_Eyeball_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 2498,
+        "faces": 2560
+      },
+      {
+        "name": "AstraChar2_Iris_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Pupil_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Cornea_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 769,
+        "faces": 768
+      },
+      {
+        "name": "AstraChar2_Wetline_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 650,
+        "faces": 640
+      },
+      {
+        "name": "AstraChar2_TearCorner_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 222,
+        "faces": 240
+      },
+      {
+        "name": "AstraChar2_Eyebrows_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 10750,
+        "faces": 8600
+      },
+      {
+        "name": "AstraChar2_Lashes_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 2025,
+        "faces": 1620
+      },
+      {
+        "name": "AstraChar2_Nostril_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairRoots",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairFibers_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairFibers_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairFibers_2",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairFibers_3",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R2_HairlineWisps",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R3_Flow_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R3_Plait_R",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R3_Flow_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R3_Plait_L",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R3_ChasedLaurel",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Scalp",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 0,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_ScalpRoots",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 5055,
+        "faces": 4830
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Front_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 89600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Front_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Front_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 268800,
+        "faces": 264600
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Front_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 89600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Front_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Front_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 268800,
+        "faces": 264600
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Side_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Side_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Side_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Side_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Side_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Side_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Back_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Back_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Back_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Back_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Back_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Back_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_R_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 110592,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_R_Braids",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_R_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 331776,
+        "faces": 330480
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Front_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 89600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Front_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Front_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 268800,
+        "faces": 264600
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Front_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 89600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Front_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Front_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 268800,
+        "faces": 264600
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Side_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Side_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Side_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Side_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Side_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Side_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Back_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Back_0",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Back_0",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Back_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 57600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Back_1",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Back_1",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 172800,
+        "faces": 170100
+      },
+      {
+        "name": "AstraChar2_R4_Control_L_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 110592,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R4_Curves_L_Braids",
+        "type": "CURVES",
+        "hidden": true,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R4_Strands_L_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 331776,
+        "faces": 330480
+      },
+      {
+        "name": "AstraChar2_R5_Cuirass",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 41366,
+        "faces": 41370
+      },
+      {
+        "name": "AstraChar2_R5_Gorget",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 9600,
+        "faces": 9600
+      },
+      {
+        "name": "AstraChar2_R5_GorgetRim",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 1274,
+        "faces": 1282
+      },
+      {
+        "name": "AstraChar2_R5_ClavicleMantle",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 10896,
+        "faces": 10897
+      },
+      {
+        "name": "AstraChar2_R5_Pauldron_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 11520,
+        "faces": 11394
+      },
+      {
+        "name": "AstraChar2_R5_PauldronRim_L",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 1023,
+        "faces": 1026
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_L_0",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_L_1",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_L_2",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_Pauldron_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 11520,
+        "faces": 11394
+      },
+      {
+        "name": "AstraChar2_R5_PauldronRim_R",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 1023,
+        "faces": 1026
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_R_0",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_R_1",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_UpperArm_R_2",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 3456,
+        "faces": 3456
+      },
+      {
+        "name": "AstraChar2_R5_SacredEmblem",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 1730,
+        "faces": 1824
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_0",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_1",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_2",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_3",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_4",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_5",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_6",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_7",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_8",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_9",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_10",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_11",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_12",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_13",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_14",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R5_SunRay_15",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 192,
+        "faces": 186
+      },
+      {
+        "name": "AstraChar2_R6_NeckGraft",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 6144,
+        "faces": 6018
+      },
+      {
+        "name": "AstraChar2_R5_ClothFitEnvelope",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 106926,
+        "faces": 106673
+      },
+      {
+        "name": "AstraChar2_Mpfb_Head",
+        "type": "MESH",
+        "hidden": false,
+        "vertices": 79522,
+        "faces": 79520
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_L_Front",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 153600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_L_Front",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_L_Front",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 237600,
+        "faces": 230400
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_L_Side",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 192000,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_L_Side",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_L_Side",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 297000,
+        "faces": 288000
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_L_Back",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 230400,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_L_Back",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_L_Back",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 356400,
+        "faces": 345600
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_L_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 72000,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_L_Braids",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_L_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 109350,
+        "faces": 108000
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_R_Front",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 153600,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_R_Front",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_R_Front",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 237600,
+        "faces": 230400
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_R_Side",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 192000,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_R_Side",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_R_Side",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 297000,
+        "faces": 288000
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_R_Back",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 230400,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_R_Back",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_R_Back",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 356400,
+        "faces": 345600
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_R_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 72000,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_R_Braids",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_R_Braids",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 109350,
+        "faces": 108000
+      },
+      {
+        "name": "AstraChar2_R5_Control_MPFB_ScalpBed",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 252000,
+        "faces": 0
+      },
+      {
+        "name": "AstraChar2_R5_Curves_MPFB_ScalpBed",
+        "type": "CURVES",
+        "hidden": false,
+        "vertices": null,
+        "faces": null
+      },
+      {
+        "name": "AstraChar2_R5_Strands_MPFB_ScalpBed",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 420000,
+        "faces": 378000
+      },
+      {
+        "name": "Icosphere",
+        "type": "MESH",
+        "hidden": true,
+        "vertices": 42,
+        "faces": 80
+      }
+    ],
+    "bounds": {
+      "AstraChar2_Mpfb_Head": {
+        "min": [
+          -0.1420126110315323,
+          -0.4471554756164551,
+          2.6051290035247803
+        ],
+        "max": [
+          0.1420126110315323,
+          -0.09109208732843399,
+          3.1583993434906006
+        ],
+        "size": [
+          0.2840252220630646,
+          0.3560633882880211,
+          0.5532703399658203
+        ]
+      },
+      "AstraChar2_Eyeball_L": {
+        "min": [
+          -0.07833348214626312,
+          -0.40506333112716675,
+          2.951052665710449
+        ],
+        "max": [
+          -0.027338532730937004,
+          -0.3540683686733246,
+          3.002047538757324
+        ],
+        "size": [
+          0.05099494941532612,
+          0.05099496245384216,
+          0.050994873046875
+        ]
+      },
+      "AstraChar2_Eyeball_R": {
+        "min": [
+          0.027338532730937004,
+          -0.40506333112716675,
+          2.951052665710449
+        ],
+        "max": [
+          0.07833348214626312,
+          -0.3540683686733246,
+          3.002047538757324
+        ],
+        "size": [
+          0.05099494941532612,
+          0.05099496245384216,
+          0.050994873046875
+        ]
+      },
+      "char1": {
+        "min": [
+          -1.0200709104537964,
+          -0.7813162207603455,
+          -0.016443630680441856
+        ],
+        "max": [
+          1.0200674533843994,
+          0.7981681823730469,
+          3.1999995708465576
+        ],
+        "size": [
+          2.040138363838196,
+          1.5794844031333923,
+          3.2164432015269995
+        ]
+      }
+    },
+    "eye_centers": {
+      "L": [
+        -0.05283600743860006,
+        -0.37956584990024567,
+        2.9765501022338867
+      ],
+      "R": [
+        0.05283600743860006,
+        -0.37956584990024567,
+        2.9765501022338867
+      ]
+    },
+    "mpfb_landmark_proxies": {
+      "chin_z": 2.654583466053009,
+      "crown_z": 3.1583993434906006,
+      "ear_width_x": 0.27401216343045237,
+      "neck_cut_z": 2.745,
+      "neck_base_z": 2.605
+    }
+  },
+  "meshy": {
+    "file": "models/meshy_head_approved.glb",
+    "mesh_count": 1,
+    "objects": [
+      {
+        "name": "Mesh_0",
+        "vertices": 151654,
+        "faces": 155683,
+        "triangles": 155683,
+        "bounds": {
+          "min": [
+            -0.9238200187683105,
+            -0.6305680274963379,
+            -0.950736939907074
+          ],
+          "max": [
+            0.9210720062255859,
+            0.6356808543205261,
+            0.9478329420089722
+          ],
+          "size": [
+            1.8448920249938965,
+            1.266248881816864,
+            1.8985698819160461
+          ]
+        },
+        "material_slots": [
+          "Material_0"
+        ]
+      }
+    ],
+    "triangles": 155683,
+    "materials": [
+      {
+        "name": "Material_0",
+        "nodes": [
+          {
+            "name": "Principled BSDF",
+            "type": "ShaderNodeBsdfPrincipled"
+          },
+          {
+            "name": "Material Output",
+            "type": "ShaderNodeOutputMaterial"
+          },
+          {
+            "name": "Image Texture",
+            "type": "ShaderNodeTexImage"
+          },
+          {
+            "name": "Image Texture.001",
+            "type": "ShaderNodeTexImage"
+          },
+          {
+            "name": "Separate Color",
+            "type": "ShaderNodeSeparateColor"
+          },
+          {
+            "name": "Image Texture.002",
+            "type": "ShaderNodeTexImage"
+          },
+          {
+            "name": "Normal Map",
+            "type": "ShaderNodeNormalMap"
+          },
+          {
+            "name": "Image Texture.003",
+            "type": "ShaderNodeTexImage"
+          }
+        ],
+        "images": [
+          {
+            "node": "Image Texture",
+            "name": "Image_3",
+            "size": [
+              2048,
+              2048
+            ],
+            "source": "FILE",
+            "filepath": ""
+          },
+          {
+            "node": "Image Texture.001",
+            "name": "Image_0",
+            "size": [
+              2048,
+              2048
+            ],
+            "source": "FILE",
+            "filepath": ""
+          },
+          {
+            "node": "Image Texture.002",
+            "name": "Image_1",
+            "size": [
+              2048,
+              2048
+            ],
+            "source": "FILE",
+            "filepath": ""
+          },
+          {
+            "node": "Image Texture.003",
+            "name": "normal",
+            "size": [
+              2048,
+              2048
+            ],
+            "source": "FILE",
+            "filepath": ""
+          }
+        ]
+      }
+    ],
+    "images": [
+      {
+        "name": "Image_0",
+        "size": [
+          2048,
+          2048
+        ],
+        "source": "FILE",
+        "filepath": ""
+      },
+      {
+        "name": "Image_1",
+        "size": [
+          2048,
+          2048
+        ],
+        "source": "FILE",
+        "filepath": ""
+      },
+      {
+        "name": "Image_3",
+        "size": [
+          2048,
+          2048
+        ],
+        "source": "FILE",
+        "filepath": ""
+      },
+      {
+        "name": "normal",
+        "size": [
+          2048,
+          2048
+        ],
+        "source": "FILE",
+        "filepath": ""
+      }
+    ]
+  }
+}

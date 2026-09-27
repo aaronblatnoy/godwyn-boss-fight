@@ -1,0 +1,174 @@
+{
+  "file": "models/meshy_head_approved.glb",
+  "mesh_count": 1,
+  "objects": [
+    {
+      "name": "Mesh_0",
+      "vertices": 151654,
+      "faces": 155683,
+      "triangles": 155683,
+      "bounds": {
+        "min": [
+          -0.9238200187683105,
+          -0.6305680274963379,
+          -0.950736939907074
+        ],
+        "max": [
+          0.9210720062255859,
+          0.6356808543205261,
+          0.9478329420089722
+        ],
+        "size": [
+          1.8448920249938965,
+          1.266248881816864,
+          1.8985698819160461
+        ]
+      },
+      "material_slots": [
+        "Material_0"
+      ]
+    }
+  ],
+  "triangles": 155683,
+  "materials": [
+    {
+      "name": "Material_0",
+      "nodes": [
+        {
+          "name": "Principled BSDF",
+          "type": "ShaderNodeBsdfPrincipled"
+        },
+        {
+          "name": "Material Output",
+          "type": "ShaderNodeOutputMaterial"
+        },
+        {
+          "name": "Image Texture",
+          "type": "ShaderNodeTexImage"
+        },
+        {
+          "name": "Image Texture.001",
+          "type": "ShaderNodeTexImage"
+        },
+        {
+          "name": "Separate Color",
+          "type": "ShaderNodeSeparateColor"
+        },
+        {
+          "name": "Image Texture.002",
+          "type": "ShaderNodeTexImage"
+        },
+        {
+          "name": "Normal Map",
+          "type": "ShaderNodeNormalMap"
+        },
+        {
+          "name": "Image Texture.003",
+          "type": "ShaderNodeTexImage"
+        }
+      ],
+      "images": [
+        {
+          "node": "Image Texture",
+          "name": "Image_3",
+          "size": [
+            2048,
+            2048
+          ],
+          "source": "FILE",
+          "filepath": ""
+        },
+        {
+          "node": "Image Texture.001",
+          "name": "Image_0",
+          "size": [
+            2048,
+            2048
+          ],
+          "source": "FILE",
+          "filepath": ""
+        },
+        {
+          "node": "Image Texture.002",
+          "name": "Image_1",
+          "size": [
+            2048,
+            2048
+          ],
+          "source": "FILE",
+          "filepath": ""
+        },
+        {
+          "node": "Image Texture.003",
+          "name": "normal",
+          "size": [
+            2048,
+            2048
+          ],
+          "source": "FILE",
+          "filepath": ""
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "name": "Image_0",
+      "size": [
+        2048,
+        2048
+      ],
+      "source": "FILE",
+      "filepath": ""
+    },
+    {
+      "name": "Image_1",
+      "size": [
+        2048,
+        2048
+      ],
+      "source": "FILE",
+      "filepath": ""
+    },
+    {
+      "name": "Image_3",
+      "size": [
+        2048,
+        2048
+      ],
+      "source": "FILE",
+      "filepath": ""
+    },
+    {
+      "name": "normal",
+      "size": [
+        2048,
+        2048
+      ],
+      "source": "FILE",
+      "filepath": ""
+    }
+  ],
+  "sha256": "c013834d7626564551e0777802152a4f16fbebc6bdb314739b78bf61fffab24b",
+  "render_views": [
+    "meshy_import_front.png",
+    "meshy_import_side.png",
+    "meshy_import_tq.png"
+  ],
+  "visual_assessment": {
+    "reads_as_approved_man": true,
+    "strengths": [
+      "long masculine face",
+      "straight narrow nose",
+      "eye spacing and lids",
+      "center-parted long hair",
+      "braids"
+    ],
+    "shortfalls": [
+      "AI-smoothed skin",
+      "rear and side hair becomes coarse sheet-like geometry",
+      "blunt tapered hair ends",
+      "single fused material and no semantic part split"
+    ]
+  }
+}
