@@ -1,0 +1,36 @@
+{
+  "mode": "sheet",
+  "clip": "Sword_Parry",
+  "sampled_source_frames": [
+    1,
+    6,
+    11,
+    16,
+    21,
+    26,
+    32,
+    37,
+    42,
+    47,
+    52,
+    57
+  ],
+  "resolution": [
+    768,
+    768
+  ],
+  "samples": 2,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "camera": "static three-quarter wide",
+  "root_xy_travel_m": 0.03311707785787843,
+  "ortho_scale": 4.4
+}

@@ -1,0 +1,16 @@
+{
+  "mode": "heroes",
+  "action": "Combat_Stance",
+  "frame": 1,
+  "samples": 2,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ]
+}

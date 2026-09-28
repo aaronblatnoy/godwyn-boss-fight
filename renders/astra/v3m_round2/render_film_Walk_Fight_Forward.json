@@ -1,0 +1,26 @@
+{
+  "mode": "film",
+  "clip": "Walk_Fight_Forward",
+  "source_frames": 53,
+  "rendered_frames": 27,
+  "source_fps": 30,
+  "render_step": 2,
+  "encoded_input_fps": 15.0,
+  "output_fps": 30,
+  "resolution": [
+    768,
+    768
+  ],
+  "samples": 2,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "camera": "three-quarter XY root-follow; vertical root motion remains visible"
+}

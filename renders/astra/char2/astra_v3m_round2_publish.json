@@ -1,0 +1,165 @@
+{
+  "schema": "astra-v3m-round2-publish",
+  "source_wip": "models/astra_character_v3m_round2_wip.blend",
+  "source_wip_sha256": "85144d2823f6d328a18ce5109cd2e568f90059c2a6478810c5dccc0759241ebd",
+  "accepted_actions": [
+    "Combat_Stance"
+  ],
+  "action_frame_counts": {
+    "Combat_Stance": 51
+  },
+  "fps": 30,
+  "binding": {
+    "head": "rigid Head",
+    "neckblend": "rigid neck",
+    "sword": "rigid RightHand"
+  },
+  "selected_objects": [
+    "Astra_V3_Rig",
+    "char1",
+    "AstraChar2_Meshy_HeadHair",
+    "Godwyn_Sword",
+    "AstraChar2_Meshy_NeckBlend",
+    "AstraChar2_R2_BoundaryPatches"
+  ],
+  "export_options_used": [
+    "export_anim_scene_split_object",
+    "export_animation_mode",
+    "export_animations",
+    "export_apply",
+    "export_bake_animation",
+    "export_cameras",
+    "export_def_bones",
+    "export_force_sampling",
+    "export_format",
+    "export_frame_range",
+    "export_leaf_bone",
+    "export_lights",
+    "export_materials",
+    "export_nla_strips_merged_animation_name",
+    "export_normals",
+    "export_optimize_animation_keep_anim_armature",
+    "export_optimize_animation_size",
+    "export_skins",
+    "export_tangents",
+    "export_texcoords",
+    "filepath",
+    "use_selection"
+  ],
+  "native_weights": {
+    "objects": {
+      "char1": {
+        "vertices": 250272,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.4388933777809143e-07
+      },
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 85831,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 240,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_R2_BoundaryPatches": {
+        "vertices": 1247,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 4.842877388000488e-08
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "backup": {
+    "blend": "models/astra_character_v3_prev.blend",
+    "blend_sha256": "49ff778d2279723230a6c9bdc1ebd2d423d67d7db58f746aa19544e3669b5a72",
+    "glb": "models/astra_character_v3_prev.glb",
+    "glb_sha256": "2aeb5782c4736660a58bd867737e0c5c9f3c7f4fb50e2b728f1ae753d94443e7"
+  },
+  "published": {
+    "blend": "models/astra_character_v3.blend",
+    "blend_sha256": "32afac85f2676bfb4ab5db22156bfee14b9aae1844d0b3a12aa1977a117c1ba0",
+    "blend_bytes": 200892648,
+    "glb": "models/astra_character_v3.glb",
+    "glb_sha256": "351a3ef83baee9ed4b315f1c042f76a72846af905680f17a51bf75b08b4b03ab",
+    "glb_bytes": 71585944
+  },
+  "roundtrip": {
+    "schema": "astra-v3m-roundtrip",
+    "temporary_glb": "models/astra_character_v3_round2_publish_tmp.glb",
+    "action_names": [
+      "Combat_Stance"
+    ],
+    "action_frame_counts": {
+      "Combat_Stance": 51
+    },
+    "expected_action_frame_counts": {
+      "Combat_Stance": 51
+    },
+    "fps": 30,
+    "bones": 24,
+    "bone_names_exact": true,
+    "bone_hierarchy_preserved": true,
+    "world_joint_position_max_error_m": 3.2611191272735596e-05,
+    "skin_joint_counts": [
+      24
+    ],
+    "weights": {
+      "objects": {
+        "AstraChar2_Meshy_HeadHair": {
+          "vertices": 88833,
+          "unweighted": 0,
+          "bad_weight_sum": 0,
+          "maximum_weight_sum_error": 0.0
+        },
+        "AstraChar2_Meshy_NeckBlend": {
+          "vertices": 240,
+          "unweighted": 0,
+          "bad_weight_sum": 0,
+          "maximum_weight_sum_error": 0.0
+        },
+        "AstraChar2_R2_BoundaryPatches": {
+          "vertices": 1247,
+          "unweighted": 0,
+          "bad_weight_sum": 0,
+          "maximum_weight_sum_error": 1.2293457984924316e-07
+        },
+        "char1": {
+          "vertices": 261584,
+          "unweighted": 0,
+          "bad_weight_sum": 0,
+          "maximum_weight_sum_error": 1.4621764421463013e-07
+        },
+        "Godwyn_Sword": {
+          "vertices": 6091,
+          "unweighted": 0,
+          "bad_weight_sum": 0,
+          "maximum_weight_sum_error": 0.0
+        }
+      },
+      "unweighted_or_bad_sum_vertices": 0
+    },
+    "gltf_animation_names": [
+      "Combat_Stance"
+    ],
+    "published_glb": "models/astra_character_v3.glb",
+    "published_glb_sha256": "351a3ef83baee9ed4b315f1c042f76a72846af905680f17a51bf75b08b4b03ab"
+  },
+  "pre_mocap_backup": {
+    "blend": "models/astra_character_v3_pre_mocap.blend",
+    "blend_sha256": "e254ac97530c265ee1ac36b659f4d5ae752e8d27ec6842254e8b79277ca2abc9",
+    "glb": "models/astra_character_v3_pre_mocap.glb",
+    "glb_sha256": "e2577625e35af133ef3fe0e240016e59108a10e9453430c4a58d4ca95e6b9fe9"
+  }
+}

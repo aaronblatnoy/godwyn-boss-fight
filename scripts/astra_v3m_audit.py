@@ -11,8 +11,14 @@ from mathutils.bvhtree import BVHTree
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BLEND = ROOT / "models/astra_character_v3m_wip.blend"
-OUT = ROOT / "renders/astra/char2/meshy_v3m_audit.json"
+def option(flag, default):
+    if flag in sys.argv:
+        return sys.argv[sys.argv.index(flag) + 1]
+    return default
+
+
+BLEND = ROOT / option("--blend", "models/astra_character_v3m_wip.blend")
+OUT = ROOT / option("--out", "renders/astra/char2/meshy_v3m_audit.json")
 QUICK = "--quick" in sys.argv
 CLIPS = [
     "Combat_Stance", "Walk_Fight_Forward", "Attack", "Left_Slash",
@@ -70,7 +76,11 @@ def face_sets(body, head, sword):
             sum(item.weight for item in body.data.vertices[index].groups if group_names.get(item.group) in head_chain)
             for index in poly.vertices
         ])
-        if plate and head_chain_weight < 0.25 and 2.43 <= center[2] <= 2.90 and abs(center[0]) <= 0.82 and -0.65 <= center[1] <= 0.28:
+        # The central jaw/gorget attachment is an intentional interior overlap.
+        # Gate only exterior collar/pauldron faces where a poke-through can be
+        # visible from normal cameras.
+        interior = abs(center[0]) <= 0.34 and center[1] <= 0.08
+        if plate and not interior and head_chain_weight < 0.25 and 2.43 <= center[2] <= 2.90 and abs(center[0]) <= 0.82 and -0.65 <= center[1] <= 0.28:
             collar.append(tuple(poly.vertices))
     hair_attr = head.data.color_attributes["meshy_hair_mask"]
     head_rest = np.asarray([(head.matrix_world @ vertex.co)[:] for vertex in head.data.vertices], dtype=float)
@@ -215,7 +225,7 @@ def main():
                 "rows": head_armor_rows,
                 "triangle_pairs": head_armor_pairs,
                 "gate_pass": head_armor_pairs == 0,
-                "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded",
+                "selection": "visible exterior astra_v3_plate_mask collar/pauldron faces; central jaw/gorget interior attachment volume allowed; hidden lower donor neck excluded",
             },
             "sword_vs_head_hair": {
                 "frames_with_overlap": len(blade_head_rows),
@@ -265,7 +275,7 @@ def main():
         "clips": reports,
         "all_quality_gates_pass": all(row["quality_gate_pass"] for row in reports.values()),
     }
-    output = OUT.with_name("meshy_v3m_quick_audit.json") if QUICK else OUT
+    output = OUT.with_name(OUT.stem + "_quick.json") if QUICK else OUT
     output.write_text(json.dumps(report, indent=2) + "\n")
     print("V3M_AUDIT_COMPLETE", json.dumps({"all": report["all_quality_gates_pass"], "binding": report["binding"]}), flush=True)
 

@@ -138,3 +138,141 @@ Primary evidence:
 - `renders/astra/v3m/` — 15 films, 15 contact sheets, before images, final heroes, and concept comparison
 
 The `.blend` and `.glb` deliverables remain on black-sky. Evidence images, films, JSON, report, and log were synchronized back to the Mac workspace.
+
+---
+
+## Round 2 — world-space retarget, September 28, 2026
+
+This section supersedes the first-pass motion verdicts above. Round 2 rebuilt all 15 actions from the just-published fist-body source (`49ff778d…` blend), using exact source-bone world orientations—including roll—in parent-first order. `Hips` world position is the source position minus the source/target rest offset. No local-delta rotation transfer or per-frame floor clamping remains.
+
+### Outcome
+
+Only `Combat_Stance` passes every inherited hard gate and is published. `Right_Hand_Sword_Slash`, `Sword_Parry`, and `Hit_Reaction` look usable in the films and pass the floor and visible-collision checks, but their body edge-stretch p99 values are 1.7530, 1.8546, and 1.9240, respectively, above the hard 1.6 ceiling. They were therefore not retained in the final canonical asset. A temporary four-action promotion was replaced before delivery; it was not kept as `_prev`.
+
+Final publication:
+
+- `models/astra_character_v3.blend` — SHA-256 `32afac85f2676bfb4ab5db22156bfee14b9aae1844d0b3a12aa1977a117c1ba0`
+- `models/astra_character_v3.glb` — SHA-256 `351a3ef83baee9ed4b315f1c042f76a72846af905680f17a51bf75b08b4b03ab`
+- `models/astra_character_v3_prev.blend` — Round-1 canonical, SHA-256 `49ff778d2279723230a6c9bdc1ebd2d423d67d7db58f746aa19544e3669b5a72`
+- `models/astra_character_v3_prev.glb` — Round-1 canonical, SHA-256 `2aeb5782c4736660a58bd867737e0c5c9f3c7f4fb50e2b728f1ae753d94443e7`
+- `models/astra_character_v3_pre_mocap.*` — preserved original pair, SHA-256 prefixes `e254ac97…` / `e2577625…`
+
+No Git commit or push was made.
+
+### Input integrity and frame counts
+
+The 15 source GLBs were re-hashed on black-sky. All 15 complete SHA-256 values are unique; there are no renamed duplicate containers. Their exact imported inclusive frame counts at 30 fps are:
+
+| Clip | SHA-256 prefix | Frames |
+|---|---:|---:|
+| Combat_Stance | `65a24d28d1c` | 51 |
+| Walk_Fight_Forward | `5573af77debfd` | 53 |
+| Attack | `0c20f5fcb357` | 85 |
+| Left_Slash | `93313666c011` | 96 |
+| Right_Hand_Sword_Slash | `976ffc04777c` | 46 |
+| Double_Combo_Attack | `05bb3c8889d8` | 86 |
+| Triple_Combo_Attack | `6c3422cef209` | 131 |
+| Sword_Judgment | `57877f8221e0` | 132 |
+| Reaping_Swing | `27644b14a0f2` | 179 |
+| Rightward_Spin | `2c3182a711a3` | 241 |
+| Basic_Jump | `ce89e1431686` | 178 |
+| Roll_Dodge | `c81eed21c305` | 56 |
+| Sword_Parry | `bead370e92b4` | 57 |
+| Hit_Reaction | `3b62b63f82ee` | 50 |
+| Dead | `1b4a541be742` | 90 |
+
+### Retarget and grounding measurements
+
+Every reconstructed bone orientation matches the evaluated source world orientation to the audit's numeric precision: maximum reported error is `0.000000°` on every clip and every bone. Maximum `Hips` world-position error across the set is 0.000972 mm. One constant Z correction per clip brings the lowest sampled sole to Z=0; it does not manufacture per-frame contact. The last column exposes how few genuinely planted frames many acrobatic clips contain.
+
+| Clip | Frames | Max orient error | Max root error | Constant Z shift | Sole before | Sole after | Frames within 5 mm |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Combat_Stance | 51 | 0.000000° | 0.000137 mm | -39.273 mm | +39.273 mm | -0.000008 mm | 30 |
+| Walk_Fight_Forward | 53 | 0.000000° | 0.000120 mm | +31.355 mm | -31.355 mm | +0.000093 mm | 2 |
+| Attack | 85 | 0.000000° | 0.000169 mm | +291.568 mm | -291.568 mm | 0.000000 mm | 3 |
+| Left_Slash | 96 | 0.000000° | 0.000124 mm | -151.793 mm | +151.793 mm | -0.000042 mm | 12 |
+| Right_Hand_Sword_Slash | 46 | 0.000000° | 0.000137 mm | +38.572 mm | -38.572 mm | -0.000044 mm | 5 |
+| Double_Combo_Attack | 86 | 0.000000° | 0.000492 mm | -100.418 mm | +100.418 mm | -0.000053 mm | 2 |
+| Triple_Combo_Attack | 131 | 0.000000° | 0.000716 mm | +175.538 mm | -175.538 mm | +0.000023 mm | 3 |
+| Sword_Judgment | 132 | 0.000000° | 0.000478 mm | +182.944 mm | -182.944 mm | +0.000206 mm | 2 |
+| Reaping_Swing | 179 | 0.000000° | 0.000206 mm | -14.513 mm | +14.513 mm | +0.000017 mm | 3 |
+| Rightward_Spin | 241 | 0.000000° | 0.000481 mm | +599.299 mm | -599.299 mm | +0.000076 mm | 2 |
+| Basic_Jump | 178 | 0.000000° | 0.000533 mm | +85.962 mm | -85.962 mm | -0.000107 mm | 11 |
+| Roll_Dodge | 56 | 0.000000° | 0.000972 mm | +525.529 mm | -525.529 mm | -0.000026 mm | 1 |
+| Sword_Parry | 57 | 0.000000° | 0.000123 mm | -166.613 mm | +166.613 mm | +0.000013 mm | 33 |
+| Hit_Reaction | 50 | 0.000000° | 0.000477 mm | +6.090 mm | -6.090 mm | -0.000035 mm | 1 |
+| Dead | 90 | 0.000000° | 0.000289 mm | +178.471 mm | -178.471 mm | -0.000162 mm | 3 |
+
+### Head, hair, collar, sash, and hem
+
+- The previous head was 34.2031 mm below the measured front-rim reference. It was lifted 64.2031 mm, placing the chin 29.9999 mm above the rim—inside the requested 20–40 mm range—with the mouth and full jaw visible.
+- Head scale remains 1.000; no scale adjustment was needed. NeckBlend ends 5.9999 mm below the chin, far below the 60 mm exposed-neck ceiling.
+- Weld-aware topology found 41 hair-bearing components. Thirty-five components under 40 vertices were removed, totaling 184 vertices. No surviving component is farther than 30 mm from the main hair geometry.
+- The body has hundreds of pre-existing Meshy boundary components. Round 2 added 324 small, exactly boundary-local weighted caps (1,247 vertices): 103 upper-torso, 217 belt, and 4 hem faces. Broad liner and large-cycle experiments were rendered, judged worse, and removed.
+- Important visual limitation: the large side/rear torso and skirt discontinuities are still visible in profile. They are source-mesh fragmentation, not retarget stretch. The attempted liners read as obvious smooth primitives, so the final asset preserves the honest source defect instead of shipping a conspicuous fake panel. This model still needs a proper garment remodel for a clean side/back hero view.
+
+### Full Round-2 mechanical audit
+
+Every integer frame of all 15 actions was audited. Visible exterior head/hair-versus-collar/pauldron pairs are zero for every clip; central jaw/gorget interior overlap is intentionally allowed. Sword/head overlap is also zero throughout. Negative blade Z is floor penetration.
+
+| Clip | Stretch p99 | Sole min | Visible head pairs | Sword/head frames | Sword/body frames | Blade min |
+|---|---:|---:|---:|---:|---:|---:|
+| Combat_Stance | 1.5119 | -0.000 mm | 0 | 0 | 0 | +930.4 mm |
+| Walk_Fight_Forward | 1.8575 | +0.000 mm | 0 | 0 | 0 | +1831.6 mm |
+| Attack | 2.2382 | +0.000 mm | 0 | 0 | 0 | -566.0 mm |
+| Left_Slash | 2.1784 | -0.000 mm | 0 | 0 | 1 | +508.3 mm |
+| Right_Hand_Sword_Slash | 1.7530 | -0.000 mm | 0 | 0 | 0 | +1037.7 mm |
+| Double_Combo_Attack | 2.1803 | -0.000 mm | 0 | 0 | 1 | -648.6 mm |
+| Triple_Combo_Attack | 2.0318 | +0.000 mm | 0 | 0 | 0 | -216.5 mm |
+| Sword_Judgment | 1.7793 | +0.000 mm | 0 | 0 | 0 | +653.9 mm |
+| Reaping_Swing | 2.1399 | +0.000 mm | 0 | 0 | 0 | +287.3 mm |
+| Rightward_Spin | 1.9342 | +0.000 mm | 0 | 0 | 7 | -101.6 mm |
+| Basic_Jump | 2.1744 | -0.000 mm | 0 | 0 | 0 | -1269.3 mm |
+| Roll_Dodge | 1.8381 | -0.000 mm | 0 | 0 | 0 | -331.6 mm |
+| Sword_Parry | 1.8546 | +0.000 mm | 0 | 0 | 0 | +1848.6 mm |
+| Hit_Reaction | 1.9240 | -0.000 mm | 0 | 0 | 0 | +2084.9 mm |
+| Dead | 1.9368 | -0.000 mm | 0 | 0 | 4 | -286.2 mm |
+
+Root lifting cannot repair the seven negative-blade cases without floating their already-grounded soles. Attack, Double Combo, Triple Combo, Rightward Spin, Basic Jump, Roll Dodge, and Dead were dropped rather than receiving destructive wrist edits or dishonest root offsets. Left Slash, Double Combo, Rightward Spin, and Dead also have sword/body contacts.
+
+### Direct film review and final verdicts
+
+I directly inspected every Round-2 root-follow film plus both contact-sheet views. The labels below distinguish a bad retarget from a source clip that is simply wrong for this character. The world-space reconstruction fixed the old arbitrary cant/attachment collisions, but it did not turn acrobatic source motion into grounded boss choreography.
+
+| Clip | Verdict | Own-eye assessment |
+|---|---|---|
+| Combat_Stance | **ACCEPT** | Grounded, stable, clean silhouette; usable low-hang idle placeholder, though the open off-hand is still generic rather than regal. |
+| Walk_Fight_Forward | DROP | Still reads airborne/hovering for most of the cycle; only two frames reach the 5 mm contact band. Source-motion mismatch, not retarget cant. |
+| Attack | DROP | Acrobatic leap with a suspended start and 566 mm blade/floor penetration; not a readable grounded initiator. |
+| Left_Slash | DROP | Wild backbend/acrobatic sweep with visible garment stress and one sword/body overlap. |
+| Right_Hand_Sword_Slash | DROP (best attack) | The clearest, most readable grounded cut and visually usable, but p99 1.7530 fails the inherited 1.6 hard gate. |
+| Double_Combo_Attack | DROP | Floats/tumbles through the sequence; one sword/body frame and 648.6 mm blade penetration. |
+| Triple_Combo_Attack | DROP | Most promising long combo by eye, but includes a pronounced leap, p99 2.0318, and 216.5 mm blade penetration. |
+| Sword_Judgment | DROP | Oversized jump/sacred-slam motion repeatedly exceeds a useful boss silhouette; p99 1.7793. |
+| Reaping_Swing | DROP | Broad floating pinwheel with visible cloth/body stress; not a controlled reap. |
+| Rightward_Spin | DROP | Prolonged airborne tumble, seven sword/body frames, and 101.6 mm blade penetration. |
+| Basic_Jump | DROP | Huge jump leaves the useful frame and drives the blade 1.269 m below the floor. |
+| Roll_Dodge | DROP | A 7.15 m gymnastic airborne tumble rather than a compact dodge; 331.6 mm blade penetration. |
+| Sword_Parry | DROP (visual reserve) | Grounded and readable as a held parry stance, but p99 1.8546 fails the hard stretch gate. |
+| Hit_Reaction | DROP (visual reserve) | Readable knockback/stagger and clean collisions, but only one planted frame and p99 1.9240. |
+| Dead | DROP | Clear falling/death intent, but four sword/body frames, 286.2 mm blade penetration, and p99 1.9368. |
+
+### Films, cameras, and final renders
+
+`renders/astra/v3m_round2/` contains 15 MP4s, 15 root-follow sheets, and 15 static-wide contact sheets. Every MP4 was independently checked with `ffprobe` on black-sky: 768×768, 30 fps, and exactly the source frame count in the input table. XY root-follow keeps traveling actions centered while preserving visible vertical motion; the static-wide sheet exposes total root travel.
+
+Final 1200×1800 hero views and the collar/face close-ups are in `renders/astra/v3m_round2_final/`. They are rendered from the accepted Round-2 WIP state with inherited body-surface cap materials. The face framing is centered on the actual donor head. Direct inspection confirms the mouth/jaw clearance and removal of the small floating hair slivers; it also confirms the unresolved source garment fragmentation described above.
+
+### Final GLB round-trip
+
+The final GLB re-import contains exactly `Combat_Stance`, 51 frames at 30 fps. It preserves all 24 bone names and hierarchy, a 24-joint skin, and zero unweighted or bad-sum skinned vertices. Maximum rest-joint position error is 0.0326 mm.
+
+Round-2 evidence:
+
+- `renders/astra/char2/astra_v3m_round2_build.json` — world-space transfer, head/hair repair, per-clip root offsets and contact rows
+- `renders/astra/char2/meshy_v3m_round2_audit.json` — all-frame, all-clip mechanical and collision audit
+- `renders/astra/char2/astra_v3m_round2_publish.json` — final promotion hashes and backup lineage
+- `renders/astra/char2/astra_v3m_round2_roundtrip.json` — independent GLB re-import result
+- `renders/astra/char2/codex_v3m_round2.log` — complete run log
+- `renders/astra/v3m_round2/` — all films and both sheet types
+- `renders/astra/v3m_round2_final/` — accepted hero and close-up evidence

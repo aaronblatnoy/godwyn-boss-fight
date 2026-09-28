@@ -3,7 +3,8 @@
 All invocations are intended for black-sky.  Modes:
   before -- two diagnostic renders from the published pre-fix blend
   heroes -- final Combat_Stance heroes
-  film <clip> -- all frames for one clip at 768 square
+  film <clip> -- all frames for one clip at 768 square, root-follow camera
+  sheet <clip> -- twelve frames at 768 square, static wide camera
 """
 
 import argparse
@@ -23,11 +24,12 @@ OUT = ROOT / "renders/astra/v3m"
 def cli():
     raw = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     parser = argparse.ArgumentParser()
-    parser.add_argument("mode", choices=("before", "heroes", "film"))
+    parser.add_argument("mode", choices=("before", "heroes", "film", "sheet"))
     parser.add_argument("clip", nargs="?")
     parser.add_argument("--blend", default="models/astra_character_v3.blend")
     parser.add_argument("--samples", type=int)
     parser.add_argument("--step", type=int, default=1)
+    parser.add_argument("--out", default="renders/astra/v3m")
     return parser.parse_args(raw)
 
 
@@ -236,22 +238,58 @@ def film(scene, camera, rig, assets, clip, samples, step):
     }
 
 
+def sheet(scene, camera, rig, assets, clip, samples):
+    action = action_by_name(rig, clip)
+    start, end = [int(round(value)) for value in action.frame_range]
+    devices = configure(scene, 768, 768, samples)
+    path = []
+    for frame in range(start, end + 1):
+        assign_action(rig, action, frame)
+        path.append(rig.matrix_world @ rig.pose.bones["Hips"].head)
+    low_x, high_x = min(point.x for point in path), max(point.x for point in path)
+    low_y, high_y = min(point.y for point in path), max(point.y for point in path)
+    target = Vector(((low_x + high_x) * 0.5, (low_y + high_y) * 0.5, 1.60))
+    travel = ((high_x - low_x) ** 2 + (high_y - low_y) ** 2) ** 0.5
+    scale = max(4.4, 4.2 + travel)
+    set_camera(camera, (target.x + 4.8, target.y - 6.4, 2.25), target, scale)
+    count = min(12, end - start + 1)
+    frames = sorted({int(round(start + index * (end - start) / max(1, count - 1))) for index in range(count)})
+    folder = OUT / f"{clip}_wide_frames"
+    folder.mkdir(parents=True, exist_ok=True)
+    for output_index, frame in enumerate(frames, 1):
+        assign_action(rig, action, frame)
+        render(scene, folder / f"{output_index:04d}.png")
+    return {
+        "mode": "sheet", "clip": clip, "sampled_source_frames": frames,
+        "resolution": [768, 768], "samples": samples, "devices": devices,
+        "camera": "static three-quarter wide", "root_xy_travel_m": travel,
+        "ortho_scale": scale,
+    }
+
+
 def main():
+    global OUT
     args = cli()
+    OUT = root_path(args.out)
     bpy.ops.wm.open_mainfile(filepath=str(root_path(args.blend)), load_ui=False)
     scene = bpy.context.scene
     scene.render.fps = 30
     rig = bpy.data.objects["Astra_V3_Rig"]
-    names = ["char1", "AstraChar2_Meshy_HeadHair", "AstraChar2_Meshy_NeckBlend", "Astra_V3_Collar_Occluder", "Godwyn_Sword"]
-    assets = [bpy.data.objects[name] for name in names if bpy.data.objects.get(name)]
+    assets = [obj for obj in scene.objects if obj.type == "MESH" and (
+        obj.name == "char1" or obj.name == "Godwyn_Sword" or obj.name.startswith("AstraChar2_")
+        or obj.name == "Astra_V3_Collar_Occluder"
+    )]
     camera = studio(scene)
     if args.mode == "before":
         report = before(scene, camera, rig)
     elif args.mode == "heroes":
         report = heroes(scene, camera, rig, assets, args.samples or 128)
-    else:
+    elif args.mode == "film":
         assert args.clip
         report = film(scene, camera, rig, assets, args.clip, args.samples or 12, args.step)
+    else:
+        assert args.clip
+        report = sheet(scene, camera, rig, assets, args.clip, args.samples or 12)
     path = OUT / f"render_{args.mode}{'_' + args.clip if args.clip else ''}.json"
     path.write_text(json.dumps(report, indent=2) + "\n")
     print("V3M_RENDER_COMPLETE", json.dumps(report), flush=True)
