@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "x_combo"
+initiator = true
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.25
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.15, "end_t": 0.30, "radius": 1.2, "position": Vector3(0, 1, -1.2), "extents": Vector3(1.2, 1, 1.8)}, {"start_t": 0.50, "end_t": 0.65, "radius": 1.2, "position": Vector3(0, 1, -1.2), "extents": Vector3(1.2, 1, 1.8)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.45
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 60
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 15.0
+animation_clip = "x_combo"
+enters_state = "EXTENDED"
+; The X opener always reaches one branch so its shortest chain has two attacks;
+; later edges carry the PLACEHOLDER continuation rolls that vary total length.
+exit_options = [{"attack_id": "branch_a_double_spin", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "branch_b_half_spin_overhead", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "branch_c_full_half_overhead", "weight": 1.0, "continue_probability": 1.0}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "DIAGONAL \\ + DIAGONAL /"

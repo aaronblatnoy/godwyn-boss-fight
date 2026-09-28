@@ -33,6 +33,30 @@ func activate() -> void:
 	monitoring = true
 
 
+func activate_window(window: Dictionary) -> void:
+	configure_window(window)
+	activate()
+
+
+func configure_window(window: Dictionary) -> void:
+	var collision_shape := get_node_or_null("CollisionShape3D") as CollisionShape3D
+	if collision_shape == null:
+		collision_shape = CollisionShape3D.new()
+		collision_shape.name = "CollisionShape3D"
+		add_child(collision_shape)
+	collision_shape.position = window.get("position", Vector3.ZERO) as Vector3
+	if window.has("extents"):
+		var box := BoxShape3D.new()
+		box.size = (window.get("extents", Vector3.ZERO) as Vector3) * 2.0
+		collision_shape.shape = box
+	elif window.has("radius"):
+		var sphere := SphereShape3D.new()
+		sphere.radius = maxf(float(window.get("radius", 0.0)), 0.0)
+		collision_shape.shape = sphere
+	else:
+		push_error("Hitbox active window has no extents or radius geometry")
+
+
 func deactivate() -> void:
 	monitoring = false
 	monitorable = false

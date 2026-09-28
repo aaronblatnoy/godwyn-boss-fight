@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+; Structural placeholder only. Phase 5 owns randomized duration, step-offline,
+; counter branching, cooldown, and the post-wait initiator weighting.
+[resource]
+script = ExtResource("1")
+id = "the_pause"
+initiator = true
+; SPEC.txt: the stillness itself is the tell, so there is no telegraph.
+telegraph_time = 0.0
+active_windows = []
+; PLACEHOLDER lower bound -- SPEC gives a randomized 3.0-5.0s duration.
+recovery_time = 3.0
+damage = 0
+poise_damage = 0.0
+animation_clip = "the_pause"
+enters_state = "IDLE"
+overshoot_possible = false
+; PLACEHOLDER -- SPEC gives no camera-pull value for this move.
+camera_pull = 0.0
+cut_vocabulary = "NON-DAMAGING"

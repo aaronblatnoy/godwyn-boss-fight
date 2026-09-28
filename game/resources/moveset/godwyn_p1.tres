@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MovesetTree" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/moveset_tree.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+; PLACEHOLDER weights until Phase 5 applies SPEC's distance-band selection.
+initiators = [{"attack_id": "x_combo", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "horizontal_sweep", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "jump_lunge", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "dragons_memory", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "the_pause", "weight": 1.0, "continue_probability": 1.0}]
+state_exits = {
+; BACK_TO_PLAYER exits are guaranteed: the SPEC overshoot rule forbids an idle reset.
+"BACK_TO_PLAYER": [{"attack_id": "backhand_rotation", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "overhead_slam", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "branch_a_double_spin", "weight": 1.0, "continue_probability": 1.0}],
+; PLACEHOLDER probabilities -- SPEC requires variable extension but gives no values.
+"AIRBORNE": [{"attack_id": "jump_lunge_connect", "weight": 1.0, "continue_probability": 0.7}],
+"EXTENDED": [{"attack_id": "branch_a_double_spin", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "branch_b_half_spin_overhead", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "branch_c_full_half_overhead", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "x_combo", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "jump_thrust", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "straight_stab_quiet", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "flow_into_x", "weight": 1.0, "continue_probability": 0.6}]
+}

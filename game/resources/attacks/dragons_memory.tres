@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+; Structural placeholder only. The destroyable dragon entity and true 110-degree
+; cone collision belong to Phases 5/6/9; this proxy uses SPEC's 13m breath length.
+[resource]
+script = ExtResource("1")
+id = "dragons_memory"
+initiator = true
+; SPEC.txt Dragon's Memory: 0.55s turn/look plus 0.70s descent.
+telegraph_time = 1.25
+; SPEC.txt: cone breath remains active for approximately 1.1s. The normalized
+; window spans that future clip; extents are a temporary 13m-length box proxy.
+active_windows = [{"start_t": 0.0, "end_t": 1.0, "position": Vector3(0, 1.6, -6.5), "extents": Vector3(6.5, 1.6, 6.5)}]
+; PLACEHOLDER -- SPEC gives no recovery value for this move.
+recovery_time = 0.5
+; PLACEHOLDER -- SPEC gives no numeric damage value for this move.
+damage = 80
+; PLACEHOLDER -- SPEC gives no numeric poise-damage value for this move.
+poise_damage = 20.0
+animation_clip = "dragons_memory"
+enters_state = "IDLE"
+overshoot_possible = false
+; PLACEHOLDER -- SPEC gives no camera-pull value for this move.
+camera_pull = 0.0
+cut_vocabulary = "SACRED CONE"
