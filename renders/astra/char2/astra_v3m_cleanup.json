@@ -1,0 +1,187 @@
+{
+  "schema": "astra-v3m-residual-head-shell-cleanup",
+  "selection": "body faces above z=2.46 m with mean weight >=0.50 to Head/head_end/headfront",
+  "reason": "source-head remnants move rigidly with the Head bone and were falsely plate-classified by metallic texture; they are not torso/shoulder-driven gorget or pauldron geometry",
+  "before": {
+    "vertices": 250323,
+    "faces": 296323
+  },
+  "after": {
+    "vertices": 250272,
+    "faces": 296306
+  },
+  "removed_faces": 17,
+  "removed_orphan_vertices": 0,
+  "samples": [
+    {
+      "poly": 116366,
+      "center_world_m": [
+        -0.13797128200531006,
+        -0.2964516580104828,
+        2.960012197494507
+      ],
+      "head_weight": 0.7813088695208231,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 118233,
+      "center_world_m": [
+        -0.13126957416534424,
+        -0.3036603629589081,
+        2.935589551925659
+      ],
+      "head_weight": 0.7326707045237223,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 118426,
+      "center_world_m": [
+        -0.13186870515346527,
+        -0.2914379835128784,
+        2.9443578720092773
+      ],
+      "head_weight": 0.7319363753000895,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 135895,
+      "center_world_m": [
+        -0.05674668774008751,
+        -0.3055769205093384,
+        3.1450247764587402
+      ],
+      "head_weight": 0.9807885487874349,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 140791,
+      "center_world_m": [
+        -0.034780509769916534,
+        -0.4828612506389618,
+        2.933927059173584
+      ],
+      "head_weight": 1.0,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 141352,
+      "center_world_m": [
+        -0.026514489203691483,
+        -0.23208306729793549,
+        3.1232333183288574
+      ],
+      "head_weight": 0.9318382143974304,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 148473,
+      "center_world_m": [
+        0.012114103883504868,
+        -0.5194755792617798,
+        2.8519949913024902
+      ],
+      "head_weight": 0.9974942406018575,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 148957,
+      "center_world_m": [
+        0.014714116230607033,
+        -0.3135877549648285,
+        3.15568208694458
+      ],
+      "head_weight": 0.9891777435938517,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 149254,
+      "center_world_m": [
+        0.016297876834869385,
+        -0.49063634872436523,
+        2.788003444671631
+      ],
+      "head_weight": 0.7689326206843058,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 157302,
+      "center_world_m": [
+        0.054831042885780334,
+        -0.4398469626903534,
+        3.1198630332946777
+      ],
+      "head_weight": 1.0,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 164008,
+      "center_world_m": [
+        0.08783745765686035,
+        -0.3802506923675537,
+        3.1097638607025146
+      ],
+      "head_weight": 0.9970584710439047,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 168456,
+      "center_world_m": [
+        0.110492043197155,
+        -0.40984222292900085,
+        2.912631034851074
+      ],
+      "head_weight": 0.9329723715782166,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 169659,
+      "center_world_m": [
+        0.11315862834453583,
+        -0.40501827001571655,
+        2.969242572784424
+      ],
+      "head_weight": 0.9986774921417236,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 170748,
+      "center_world_m": [
+        0.11746831238269806,
+        -0.30083680152893066,
+        2.907775402069092
+      ],
+      "head_weight": 0.6188889741897583,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 172814,
+      "center_world_m": [
+        0.12466314435005188,
+        -0.31403541564941406,
+        2.928006649017334
+      ],
+      "head_weight": 0.7378945151964823,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 176522,
+      "center_world_m": [
+        0.13920427858829498,
+        -0.31680577993392944,
+        2.962531805038452
+      ],
+      "head_weight": 0.8501628637313843,
+      "plate_mask": 1.0
+    },
+    {
+      "poly": 177225,
+      "center_world_m": [
+        0.1441408097743988,
+        -0.2998870611190796,
+        2.969118118286133
+      ],
+      "head_weight": 0.8239803711573283,
+      "plate_mask": 1.0
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "astra-v3m-collision-probe",
+  "clips": {
+    "Combat_Stance": {
+      "most_extended_frame": 33,
+      "samples": [
+        {
+          "frame": 1,
+          "hair": {
+            "triangle_pairs": 0,
+            "source_faces": 0,
+            "armor_faces": 0,
+            "source_rest_bounds": null,
+            "source_posed_bounds": null,
+            "armor_posed_bounds": null
+          },
+          "head": {
+            "triangle_pairs": 0,
+            "source_faces": 0,
+            "armor_faces": 0,
+            "source_rest_bounds": null,
+            "source_posed_bounds": null,
+            "armor_posed_bounds": null
+          }
+        },
+        {
+          "frame": 33,
+          "hair": {
+            "triangle_pairs": 0,
+            "source_faces": 0,
+            "armor_faces": 0,
+            "source_rest_bounds": null,
+            "source_posed_bounds": null,
+            "armor_posed_bounds": null
+          },
+          "head": {
+            "triangle_pairs": 0,
+            "source_faces": 0,
+            "armor_faces": 0,
+            "source_rest_bounds": null,
+            "source_posed_bounds": null,
+            "armor_posed_bounds": null
+          }
+        }
+      ]
+    }
+  }
+}

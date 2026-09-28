@@ -1,0 +1,2671 @@
+{
+  "schema": "astra-v3m-build",
+  "source": "models/astra_character_v3.blend",
+  "source_sha256": "e254ac97530c265ee1ac36b659f4d5ae752e8d27ec6842254e8b79277ca2abc9",
+  "wip": "models/astra_character_v3m_wip.blend",
+  "fps": 30,
+  "head_fix": {
+    "method": "uniform 0.94 scale about Head rest anchor followed by 20 mm lowering",
+    "scale": 0.94,
+    "lowering_m": 0.02,
+    "pivot_world_m": [
+      -1.4259303071639806e-08,
+      -0.34132614731788635,
+      2.8581771850585938
+    ],
+    "jaw_underside_before_m": 2.702179431915283,
+    "jaw_underside_after_m": 2.6915392875671387,
+    "skin_bounds_before_m": {
+      "min": [
+        -0.04363429546356201,
+        -0.3105812072753906,
+        2.617262125015259
+      ],
+      "max": [
+        0.22149811685085297,
+        -0.061353057622909546,
+        3.090622663497925
+      ]
+    },
+    "skin_bounds_after_m": {
+      "min": [
+        -0.04101623594760895,
+        -0.3124258816242218,
+        2.6117169857025146
+      ],
+      "max": [
+        0.20820823311805725,
+        -0.07815143465995789,
+        3.056675910949707
+      ]
+    },
+    "head_binding": {
+      "parent": "Astra_V3_Rig",
+      "groups": [
+        "Head"
+      ],
+      "modifier": "Astra_V3_Rig"
+    },
+    "neckblend": {
+      "center_xy_m": [
+        -0.013217289000749588,
+        -0.22188229858875275
+      ],
+      "rings": [
+        {
+          "z_m": 2.485,
+          "radius_x_m": 0.112,
+          "radius_y_m": 0.088
+        },
+        {
+          "z_m": 2.535,
+          "radius_x_m": 0.11,
+          "radius_y_m": 0.085
+        },
+        {
+          "z_m": 2.595,
+          "radius_x_m": 0.104,
+          "radius_y_m": 0.08
+        },
+        {
+          "z_m": 2.65,
+          "radius_x_m": 0.096,
+          "radius_y_m": 0.074
+        },
+        {
+          "z_m": 2.69,
+          "radius_x_m": 0.089,
+          "radius_y_m": 0.068
+        }
+      ],
+      "parent_bone": "neck"
+    }
+  },
+  "clips": [
+    {
+      "file": "Combat_Stance.glb",
+      "source_sha256": "65a24d28d1c69ebb2674de11fd6cee140148db8f991f196b0b666e4a0e141a27",
+      "source_action": "Armature|Combat_Stance|baselayer",
+      "target_action": "Combat_Stance",
+      "frames": 51,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.023059833012795482,
+        "max_matrix_element_difference": 0.02167588472366333,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.006505089485610201,
+            "matrix_max_abs_difference": 0.006462812423706055
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.004409206119154751,
+            "matrix_max_abs_difference": 0.004292726516723633
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.002608119168484917,
+            "matrix_max_abs_difference": 0.002133607864379883
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0020631586182141754,
+            "matrix_max_abs_difference": 0.002031952142715454
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.006260908028802391,
+            "matrix_max_abs_difference": 0.005723237991333008
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.006376035117366731,
+            "matrix_max_abs_difference": 0.005721092224121094
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0002934427178715907,
+            "matrix_max_abs_difference": 0.0002934243530035019
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.005741130585480541,
+            "matrix_max_abs_difference": 0.005722761154174805
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0033188101631321607,
+            "matrix_max_abs_difference": 0.0026397705078125
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0035233295629564843,
+            "matrix_max_abs_difference": 0.0026397705078125
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.002738034904535389,
+            "matrix_max_abs_difference": 0.002646207809448242
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.002696688611848103,
+            "matrix_max_abs_difference": 0.0026959776878356934
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0042815656114781105,
+            "matrix_max_abs_difference": 0.003528118133544922
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.005006358673031284,
+            "matrix_max_abs_difference": 0.003529071807861328
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.006218831060789402,
+            "matrix_max_abs_difference": 0.005778074264526367
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.004303923552344066,
+            "matrix_max_abs_difference": 0.002946019172668457
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.009192290800278259,
+            "matrix_max_abs_difference": 0.006786972284317017
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.010913523077810293,
+            "matrix_max_abs_difference": 0.008960545063018799
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.023059833012795482,
+            "matrix_max_abs_difference": 0.02167588472366333
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.011501577290317633,
+            "matrix_max_abs_difference": 0.010829448699951172
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.007779650521550674,
+            "matrix_max_abs_difference": 0.006052374839782715
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.008595540833234777,
+            "matrix_max_abs_difference": 0.00734323263168335
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.019762105209576646,
+            "matrix_max_abs_difference": 0.019544243812561035
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.009870985571703418,
+            "matrix_max_abs_difference": 0.00976485013961792
+          }
+        ]
+      },
+      "root_displacement_m": [
+        5.0067901611328125e-06,
+        -6.407499313354492e-05,
+        -1.9788742065429688e-05
+      ],
+      "root_displacement_length_m": 6.724780297759586e-05,
+      "in_place": true,
+      "action_id": 89,
+      "intended_role": "idle / low hang guard placeholder"
+    },
+    {
+      "file": "Walk_Fight_Forward.glb",
+      "source_sha256": "5573af77debfd568fe3b4f9076145ebcfdab252f94047c33832dfaebbf46a9d7",
+      "source_action": "Armature|Walk_Fight_Forward|baselayer",
+      "target_action": "Walk_Fight_Forward",
+      "frames": 53,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.02315842301421744,
+        "max_matrix_element_difference": 0.018127858638763428,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.002029188568197122,
+            "matrix_max_abs_difference": 0.010973664000630379
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0016627728267196251,
+            "matrix_max_abs_difference": 0.0014937818050384521
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.003989861176085376,
+            "matrix_max_abs_difference": 0.00281524658203125
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.006598438456951744,
+            "matrix_max_abs_difference": 0.005169868469238281
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.009652530176656265,
+            "matrix_max_abs_difference": 0.008200645446777344
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.010017638357353965,
+            "matrix_max_abs_difference": 0.00820159912109375
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.00041502010182015153,
+            "matrix_max_abs_difference": 0.0004149968735873699
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.008251653851305208,
+            "matrix_max_abs_difference": 0.008197784423828125
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.006546550348400319,
+            "matrix_max_abs_difference": 0.005086660385131836
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.00658424349451375,
+            "matrix_max_abs_difference": 0.005085468292236328
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0022208670135208056,
+            "matrix_max_abs_difference": 0.0021054744720458984
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0028377566411523186,
+            "matrix_max_abs_difference": 0.0028258562088012695
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.004188550417317317,
+            "matrix_max_abs_difference": 0.003884345293045044
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.003996770928641944,
+            "matrix_max_abs_difference": 0.0036818981170654297
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.004100600614822963,
+            "matrix_max_abs_difference": 0.003890514373779297
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.0026113405445826066,
+            "matrix_max_abs_difference": 0.0024362802505493164
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.006218165933896969,
+            "matrix_max_abs_difference": 0.006044164299964905
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.008386982182179184,
+            "matrix_max_abs_difference": 0.008367598056793213
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.02315842301421744,
+            "matrix_max_abs_difference": 0.018127858638763428
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.009829827708036235,
+            "matrix_max_abs_difference": 0.009066283702850342
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.006754396080002572,
+            "matrix_max_abs_difference": 0.006444305181503296
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.009405235463050641,
+            "matrix_max_abs_difference": 0.009072214365005493
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.005242959705352486,
+            "matrix_max_abs_difference": 0.005071848630905151
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.0025782929746702246,
+            "matrix_max_abs_difference": 0.002530515193939209
+          }
+        ]
+      },
+      "root_displacement_m": [
+        4.470348358154297e-08,
+        -1.043081283569336e-06,
+        -2.2649765014648438e-06
+      ],
+      "root_displacement_length_m": 2.494019951356625e-06,
+      "in_place": true,
+      "action_id": 21,
+      "intended_role": "walk / stalk"
+    },
+    {
+      "file": "Attack.glb",
+      "source_sha256": "0c20f5fcb3571b783539267baa42d9b0178637692522a9d95a0b60ba09d7f38b",
+      "source_action": "Armature|Attack|baselayer",
+      "target_action": "Attack",
+      "frames": 85,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.018263232044398815,
+        "max_matrix_element_difference": 0.016511842608451843,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0010523890403377587,
+            "matrix_max_abs_difference": 0.010650448501110077
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.002391527768369848,
+            "matrix_max_abs_difference": 0.0019216537475585938
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.004496733378475207,
+            "matrix_max_abs_difference": 0.0039179325103759766
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.006681735038961567,
+            "matrix_max_abs_difference": 0.005916595458984375
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.009305274711885197,
+            "matrix_max_abs_difference": 0.008486032485961914
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.009514933747233618,
+            "matrix_max_abs_difference": 0.008486270904541016
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0005895153518760541,
+            "matrix_max_abs_difference": 0.0005894267233088613
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.008542375200304932,
+            "matrix_max_abs_difference": 0.008486747741699219
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.004462210551950199,
+            "matrix_max_abs_difference": 0.0032651424407958984
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.004650136821041332,
+            "matrix_max_abs_difference": 0.003265380859375
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.00032108517178860876,
+            "matrix_max_abs_difference": 0.00030791759490966797
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.003704967614940339,
+            "matrix_max_abs_difference": 0.0034488439559936523
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.003106889148980613,
+            "matrix_max_abs_difference": 0.002559363842010498
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0030245546772745104,
+            "matrix_max_abs_difference": 0.002057284116744995
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.009375723970574193,
+            "matrix_max_abs_difference": 0.00806570053100586
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.006589403664020526,
+            "matrix_max_abs_difference": 0.0062683820724487305
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.004474881759962132,
+            "matrix_max_abs_difference": 0.004427894949913025
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.0070912312253755124,
+            "matrix_max_abs_difference": 0.00605851411819458
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.018263232044398815,
+            "matrix_max_abs_difference": 0.016511842608451843
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.003903396265672743,
+            "matrix_max_abs_difference": 0.003866136074066162
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0002708057321921401,
+            "matrix_max_abs_difference": 0.00016492605209350586
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.0010803618846828465,
+            "matrix_max_abs_difference": 0.0010713934898376465
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.006497066063294113,
+            "matrix_max_abs_difference": 0.0046437084674835205
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.002273653997096817,
+            "matrix_max_abs_difference": 0.002269446849822998
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.00042679905891418457,
+        0.0009844228625297546,
+        0.0010700225830078125
+      ],
+      "root_displacement_length_m": 0.0015153197955790143,
+      "in_place": true,
+      "action_id": 4,
+      "intended_role": "single attack initiator"
+    },
+    {
+      "file": "Left_Slash.glb",
+      "source_sha256": "93313666c01165e3b7720682c5b0692eae48524fdf5b67cc654696a1ef919c86",
+      "source_action": "Armature|Left_Slash|baselayer",
+      "target_action": "Left_Slash",
+      "frames": 96,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.018916755112537646,
+        "max_matrix_element_difference": 0.018266603350639343,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.003111858408322234,
+            "matrix_max_abs_difference": 0.010716003365814686
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.002839873217889799,
+            "matrix_max_abs_difference": 0.002680063247680664
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0026339452415657803,
+            "matrix_max_abs_difference": 0.002484560012817383
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0024875032286024814,
+            "matrix_max_abs_difference": 0.002279520034790039
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.0023065785481216454,
+            "matrix_max_abs_difference": 0.002012014389038086
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.0023967408606306506,
+            "matrix_max_abs_difference": 0.002014636993408203
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0005595999533598649,
+            "matrix_max_abs_difference": 0.000559561769478023
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0020267118047477333,
+            "matrix_max_abs_difference": 0.0020139217376708984
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0012665220854531142,
+            "matrix_max_abs_difference": 0.0008677542209625244
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0014024389826727147,
+            "matrix_max_abs_difference": 0.0009130537509918213
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0008251470395859281,
+            "matrix_max_abs_difference": 0.0007650852203369141
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0027466974921263217,
+            "matrix_max_abs_difference": 0.0022596120834350586
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.003321737426283166,
+            "matrix_max_abs_difference": 0.003219127655029297
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0033734826730258253,
+            "matrix_max_abs_difference": 0.0032196044921875
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.007340933681070372,
+            "matrix_max_abs_difference": 0.006593942642211914
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.009274814239402084,
+            "matrix_max_abs_difference": 0.008750677108764648
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.007885527768952969,
+            "matrix_max_abs_difference": 0.006992504000663757
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.011023396899514766,
+            "matrix_max_abs_difference": 0.008813232183456421
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.018916755112537646,
+            "matrix_max_abs_difference": 0.018266603350639343
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0024604317154417066,
+            "matrix_max_abs_difference": 0.0020806193351745605
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0069637777799582785,
+            "matrix_max_abs_difference": 0.0060660988092422485
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.0095840648978945,
+            "matrix_max_abs_difference": 0.007766366004943848
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.01177813263281549,
+            "matrix_max_abs_difference": 0.010697945952415466
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.002462094010387987,
+            "matrix_max_abs_difference": 0.002016901969909668
+          }
+        ]
+      },
+      "root_displacement_m": [
+        -0.0008597299456596375,
+        0.0010297596454620361,
+        0.0012148618698120117
+      ],
+      "root_displacement_length_m": 0.0018098148615641138,
+      "in_place": true,
+      "action_id": 97,
+      "intended_role": "horizontal sweep"
+    },
+    {
+      "file": "Right_Hand_Sword_Slash.glb",
+      "source_sha256": "976ffc04777c9fa61dea3b8c2dddaa6f1ef7887a1ea0c9700fe196c5bae2a075",
+      "source_action": "Armature|Right_Hand_Sword_Slash|baselayer",
+      "target_action": "Right_Hand_Sword_Slash",
+      "frames": 46,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.01880279638613113,
+        "max_matrix_element_difference": 0.018258363008499146,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.002791352137468634,
+            "matrix_max_abs_difference": 0.002776622772216797
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0016182992610819207,
+            "matrix_max_abs_difference": 0.0015528202056884766
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0007495769149449242,
+            "matrix_max_abs_difference": 0.0006580948829650879
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0012831522586141165,
+            "matrix_max_abs_difference": 0.0009051263332366943
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.0027140602179315976,
+            "matrix_max_abs_difference": 0.0024797916412353516
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.002763481786926564,
+            "matrix_max_abs_difference": 0.002478361129760742
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.00013821470192315117,
+            "matrix_max_abs_difference": 0.00013817392755299807
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0024931811005562063,
+            "matrix_max_abs_difference": 0.002476930618286133
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0013297365411167902,
+            "matrix_max_abs_difference": 0.0011191368103027344
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.001280343204634832,
+            "matrix_max_abs_difference": 0.0011186599731445312
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.006343155999554117,
+            "matrix_max_abs_difference": 0.005907773971557617
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.006241749560396009,
+            "matrix_max_abs_difference": 0.005759596824645996
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.005382614427517776,
+            "matrix_max_abs_difference": 0.0053253173828125
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0061424335096696425,
+            "matrix_max_abs_difference": 0.0053255558013916016
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.010572092419649133,
+            "matrix_max_abs_difference": 0.008785486221313477
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.009981292008008682,
+            "matrix_max_abs_difference": 0.00901329517364502
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.002121066776520106,
+            "matrix_max_abs_difference": 0.0020827054977416992
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.0007224692540840178,
+            "matrix_max_abs_difference": 0.0006786584854125977
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.01880279638613113,
+            "matrix_max_abs_difference": 0.018258363008499146
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0022468286037476658,
+            "matrix_max_abs_difference": 0.001905977725982666
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.006359412472456316,
+            "matrix_max_abs_difference": 0.00570349395275116
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.008662197292204169,
+            "matrix_max_abs_difference": 0.00815439224243164
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.010825946012716522,
+            "matrix_max_abs_difference": 0.008843809366226196
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.004420071826119839,
+            "matrix_max_abs_difference": 0.004419922828674316
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.0002752840518951416,
+        -0.001392662525177002,
+        0.002740025520324707
+      ],
+      "root_displacement_length_m": 0.003085940730757425,
+      "in_place": true,
+      "action_id": 219,
+      "intended_role": "diagonal slash"
+    },
+    {
+      "file": "Double_Combo_Attack.glb",
+      "source_sha256": "05bb3c8889d8384532443673402a52d44ae03f3d7cbd832023aed89e8d7d2e2e",
+      "source_action": "Armature|Double_Combo_Attack|baselayer",
+      "target_action": "Double_Combo_Attack",
+      "frames": 86,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.012087439899218988,
+        "max_matrix_element_difference": 0.011744469404220581,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0022631336466881536,
+            "matrix_max_abs_difference": 0.010732020251452923
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0030122950158260192,
+            "matrix_max_abs_difference": 0.0028030872344970703
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.00401050177966494,
+            "matrix_max_abs_difference": 0.0036323070526123047
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.005107072377643882,
+            "matrix_max_abs_difference": 0.004456520080566406
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.006345456257782294,
+            "matrix_max_abs_difference": 0.005518436431884766
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.006580704774663778,
+            "matrix_max_abs_difference": 0.005518436431884766
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.000513937792825763,
+            "matrix_max_abs_difference": 0.0005139143322594464
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.00555252579552087,
+            "matrix_max_abs_difference": 0.005516767501831055
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.003203470683011256,
+            "matrix_max_abs_difference": 0.0025221705436706543
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.00425474237235715,
+            "matrix_max_abs_difference": 0.002722799777984619
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.001811839387545487,
+            "matrix_max_abs_difference": 0.0017385482788085938
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0036338917874902932,
+            "matrix_max_abs_difference": 0.003351449966430664
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0022910730737147507,
+            "matrix_max_abs_difference": 0.002127528190612793
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.003249177878141773,
+            "matrix_max_abs_difference": 0.002556324005126953
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.007600228888825089,
+            "matrix_max_abs_difference": 0.005174398422241211
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.01163282914681056,
+            "matrix_max_abs_difference": 0.010923981666564941
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.00238774212322799,
+            "matrix_max_abs_difference": 0.002384185791015625
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.004088853658385795,
+            "matrix_max_abs_difference": 0.003992795944213867
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.009366143539359804,
+            "matrix_max_abs_difference": 0.007478877902030945
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0028190275678902244,
+            "matrix_max_abs_difference": 0.0021982789039611816
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0017742267275421726,
+            "matrix_max_abs_difference": 0.001644134521484375
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.0004990948732627768,
+            "matrix_max_abs_difference": 0.0003858208656311035
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.012087439899218988,
+            "matrix_max_abs_difference": 0.011744469404220581
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.0060282608875933666,
+            "matrix_max_abs_difference": 0.005866050720214844
+          }
+        ]
+      },
+      "root_displacement_m": [
+        2.7734804153442383,
+        -0.12750093638896942,
+        0.13600611686706543
+      ],
+      "root_displacement_length_m": 2.779738775764595,
+      "in_place": false,
+      "action_id": 92,
+      "intended_role": "X combo candidate"
+    },
+    {
+      "file": "Triple_Combo_Attack.glb",
+      "source_sha256": "6c3422cef209103db25cc19cde807c6906077d028669a7ed5c51a403508a9877",
+      "source_action": "Armature|Triple_Combo_Attack|baselayer",
+      "target_action": "Triple_Combo_Attack",
+      "frames": 131,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.01627218131141212,
+        "max_matrix_element_difference": 0.014821529388427734,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0011091671001718254,
+            "matrix_max_abs_difference": 0.0008935928344726562
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0012445007353805776,
+            "matrix_max_abs_difference": 0.0010657310485839844
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0014407606229796515,
+            "matrix_max_abs_difference": 0.0012257099151611328
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0016910022439441926,
+            "matrix_max_abs_difference": 0.0013954639434814453
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.001966360097545108,
+            "matrix_max_abs_difference": 0.0016162395477294922
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.0020462635372761415,
+            "matrix_max_abs_difference": 0.0016162395477294922
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0003357056052497546,
+            "matrix_max_abs_difference": 0.0003357008099555969
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0016250415214675,
+            "matrix_max_abs_difference": 0.0016145706176757812
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0020025113262246803,
+            "matrix_max_abs_difference": 0.001622915267944336
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0028186583948928774,
+            "matrix_max_abs_difference": 0.002065032720565796
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.002504586384785386,
+            "matrix_max_abs_difference": 0.002275705337524414
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.008177287975225267,
+            "matrix_max_abs_difference": 0.006896018981933594
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0034871183332628357,
+            "matrix_max_abs_difference": 0.0031158924102783203
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.004723780226053548,
+            "matrix_max_abs_difference": 0.0031158924102783203
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.01299981274439128,
+            "matrix_max_abs_difference": 0.009722471237182617
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.01627218131141212,
+            "matrix_max_abs_difference": 0.014821529388427734
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.0018620586892994244,
+            "matrix_max_abs_difference": 0.001713782548904419
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.0074358253436020835,
+            "matrix_max_abs_difference": 0.007150888442993164
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.0006842623500450733,
+            "matrix_max_abs_difference": 0.0005063712596893311
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.00022580256249365858,
+            "matrix_max_abs_difference": 0.00018852949142456055
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.000997882172432601,
+            "matrix_max_abs_difference": 0.0009573698043823242
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.0012377975735351386,
+            "matrix_max_abs_difference": 0.0012329816818237305
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.014690397297119361,
+            "matrix_max_abs_difference": 0.013063579797744751
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.006606325370220553,
+            "matrix_max_abs_difference": 0.006529390811920166
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.46433204412460327,
+        -3.4179320335388184,
+        -0.014354586601257324
+      ],
+      "root_displacement_length_m": 3.449357890891179,
+      "in_place": false,
+      "action_id": 105,
+      "intended_role": "Sovereigns Sequence candidate"
+    },
+    {
+      "file": "Sword_Judgment.glb",
+      "source_sha256": "57877f8221e0ea1761e8481227f770bdd21d4f6a498eaf1be3306daf4f161d3a",
+      "source_action": "Armature|Sword_Judgment|baselayer",
+      "target_action": "Sword_Judgment",
+      "frames": 132,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.02049278691472496,
+        "max_matrix_element_difference": 0.017600640654563904,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.008416210283314988,
+            "matrix_max_abs_difference": 0.008403420448303223
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.00948219096599266,
+            "matrix_max_abs_difference": 0.009379386901855469
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.010816750615929375,
+            "matrix_max_abs_difference": 0.010365724563598633
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.012321737611866303,
+            "matrix_max_abs_difference": 0.011347293853759766
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.014012301351224056,
+            "matrix_max_abs_difference": 0.012605667114257812
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.014421672640454903,
+            "matrix_max_abs_difference": 0.012605667114257812
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.00022596432141086802,
+            "matrix_max_abs_difference": 0.00022596039343625307
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.012689287643146226,
+            "matrix_max_abs_difference": 0.012606382369995117
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0051989327242013255,
+            "matrix_max_abs_difference": 0.004856199026107788
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.005326681657006585,
+            "matrix_max_abs_difference": 0.004912704229354858
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0007154449371600077,
+            "matrix_max_abs_difference": 0.0005443096160888672
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.003965272172100639,
+            "matrix_max_abs_difference": 0.0035849809646606445
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0046557864764297085,
+            "matrix_max_abs_difference": 0.0044682323932647705
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.004359429466409636,
+            "matrix_max_abs_difference": 0.004136532545089722
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.0077246150838757585,
+            "matrix_max_abs_difference": 0.006551027297973633
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.011538650586822912,
+            "matrix_max_abs_difference": 0.010307908058166504
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.010383894745171414,
+            "matrix_max_abs_difference": 0.008648514747619629
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.012689368993095843,
+            "matrix_max_abs_difference": 0.00961446762084961
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.010135664431089144,
+            "matrix_max_abs_difference": 0.00941118597984314
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0048337078874101875,
+            "matrix_max_abs_difference": 0.00469738245010376
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.008716099270729074,
+            "matrix_max_abs_difference": 0.00832664966583252
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.008895207331238374,
+            "matrix_max_abs_difference": 0.008023440837860107
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.02049278691472496,
+            "matrix_max_abs_difference": 0.017600640654563904
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.005251327290967152,
+            "matrix_max_abs_difference": 0.005233347415924072
+          }
+        ]
+      },
+      "root_displacement_m": [
+        -0.3590117394924164,
+        -2.213597297668457,
+        0.05974304676055908
+      ],
+      "root_displacement_length_m": 2.243317103790979,
+      "in_place": false,
+      "action_id": 102,
+      "intended_role": "overhead / sacred slam candidate"
+    },
+    {
+      "file": "Reaping_Swing.glb",
+      "source_sha256": "27644b14a0f274046b5342babb445112771f173b4e080b00d280367182c1dcf8",
+      "source_action": "Armature|Reaping_Swing|baselayer",
+      "target_action": "Reaping_Swing",
+      "frames": 179,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.021442581210711815,
+        "max_matrix_element_difference": 0.02044372260570526,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0036740704266355036,
+            "matrix_max_abs_difference": 0.01068061962723732
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.00186000927768981,
+            "matrix_max_abs_difference": 0.0014200210571289062
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0016245966017350059,
+            "matrix_max_abs_difference": 0.0013031959533691406
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0033284437455306094,
+            "matrix_max_abs_difference": 0.002758502960205078
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.005860485006205879,
+            "matrix_max_abs_difference": 0.00543975830078125
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.005951747405351147,
+            "matrix_max_abs_difference": 0.00544285774230957
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0005823272185137083,
+            "matrix_max_abs_difference": 0.0005823109531775117
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.005475938567656548,
+            "matrix_max_abs_difference": 0.005440711975097656
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.004223216269613547,
+            "matrix_max_abs_difference": 0.003873586654663086
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0042734606418905864,
+            "matrix_max_abs_difference": 0.003873586654663086
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0033491459788385675,
+            "matrix_max_abs_difference": 0.0031900405883789062
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0014841059691756732,
+            "matrix_max_abs_difference": 0.0014357566833496094
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.004913705751191167,
+            "matrix_max_abs_difference": 0.004641056060791016
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.005506586452026395,
+            "matrix_max_abs_difference": 0.004642009735107422
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.009115176660742571,
+            "matrix_max_abs_difference": 0.007932901382446289
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.004868917116377607,
+            "matrix_max_abs_difference": 0.00444638729095459
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.003293941477770518,
+            "matrix_max_abs_difference": 0.0027101337909698486
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.006214496133808217,
+            "matrix_max_abs_difference": 0.004628539085388184
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.005303250184283072,
+            "matrix_max_abs_difference": 0.005097895860671997
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.000734502236333418,
+            "matrix_max_abs_difference": 0.0005713701248168945
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0030314160049385976,
+            "matrix_max_abs_difference": 0.002255082130432129
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.003878984204153764,
+            "matrix_max_abs_difference": 0.0027457475662231445
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.021442581210711815,
+            "matrix_max_abs_difference": 0.02044372260570526
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.0032354601746072066,
+            "matrix_max_abs_difference": 0.002623438835144043
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.5769364833831787,
+        -0.7019814848899841,
+        0.901592493057251
+      ],
+      "root_displacement_length_m": 1.2800401232063499,
+      "in_place": false,
+      "action_id": 99,
+      "intended_role": "The Tide candidate"
+    },
+    {
+      "file": "Rightward_Spin.glb",
+      "source_sha256": "2c3182a711a36259e6c13b25a69a9a166892e48a189045278ca3f460be324183",
+      "source_action": "Armature|Rightward_Spin|baselayer",
+      "target_action": "Rightward_Spin",
+      "frames": 241,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.0190353858924251,
+        "max_matrix_element_difference": 0.017033278942108154,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.002120989031362117,
+            "matrix_max_abs_difference": 0.001890019979327917
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0017993234948644966,
+            "matrix_max_abs_difference": 0.001574937952682376
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.002878262949906468,
+            "matrix_max_abs_difference": 0.002076864242553711
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.004435252048544299,
+            "matrix_max_abs_difference": 0.003583669662475586
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.006357198604009861,
+            "matrix_max_abs_difference": 0.0055179595947265625
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.00657838439529008,
+            "matrix_max_abs_difference": 0.0055162906646728516
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0008941169850426946,
+            "matrix_max_abs_difference": 0.0008941128617152572
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.005537304939746898,
+            "matrix_max_abs_difference": 0.005516529083251953
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0047853489065894355,
+            "matrix_max_abs_difference": 0.00399017333984375
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.004848575135049776,
+            "matrix_max_abs_difference": 0.00399017333984375
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0032122099814519047,
+            "matrix_max_abs_difference": 0.0030374526977539062
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.001150634413120463,
+            "matrix_max_abs_difference": 0.001140892505645752
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.004889309554149503,
+            "matrix_max_abs_difference": 0.003900766372680664
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.005406214036420418,
+            "matrix_max_abs_difference": 0.0039010047912597656
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.0047073517857862054,
+            "matrix_max_abs_difference": 0.003997087478637695
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.009977339239745708,
+            "matrix_max_abs_difference": 0.008942484855651855
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.0045276726234482175,
+            "matrix_max_abs_difference": 0.004287451505661011
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.006335473498408608,
+            "matrix_max_abs_difference": 0.005224883556365967
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.0190353858924251,
+            "matrix_max_abs_difference": 0.017033278942108154
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.008824763231285821,
+            "matrix_max_abs_difference": 0.008513808250427246
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0005941780280263117,
+            "matrix_max_abs_difference": 0.0004673004150390625
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.0021038190906655712,
+            "matrix_max_abs_difference": 0.0020977258682250977
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.008009321110350232,
+            "matrix_max_abs_difference": 0.007667720317840576
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.004007917592725395,
+            "matrix_max_abs_difference": 0.0038380026817321777
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.0008618980646133423,
+        -0.0008621513843536377,
+        -0.001789689064025879
+      ],
+      "root_displacement_length_m": 0.0021654469133858103,
+      "in_place": true,
+      "action_id": 100,
+      "intended_role": "rising spin / spin attack"
+    },
+    {
+      "file": "Basic_Jump.glb",
+      "source_sha256": "ce89e14316863dc05602ad56e8a3e1e518995e14f7a68b72401898ccf9d9dd4e",
+      "source_action": "Armature|Basic_Jump|baselayer",
+      "target_action": "Basic_Jump",
+      "frames": 178,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.010418149192752572,
+        "max_matrix_element_difference": 0.009435892105102539,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.002254184488639754,
+            "matrix_max_abs_difference": 0.002218484878540039
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0016586046333191935,
+            "matrix_max_abs_difference": 0.0016183853149414062
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0010776829448060016,
+            "matrix_max_abs_difference": 0.0010230541229248047
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0005356216552125346,
+            "matrix_max_abs_difference": 0.0004227161407470703
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.0004738088190127785,
+            "matrix_max_abs_difference": 0.0003528594970703125
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.0004770311552701536,
+            "matrix_max_abs_difference": 0.00035071372985839844
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.00018994410750633226,
+            "matrix_max_abs_difference": 0.00018987758085131645
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0003549289940305764,
+            "matrix_max_abs_difference": 0.0003523826599121094
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0007134208214714252,
+            "matrix_max_abs_difference": 0.0005857944488525391
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0007957597921808752,
+            "matrix_max_abs_difference": 0.0005862712860107422
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0033360392764161047,
+            "matrix_max_abs_difference": 0.0029709339141845703
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0008297810673422062,
+            "matrix_max_abs_difference": 0.0007728338241577148
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0031080801246729075,
+            "matrix_max_abs_difference": 0.0030400753021240234
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0032411873540044794,
+            "matrix_max_abs_difference": 0.003041505813598633
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.007906275111365308,
+            "matrix_max_abs_difference": 0.006783246994018555
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.010418149192752572,
+            "matrix_max_abs_difference": 0.009435892105102539
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.004368951137950313,
+            "matrix_max_abs_difference": 0.004004165530204773
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.005293257213172607,
+            "matrix_max_abs_difference": 0.005229473114013672
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.0072553839385275445,
+            "matrix_max_abs_difference": 0.005492791533470154
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.00236733662717213,
+            "matrix_max_abs_difference": 0.0019412636756896973
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.002918755416764784,
+            "matrix_max_abs_difference": 0.002447962760925293
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.003917742933784403,
+            "matrix_max_abs_difference": 0.003370344638824463
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.008388405159294886,
+            "matrix_max_abs_difference": 0.008051633834838867
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.004103582441321061,
+            "matrix_max_abs_difference": 0.004031240940093994
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.11202836036682129,
+        -2.618421792984009,
+        -0.003879070281982422
+      ],
+      "root_displacement_length_m": 2.620820083024172,
+      "in_place": false,
+      "action_id": 86,
+      "intended_role": "jump lunge base"
+    },
+    {
+      "file": "Roll_Dodge.glb",
+      "source_sha256": "c81eed21c30565ea8e4acbf0c11069e1cf177357d2ae32093a2dd574cb5860cf",
+      "source_action": "Armature|Roll_Dodge|baselayer",
+      "target_action": "Roll_Dodge",
+      "frames": 56,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.016886666714127366,
+        "max_matrix_element_difference": 0.013967067003250122,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0014077988684435456,
+            "matrix_max_abs_difference": 0.0012012695660814643
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.0014701016268476664,
+            "matrix_max_abs_difference": 0.0010528564453125
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.0017583177371503238,
+            "matrix_max_abs_difference": 0.0014181137084960938
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.002174208110565423,
+            "matrix_max_abs_difference": 0.0017762184143066406
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.0026680635788213485,
+            "matrix_max_abs_difference": 0.002234220504760742
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.0027872674131074067,
+            "matrix_max_abs_difference": 0.002236604690551758
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0005971383137512068,
+            "matrix_max_abs_difference": 0.0005971142090857029
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0022494563142832014,
+            "matrix_max_abs_difference": 0.0022351741790771484
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0022512194554137927,
+            "matrix_max_abs_difference": 0.0019142627716064453
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.002230034832504844,
+            "matrix_max_abs_difference": 0.0019140243530273438
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.00302495529081564,
+            "matrix_max_abs_difference": 0.0029714107513427734
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.004015974110938342,
+            "matrix_max_abs_difference": 0.003389596939086914
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.001935721729383912,
+            "matrix_max_abs_difference": 0.0016546249389648438
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.002667518673988554,
+            "matrix_max_abs_difference": 0.0018895268440246582
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.0036734423737109,
+            "matrix_max_abs_difference": 0.0035545825958251953
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.0018427356400879918,
+            "matrix_max_abs_difference": 0.0012968778610229492
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.002809417560349396,
+            "matrix_max_abs_difference": 0.0022858083248138428
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.0057205080260513946,
+            "matrix_max_abs_difference": 0.0052010416984558105
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.016886666714127366,
+            "matrix_max_abs_difference": 0.013967067003250122
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.004750682940369527,
+            "matrix_max_abs_difference": 0.003931701183319092
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.006061961966792351,
+            "matrix_max_abs_difference": 0.005797579884529114
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.009574094690378948,
+            "matrix_max_abs_difference": 0.007384300231933594
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.008168803830558291,
+            "matrix_max_abs_difference": 0.008051067590713501
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.0006921101677562537,
+            "matrix_max_abs_difference": 0.0006916224956512451
+          }
+        ]
+      },
+      "root_displacement_m": [
+        1.1732866764068604,
+        -7.046300888061523,
+        -0.1577852964401245
+      ],
+      "root_displacement_length_m": 7.145058017148172,
+      "in_place": false,
+      "action_id": 158,
+      "intended_role": "dodge / repositioning"
+    },
+    {
+      "file": "Sword_Parry.glb",
+      "source_sha256": "bead370e92b4432d48255198de271d103920aab42fa6d8fed6fd7a2dc03b9dd2",
+      "source_action": "Armature|Sword_Parry|baselayer",
+      "target_action": "Sword_Parry",
+      "frames": 57,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.01675255716681756,
+        "max_matrix_element_difference": 0.01424407958984375,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0007300518511361934,
+            "matrix_max_abs_difference": 0.01052384078502655
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.004377064137255864,
+            "matrix_max_abs_difference": 0.003860950469970703
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.008142795395066155,
+            "matrix_max_abs_difference": 0.007025480270385742
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.011908898849334108,
+            "matrix_max_abs_difference": 0.010183095932006836
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.01621944099769124,
+            "matrix_max_abs_difference": 0.014241933822631836
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.01675255716681756,
+            "matrix_max_abs_difference": 0.014241933822631836
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0001867276085480242,
+            "matrix_max_abs_difference": 0.00021424645092338324
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.014337685373542767,
+            "matrix_max_abs_difference": 0.01424407958984375
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.006714904093841114,
+            "matrix_max_abs_difference": 0.006279647350311279
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0068864949339445996,
+            "matrix_max_abs_difference": 0.006384551525115967
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.003724332762681339,
+            "matrix_max_abs_difference": 0.0033054351806640625
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.001765434126140863,
+            "matrix_max_abs_difference": 0.0014448165893554688
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.005785601450692908,
+            "matrix_max_abs_difference": 0.005731791257858276
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.006150713137144786,
+            "matrix_max_abs_difference": 0.005288422107696533
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.008741524757766229,
+            "matrix_max_abs_difference": 0.007600545883178711
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.008874155945882737,
+            "matrix_max_abs_difference": 0.007964015007019043
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.0042649608658310535,
+            "matrix_max_abs_difference": 0.0037633925676345825
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.008815562746756855,
+            "matrix_max_abs_difference": 0.007179856300354004
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.0059849240641528375,
+            "matrix_max_abs_difference": 0.00472337007522583
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0018352458372922701,
+            "matrix_max_abs_difference": 0.001473844051361084
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.0028865717081550278,
+            "matrix_max_abs_difference": 0.0028547942638397217
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.003951788377550549,
+            "matrix_max_abs_difference": 0.003891468048095703
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.009753892927502408,
+            "matrix_max_abs_difference": 0.008424609899520874
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.00245884108315869,
+            "matrix_max_abs_difference": 0.0021222829818725586
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.00014214124530553818,
+        0.0005522966384887695,
+        6.306171417236328e-05
+      ],
+      "root_displacement_length_m": 0.0005737704035124683,
+      "in_place": true,
+      "action_id": 147,
+      "intended_role": "The Pause / parry stance"
+    },
+    {
+      "file": "Hit_Reaction.glb",
+      "source_sha256": "3b62b63f82ee1d32e22b8b46a4b963b1d816202ce97f0754a2b6561ad4d0867d",
+      "source_action": "Armature|Hit_Reaction|baselayer",
+      "target_action": "Hit_Reaction",
+      "frames": 50,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.021865337602866623,
+        "max_matrix_element_difference": 0.019233480095863342,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0048861780588546995,
+            "matrix_max_abs_difference": 0.010732432827353477
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.006364289175511485,
+            "matrix_max_abs_difference": 0.006220817565917969
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.008086056142574953,
+            "matrix_max_abs_difference": 0.007574796676635742
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.009918166819243934,
+            "matrix_max_abs_difference": 0.008924245834350586
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.011983570675588653,
+            "matrix_max_abs_difference": 0.010656118392944336
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.012360775440043433,
+            "matrix_max_abs_difference": 0.010660409927368164
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.00021700405874645773,
+            "matrix_max_abs_difference": 0.00021699501667171717
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.010726851611296127,
+            "matrix_max_abs_difference": 0.010657072067260742
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.004345708524967129,
+            "matrix_max_abs_difference": 0.004304468631744385
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.004785521333766371,
+            "matrix_max_abs_difference": 0.00428396463394165
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.001866079968607603,
+            "matrix_max_abs_difference": 0.0015120506286621094
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.004417399539597999,
+            "matrix_max_abs_difference": 0.003209710121154785
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.004245743801440251,
+            "matrix_max_abs_difference": 0.004048198461532593
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0046809517655860946,
+            "matrix_max_abs_difference": 0.0037712156772613525
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.007945474195591058,
+            "matrix_max_abs_difference": 0.006674587726593018
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.008491760178209134,
+            "matrix_max_abs_difference": 0.006416916847229004
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.0073326941535823515,
+            "matrix_max_abs_difference": 0.005195736885070801
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.009537447760302591,
+            "matrix_max_abs_difference": 0.006992459297180176
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.01068998261294453,
+            "matrix_max_abs_difference": 0.009189456701278687
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.002728366581225745,
+            "matrix_max_abs_difference": 0.00202178955078125
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.007167638722455212,
+            "matrix_max_abs_difference": 0.005147218704223633
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.009183573742367808,
+            "matrix_max_abs_difference": 0.006660878658294678
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.021865337602866623,
+            "matrix_max_abs_difference": 0.019233480095863342
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.005204617741045299,
+            "matrix_max_abs_difference": 0.0038307905197143555
+          }
+        ]
+      },
+      "root_displacement_m": [
+        -0.19124439358711243,
+        -0.006377965211868286,
+        2.1696321964263916
+      ],
+      "root_displacement_length_m": 2.1780539706087088,
+      "in_place": false,
+      "action_id": 178,
+      "intended_role": "stagger"
+    },
+    {
+      "file": "Dead.glb",
+      "source_sha256": "1b4a541be742c0abd76498a68b0fd0a466f64107a6e83dbdf69ebe0842097450",
+      "source_action": "Armature|Dead|baselayer",
+      "target_action": "Dead",
+      "frames": 90,
+      "fps": 30,
+      "bone_names_set_exact": true,
+      "source_bone_order": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "rest_offset": {
+        "method": "per-bone rotation delta relative to source rest applied to target rest; root translation preserved; non-root translation suppressed to prevent skeletal separation",
+        "max_head_difference_m": 0.007392550485311976,
+        "max_matrix_element_difference": 0.006344437599182129,
+        "by_bone": [
+          {
+            "bone": "Hips",
+            "head_difference_m": 0.0051116238718638424,
+            "matrix_max_abs_difference": 0.004564046859741211
+          },
+          {
+            "bone": "Spine02",
+            "head_difference_m": 0.004324365532039379,
+            "matrix_max_abs_difference": 0.003897428512573242
+          },
+          {
+            "bone": "Spine01",
+            "head_difference_m": 0.003581554007941659,
+            "matrix_max_abs_difference": 0.003239870071411133
+          },
+          {
+            "bone": "Spine",
+            "head_difference_m": 0.0028946954932989686,
+            "matrix_max_abs_difference": 0.002572774887084961
+          },
+          {
+            "bone": "neck",
+            "head_difference_m": 0.002044553305197936,
+            "matrix_max_abs_difference": 0.00171661376953125
+          },
+          {
+            "bone": "Head",
+            "head_difference_m": 0.0021105573226728076,
+            "matrix_max_abs_difference": 0.0017163753509521484
+          },
+          {
+            "bone": "head_end",
+            "head_difference_m": 0.0011284969767114022,
+            "matrix_max_abs_difference": 0.0011284828651696444
+          },
+          {
+            "bone": "headfront",
+            "head_difference_m": 0.0017273893187186103,
+            "matrix_max_abs_difference": 0.00171661376953125
+          },
+          {
+            "bone": "LeftShoulder",
+            "head_difference_m": 0.0016186549007692608,
+            "matrix_max_abs_difference": 0.0012202262878417969
+          },
+          {
+            "bone": "LeftArm",
+            "head_difference_m": 0.0016419269415258635,
+            "matrix_max_abs_difference": 0.0012197494506835938
+          },
+          {
+            "bone": "LeftForeArm",
+            "head_difference_m": 0.0011439198854882422,
+            "matrix_max_abs_difference": 0.0009979605674743652
+          },
+          {
+            "bone": "LeftHand",
+            "head_difference_m": 0.0019538175120144222,
+            "matrix_max_abs_difference": 0.0015113353729248047
+          },
+          {
+            "bone": "RightShoulder",
+            "head_difference_m": 0.0014113651972523253,
+            "matrix_max_abs_difference": 0.0011620521545410156
+          },
+          {
+            "bone": "RightArm",
+            "head_difference_m": 0.0016238502123272988,
+            "matrix_max_abs_difference": 0.0011625289916992188
+          },
+          {
+            "bone": "RightForeArm",
+            "head_difference_m": 0.0071209153269435775,
+            "matrix_max_abs_difference": 0.006143808364868164
+          },
+          {
+            "bone": "RightHand",
+            "head_difference_m": 0.007392550485311976,
+            "matrix_max_abs_difference": 0.006344437599182129
+          },
+          {
+            "bone": "LeftUpLeg",
+            "head_difference_m": 0.0060758582301574104,
+            "matrix_max_abs_difference": 0.004628300666809082
+          },
+          {
+            "bone": "LeftLeg",
+            "head_difference_m": 0.006673166169624604,
+            "matrix_max_abs_difference": 0.0048636794090271
+          },
+          {
+            "bone": "LeftFoot",
+            "head_difference_m": 0.005661413099405788,
+            "matrix_max_abs_difference": 0.0048639774322509766
+          },
+          {
+            "bone": "LeftToeBase",
+            "head_difference_m": 0.0026523171447253675,
+            "matrix_max_abs_difference": 0.0024338364601135254
+          },
+          {
+            "bone": "RightUpLeg",
+            "head_difference_m": 0.004677232509783934,
+            "matrix_max_abs_difference": 0.0034407377243041992
+          },
+          {
+            "bone": "RightLeg",
+            "head_difference_m": 0.003589591282500663,
+            "matrix_max_abs_difference": 0.0034323036670684814
+          },
+          {
+            "bone": "RightFoot",
+            "head_difference_m": 0.0015081592094292908,
+            "matrix_max_abs_difference": 0.001067817211151123
+          },
+          {
+            "bone": "RightToeBase",
+            "head_difference_m": 0.0005735943525729891,
+            "matrix_max_abs_difference": 0.0005334615707397461
+          }
+        ]
+      },
+      "root_displacement_m": [
+        0.41405704617500305,
+        -1.1692872047424316,
+        -1.2363717555999756
+      ],
+      "root_displacement_length_m": 1.7513682985137413,
+      "in_place": false,
+      "action_id": 8,
+      "intended_role": "death"
+    }
+  ],
+  "clip_count": 15,
+  "all_hashes_distinct": true,
+  "all_bones_match": true,
+  "action_names": [
+    "Attack",
+    "Basic_Jump",
+    "Combat_Stance",
+    "Dead",
+    "Double_Combo_Attack",
+    "Hit_Reaction",
+    "Left_Slash",
+    "Reaping_Swing",
+    "Right_Hand_Sword_Slash",
+    "Rightward_Spin",
+    "Roll_Dodge",
+    "Sword_Judgment",
+    "Sword_Parry",
+    "Triple_Combo_Attack",
+    "Walk_Fight_Forward"
+  ]
+}

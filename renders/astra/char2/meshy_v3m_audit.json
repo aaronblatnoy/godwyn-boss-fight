@@ -1,0 +1,974 @@
+{
+  "schema": "meshy-v3m-audit",
+  "blend": "models/astra_character_v3m_wip.blend",
+  "fps": 30,
+  "clip_count": 15,
+  "binding": {
+    "head_rigid_head_bone": true,
+    "neckblend_rigid_neck_bone": true,
+    "sword_rigid_right_hand": true
+  },
+  "clips": {
+    "Combat_Stance": {
+      "frames": 51,
+      "fps": 30,
+      "most_extended_frame": 33,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5090829815486697,
+        "worst_frame": 12,
+        "absolute_max_ratio": 4.75398705975221,
+        "absolute_max_frame": 13,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": 0.04905667155981064,
+        "worst_frame": 6,
+        "per_side_m": {
+          "Left": 0.04905667155981064,
+          "Right": 0.08125424385070801
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          33
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 33,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.9706122875213623,
+        "worst_frame": 17,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Walk_Fight_Forward": {
+      "frames": 53,
+      "fps": 30,
+      "most_extended_frame": 26,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.446333764287123,
+        "worst_frame": 28,
+        "absolute_max_ratio": 5.958786180409068,
+        "absolute_max_frame": 53,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999865148216486,
+        "worst_frame": 24,
+        "per_side_m": {
+          "Left": -0.003999865148216486,
+          "Right": 0.4299900233745575
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          26
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 26,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 2.4162683486938477,
+        "worst_frame": 20,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Attack": {
+      "frames": 85,
+      "fps": 30,
+      "most_extended_frame": 28,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5654710614469758,
+        "worst_frame": 29,
+        "absolute_max_ratio": 4.376509055480073,
+        "absolute_max_frame": 50,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.004000023473054171,
+        "worst_frame": 32,
+        "per_side_m": {
+          "Left": 1.01786470413208,
+          "Right": -0.004000023473054171
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          28
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 2,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 28,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 2,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": -0.07630805671215057,
+        "worst_frame": 33,
+        "penetration_depth_m": 0.07630805671215057,
+        "flagged": true
+      },
+      "quality_gate_pass": false
+    },
+    "Left_Slash": {
+      "frames": 96,
+      "fps": 30,
+      "most_extended_frame": 33,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5818992172519792,
+        "worst_frame": 32,
+        "absolute_max_ratio": 3.866336702349935,
+        "absolute_max_frame": 33,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": 0.0003102658665739,
+        "worst_frame": 96,
+        "per_side_m": {
+          "Left": 0.0003102658665739,
+          "Right": 1.0445477962493896
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          33
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 2,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 33,
+            "head_triangle_pairs": 1,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 3,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.6062026023864746,
+        "worst_frame": 21,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Right_Hand_Sword_Slash": {
+      "frames": 46,
+      "fps": 30,
+      "most_extended_frame": 11,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5740612975847388,
+        "worst_frame": 25,
+        "absolute_max_ratio": 5.165180537168638,
+        "absolute_max_frame": 23,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999900538474321,
+        "worst_frame": 22,
+        "per_side_m": {
+          "Left": 0.11002799868583679,
+          "Right": -0.003999900538474321
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          11
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 11,
+            "head_triangle_pairs": 2,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 2,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.9653321504592896,
+        "worst_frame": 3,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Double_Combo_Attack": {
+      "frames": 86,
+      "fps": 30,
+      "most_extended_frame": 11,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5641177246867697,
+        "worst_frame": 15,
+        "absolute_max_ratio": 3.8795906022901416,
+        "absolute_max_frame": 16,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999965265393257,
+        "worst_frame": 35,
+        "per_side_m": {
+          "Left": -0.003999965265393257,
+          "Right": 0.7663814425468445
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          11
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 9
+          },
+          {
+            "frame": 11,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 9,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": -0.1008024588227272,
+        "worst_frame": 68,
+        "penetration_depth_m": 0.1008024588227272,
+        "flagged": true
+      },
+      "quality_gate_pass": false
+    },
+    "Triple_Combo_Attack": {
+      "frames": 131,
+      "fps": 30,
+      "most_extended_frame": 16,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5750089297738687,
+        "worst_frame": 17,
+        "absolute_max_ratio": 4.009806609357995,
+        "absolute_max_frame": 55,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999904729425907,
+        "worst_frame": 73,
+        "per_side_m": {
+          "Left": 0.28075549006462097,
+          "Right": -0.003999904729425907
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          16
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 16,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.06871257722377777,
+        "worst_frame": 52,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Sword_Judgment": {
+      "frames": 132,
+      "fps": 30,
+      "most_extended_frame": 28,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5785671696628718,
+        "worst_frame": 24,
+        "absolute_max_ratio": 5.3694790853086145,
+        "absolute_max_frame": 43,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.004000029526650906,
+        "worst_frame": 45,
+        "per_side_m": {
+          "Left": 0.00585315702483058,
+          "Right": -0.004000029526650906
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          28
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 28,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.8352406620979309,
+        "worst_frame": 76,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Reaping_Swing": {
+      "frames": 179,
+      "fps": 30,
+      "most_extended_frame": 154,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5721338782036296,
+        "worst_frame": 64,
+        "absolute_max_ratio": 5.874637436701223,
+        "absolute_max_frame": 15,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.0012286885175853968,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.0012286885175853968,
+          "Right": 0.905218243598938
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          154
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 101
+          },
+          {
+            "frame": 154,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 101,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.30558669567108154,
+        "worst_frame": 125,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Rightward_Spin": {
+      "frames": 241,
+      "fps": 30,
+      "most_extended_frame": 21,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5694887080498854,
+        "worst_frame": 21,
+        "absolute_max_ratio": 5.7519500259962815,
+        "absolute_max_frame": 16,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999930340796709,
+        "worst_frame": 136,
+        "per_side_m": {
+          "Left": 0.3246435523033142,
+          "Right": -0.003999930340796709
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          21
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 1,
+            "hair_triangle_pairs": 4
+          },
+          {
+            "frame": 21,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 5,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": -0.10286399722099304,
+        "worst_frame": 151,
+        "penetration_depth_m": 0.10286399722099304,
+        "flagged": true
+      },
+      "quality_gate_pass": false
+    },
+    "Basic_Jump": {
+      "frames": 178,
+      "fps": 30,
+      "most_extended_frame": 73,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5704824150465766,
+        "worst_frame": 74,
+        "absolute_max_ratio": 3.847174085648417,
+        "absolute_max_frame": 73,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.004000206012278795,
+        "worst_frame": 78,
+        "per_side_m": {
+          "Left": -0.004000206012278795,
+          "Right": 0.4343404173851013
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          73
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 73,
+            "head_triangle_pairs": 16,
+            "hair_triangle_pairs": 514
+          }
+        ],
+        "triangle_pairs": 530,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 0.41271841526031494,
+        "worst_frame": 78,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Roll_Dodge": {
+      "frames": 56,
+      "fps": 30,
+      "most_extended_frame": 27,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5850084948043872,
+        "worst_frame": 32,
+        "absolute_max_ratio": 5.571322802503131,
+        "absolute_max_frame": 47,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.00399989215657115,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.00399989215657115,
+          "Right": 0.8149781823158264
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          27
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 27,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": -0.4422973394393921,
+        "worst_frame": 27,
+        "penetration_depth_m": 0.4422973394393921,
+        "flagged": true
+      },
+      "quality_gate_pass": true
+    },
+    "Sword_Parry": {
+      "frames": 57,
+      "fps": 30,
+      "most_extended_frame": 13,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5702091211939568,
+        "worst_frame": 2,
+        "absolute_max_ratio": 4.657744464385357,
+        "absolute_max_frame": 28,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003990537486970425,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.003990537486970425,
+          "Right": 1.1846729516983032
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          13
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 13,
+            "head_triangle_pairs": 0,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 1.7747074365615845,
+        "worst_frame": 23,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Hit_Reaction": {
+      "frames": 50,
+      "fps": 30,
+      "most_extended_frame": 13,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5580192958266827,
+        "worst_frame": 14,
+        "absolute_max_ratio": 4.186135893294475,
+        "absolute_max_frame": 13,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.004000051412731409,
+        "worst_frame": 2,
+        "per_side_m": {
+          "Left": -0.004000051412731409,
+          "Right": 1.0779794454574585
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          13
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 6,
+            "hair_triangle_pairs": 69
+          },
+          {
+            "frame": 13,
+            "head_triangle_pairs": 24,
+            "hair_triangle_pairs": 1
+          }
+        ],
+        "triangle_pairs": 100,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": 3.0139529705047607,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Dead": {
+      "frames": 90,
+      "fps": 30,
+      "most_extended_frame": 90,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5644919180892511,
+        "worst_frame": 87,
+        "absolute_max_ratio": 5.928963416297474,
+        "absolute_max_frame": 87,
+        "gate_pass": true,
+        "population": "527971 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999900538474321,
+        "worst_frame": 50,
+        "per_side_m": {
+          "Left": 0.07804615050554276,
+          "Right": -0.003999900538474321
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          90
+        ],
+        "rows": [
+          {
+            "frame": 1,
+            "head_triangle_pairs": 3,
+            "hair_triangle_pairs": 0
+          },
+          {
+            "frame": 90,
+            "head_triangle_pairs": 2,
+            "hair_triangle_pairs": 0
+          }
+        ],
+        "triangle_pairs": 5,
+        "gate_pass": false,
+        "selection": "astra_v3_plate_mask faces with mean neck/head-chain weight <0.25 in upper-torso collar/pauldron volume versus all hair and donor skin at/above rest z=2.68 m; hidden lower donor neck and residual source-head shell excluded"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": -0.5017224550247192,
+        "worst_frame": 73,
+        "penetration_depth_m": 0.5017224550247192,
+        "flagged": true
+      },
+      "quality_gate_pass": false
+    }
+  },
+  "all_quality_gates_pass": false
+}

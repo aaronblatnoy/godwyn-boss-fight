@@ -1,0 +1,809 @@
+{
+  "schema": "meshy-v3m-audit",
+  "blend": "models/astra_character_v3m_wip.blend",
+  "fps": 30,
+  "clip_count": 15,
+  "binding": {
+    "head_rigid_head_bone": true,
+    "neckblend_rigid_neck_bone": true,
+    "sword_rigid_right_hand": true
+  },
+  "clips": {
+    "Combat_Stance": {
+      "frames": 51,
+      "fps": 30,
+      "most_extended_frame": 33,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.509073693229674,
+        "worst_frame": 12,
+        "absolute_max_ratio": 4.75398705975221,
+        "absolute_max_frame": 13,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": 0.04905667155981064,
+        "worst_frame": 6,
+        "per_side_m": {
+          "Left": 0.04905667155981064,
+          "Right": 0.08125424385070801
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          33
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Walk_Fight_Forward": {
+      "frames": 53,
+      "fps": 30,
+      "most_extended_frame": 26,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.4463076001559758,
+        "worst_frame": 28,
+        "absolute_max_ratio": 5.958786180409068,
+        "absolute_max_frame": 53,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999865148216486,
+        "worst_frame": 24,
+        "per_side_m": {
+          "Left": -0.003999865148216486,
+          "Right": 0.4299900233745575
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          26
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Attack": {
+      "frames": 85,
+      "fps": 30,
+      "most_extended_frame": 28,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5654480733872163,
+        "worst_frame": 29,
+        "absolute_max_ratio": 4.376523030204521,
+        "absolute_max_frame": 50,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.023277845233678818,
+        "worst_frame": 32,
+        "per_side_m": {
+          "Left": 0.9985867738723755,
+          "Right": -0.023277845233678818
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          28
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Left_Slash": {
+      "frames": 96,
+      "fps": 30,
+      "most_extended_frame": 33,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.581833643459649,
+        "worst_frame": 32,
+        "absolute_max_ratio": 3.866336702349935,
+        "absolute_max_frame": 33,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": 0.0003102658665739,
+        "worst_frame": 96,
+        "per_side_m": {
+          "Left": 0.0003102658665739,
+          "Right": 1.0445477962493896
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          33
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Right_Hand_Sword_Slash": {
+      "frames": 46,
+      "fps": 30,
+      "most_extended_frame": 11,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5740277776308447,
+        "worst_frame": 25,
+        "absolute_max_ratio": 5.165175692121369,
+        "absolute_max_frame": 23,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.03656337782740593,
+        "worst_frame": 22,
+        "per_side_m": {
+          "Left": 0.0774645134806633,
+          "Right": -0.03656337782740593
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          11
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Double_Combo_Attack": {
+      "frames": 86,
+      "fps": 30,
+      "most_extended_frame": 11,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5641012108262782,
+        "worst_frame": 15,
+        "absolute_max_ratio": 3.8795906022901416,
+        "absolute_max_frame": 16,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.00929201953113079,
+        "worst_frame": 35,
+        "per_side_m": {
+          "Left": -0.00929201953113079,
+          "Right": 0.7610893845558167
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          11
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Triple_Combo_Attack": {
+      "frames": 131,
+      "fps": 30,
+      "most_extended_frame": 16,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5749732250658366,
+        "worst_frame": 17,
+        "absolute_max_ratio": 4.009792881724067,
+        "absolute_max_frame": 55,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.0229142177850008,
+        "worst_frame": 73,
+        "per_side_m": {
+          "Left": 0.2618412673473358,
+          "Right": -0.0229142177850008
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          16
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Sword_Judgment": {
+      "frames": 132,
+      "fps": 30,
+      "most_extended_frame": 28,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.578514948372466,
+        "worst_frame": 24,
+        "absolute_max_ratio": 5.369485209367061,
+        "absolute_max_frame": 43,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.08219507336616516,
+        "worst_frame": 45,
+        "per_side_m": {
+          "Left": -0.07234188169240952,
+          "Right": -0.08219507336616516
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          28
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Reaping_Swing": {
+      "frames": 179,
+      "fps": 30,
+      "most_extended_frame": 154,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5721188710307394,
+        "worst_frame": 64,
+        "absolute_max_ratio": 5.874637436701223,
+        "absolute_max_frame": 15,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.0012286885175853968,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.0012286885175853968,
+          "Right": 0.905218243598938
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          154
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Rightward_Spin": {
+      "frames": 241,
+      "fps": 30,
+      "most_extended_frame": 21,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5694737158646146,
+        "worst_frame": 21,
+        "absolute_max_ratio": 5.7519500259962815,
+        "absolute_max_frame": 16,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.03387206047773361,
+        "worst_frame": 136,
+        "per_side_m": {
+          "Left": 0.2947714030742645,
+          "Right": -0.03387206047773361
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          21
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Basic_Jump": {
+      "frames": 178,
+      "fps": 30,
+      "most_extended_frame": 73,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5704495871180923,
+        "worst_frame": 74,
+        "absolute_max_ratio": 3.8471768054524595,
+        "absolute_max_frame": 73,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.020073814317584038,
+        "worst_frame": 78,
+        "per_side_m": {
+          "Left": -0.020073814317584038,
+          "Right": 0.4182666540145874
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          73
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Roll_Dodge": {
+      "frames": 56,
+      "fps": 30,
+      "most_extended_frame": 27,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5850019565563829,
+        "worst_frame": 32,
+        "absolute_max_ratio": 5.571322802503131,
+        "absolute_max_frame": 47,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.09073100239038467,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.09073100239038467,
+          "Right": 0.7282469868659973
+        },
+        "gate_pass": false
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          27
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": false
+    },
+    "Sword_Parry": {
+      "frames": 57,
+      "fps": 30,
+      "most_extended_frame": 13,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5701872947780178,
+        "worst_frame": 2,
+        "absolute_max_ratio": 4.657744464385357,
+        "absolute_max_frame": 28,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003990537486970425,
+        "worst_frame": 46,
+        "per_side_m": {
+          "Left": -0.003990537486970425,
+          "Right": 1.1846729516983032
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          13
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Hit_Reaction": {
+      "frames": 50,
+      "fps": 30,
+      "most_extended_frame": 13,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5580170848154915,
+        "worst_frame": 14,
+        "absolute_max_ratio": 4.185973665586496,
+        "absolute_max_frame": 13,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.004000051412731409,
+        "worst_frame": 2,
+        "per_side_m": {
+          "Left": -0.004000051412731409,
+          "Right": 1.0779794454574585
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          13
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    },
+    "Dead": {
+      "frames": 90,
+      "fps": 30,
+      "most_extended_frame": 90,
+      "body_edge_stretch": {
+        "gate_p99": 1.6,
+        "worst_frame_p99": 1.5644872839684871,
+        "worst_frame": 87,
+        "absolute_max_ratio": 5.928963416297474,
+        "absolute_max_frame": 87,
+        "gate_pass": true,
+        "population": "528020 edges with rest length >= 2 mm, sampled every integer frame"
+      },
+      "feet_floor": {
+        "gate_minimum_m": -0.005,
+        "minimum_m": -0.003999900538474321,
+        "worst_frame": 50,
+        "per_side_m": {
+          "Left": 0.07804615050554276,
+          "Right": -0.003999900538474321
+        },
+        "gate_pass": true
+      },
+      "head_hair_vs_collar_pauldrons": {
+        "sampled_frames": [
+          1,
+          90
+        ],
+        "rows": [],
+        "triangle_pairs": 0,
+        "gate_pass": true,
+        "selection": "body faces in upper-torso collar/pauldron volume"
+      },
+      "sword_vs_head_hair": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "gate_pass": true
+      },
+      "sword_vs_body": {
+        "frames_with_overlap": 0,
+        "worst_triangle_pairs": 0,
+        "overlap_frames": [],
+        "flagged": false
+      },
+      "sword_vs_floor": {
+        "minimum_blade_z_m": Infinity,
+        "worst_frame": 1,
+        "penetration_depth_m": 0.0,
+        "flagged": false
+      },
+      "quality_gate_pass": true
+    }
+  },
+  "all_quality_gates_pass": false
+}

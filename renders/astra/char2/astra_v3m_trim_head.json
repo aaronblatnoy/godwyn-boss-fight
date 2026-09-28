@@ -1,0 +1,19 @@
+{
+  "schema": "astra-v3m-hidden-gorget-trim",
+  "selection": "hair-mask faces below rest world z=2.73 m and all non-hair donor faces below z=2.71 m",
+  "reason": "remove only donor neck and hair ends buried inside the closed gorget; NeckBlend owns the hidden collar interior",
+  "before": {
+    "vertices": 88969,
+    "faces": 91891
+  },
+  "after": {
+    "vertices": 86015,
+    "faces": 89915
+  },
+  "removed_faces": 1976,
+  "removed_orphan_vertices": 4,
+  "classes": {
+    "hair_below_2.73m": 0,
+    "non_hair_below_2.71m": 1976
+  }
+}

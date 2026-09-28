@@ -1,0 +1,1002 @@
+{
+  "schema": "astra-v3m-probe",
+  "source_blend": "models/astra_character_v3.blend",
+  "fps": 30,
+  "head_attachment_before": {
+    "blend_sha256": "e254ac97530c265ee1ac36b659f4d5ae752e8d27ec6842254e8b79277ca2abc9",
+    "objects": {
+      "head_parent": "Astra_V3_Rig",
+      "head_parent_type": "OBJECT",
+      "head_parent_bone": "",
+      "neckblend_present": false
+    },
+    "measurements": {
+      "head_bounds_world_m": {
+        "min": [
+          -0.21152520179748535,
+          -0.3105812072753906,
+          2.5598833560943604
+        ],
+        "max": [
+          0.39431020617485046,
+          0.10989531874656677,
+          3.1600000858306885
+        ]
+      },
+      "skin_bounds_world_m": {
+        "min": [
+          -0.04363429546356201,
+          -0.3105812072753906,
+          2.617262125015259
+        ],
+        "max": [
+          0.22149811685085297,
+          -0.061353057622909546,
+          3.090622663497925
+        ]
+      },
+      "jaw_underside_estimate_z_m": 2.702179431915283,
+      "collar_rim_lowest_z_m": 2.464160442,
+      "collar_interior_floor_z_m": 2.464160442352295,
+      "jaw_to_collar_rim_gap_m": 0.23801898991528336,
+      "exposed_neck_column_m": 0.23801898956298828,
+      "body_height_m": 3.1599994438288945,
+      "head_height_above_jaw_m": 0.4578206539154053,
+      "head_to_body_height_ratio": 0.1448799792700834,
+      "concept_target_ratio": 0.13333333333333333,
+      "shoulder_joint_width_m": 0.13109847350674608,
+      "head_width_m": 0.6058354079723358,
+      "head_width_to_shoulders": 4.621223968265051
+    }
+  },
+  "clips": [
+    {
+      "file": "Combat_Stance.glb",
+      "bytes": 26812252,
+      "sha256": "65a24d28d1c69ebb2674de11fd6cee140148db8f991f196b0b666e4a0e141a27",
+      "glb_animations": [
+        {
+          "name": "Armature|Combat_Stance|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.7,
+          "duration_seconds": 1.6666666666666665,
+          "frames_at_30fps_inclusive": 51
+        }
+      ],
+      "import_action": "Armature|Combat_Stance|baselayer",
+      "import_frame_range": [
+        1.0,
+        51.0
+      ],
+      "import_frames_inclusive": 51,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.023059833146225422,
+      "rest_max_matrix_element_difference": 0.02167588472366333,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        5.304813385009766e-06,
+        -6.404519081115723e-05,
+        -1.990795135498047e-05
+      ],
+      "hips_root_displacement_length_m": 6.727744078247615e-05,
+      "in_place": true,
+      "action_id": 89,
+      "intended_role": "idle / low hang guard placeholder"
+    },
+    {
+      "file": "Walk_Fight_Forward.glb",
+      "bytes": 26813096,
+      "sha256": "5573af77debfd568fe3b4f9076145ebcfdab252f94047c33832dfaebbf46a9d7",
+      "glb_animations": [
+        {
+          "name": "Armature|Walk_Fight_Forward|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.7666666666666666,
+          "duration_seconds": 1.7333333333333332,
+          "frames_at_30fps_inclusive": 53
+        }
+      ],
+      "import_action": "Armature|Walk_Fight_Forward|baselayer",
+      "import_frame_range": [
+        1.0,
+        53.0
+      ],
+      "import_frames_inclusive": 53,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.023158422807541774,
+      "rest_max_matrix_element_difference": 0.018127858638763428,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        -2.2435560822486877e-06,
+        2.8312206268310547e-07,
+        1.0728836059570312e-06
+      ],
+      "hips_root_displacement_length_m": 2.5029544998869593e-06,
+      "in_place": true,
+      "action_id": 21,
+      "intended_role": "walk / stalk"
+    },
+    {
+      "file": "Attack.glb",
+      "bytes": 26832000,
+      "sha256": "0c20f5fcb3571b783539267baa42d9b0178637692522a9d95a0b60ba09d7f38b",
+      "glb_animations": [
+        {
+          "name": "Armature|Attack|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 2.8333333333333335,
+          "duration_seconds": 2.8000000000000003,
+          "frames_at_30fps_inclusive": 85
+        }
+      ],
+      "import_action": "Armature|Attack|baselayer",
+      "import_frame_range": [
+        1.0,
+        85.0
+      ],
+      "import_frames_inclusive": 85,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.018263231741281322,
+      "rest_max_matrix_element_difference": 0.016511842608451843,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.0010789446532726288,
+        -0.000562325119972229,
+        -0.0009031295776367188
+      ],
+      "hips_root_displacement_length_m": 0.0015152472353077444,
+      "in_place": true,
+      "action_id": 4,
+      "intended_role": "single attack initiator"
+    },
+    {
+      "file": "Left_Slash.glb",
+      "bytes": 26836572,
+      "sha256": "93313666c01165e3b7720682c5b0692eae48524fdf5b67cc654696a1ef919c86",
+      "glb_animations": [
+        {
+          "name": "Armature|Left_Slash|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 3.2,
+          "duration_seconds": 3.166666666666667,
+          "frames_at_30fps_inclusive": 96
+        }
+      ],
+      "import_action": "Armature|Left_Slash|baselayer",
+      "import_frame_range": [
+        1.0,
+        96.0
+      ],
+      "import_frames_inclusive": 96,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.018916754805272388,
+      "rest_max_matrix_element_difference": 0.018266603350639343,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.0012812316417694092,
+        0.0006571859121322632,
+        -0.001096487045288086
+      ],
+      "hips_root_displacement_length_m": 0.0018098982254335062,
+      "in_place": true,
+      "action_id": 97,
+      "intended_role": "horizontal sweep"
+    },
+    {
+      "file": "Right_Hand_Sword_Slash.glb",
+      "bytes": 26810564,
+      "sha256": "976ffc04777c9fa61dea3b8c2dddaa6f1ef7887a1ea0c9700fe196c5bae2a075",
+      "glb_animations": [
+        {
+          "name": "Armature|Right_Hand_Sword_Slash|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.5333333333333334,
+          "duration_seconds": 1.5,
+          "frames_at_30fps_inclusive": 46
+        }
+      ],
+      "import_action": "Armature|Right_Hand_Sword_Slash|baselayer",
+      "import_frame_range": [
+        1.0,
+        46.0
+      ],
+      "import_frames_inclusive": 46,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.0188027964374595,
+      "rest_max_matrix_element_difference": 0.018258363008499146,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.0003397613763809204,
+        -0.001417309045791626,
+        0.0027199983596801758
+      ],
+      "hips_root_displacement_length_m": 0.0030858700358043843,
+      "in_place": true,
+      "action_id": 219,
+      "intended_role": "diagonal slash"
+    },
+    {
+      "file": "Double_Combo_Attack.glb",
+      "bytes": 26834672,
+      "sha256": "05bb3c8889d8384532443673402a52d44ae03f3d7cbd832023aed89e8d7d2e2e",
+      "glb_animations": [
+        {
+          "name": "Armature|Double_Combo_Attack|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 2.8666666666666667,
+          "duration_seconds": 2.8333333333333335,
+          "frames_at_30fps_inclusive": 86
+        }
+      ],
+      "import_action": "Armature|Double_Combo_Attack|baselayer",
+      "import_frame_range": [
+        1.0,
+        86.0
+      ],
+      "import_frames_inclusive": 86,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.012087440171221533,
+      "rest_max_matrix_element_difference": 0.011744469404220581,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        -0.0003546029329299927,
+        -2.7797324657440186,
+        0.006058931350708008
+      ],
+      "hips_root_displacement_length_m": 2.7797390767597334,
+      "in_place": false,
+      "action_id": 92,
+      "intended_role": "X combo candidate"
+    },
+    {
+      "file": "Triple_Combo_Attack.glb",
+      "bytes": 26877656,
+      "sha256": "6c3422cef209103db25cc19cde807c6906077d028669a7ed5c51a403508a9877",
+      "glb_animations": [
+        {
+          "name": "Armature|Triple_Combo_Attack|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 4.366666666666666,
+          "duration_seconds": 4.333333333333333,
+          "frames_at_30fps_inclusive": 131
+        }
+      ],
+      "import_action": "Armature|Triple_Combo_Attack|baselayer",
+      "import_frame_range": [
+        1.0,
+        131.0
+      ],
+      "import_frames_inclusive": 131,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.0162721812630792,
+      "rest_max_matrix_element_difference": 0.014821529388427734,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.44667547941207886,
+        -3.4202988147735596,
+        -0.010443449020385742
+      ],
+      "hips_root_displacement_length_m": 3.4493582607030646,
+      "in_place": false,
+      "action_id": 105,
+      "intended_role": "Sovereigns Sequence candidate"
+    },
+    {
+      "file": "Sword_Judgment.glb",
+      "bytes": 26870296,
+      "sha256": "57877f8221e0ea1761e8481227f770bdd21d4f6a498eaf1be3306daf4f161d3a",
+      "glb_animations": [
+        {
+          "name": "Armature|Sword_Judgment|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 4.4,
+          "duration_seconds": 4.366666666666667,
+          "frames_at_30fps_inclusive": 132
+        }
+      ],
+      "import_action": "Armature|Sword_Judgment|baselayer",
+      "import_frame_range": [
+        1.0,
+        132.0
+      ],
+      "import_frames_inclusive": 132,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.020492787287831604,
+      "rest_max_matrix_element_difference": 0.017600640654563904,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        -0.4317261576652527,
+        -2.2012200355529785,
+        0.026713013648986816
+      ],
+      "hips_root_displacement_length_m": 2.243316937093578,
+      "in_place": false,
+      "action_id": 102,
+      "intended_role": "overhead / sacred slam candidate"
+    },
+    {
+      "file": "Reaping_Swing.glb",
+      "bytes": 26890436,
+      "sha256": "27644b14a0f274046b5342babb445112771f173b4e080b00d280367182c1dcf8",
+      "glb_animations": [
+        {
+          "name": "Armature|Reaping_Swing|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 5.966666666666667,
+          "duration_seconds": 5.933333333333334,
+          "frames_at_30fps_inclusive": 179
+        }
+      ],
+      "import_action": "Armature|Reaping_Swing|baselayer",
+      "import_frame_range": [
+        1.0,
+        179.0
+      ],
+      "import_frames_inclusive": 179,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.021442581297541098,
+      "rest_max_matrix_element_difference": 0.02044372260570526,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.8461681008338928,
+        -0.5587296485900879,
+        0.7812318205833435
+      ],
+      "hips_root_displacement_length_m": 1.2800399951535035,
+      "in_place": false,
+      "action_id": 99,
+      "intended_role": "The Tide candidate"
+    },
+    {
+      "file": "Rightward_Spin.glb",
+      "bytes": 26919124,
+      "sha256": "2c3182a711a36259e6c13b25a69a9a166892e48a189045278ca3f460be324183",
+      "glb_animations": [
+        {
+          "name": "Armature|Rightward_Spin|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 8.033333333333333,
+          "duration_seconds": 8.0,
+          "frames_at_30fps_inclusive": 241
+        }
+      ],
+      "import_action": "Armature|Rightward_Spin|baselayer",
+      "import_frame_range": [
+        1.0,
+        241.00001525878906
+      ],
+      "import_frames_inclusive": 241,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.01903538585258386,
+      "rest_max_matrix_element_difference": 0.017033278942108154,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.0008771270513534546,
+        -0.0008680522441864014,
+        -0.0017794370651245117
+      ],
+      "hips_root_displacement_length_m": 0.0021654705778135935,
+      "in_place": true,
+      "action_id": 100,
+      "intended_role": "rising spin / spin attack"
+    },
+    {
+      "file": "Basic_Jump.glb",
+      "bytes": 26906668,
+      "sha256": "ce89e14316863dc05602ad56e8a3e1e518995e14f7a68b72401898ccf9d9dd4e",
+      "glb_animations": [
+        {
+          "name": "Armature|Basic_Jump|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 5.933333333333334,
+          "duration_seconds": 5.9,
+          "frames_at_30fps_inclusive": 178
+        }
+      ],
+      "import_action": "Armature|Basic_Jump|baselayer",
+      "import_frame_range": [
+        1.0,
+        178.0
+      ],
+      "import_frames_inclusive": 178,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.010418149156647929,
+      "rest_max_matrix_element_difference": 0.009435892105102539,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.0012607425451278687,
+        -2.6208178997039795,
+        -0.0026443004608154297
+      ],
+      "hips_root_displacement_length_m": 2.6208195775028242,
+      "in_place": false,
+      "action_id": 86,
+      "intended_role": "jump lunge base"
+    },
+    {
+      "file": "Roll_Dodge.glb",
+      "bytes": 26828540,
+      "sha256": "c81eed21c30565ea8e4acbf0c11069e1cf177357d2ae32093a2dd574cb5860cf",
+      "glb_animations": [
+        {
+          "name": "Armature|Roll_Dodge|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.8666666666666667,
+          "duration_seconds": 1.8333333333333333,
+          "frames_at_30fps_inclusive": 56
+        }
+      ],
+      "import_action": "Armature|Roll_Dodge|baselayer",
+      "import_frame_range": [
+        1.0,
+        56.0
+      ],
+      "import_frames_inclusive": 56,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.01688666684143703,
+      "rest_max_matrix_element_difference": 0.013967067003250122,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.8289431929588318,
+        -7.092647075653076,
+        -0.2430030107498169
+      ],
+      "hips_root_displacement_length_m": 7.145056926290799,
+      "in_place": false,
+      "action_id": 158,
+      "intended_role": "dodge / repositioning"
+    },
+    {
+      "file": "Sword_Parry.glb",
+      "bytes": 26818160,
+      "sha256": "bead370e92b4432d48255198de271d103920aab42fa6d8fed6fd7a2dc03b9dd2",
+      "glb_animations": [
+        {
+          "name": "Armature|Sword_Parry|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.9,
+          "duration_seconds": 1.8666666666666665,
+          "frames_at_30fps_inclusive": 57
+        }
+      ],
+      "import_action": "Armature|Sword_Parry|baselayer",
+      "import_frame_range": [
+        1.0,
+        57.0
+      ],
+      "import_frames_inclusive": 57,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.016752556959095062,
+      "rest_max_matrix_element_difference": 0.01424407958984375,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        7.141754031181335e-05,
+        -0.0001856386661529541,
+        -0.0005383491516113281
+      ],
+      "hips_root_displacement_length_m": 0.0005739181017033664,
+      "in_place": true,
+      "action_id": 147,
+      "intended_role": "The Pause / parry stance"
+    },
+    {
+      "file": "Hit_Reaction.glb",
+      "bytes": 26812252,
+      "sha256": "3b62b63f82ee1d32e22b8b46a4b963b1d816202ce97f0754a2b6561ad4d0867d",
+      "glb_animations": [
+        {
+          "name": "Armature|Hit_Reaction|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 1.6666666666666667,
+          "duration_seconds": 1.6333333333333333,
+          "frames_at_30fps_inclusive": 50
+        }
+      ],
+      "import_action": "Armature|Hit_Reaction|baselayer",
+      "import_frame_range": [
+        1.0,
+        50.0
+      ],
+      "import_frames_inclusive": 50,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.021865337283676716,
+      "rest_max_matrix_element_difference": 0.019233480095863342,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        2.1780524253845215,
+        0.0009414702653884888,
+        -0.0022330284118652344
+      ],
+      "hips_root_displacement_length_m": 2.178053739645359,
+      "in_place": false,
+      "action_id": 178,
+      "intended_role": "stagger"
+    },
+    {
+      "file": "Dead.glb",
+      "bytes": 26831292,
+      "sha256": "1b4a541be742c0abd76498a68b0fd0a466f64107a6e83dbdf69ebe0842097450",
+      "glb_animations": [
+        {
+          "name": "Armature|Dead|baselayer",
+          "channels": 72,
+          "start_seconds": 0.03333333333333333,
+          "end_seconds": 3,
+          "duration_seconds": 2.966666666666667,
+          "frames_at_30fps_inclusive": 90
+        }
+      ],
+      "import_action": "Armature|Dead|baselayer",
+      "import_frame_range": [
+        1.0,
+        90.0
+      ],
+      "import_frames_inclusive": 90,
+      "fcurves": 240,
+      "bone_count": 24,
+      "bone_names": [
+        "Hips",
+        "LeftUpLeg",
+        "LeftLeg",
+        "LeftFoot",
+        "LeftToeBase",
+        "RightUpLeg",
+        "RightLeg",
+        "RightFoot",
+        "RightToeBase",
+        "Spine02",
+        "Spine01",
+        "Spine",
+        "LeftShoulder",
+        "LeftArm",
+        "LeftForeArm",
+        "LeftHand",
+        "RightShoulder",
+        "RightArm",
+        "RightForeArm",
+        "RightHand",
+        "neck",
+        "Head",
+        "head_end",
+        "headfront"
+      ],
+      "bone_names_exact": false,
+      "bone_name_set_exact": true,
+      "rest_max_head_position_difference_m": 0.007392550423317125,
+      "rest_max_matrix_element_difference": 0.006344437599182129,
+      "rest_pose_exact": false,
+      "hips_root_displacement_m": [
+        0.3699389100074768,
+        -1.1740525960922241,
+        -1.2458072900772095
+      ],
+      "hips_root_displacement_length_m": 1.7513680645355651,
+      "in_place": false,
+      "action_id": 8,
+      "intended_role": "death"
+    }
+  ],
+  "all_clip_files_sha256_distinct": true,
+  "all_bone_names_exact": false,
+  "all_single_animation": true
+}

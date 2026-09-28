@@ -1,0 +1,12 @@
+{
+  "schema": "astra-v3m-head-clearance",
+  "clip": "Right_Hand_Sword_Slash",
+  "world_lift_m": 0.012,
+  "local_head_translation_added": [
+    2.217773362644948e-05,
+    0.009597714990377426,
+    -0.007203009445220232
+  ],
+  "key_values_touched": 138,
+  "reason": "The clip was visually useful, but the first full audit found two jaw/gorget triangle pairs at its most extended frame."
+}

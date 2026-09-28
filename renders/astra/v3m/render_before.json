@@ -1,0 +1,15 @@
+{
+  "mode": "before",
+  "action": "Godwyn_V3_idle_guard",
+  "samples": 64,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ]
+}

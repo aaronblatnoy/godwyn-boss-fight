@@ -1,0 +1,186 @@
+{
+  "schema": "astra-v3m-tune",
+  "blend": "models/astra_character_v3m_wip.blend",
+  "clips": {
+    "Combat_Stance": {
+      "source_worst_p99": 1.509073693229674,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": 0.04905667155981064,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Walk_Fight_Forward": {
+      "source_worst_p99": 1.4463076001559758,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.003999865148216486,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Attack": {
+      "source_worst_p99": 1.5654480733872163,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.023277845233678818,
+      "constant_world_floor_lift_m": 0.019277845233678818,
+      "root_local_lift": [
+        0.02686186321079731,
+        1.9220490455627441,
+        0.14614492654800415
+      ]
+    },
+    "Left_Slash": {
+      "source_worst_p99": 1.581833643459649,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": 0.0003102658665739,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Right_Hand_Sword_Slash": {
+      "source_worst_p99": 1.5740277776308447,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.03656337782740593,
+      "constant_world_floor_lift_m": 0.032563377827405926,
+      "root_local_lift": [
+        0.045374006032943726,
+        3.246649742126465,
+        0.2468622773885727
+      ]
+    },
+    "Double_Combo_Attack": {
+      "source_worst_p99": 1.5641012108262782,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.00929201953113079,
+      "constant_world_floor_lift_m": 0.005292019531130791,
+      "root_local_lift": [
+        0.0073739318177104,
+        0.5276275277137756,
+        0.040118686854839325
+      ]
+    },
+    "Triple_Combo_Attack": {
+      "source_worst_p99": 1.5749732250658366,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.0229142177850008,
+      "constant_world_floor_lift_m": 0.0189142177850008,
+      "root_local_lift": [
+        0.026355182752013206,
+        1.8857945203781128,
+        0.1433882713317871
+      ]
+    },
+    "Sword_Judgment": {
+      "source_worst_p99": 1.578514948372466,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.08219507336616516,
+      "constant_world_floor_lift_m": 0.07819507336616516,
+      "root_local_lift": [
+        0.10895748436450958,
+        7.796243190765381,
+        0.592795193195343
+      ]
+    },
+    "Reaping_Swing": {
+      "source_worst_p99": 1.5721188710307394,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.0012286885175853968,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Rightward_Spin": {
+      "source_worst_p99": 1.5694737158646146,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.03387206047773361,
+      "constant_world_floor_lift_m": 0.029872060477733612,
+      "root_local_lift": [
+        0.041623909026384354,
+        2.978318691253662,
+        0.22645945847034454
+      ]
+    },
+    "Basic_Jump": {
+      "source_worst_p99": 1.5704495871180923,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.020073814317584038,
+      "constant_world_floor_lift_m": 0.016073814317584038,
+      "root_local_lift": [
+        0.022397348657250404,
+        1.6025992631912231,
+        0.1218552440404892
+      ]
+    },
+    "Roll_Dodge": {
+      "source_worst_p99": 1.5850019565563829,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.09073100239038467,
+      "constant_world_floor_lift_m": 0.08673100239038467,
+      "root_local_lift": [
+        0.12085149437189102,
+        8.647296905517578,
+        0.6575058698654175
+      ]
+    },
+    "Sword_Parry": {
+      "source_worst_p99": 1.5701872947780178,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.003990537486970425,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "Hit_Reaction": {
+      "source_worst_p99": 1.5580170848154915,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.004000051412731409,
+      "constant_world_floor_lift_m": 5.141273140898961e-08,
+      "root_local_lift": [
+        7.163880155758307e-08,
+        5.1259767133160494e-06,
+        3.897588101153815e-07
+      ]
+    },
+    "Dead": {
+      "source_worst_p99": 1.5644872839684871,
+      "non_root_rotation_amplitude": 1.0,
+      "quaternion_keys_touched": 0,
+      "source_minimum_sole_m": -0.003999900538474321,
+      "constant_world_floor_lift_m": 0.0,
+      "root_local_lift": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+}
