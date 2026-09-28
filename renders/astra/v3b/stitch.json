@@ -1,0 +1,8 @@
+{
+  "changed_vertices": 0,
+  "changed_coincident_groups": 0,
+  "max_weight_delta": 0,
+  "position_tolerance_m": 1e-06,
+  "faces_before_after": 303001,
+  "geometry_changed": false
+}

@@ -1,0 +1,2 @@
+57595cbed5d7b24b8838c8c1d3438262422737c71fdd5ea73e78684ead3306ad  renders/astra/v3b/source_snapshot.blend
+ad427e85feec6797be20d2646e08d5ee7c3dc21fb49c9b42cf9923007df8bf6d  models/meshy_body_godA_fists_rigged.glb

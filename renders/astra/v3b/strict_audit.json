@@ -1,0 +1,669 @@
+{
+  "rows": [
+    {
+      "frame": 1,
+      "p99": 1.5266387813711244,
+      "sole": {
+        "Left": 0.0012992500560358167,
+        "Right": 0.038873594254255295
+      },
+      "full_collar_head_pairs": 22,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 2,
+      "p99": 1.5297568412320692,
+      "sole": {
+        "Left": 0.0007714371895417571,
+        "Right": 0.037968121469020844
+      },
+      "full_collar_head_pairs": 24,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 3,
+      "p99": 1.531879210985894,
+      "sole": {
+        "Left": 0.0004950486472807825,
+        "Right": 0.03713642433285713
+      },
+      "full_collar_head_pairs": 35,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 4,
+      "p99": 1.534630147004878,
+      "sole": {
+        "Left": 0.0002942096325568855,
+        "Right": 0.03634345158934593
+      },
+      "full_collar_head_pairs": 31,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 5,
+      "p99": 1.5366701221316013,
+      "sole": {
+        "Left": 0.00012004725431324914,
+        "Right": 0.03558790683746338
+      },
+      "full_collar_head_pairs": 33,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 6,
+      "p99": 1.53797119744415,
+      "sole": {
+        "Left": 2.6162191716139205e-05,
+        "Right": 0.03488995507359505
+      },
+      "full_collar_head_pairs": 31,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 7,
+      "p99": 1.5392819058706622,
+      "sole": {
+        "Left": -2.9737502700299956e-06,
+        "Right": 0.03426166623830795
+      },
+      "full_collar_head_pairs": 29,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 8,
+      "p99": 1.5407420109223031,
+      "sole": {
+        "Left": 2.481862793501932e-06,
+        "Right": 0.03368920832872391
+      },
+      "full_collar_head_pairs": 24,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 9,
+      "p99": 1.5417572673650102,
+      "sole": {
+        "Left": 5.3878946346230805e-05,
+        "Right": 0.033173318952322006
+      },
+      "full_collar_head_pairs": 24,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 10,
+      "p99": 1.5421689908927905,
+      "sole": {
+        "Left": 0.00015476933913305402,
+        "Right": 0.03271986544132233
+      },
+      "full_collar_head_pairs": 23,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 11,
+      "p99": 1.5425651606783513,
+      "sole": {
+        "Left": 0.00029682688182219863,
+        "Right": 0.032326240092515945
+      },
+      "full_collar_head_pairs": 22,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 12,
+      "p99": 1.5423519784330426,
+      "sole": {
+        "Left": 0.0005556332180276513,
+        "Right": 0.03201731666922569
+      },
+      "full_collar_head_pairs": 19,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 13,
+      "p99": 1.5420986010590487,
+      "sole": {
+        "Left": 0.000981783727183938,
+        "Right": 0.03187033534049988
+      },
+      "full_collar_head_pairs": 14,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 14,
+      "p99": 1.5408955984184165,
+      "sole": {
+        "Left": 0.0015949188964441419,
+        "Right": 0.03189079836010933
+      },
+      "full_collar_head_pairs": 14,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 15,
+      "p99": 1.5389393869685608,
+      "sole": {
+        "Left": 0.002351271454244852,
+        "Right": 0.03204343467950821
+      },
+      "full_collar_head_pairs": 5,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 16,
+      "p99": 1.5371862690208578,
+      "sole": {
+        "Left": 0.0031205974519252777,
+        "Right": 0.032250843942165375
+      },
+      "full_collar_head_pairs": 5,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 17,
+      "p99": 1.5350761996687543,
+      "sole": {
+        "Left": 0.0038166074082255363,
+        "Right": 0.032546792179346085
+      },
+      "full_collar_head_pairs": 2,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 18,
+      "p99": 1.5330197642777825,
+      "sole": {
+        "Left": 0.004531541373580694,
+        "Right": 0.032932620495557785
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 19,
+      "p99": 1.5308756755062038,
+      "sole": {
+        "Left": 0.005256182514131069,
+        "Right": 0.03337448835372925
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 20,
+      "p99": 1.5285625477347948,
+      "sole": {
+        "Left": 0.005989767145365477,
+        "Right": 0.033861324191093445
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 21,
+      "p99": 1.5253596535846692,
+      "sole": {
+        "Left": 0.006735149305313826,
+        "Right": 0.0344022661447525
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 22,
+      "p99": 1.52166153230162,
+      "sole": {
+        "Left": 0.007419095374643803,
+        "Right": 0.03503098711371422
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 23,
+      "p99": 1.5187850239052973,
+      "sole": {
+        "Left": 0.008045049384236336,
+        "Right": 0.03570987284183502
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 24,
+      "p99": 1.5163339068695691,
+      "sole": {
+        "Left": 0.008623559027910233,
+        "Right": 0.036437515169382095
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 25,
+      "p99": 1.513901052658849,
+      "sole": {
+        "Left": 0.009160423651337624,
+        "Right": 0.03723246976733208
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 26,
+      "p99": 1.5111095527219611,
+      "sole": {
+        "Left": 0.009670455008745193,
+        "Right": 0.03812868520617485
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 27,
+      "p99": 1.5076707588934357,
+      "sole": {
+        "Left": 0.010099068284034729,
+        "Right": 0.03906023129820824
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 28,
+      "p99": 1.5054789939318987,
+      "sole": {
+        "Left": 0.010393061675131321,
+        "Right": 0.03997468948364258
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 29,
+      "p99": 1.5035857119292602,
+      "sole": {
+        "Left": 0.010524926707148552,
+        "Right": 0.040866006165742874
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 30,
+      "p99": 1.5021398827933068,
+      "sole": {
+        "Left": 0.010488511063158512,
+        "Right": 0.0417032465338707
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 31,
+      "p99": 1.501055044135728,
+      "sole": {
+        "Left": 0.01029508002102375,
+        "Right": 0.04243074730038643
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 32,
+      "p99": 1.5007938024218404,
+      "sole": {
+        "Left": 0.00985962338745594,
+        "Right": 0.042972274124622345
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 33,
+      "p99": 1.5007514236408097,
+      "sole": {
+        "Left": 0.009312117472290993,
+        "Right": 0.043436575680971146
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 34,
+      "p99": 1.50048838765549,
+      "sole": {
+        "Left": 0.00872710719704628,
+        "Right": 0.043813109397888184
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 35,
+      "p99": 1.5008110923154558,
+      "sole": {
+        "Left": 0.00812509935349226,
+        "Right": 0.0440872497856617
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 36,
+      "p99": 1.5023651299895424,
+      "sole": {
+        "Left": 0.007480194326490164,
+        "Right": 0.044238656759262085
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 37,
+      "p99": 1.5040910661783617,
+      "sole": {
+        "Left": 0.006819380447268486,
+        "Right": 0.044302329421043396
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 38,
+      "p99": 1.5060401903038572,
+      "sole": {
+        "Left": 0.006164602003991604,
+        "Right": 0.04430964216589928
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 39,
+      "p99": 1.5084119134812493,
+      "sole": {
+        "Left": 0.005514238961040974,
+        "Right": 0.04424333944916725
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 40,
+      "p99": 1.5102460119071208,
+      "sole": {
+        "Left": 0.004888564348220825,
+        "Right": 0.04410929977893829
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 41,
+      "p99": 1.5122019615776197,
+      "sole": {
+        "Left": 0.004336990416049957,
+        "Right": 0.04392392560839653
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 42,
+      "p99": 1.5136492415888243,
+      "sole": {
+        "Left": 0.0037719474639743567,
+        "Right": 0.04364990442991257
+      },
+      "full_collar_head_pairs": 0,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 43,
+      "p99": 1.5153934173432093,
+      "sole": {
+        "Left": 0.0032779425382614136,
+        "Right": 0.04334835335612297
+      },
+      "full_collar_head_pairs": 4,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 44,
+      "p99": 1.5166086077300605,
+      "sole": {
+        "Left": 0.002863917965441942,
+        "Right": 0.04301377385854721
+      },
+      "full_collar_head_pairs": 4,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 45,
+      "p99": 1.5186283879056302,
+      "sole": {
+        "Left": 0.0025188648141920567,
+        "Right": 0.04262625426054001
+      },
+      "full_collar_head_pairs": 5,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 46,
+      "p99": 1.519746996033338,
+      "sole": {
+        "Left": 0.0022031664848327637,
+        "Right": 0.04215382784605026
+      },
+      "full_collar_head_pairs": 14,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 47,
+      "p99": 1.5216981111285377,
+      "sole": {
+        "Left": 0.001903502270579338,
+        "Right": 0.041567113250494
+      },
+      "full_collar_head_pairs": 12,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 48,
+      "p99": 1.5227271422111723,
+      "sole": {
+        "Left": 0.001654631458222866,
+        "Right": 0.0409272126853466
+      },
+      "full_collar_head_pairs": 15,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 49,
+      "p99": 1.5238248654179067,
+      "sole": {
+        "Left": 0.0014415973564609885,
+        "Right": 0.04038524627685547
+      },
+      "full_collar_head_pairs": 17,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 50,
+      "p99": 1.5251220351228345,
+      "sole": {
+        "Left": 0.0012936490820720792,
+        "Right": 0.039819732308387756
+      },
+      "full_collar_head_pairs": 19,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    },
+    {
+      "frame": 51,
+      "p99": 1.5265730078956612,
+      "sole": {
+        "Left": 0.0012800395488739014,
+        "Right": 0.03887307643890381
+      },
+      "full_collar_head_pairs": 22,
+      "exterior_head_pairs": 0,
+      "duplicate_seam_max_m": 0.0,
+      "duplicate_seams_over_1mm": 0
+    }
+  ],
+  "stretch_p99_max": 1.5425651606783513,
+  "stretch_gate": 2.2,
+  "sole_min_m": -2.9737502700299956e-06,
+  "closest_sole_max_m": 0.010524926707148552,
+  "frames_within_5mm": 30,
+  "full_collar_head_pairs_max": 35,
+  "inherited_exterior_head_pairs_max": 0,
+  "full_collar_population": 24056,
+  "inherited_exterior_population": 3029,
+  "coincident_rest_pairs": 104964,
+  "posed_seam_max_m": 0.0,
+  "weights": {
+    "objects": {
+      "char1": {
+        "vertices": 256643,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.4388933777809143e-07
+      },
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 85831,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 240,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_V3B_CollarLiner": {
+        "vertices": 432,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_V3B_CollarFloor": {
+        "vertices": 73,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "note": "Full population includes intentional buried neck contact and any surviving old head. Exterior uses inherited Round-2 exclusion; visual review is mandatory."
+}
