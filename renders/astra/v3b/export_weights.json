@@ -1,0 +1,94 @@
+{
+  "requested_export_all_influences": true,
+  "serialized": [
+    {
+      "mesh": "AstraChar2 Meshy i02 head hair planar cut",
+      "vertices": 88833,
+      "weight_attributes": [
+        "WEIGHTS_0"
+      ],
+      "maximum_positive_influences": 1,
+      "max_sum_error": 0.0
+    },
+    {
+      "mesh": "AstraChar2_Meshy_NeckBlend_Mesh",
+      "vertices": 240,
+      "weight_attributes": [
+        "WEIGHTS_0"
+      ],
+      "maximum_positive_influences": 1,
+      "max_sum_error": 0.0
+    },
+    {
+      "mesh": "V3B fitted collar loft",
+      "vertices": 504,
+      "weight_attributes": [
+        "WEIGHTS_0",
+        "WEIGHTS_1"
+      ],
+      "maximum_positive_influences": 6,
+      "max_sum_error": 1.2345844879746437e-07
+    },
+    {
+      "mesh": "V3B fitted collar loft",
+      "vertices": 72,
+      "weight_attributes": [
+        "WEIGHTS_0",
+        "WEIGHTS_1"
+      ],
+      "maximum_positive_influences": 6,
+      "max_sum_error": 9.96515154838562e-08
+    },
+    {
+      "mesh": "char1",
+      "vertices": 265336,
+      "weight_attributes": [
+        "WEIGHTS_0",
+        "WEIGHTS_1"
+      ],
+      "maximum_positive_influences": 8,
+      "max_sum_error": 1.4848774299025536e-07
+    },
+    {
+      "mesh": "Godwyn_Sword.001",
+      "vertices": 6091,
+      "weight_attributes": [
+        "WEIGHTS_0"
+      ],
+      "maximum_positive_influences": 1,
+      "max_sum_error": 0.0
+    }
+  ],
+  "native": {
+    "char1": {
+      "max_positive": 9,
+      "max_above_1e_4": 8,
+      "vertices_above_8_positive": 3331,
+      "ninth_largest_weight_max": 5.0840844778576866e-05
+    },
+    "AstraChar2_Meshy_HeadHair": {
+      "max_positive": 1,
+      "max_above_1e_4": 1,
+      "vertices_above_8_positive": 0,
+      "ninth_largest_weight_max": 0
+    },
+    "AstraChar2_Meshy_NeckBlend": {
+      "max_positive": 1,
+      "max_above_1e_4": 1,
+      "vertices_above_8_positive": 0,
+      "ninth_largest_weight_max": 0
+    },
+    "Godwyn_Sword": {
+      "max_positive": 1,
+      "max_above_1e_4": 1,
+      "vertices_above_8_positive": 0,
+      "ninth_largest_weight_max": 0
+    },
+    "AstraChar2_V3B_CollarLiner": {
+      "max_positive": 6,
+      "max_above_1e_4": 6,
+      "vertices_above_8_positive": 0,
+      "ninth_largest_weight_max": 0
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "AstraChar2_Meshy_HeadHair": {
+    "rest_sample_max_difference_m": 0.0,
+    "posed_51_frames_sample_max_difference_m": 1.490414112812279e-06
+  },
+  "AstraChar2_Meshy_NeckBlend": {
+    "rest_sample_max_difference_m": 0.0,
+    "posed_51_frames_sample_max_difference_m": 1.4394861073176052e-06
+  },
+  "Godwyn_Sword": {
+    "rest_sample_max_difference_m": 0.0,
+    "posed_51_frames_sample_max_difference_m": 1.2629997790108377e-06
+  }
+}

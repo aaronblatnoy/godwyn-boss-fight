@@ -1,0 +1,44 @@
+{
+  "method": "Count unique geometric vertices after 0.1 mm weld, not duplicate UV/normal vertices. Prior 30 mm distance test retained all components.",
+  "components": [
+    {
+      "source_vertices": 84412,
+      "welded_vertices": 45366,
+      "delete": false
+    },
+    {
+      "source_vertices": 456,
+      "welded_vertices": 229,
+      "delete": false
+    },
+    {
+      "source_vertices": 368,
+      "welded_vertices": 199,
+      "delete": false
+    },
+    {
+      "source_vertices": 136,
+      "welded_vertices": 69,
+      "delete": false
+    },
+    {
+      "source_vertices": 111,
+      "welded_vertices": 61,
+      "delete": false
+    },
+    {
+      "source_vertices": 92,
+      "welded_vertices": 53,
+      "delete": false
+    }
+  ],
+  "deleted_source_vertices": 0,
+  "before": [
+    85831,
+    89840
+  ],
+  "after": [
+    85831,
+    89840
+  ]
+}

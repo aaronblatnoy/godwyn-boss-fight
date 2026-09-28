@@ -1,0 +1,9 @@
+{
+  "source_faces": 309212,
+  "candidate_faces": 299063,
+  "retained_face_ids_unique": true,
+  "all_retained_ordered_triangle_coordinates_exact": true,
+  "all_retained_face_corner_UVs_exact": true,
+  "weight_changed_face_count": 168677,
+  "weight_change_note": "Deliberate robe skin-weight smoothing; rest geometry and UVs unchanged. Region counts and explicit removal predicate are in build_r5.json."
+}

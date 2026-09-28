@@ -1,0 +1,15 @@
+{
+  "published": false,
+  "verdict": "REJECT",
+  "candidate": "candidate_final.blend",
+  "glb_candidate": "candidate.glb",
+  "reasons": [
+    "Collar/liner seam has visible gaps and protruding skin",
+    "Copied head and NeckBlend misjoin in rest pose",
+    "Hair slivers survive the specified component thresholds",
+    "Lower-foot clearance reaches 10.6363 mm; only 30/51 frames within 5 mm",
+    "GLB body sample delta 0.104475 mm exceeds the chosen 0.100 mm comparison gate; tiny ninth influences are omitted"
+  ],
+  "release_paths_absent": true,
+  "report": "../char2/V3B_REPORT.md"
+}

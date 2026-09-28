@@ -1,0 +1,102 @@
+{
+  "candidate_only": true,
+  "bones": 24,
+  "hierarchy_preserved": true,
+  "joint_rest_error_m": 3.2611191272735596e-05,
+  "animation_frames": {
+    "Combat_Stance": 51
+  },
+  "fps": 30,
+  "gltf_skin_joint_counts": [
+    24
+  ],
+  "native_weights": {
+    "objects": {
+      "char1": {
+        "vertices": 253781,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.4156103134155273e-07
+      },
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 85831,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 240,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_V3B_CollarLiner": {
+        "vertices": 504,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 8.940696716308594e-08
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "imported_weights": {
+    "objects": {
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 88833,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 240,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "AstraChar2_V3B_CollarLiner": {
+        "vertices": 576,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.2345844879746437e-07
+      },
+      "char1": {
+        "vertices": 265336,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.4848774299025536e-07
+      },
+      "Godwyn_Sword": {
+        "vertices": 6091,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "rest_sample_matching_error_m": 1.705166869214736e-05,
+  "sampled_deformation_max_error_m": {
+    "char1": 0.0001044752961254816,
+    "AstraChar2_Meshy_HeadHair": 2.2214228097896842e-06,
+    "AstraChar2_Meshy_NeckBlend": 2.0801935632962164e-06,
+    "Godwyn_Sword": 9.682407167444861e-06,
+    "AstraChar2_V3B_CollarLiner": 3.8063353014091346e-06
+  },
+  "deformation_samples_per_mesh": 160,
+  "frames_compared": 51,
+  "material_bakes": [
+    "bake_char1_Base_Color.png",
+    "bake_char1_Roughness.png",
+    "bake_AstraChar2_Meshy_HeadHair_Base_Color.png"
+  ],
+  "material_limit": "Native skin_i01 subsurface scattering has no exact core glTF equivalent; GLB skin is an approximation.",
+  "export_sha256": "654af1ec7fa1d9e3f291bc2c4cea47ec14f4fcfb6349ea3a1b3ed5367a74b029",
+  "mechanical_pass": false,
+  "export_all_influences_requested": true
+}

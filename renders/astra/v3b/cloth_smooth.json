@@ -1,0 +1,8 @@
+{
+  "method": "100 iterations of .75 Laplacian skin-weight smoothing over geometric mesh adjacency; blue lower-robe core plus four tapered adjacent rings; no coordinate, face, UV, bone, action or object-transform edits",
+  "selected_canonical_vertices": 83955,
+  "changed_mesh_vertices": 134875,
+  "maximum_weight_delta": 0.2897803001785464,
+  "faces": 299063,
+  "rest_positions_exact": true
+}
