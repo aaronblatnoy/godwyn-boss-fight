@@ -1,4 +1,4 @@
-"""Quarter-frame sole alignment and distal cloth gathering for body i01 moves."""
+"""Quarter-frame sole alignment and distal cloth gathering for body i02 moves."""
 import bpy
 import json
 import numpy as np
@@ -6,13 +6,13 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "renders/astra/rehost_body"
+OUT = ROOT / "renders/astra/rehost_body_i02"
 MODELS = {
-    "idle_guard": ROOT / "models/astra_move_idle_guard_body_i01.blend",
-    "walk_stalk": ROOT / "models/astra_move_walk_stalk_body_i01.blend",
-    "lunge_thrust": ROOT / "models/astra_move_lunge_thrust_body_i01.blend",
-    "rising_spin": ROOT / "models/astra_move_rising_spin_body_i01.blend",
-    "xslash": ROOT / "models/astra_xslash_body_i01.blend",
+    "idle_guard": ROOT / "models/astra_move_idle_guard_body_i02.blend",
+    "walk_stalk": ROOT / "models/astra_move_walk_stalk_body_i02.blend",
+    "lunge_thrust": ROOT / "models/astra_move_lunge_thrust_body_i02.blend",
+    "rising_spin": ROOT / "models/astra_move_rising_spin_body_i02.blend",
+    "xslash": ROOT / "models/astra_xslash_body_i02.blend",
 }
 SOLE_TARGET = 0.0005
 CLOTH_TARGET = 0.0025
@@ -206,7 +206,7 @@ def fix(name, model):
     sole_min = min(min(row.values()) for row in final_sole)
     cloth_min = min(min(row.values()) for row in final_cloth)
     assert sole_min >= 0.0 and cloth_min >= CLOTH_GATE, (name, sole_min, cloth_min)
-    scene["astra_body_i01_contact_fix"] = json.dumps({"root_lift_max_m": float(root_lifts.max()),
+    scene["astra_body_i02_contact_fix"] = json.dumps({"root_lift_max_m": float(root_lifts.max()),
                                                        "modified_phys_bones": sorted(modified_bones)})
     scene.frame_set(1)
     bpy.context.preferences.filepaths.save_version = 0

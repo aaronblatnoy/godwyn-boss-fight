@@ -1,0 +1,62 @@
+{
+  "source": "models/astra_character_v2_body_i02.glb",
+  "source_sha256": "8900cc9b38d6181b15f2436a590119ee04fcc6573ceffaa2e1861a0b7dc8509a",
+  "bones": 121,
+  "actions": 0,
+  "world_joint_position_max_error_m": 1.430511474609375e-05,
+  "world_joint_position_tolerance_m": 5e-05,
+  "bone_names_and_hierarchy_preserved": true,
+  "glb_skin_joint_counts": [
+    121
+  ],
+  "glb_animations": 0,
+  "materials": [
+    "AstraChar2 Meshy i02 PBR head+hair warm skin mask",
+    "AstraChar2 Meshy i02 skin blend",
+    "AstraBody Meshy god_A original PBR",
+    "Astra worn steel and gold hilt final"
+  ],
+  "images": [
+    "Image_3",
+    "normal",
+    "Image_0",
+    "Image_1",
+    "Image_3",
+    "normal",
+    "Image_0",
+    "Image_1",
+    "astra_character_Godwyn_Sword_normal_2048",
+    "astra_character_Godwyn_Sword_orm_2048",
+    "astra_character_Godwyn_Sword_basecolor_2048"
+  ],
+  "weights": {
+    "objects": {
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 160156,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 577,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "char1": {
+        "vertices": 265826,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 9.406358003616333e-08
+      },
+      "Godwyn_Sword": {
+        "vertices": 6045,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 9.406358003616333e-08
+  }
+}

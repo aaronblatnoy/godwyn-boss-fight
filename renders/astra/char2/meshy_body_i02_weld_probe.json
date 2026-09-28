@@ -1,0 +1,46 @@
+{
+  "0.00005000": {
+    "vertices_before": 278318,
+    "vertices_after": 155484,
+    "vertices_merged": 122834,
+    "components": 1,
+    "components_ge_200_vertices": 1,
+    "vertices_in_components_ge_200": 155484,
+    "largest_component_sizes": [
+      155484
+    ]
+  },
+  "0.00010000": {
+    "vertices_before": 278318,
+    "vertices_after": 155484,
+    "vertices_merged": 122834,
+    "components": 1,
+    "components_ge_200_vertices": 1,
+    "vertices_in_components_ge_200": 155484,
+    "largest_component_sizes": [
+      155484
+    ]
+  },
+  "0.00025000": {
+    "vertices_before": 278318,
+    "vertices_after": 155484,
+    "vertices_merged": 122834,
+    "components": 1,
+    "components_ge_200_vertices": 1,
+    "vertices_in_components_ge_200": 155484,
+    "largest_component_sizes": [
+      155484
+    ]
+  },
+  "0.00050000": {
+    "vertices_before": 278318,
+    "vertices_after": 155478,
+    "vertices_merged": 122840,
+    "components": 1,
+    "components_ge_200_vertices": 1,
+    "vertices_in_components_ge_200": 155478,
+    "largest_component_sizes": [
+      155478
+    ]
+  }
+}

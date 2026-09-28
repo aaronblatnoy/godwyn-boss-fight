@@ -1,4 +1,4 @@
-"""Package and verify the two required body-i01 EEVEE move films."""
+"""Package and verify the two required body-i02 EEVEE move films."""
 import hashlib
 import json
 import shutil
@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "renders/astra/rehost_body"
+OUT = ROOT / "renders/astra/rehost_body_i02"
 JOBS = {"rising_spin": 116, "xslash": 90}
 FFMPEG = shutil.which("ffmpeg") or "/usr/bin/ffmpeg"
 FFPROBE = shutil.which("ffprobe") or "/usr/bin/ffprobe"

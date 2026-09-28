@@ -1,0 +1,587 @@
+{
+  "components_after_head_cut": 17,
+  "components_removed_under_200_vertices": 16,
+  "vertices_removed_under_200_components": 52,
+  "faces_removed_under_200_components": 18,
+  "hair_colored_components_removed": 0,
+  "vertices_removed_hair_colored_components": 0,
+  "faces_removed_hair_colored_components": 0,
+  "components_retained": 1,
+  "largest_components": [
+    {
+      "vertices": 149413,
+      "faces": 298229,
+      "mean_base_color": [
+        0.3193020522594452,
+        0.24191974103450775,
+        0.2678222358226776
+      ],
+      "mean_metallic": 0.3871436966509231,
+      "mean_world_center_m": [
+        0.011513463221490383,
+        -0.3655712306499481,
+        1.2238192558288574
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 5,
+      "faces": 2,
+      "mean_base_color": [
+        0.5784313678741455,
+        0.4705882668495178,
+        0.3921568989753723
+      ],
+      "mean_metallic": 0.7156862914562225,
+      "mean_world_center_m": [
+        -0.38821446895599365,
+        -0.5437017679214478,
+        2.614896774291992
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 5,
+      "faces": 2,
+      "mean_base_color": [
+        0.4529411792755127,
+        0.3176470696926117,
+        0.20588235557079315
+      ],
+      "mean_metallic": 0.6941176652908325,
+      "mean_world_center_m": [
+        0.057661451399326324,
+        -0.5730776786804199,
+        2.761573076248169
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.7176470756530762,
+        0.545098066329956,
+        0.29019609093666077
+      ],
+      "mean_metallic": 0.9960784912109375,
+      "mean_world_center_m": [
+        -0.3854480981826782,
+        -0.338515043258667,
+        2.645282745361328
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.5960784554481506,
+        0.4862745404243469,
+        0.43137258291244507
+      ],
+      "mean_metallic": 0.7215686440467834,
+      "mean_world_center_m": [
+        -0.31530681252479553,
+        -0.5225436687469482,
+        2.6620278358459473
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.5960784554481506,
+        0.4862745404243469,
+        0.4705882668495178
+      ],
+      "mean_metallic": 0.6980392336845398,
+      "mean_world_center_m": [
+        -0.30872637033462524,
+        -0.46077001094818115,
+        2.6862525939941406
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.14901961386203766,
+        0.06666667014360428,
+        0.19607844948768616
+      ],
+      "mean_metallic": 0.6705882549285889,
+      "mean_world_center_m": [
+        -0.3148220479488373,
+        -0.3510470390319824,
+        2.6778578758239746
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.5098039507865906,
+        0.34117648005485535,
+        0.2039215862751007
+      ],
+      "mean_metallic": 0.7686275243759155,
+      "mean_world_center_m": [
+        -0.3054982125759125,
+        -0.2996188998222351,
+        2.6596012115478516
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.6078431606292725,
+        0.4549019932746887,
+        0.23137256503105164
+      ],
+      "mean_metallic": 0.988235354423523,
+      "mean_world_center_m": [
+        -0.24658434092998505,
+        -0.5423345565795898,
+        2.6584115028381348
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.5647059082984924,
+        0.458823561668396,
+        0.3529411852359772
+      ],
+      "mean_metallic": 0.729411780834198,
+      "mean_world_center_m": [
+        -0.2398657500743866,
+        -0.5676254034042358,
+        2.635669708251953
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.6941176652908325,
+        0.6117647290229797,
+        0.49803924560546875
+      ],
+      "mean_metallic": 0.8235294818878174,
+      "mean_world_center_m": [
+        -0.24102666974067688,
+        -0.37735292315483093,
+        2.699817657470703
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.6039215922355652,
+        0.45098042488098145,
+        0.2823529541492462
+      ],
+      "mean_metallic": 0.9529412388801575,
+      "mean_world_center_m": [
+        -0.06788267195224762,
+        -0.5637615919113159,
+        2.7665066719055176
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.23137256503105164,
+        0.1568627506494522,
+        0.2666666805744171
+      ],
+      "mean_metallic": 0.6745098233222961,
+      "mean_world_center_m": [
+        -0.06431065499782562,
+        -0.5666480660438538,
+        2.762627363204956
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.41568630933761597,
+        0.2862745225429535,
+        0.32156863808631897
+      ],
+      "mean_metallic": 0.874509871006012,
+      "mean_world_center_m": [
+        -0.04069320112466812,
+        -0.5761554837226868,
+        2.741476058959961
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.3176470696926117,
+        0.21568629145622253,
+        0.250980406999588
+      ],
+      "mean_metallic": 0.8784314393997192,
+      "mean_world_center_m": [
+        -0.009216205216944218,
+        -0.5727477073669434,
+        2.69787859916687
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.545098066329956,
+        0.43529415130615234,
+        0.3490196168422699
+      ],
+      "mean_metallic": 0.7098039388656616,
+      "mean_world_center_m": [
+        0.011947428807616234,
+        -0.5791046619415283,
+        2.703691244125366
+      ],
+      "mean_hair_colored": false
+    },
+    {
+      "vertices": 3,
+      "faces": 1,
+      "mean_base_color": [
+        0.5647059082984924,
+        0.4431372880935669,
+        0.3607843220233917
+      ],
+      "mean_metallic": 0.7803922295570374,
+      "mean_world_center_m": [
+        0.03727268427610397,
+        -0.5726572871208191,
+        2.742702007293701
+      ],
+      "mean_hair_colored": false
+    }
+  ],
+  "pre_segmentation_weld": {
+    "tolerance_source_m": 5e-05,
+    "vertices_before": 278318,
+    "vertices_after": 155484,
+    "vertices_merged": 122834,
+    "reason": "merge exact/near-exact duplicate seam vertices before applying the required topological component cleanup"
+  },
+  "bone_midpoint_coverage": {
+    "bones_checked": 24,
+    "per_bone": {
+      "Hips": {
+        "midpoint_world_m": [
+          0.005475593730807304,
+          -0.16674275696277618,
+          1.9289958477020264
+        ],
+        "body_nearest_vertex_distance_m": 0.044129226356744766,
+        "final_surface_nearest_vertex_distance_m": 0.044129226356744766,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "Spine02": {
+        "midpoint_world_m": [
+          0.004479954019188881,
+          -0.17520545423030853,
+          2.1723666191101074
+        ],
+        "body_nearest_vertex_distance_m": 0.057227715849876404,
+        "final_surface_nearest_vertex_distance_m": 0.057227715849876404,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "Spine01": {
+        "midpoint_world_m": [
+          0.0034843645989894867,
+          -0.18366824090480804,
+          2.4157378673553467
+        ],
+        "body_nearest_vertex_distance_m": 0.007085402961820364,
+        "final_surface_nearest_vertex_distance_m": 0.007085402961820364,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "Spine": {
+        "midpoint_world_m": [
+          0.0021041128784418106,
+          -0.19111457467079163,
+          2.629877805709839
+        ],
+        "body_nearest_vertex_distance_m": 0.038929399102926254,
+        "final_surface_nearest_vertex_distance_m": 0.027285464107990265,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "neck": {
+        "midpoint_world_m": [
+          0.0006107696099206805,
+          -0.19655495882034302,
+          2.7863292694091797
+        ],
+        "body_nearest_vertex_distance_m": 0.10823588073253632,
+        "final_surface_nearest_vertex_distance_m": 0.04884213209152222,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftShoulder": {
+        "midpoint_world_m": [
+          0.19009214639663696,
+          -0.18760809302330017,
+          2.612762451171875
+        ],
+        "body_nearest_vertex_distance_m": 0.017486978322267532,
+        "final_surface_nearest_vertex_distance_m": 0.017486978322267532,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftArm": {
+        "midpoint_world_m": [
+          0.3919796645641327,
+          -0.17436355352401733,
+          2.3988776206970215
+        ],
+        "body_nearest_vertex_distance_m": 0.058561645448207855,
+        "final_surface_nearest_vertex_distance_m": 0.058561645448207855,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftForeArm": {
+        "midpoint_world_m": [
+          0.5188252925872803,
+          -0.3327378034591675,
+          2.0718181133270264
+        ],
+        "body_nearest_vertex_distance_m": 0.03609691187739372,
+        "final_surface_nearest_vertex_distance_m": 0.03609691187739372,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftHand": {
+        "midpoint_world_m": [
+          0.5685197114944458,
+          -0.5042595267295837,
+          1.9586433172225952
+        ],
+        "body_nearest_vertex_distance_m": 0.006759290583431721,
+        "final_surface_nearest_vertex_distance_m": 0.006759290583431721,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightShoulder": {
+        "midpoint_world_m": [
+          -0.1836528331041336,
+          -0.18244796991348267,
+          2.6149520874023438
+        ],
+        "body_nearest_vertex_distance_m": 0.056435663253068924,
+        "final_surface_nearest_vertex_distance_m": 0.056435663253068924,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightArm": {
+        "midpoint_world_m": [
+          -0.37867826223373413,
+          -0.15945637226104736,
+          2.372354030609131
+        ],
+        "body_nearest_vertex_distance_m": 0.02676878124475479,
+        "final_surface_nearest_vertex_distance_m": 0.02676878124475479,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightForeArm": {
+        "midpoint_world_m": [
+          -0.458414226770401,
+          -0.1814199984073639,
+          1.8954861164093018
+        ],
+        "body_nearest_vertex_distance_m": 0.18686534464359283,
+        "final_surface_nearest_vertex_distance_m": 0.18686534464359283,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": false
+      },
+      "RightHand": {
+        "midpoint_world_m": [
+          -0.4675523638725281,
+          -0.22455796599388123,
+          1.661215901374817
+        ],
+        "body_nearest_vertex_distance_m": 0.199543759226799,
+        "final_surface_nearest_vertex_distance_m": 0.199543759226799,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": false
+      },
+      "LeftUpLeg": {
+        "midpoint_world_m": [
+          0.24004191160202026,
+          -0.1675652712583542,
+          1.2685967683792114
+        ],
+        "body_nearest_vertex_distance_m": 0.0485590323805809,
+        "final_surface_nearest_vertex_distance_m": 0.0485590323805809,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftLeg": {
+        "midpoint_world_m": [
+          0.30265694856643677,
+          -0.18966633081436157,
+          0.539151132106781
+        ],
+        "body_nearest_vertex_distance_m": 0.029789991676807404,
+        "final_surface_nearest_vertex_distance_m": 0.029789991676807404,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftFoot": {
+        "midpoint_world_m": [
+          0.37098419666290283,
+          -0.3302515149116516,
+          0.1198340430855751
+        ],
+        "body_nearest_vertex_distance_m": 0.011553126387298107,
+        "final_surface_nearest_vertex_distance_m": 0.011553126387298107,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "LeftToeBase": {
+        "midpoint_world_m": [
+          0.4151870012283325,
+          -0.4521048367023468,
+          0.07082676887512207
+        ],
+        "body_nearest_vertex_distance_m": 0.036374714225530624,
+        "final_surface_nearest_vertex_distance_m": 0.036374714225530624,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightUpLeg": {
+        "midpoint_world_m": [
+          -0.23031029105186462,
+          -0.17458802461624146,
+          1.288489580154419
+        ],
+        "body_nearest_vertex_distance_m": 0.04369233548641205,
+        "final_surface_nearest_vertex_distance_m": 0.04369233548641205,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightLeg": {
+        "midpoint_world_m": [
+          -0.29622069001197815,
+          -0.1854741871356964,
+          0.5693895816802979
+        ],
+        "body_nearest_vertex_distance_m": 0.022541239857673645,
+        "final_surface_nearest_vertex_distance_m": 0.022541239857673645,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightFoot": {
+        "midpoint_world_m": [
+          -0.36860665678977966,
+          -0.2948785424232483,
+          0.13356080651283264
+        ],
+        "body_nearest_vertex_distance_m": 0.02071164920926094,
+        "final_surface_nearest_vertex_distance_m": 0.02071164920926094,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "RightToeBase": {
+        "midpoint_world_m": [
+          -0.4138539135456085,
+          -0.4014488160610199,
+          0.070951908826828
+        ],
+        "body_nearest_vertex_distance_m": 0.04692421481013298,
+        "final_surface_nearest_vertex_distance_m": 0.04692421481013298,
+        "coverage_surface": "new Meshy body",
+        "gate_m": 0.06,
+        "gate_pass": true
+      },
+      "Head": {
+        "midpoint_world_m": [
+          -0.0017132061766460538,
+          -0.2526821494102478,
+          3.0286972522735596
+        ],
+        "body_nearest_vertex_distance_m": 0.25641754269599915,
+        "final_surface_nearest_vertex_distance_m": 0.11050519347190857,
+        "coverage_surface": "published head/hair/NeckBlend",
+        "gate_m": 0.06,
+        "gate_pass": false
+      },
+      "head_end": {
+        "midpoint_world_m": [
+          -0.003426317824050784,
+          -0.30658388137817383,
+          3.2070677280426025
+        ],
+        "body_nearest_vertex_distance_m": 0.4244651198387146,
+        "final_surface_nearest_vertex_distance_m": 0.06593743711709976,
+        "coverage_surface": "published head/hair/NeckBlend",
+        "gate_m": 0.06,
+        "gate_pass": false
+      },
+      "headfront": {
+        "midpoint_world_m": [
+          -1.0821249674108913e-07,
+          -0.44711461663246155,
+          2.8503258228302
+        ],
+        "body_nearest_vertex_distance_m": 0.14077307283878326,
+        "final_surface_nearest_vertex_distance_m": 0.037376970052719116,
+        "coverage_surface": "published head/hair/NeckBlend",
+        "gate_m": 0.06,
+        "gate_pass": true
+      }
+    },
+    "maximum_final_surface_distance_m": 0.199543759226799,
+    "all_24_bones_within_60mm": false,
+    "note": "Head/head_end/headfront use the preserved published head surface; all other body-bone rows use the replacement body."
+  }
+}

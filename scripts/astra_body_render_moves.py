@@ -1,4 +1,4 @@
-"""Render body-i01 move evidence at the existing 768-square EEVEE settings."""
+"""Render body-i02 move evidence at the existing 768-square EEVEE settings."""
 import bpy
 import json
 import sys
@@ -6,13 +6,13 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "renders/astra/rehost_body"
+OUT = ROOT / "renders/astra/rehost_body_i02"
 JOBS = {
-    "idle_guard": (ROOT / "models/astra_move_idle_guard_body_i01.blend", 48),
-    "walk_stalk": (ROOT / "models/astra_move_walk_stalk_body_i01.blend", 36),
-    "lunge_thrust": (ROOT / "models/astra_move_lunge_thrust_body_i01.blend", 40),
-    "rising_spin": (ROOT / "models/astra_move_rising_spin_body_i01.blend", 40),
-    "xslash": (ROOT / "models/astra_xslash_body_i01.blend", 55),
+    "idle_guard": (ROOT / "models/astra_move_idle_guard_body_i02.blend", 48),
+    "walk_stalk": (ROOT / "models/astra_move_walk_stalk_body_i02.blend", 36),
+    "lunge_thrust": (ROOT / "models/astra_move_lunge_thrust_body_i02.blend", 40),
+    "rising_spin": (ROOT / "models/astra_move_rising_spin_body_i02.blend", 40),
+    "xslash": (ROOT / "models/astra_xslash_body_i02.blend", 55),
 }
 
 

@@ -1,0 +1,15 @@
+{
+  "model": "models/astra_xslash_body_i02.blend",
+  "frame_start": 1,
+  "frame_end": 90,
+  "frame_count": 90,
+  "resolution": [
+    768,
+    768
+  ],
+  "fps": 30,
+  "engine": "BLENDER_EEVEE",
+  "samples": 32,
+  "motion_blur": true,
+  "frames": "renders/astra/rehost_body_i02/xslash_frames"
+}

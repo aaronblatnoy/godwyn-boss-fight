@@ -1,34 +1,69 @@
-"""Verify the five corrected body-i01 move files and assemble the final audit."""
+"""Verify the five corrected body-i02 move files and assemble the final audit."""
 import bpy
 import hashlib
 import json
+import numpy as np
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from astra_body_moves import collision_audit, grip_audit
+from astra_body_moves import collision_audit, evaluated_world, grip_audit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / "models/astra_character_v2_body_i01.blend"
-OUT = ROOT / "renders/astra/rehost_body"
+BASE = ROOT / "models/astra_character_v2_body_i02.blend"
+OUT = ROOT / "renders/astra/rehost_body_i02"
 JOBS = {
     "idle_guard": (ROOT / "models/astra_move_idle_guard_v2_wip.blend",
-                   ROOT / "models/astra_move_idle_guard_body_i01.blend", 48),
+                   ROOT / "models/astra_move_idle_guard_body_i02.blend", 48),
     "walk_stalk": (ROOT / "models/astra_move_walk_stalk_v2_wip.blend",
-                   ROOT / "models/astra_move_walk_stalk_body_i01.blend", 36),
+                   ROOT / "models/astra_move_walk_stalk_body_i02.blend", 36),
     "lunge_thrust": (ROOT / "models/astra_move_lunge_thrust_v2_wip.blend",
-                     ROOT / "models/astra_move_lunge_thrust_body_i01.blend", 40),
+                     ROOT / "models/astra_move_lunge_thrust_body_i02.blend", 40),
     "rising_spin": (ROOT / "models/astra_move_rising_spin_v2_wip.blend",
-                    ROOT / "models/astra_move_rising_spin_body_i01.blend", 40),
+                    ROOT / "models/astra_move_rising_spin_body_i02.blend", 40),
     "xslash": (ROOT / "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
-               ROOT / "models/astra_xslash_body_i01.blend", 55),
+               ROOT / "models/astra_xslash_body_i02.blend", 55),
 }
 
 
 def sha256(path):
     with path.open("rb") as handle:
         return hashlib.file_digest(handle, "sha256").hexdigest()
+
+
+def edge_stretch(scene, body, frame):
+    rest = np.empty(len(body.data.vertices) * 3, dtype=np.float32)
+    body.data.vertices.foreach_get("co", rest)
+    rest = rest.reshape(-1, 3)
+    matrix = np.asarray(body.matrix_world)
+    rest = rest @ matrix[:3, :3].T + matrix[:3, 3]
+    edge_vertices = np.empty(len(body.data.edges) * 2, dtype=np.int32)
+    body.data.edges.foreach_get("vertices", edge_vertices)
+    edge_vertices = edge_vertices.reshape(-1, 2)
+    rest_lengths = np.linalg.norm(rest[edge_vertices[:, 0]] - rest[edge_vertices[:, 1]], axis=1)
+    scene.frame_set(frame)
+    bpy.context.view_layer.update()
+    posed, _polygons = evaluated_world(body)
+    posed_lengths = np.linalg.norm(posed[edge_vertices[:, 0]] - posed[edge_vertices[:, 1]], axis=1)
+    valid = rest_lengths > 1e-6
+    ratios = posed_lengths[valid] / rest_lengths[valid]
+    valid_edges = np.flatnonzero(valid)
+    maximum_slot = int(np.argmax(ratios))
+    maximum_edge = int(valid_edges[maximum_slot])
+    return {
+        "frame": frame,
+        "edges": len(edge_vertices),
+        "valid_edges_rest_length_gt_1um": int(valid.sum()),
+        "minimum_valid_rest_edge_m": float(rest_lengths[valid].min()),
+        "maximum_ratio": float(ratios[maximum_slot]),
+        "p99_ratio": float(np.percentile(ratios, 99)),
+        "p999_ratio": float(np.percentile(ratios, 99.9)),
+        "maximum_edge_index": maximum_edge,
+        "maximum_edge_vertices": [int(value) for value in edge_vertices[maximum_edge]],
+        "maximum_edge_rest_length_m": float(rest_lengths[maximum_edge]),
+        "maximum_edge_posed_length_m": float(posed_lengths[maximum_edge]),
+    }
 
 
 def verify(name, source, model, extended_frame):
@@ -38,9 +73,9 @@ def verify(name, source, model, extended_frame):
     sword = bpy.data.objects["Godwyn_Sword"]
     contact = json.loads((OUT / f"{name}_contact_fix.json").read_text())
     assert len(rig.data.bones) == 121
-    assert scene.get("astra_body_i01_rehost") == name
-    assert scene.get("astra_body_i01_base_sha256") == sha256(BASE)
-    assert scene.get("astra_body_i01_action_source_sha256") == sha256(source)
+    assert scene.get("astra_body_i02_rehost") == name
+    assert scene.get("astra_body_i02_base_sha256") == sha256(BASE)
+    assert scene.get("astra_body_i02_action_source_sha256") == sha256(source)
     assert rig.animation_data and rig.animation_data.action
     grip = grip_audit(scene, rig, sword)
     collision = None
@@ -48,6 +83,7 @@ def verify(name, source, model, extended_frame):
         collision = collision_audit(
             name, scene, sword, bpy.data.objects["AstraChar2_Meshy_HeadHair"], extended_frame
         )
+    stretch = edge_stretch(scene, bpy.data.objects["char1"], extended_frame)
     row = {
         "name": name,
         "source": str(source.relative_to(ROOT)),
@@ -73,6 +109,7 @@ def verify(name, source, model, extended_frame):
         },
         "grip": grip,
         "collision": collision,
+        "edge_stretch": stretch,
         "most_extended_frame": extended_frame,
     }
     assert grip["gate_pass"]
@@ -84,6 +121,7 @@ def verify(name, source, model, extended_frame):
         "cloth_m": row["contact_correction"]["cloth_minimum_clearance_m"],
         "grip_m": grip["max_hand_local_hilt_drift_m"],
         "collision": collision,
+        "max_edge_stretch_ratio": stretch["maximum_ratio"],
     }), flush=True)
     return row
 

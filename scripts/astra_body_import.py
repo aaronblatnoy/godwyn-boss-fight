@@ -8,8 +8,9 @@ from pathlib import Path
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "models/meshy_body_godA.glb"
+SOURCE = ROOT / "models/meshy_body_godA_hairback.glb"
 OUT = ROOT / "renders/astra/char2"
+REPORT = OUT / "meshy_body_i02_import.json"
 
 
 def world_bounds(obj):
@@ -63,7 +64,7 @@ def image_record(image):
 def render_views(obj, lo, hi):
     scene = bpy.context.scene
     scene.render.engine = "BLENDER_EEVEE"
-    scene.render.resolution_x = scene.render.resolution_y = 768
+    scene.render.resolution_x, scene.render.resolution_y = 768, 1152
     scene.render.resolution_percentage = 100
     scene.render.image_settings.file_format = "PNG"
     scene.render.film_transparent = False
@@ -100,9 +101,9 @@ def render_views(obj, lo, hi):
         ("tq", Vector((0.72, -0.72, 0))),
     ]
     for label, direction in views:
-        camera.location = center + direction.normalized() * height * 1.75
+        camera.location = center + direction.normalized() * height * 2.20
         camera.rotation_euler = (center - camera.location).to_track_quat("-Z", "Y").to_euler()
-        scene.render.filepath = str(OUT / f"meshy_body_import_{label}.png")
+        scene.render.filepath = str(OUT / f"meshy_body2_import_{label}.png")
         bpy.ops.render.render(write_still=True)
         print("IMPORT_RENDER", label, flush=True)
 
@@ -161,12 +162,16 @@ def main():
             "observations": [
                 "Recognizable gold plate, deep blue velvet robe and sash, laurel trim, gauntlets, greaves and boots.",
                 "The continuous decorated textile and layered armor silhouette are materially closer to god_A than the procedural body.",
-                "Source head and hair are lower-detail and will be removed in favor of the published Meshy i02 head and hair.",
+                "The tied-back source hair does not cross the shoulders or arms; both upper limbs read as complete in the raw views.",
+                "Source head and tied-back hair are lower-detail and will be removed in favor of the published Meshy i02 head and hair.",
             ],
         },
     }
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / "meshy_body_import.json").write_text(json.dumps(report, indent=2) + "\n")
+    payload = json.dumps(report, indent=2) + "\n"
+    REPORT.write_text(payload)
+    # The brief retains the original generic filename as a required handoff.
+    (OUT / "meshy_body_import.json").write_text(payload)
     render_views(obj, lo, hi)
     print("IMPORT_REPORT", json.dumps({"triangles": report["mesh"]["triangles"],
                                        "bounds": report["bounds_world_m"],

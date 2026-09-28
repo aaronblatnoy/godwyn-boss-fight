@@ -1,0 +1,110 @@
+{
+  "name": "rising_spin",
+  "sample_step_frames": 0.25,
+  "samples": 461,
+  "before": {
+    "sole_minimum_m": -0.0036538923159241676,
+    "cloth_minimum_m": -0.05775921791791916
+  },
+  "root": {
+    "maximum_lift_m": 0.004361586931720377,
+    "post_root_sole_minimum_m": 0.0005388865247368813
+  },
+  "cloth": {
+    "target_m": 0.0025,
+    "gate_m": 0.002,
+    "passes": [
+      {
+        "pass": 0,
+        "global_minimum_m": -0.05610683560371399,
+        "family_minimum_m": {
+          "phys_robe_back_R": -0.030226439237594604,
+          "phys_robe_front_C": 0.20996035635471344,
+          "phys_robe_front_L": -0.02324501797556877,
+          "phys_robe_front_R": -0.026296649128198624,
+          "phys_robe_side_L": -0.0035232407972216606,
+          "phys_robe_side_R": -0.03529813513159752,
+          "phys_cape_C": -0.05610683560371399,
+          "phys_cape_L": -0.0063325269147753716,
+          "phys_cape_R": -0.014697846956551075
+        }
+      },
+      {
+        "pass": 1,
+        "global_minimum_m": 0.0010925531387329102,
+        "family_minimum_m": {
+          "phys_robe_back_R": 0.00776545749977231,
+          "phys_robe_front_C": 0.2188182771205902,
+          "phys_robe_front_L": 0.002728661522269249,
+          "phys_robe_front_R": 0.01474129967391491,
+          "phys_robe_side_L": 0.003413105383515358,
+          "phys_robe_side_R": 0.0010925531387329102,
+          "phys_cape_C": 0.005590083077549934,
+          "phys_cape_L": 0.001605846919119358,
+          "phys_cape_R": 0.009806700050830841
+        }
+      },
+      {
+        "pass": 2,
+        "global_minimum_m": 0.0022665048018097878,
+        "family_minimum_m": {
+          "phys_robe_back_R": 0.0077665639109909534,
+          "phys_robe_front_C": 0.2188182771205902,
+          "phys_robe_front_L": 0.002728661522269249,
+          "phys_robe_front_R": 0.014742417261004448,
+          "phys_robe_side_L": 0.003482227213680744,
+          "phys_robe_side_R": 0.0023876046761870384,
+          "phys_cape_C": 0.0055902982130646706,
+          "phys_cape_L": 0.0022665048018097878,
+          "phys_cape_R": 0.009806700050830841
+        }
+      }
+    ],
+    "modified_bones": [
+      "phys_cape_C_03",
+      "phys_cape_C_04",
+      "phys_cape_C_05",
+      "phys_cape_C_06",
+      "phys_cape_L_03",
+      "phys_cape_L_04",
+      "phys_cape_L_05",
+      "phys_cape_L_06",
+      "phys_cape_R_03",
+      "phys_cape_R_04",
+      "phys_cape_R_05",
+      "phys_cape_R_06",
+      "phys_robe_back_R_03",
+      "phys_robe_back_R_04",
+      "phys_robe_back_R_05",
+      "phys_robe_back_R_06",
+      "phys_robe_back_R_07",
+      "phys_robe_front_L_03",
+      "phys_robe_front_L_04",
+      "phys_robe_front_L_05",
+      "phys_robe_front_L_06",
+      "phys_robe_front_L_07",
+      "phys_robe_front_R_03",
+      "phys_robe_front_R_04",
+      "phys_robe_front_R_05",
+      "phys_robe_front_R_06",
+      "phys_robe_front_R_07",
+      "phys_robe_side_L_03",
+      "phys_robe_side_L_04",
+      "phys_robe_side_L_05",
+      "phys_robe_side_L_06",
+      "phys_robe_side_L_07",
+      "phys_robe_side_R_03",
+      "phys_robe_side_R_04",
+      "phys_robe_side_R_05",
+      "phys_robe_side_R_06",
+      "phys_robe_side_R_07"
+    ],
+    "final_minimum_m": 0.0022665048018097878
+  },
+  "final": {
+    "sole_minimum_m": 0.0005388865247368813,
+    "cloth_minimum_m": 0.0022665048018097878,
+    "sole_gate_pass": true,
+    "cloth_gate_pass": true
+  }
+}

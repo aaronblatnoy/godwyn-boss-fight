@@ -1,4 +1,4 @@
-"""Native and GLB round-trip numeric validation for Meshy body i01."""
+"""Native and GLB round-trip numeric validation for Meshy body i02."""
 import bpy
 import hashlib
 import json
@@ -7,8 +7,8 @@ import struct
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CANDIDATE = ROOT / "models/astra_character_v2_body_i01.blend"
-GLB = ROOT / "models/astra_character_v2_body_i01.glb"
+CANDIDATE = ROOT / "models/astra_character_v2_body_i02.blend"
+GLB = ROOT / "models/astra_character_v2_body_i02.glb"
 OUT = ROOT / "renders/astra/char2"
 
 
@@ -87,7 +87,9 @@ def main():
     assert native["bones"] == 121 and native["actions"] == 0
     assert native["body_weights"]["unweighted_or_bad_sum_vertices"] == 0 and plate_bad == 0
     assert native["sword_binding"]["groups"] == ["RightHand"]
-    (OUT / "meshy_body_validation.json").write_text(json.dumps(native, indent=2) + "\n")
+    payload = json.dumps(native, indent=2) + "\n"
+    (OUT / "meshy_body_i02_validation.json").write_text(payload)
+    (OUT / "meshy_body_validation.json").write_text(payload)
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.gltf(filepath=str(GLB))
@@ -116,7 +118,9 @@ def main():
     assert roundtrip["bone_names_and_hierarchy_preserved"] and not roundtrip["glb_animations"]
     assert roundtrip["glb_skin_joint_counts"] and all(count == 121 for count in roundtrip["glb_skin_joint_counts"])
     assert roundtrip["weights"]["unweighted_or_bad_sum_vertices"] == 0
-    (OUT / "meshy_body_roundtrip.json").write_text(json.dumps(roundtrip, indent=2) + "\n")
+    payload = json.dumps(roundtrip, indent=2) + "\n"
+    (OUT / "meshy_body_i02_roundtrip.json").write_text(payload)
+    (OUT / "meshy_body_roundtrip.json").write_text(payload)
     print("BODY_VALIDATE_PASS", json.dumps({"native": {"bones": native["bones"],
           "unweighted": native["body_weights"]["unweighted_or_bad_sum_vertices"],
           "plate_bad": plate_bad}, "roundtrip": {"bones": roundtrip["bones"],

@@ -1,5 +1,6 @@
-"""Build Godwyn body i01 from the supplied Meshy GLB on the published 121-bone rig."""
+"""Build Godwyn body i02 from the tied-back-hair Meshy GLB on the 121-bone rig."""
 import bpy
+import bmesh
 import hashlib
 import json
 import math
@@ -10,18 +11,19 @@ from mathutils import Vector
 from mathutils.kdtree import KDTree
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "models/meshy_body_godA.glb"
+SOURCE = ROOT / "models/meshy_body_godA_hairback.glb"
 BASE = ROOT / "models/astra_character_v2_meshy_i03_defrag.blend"
-CANDIDATE = ROOT / "models/astra_character_v2_body_i01.blend"
-GLB = ROOT / "models/astra_character_v2_body_i01.glb"
+CANDIDATE = ROOT / "models/astra_character_v2_body_i02.blend"
+GLB = ROOT / "models/astra_character_v2_body_i02.glb"
 OUT = ROOT / "renders/astra/char2"
-FIT_JSON = OUT / "meshy_body_fit.json"
-BUILD_JSON = OUT / "meshy_body_build.json"
+FIT_JSON = OUT / "meshy_body_i02_fit.json"
+BUILD_JSON = OUT / "meshy_body_i02_build.json"
+CLEANUP_JSON = OUT / "meshy_body_i02_cleanup.json"
 
 TARGET_HEIGHT = 3.16
 SEAM_Z = 2.605
-SOURCE_MIN_Z = -0.9504620432853699
-SOURCE_MAX_Z = 0.9485430121421814
+SOURCE_MIN_Z = -0.9507389664649963
+SOURCE_MAX_Z = 0.9483200311660767
 SCALE = TARGET_HEIGHT / (SOURCE_MAX_Z - SOURCE_MIN_Z)
 TRANSLATION = Vector((0.0045, -0.164, -SOURCE_MIN_Z * SCALE))
 HAIR = {"min_world_z": 1.55, "base_r_min": 0.34, "base_g_min": 0.22,
@@ -35,6 +37,7 @@ MAIN_BONES = [
     "LeftUpLeg", "LeftLeg", "LeftFoot", "LeftToeBase",
     "RightUpLeg", "RightLeg", "RightFoot", "RightToeBase",
 ]
+BODY_BONES_24 = MAIN_BONES + ["Head", "head_end", "headfront"]
 R5_ARMOR_PREFIXES = (
     "AstraChar2_R5_Cuirass", "AstraChar2_R5_Pauldron_L", "AstraChar2_R5_Pauldron_R",
     "AstraChar2_R5_Gorget", "AstraChar2_R5_GorgetRim", "AstraChar2_R5_ClavicleMantle",
@@ -153,20 +156,12 @@ def rebuild_segmented(source_obj):
                   for index in polygon.vertices]
         center = sum(coords, Vector((0.0, 0.0, 0.0))) / len(coords)
         plate = classify_plate(center, base, metallic, roughness)
-        hair = classify_hair(center, base, metallic, roughness)
-        _nearest, blue_index, blue_distance = blue_tree.find(center)
-        face_normal = (source_obj.matrix_world.to_3x3() @ polygon.normal).normalized()
-        near_blue_trim = blue_distance <= 0.018 and abs(face_normal.dot(blue_normals[blue_index])) >= 0.75
         above_seam = max(point.z for point in coords) > SEAM_Z
         keep_gorget = plate and center.z <= 2.77 and abs(center.x) <= 0.40
         if above_seam and not keep_gorget:
             removed["head_or_neck_above_2_605m"] += 1
             continue
-        front_hard_plate = plate and center.y < HAIR["rear_y_min"]
-        if hair and not front_hard_plate and not near_blue_trim:
-            removed["blond_nonmetal_head_hair_below_seam"] += 1
-            continue
-        keep_faces.append((polygon.index, plate, base, metallic))
+        keep_faces.append((polygon.index, plate, base, metallic, center))
         kept_old_vertices.update(polygon.vertices)
         if plate:
             plate_old_vertices.update(polygon.vertices)
@@ -174,18 +169,84 @@ def rebuild_segmented(source_obj):
         if base[2] > base[0] * 1.20 and metallic < 0.35:
             blue_old_vertices.update(polygon.vertices)
             thresholds["blue_cloth_faces"] += 1
+    # The Meshy GLB duplicates coincident seam vertices; main() welds those at
+    # 50 micrometres before this pass.  Cutting the head can still leave true
+    # detached islands, so apply the iteration-02 component rules exactly.
+    parent = {index: index for index in kept_old_vertices}
+
+    def find(index):
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    def union(a, b):
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[rb] = ra
+
+    for polygon_index, _plate, _base, _metallic, _center in keep_faces:
+        ids = list(mesh.polygons[polygon_index].vertices)
+        for other in ids[1:]:
+            union(ids[0], other)
+    component_faces = defaultdict(list)
+    component_vertices = defaultdict(set)
+    for row in keep_faces:
+        polygon = mesh.polygons[row[0]]
+        root = find(polygon.vertices[0])
+        component_faces[root].append(row)
+        component_vertices[root].update(polygon.vertices)
+    retained = []
+    removed_small = []
+    removed_hair = []
+    component_rows = []
+    for root, rows in component_faces.items():
+        vertices_in_component = component_vertices[root]
+        mean_base = np.mean([row[2] for row in rows], axis=0)
+        mean_metallic = float(np.mean([row[3] for row in rows]))
+        mean_center = sum((row[4] for row in rows), Vector((0.0, 0.0, 0.0))) / len(rows)
+        r, g, b = mean_base
+        mean_hair_colored = bool(
+            mean_center.z >= HAIR["min_world_z"]
+            and mean_metallic < PLATE_METALLIC_MIN
+            and r >= HAIR["base_r_min"] and g >= HAIR["base_g_min"]
+            and r - b >= HAIR["r_minus_b_min"] and g - b >= HAIR["g_minus_b_min"]
+        )
+        row = {"vertices": len(vertices_in_component), "faces": len(rows),
+               "mean_base_color": [float(value) for value in mean_base],
+               "mean_metallic": mean_metallic, "mean_world_center_m": list(mean_center),
+               "mean_hair_colored": mean_hair_colored}
+        component_rows.append(row)
+        if len(vertices_in_component) < 200:
+            removed_small.append(row)
+            continue
+        if mean_hair_colored:
+            removed_hair.append(row)
+            continue
+        retained.extend(rows)
+    keep_faces = retained
+    kept_old_vertices = {index for row in keep_faces for index in mesh.polygons[row[0]].vertices}
+    plate_old_vertices = {index for row in keep_faces if row[1]
+                          for index in mesh.polygons[row[0]].vertices}
+    blue_old_vertices = {index for row in keep_faces
+                         if row[2][2] > row[2][0] * 1.20 and row[3] < 0.35
+                         for index in mesh.polygons[row[0]].vertices}
+    removed["components_under_200_vertices"] = len(removed_small)
+    removed["hair_colored_components"] = len(removed_hair)
+    removed["faces_in_small_components"] = sum(row["faces"] for row in removed_small)
+    removed["faces_in_hair_components"] = sum(row["faces"] for row in removed_hair)
     old_to_new = {old: new for new, old in enumerate(sorted(kept_old_vertices))}
     vertices = [transformed(source_obj.matrix_world @ mesh.vertices[old].co) for old in sorted(kept_old_vertices)]
     faces = [[old_to_new[index] for index in mesh.polygons[polygon_index].vertices]
-             for polygon_index, _plate, _base, _metallic in keep_faces]
-    new_mesh = bpy.data.meshes.new("AstraBody Meshy i01 segmented PBR body")
+             for polygon_index, _plate, _base, _metallic, _center in keep_faces]
+    new_mesh = bpy.data.meshes.new("AstraBody Meshy i02 segmented PBR body")
     new_mesh.from_pydata(vertices, [], faces)
     new_mesh.update()
     new_mesh.materials.append(mesh.materials[0])
     uv_layer = new_mesh.uv_layers.new(name="UVMap")
     plate_attribute = new_mesh.attributes.new("astra_body_plate", "BOOLEAN", "FACE")
     metallic_attribute = new_mesh.attributes.new("astra_body_metallic", "FLOAT", "FACE")
-    for new_polygon, (old_polygon_index, plate, _base, metallic) in zip(new_mesh.polygons, keep_faces):
+    for new_polygon, (old_polygon_index, plate, _base, metallic, _center) in zip(new_mesh.polygons, keep_faces):
         old_polygon = mesh.polygons[old_polygon_index]
         for new_loop, old_loop_index in zip(new_polygon.loop_indices, old_polygon.loop_indices):
             uv_layer.data[new_loop].uv = uv_data[old_loop_index].uv
@@ -199,15 +260,29 @@ def rebuild_segmented(source_obj):
     segmentation = {
         "source_faces": len(mesh.polygons), "body_faces": len(new_mesh.polygons),
         "body_vertices": len(new_mesh.vertices), "removed_faces": dict(removed),
-        "plate_faces": thresholds["plate_faces"], "plate_vertices": len(plate_vertices),
-        "blue_cloth_faces": thresholds["blue_cloth_faces"], "blue_cloth_vertices": len(blue_vertices),
+        "plate_faces": sum(1 for row in keep_faces if row[1]), "plate_vertices": len(plate_vertices),
+        "blue_cloth_faces": sum(1 for row in keep_faces
+                                  if row[2][2] > row[2][0] * 1.20 and row[3] < 0.35),
+        "blue_cloth_vertices": len(blue_vertices),
         "sword_faces_removed": 0, "sword_geometry_present": False,
         "method": {
             "head": "remove any non-plate face crossing world z=2.605 m",
             "gorget_exception": "retain metallic plate faces through z=2.77 m inside |x|<=0.40 m",
-            "hair": HAIR,
+            "hair_component_mean_color": HAIR,
+            "component_cleanup": "remove every post-cut component under 200 vertices, then every remaining component whose mean texel satisfies the hair-color thresholds",
             "plate": {"metallic_min": PLATE_METALLIC_MIN,
                       "envelopes": "torso/arms z>=1.62; front leg plates; front boots; outer gauntlets"},
+        },
+        "cleanup": {
+            "components_after_head_cut": len(component_rows),
+            "components_removed_under_200_vertices": len(removed_small),
+            "vertices_removed_under_200_components": sum(row["vertices"] for row in removed_small),
+            "faces_removed_under_200_components": sum(row["faces"] for row in removed_small),
+            "hair_colored_components_removed": len(removed_hair),
+            "vertices_removed_hair_colored_components": sum(row["vertices"] for row in removed_hair),
+            "faces_removed_hair_colored_components": sum(row["faces"] for row in removed_hair),
+            "components_retained": len(component_rows) - len(removed_small) - len(removed_hair),
+            "largest_components": sorted(component_rows, key=lambda row: row["vertices"], reverse=True)[:40],
         },
     }
     return body, plate_vertices, blue_vertices, segmentation
@@ -298,6 +373,11 @@ def bind_body(body, donor, armor_objects, rig, plate_vertices, blue_vertices):
         weights = dict(donor_weights[donor_slot])
         weights = {name: value for name, value in weights.items()
                    if not name.startswith("phys_hair")}
+        # Iteration 02 is deliberately strict: secondary cloth weights may
+        # exist only on blue/velvet texels.  Gold/skin/trim follows body bones.
+        if vertex.index not in blue_vertices:
+            weights = {name: value for name, value in weights.items()
+                       if not name.startswith(("phys_robe", "phys_cape"))}
         phys_total = sum(value for name, value in weights.items()
                          if name.startswith(("phys_robe", "phys_cape")))
         if vertex.index in blue_vertices and point.z < 1.62 and phys_total < 0.35 and phys_ids:
@@ -340,7 +420,7 @@ def bind_body(body, donor, armor_objects, rig, plate_vertices, blue_vertices):
     body.matrix_parent_inverse = rig.matrix_world.inverted()
     modifier = body.modifiers.new("Existing 121-bone skin", "ARMATURE")
     modifier.object = rig
-    return {"method": "nearest donor vertex proximity transfer; R5 armor proximity then rigid body-bone assignment",
+    return {"method": "nearest donor vertex proximity transfer; metallic plates rigid; phys weights restricted to blue/velvet texels",
             "char1_donor_vertices": len(donor.data.vertices), "r5_armor_vertices": len(armor_points),
             "phys_donor_vertices": len(phys_ids), "target_phys_vertices": phys_vertices,
             **counts}
@@ -369,13 +449,16 @@ def weights_audit(body, rig, plate_vertices):
             "phys_robe_cape_groups_used": sorted(phys_used), "phys_robe_cape_group_count": len(phys_used)}
 
 
-def fit_report(rig):
+def fit_report(rig, limb_correction):
     # Anatomical centers were measured from symmetric cross-sections of the imported A-pose.
     source = {
-        "pelvis": [0.000, 0.000, 0.136],
-        "LeftShoulder": [0.187, -0.014, 0.620], "RightShoulder": [-0.187, -0.010, 0.620],
-        "LeftKnee": [0.164, -0.004, -0.404], "RightKnee": [-0.164, -0.004, -0.384],
-        "LeftAnkle": [0.194, -0.020, -0.848], "RightAnkle": [-0.194, -0.014, -0.832],
+        "pelvis": [0.000, 0.000, 0.1357539383],
+        "LeftShoulder": [0.189618, -0.0139, 0.6197676866],
+        "RightShoulder": [-0.189618, -0.0099, 0.6197676866],
+        "LeftKnee": [0.166296, -0.0040, -0.4042614006],
+        "RightKnee": [-0.166296, -0.0040, -0.3842608325],
+        "LeftAnkle": [0.196716, -0.0198, -0.8482740127],
+        "RightAnkle": [-0.196716, -0.0139, -0.8322735582],
         "crown": [0.0, 0.0, SOURCE_MAX_Z],
     }
     targets = {
@@ -414,11 +497,88 @@ def fit_report(rig):
         "landmark_gate_pass": max_error <= TARGET_HEIGHT * 0.02,
         "arm_pose": {"source_below_horizontal_deg": source_angles,
                      "rig_below_horizontal_deg": target_angles, "difference_deg": deltas,
-                     "rigid_limb_rotation_applied": False,
-                     "reason": "maximum measured difference does not exceed 8 degrees"},
+                     "rigid_limb_rotation_applied": limb_correction["applied"],
+                     "upper_arm_reason": "upper-arm differences do not exceed 8 degrees",
+                     "per_segment_correction": limb_correction},
     }
     assert report["landmark_gate_pass"] and max(deltas.values()) <= 8.0
     return report
+
+
+def apply_limb_correction(body, rig):
+    world = rig.matrix_world
+    left_elbow = world @ rig.data.bones["LeftForeArm"].head_local
+    left_hand = world @ rig.data.bones["LeftHand"].head_local
+    source_elbow = Vector((-left_elbow.x, left_elbow.y, left_elbow.z))
+    source_hand = Vector((-left_hand.x, left_hand.y, left_hand.z))
+    target_hand = world @ rig.data.bones["RightHand"].head_local
+    source_vector = source_hand - source_elbow
+    target_vector = target_hand - source_elbow
+    lower_angle = math.degrees(source_vector.angle(target_vector))
+    # The brief's A-pose trigger is the shoulder-to-elbow arm angle measured in
+    # fit_report; both sides are below 8 degrees.  The asymmetric sword-hand
+    # forearm differs, but trial rigid lower-arm rotations tore the fused
+    # drape/arm sheet and are therefore not retained in the candidate.
+    return {"applied": False, "threshold_deg": 8.0,
+              "right_forearm_source_elbow_world_m": list(source_elbow),
+              "right_forearm_source_hand_world_m": list(source_hand),
+              "right_forearm_target_hand_world_m": list(target_hand),
+              "right_forearm_diagnostic_difference_deg": lower_angle,
+              "vertices_rotated": 0,
+              "reason": "upper-arm A-pose differences are 3.065 and 5.375 degrees, below the 8-degree trigger; no rigid correction retained"}
+
+
+def weld_coincident_source(source_obj):
+    mesh = source_obj.data
+    before_vertices = len(mesh.vertices)
+    bm = bmesh.new()
+    bm.from_mesh(mesh)
+    bmesh.ops.remove_doubles(bm, verts=list(bm.verts), dist=0.00005)
+    bm.to_mesh(mesh)
+    bm.free()
+    mesh.update()
+    return {"tolerance_source_m": 0.00005, "vertices_before": before_vertices,
+            "vertices_after": len(mesh.vertices),
+            "vertices_merged": before_vertices - len(mesh.vertices),
+            "reason": "merge exact/near-exact duplicate seam vertices before applying the required topological component cleanup"}
+
+
+def coverage_report(body, rig):
+    body_tree, _ids = kdtree_for_object(body)
+    final_objects = [body, bpy.data.objects["AstraChar2_Meshy_HeadHair"],
+                     bpy.data.objects["AstraChar2_Meshy_NeckBlend"]]
+    points = [obj.matrix_world @ vertex.co for obj in final_objects for vertex in obj.data.vertices]
+    final_tree = KDTree(len(points))
+    for index, point in enumerate(points):
+        final_tree.insert(point, index)
+    final_tree.balance()
+    child_for = {
+        "Hips": "Spine02", "Spine02": "Spine01", "Spine01": "Spine", "Spine": "neck",
+        "neck": "Head", "Head": "head_end",
+        "LeftShoulder": "LeftArm", "LeftArm": "LeftForeArm", "LeftForeArm": "LeftHand",
+        "RightShoulder": "RightArm", "RightArm": "RightForeArm", "RightForeArm": "RightHand",
+        "LeftUpLeg": "LeftLeg", "LeftLeg": "LeftFoot", "LeftFoot": "LeftToeBase",
+        "RightUpLeg": "RightLeg", "RightLeg": "RightFoot", "RightFoot": "RightToeBase",
+    }
+    rows = {}
+    for name in BODY_BONES_24:
+        bone = rig.data.bones[name]
+        start = rig.matrix_world @ bone.head_local
+        child = child_for.get(name)
+        end = rig.matrix_world @ rig.data.bones[child].head_local if child else start
+        midpoint = (start + end) * 0.5
+        _point, _index, body_distance = body_tree.find(midpoint)
+        _point, _index, final_distance = final_tree.find(midpoint)
+        rows[name] = {"midpoint_world_m": list(midpoint),
+                      "body_nearest_vertex_distance_m": float(body_distance),
+                      "final_surface_nearest_vertex_distance_m": float(final_distance),
+                      "coverage_surface": "published head/hair/NeckBlend" if name in {"Head", "head_end", "headfront"} else "new Meshy body",
+                      "gate_m": 0.060,
+                      "gate_pass": float(final_distance) <= 0.060}
+    return {"bones_checked": len(rows), "per_bone": rows,
+            "maximum_final_surface_distance_m": max(row["final_surface_nearest_vertex_distance_m"] for row in rows.values()),
+            "all_24_bones_within_60mm": all(row["gate_pass"] for row in rows.values()),
+            "note": "Head/head_end/headfront use the preserved published head surface; all other body-bone rows use the replacement body."}
 
 
 def main():
@@ -439,7 +599,13 @@ def main():
     source_obj = imported[0]
     source_material = source_obj.data.materials[0]
     source_material.name = "AstraBody Meshy god_A original PBR"
+    weld = weld_coincident_source(source_obj)
     body, plate_vertices, blue_vertices, segmentation = rebuild_segmented(source_obj)
+    limb_correction = apply_limb_correction(body, rig)
+    cleanup = dict(segmentation["cleanup"])
+    cleanup["pre_segmentation_weld"] = weld
+    cleanup["bone_midpoint_coverage"] = coverage_report(body, rig)
+    CLEANUP_JSON.write_text(json.dumps(cleanup, indent=2) + "\n")
     binding = bind_body(body, donor, armor_objects, rig, plate_vertices, blue_vertices)
     audit = weights_audit(body, rig, plate_vertices)
     assert audit["unweighted_vertices"] == 0 and audit["bad_weight_sum_vertices"] == 0
@@ -464,13 +630,15 @@ def main():
     bpy.context.view_layer.update()
     rest_error = max(float(np.max(np.abs(np.array(bone.matrix_local) - rest_before[bone.name])))
                      for bone in rig.data.bones)
-    fit = fit_report(rig)
-    FIT_JSON.write_text(json.dumps(fit, indent=2) + "\n")
+    fit = fit_report(rig, limb_correction)
+    fit_payload = json.dumps(fit, indent=2) + "\n"
+    FIT_JSON.write_text(fit_payload)
+    (OUT / "meshy_body_fit.json").write_text(fit_payload)
     report = {
         "source": str(SOURCE.relative_to(ROOT)), "base": str(BASE.relative_to(ROOT)),
         "candidate": str(CANDIDATE.relative_to(ROOT)), "glb": str(GLB.relative_to(ROOT)),
         "blender_version": bpy.app.version_string, "protected_input_sha256": protected,
-        "segmentation": segmentation, "fit": fit, "binding": binding, "weights": audit,
+        "segmentation": segmentation, "cleanup": cleanup, "fit": fit, "binding": binding, "weights": audit,
         "seam": {"plane_z_m": SEAM_Z, "neck_blend_bounds_z_m": [2.605, 2.735],
                  "method": "non-plate source geometry stops at seam; retained Meshy gorget overlaps/hides the NeckBlend band"},
         "materials": {"source_pbr_material": source_material.name,
@@ -483,7 +651,7 @@ def main():
     }
     assert report["bones"] == 121 and report["actions"] == 0 and rest_error == 0.0
     assert all(report["preserved_objects"].values())
-    scene["astra_body_i01"] = json.dumps({"source": report["source"], "segmentation": segmentation,
+    scene["astra_body_i02"] = json.dumps({"source": report["source"], "segmentation": segmentation,
                                            "binding": binding, "seam_z_m": SEAM_Z})
     scene.frame_set(1)
     bpy.context.preferences.filepaths.save_version = 0

@@ -1,4 +1,4 @@
-"""Compose the required God A concept versus body-i01 comparison."""
+"""Compose body-i02 comparisons against God A and the complete i01 comparison."""
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -6,8 +6,10 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCE = ROOT / "body-concepts/god_A.png"
-CANDIDATE = ROOT / "renders/astra/char2/meshy_body_i01_front.png"
-OUTPUT = ROOT / "renders/astra/char2/meshy_body_i01_comparison.png"
+CANDIDATE = ROOT / "renders/astra/char2/meshy_body_i02_front.png"
+I01_COMPARISON = ROOT / "renders/astra/char2/meshy_body_i01_comparison.png"
+OUTPUT = ROOT / "renders/astra/char2/meshy_body_i02_comparison.png"
+OUTPUT_VS_I01 = ROOT / "renders/astra/char2/meshy_body_i02_vs_i01_comparison.png"
 HEIGHT = 1800
 HEADER = 84
 GAP = 24
@@ -30,9 +32,17 @@ def main():
     except OSError:
         font = ImageFont.load_default()
     draw.text((24, 22), "TARGET: god_A", fill="#f1d58b", font=font)
-    draw.text((reference.width + GAP + 24, 22), "CANDIDATE: meshy_body_i01", fill="#f1d58b", font=font)
+    draw.text((reference.width + GAP + 24, 22), "CANDIDATE: meshy_body_i02", fill="#f1d58b", font=font)
     canvas.save(OUTPUT, compress_level=3)
-    print("BODY_COMPARISON_PASS", OUTPUT, canvas.size, flush=True)
+    i01 = fit_height(Image.open(I01_COMPARISON).convert("RGB"))
+    prior = Image.new("RGB", (i01.width + GAP + candidate.width, HEIGHT + HEADER), "#11141a")
+    prior.paste(i01, (0, HEADER))
+    prior.paste(candidate, (i01.width + GAP, HEADER))
+    prior_draw = ImageDraw.Draw(prior)
+    prior_draw.text((24, 22), "ITERATION 01 TARGET/CANDIDATE", fill="#f1d58b", font=font)
+    prior_draw.text((i01.width + GAP + 24, 22), "ITERATION 02 CANDIDATE", fill="#f1d58b", font=font)
+    prior.save(OUTPUT_VS_I01, compress_level=3)
+    print("BODY_COMPARISON_PASS", OUTPUT, OUTPUT_VS_I01, canvas.size, prior.size, flush=True)
 
 
 if __name__ == "__main__":

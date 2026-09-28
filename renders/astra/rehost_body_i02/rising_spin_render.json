@@ -1,0 +1,15 @@
+{
+  "model": "models/astra_move_rising_spin_body_i02.blend",
+  "frame_start": 1,
+  "frame_end": 116,
+  "frame_count": 116,
+  "resolution": [
+    768,
+    768
+  ],
+  "fps": 30,
+  "engine": "BLENDER_EEVEE",
+  "samples": 32,
+  "motion_blur": true,
+  "frames": "renders/astra/rehost_body_i02/rising_spin_frames"
+}

@@ -1,0 +1,67 @@
+{
+  "name": "idle_guard",
+  "sample_step_frames": 0.25,
+  "samples": 381,
+  "before": {
+    "sole_minimum_m": -0.0037733251228928566,
+    "cloth_minimum_m": -0.004284760914742947
+  },
+  "root": {
+    "maximum_lift_m": 0.0044869913790375,
+    "post_root_sole_minimum_m": 0.0006849495694041252
+  },
+  "cloth": {
+    "target_m": 0.0025,
+    "gate_m": 0.002,
+    "passes": [
+      {
+        "pass": 0,
+        "global_minimum_m": -0.00015577580779790878,
+        "family_minimum_m": {
+          "phys_robe_back_R": 0.006195148453116417,
+          "phys_robe_front_C": 0.3434862196445465,
+          "phys_robe_front_L": 0.015745194628834724,
+          "phys_robe_front_R": 0.01469695009291172,
+          "phys_robe_side_L": 0.017813486978411674,
+          "phys_robe_side_R": 0.0018493589013814926,
+          "phys_cape_C": -0.00015577580779790878,
+          "phys_cape_L": 0.011171967722475529,
+          "phys_cape_R": 0.016933828592300415
+        }
+      },
+      {
+        "pass": 1,
+        "global_minimum_m": 0.0024499380961060524,
+        "family_minimum_m": {
+          "phys_robe_back_R": 0.006233084015548229,
+          "phys_robe_front_C": 0.3434862196445465,
+          "phys_robe_front_L": 0.015745194628834724,
+          "phys_robe_front_R": 0.014698708429932594,
+          "phys_robe_side_L": 0.017813486978411674,
+          "phys_robe_side_R": 0.0024499380961060524,
+          "phys_cape_C": 0.002685978077352047,
+          "phys_cape_L": 0.011171967722475529,
+          "phys_cape_R": 0.0169345885515213
+        }
+      }
+    ],
+    "modified_bones": [
+      "phys_cape_C_03",
+      "phys_cape_C_04",
+      "phys_cape_C_05",
+      "phys_cape_C_06",
+      "phys_robe_side_R_03",
+      "phys_robe_side_R_04",
+      "phys_robe_side_R_05",
+      "phys_robe_side_R_06",
+      "phys_robe_side_R_07"
+    ],
+    "final_minimum_m": 0.0024499380961060524
+  },
+  "final": {
+    "sole_minimum_m": 0.0006849495694041252,
+    "cloth_minimum_m": 0.0024499380961060524,
+    "sole_gate_pass": true,
+    "cloth_gate_pass": true
+  }
+}

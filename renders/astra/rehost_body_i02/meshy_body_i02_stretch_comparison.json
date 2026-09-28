@@ -1,0 +1,187 @@
+{
+  "idle_guard": {
+    "i01": {
+      "frame": 48,
+      "edges": 379281,
+      "valid_edges_rest_length_gt_1um": 379281,
+      "minimum_valid_rest_edge_m": 0.0005896739894524217,
+      "maximum_ratio": 385.9680480957031,
+      "p99_ratio": 21.092636108398438,
+      "p999_ratio": 125.03062438964844,
+      "maximum_edge_index": 76372,
+      "maximum_edge_vertices": [
+        33369,
+        33370
+      ],
+      "maximum_edge_rest_length_m": 0.001870658015832305,
+      "maximum_edge_posed_length_m": 0.7220142483711243,
+      "model": "models/astra_move_idle_guard_body_i01.blend"
+    },
+    "i02": {
+      "frame": 48,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "minimum_valid_rest_edge_m": 0.0006239111535251141,
+      "maximum_ratio": 674.3019409179688,
+      "p99_ratio": 61.580997467041016,
+      "p999_ratio": 197.7279052734375,
+      "maximum_edge_index": 388268,
+      "maximum_edge_vertices": [
+        122590,
+        122602
+      ],
+      "maximum_edge_rest_length_m": 0.0020099543035030365,
+      "maximum_edge_posed_length_m": 1.3553160429000854,
+      "model": "models/astra_move_idle_guard_body_i02.blend"
+    },
+    "i02_vs_i01_max_ratio": 1.7470408347137882
+  },
+  "walk_stalk": {
+    "i01": {
+      "frame": 36,
+      "edges": 379281,
+      "valid_edges_rest_length_gt_1um": 379281,
+      "minimum_valid_rest_edge_m": 0.0005896739894524217,
+      "maximum_ratio": 379.7562255859375,
+      "p99_ratio": 24.753089904785156,
+      "p999_ratio": 128.03799438476562,
+      "maximum_edge_index": 76372,
+      "maximum_edge_vertices": [
+        33369,
+        33370
+      ],
+      "maximum_edge_rest_length_m": 0.001870658015832305,
+      "maximum_edge_posed_length_m": 0.710394024848938,
+      "model": "models/astra_move_walk_stalk_body_i01.blend"
+    },
+    "i02": {
+      "frame": 36,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "minimum_valid_rest_edge_m": 0.0006239111535251141,
+      "maximum_ratio": 787.082275390625,
+      "p99_ratio": 65.88420867919922,
+      "p999_ratio": 204.902099609375,
+      "maximum_edge_index": 388268,
+      "maximum_edge_vertices": [
+        122590,
+        122602
+      ],
+      "maximum_edge_rest_length_m": 0.0020099543035030365,
+      "maximum_edge_posed_length_m": 1.58199942111969,
+      "model": "models/astra_move_walk_stalk_body_i02.blend"
+    },
+    "i02_vs_i01_max_ratio": 2.072598741932964
+  },
+  "lunge_thrust": {
+    "i01": {
+      "frame": 40,
+      "edges": 379281,
+      "valid_edges_rest_length_gt_1um": 379281,
+      "minimum_valid_rest_edge_m": 0.0005896739894524217,
+      "maximum_ratio": 566.1569213867188,
+      "p99_ratio": 26.267377853393555,
+      "p999_ratio": 144.77850341796875,
+      "maximum_edge_index": 198758,
+      "maximum_edge_vertices": [
+        102668,
+        102733
+      ],
+      "maximum_edge_rest_length_m": 0.0018355041975155473,
+      "maximum_edge_posed_length_m": 1.0391833782196045,
+      "model": "models/astra_move_lunge_thrust_body_i01.blend"
+    },
+    "i02": {
+      "frame": 40,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "minimum_valid_rest_edge_m": 0.0006239111535251141,
+      "maximum_ratio": 1141.380615234375,
+      "p99_ratio": 73.78673553466797,
+      "p999_ratio": 257.4219970703125,
+      "maximum_edge_index": 388268,
+      "maximum_edge_vertices": [
+        122590,
+        122602
+      ],
+      "maximum_edge_rest_length_m": 0.0020099543035030365,
+      "maximum_edge_posed_length_m": 2.2941229343414307,
+      "model": "models/astra_move_lunge_thrust_body_i02.blend"
+    },
+    "i02_vs_i01_max_ratio": 2.0160145926304844
+  },
+  "rising_spin": {
+    "i01": {
+      "frame": 40,
+      "edges": 379281,
+      "valid_edges_rest_length_gt_1um": 379281,
+      "minimum_valid_rest_edge_m": 0.0005896739894524217,
+      "maximum_ratio": 978.3468017578125,
+      "p99_ratio": 27.079891204833984,
+      "p999_ratio": 160.8828125,
+      "maximum_edge_index": 198758,
+      "maximum_edge_vertices": [
+        102668,
+        102733
+      ],
+      "maximum_edge_rest_length_m": 0.0018355041975155473,
+      "maximum_edge_posed_length_m": 1.795759677886963,
+      "model": "models/astra_move_rising_spin_body_i01.blend"
+    },
+    "i02": {
+      "frame": 40,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "minimum_valid_rest_edge_m": 0.0006239111535251141,
+      "maximum_ratio": 782.7845458984375,
+      "p99_ratio": 71.56119537353516,
+      "p999_ratio": 256.2027587890625,
+      "maximum_edge_index": 388268,
+      "maximum_edge_vertices": [
+        122590,
+        122602
+      ],
+      "maximum_edge_rest_length_m": 0.0020099543035030365,
+      "maximum_edge_posed_length_m": 1.5733611583709717,
+      "model": "models/astra_move_rising_spin_body_i02.blend"
+    },
+    "i02_vs_i01_max_ratio": 0.8001094749755353
+  },
+  "xslash": {
+    "i01": {
+      "frame": 55,
+      "edges": 379281,
+      "valid_edges_rest_length_gt_1um": 379281,
+      "minimum_valid_rest_edge_m": 0.0005896739894524217,
+      "maximum_ratio": 900.2650756835938,
+      "p99_ratio": 22.567176818847656,
+      "p999_ratio": 153.6678924560547,
+      "maximum_edge_index": 198758,
+      "maximum_edge_vertices": [
+        102668,
+        102733
+      ],
+      "maximum_edge_rest_length_m": 0.0018355041975155473,
+      "maximum_edge_posed_length_m": 1.6524403095245361,
+      "model": "models/astra_xslash_body_i01.blend"
+    },
+    "i02": {
+      "frame": 55,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "minimum_valid_rest_edge_m": 0.0006239111535251141,
+      "maximum_ratio": 573.0751953125,
+      "p99_ratio": 48.381675720214844,
+      "p999_ratio": 170.117431640625,
+      "maximum_edge_index": 373726,
+      "maximum_edge_vertices": [
+        23686,
+        23703
+      ],
+      "maximum_edge_rest_length_m": 0.0018967934884130955,
+      "maximum_edge_posed_length_m": 1.0870052576065063,
+      "model": "models/astra_xslash_body_i02.blend"
+    },
+    "i02_vs_i01_max_ratio": 0.6365627311237745
+  }
+}

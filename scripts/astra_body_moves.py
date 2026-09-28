@@ -1,4 +1,4 @@
-"""Rehost all five finished moves onto body i01 and run delivery audits."""
+"""Rehost all five finished moves onto body i02 and run delivery audits."""
 import bpy
 import hashlib
 import json
@@ -10,19 +10,19 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 ROOT = Path(__file__).resolve().parents[1]
-BASE = ROOT / "models/astra_character_v2_body_i01.blend"
-OUT = ROOT / "renders/astra/rehost_body"
+BASE = ROOT / "models/astra_character_v2_body_i02.blend"
+OUT = ROOT / "renders/astra/rehost_body_i02"
 JOBS = {
     "idle_guard": (ROOT / "models/astra_move_idle_guard_v2_wip.blend",
-                   ROOT / "models/astra_move_idle_guard_body_i01.blend", 48),
+                   ROOT / "models/astra_move_idle_guard_body_i02.blend", 48),
     "walk_stalk": (ROOT / "models/astra_move_walk_stalk_v2_wip.blend",
-                   ROOT / "models/astra_move_walk_stalk_body_i01.blend", 36),
+                   ROOT / "models/astra_move_walk_stalk_body_i02.blend", 36),
     "lunge_thrust": (ROOT / "models/astra_move_lunge_thrust_v2_wip.blend",
-                     ROOT / "models/astra_move_lunge_thrust_body_i01.blend", 40),
+                     ROOT / "models/astra_move_lunge_thrust_body_i02.blend", 40),
     "rising_spin": (ROOT / "models/astra_move_rising_spin_v2_wip.blend",
-                    ROOT / "models/astra_move_rising_spin_body_i01.blend", 40),
+                    ROOT / "models/astra_move_rising_spin_body_i02.blend", 40),
     "xslash": (ROOT / "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
-               ROOT / "models/astra_xslash_body_i01.blend", 55),
+               ROOT / "models/astra_xslash_body_i02.blend", 55),
 }
 
 
@@ -79,7 +79,7 @@ def rehost(name, source, target):
     rig.animation_data_clear()
     rig.animation_data_create()
     transferred = source_action.copy()
-    transferred.name = source_action.name + "_BodyI01"
+    transferred.name = source_action.name + "_BodyI02"
     rig.animation_data.action = transferred
     if transferred.slots:
         rig.animation_data.action_slot = transferred.slots[0]
@@ -95,12 +95,12 @@ def rehost(name, source, target):
     for obj in old_character:
         bpy.data.objects.remove(obj, do_unlink=True)
     bpy.data.scenes.remove(character_scene)
-    move_scene.name = "Astra Body i01 " + name
+    move_scene.name = "Astra Body i02 " + name
     move_scene.render.fps = 30
-    move_scene["astra_body_i01_rehost"] = name
-    move_scene["astra_body_i01_base_sha256"] = base_hash
-    move_scene["astra_body_i01_action_source_sha256"] = source_hash
-    move_scene["astra_body_i01_action_digest"] = source_digest
+    move_scene["astra_body_i02_rehost"] = name
+    move_scene["astra_body_i02_base_sha256"] = base_hash
+    move_scene["astra_body_i02_action_source_sha256"] = source_hash
+    move_scene["astra_body_i02_action_digest"] = source_digest
     move_scene.frame_set(1)
     bpy.context.preferences.filepaths.save_version = 0
     bpy.ops.wm.save_as_mainfile(filepath=str(target))
