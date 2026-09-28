@@ -1,0 +1,22 @@
+{
+  "char1": {
+    "verts_before": 366392,
+    "faces_before": 244493,
+    "verts_after": 322354,
+    "faces_after": 241431,
+    "components_before": 31298,
+    "components_removed": 31238,
+    "min_verts": 50
+  },
+  "AstraChar2_R6_NeckGraft": {
+    "verts_before": 6144,
+    "faces_before": 6018,
+    "verts_after": 6144,
+    "faces_after": 6018,
+    "components_before": 1,
+    "components_removed": 0,
+    "min_verts": 50
+  },
+  "bones": 121,
+  "actions": 0
+}
