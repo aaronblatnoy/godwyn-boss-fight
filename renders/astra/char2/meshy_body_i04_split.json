@@ -1,0 +1,336 @@
+{
+  "source": "models/astra_character_v2_body_i03.blend",
+  "source_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+  "method": "selected classified plate faces separated from char1; boundary vertices duplicated by Blender mesh separation",
+  "uv_material_normals_preserved": true,
+  "source_vertices": 149413,
+  "source_faces": 298229,
+  "classified_plate_faces": 102573,
+  "soft_object": "char1",
+  "soft_vertices": 103934,
+  "soft_faces": 195656,
+  "plate_object": "AstraBody_I04_Plates",
+  "plate_vertices": 55838,
+  "plate_faces": 102573,
+  "nonface_geometry_cleanup": {
+    "soft": {
+      "before": {
+        "vertices": 103934,
+        "edges": 299029
+      },
+      "removed_vertices": 0,
+      "after": {
+        "vertices": 103934,
+        "edges": 299029
+      }
+    },
+    "plate": {
+      "before": {
+        "vertices": 55838,
+        "edges": 159718
+      },
+      "removed_vertices": 0,
+      "after": {
+        "vertices": 55838,
+        "edges": 159718
+      }
+    }
+  },
+  "topological_component_count_before_small_merge": 462,
+  "components_at_least_30_vertices": 5,
+  "components_under_30_vertices": 457,
+  "small_components_merged_by": "nearest vertex on a >=30-vertex island",
+  "island_count_after_small_merge": 5,
+  "islands": [
+    {
+      "island_id": 0,
+      "vertices": 39601,
+      "original_large_component_vertices": 38664,
+      "small_components_merged": 287,
+      "small_vertices_merged": 937,
+      "maximum_small_merge_distance_m": 0.32488754391670227,
+      "bone": "LeftShoulder",
+      "summed_i03_heat_weight": 8864.17555068503,
+      "summed_i03_heat_weights_top8": [
+        [
+          "LeftShoulder",
+          8864.17555068503
+        ],
+        [
+          "LeftForeArm",
+          5898.990936692942
+        ],
+        [
+          "LeftHand",
+          3825.023673782042
+        ],
+        [
+          "RightUpLeg",
+          3143.5982727919195
+        ],
+        [
+          "RightLeg",
+          2911.9625346478947
+        ],
+        [
+          "RightFoot",
+          2726.5503771116933
+        ],
+        [
+          "LeftArm",
+          2329.070504437093
+        ],
+        [
+          "Hips",
+          2297.17915816445
+        ]
+      ],
+      "bounds_world_m": {
+        "min": [
+          -0.4546433985233307,
+          -0.8138549327850342,
+          -0.0012683570384979248
+        ],
+        "max": [
+          0.9322898983955383,
+          0.09816844016313553,
+          2.7913715839385986
+        ]
+      }
+    },
+    {
+      "island_id": 1,
+      "vertices": 9493,
+      "original_large_component_vertices": 9099,
+      "small_components_merged": 120,
+      "small_vertices_merged": 394,
+      "maximum_small_merge_distance_m": 0.31706467270851135,
+      "bone": "LeftLeg",
+      "summed_i03_heat_weight": 4395.876067464293,
+      "summed_i03_heat_weights_top8": [
+        [
+          "LeftLeg",
+          4395.876067464293
+        ],
+        [
+          "LeftUpLeg",
+          2457.319559261427
+        ],
+        [
+          "LeftFoot",
+          1336.8964108883092
+        ],
+        [
+          "LeftToeBase",
+          696.3068175884164
+        ],
+        [
+          "RightUpLeg",
+          350.8091565481154
+        ],
+        [
+          "LeftHand",
+          139.37969358109777
+        ],
+        [
+          "Hips",
+          104.86593216655092
+        ],
+        [
+          "RightLeg",
+          8.030387646585268
+        ]
+      ],
+      "bounds_world_m": {
+        "min": [
+          0.0718962699174881,
+          -0.8041657209396362,
+          -0.0019401758909225464
+        ],
+        "max": [
+          0.40973085165023804,
+          0.07305163145065308,
+          1.695268154144287
+        ]
+      }
+    },
+    {
+      "island_id": 2,
+      "vertices": 6289,
+      "original_large_component_vertices": 6232,
+      "small_components_merged": 18,
+      "small_vertices_merged": 57,
+      "maximum_small_merge_distance_m": 0.2642730474472046,
+      "bone": "RightHand",
+      "summed_i03_heat_weight": 3640.4137376957483,
+      "summed_i03_heat_weights_top8": [
+        [
+          "RightHand",
+          3640.4137376957483
+        ],
+        [
+          "RightForeArm",
+          2393.4962818378117
+        ],
+        [
+          "RightArm",
+          239.51570948522144
+        ],
+        [
+          "Spine02",
+          9.688006924155005
+        ],
+        [
+          "Hips",
+          3.413998607924519
+        ],
+        [
+          "Spine01",
+          1.8043413888735813
+        ],
+        [
+          "RightLeg",
+          0.6678994989501277
+        ],
+        [
+          "RightShoulder",
+          1.9499999780236976e-05
+        ]
+      ],
+      "bounds_world_m": {
+        "min": [
+          -0.9267908334732056,
+          -0.6887400150299072,
+          1.1808562278747559
+        ],
+        "max": [
+          -0.25436991453170776,
+          0.0010635405778884888,
+          2.4152350425720215
+        ]
+      }
+    },
+    {
+      "island_id": 3,
+      "vertices": 365,
+      "original_large_component_vertices": 267,
+      "small_components_merged": 31,
+      "small_vertices_merged": 98,
+      "maximum_small_merge_distance_m": 0.24079889059066772,
+      "bone": "Hips",
+      "summed_i03_heat_weight": 152.53988202661276,
+      "summed_i03_heat_weights_top8": [
+        [
+          "Hips",
+          152.53988202661276
+        ],
+        [
+          "RightArm",
+          87.06415827199817
+        ],
+        [
+          "Spine02",
+          71.89952049404383
+        ],
+        [
+          "RightForeArm",
+          37.17662551999092
+        ],
+        [
+          "RightUpLeg",
+          8.369451193138957
+        ],
+        [
+          "Spine01",
+          7.799365289509296
+        ],
+        [
+          "LeftUpLeg",
+          0.15099690109491348
+        ]
+      ],
+      "bounds_world_m": {
+        "min": [
+          -0.442141056060791,
+          -0.7681518793106079,
+          1.7754974365234375
+        ],
+        "max": [
+          -0.11737764626741409,
+          -0.16818758845329285,
+          2.475750684738159
+        ]
+      }
+    },
+    {
+      "island_id": 4,
+      "vertices": 90,
+      "original_large_component_vertices": 70,
+      "small_components_merged": 1,
+      "small_vertices_merged": 20,
+      "maximum_small_merge_distance_m": 0.011432009749114513,
+      "bone": "RightForeArm",
+      "summed_i03_heat_weight": 59.917151033878326,
+      "summed_i03_heat_weights_top8": [
+        [
+          "RightForeArm",
+          59.917151033878326
+        ],
+        [
+          "RightArm",
+          23.715402752161026
+        ],
+        [
+          "Spine02",
+          4.547196479514241
+        ],
+        [
+          "Spine01",
+          1.699548790231347
+        ],
+        [
+          "Hips",
+          0.1207011000951752
+        ]
+      ],
+      "bounds_world_m": {
+        "min": [
+          -0.41214385628700256,
+          -0.4313533306121826,
+          1.9211465120315552
+        ],
+        "max": [
+          -0.30469948053359985,
+          -0.3117833733558655,
+          2.0258703231811523
+        ]
+      }
+    }
+  ],
+  "vertices_per_island": {
+    "0": 39601,
+    "1": 9493,
+    "2": 6289,
+    "3": 365,
+    "4": 90
+  },
+  "bone_per_island": {
+    "0": "LeftShoulder",
+    "1": "LeftLeg",
+    "2": "RightHand",
+    "3": "Hips",
+    "4": "RightForeArm"
+  },
+  "belt_measurement": {
+    "method": "median z of classified plate-island vertices in the central pelvis envelope",
+    "central_envelope": {
+      "abs_x_from_hips_max_m": 0.45,
+      "z_min_m": 1.6310511231422424,
+      "z_max_m": 2.0506808757781982
+    },
+    "pelvis_plate_vertices": 6300,
+    "z_min_m": 1.6311771869659424,
+    "z_median_m": 1.8748297095298767,
+    "z_max_m": 2.0504651069641113
+  }
+}

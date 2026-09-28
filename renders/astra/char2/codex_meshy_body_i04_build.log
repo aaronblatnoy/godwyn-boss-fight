@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.469  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i03.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+BODY_I04_HEAT_COMPONENT 0 81016 81016
+BODY_I04_HEAT_COMPONENT 1 15530 15530
+BODY_I04_HEAT_COMPONENT 2 875 875
+BODY_I04_HEAT_COMPONENT 3 462 462
+BODY_I04_HEAT_COMPONENT 4 329 329
+BODY_I04_HEAT_COMPONENT 5 310 310
+BODY_I04_HEAT_COMPONENT 6 217 217
+BODY_I04_HEAT_COMPONENT 7 204 204
+BODY_I04_HEAT_COMPONENT 8 191 191
+BODY_I04_HEAT_COMPONENT 9 154 154
+BODY_I04_HEAT_COMPONENT 10 79 79
+BODY_I04_HEAT_COMPONENT 11 57 57
+BODY_I04_HEAT_COMPONENT 12 48 48
+BODY_I04_HEAT_COMPONENT 13 37 37
+BODY_I04_HEAT_COMPONENT 14 34 34
+BODY_I04_HEAT_COMPONENT 15 31 31
+Info: Saved as "astra_character_v2_body_i04.blend"
+BODY_I04_BUILD_PASS {"soft_vertices": 103934, "plate_vertices": 55838, "plate_islands": 5, "belt_z_m": 1.8748297095298767, "unweighted": 0, "bad_sums": 0, "bones": 121, "actions": 0, "rest_matrix_error": 0.0, "coverage": false, "candidate_sha256": "720a7abbdede3e92a69e9225a4be4f3367053163b6843f385742ac67865c7c64"}
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit

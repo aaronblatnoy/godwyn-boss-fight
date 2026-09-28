@@ -1,0 +1,44 @@
+Traceback (most recent call last):
+  File "/usr/share/blender/5.2/scripts/modules/addon_utils.py", line 543, in enable
+    mod.register()
+    ~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 986, in register
+    _remote_asset_library_restore_backups()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py", line 580, in _remote_asset_library_restore_backups
+    from _bpy_internal.assets.remote_library import listing_downloader
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/assets/remote_library/listing_downloader.py", line 32, in <module>
+    from _bpy_internal.http import downloader as http_dl
+  File "/usr/share/blender/5.2/scripts/modules/_bpy_internal/http/downloader.py", line 51, in <module>
+    import cattrs
+ModuleNotFoundError: No module named 'cattrs'
+00:00.781  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i04.blend"
+Exception in module register(): /usr/share/blender/5.2/scripts/addons_core/bl_pkg/__init__.py
+Info: Saved as "astra_move_idle_guard_body_i04.blend"
+BODY_I04_STRETCH idle_guard {"frame": 48, "soft_p99": 87.602294921875, "soft_max": 759.6417236328125, "plate_max": 1.0002795457839966, "gap_max_m": 0.25990721583366394, "gap_islands_over_15mm": [2, 0, 4, 3, 1], "stretch_pass": false}
+00:12.569  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i04.blend"
+Info: Saved as "astra_move_walk_stalk_body_i04.blend"
+BODY_I04_STRETCH walk_stalk {"frame": 36, "soft_p99": 90.13006591796875, "soft_max": 745.00537109375, "plate_max": 1.0002634525299072, "gap_max_m": 0.2599075436592102, "gap_islands_over_15mm": [2, 0, 4, 3, 1], "stretch_pass": false}
+00:24.373  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i04.blend"
+Info: Saved as "astra_move_lunge_thrust_body_i04.blend"
+BODY_I04_STRETCH lunge_thrust {"frame": 40, "soft_p99": 91.34895324707031, "soft_max": 691.0327758789062, "plate_max": 1.0003708600997925, "gap_max_m": 0.3251955807209015, "gap_islands_over_15mm": [2, 0, 4, 3, 1], "stretch_pass": false}
+00:36.251  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i04.blend"
+Info: Saved as "astra_move_rising_spin_body_i04.blend"
+BODY_I04_STRETCH rising_spin {"frame": 40, "soft_p99": 104.23796081542969, "soft_max": 773.732177734375, "plate_max": 1.0002758502960205, "gap_max_m": 0.208988219499588, "gap_islands_over_15mm": [2, 0, 4, 3, 1], "stretch_pass": false}
+00:49.048  blend            | Read blend: "/home/aaron/godwyn-boss-fight/models/astra_character_v2_body_i04.blend"
+Info: Saved as "astra_xslash_body_i04.blend"
+BODY_I04_STRETCH xslash {"frame": 55, "soft_p99": 71.87202453613281, "soft_max": 669.4566650390625, "plate_max": 1.0002931356430054, "gap_max_m": 0.6169987916946411, "gap_islands_over_15mm": [2, 0, 4, 3, 1], "stretch_pass": false}
+BODY_I04_STRETCH_COMPLETE {"all_moves_stretch_pass": false, "all_moves_gap_pass": false, "render_authorized": false}
+Traceback (most recent call last):
+  File "/home/aaron/godwyn-boss-fight/scripts/astra_body_i04_stretch.py", line 272, in <module>
+    main()
+    ~~~~^^
+  File "/home/aaron/godwyn-boss-fight/scripts/astra_body_i04_stretch.py", line 268, in main
+    assert all_pass, "stretch gate failed; rendering is forbidden"
+           ^^^^^^^^
+AssertionError: stretch gate failed; rendering is forbidden
+
+Error: script failed, file: 'scripts/astra_body_i04_stretch.py', exiting.
+Blender 5.2.0 LTS (hash fbe6228777e7 built 2026-07-15 11:48:12)
+
+Blender quit
