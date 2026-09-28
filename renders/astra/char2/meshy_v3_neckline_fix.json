@@ -1,0 +1,29 @@
+{
+  "source_image": "Image_3",
+  "new_packed_image": "Astra_V3_Head_BaseColor_NecklineFixed",
+  "size": [
+    2048,
+    2048
+  ],
+  "chin_line_definition": "skin-mask faces below fitted eye minus 95 mm and above gorget seam",
+  "sampled_skin_loops": 33956,
+  "pale_sample_seeds": 1697,
+  "edited_texels_core": 32596,
+  "edited_texels_with_feather": 129316,
+  "pale_luma_threshold": 0.62,
+  "low_saturation_threshold": 0.0,
+  "replacement_median_linear_rgb": [
+    0.003921568859368563,
+    0.003921568859368563,
+    0.0019607844296842813
+  ],
+  "feather_steps_px": 10,
+  "crop_xyxy": [
+    0,
+    0,
+    2048,
+    2048
+  ],
+  "before_crop": "renders/astra/char2/meshy_v3_neckline_before.png",
+  "after_crop": "renders/astra/char2/meshy_v3_neckline_after.png"
+}

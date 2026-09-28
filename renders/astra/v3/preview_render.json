@@ -1,0 +1,18 @@
+{
+  "mode": "preview",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "resolution": [
+    600,
+    900
+  ],
+  "samples": 32
+}
