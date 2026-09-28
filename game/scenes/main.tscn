@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/game_manager.gd" id="1_game_manager"]
+
+[sub_resource type="Environment" id="Environment_spec13"]
+resource_name = "SPEC13_Bloom_Radius3_MappedToGlowLevel3"
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 0.6
+glow_hdr_threshold = 0.85
+glow_levels/1 = 0.0
+glow_levels/2 = 0.0
+glow_levels/3 = 1.0
+glow_levels/4 = 0.0
+glow_levels/5 = 0.0
+glow_levels/6 = 0.0
+glow_levels/7 = 0.0
+adjustment_enabled = true
+adjustment_brightness = 0.95
+adjustment_contrast = 1.1
+adjustment_saturation = 0.8
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_game_manager")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_spec13")
