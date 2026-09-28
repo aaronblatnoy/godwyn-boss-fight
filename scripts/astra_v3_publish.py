@@ -1,8 +1,10 @@
 """Publish Godwyn v3 Blend/GLB and round-trip validate skeleton plus five clips."""
 
+import argparse
 import hashlib
 import json
 import struct
+import sys
 from pathlib import Path
 
 import bpy
@@ -27,7 +29,24 @@ EXPECTED_BONES = [
 PROTECTED = {
     "models/astra_character_v2.blend": "a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255",
     "models/astra_character_v2.glb": "17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5",
+    "models/astra_character_v3_openhand.blend": "43b3a6643e6c6ddb8cc317ee0bed3381d3c654832028a5f5f2b7e7a8d405359c",
+    "models/astra_character_v3_openhand.glb": "c98c7b6df2406c91b72298d8c3d6ee2c10fd768f24cce68ac29c481f19f2cb91",
 }
+
+
+def cli():
+    raw = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--input", default=str(WIP.relative_to(ROOT)))
+    parser.add_argument("--blend", default=str(FINAL_BLEND.relative_to(ROOT)))
+    parser.add_argument("--glb", default=str(FINAL_GLB.relative_to(ROOT)))
+    parser.add_argument("--prefix", default="meshy_v3")
+    return parser.parse_args(raw)
+
+
+def root_path(value):
+    path = Path(value).expanduser()
+    return path if path.is_absolute() else ROOT / path
 
 
 def sha256(path):
@@ -112,8 +131,14 @@ def body_weight_summary(body):
 
 
 def main():
+    args = cli()
+    wip = root_path(args.input)
+    final_blend = root_path(args.blend)
+    final_glb = root_path(args.glb)
+    roundtrip_path = OUT / f"{args.prefix}_roundtrip.json"
+    publish_path = OUT / f"{args.prefix}_publish.json"
     protected_before = protected_hashes()
-    bpy.ops.wm.open_mainfile(filepath=str(WIP), load_ui=False)
+    bpy.ops.wm.open_mainfile(filepath=str(wip), load_ui=False)
     scene = bpy.context.scene
     scene.render.fps = 30
     rig = bpy.data.objects["Astra_V3_Rig"]
@@ -132,28 +157,31 @@ def main():
     scene.frame_set(1)
     bpy.context.view_layer.update()
     bpy.context.preferences.filepaths.save_version = 0
-    bpy.ops.wm.save_as_mainfile(filepath=str(FINAL_BLEND))
-    export_names = [
+    bpy.ops.wm.save_as_mainfile(filepath=str(final_blend))
+    required_export_names = [
         "Astra_V3_Rig", "char1", "AstraChar2_Meshy_HeadHair", "Godwyn_Sword",
-        "Astra_V3_Rigid_Neck_Bridge", "Astra_V3_Neck_Gorget_Trim",
+        "Astra_V3_Collar_Occluder",
     ]
+    optional_export_names = ["Astra_V3_Rigid_Neck_Bridge", "Astra_V3_Neck_Gorget_Trim"]
+    export_names = required_export_names + [name for name in optional_export_names if bpy.data.objects.get(name)]
     bpy.ops.object.select_all(action="DESELECT")
     export_objects = []
+    for name in required_export_names:
+        assert bpy.data.objects.get(name) is not None, f"Missing publish object: {name}"
     for name in export_names:
         obj = bpy.data.objects.get(name)
-        assert obj is not None, f"Missing publish object: {name}"
         obj.select_set(True)
         export_objects.append(obj)
     bpy.context.view_layer.objects.active = rig
     bpy.ops.export_scene.gltf(
-        filepath=str(FINAL_GLB), export_format="GLB", use_selection=True,
+        filepath=str(final_glb), export_format="GLB", use_selection=True,
         export_animations=True, export_animation_mode="ACTIONS", export_merge_animation="NONE",
         export_force_sampling=True, export_frame_range=False, export_def_bones=True,
         export_extras=True,
     )
-    assert FINAL_BLEND.exists() and FINAL_BLEND.stat().st_size > 0
-    assert FINAL_GLB.exists() and FINAL_GLB.stat().st_size > 0
-    document = read_glb_json(FINAL_GLB)
+    assert final_blend.exists() and final_blend.stat().st_size > 0
+    assert final_glb.exists() and final_glb.stat().st_size > 0
+    document = read_glb_json(final_glb)
     clip_summary = glb_clip_summary(document)
     clip_names = sorted(item["name"] for item in clip_summary)
     assert clip_names == sorted(ACTION_NAMES), f"GLB clips wrong: {clip_names}"
@@ -173,7 +201,7 @@ def main():
     }
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.context.scene.render.fps = 30
-    bpy.ops.import_scene.gltf(filepath=str(FINAL_GLB))
+    bpy.ops.import_scene.gltf(filepath=str(final_glb))
     armatures = [obj for obj in bpy.context.scene.objects if obj.type == "ARMATURE"]
     assert len(armatures) == 1
     imported_rig = armatures[0]
@@ -193,7 +221,7 @@ def main():
     assert weights["bad_weight_sum_vertices"] == 0
     roundtrip = {
         "schema": "astra-v3-glb-roundtrip",
-        "source_glb": str(FINAL_GLB.relative_to(ROOT)),
+        "source_glb": str(final_glb.relative_to(ROOT)),
         "armatures": len(armatures), "rig_object": imported_rig.name,
         "bone_count": len(imported_bones), "bone_names": imported_bones,
         "expected_bone_names_exact": sorted(imported_bones) == sorted(EXPECTED_BONES),
@@ -202,13 +230,13 @@ def main():
         "largest_mesh_object": imported_body.name, "largest_mesh_weights": weights,
         "pass": True,
     }
-    ROUNDTRIP.write_text(json.dumps(roundtrip, indent=2) + "\n")
+    roundtrip_path.write_text(json.dumps(roundtrip, indent=2) + "\n")
     protected_after = protected_hashes()
     publish = {
         "schema": "astra-v3-publish",
-        "source_wip": str(WIP.relative_to(ROOT)),
-        "blend": {"path": str(FINAL_BLEND.relative_to(ROOT)), "bytes": FINAL_BLEND.stat().st_size, "sha256": sha256(FINAL_BLEND)},
-        "glb": {"path": str(FINAL_GLB.relative_to(ROOT)), "bytes": FINAL_GLB.stat().st_size, "sha256": sha256(FINAL_GLB)},
+        "source_wip": str(wip.relative_to(ROOT)),
+        "blend": {"path": str(final_blend.relative_to(ROOT)), "bytes": final_blend.stat().st_size, "sha256": sha256(final_blend)},
+        "glb": {"path": str(final_glb.relative_to(ROOT)), "bytes": final_glb.stat().st_size, "sha256": sha256(final_glb)},
         "actions": source_action_rows, "fps": 30,
         "selected_export_objects": export_names,
         "glb_document": exported,
@@ -218,7 +246,7 @@ def main():
         "protected_v2_unchanged": protected_before == protected_after,
         "publish_pass": True,
     }
-    PUBLISH.write_text(json.dumps(publish, indent=2) + "\n")
+    publish_path.write_text(json.dumps(publish, indent=2) + "\n")
     print("V3_PUBLISH_PASS", json.dumps({"blend": publish["blend"], "glb": publish["glb"], "clips": clip_names, "bones": len(imported_bones), "protected_v2_unchanged": publish["protected_v2_unchanged"]}), flush=True)
 
 

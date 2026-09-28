@@ -1,0 +1,23 @@
+{
+  "schema": "astra-v3fists-body-head-cleanup",
+  "object": "char1",
+  "before_faces": 297465,
+  "after_faces": 296323,
+  "removed_faces": 1142,
+  "selection": "rest face center z>=2.640m, |x|<=0.340m, y[-0.570,0.080]m, plate mask<0.5, cloth mask<0.5",
+  "removed_class": "residual original Meshy head/neck skin-hair-lining shell",
+  "plate_faces_removed": 0,
+  "cloth_faces_removed": 0,
+  "removed_center_bounds_m": {
+    "min": [
+      -0.28693389892578125,
+      -0.4253391921520233,
+      2.6400997638702393
+    ],
+    "max": [
+      0.3301360011100769,
+      -0.08850646018981934,
+      2.7135825157165527
+    ]
+  }
+}

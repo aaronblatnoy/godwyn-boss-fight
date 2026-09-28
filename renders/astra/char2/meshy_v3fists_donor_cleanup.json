@@ -1,0 +1,26 @@
+{
+  "schema": "astra-v3fists-donor-cleanup",
+  "object": "AstraChar2_Meshy_HeadHair",
+  "before_faces": 150499,
+  "after_faces": 150370,
+  "removed_faces": 129,
+  "removed_class": "skin only (meshy_skin_mask >= 0.5)",
+  "rule": "world z < 2.760m and outside fitted neck ellipse x radius 0.120m/y radius 0.105m",
+  "neck_center_xy_m": [
+    0.0,
+    -0.235
+  ],
+  "removed_center_bounds_m": {
+    "min": [
+      -0.0393693633377552,
+      -0.21706461906433105,
+      2.687276601791382
+    ],
+    "max": [
+      0.11924299597740173,
+      -0.07067600637674332,
+      2.7598533630371094
+    ]
+  },
+  "skin_mask_attribute_survived": true
+}

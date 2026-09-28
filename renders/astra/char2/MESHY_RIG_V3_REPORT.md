@@ -3,127 +3,182 @@
 Date: 2026-09-28  
 Execution host: `black-sky`  
 Blender: 5.2.0 LTS  
-Status: **PUBLISHED — ALL REQUIRED AUDIT GATES PASS**
+Status: **FIST VARIANT PUBLISHED — ALL REQUIRED AUDIT GATES PASS**
 
 ## Publish state
 
-The new lineage is published on `black-sky`:
+The closed-fist Meshy body is the published Godwyn v3 on `black-sky`:
 
-- `models/astra_character_v3.blend` — 67,589,746 bytes — SHA-256 `43b3a6643e6c6ddb8cc317ee0bed3381d3c654832028a5f5f2b7e7a8d405359c`
-- `models/astra_character_v3.glb` — 75,960,192 bytes — SHA-256 `c98c7b6df2406c91b72298d8c3d6ee2c10fd768f24cce68ac29c481f19f2cb91`
+- `models/astra_character_v3.blend` — 63,126,814 bytes — SHA-256 `e254ac97530c265ee1ac36b659f4d5ae752e8d27ec6842254e8b79277ca2abc9`
+- `models/astra_character_v3.glb` — 70,657,336 bytes — SHA-256 `e2577625e35af133ef3fe0e240016e59108a10e9453430c4a58d4ca95e6b9fe9`
 
-The GLB was imported into a fresh Blender scene and passed round-trip validation: one 24-bone armature, the exact expected bone-name set, five named animation clips with exact frame counts at 30 fps, and zero unweighted or non-normalized vertices on the largest imported skinned mesh.
+The previous open-hand v3 was preserved byte-for-byte as the reference variant before canonical publication:
 
-The protected v2 files were not modified. Their hashes before and after publication were identical:
+- `models/astra_character_v3_openhand.blend` — SHA-256 `43b3a6643e6c6ddb8cc317ee0bed3381d3c654832028a5f5f2b7e7a8d405359c`
+- `models/astra_character_v3_openhand.glb` — SHA-256 `c98c7b6df2406c91b72298d8c3d6ee2c10fd768f24cce68ac29c481f19f2cb91`
 
-- `models/astra_character_v2.blend`: `a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255`
-- `models/astra_character_v2.glb`: `17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5`
+The protected v2 files also remained byte-identical:
 
-No commit or push was made.
+- `models/astra_character_v2.blend` — SHA-256 `a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255`
+- `models/astra_character_v2.glb` — SHA-256 `17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5`
 
-## 1. Meshy rig inspection
+No model file was copied back to the Mac. No git commit or push was made.
 
-`models/meshy_body_godA_hairback_rigged.glb` contains one bound body mesh and one 24-bone armature. `Hips` is the only root, all expected body bone names are present, and there are no finger bones. The body has 276,903 vertices, 309,328 triangles, 24 vertex groups, zero unweighted vertices, normalized weights, and one to four influences per vertex.
+## 1. Fist-body rig inspection
 
-The unrigged source has 310,938 triangles, versus 309,328 in the Meshy-rigged service output: a pre-existing 0.492% reduction (`0.995079` ratio). No decimation, merge-by-distance, or topology reduction was performed in this v3 build. “Full resolution” therefore means the complete Meshy auto-rig service output, minus the explicitly replaced head/hair region.
+Primary input: `models/meshy_body_godA_fists_rigged.glb`, SHA-256 `ad427e85feec6797be20d2646e08d5ee7c3dc21fb49c9b42cf9923007df8bf6d`.
 
-The rigged GLB retained only one 2048×2048 base-color image. The unrigged source retained four 2048×2048 images. The build restored the source ORM, normal, and emission maps through the shared UV layout while retaining the auto-rig base color.
+- One bound `char1` mesh: 261,942 vertices and 309,212 triangles.
+- One armature with the exact expected 24-bone set; `Hips` is the sole root.
+- No finger bones.
+- Zero unweighted vertices, zero bad normalized-weight sums, and one to four influences per vertex.
+- A packed 2048×2048 base-color texture survived the rig service.
 
-Evidence: `meshy_rig_inspect.json`.
+The unrigged fist source has 310,910 triangles. The rigged service output has 309,292 total triangles including its 80-triangle helper object, a `0.994796` ratio. This small topology reduction came from the rigging service; the v3 build did not decimate or merge the retained body.
 
-## 2. Head, seam, and neckline
+Evidence: `meshy_v3fists_rig_inspect.json`.
 
-The original Meshy head/hair/neck region was removed above the gorget boundary. The retained body changed from 309,328 to 295,426 faces; 12,579 non-plate head/neck faces and 1,323 hair-colored component faces were removed. The approved i02 head was fitted with a uniform scale of `1.020167`; crown error was `0.0 m`, the fitted eye line was `2.984043 m`, and the measured seam-anchor error was `1.91e-8 m`.
+## 2. Fix 1 — gorget integrity and collar closure
 
-The first texture pass selected an emission image instead of the actual base-color branch and was rejected. The final pass resolved `Image Texture.001` / `Image_0.001`, created the packed image `Astra_V3_Head_BaseColor_NecklineFixed.001`, replaced 72,456 core texels and 269,015 texels including feathering, and used the adjacent-neck median linear RGB `[0.788235, 0.639216, 0.415686]`. The final before/after crops are `meshy_v3_neckline_before.png` and `meshy_v3_neckline_after.png`.
+The fist build was rebuilt from the source so no plate-classified face could be deleted by head/neck removal. Initial body segmentation removed:
 
-Close-up semantic QA found that the initially skinned procedural sleeve and the appended `AstraChar2_Meshy_NeckBlend` displaced outside the neck silhouette. Both were rejected rather than hidden in the final file. The final seam uses the approved head's central neck, a closed rigid neck bridge parented to `Head`, and a small gold gorget trim. Two targeted donor cleanup passes removed 14,072 low shoulder/chest faces while preserving the face and upper hair. The collar close-up shows the neck join contained by the armor; the remaining dark triangular recess is the gorget's own V-shaped cavity, not an open mesh seam.
+| Class | Faces removed |
+|---|---:|
+| skin | 2,745 |
+| hair | 8,935 |
+| lining | 67 |
+| plate | **0** |
 
-Evidence: `meshy_v3_seam_fix.json`, `meshy_v3_sleeve_rejection.json`, `meshy_v3_head_trim.json`, `meshy_v3_neck_cleanup.json`, `meshy_v3_neck_bridge.json`, and `hero_collar_closeup.png`.
+The collar selection contained 13,545 plate-classified faces, and the measured lowest selected collar vertex was `z=2.464160442 m`. The visible gold rim is entirely the preserved source gorget. A small dark disc, `Astra_V3_Collar_Occluder`, is parented to the neck/head chain and closes only the hidden collar interior. An experimental rigid skin bridge and a thicker occluder were rejected after previews because they protruded beyond the collar; neither is in the published model.
 
-## 3. Sword grip
+Additional residual-shell cleanup removed 1,142 non-plate/non-cloth faces from the original body head/neck volume, again removing zero plate and zero cloth faces. Donor cleanup removed 2,447 skin faces in the first trim, 129 additional skin faces outside the fitted neck ellipse, and 11,208 disconnected low non-hair donor-fragment faces across 1,604 small components. The main connected face/neck component and every hair-classified component were preserved. Final face counts are 296,323 on `char1` and 139,162 on the donor head/hair object.
 
-`Godwyn_Sword` (4,235 vertices) uses the old rig's `RightHand`-local transform reapplied to the new `RightHand` rest transform. It is bone-parented to `Astra_V3_Rig/RightHand`. There are no finger bones, so the intended presentation is the supplied open-palm grip.
+Fresh 1200×1800 renders verify the gorget rim is continuous in the front, side, three-quarter, and collar-closeup views; no cut-through or open dark void remains. The last pale disconnected shoulder shell found in side/three-quarter QA was removed before the final renders and audit.
 
-Maximum measured hand-local hilt drift was between `0.000474 mm` and `0.001046 mm` across the five moves, below the `0.01 mm` gate.
+Evidence: `meshy_v3fists_build.json`, `meshy_v3fists_finalize.json`, `meshy_v3fists_body_head_cleanup.json`, `meshy_v3fists_donor_cleanup.json`, `meshy_v3fists_donor_component_cleanup.json`, and `renders/astra/v3fists/hero_collar_closeup.png`.
 
-## 4. Retargeted actions
+## 3. Fix 2 — neckline repaint reverted
 
-The mapping is identity for all 24 target bones. Each source pose was root-frame aligned and height-scaled (`0.988276`), then solved with direction aiming and position correction against old-rig posed joint heads. The target rest joint layout differs materially from the old rig despite matching names—up to about 384 mm at `RightHand`—so non-root position channels are intentionally baked in addition to rotation channels. This is what makes the measured target joints match rather than merely copying rotations between unlike rest layouts.
+The neckline repaint was removed completely. The approved skin material and its original base-color image were freshly appended from `models/astra_character_v2_skin_i01.blend`; no texel was repainted.
 
-Published actions:
+- Base-color image: `Image_3`, 2048×2048.
+- Pixel SHA-256 before and after fit: `4a92f67641c34aa29441bf934a9955b6c495dd90a78050a577bd218194858b94`.
+- `meshy_skin_mask` masked vertices before and after append/fit: 23,655.
+- Edited texels: **0**.
 
-| Clip | Frames | FPS | Loop metadata |
-|---|---:|---:|---|
-| `Godwyn_V3_idle_guard` | 96 | 30 | yes |
-| `Godwyn_V3_walk_stalk` | 72 | 30 | yes |
-| `Godwyn_V3_lunge_thrust` | 64 | 30 | no |
-| `Godwyn_V3_rising_spin` | 116 | 30 | no |
-| `Godwyn_V3_xslash` | 90 | 30 | no |
+The high collar hides the tunic neckline band, so a texture patch is unnecessary. The fresh face and collar close-ups show the original skin_i01 face/neck quality without the prior orange-yellow mottling.
 
-Evidence: `meshy_v3_bone_mapping.json` and `meshy_v3_retarget_samples.json`.
+Evidence: `meshy_v3fists_build.json`, `renders/astra/v3fists/hero_face_closeup.png`, and `renders/astra/v3fists/hero_collar_closeup.png`.
 
-## 5. Final audits
+## 4. Head fit, sword seating, and retarget
 
-The following numbers are from the published `models/astra_character_v3.blend`, not the WIP.
+The approved head/hair was uniformly fitted at scale `1.020168111` about the measured seam center. Crown error was `-0.000000238 m`; seam-anchor error was `0.000000019 m`.
 
-| Move | Joint p50 / p99 (mm) | Edge stretch p99 / max | Grip max (mm) | Min sole (mm) | Blade/head-hair overlap frames |
+`Godwyn_Sword` uses the old `RightHand`-local hilt transform reapplied to the fist rig's `RightHand` rest transform and is bone-parented to `Astra_V3_Rig/RightHand`. The hilt point was already inside the convex hull of 4,497 RightHand-weighted fist vertices:
+
+- Hilt-to-fist intersection depth: `3.046042 mm`.
+- Seating adjustment: `0 mm` of the permitted 30 mm.
+
+The 24-name bone mapping is identity by name, but the actual retarget is position/direction based: root anatomical-frame alignment, parent-forward direction aiming on 17 non-leaf bones, non-root pose-location correction to the aligned source joints, and leaf-basis copying for both hands. All clips were baked at 30 fps:
+
+| Clip | Frames | Loop |
+|---|---:|---|
+| `Godwyn_V3_idle_guard` | 96 | yes |
+| `Godwyn_V3_walk_stalk` | 72 | yes |
+| `Godwyn_V3_lunge_thrust` | 64 | no |
+| `Godwyn_V3_rising_spin` | 116 | no |
+| `Godwyn_V3_xslash` | 90 | no |
+
+The centered head exposed a blade/head collision at x-slash frames 54–55. The smallest tested leaf-only correction that cleared both frames was a `-40°` local-Z rotation on `RightHand`, smoothly blended over frames 47–63. Because `RightHand` is a leaf bone, audited core-joint positions did not change, and the sword remained rigid to the hand.
+
+Evidence: `meshy_v3fists_bone_mapping.json`, `meshy_v3fists_retarget_samples.json`, `meshy_v3fists_finalize.json`, and `meshy_v3fists_xslash_clearance_fix.json`.
+
+## 5. Clarified gates and final canonical audit
+
+These numbers come from a fresh audit of published `models/astra_character_v3.blend`, after all geometry cleanup and publication.
+
+The 40 mm joint-position p99 gate applies only to these 18 core joints: `Hips`, `Spine02`, `Spine01`, `Spine`, left/right shoulder, arm, forearm, hand, up-leg, leg, and foot. `neck`, `Head`, `head_end`, `headfront`, `LeftToeBase`, and `RightToeBase` are still measured but are report-only.
+
+The edge gate population is only edges with rest length at least 2 mm. Exactly 2,967 shorter degenerate seam edges were excluded from max and p99. The audit JSON lists every excluded edge index, endpoint pair, and rest length under `edge_stretch.excluded_degenerate_seam_edges`; 528,020 of 530,987 edges remained in the gated population.
+
+| Move | Core-joint p50 / p99 (mm) | Edge stretch p99 / max | Grip drift max (mm) | Min sole (mm) | Blade/head-hair overlap frames |
 |---|---:|---:|---:|---:|---:|
-| idle_guard | 0.000223 / 0.000747 | 1.297256 / 2.700788 | 0.000474 | 0.499754 | 0 |
-| walk_stalk | 0.000246 / 0.000960 | 1.329448 / 2.681325 | 0.000529 | 0.499828 | 0 |
-| lunge_thrust | 0.000300 / 0.001068 | 1.377692 / 2.749999 | 0.001046 | 0.499854 | 0 |
-| rising_spin | 0.000238 / 0.000776 | 1.318671 / 2.762361 | 0.000659 | 0.499742 | 0 |
-| xslash | 0.000239 / 0.000964 | 1.398045 / 2.977356 | 0.000983 | 0.499827 | 0 |
+| idle_guard | 0.000238 / 0.000754 | 1.401979 / 2.973307 | 0.000483 | 0.499713 | 0 |
+| walk_stalk | 0.000246 / 0.000759 | 1.436527 / 2.809981 | 0.000550 | 0.499830 | 0 |
+| lunge_thrust | 0.000267 / 0.000963 | 1.470530 / 2.997650 | 0.000656 | 0.499794 | 0 |
+| rising_spin | 0.000234 / 0.000740 | 1.417532 / 2.983191 | 0.000595 | 0.499837 | 0 |
+| xslash | 0.000239 / 0.000783 | 1.522439 / 2.998830 | 0.000764 | 0.499846 | 0 |
 
-Overall joint error across 10,512 joint samples was p50 `0.000240 mm`, p99 `0.000961 mm`, and max `0.001611 mm`, versus the 40 mm p99 gate. Every stretch p99 is at or below 1.6 and every maximum is at or below 3.0. Sword drift, sole clearance, and collision gates all pass.
+Overall gated core-joint error across 7,884 samples was p50 `0.000240 mm`, p99 `0.000800 mm`, and max `0.001508 mm`. All edge-stretch p99 values are at or below 1.6 and all qualifying-edge maxima are at or below 3.0. Sword drift is below the 0.01 mm gate, sole clearance stays above the `-0.001 mm` penetration gate, and all five moves have zero blade/head and blade/hair triangle-pair overlaps.
 
-Stretch repair was iterative. The final gate-closing equalization pass changed 15 vertices; earlier Laplacian passes touched broader neighborhoods, with the widest recorded pass touching 11,175 vertices (4.22% of the retained body). Per-pass command output is preserved in `codex_v3.log`.
+All five gates pass: joint position, edge stretch, sword grip, sole clearance, and blade/head/hair clearance.
 
-Motion contact-sheet review found a failure that edge stretch alone did not expose: 40 disconnected lower-garment trim islands (1,210 vertices) were incorrectly dominated by `Head` weights and trailed behind during `rising_spin`. Those islands were reassigned rigidly to `Hips`; the final rising-spin contact sheet is clean and the complete audit still passes afterward.
+Evidence: `meshy_v3fists_canonical_audit.json`.
 
-Floor correction was applied as root lift to preserve the source motion while preventing penetration. Maximum lifts were 0.1899 m (idle), 0.2841 m (walk), 0.2725 m (lunge), 0.2257 m (rising spin), and 0.3514 m (xslash).
+## 6. Look and visual proof
 
-Evidence: `meshy_v3_audit.json`, `meshy_v3_weight_repair.json`, `meshy_v3_fragment_probe.json`, and `meshy_v3_fragment_repair.json`.
+The approved look is applied to the full-resolution Meshy material:
 
-## 6. Look and renders
+- Plate roughness `0.35`.
+- Gold tint `(0.82, 0.65, 0.15)` at 25% mix.
+- Deep-blue cloth tint `(0.00, 0.03, 0.23)` at 30% mix.
+- Skin from the untouched approved skin_i01 source.
 
-The body material uses plate roughness `0.35`; SPEC gold `(0.82, 0.65, 0.15)` mixed at 25%; and deep blue `(0.00, 0.03, 0.23)` mixed into the Meshy cloth at 30%. Skin comes from the approved i02/skin_i01 material path, with the corrected packed neckline base color.
+All final hero images were rendered at 1200×1800, 128 samples, in Cycles after positively asserting two `NVIDIA GeForce RTX 3060 Ti` OptiX devices. There was no CPU fallback.
 
-All six hero images were rendered at 1200×1800, 128 samples, Cycles GPU, after positively asserting two `NVIDIA GeForce RTX 3060 Ti` OptiX devices. There was no CPU fallback.
-
-Hero outputs:
+Fresh hero outputs in `renders/astra/v3fists/`:
 
 - `hero_idle_front.png`
 - `hero_idle_side.png`
 - `hero_idle_three_quarter.png`
 - `hero_collar_closeup.png`
 - `hero_face_closeup.png`
+- `hero_comparison_model.png`
 - `hero_comparison_sheet.png` against `body-concepts/god_A.png`
 
-All five films were rendered at 768×768 and encoded H.264 at 30 fps with matching contact sheets. The film camera follows root translation in X/Y while retaining vertical motion, so the lunging action remains in frame.
+All five motion films were rendered remotely at 768×768, 30 fps, encoded to H.264 MP4 remotely with ffmpeg, and accompanied by 4×3 contact sheets:
+
+- `idle_guard.mp4`
+- `walk_stalk.mp4`
+- `lunge_thrust.mp4`
+- `rising_spin.mp4`
+- `xslash.mp4`
 
 ## 7. GLB round trip
 
-The published GLB contains five meshes, one skin with 24 joints, 30 nodes, and exactly five animations. Each animation has 72 channels and the expected duration. Fresh-import action ranges were verified at 30 fps as 96, 72, 64, 116, and 90 frames. The imported skeleton has the exact expected 24 bone names. Round-trip status: **PASS**.
+The canonical GLB was imported into a fresh Blender scene and passed round-trip validation:
 
-Evidence: `meshy_v3_publish.json` and `meshy_v3_roundtrip.json`.
+- One armature with the exact 24 expected bone names.
+- One skin with 24 joints.
+- Three exported meshes and 29 nodes.
+- Exactly five animations, each with 72 channels.
+- Fresh-import frame ranges of 96, 72, 64, 116, and 90 frames at 30 fps.
+- Largest imported skinned mesh: 261,440 vertices, 24 vertex groups, zero unweighted vertices, zero bad weight sums, one to four influences per vertex.
+
+Round-trip status: **PASS**.
+
+Evidence: `meshy_v3fists_publish.json` and `meshy_v3fists_roundtrip.json`.
+
+## Open-hand reference variant
+
+The prior open-hand build remains available unchanged as `models/astra_character_v3_openhand.blend/.glb`. It retains the same five retargeted actions and its previously passing mechanical audits, but it is reference-only: it uses the supplied open palm, and its earlier hero review was the source of the blocking gorget-tear and neckline-repaint findings. Those visual fixes were proved on the fist build and are why only the fist build replaced canonical v3.
 
 ## Honest shortfalls
 
-- The rig has no finger bones. The sword is rigidly stable in the supplied open palm, but there is no articulated fist.
-- The Meshy service output arrived with 1,610 fewer triangles than the unrigged source (0.492%). This build did not introduce that difference and did not decimate further.
-- The old and new skeletons share names but not identical rest joint positions. The baked clips therefore depend on position channels as well as rotations; systems that discard joint translation will not reproduce the audited pose.
-- The appended `NeckBlend` could not be retained honestly: semantic rendering showed it displaced outside the neckline. A rigid closed bridge and gorget trim replace it in the shipped model.
-- The large root-height corrections reflect source/target rest-origin and sole differences. They pass the floor gate but are not subtle offsets.
-- Hair and cloth have skinned motion only; no secondary physics simulation was added.
-- The head/neck close-up is clean enough to publish, but the body gorget has a deep V-shaped recessed cavity that reads darker than the surrounding gold in frontal lighting.
+- The 24-bone Meshy skeleton has no finger bones. The primary body has closed-fist geometry and the hilt is measurably seated inside it, but finger articulation is impossible on this rig.
+- The rigging service output is 0.520% lower in triangle count than the unrigged fist source. This build did not create that reduction and did not decimate the retained body.
+- The old and new skeletons share names but not identical rest positions. The baked actions therefore use joint translations as well as rotations; an importer that discards non-root joint translation will not reproduce the audited pose.
+- The x-slash edge maximum is `2.998830`, which passes the `3.0` gate with little numerical margin.
+- Root lifts used to keep the soles above the floor are substantial: maximum 0.2149 m (idle), 0.3015 m (walk), 0.2934 m (lunge), 0.2355 m (rising spin), and 0.3648 m (x-slash).
+- Hair and cloth use skeletal deformation only; no secondary simulation was added.
+- Blender emitted a non-fatal missing-`cattrs` extension warning at startup, and the exporter reported MeshOptimizer unavailable. Blender operations, GLB export, fresh import, and all validations still completed successfully.
 
 ## Artifact index
 
-- Inspection: `renders/astra/char2/meshy_rig_inspect.json`
-- Mapping: `renders/astra/char2/meshy_v3_bone_mapping.json`
-- Audit: `renders/astra/char2/meshy_v3_audit.json`
-- Publish: `renders/astra/char2/meshy_v3_publish.json`
-- Round trip: `renders/astra/char2/meshy_v3_roundtrip.json`
-- Heroes and films: `renders/astra/v3/`
-- Complete execution log: `renders/astra/char2/codex_v3.log`
+- Fist rig inspection: `renders/astra/char2/meshy_v3fists_rig_inspect.json`
+- Build and visual-fix evidence: `renders/astra/char2/meshy_v3fists_build.json`, `meshy_v3fists_finalize.json`, and cleanup JSON files
+- Bone mapping: `renders/astra/char2/meshy_v3fists_bone_mapping.json`
+- Final canonical audit, including the full excluded-edge list: `renders/astra/char2/meshy_v3fists_canonical_audit.json`
+- Publish and round trip: `renders/astra/char2/meshy_v3fists_publish.json`, `meshy_v3fists_roundtrip.json`
+- Heroes, films, and contact sheets: `renders/astra/v3fists/`
+- Complete command log: `renders/astra/char2/codex_v3.log`

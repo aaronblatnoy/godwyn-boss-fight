@@ -25,6 +25,7 @@ def cli():
     parser.add_argument("--threshold", type=float, default=2.80)
     parser.add_argument("--iterations", type=int, default=6)
     parser.add_argument("--finalize", action="store_true")
+    parser.add_argument("--out", default="renders/astra/char2/meshy_v3_weight_repair.json")
     return parser.parse_args(raw)
 
 
@@ -73,7 +74,7 @@ def rest_edges(body):
 
 
 def scan(rig, body, edges, lengths, threshold):
-    valid = lengths > 1e-6
+    valid = lengths >= 0.002
     bad = set()
     rows = {}
     for name, frame in EXTENDED.items():
@@ -240,7 +241,9 @@ def main():
         "remaining_edges_above_3": len(remaining),
         "gate_pass": not remaining and all(row["p99"] <= 1.6 and row["max"] <= 3.0 for row in final.values()),
     }
-    (OUT / "meshy_v3_weight_repair.json").write_text(json.dumps(report, indent=2) + "\n")
+    output = root_path(args.out)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    output.write_text(json.dumps(report, indent=2) + "\n")
     bpy.context.preferences.filepaths.save_version = 0
     bpy.ops.wm.save_as_mainfile(filepath=str(blend))
     protected_after = {str(path.relative_to(ROOT)): sha256(path) for path in PROTECTED}

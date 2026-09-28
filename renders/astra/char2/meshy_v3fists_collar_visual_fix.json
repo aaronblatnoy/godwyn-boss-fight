@@ -1,0 +1,8 @@
+{
+  "schema": "astra-v3fists-collar-visual-fix",
+  "removed_object": "Astra_V3_Rigid_Neck_Bridge",
+  "reason": "fresh preview showed the rigid skin cylinder outside the high collar as a rectangular block",
+  "retained_occluder": "Astra_V3_Collar_Occluder",
+  "retained_occluder_parent_bone": "Head",
+  "visible_gold_rim_source": "preserved plate-classified char1 gorget geometry"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "astra-v3fists-occluder-tune",
+  "object": "Astra_V3_Collar_Occluder",
+  "shape": "rounded thick disc",
+  "center_m": [
+    -0.205,
+    -0.185,
+    2.64
+  ],
+  "radius_m": 0.215,
+  "depth_m": 0.18,
+  "y_scale": 0.76,
+  "bevel_m": 0.035,
+  "parent_bone": "neck",
+  "material": "Astra V3 Collar Interior Occluder",
+  "purpose": "fill the entire high-collar interior from frontal and three-quarter hero angles without reconstructing visible gold geometry"
+}

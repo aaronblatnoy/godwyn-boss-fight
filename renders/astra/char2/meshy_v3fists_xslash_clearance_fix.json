@@ -1,0 +1,1178 @@
+{
+  "schema": "astra-v3fists-xslash-clearance-fix",
+  "method": "smallest tested local leaf-bone RightHand rotation with zero blade/head/hair triangle pairs at both failing frames",
+  "selected": {
+    "axis": "Z",
+    "angle_degrees": -40,
+    "total_triangle_pairs": 0,
+    "frames": [
+      {
+        "frame": 54,
+        "head_triangles": 0,
+        "hair_triangles": 0
+      },
+      {
+        "frame": 55,
+        "head_triangles": 0,
+        "hair_triangles": 0
+      }
+    ]
+  },
+  "per_frame_factors": {
+    "47": 0.0,
+    "48": 0.14285714285714285,
+    "49": 0.2857142857142857,
+    "50": 0.42857142857142855,
+    "51": 0.5714285714285714,
+    "52": 0.7142857142857143,
+    "53": 0.8571428571428571,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 0.875,
+    "57": 0.75,
+    "58": 0.625,
+    "59": 0.5,
+    "60": 0.375,
+    "61": 0.25,
+    "62": 0.125,
+    "63": 0.0
+  },
+  "post_key_verification": [
+    {
+      "frame": 54,
+      "head_triangles": 0,
+      "hair_triangles": 0
+    },
+    {
+      "frame": 55,
+      "head_triangles": 0,
+      "hair_triangles": 0
+    }
+  ],
+  "candidate_results": [
+    {
+      "axis": "Z",
+      "angle_degrees": -40,
+      "total_triangle_pairs": 0,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -45,
+      "total_triangle_pairs": 0,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -50,
+      "total_triangle_pairs": 0,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -60,
+      "total_triangle_pairs": 0,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -36,
+      "total_triangle_pairs": 25,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 4,
+          "hair_triangles": 21
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -30,
+      "total_triangle_pairs": 63,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 10,
+          "hair_triangles": 53
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -45,
+      "total_triangle_pairs": 79,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 79
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -50,
+      "total_triangle_pairs": 90,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 90
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -60,
+      "total_triangle_pairs": 93,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 4,
+          "hair_triangles": 89
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -60,
+      "total_triangle_pairs": 96,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 86,
+          "hair_triangles": 0
+        },
+        {
+          "frame": 55,
+          "head_triangles": 2,
+          "hair_triangles": 8
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -40,
+      "total_triangle_pairs": 107,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 107
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -24,
+      "total_triangle_pairs": 108,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 11,
+          "hair_triangles": 97
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -36,
+      "total_triangle_pairs": 110,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 0,
+          "hair_triangles": 110
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -30,
+      "total_triangle_pairs": 139,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 9,
+          "hair_triangles": 130
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -18,
+      "total_triangle_pairs": 167,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 18,
+          "hair_triangles": 149
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -24,
+      "total_triangle_pairs": 183,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 10,
+          "hair_triangles": 173
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -12,
+      "total_triangle_pairs": 209,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 19,
+          "hair_triangles": 175
+        },
+        {
+          "frame": 55,
+          "head_triangles": 15,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -12,
+      "total_triangle_pairs": 209,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 34,
+          "hair_triangles": 175
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -18,
+      "total_triangle_pairs": 216,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 28,
+          "hair_triangles": 188
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -12,
+      "total_triangle_pairs": 226,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 33,
+          "hair_triangles": 193
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -8,
+      "total_triangle_pairs": 227,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 31,
+          "hair_triangles": 196
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -8,
+      "total_triangle_pairs": 240,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 9,
+          "hair_triangles": 195
+        },
+        {
+          "frame": 55,
+          "head_triangles": 31,
+          "hair_triangles": 5
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -18,
+      "total_triangle_pairs": 257,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 15,
+          "hair_triangles": 242
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": -5,
+      "total_triangle_pairs": 265,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 35,
+          "hair_triangles": 223
+        },
+        {
+          "frame": 55,
+          "head_triangles": 7,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 24,
+      "total_triangle_pairs": 282,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 6,
+          "hair_triangles": 276
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -8,
+      "total_triangle_pairs": 285,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 44,
+          "hair_triangles": 241
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 60,
+      "total_triangle_pairs": 288,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 54,
+          "hair_triangles": 234
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": -5,
+      "total_triangle_pairs": 289,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 41,
+          "hair_triangles": 248
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 30,
+      "total_triangle_pairs": 289,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 22,
+          "hair_triangles": 267
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 18,
+      "total_triangle_pairs": 291,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 43,
+          "hair_triangles": 234
+        },
+        {
+          "frame": 55,
+          "head_triangles": 14,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -5,
+      "total_triangle_pairs": 292,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 11,
+          "hair_triangles": 219
+        },
+        {
+          "frame": 55,
+          "head_triangles": 42,
+          "hair_triangles": 20
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 50,
+      "total_triangle_pairs": 296,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 67,
+          "hair_triangles": 229
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 40,
+      "total_triangle_pairs": 302,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 49,
+          "hair_triangles": 253
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 36,
+      "total_triangle_pairs": 316,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 31,
+          "hair_triangles": 285
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 30,
+      "total_triangle_pairs": 324,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 42,
+          "hair_triangles": 240
+        },
+        {
+          "frame": 55,
+          "head_triangles": 42,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 45,
+      "total_triangle_pairs": 325,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 58,
+          "hair_triangles": 267
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 24,
+      "total_triangle_pairs": 344,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 34,
+          "hair_triangles": 284
+        },
+        {
+          "frame": 55,
+          "head_triangles": 26,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 5,
+      "total_triangle_pairs": 357,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 54,
+          "hair_triangles": 259
+        },
+        {
+          "frame": 55,
+          "head_triangles": 44,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 18,
+      "total_triangle_pairs": 363,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 49,
+          "hair_triangles": 314
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 12,
+      "total_triangle_pairs": 404,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 111,
+          "hair_triangles": 293
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -24,
+      "total_triangle_pairs": 412,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 22,
+          "hair_triangles": 390
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 5,
+      "total_triangle_pairs": 419,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 47,
+          "hair_triangles": 231
+        },
+        {
+          "frame": 55,
+          "head_triangles": 141,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 12,
+      "total_triangle_pairs": 420,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 38,
+          "hair_triangles": 298
+        },
+        {
+          "frame": 55,
+          "head_triangles": 84,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 8,
+      "total_triangle_pairs": 426,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 40,
+          "hair_triangles": 353
+        },
+        {
+          "frame": 55,
+          "head_triangles": 33,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Y",
+      "angle_degrees": 8,
+      "total_triangle_pairs": 432,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 37,
+          "hair_triangles": 271
+        },
+        {
+          "frame": 55,
+          "head_triangles": 124,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 45,
+      "total_triangle_pairs": 447,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 71,
+          "hair_triangles": 376
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 60,
+      "total_triangle_pairs": 447,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 39,
+          "hair_triangles": 408
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 40,
+      "total_triangle_pairs": 449,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 54,
+          "hair_triangles": 395
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 50,
+      "total_triangle_pairs": 466,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 62,
+          "hair_triangles": 404
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": 36,
+      "total_triangle_pairs": 483,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 20,
+          "hair_triangles": 463
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 12,
+      "total_triangle_pairs": 488,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 53,
+          "hair_triangles": 279
+        },
+        {
+          "frame": 55,
+          "head_triangles": 156,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 5,
+      "total_triangle_pairs": 531,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 52,
+          "hair_triangles": 275
+        },
+        {
+          "frame": 55,
+          "head_triangles": 191,
+          "hair_triangles": 13
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 8,
+      "total_triangle_pairs": 548,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 23,
+          "hair_triangles": 325
+        },
+        {
+          "frame": 55,
+          "head_triangles": 173,
+          "hair_triangles": 27
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -30,
+      "total_triangle_pairs": 631,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 59,
+          "hair_triangles": 572
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 18,
+      "total_triangle_pairs": 751,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 58,
+          "hair_triangles": 317
+        },
+        {
+          "frame": 55,
+          "head_triangles": 130,
+          "hair_triangles": 246
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 40,
+      "total_triangle_pairs": 850,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 26,
+          "hair_triangles": 333
+        },
+        {
+          "frame": 55,
+          "head_triangles": 290,
+          "hair_triangles": 201
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 36,
+      "total_triangle_pairs": 952,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 14,
+          "hair_triangles": 335
+        },
+        {
+          "frame": 55,
+          "head_triangles": 404,
+          "hair_triangles": 199
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -36,
+      "total_triangle_pairs": 1085,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 149,
+          "hair_triangles": 936
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -50,
+      "total_triangle_pairs": 1111,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 457,
+          "hair_triangles": 654
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -40,
+      "total_triangle_pairs": 1151,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 233,
+          "hair_triangles": 918
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 45,
+      "total_triangle_pairs": 1207,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 60,
+          "hair_triangles": 387
+        },
+        {
+          "frame": 55,
+          "head_triangles": 464,
+          "hair_triangles": 296
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 24,
+      "total_triangle_pairs": 1301,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 40,
+          "hair_triangles": 403
+        },
+        {
+          "frame": 55,
+          "head_triangles": 303,
+          "hair_triangles": 555
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 30,
+      "total_triangle_pairs": 1391,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 18,
+          "hair_triangles": 385
+        },
+        {
+          "frame": 55,
+          "head_triangles": 444,
+          "hair_triangles": 544
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 50,
+      "total_triangle_pairs": 1444,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 99,
+          "hair_triangles": 557
+        },
+        {
+          "frame": 55,
+          "head_triangles": 394,
+          "hair_triangles": 394
+        }
+      ]
+    },
+    {
+      "axis": "X",
+      "angle_degrees": -45,
+      "total_triangle_pairs": 1532,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 430,
+          "hair_triangles": 1102
+        },
+        {
+          "frame": 55,
+          "head_triangles": 0,
+          "hair_triangles": 0
+        }
+      ]
+    },
+    {
+      "axis": "Z",
+      "angle_degrees": 60,
+      "total_triangle_pairs": 1535,
+      "frames": [
+        {
+          "frame": 54,
+          "head_triangles": 97,
+          "hair_triangles": 288
+        },
+        {
+          "frame": 55,
+          "head_triangles": 488,
+          "hair_triangles": 662
+        }
+      ]
+    }
+  ],
+  "joint_position_effect": "none at RightHand joint head; rotation is on the leaf bone only",
+  "grip_effect": "none; sword remains rigidly weighted to RightHand"
+}

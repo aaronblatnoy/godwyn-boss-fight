@@ -22,6 +22,7 @@ def cli():
     parser.add_argument("mode", choices=("preview", "heroes", "film"))
     parser.add_argument("move", nargs="?", choices=tuple(FRAMES))
     parser.add_argument("--blend", default=str(BLEND.relative_to(ROOT)))
+    parser.add_argument("--outdir", default=str(OUT.relative_to(ROOT)))
     return parser.parse_args(raw)
 
 
@@ -251,14 +252,17 @@ def render_film(scene, camera, rig, assets, name):
 
 
 def main():
+    global OUT
     args = cli()
+    OUT = root_path(args.outdir)
     OUT.mkdir(parents=True, exist_ok=True)
     bpy.ops.wm.open_mainfile(filepath=str(root_path(args.blend)), load_ui=False)
     scene = bpy.context.scene
     rig = bpy.data.objects["Astra_V3_Rig"]
     asset_names = (
         "char1", "AstraChar2_Meshy_HeadHair", "AstraChar2_Meshy_NeckBlend",
-        "Astra_V3_Neck_Gorget_Trim", "Godwyn_Sword",
+        "Astra_V3_Neck_Gorget_Trim", "Astra_V3_Rigid_Neck_Bridge",
+        "Astra_V3_Collar_Occluder", "Godwyn_Sword",
     )
     assets = [bpy.data.objects[name] for name in asset_names if name in bpy.data.objects]
     camera = studio(scene)

@@ -1,0 +1,101 @@
+{
+  "schema": "astra-v3fists-finalize",
+  "blend": "models/astra_character_v3fists_wip.blend",
+  "body_head_neck_removal": {
+    "faces_by_class": {
+      "skin": 2745,
+      "hair": 8935,
+      "lining": 67,
+      "plate": 0
+    },
+    "collar_measurement": {
+      "classified_faces": 13545,
+      "interior_floor_z_m": 2.464160442352295,
+      "selection": "plate-classified face centers z[2.48,2.82]m, |x|<=0.48m, y[-0.58,0.22]m; minimum vertex z"
+    },
+    "plate_faces_removed": 0
+  },
+  "donor_head_trim": {
+    "before_faces": 152946,
+    "after_faces": 150499,
+    "removed_faces": 2447,
+    "removed_class": "skin only (meshy_skin_mask >= 0.5)",
+    "preserved_neck_x_m": [
+      -0.12,
+      0.12
+    ],
+    "removed_center_bounds_m": {
+      "min": [
+        -0.03122459352016449,
+        -0.25924429297447205,
+        2.5697405338287354
+      ],
+      "max": [
+        0.21961021423339844,
+        -0.07335886359214783,
+        2.7599570751190186
+      ]
+    },
+    "skin_masked_vertices_before_trim": 23655,
+    "skin_masked_vertices_after_trim": 20643,
+    "skin_mask_attribute_survived": true
+  },
+  "removed_neck_blend": "AstraChar2_Meshy_NeckBlend",
+  "collar_occlusion": {
+    "collar_floor_z_m": 2.464160442352295,
+    "cap_z_m": 2.6,
+    "center_xy_m": [
+      -0.0026910335291177034,
+      -0.2787006723880768
+    ],
+    "bridge": null,
+    "occluder": {
+      "object": "Astra_V3_Collar_Occluder",
+      "radius_m": 0.14,
+      "depth_m": 0.025,
+      "y_scale": 0.78,
+      "parent_bone": "neck",
+      "material": "Astra V3 Collar Interior Occluder"
+    },
+    "gold_trim_added": false,
+    "reason": "preserved source gorget supplies the visible gold rim; dark disc closes only the hidden interior"
+  },
+  "sword_fist_seating": {
+    "method": "hilt point tested against convex hull of vertices with RightHand weight >= 0.35",
+    "fist_vertices_in_hull": 4497,
+    "before": {
+      "inside": true,
+      "intersection_depth_m": 0.003046041587367654,
+      "outside_clearance_m": 0.0,
+      "signed_nearest_m": -0.003046041529159993
+    },
+    "after": {
+      "inside": true,
+      "intersection_depth_m": 0.003046041587367654,
+      "outside_clearance_m": 0.0,
+      "signed_nearest_m": -0.003046041529159993
+    },
+    "adjustment_world_m": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "adjustment_length_m": 0.0,
+    "adjustment_limit_m": 0.03,
+    "hilt_world_after_m": [
+      -0.8634429574012756,
+      -0.4542331099510193,
+      1.5802853107452393
+    ],
+    "hilt_right_hand_local_after_m": [
+      -0.9990310668945312,
+      15.203373908996582,
+      -6.414838790893555
+    ]
+  },
+  "low_garment_fragment_repair": {
+    "components": 0,
+    "vertices": 0,
+    "details": []
+  }
+}

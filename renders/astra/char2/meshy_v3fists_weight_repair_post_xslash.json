@@ -1,0 +1,316 @@
+{
+  "schema": "astra-v3-pathological-edge-weight-repair",
+  "method": "final exact equalization of connected remaining over-gate edge endpoints; retain top-four normalized weights; topology and vertex positions unchanged",
+  "blend": "models/astra_character_v3fists_wip.blend",
+  "threshold_used": 3.0,
+  "iterations": [
+    {
+      "iteration": 1,
+      "before": {
+        "idle_guard": {
+          "frame": 48,
+          "p99": 1.4017661809921265,
+          "max": 2.973306655883789,
+          "edges_above_threshold": 0,
+          "maximum_edge": 172730,
+          "maximum_edge_vertices": [
+            138744,
+            139252
+          ],
+          "maximum_rest_length_m": 0.012528951279819012,
+          "maximum_posed_length_m": 0.03725241497159004
+        },
+        "walk_stalk": {
+          "frame": 36,
+          "p99": 1.436038851737976,
+          "max": 2.809981346130371,
+          "edges_above_threshold": 0,
+          "maximum_edge": 243239,
+          "maximum_edge_vertices": [
+            30793,
+            30902
+          ],
+          "maximum_rest_length_m": 0.00416040001437068,
+          "maximum_posed_length_m": 0.011690646409988403
+        },
+        "lunge_thrust": {
+          "frame": 40,
+          "p99": 1.4702235460281372,
+          "max": 2.997649908065796,
+          "edges_above_threshold": 0,
+          "maximum_edge": 302432,
+          "maximum_edge_vertices": [
+            137330,
+            137407
+          ],
+          "maximum_rest_length_m": 0.007426054682582617,
+          "maximum_posed_length_m": 0.02226071245968342
+        },
+        "rising_spin": {
+          "frame": 40,
+          "p99": 1.417526125907898,
+          "max": 2.9831905364990234,
+          "edges_above_threshold": 0,
+          "maximum_edge": 487246,
+          "maximum_edge_vertices": [
+            170117,
+            170214
+          ],
+          "maximum_rest_length_m": 0.009526765905320644,
+          "maximum_posed_length_m": 0.028420157730579376
+        },
+        "xslash": {
+          "frame": 55,
+          "p99": 1.5220600366592407,
+          "max": 3.1312828063964844,
+          "edges_above_threshold": 1,
+          "maximum_edge": 203110,
+          "maximum_edge_vertices": [
+            104665,
+            104684
+          ],
+          "maximum_rest_length_m": 0.005025116261094809,
+          "maximum_posed_length_m": 0.01573505997657776
+        }
+      },
+      "bad_edges": 1,
+      "components": [
+        {
+          "vertices": 2,
+          "vertex_examples": [
+            104665,
+            104684
+          ]
+        }
+      ],
+      "changed_vertices": 2,
+      "maximum_component_vertices": 2
+    },
+    {
+      "iteration": 2,
+      "before": {
+        "idle_guard": {
+          "frame": 48,
+          "p99": 1.4017585515975952,
+          "max": 2.973306655883789,
+          "edges_above_threshold": 0,
+          "maximum_edge": 172730,
+          "maximum_edge_vertices": [
+            138744,
+            139252
+          ],
+          "maximum_rest_length_m": 0.012528951279819012,
+          "maximum_posed_length_m": 0.03725241497159004
+        },
+        "walk_stalk": {
+          "frame": 36,
+          "p99": 1.4360252618789673,
+          "max": 2.896845579147339,
+          "edges_above_threshold": 0,
+          "maximum_edge": 269528,
+          "maximum_edge_vertices": [
+            104658,
+            104665
+          ],
+          "maximum_rest_length_m": 0.0048040058463811874,
+          "maximum_posed_length_m": 0.01391646359115839
+        },
+        "lunge_thrust": {
+          "frame": 40,
+          "p99": 1.4702235460281372,
+          "max": 2.997649908065796,
+          "edges_above_threshold": 0,
+          "maximum_edge": 302432,
+          "maximum_edge_vertices": [
+            137330,
+            137407
+          ],
+          "maximum_rest_length_m": 0.007426054682582617,
+          "maximum_posed_length_m": 0.02226071245968342
+        },
+        "rising_spin": {
+          "frame": 40,
+          "p99": 1.417526125907898,
+          "max": 2.9831905364990234,
+          "edges_above_threshold": 0,
+          "maximum_edge": 487246,
+          "maximum_edge_vertices": [
+            170117,
+            170214
+          ],
+          "maximum_rest_length_m": 0.009526765905320644,
+          "maximum_posed_length_m": 0.028420157730579376
+        },
+        "xslash": {
+          "frame": 55,
+          "p99": 1.5220065116882324,
+          "max": 3.3931307792663574,
+          "edges_above_threshold": 1,
+          "maximum_edge": 269528,
+          "maximum_edge_vertices": [
+            104658,
+            104665
+          ],
+          "maximum_rest_length_m": 0.0048040058463811874,
+          "maximum_posed_length_m": 0.016300620511174202
+        }
+      },
+      "bad_edges": 1,
+      "components": [
+        {
+          "vertices": 2,
+          "vertex_examples": [
+            104658,
+            104665
+          ]
+        }
+      ],
+      "changed_vertices": 2,
+      "maximum_component_vertices": 2
+    },
+    {
+      "iteration": 3,
+      "before": {
+        "idle_guard": {
+          "frame": 48,
+          "p99": 1.4017577171325684,
+          "max": 2.973306655883789,
+          "edges_above_threshold": 0,
+          "maximum_edge": 172730,
+          "maximum_edge_vertices": [
+            138744,
+            139252
+          ],
+          "maximum_rest_length_m": 0.012528951279819012,
+          "maximum_posed_length_m": 0.03725241497159004
+        },
+        "walk_stalk": {
+          "frame": 36,
+          "p99": 1.4360240697860718,
+          "max": 2.809981346130371,
+          "edges_above_threshold": 0,
+          "maximum_edge": 243239,
+          "maximum_edge_vertices": [
+            30793,
+            30902
+          ],
+          "maximum_rest_length_m": 0.00416040001437068,
+          "maximum_posed_length_m": 0.011690646409988403
+        },
+        "lunge_thrust": {
+          "frame": 40,
+          "p99": 1.4702235460281372,
+          "max": 2.997649908065796,
+          "edges_above_threshold": 0,
+          "maximum_edge": 302432,
+          "maximum_edge_vertices": [
+            137330,
+            137407
+          ],
+          "maximum_rest_length_m": 0.007426054682582617,
+          "maximum_posed_length_m": 0.02226071245968342
+        },
+        "rising_spin": {
+          "frame": 40,
+          "p99": 1.417526125907898,
+          "max": 2.9831905364990234,
+          "edges_above_threshold": 0,
+          "maximum_edge": 487246,
+          "maximum_edge_vertices": [
+            170117,
+            170214
+          ],
+          "maximum_rest_length_m": 0.009526765905320644,
+          "maximum_posed_length_m": 0.028420157730579376
+        },
+        "xslash": {
+          "frame": 55,
+          "p99": 1.5219906568527222,
+          "max": 2.9988298416137695,
+          "edges_above_threshold": 0,
+          "maximum_edge": 217695,
+          "maximum_edge_vertices": [
+            238297,
+            238349
+          ],
+          "maximum_rest_length_m": 0.009578374214470387,
+          "maximum_posed_length_m": 0.028723914176225662
+        }
+      },
+      "bad_edges": 0,
+      "components": []
+    }
+  ],
+  "unique_vertices_changed": 3,
+  "body_vertices": 251276,
+  "fraction_vertices_changed": 1.1939063022334007e-05,
+  "final": {
+    "idle_guard": {
+      "frame": 48,
+      "p99": 1.4017577171325684,
+      "max": 2.973306655883789,
+      "edges_above_threshold": 0,
+      "maximum_edge": 172730,
+      "maximum_edge_vertices": [
+        138744,
+        139252
+      ],
+      "maximum_rest_length_m": 0.012528951279819012,
+      "maximum_posed_length_m": 0.03725241497159004
+    },
+    "walk_stalk": {
+      "frame": 36,
+      "p99": 1.4360240697860718,
+      "max": 2.809981346130371,
+      "edges_above_threshold": 0,
+      "maximum_edge": 243239,
+      "maximum_edge_vertices": [
+        30793,
+        30902
+      ],
+      "maximum_rest_length_m": 0.00416040001437068,
+      "maximum_posed_length_m": 0.011690646409988403
+    },
+    "lunge_thrust": {
+      "frame": 40,
+      "p99": 1.4702235460281372,
+      "max": 2.997649908065796,
+      "edges_above_threshold": 0,
+      "maximum_edge": 302432,
+      "maximum_edge_vertices": [
+        137330,
+        137407
+      ],
+      "maximum_rest_length_m": 0.007426054682582617,
+      "maximum_posed_length_m": 0.02226071245968342
+    },
+    "rising_spin": {
+      "frame": 40,
+      "p99": 1.417526125907898,
+      "max": 2.9831905364990234,
+      "edges_above_threshold": 0,
+      "maximum_edge": 487246,
+      "maximum_edge_vertices": [
+        170117,
+        170214
+      ],
+      "maximum_rest_length_m": 0.009526765905320644,
+      "maximum_posed_length_m": 0.028420157730579376
+    },
+    "xslash": {
+      "frame": 55,
+      "p99": 1.5219906568527222,
+      "max": 2.9988298416137695,
+      "edges_above_threshold": 0,
+      "maximum_edge": 217695,
+      "maximum_edge_vertices": [
+        238297,
+        238349
+      ],
+      "maximum_rest_length_m": 0.009578374214470387,
+      "maximum_posed_length_m": 0.028723914176225662
+    }
+  },
+  "remaining_edges_above_3": 0,
+  "gate_pass": true
+}

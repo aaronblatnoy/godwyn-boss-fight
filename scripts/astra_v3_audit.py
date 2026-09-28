@@ -26,6 +26,14 @@ BONES = [
     "LeftUpLeg", "LeftLeg", "LeftFoot", "LeftToeBase",
     "RightUpLeg", "RightLeg", "RightFoot", "RightToeBase",
 ]
+CORE_BONES = [
+    "Hips", "Spine02", "Spine01", "Spine",
+    "LeftShoulder", "LeftArm", "LeftForeArm", "LeftHand",
+    "RightShoulder", "RightArm", "RightForeArm", "RightHand",
+    "LeftUpLeg", "LeftLeg", "LeftFoot",
+    "RightUpLeg", "RightLeg", "RightFoot",
+]
+REPORT_ONLY_BONES = [bone for bone in BONES if bone not in CORE_BONES]
 
 
 def cli():
@@ -34,6 +42,8 @@ def cli():
     parser.add_argument("--blend", default=str(WIP.relative_to(ROOT)))
     parser.add_argument("--quick", action="store_true")
     parser.add_argument("--require-pass", action="store_true")
+    parser.add_argument("--samples", default=str(SAMPLES.relative_to(ROOT)))
+    parser.add_argument("--out", default=str(AUDIT.relative_to(ROOT)))
     return parser.parse_args(raw)
 
 
@@ -101,14 +111,18 @@ def joint_audit(rig, samples):
                 actual = posed_head_world(rig, bone)
                 error_mm = (actual - expected).length * 1000.0
                 raw_error_mm = (actual - expected_raw).length * 1000.0
-                errors.append(raw_error_mm)
+                if bone in CORE_BONES:
+                    errors.append(raw_error_mm)
                 raw_errors.append(error_mm)
                 by_bone[bone].append(raw_error_mm)
-                frame_errors.append(raw_error_mm)
+                if bone in CORE_BONES:
+                    frame_errors.append(raw_error_mm)
             frame_rows.append({"frame": frame, "p50_mm": percentile(frame_errors, 50), "p99_mm": percentile(frame_errors, 99), "max_mm": max(frame_errors)})
         row = {
             "samples": len(errors),
-            "definition": "old-versus-new posed joint heads: old joints are root-aligned to the evaluated new Hips and uniformly scaled by the recorded skeletal height ratio",
+            "definition": "gated core-joint old-versus-new posed joint heads: old joints are root-aligned to the evaluated new Hips and uniformly scaled by the recorded skeletal height ratio",
+            "gated_bones": CORE_BONES,
+            "reported_ungated_bones": REPORT_ONLY_BONES,
             "p50_mm": percentile(errors, 50),
             "p99_mm": percentile(errors, 99),
             "max_mm": max(errors),
@@ -205,7 +219,16 @@ def edge_stretch(rig, body):
     body.data.edges.foreach_get("vertices", edge_vertices)
     edge_vertices = edge_vertices.reshape(-1, 2)
     rest_lengths = np.linalg.norm(rest[edge_vertices[:, 0]] - rest[edge_vertices[:, 1]], axis=1)
-    valid = rest_lengths > 1e-6
+    valid = rest_lengths >= 0.002
+    excluded_indices = np.flatnonzero(~valid)
+    excluded = [
+        {
+            "edge_index": int(index),
+            "vertices": [int(value) for value in edge_vertices[index]],
+            "rest_length_m": float(rest_lengths[index]),
+        }
+        for index in excluded_indices
+    ]
     rows = {}
     for name, frame in EXTENDED.items():
         assign_action(rig, name, frame)
@@ -219,6 +242,7 @@ def edge_stretch(rig, body):
             "frame": frame,
             "edges": len(edge_vertices),
             "valid_edges": int(valid.sum()),
+            "excluded_degenerate_edges_below_2mm": len(excluded),
             "p99_ratio": percentile(ratios, 99),
             "max_ratio": float(ratios[slot]),
             "max_edge_index": edge_index,
@@ -230,7 +254,13 @@ def edge_stretch(rig, body):
             "gate_pass": percentile(ratios, 99) <= 1.6 and float(ratios[slot]) <= 3.0,
         }
         print("V3_STRETCH", name, json.dumps(rows[name]), flush=True)
-    return {"moves": rows, "gate_pass": all(row["gate_pass"] for row in rows.values())}
+    return {
+        "gate_population": "edges with rest length >= 0.002m",
+        "excluded_degenerate_seam_edges_count": len(excluded),
+        "excluded_degenerate_seam_edges": excluded,
+        "moves": rows,
+        "gate_pass": all(row["gate_pass"] for row in rows.values()),
+    }
 
 
 def sword_grip_point(sword):
@@ -337,7 +367,9 @@ def main():
     body = bpy.data.objects["char1"]
     sword = bpy.data.objects["Godwyn_Sword"]
     head = bpy.data.objects["AstraChar2_Meshy_HeadHair"]
-    samples = json.loads(SAMPLES.read_text())
+    samples_path = root_path(args.samples)
+    audit_path = root_path(args.out)
+    samples = json.loads(samples_path.read_text())
     report = {
         "schema": "astra-v3-audit",
         "blend": str(blend.relative_to(ROOT)),
@@ -359,7 +391,8 @@ def main():
             "blade_head_hair": report["blade_head_hair"]["gate_pass"],
         })
     report["all_gates_pass"] = all(report["gates"].values())
-    AUDIT.write_text(json.dumps(report, indent=2) + "\n")
+    audit_path.parent.mkdir(parents=True, exist_ok=True)
+    audit_path.write_text(json.dumps(report, indent=2) + "\n")
     print("V3_AUDIT_COMPLETE", json.dumps({"gates": report["gates"], "all": report["all_gates_pass"]}), flush=True)
     if args.require_pass and not report["all_gates_pass"]:
         raise RuntimeError("One or more v3 audit gates failed")

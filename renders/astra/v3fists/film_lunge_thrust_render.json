@@ -1,0 +1,13 @@
+{
+  "mode": "film",
+  "move": "lunge_thrust",
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    768,
+    768
+  ],
+  "fps": 30,
+  "frames": 64,
+  "camera": "three-quarter root-follow in XY; vertical motion remains visible",
+  "frame_directory": "renders/astra/v3fists/lunge_thrust_frames"
+}

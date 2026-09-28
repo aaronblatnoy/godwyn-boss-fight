@@ -104,7 +104,9 @@ def cli():
     raw = sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else []
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", default=str(DEFAULT_RIGGED.relative_to(ROOT)))
+    parser.add_argument("--source-pbr", default=str(SOURCE_PBR.relative_to(ROOT)))
     parser.add_argument("--out", default=str(WIP.relative_to(ROOT)))
+    parser.add_argument("--prefix", default="meshy_v3")
     return parser.parse_args(raw)
 
 
@@ -178,10 +180,10 @@ def import_rigged(path):
     return arm, body
 
 
-def import_source_pbr(target_material):
+def import_source_pbr(target_material, source_path):
     before_objects = set(bpy.data.objects)
     before_materials = set(bpy.data.materials)
-    bpy.ops.import_scene.gltf(filepath=str(SOURCE_PBR))
+    bpy.ops.import_scene.gltf(filepath=str(source_path))
     imported = [ob for ob in bpy.data.objects if ob not in before_objects and ob.type == "MESH"]
     assert len(imported) == 1
     source_object = imported[0]
@@ -273,14 +275,41 @@ def segment_body(body, base_image, orm_image):
     base_array = image_array(base_image)
     orm_array = image_array(orm_image)
     rows = face_samples(body, base_array, orm_array)
+    # Measure the lowest interior collar ring from plate-classified high-torso
+    # faces.  This becomes the removal floor; plate faces are never deleted.
+    collar_rows = [
+        row for row in rows
+        if row["plate"] and 2.48 <= row["center"].z <= 2.82
+        and abs(row["center"].x) <= 0.48 and -0.58 <= row["center"].y <= 0.22
+    ]
+    assert collar_rows, "Could not measure the plate-classified collar ring"
+    collar_floor_z = min(min(point.z for point in row["coords"]) for row in collar_rows)
     keep = []
     removed = defaultdict(int)
     removed_head_vertices = set()
+    group_names = {group.index: group.name for group in body.vertex_groups}
+    head_neck_bones = {"neck", "Head", "head_end", "headfront"}
     for row in rows:
-        above = max(point.z for point in row["coords"]) > SEAM_Z
-        keep_gorget = row["plate"] and row["center"].z <= GORGET_MAX_Z and abs(row["center"].x) <= 0.40
-        if above and not keep_gorget:
-            removed["non_plate_head_neck_faces"] += 1
+        above = max(point.z for point in row["coords"]) > collar_floor_z
+        poly = body.data.polygons[row["poly"]]
+        head_neck_weight = float(np.mean([
+            sum(item.weight for item in body.data.vertices[index].groups if group_names.get(item.group) in head_neck_bones)
+            for index in poly.vertices
+        ]))
+        row["head_neck_weight"] = head_neck_weight
+        if above and not row["plate"] and head_neck_weight >= 0.25:
+            base = row["base"]
+            orm = row["orm"]
+            if row["blue"]:
+                face_class = "lining"
+            elif (row["center"].z >= HAIR["min_world_z"] and orm[2] < PLATE_METALLIC_MIN
+                  and base[0] >= HAIR["base_r_min"] and base[1] >= HAIR["base_g_min"]
+                  and base[0] - base[2] >= HAIR["r_minus_b_min"]
+                  and base[1] - base[2] >= HAIR["g_minus_b_min"]):
+                face_class = "hair"
+            else:
+                face_class = "skin"
+            removed[f"{face_class}_faces_above_collar_floor"] += 1
             removed_head_vertices.update(body.data.polygons[row["poly"]].vertices)
         else:
             keep.append(row)
@@ -314,6 +343,7 @@ def segment_body(body, base_image, orm_image):
         components[root].append(row)
         component_vertices[root].update(poly.vertices)
     rejected_faces = {row["poly"] for row in rows if row["poly"] not in kept_face_indices}
+    assert not any(row["plate"] and row["poly"] in rejected_faces for row in rows), "Plate face selected for deletion"
     component_report = []
     for root, members in components.items():
         vertices = component_vertices[root]
@@ -334,7 +364,7 @@ def segment_body(body, base_image, orm_image):
         # weighted islands.  Removing components merely because they are small
         # would destroy the body.  Only the color-classified source-hair
         # islands are removed below the neck plane.
-        if hair_colored:
+        if hair_colored and not any(row["plate"] for row in members):
             rejected_faces.update(row["poly"] for row in members)
             removed["hair_component_faces"] += len(members)
         component_report.append({
@@ -375,7 +405,6 @@ def segment_body(body, base_image, orm_image):
             plate_attr.data[loop_index].color = (plate, plate, plate, 1.0)
             cloth_attr.data[loop_index].color = (cloth, cloth, cloth, 1.0)
 
-    group_names = {group.index: group.name for group in body.vertex_groups}
     unweighted = 0
     bad_sums = 0
     maximum_sum_error = 0.0
@@ -402,6 +431,17 @@ def segment_body(body, base_image, orm_image):
         "before": before,
         "after": after,
         "removed": dict(removed),
+        "removed_faces_by_class": {
+            "skin": int(removed.get("skin_faces_above_collar_floor", 0)),
+            "hair": int(removed.get("hair_faces_above_collar_floor", 0) + removed.get("hair_component_faces", 0)),
+            "lining": int(removed.get("lining_faces_above_collar_floor", 0)),
+            "plate": 0,
+        },
+        "collar_measurement": {
+            "classified_faces": len(collar_rows),
+            "interior_floor_z_m": float(collar_floor_z),
+            "selection": "plate-classified face centers z[2.48,2.82]m, |x|<=0.48m, y[-0.58,0.22]m; minimum vertex z",
+        },
         "rejected_faces": len(rejected_faces),
         "components": sorted(component_report, key=lambda row: row["vertices"], reverse=True),
         "plate_faces": sum(row["plate"] for row in final_rows),
@@ -413,12 +453,38 @@ def segment_body(body, base_image, orm_image):
         },
         "removed_head_measurements": head_measure,
         "method": {
-            "head": f"remove non-plate faces crossing z={SEAM_Z} m",
-            "gorget_exception": f"retain classified plate faces through z={GORGET_MAX_Z} m inside |x|<=0.40 m",
+            "head": "remove only non-plate skin/hair/lining faces crossing the measured collar interior floor",
+            "head_neck_scope": "face mean weight >= 0.25 across neck/Head/head_end/headfront; shoulder and torso cloth are retained",
+            "plate_invariant": "no plate-classified face is ever selected for deletion",
             "small_components": "retained because the auto-rigged mesh is delivered as many weighted islands",
             "hair_color_rule": HAIR,
             "topology": "bmesh face/unused-vertex deletion; no merge-by-distance and no decimation",
         },
+    }
+
+
+def skin_mask_snapshot(head):
+    attribute = head.data.color_attributes.get("meshy_skin_mask")
+    assert attribute is not None, "Approved head lost meshy_skin_mask"
+    masked = set()
+    for poly in head.data.polygons:
+        for loop_index in poly.loop_indices:
+            if float(attribute.data[loop_index].color[0]) >= 0.5:
+                masked.add(head.data.loops[loop_index].vertex_index)
+    material = head.data.materials[0]
+    images = [node.image for node in material.node_tree.nodes if node.type == "TEX_IMAGE" and node.image]
+    base = next((image for image in images if image.colorspace_settings.name == "sRGB"), None)
+    assert base is not None
+    pixels = np.empty(len(base.pixels), dtype=np.float32)
+    base.pixels.foreach_get(pixels)
+    return {
+        "attribute": attribute.name,
+        "domain": attribute.domain,
+        "masked_vertices": len(masked),
+        "material": material.name,
+        "base_color_image": base.name,
+        "base_color_pixel_sha256": hashlib.sha256(pixels.tobytes()).hexdigest(),
+        "base_color_size": list(base.size),
     }
 
 
@@ -1042,16 +1108,17 @@ def main():
     args = cli()
     OUT.mkdir(parents=True, exist_ok=True)
     rigged = root_path(args.input)
+    source_pbr = root_path(args.source_pbr)
     wip = root_path(args.out)
     protected_before = {str(path.relative_to(ROOT)): sha256(path) for path in PROTECTED}
     input_hashes = {
         str(path.relative_to(ROOT)): sha256(path)
-        for path in [rigged, SOURCE_PBR, PARTS_BLEND] + [item["source"] for item in MOVES.values()]
+        for path in [rigged, source_pbr, PARTS_BLEND] + [item["source"] for item in MOVES.values()]
     }
     target, body = import_rigged(rigged)
     original_bounds = world_bounds(body)
     material = body.data.materials[0]
-    images = import_source_pbr(material)
+    images = import_source_pbr(material, source_pbr)
     segmentation = segment_body(body, images["base"], images["orm"])
     assert segmentation["weights"]["unweighted_vertices"] == 0
     assert segmentation["weights"]["bad_weight_sum_vertices"] == 0
@@ -1061,8 +1128,19 @@ def main():
     head.name = "AstraChar2_Meshy_HeadHair"
     neck.name = "AstraChar2_Meshy_NeckBlend"
     sword.name = "Godwyn_Sword"
+    skin_mask_before = skin_mask_snapshot(head)
     head_fit = fit_head_and_neck(head, neck, segmentation["removed_head_measurements"])
-    neckline = fix_neckline_texture(head, head_fit["fitted_eye_line_z_m"])
+    skin_mask_after = skin_mask_snapshot(head)
+    assert skin_mask_before == skin_mask_after, (skin_mask_before, skin_mask_after)
+    neckline = {
+        "reverted": True,
+        "method": "untouched skin_i01 material and original base-color image appended fresh from astra_character_v2_skin_i01.blend",
+        "edited_texels": 0,
+        "before": skin_mask_before,
+        "after": skin_mask_after,
+        "mask_count_unchanged": skin_mask_before["masked_vertices"] == skin_mask_after["masked_vertices"],
+        "base_color_hash_unchanged": skin_mask_before["base_color_pixel_sha256"] == skin_mask_after["base_color_pixel_sha256"],
+    }
     bind_rigid(head, target, "Head", "Astra V3 rigid Head binding")
     bind_neck(neck, target)
     sword_report = attach_sword(sword, old_arm, target)
@@ -1116,8 +1194,8 @@ def main():
         "method": "per-frame old-rig posed joint heads; parent-forward direction FK using each target bone's actual rest joint-to-child axis; then non-root pose locations solve each mapped joint head to the source-aligned position; root anatomical-frame delta and scaled translation (glTF synthetic tails are not used as joint axes)",
         "moves": {name: {"frames": spec["frames"], "fps": 30, "loop": spec["loop"]} for name, spec in MOVES.items()},
     }
-    (OUT / "meshy_v3_bone_mapping.json").write_text(json.dumps(mapping, indent=2) + "\n")
-    (OUT / "meshy_v3_retarget_samples.json").write_text(json.dumps(samples, indent=2) + "\n")
+    (OUT / f"{args.prefix}_bone_mapping.json").write_text(json.dumps(mapping, indent=2) + "\n")
+    (OUT / f"{args.prefix}_retarget_samples.json").write_text(json.dumps(samples, indent=2) + "\n")
     bpy.context.preferences.filepaths.save_version = 0
     bpy.ops.wm.save_as_mainfile(filepath=str(wip))
     protected_after = {str(path.relative_to(ROOT)): sha256(path) for path in PROTECTED}
@@ -1154,7 +1232,7 @@ def main():
         "wip_sha256": sha256(wip),
         "wip_bytes": wip.stat().st_size,
     }
-    (OUT / "meshy_v3_build.json").write_text(json.dumps(report, indent=2) + "\n")
+    (OUT / f"{args.prefix}_build.json").write_text(json.dumps(report, indent=2) + "\n")
     print("V3_BUILD_PASS", json.dumps({
         "wip": report["wip"],
         "bytes": report["wip_bytes"],
