@@ -130,3 +130,64 @@ var roll_iframe_end_t: float:
 @export var camera_pullback_distance: float = 8.0 # SPEC.txt Section 4, Dynamic Pullback
 @export var camera_pullback_in_time: float = 0.3 # SPEC.txt Section 4
 @export var camera_pullback_return_time: float = 0.5 # SPEC.txt Section 4
+
+# --- UI (SPEC Section 14) ---
+@export var ui_player_left_margin: float = 40.0 # SPEC.txt Section 14, pixels
+@export var ui_player_hp_bottom_offset: float = 80.0 # SPEC.txt Section 14, pixels
+@export var ui_player_hp_size: Vector2 = Vector2(280.0, 14.0) # SPEC.txt Section 14, pixels
+@export var ui_player_hp_color: Color = Color("c00000") # SPEC.txt Section 14
+@export var ui_player_hp_border_color: Color = Color("000000") # SPEC.txt Section 14
+@export var ui_player_hp_background_color: Color = Color("1a0000") # SPEC.txt Section 14
+@export var ui_player_fp_gap: float = 8.0 # SPEC.txt Section 14, pixels below HP
+@export var ui_player_fp_size: Vector2 = Vector2(200.0, 10.0) # SPEC.txt Section 14, pixels
+@export var ui_player_fp_color: Color = Color("0050a0") # SPEC.txt Section 14
+@export var ui_player_stamina_gap: float = 8.0 # SPEC.txt Section 14, pixels below FP
+@export var ui_player_stamina_size: Vector2 = Vector2(240.0, 10.0) # SPEC.txt Section 14, pixels
+@export var ui_player_stamina_color: Color = Color("7a9a20") # SPEC.txt Section 14
+@export var ui_player_flask_gap: float = 12.0 # SPEC.txt Section 14, pixels below stamina
+@export var ui_boss_bottom_offset: float = 40.0 # SPEC.txt Section 14, pixels
+@export var ui_boss_hp_size: Vector2 = Vector2(600.0, 14.0) # SPEC.txt Section 14, pixels
+@export var ui_boss_hp_color: Color = Color("c00000") # SPEC.txt Section 14
+@export var ui_boss_name_delay: float = 0.5 # SPEC.txt Section 14, seconds
+@export var ui_boss_name_fade_duration: float = 0.6 # SPEC.txt Section 14, seconds
+@export var ui_boss_name_line_1_size: int = 28 # SPEC.txt Section 14, points
+@export var ui_boss_name_line_2_size: int = 16 # SPEC.txt Section 14, points
+# SPEC.txt Section 14 says "white with gold tint" but does not specify an exact hex; interpreted placeholder pending design review.
+@export var ui_boss_name_line_1_color: Color = Color("fdebc8")
+# SPEC.txt Section 14 says "italic" but gives no numeric shear; placeholder pending design review.
+@export var ui_boss_name_line_2_italic_shear: float = 0.18
+# SPEC.txt Section 14 says "slightly letter-spaced" but gives no exact pixel spacing; placeholder pending design review.
+@export var ui_boss_name_line_2_glyph_spacing: int = 1
+# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar size; placeholder pending Phase 8 confirmation.
+@export var ui_dragon_hp_size: Vector2 = Vector2(400.0, 8.0)
+# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar offset; placeholder pending Phase 8 confirmation.
+@export var ui_dragon_hp_bottom_offset: float = 122.0
+# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar color; placeholder pending Phase 8 confirmation.
+@export var ui_dragon_hp_color: Color = Color("70b7a8")
+# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar background color; placeholder pending Phase 8 confirmation.
+@export var ui_dragon_hp_background_color: Color = Color("102624")
+@export var ui_death_text_color: Color = Color("c8986e") # SPEC.txt Section 14
+
+# --- BOSS AI (Phase 5) ---
+@export var boss_perception_close_range: float = 4.0 # SPEC.txt Section 6, "Close (< 4m)"
+@export var boss_perception_mid_range: float = 10.0 # SPEC.txt Section 6, "Mid (4-10m)" upper bound
+@export var boss_max_stillness_seconds: float = 1.5 # SPEC.txt Section 6, "never stays still for more than 1.5s except during THE PAUSE"
+@export var boss_pause_duration_min: float = 3.0 # SPEC.txt Section 7, THE PAUSE: "Duration: 3.0-5.0s randomized"
+@export var boss_pause_duration_max: float = 5.0 # SPEC.txt Section 7, THE PAUSE
+@export var boss_pause_counter_delay: float = 0.12 # SPEC.txt Section 7, THE PAUSE: "He steps offline at 0.12s after input"
+@export var boss_pause_cooldown: float = 15.0 # SPEC.txt Section 7, THE PAUSE: "The Pause cooldown: 15.0s"
+# SPEC.txt Section 7, THE PAUSE: "Jump lunge weighted +30%"; interpreted as multiplicative (weight *= 1 + bonus) because SPEC gives no formula.
+@export var boss_pause_wait_jump_lunge_bonus: float = 0.30
+# PLACEHOLDER -- SPEC.txt Section 6 says only "closes distance gradually"; below player_walk_speed (3.5) to keep pursuit deliberate. Replace when real timing data lands.
+@export var boss_pursuit_speed: float = 2.5
+# PLACEHOLDER -- SPEC.txt Section 6 says only "circles the player slowly"; 3.0 keeps the orbital component faster than the gradual 2.5 m/s closing component. Replace when real timing data lands.
+@export var boss_circle_speed: float = 3.0
+# PLACEHOLDER -- SPEC.txt Section 7 says only "steps offline"; 1.5 meters makes the counter reposition measurable without leaving the 20m arena. Replace when real timing data lands.
+@export var boss_pause_counter_step_distance: float = 1.5
+@export var boss_memory_fragment_threshold_75: float = 0.75 # SPEC.txt lines 634-650, MEMORY FRAGMENT: 75% HP threshold
+@export var boss_memory_fragment_threshold_50: float = 0.50 # SPEC.txt lines 634-650, MEMORY FRAGMENT: 50% HP threshold
+@export var boss_memory_fragment_threshold_25: float = 0.25 # SPEC.txt lines 634-650, MEMORY FRAGMENT: 25% HP threshold
+@export var boss_memory_fragment_duration: float = 10.0 # SPEC.txt lines 634-650, MEMORY FRAGMENT: 10.0s duration
+@export var boss_memory_fragment_damage_multiplier: float = 1.25 # SPEC.txt lines 634-650, MEMORY FRAGMENT: all damage +25%
+@export var boss_memory_fragment_move_speed_multiplier: float = 1.12 # SPEC.txt lines 634-650, MEMORY FRAGMENT: move speed +12%
+@export var boss_memory_fragment_transition_time_multiplier: float = 0.85 # SPEC.txt lines 634-650, MEMORY FRAGMENT: transition time between cycles -15%

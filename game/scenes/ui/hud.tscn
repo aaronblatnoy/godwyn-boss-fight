@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/hud.gd" id="1_hud"]
+
+[sub_resource type="StyleBoxFlat" id="StyleHPBackground"]
+bg_color = Color(0.101961, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleHPFill"]
+bg_color = Color(0.752941, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBarBackground"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleFPFill"]
+bg_color = Color(0, 0.313726, 0.627451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleStaminaFill"]
+bg_color = Color(0.478431, 0.603922, 0.12549, 1)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_hud")
+
+[node name="HPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -94.0
+offset_right = 320.0
+offset_bottom = -80.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleHPBackground")
+theme_override_styles/fill = SubResource("StyleHPFill")
+show_percentage = false
+
+[node name="FPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -72.0
+offset_right = 240.0
+offset_bottom = -62.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBarBackground")
+theme_override_styles/fill = SubResource("StyleFPFill")
+show_percentage = false
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -54.0
+offset_right = 280.0
+offset_bottom = -44.0
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBarBackground")
+theme_override_styles/fill = SubResource("StyleStaminaFill")
+show_percentage = false
+
+[node name="FlaskDisplay" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 40.0
+offset_top = -32.0
+offset_right = 82.0
+offset_bottom = -9.0
+grow_vertical = 0
+
+[node name="FlaskIcon" type="Label" parent="FlaskDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "FLASK"
+
+[node name="FlaskCount" type="Label" parent="FlaskDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "5"

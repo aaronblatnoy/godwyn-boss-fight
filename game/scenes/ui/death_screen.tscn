@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/death_screen.gd" id="1_death"]
+
+[node name="DeathScreen" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_death")
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DeathLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.784314, 0.596078, 0.431373, 1)
+theme_override_font_sizes/font_size = 64
+text = "YOU DIED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeathDelay" type="Timer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+wait_time = 0.8
+one_shot = true
+ignore_time_scale = true
+
+[node name="HoldTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+wait_time = 2.5
+one_shot = true
+ignore_time_scale = true

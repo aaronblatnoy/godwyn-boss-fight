@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/boss_healthbar.gd" id="1_boss"]
+[ext_resource type="PackedScene" path="res://scenes/ui/dragon_healthbar.tscn" id="2_dragon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBossBackground"]
+bg_color = Color(0.101961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBossFill"]
+bg_color = Color(0.752941, 0, 0, 1)
+
+[node name="BossHealthbar" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_boss")
+
+[node name="NameCard" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -114.0
+offset_right = 300.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="BossName" type="Label" parent="NameCard"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "GODWYN THE GOLDEN"
+horizontal_alignment = 1
+
+[node name="BossTitle" type="Label" parent="NameCard"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Prince of Gold"
+horizontal_alignment = 1
+
+[node name="BossHPBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -54.0
+offset_right = 300.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBossBackground")
+theme_override_styles/fill = SubResource("StyleBossFill")
+show_percentage = false
+
+[node name="DragonHealthbar" parent="." instance=ExtResource("2_dragon")]
+unique_name_in_owner = true
+
+[node name="IntroDelay" type="Timer" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+wait_time = 0.5
+one_shot = true
+ignore_time_scale = true
