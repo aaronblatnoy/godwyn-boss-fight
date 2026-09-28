@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/systems/hit_resolver.gd" id="1_resolver"]
+[ext_resource type="Script" path="res://scripts/systems/hitstop.gd" id="2_hitstop"]
+[ext_resource type="Script" path="res://scripts/systems/hitbox.gd" id="3_hitbox"]
+[ext_resource type="Script" path="res://scripts/systems/hurtbox.gd" id="4_hurtbox"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dummy"]
+
+[node name="CombatCoreTest" type="Node3D"]
+
+[node name="HitResolver" type="Node" parent="."]
+script = ExtResource("1_resolver")
+
+[node name="Hitstop" type="Node" parent="."]
+script = ExtResource("2_hitstop")
+hit_resolver_path = NodePath("../HitResolver")
+
+[node name="PlayerDummy" type="Node3D" parent="."]
+
+[node name="Hitbox" type="Area3D" parent="PlayerDummy"]
+script = ExtResource("3_hitbox")
+owner_faction = "player"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDummy/Hitbox"]
+shape = SubResource("CapsuleShape3D_dummy")
+
+[node name="Hurtbox" type="Area3D" parent="PlayerDummy"]
+script = ExtResource("4_hurtbox")
+faction = "player"
+hit_resolver_path = NodePath("../../HitResolver")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDummy/Hurtbox"]
+shape = SubResource("CapsuleShape3D_dummy")
+
+[node name="BossDummy" type="Node3D" parent="."]
+
+[node name="Hitbox" type="Area3D" parent="BossDummy"]
+script = ExtResource("3_hitbox")
+owner_faction = "boss"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossDummy/Hitbox"]
+shape = SubResource("CapsuleShape3D_dummy")
+
+[node name="Hurtbox" type="Area3D" parent="BossDummy"]
+script = ExtResource("4_hurtbox")
+faction = "boss"
+hit_resolver_path = NodePath("../../HitResolver")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BossDummy/Hurtbox"]
+shape = SubResource("CapsuleShape3D_dummy")
