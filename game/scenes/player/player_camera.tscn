@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/player/player_camera.gd" id="1_camera"]
+[ext_resource type="Script" path="res://scripts/player/lock_on.gd" id="2_lockon"]
+
+[node name="PlayerCamera" type="Node3D"]
+script = ExtResource("1_camera")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+collision_mask = 33
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+current = true
+
+[node name="LockOn" type="Node" parent="."]
+script = ExtResource("2_lockon")

@@ -116,3 +116,17 @@ var roll_iframe_end_t: float:
 
 # --- ARENA ---
 @export var arena_boundary_radius: float = 20.0 # SPEC.txt Section 5, Arena Playable radius: 20 meters / Boundary
+
+# --- CAMERA ---
+@export var camera_default_distance: float = 2.5 # SPEC.txt Section 4, meters behind player
+@export var camera_default_height: float = 1.4 # SPEC.txt Section 4, meters above player
+@export var camera_default_fov: float = 75.0 # SPEC.txt Section 4, degrees
+@export var camera_pitch_clamp_min_degrees: float = -60.0 # SPEC.txt Section 4
+@export var camera_pitch_clamp_max_degrees: float = 80.0 # SPEC.txt Section 4
+@export var camera_lockon_fov: float = 72.0 # SPEC.txt Section 4, degrees
+@export var camera_lockon_distance_min: float = 3.0 # SPEC.txt Section 4, meters
+@export var camera_lockon_distance_max: float = 8.0 # SPEC.txt Section 4, meters
+@export var camera_lockon_position_lerp: float = 6.0 # SPEC.txt Section 4 (distinct from the existing lockon_camera_lerp=8.0, which is the rotation lerp from SPEC Section 3)
+@export var camera_pullback_distance: float = 8.0 # SPEC.txt Section 4, Dynamic Pullback
+@export var camera_pullback_in_time: float = 0.3 # SPEC.txt Section 4
+@export var camera_pullback_return_time: float = 0.5 # SPEC.txt Section 4
