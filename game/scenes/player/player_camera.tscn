@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/player_camera.gd" id="1_camera"]
 [ext_resource type="Script" path="res://scripts/player/lock_on.gd" id="2_lockon"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lockon_acquisition"]
+radius = 25.0
 
 [node name="PlayerCamera" type="Node3D"]
 script = ExtResource("1_camera")
@@ -12,5 +15,14 @@ collision_mask = 33
 [node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
 current = true
 
-[node name="LockOn" type="Node" parent="."]
+[node name="LockOn" type="Node3D" parent="."]
 script = ExtResource("2_lockon")
+
+[node name="AcquisitionArea" type="Area3D" parent="LockOn"]
+top_level = true
+collision_layer = 0
+collision_mask = 256
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LockOn/AcquisitionArea"]
+shape = SubResource("SphereShape3D_lockon_acquisition")

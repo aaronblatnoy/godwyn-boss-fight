@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="1_player"]
 [ext_resource type="PackedScene" path="res://scenes/player/player_camera.tscn" id="2_camera"]
@@ -8,6 +8,9 @@ size = Vector3(50, 0.5, 50)
 
 [sub_resource type="BoxMesh" id="BoxMesh_floor"]
 size = Vector3(50, 0.5, 50)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_lockon_marker"]
+radius = 0.5
 
 [node name="CameraLockOnTest" type="Node3D"]
 
@@ -29,5 +32,23 @@ mesh = SubResource("BoxMesh_floor")
 [node name="TargetLeft" type="Node3D" parent="." groups=["lockon_target"]]
 position = Vector3(-4, 0, -40)
 
+[node name="LockOnMarker" type="Area3D" parent="TargetLeft"]
+collision_layer = 256
+collision_mask = 0
+monitoring = false
+monitorable = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetLeft/LockOnMarker"]
+shape = SubResource("SphereShape3D_lockon_marker")
+
 [node name="TargetRight" type="Node3D" parent="." groups=["lockon_target"]]
 position = Vector3(4, 0, -42)
+
+[node name="LockOnMarker" type="Area3D" parent="TargetRight"]
+collision_layer = 256
+collision_mask = 0
+monitoring = false
+monitorable = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TargetRight/LockOnMarker"]
+shape = SubResource("SphereShape3D_lockon_marker")

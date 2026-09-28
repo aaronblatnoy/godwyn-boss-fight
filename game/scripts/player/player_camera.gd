@@ -3,10 +3,6 @@ extends Node3D
 
 
 const TunablesScript := preload("res://scripts/systems/tunables.gd")
-# SPEC defines the composition but not its exact aim weights. These implementation-detail
-# fractions bias the focal point toward the boss and offset the player toward lower-left.
-const LOCK_FOCUS_TARGET_WEIGHT := 0.68
-const LOCK_PLAYER_SCREEN_OFFSET_RATIO := 0.12
 
 var tunables := TunablesScript.new()
 var _follow_target: Node3D
@@ -65,6 +61,8 @@ func set_follow_target(target: Node3D) -> void:
 
 
 func pull_back(distance: float, in_time: float, source: String) -> void:
+	if source.is_empty():
+		return
 	_pullback_source = source
 	_pullback_active = true
 	if _pullback_tween != null:
@@ -76,8 +74,8 @@ func pull_back(distance: float, in_time: float, source: String) -> void:
 	_pullback_tween.tween_property(self, "_pullback_distance", distance, in_time)
 
 
-func release_pull_back(source: String = "") -> void:
-	if not _pullback_active or (not source.is_empty() and source != _pullback_source):
+func release_pull_back(source: String) -> void:
+	if not _pullback_active or source.is_empty() or source != _pullback_source:
 		return
 	_pullback_active = false
 	_pullback_source = ""
@@ -107,10 +105,19 @@ func _process_lock_on(delta: float, target: Node3D) -> void:
 	var flat_to_target := target.global_position - _follow_target.global_position
 	flat_to_target.y = 0.0
 	var screen_right := flat_to_target.normalized().cross(Vector3.UP)
-	var composition_offset := screen_right * _normal_orbit_distance() * LOCK_PLAYER_SCREEN_OFFSET_RATIO
+	var composition_offset := (
+		screen_right
+		* _normal_orbit_distance()
+		* tunables.camera_lockon_player_screen_offset_ratio
+	)
 	global_position = global_position.lerp(player_anchor + composition_offset, position_weight)
 
-	var focus := player_anchor.lerp(target_anchor, LOCK_FOCUS_TARGET_WEIGHT)
+	# Aim between the player's ground anchor and the boss's upper anchor so the
+	# player composes low while the boss composes high.
+	var focus := _follow_target.global_position.lerp(
+		target_anchor,
+		tunables.camera_lockon_focus_target_weight
+	)
 	var look_direction := focus - global_position
 	if not look_direction.is_zero_approx():
 		var desired_basis := Basis.looking_at(look_direction.normalized(), Vector3.UP)
