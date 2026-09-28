@@ -104,13 +104,37 @@ var roll_iframe_end_t: float:
 @export var lightning_mid_melee_warning: float = 0.25 # SPEC.txt Section 7B, seconds
 @export var lightning_stationary_trigger_time: float = 0.5 # SPEC.txt Section 7B, seconds
 @export var lightning_horizontal_sweep_tell: float = 0.5 # SPEC.txt Section 7B, seconds
+# PLACEHOLDER -- SPEC.txt Section 7B (HORIZONTAL LIGHTNING SWEEP) gives no line count; flagged, not invented as SPEC fact.
+@export var lightning_horizontal_sweep_line_count: int = 4
+# PLACEHOLDER -- SPEC.txt Section 7B (HORIZONTAL LIGHTNING SWEEP) gives no line thickness; flagged, not invented as SPEC fact.
+@export var lightning_horizontal_sweep_line_thickness: float = 1.0
+# PLACEHOLDER -- SPEC.txt Section 7B (HORIZONTAL LIGHTNING SWEEP) gives no gap width; 5m comfortably exceeds roll_distance (3.5m), matching the stated dodge-through-gap counter-play, and is not a SPEC fact.
+@export var lightning_horizontal_sweep_gap_width: float = 5.0
+# PLACEHOLDER -- SPEC.txt Section 7B (HORIZONTAL LIGHTNING SWEEP) gives no sweep duration; flagged, not invented as SPEC fact.
+@export var lightning_horizontal_sweep_duration: float = 3.0
 @export var lightning_shrinking_circle_warning: float = 0.8 # SPEC.txt Section 7B, seconds
 @export var lightning_shrinking_circle_hold: float = 2.0 # SPEC.txt Section 7B, seconds
 @export var lightning_shrinking_circle_start_radius: float = 15.0 # SPEC.txt Section 7B, approximate (~) meters
 @export var lightning_shrinking_circle_end_radius: float = 4.0 # SPEC.txt Section 7B, approximate (~) meters
 @export var lightning_shrinking_circle_contraction_speed: float = 1.5 # SPEC.txt Section 7B, approximate (~) meters/second
 @export var lightning_shrinking_circle_contraction_duration: float = 7.0 # SPEC.txt Section 7B, approximate (~) seconds
+# PLACEHOLDER -- SPEC.txt Section 7B (SHRINKING CIRCLE) gives no ring thickness; flagged, not invented as SPEC fact.
+@export var lightning_shrinking_circle_ring_thickness: float = 1.0
+# PLACEHOLDER -- SPEC.txt Section 7B (SHRINKING CIRCLE) gives no segment count; flagged, not invented as SPEC fact.
+@export var lightning_shrinking_circle_ring_segment_count: int = 24
 @export var lightning_dragons_charge_fire_line_width: float = 4.0 # SPEC.txt Section 7B, approximate (~) meters
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no shove knockback; flagged, not invented as SPEC fact.
+@export var lightning_dragons_charge_shove_knockback: float = 14.0
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no shove radius; flagged, not invented as SPEC fact.
+@export var lightning_dragons_charge_shove_radius: float = 2.0
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no step-back distance; flagged, not invented as SPEC fact.
+@export var lightning_dragons_charge_step_back_distance: float = 6.0
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no step-back duration; flagged, not invented as SPEC fact.
+@export var lightning_dragons_charge_step_back_duration: float = 0.6
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no emergence duration; flagged, not invented as SPEC fact.
+@export var lightning_dragons_charge_emergence_duration: float = 0.9
+# PLACEHOLDER -- SPEC.txt Section 7B (DRAGON'S CHARGE) gives no charge duration; must exceed Tunables.roll_duration so a single dodge roll's i-frame window cannot cover the whole active corridor -- SPEC "the counter is to RUN, not dodge".
+@export var lightning_dragons_charge_duration: float = 1.2
 @export var lightning_slam_aoe_radius: float = 8.0 # SPEC.txt Section 7B, meters
 # NOT YET NUMERIC — SPEC describes strike AoE/damage qualitatively; defer to boss-phase AttackData resources.
 # NOT YET NUMERIC — Dragon's Charge trigger timing/damage are qualitative; defer to boss-phase AttackData resources.

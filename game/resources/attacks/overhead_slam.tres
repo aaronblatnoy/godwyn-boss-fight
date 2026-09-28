@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "overhead_slam"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.35
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.50, "end_t": 0.78, "radius": 1.2, "position": Vector3(0, 1, -1.3), "extents": Vector3(1.2, 1.6, 1.8)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.65
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 110
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 30.0
+animation_clip = "overhead_slam"
+enters_state = "EXTENDED"
+; PLACEHOLDER -- SPEC requires probabilistic extension but gives no probability.
+; The Phase 9 tree edit is authored here, then LightningLayer strips the second
+; exit at boss-init and restores it only below 50% HP per SPEC.txt lines 588-591.
+exit_options = [{"attack_id": "flow_into_x", "weight": 1.0, "continue_probability": 0.65}, {"attack_id": "lightning_slam_aoe", "weight": 1.0, "continue_probability": 0.65}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "OVERHEAD SLAM"
