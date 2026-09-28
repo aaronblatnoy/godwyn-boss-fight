@@ -74,7 +74,11 @@ func _process(delta: float) -> void:
 			if state_timer <= 0.0:
 				_begin_active()
 		State.ACTIVE:
-			if not animation_player.is_playing():
+			if _current_attack != null and _current_attack.animation_clip.is_empty():
+				state_timer = maxf(state_timer - delta, 0.0)
+				if state_timer <= 0.0:
+					_begin_recovery()
+			elif not animation_player.is_playing():
 				_begin_recovery()
 		State.RECOVERY:
 			state_timer = maxf(state_timer - delta, 0.0)
@@ -141,7 +145,10 @@ func _begin_active() -> void:
 		_enter_idle_with_cooldown()
 		return
 	_set_state(State.ACTIVE)
-	animation_player.play(attack_library.animation_name(_current_attack))
+	if _current_attack.animation_clip.is_empty():
+		state_timer = AttackLibrary.ACTIVE_CLIP_DURATION
+	else:
+		animation_player.play(attack_library.animation_name(_current_attack))
 
 
 func _begin_recovery() -> void:

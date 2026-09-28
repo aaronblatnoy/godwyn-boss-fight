@@ -69,6 +69,8 @@ func ensure_runtime_animation(animation_player: AnimationPlayer, attack: AttackD
 
 
 func animation_name(attack: AttackData) -> StringName:
+	if attack.animation_clip.is_empty():
+		return &""
 	return StringName("%s/%s" % [DEFAULT_LIBRARY, attack.animation_clip])
 
 
