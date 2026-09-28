@@ -1,0 +1,49 @@
+{
+  "schema": "astra-v3-seam-fix",
+  "texture": {
+    "resolved_base_node": "Image Texture.001",
+    "source_base_image": "Image_0.001",
+    "corrected_packed_image": "Astra_V3_Head_BaseColor_NecklineFixed.001",
+    "restored_emission_nodes": 0,
+    "samples": 15408,
+    "candidate_seeds": 3329,
+    "edited_core_texels": 72456,
+    "edited_feathered_texels": 269015,
+    "luma_cut": 0.7671168892979622,
+    "saturation_cut": 0.3333333730697632,
+    "median_adjacent_skin_linear_rgb": [
+      0.7882353663444519,
+      0.6392157077789307,
+      0.41568630933761597
+    ],
+    "crop_xyxy": [
+      928,
+      864,
+      1440,
+      1376
+    ]
+  },
+  "sleeve": {
+    "object": "Astra_V3_SeamSleeve",
+    "vertices": 770,
+    "faces": 832,
+    "closed": true,
+    "center_xy_m": [
+      -0.22544990479946136,
+      -0.12709017097949982
+    ],
+    "z_range_m": [
+      2.585,
+      2.815
+    ],
+    "bottom_radii_m": [
+      0.135,
+      0.11
+    ],
+    "top_radii_m": [
+      0.095,
+      0.076
+    ],
+    "binding": "neck/Head linear blend"
+  }
+}

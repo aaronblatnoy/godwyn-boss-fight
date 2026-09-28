@@ -1,0 +1,20 @@
+{
+  "mode": "heroes",
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    },
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "resolution": [
+    1200,
+    1800
+  ],
+  "samples": 128,
+  "frame": 1,
+  "action": "Godwyn_V3_idle_guard"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "astra-v3-neck-cleanup",
+  "head_faces_before": 151681,
+  "head_faces_after": 138874,
+  "removed_head_faces": 12807,
+  "trim_rule": "idle evaluated center z < 2.825m outside neck x[-0.345,-0.105]m",
+  "trimmed_center_bounds_m": {
+    "min": [
+      -0.5319581627845764,
+      -0.3269033133983612,
+      2.6841461658477783
+    ],
+    "max": [
+      0.08048492670059204,
+      0.034081269055604935,
+      2.824995279312134
+    ]
+  },
+  "removed_displaced_neck_blend": "AstraChar2_Meshy_NeckBlend",
+  "gorget": {
+    "object": "Astra_V3_Neck_Gorget_Trim",
+    "parent_bone": "Head",
+    "center_m": [
+      -0.225,
+      -0.127,
+      2.715
+    ],
+    "major_radius_m": 0.112,
+    "minor_radius_m": 0.016,
+    "y_scale": 0.78,
+    "material": "Astra V3 Meshy full-resolution PBR LOOK"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mode": "film",
+  "move": "idle_guard",
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    768,
+    768
+  ],
+  "fps": 30,
+  "frames": 96,
+  "camera": "three-quarter root-follow in XY; vertical motion remains visible",
+  "frame_directory": "renders/astra/v3/idle_guard_frames"
+}

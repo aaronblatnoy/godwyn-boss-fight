@@ -1,0 +1,21 @@
+{
+  "schema": "astra-v3-head-trim",
+  "object": "AstraChar2_Meshy_HeadHair",
+  "before_faces": 152946,
+  "after_faces": 151681,
+  "removed_faces": 1265,
+  "selection_rule": "skin mask >= 0.5 and ((world z < 2.760m outside neck x[-0.340,-0.110]m) or world z < 2.620m)",
+  "removed_center_bounds_m": {
+    "min": [
+      -0.3545151650905609,
+      -0.2785432040691376,
+      2.5697410106658936
+    ],
+    "max": [
+      -0.09553579241037369,
+      -0.0903734564781189,
+      2.7599401473999023
+    ]
+  },
+  "preserved": "face, central neck, and all non-skin hair geometry"
+}

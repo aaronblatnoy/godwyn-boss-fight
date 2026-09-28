@@ -1,0 +1,110 @@
+{
+  "schema": "astra-v3-publish",
+  "source_wip": "models/astra_character_v3_wip.blend",
+  "blend": {
+    "path": "models/astra_character_v3.blend",
+    "bytes": 67589746,
+    "sha256": "43b3a6643e6c6ddb8cc317ee0bed3381d3c654832028a5f5f2b7e7a8d405359c"
+  },
+  "glb": {
+    "path": "models/astra_character_v3.glb",
+    "bytes": 75960192,
+    "sha256": "c98c7b6df2406c91b72298d8c3d6ee2c10fd768f24cce68ac29c481f19f2cb91"
+  },
+  "actions": [
+    {
+      "name": "Godwyn_V3_idle_guard",
+      "frame_start": 1.0,
+      "frame_end": 96.0,
+      "frames_inclusive": 96
+    },
+    {
+      "name": "Godwyn_V3_lunge_thrust",
+      "frame_start": 1.0,
+      "frame_end": 64.0,
+      "frames_inclusive": 64
+    },
+    {
+      "name": "Godwyn_V3_rising_spin",
+      "frame_start": 1.0,
+      "frame_end": 116.0,
+      "frames_inclusive": 116
+    },
+    {
+      "name": "Godwyn_V3_walk_stalk",
+      "frame_start": 1.0,
+      "frame_end": 72.0,
+      "frames_inclusive": 72
+    },
+    {
+      "name": "Godwyn_V3_xslash",
+      "frame_start": 1.0,
+      "frame_end": 90.0,
+      "frames_inclusive": 90
+    }
+  ],
+  "fps": 30,
+  "selected_export_objects": [
+    "Astra_V3_Rig",
+    "char1",
+    "AstraChar2_Meshy_HeadHair",
+    "Godwyn_Sword",
+    "Astra_V3_Rigid_Neck_Bridge",
+    "Astra_V3_Neck_Gorget_Trim"
+  ],
+  "glb_document": {
+    "glb_animations": [
+      {
+        "name": "Godwyn_V3_idle_guard",
+        "channels": 72,
+        "start_seconds": 0.03333333333333333,
+        "end_seconds": 3.2,
+        "duration_seconds": 3.166666666666667
+      },
+      {
+        "name": "Godwyn_V3_lunge_thrust",
+        "channels": 72,
+        "start_seconds": 0.03333333333333333,
+        "end_seconds": 2.1333333333333333,
+        "duration_seconds": 2.1
+      },
+      {
+        "name": "Godwyn_V3_rising_spin",
+        "channels": 72,
+        "start_seconds": 0.03333333333333333,
+        "end_seconds": 3.8666666666666667,
+        "duration_seconds": 3.8333333333333335
+      },
+      {
+        "name": "Godwyn_V3_walk_stalk",
+        "channels": 72,
+        "start_seconds": 0.03333333333333333,
+        "end_seconds": 2.4,
+        "duration_seconds": 2.3666666666666667
+      },
+      {
+        "name": "Godwyn_V3_xslash",
+        "channels": 72,
+        "start_seconds": 0.03333333333333333,
+        "end_seconds": 3.0,
+        "duration_seconds": 2.966666666666667
+      }
+    ],
+    "glb_animation_count": 5,
+    "glb_skin_count": 1,
+    "glb_skin_joint_count": 24,
+    "glb_mesh_count": 5,
+    "glb_node_count": 30
+  },
+  "roundtrip_pass": true,
+  "protected_v2_hashes_before": {
+    "models/astra_character_v2.blend": "a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255",
+    "models/astra_character_v2.glb": "17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5"
+  },
+  "protected_v2_hashes_after": {
+    "models/astra_character_v2.blend": "a8748e58ddff750ddac98ae8afa5459a6104f015b8d6ef97e813c77815787255",
+    "models/astra_character_v2.glb": "17c96b5ebc52857aa0054b24d66c5bf54c2f5a5edeb2972faab899db57c257f5"
+  },
+  "protected_v2_unchanged": true,
+  "publish_pass": true
+}

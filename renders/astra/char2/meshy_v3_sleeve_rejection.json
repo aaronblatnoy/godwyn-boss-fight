@@ -1,0 +1,6 @@
+{
+  "schema": "astra-v3-sleeve-rejection",
+  "removed_object": "Astra_V3_SeamSleeve",
+  "reason": "semantic close-up proved armature deformation displaced the sleeve outside the neck silhouette",
+  "replacement": "approved donor neck blend plus corrected head base-color neckline"
+}

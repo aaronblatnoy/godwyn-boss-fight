@@ -1,0 +1,13 @@
+{
+  "mode": "film",
+  "move": "walk_stalk",
+  "engine": "BLENDER_EEVEE",
+  "resolution": [
+    768,
+    768
+  ],
+  "fps": 30,
+  "frames": 72,
+  "camera": "three-quarter root-follow in XY; vertical motion remains visible",
+  "frame_directory": "renders/astra/v3/walk_stalk_frames"
+}

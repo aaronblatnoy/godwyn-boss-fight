@@ -1,0 +1,135 @@
+{
+  "schema": "astra-v3-bone-mapping",
+  "source_skeleton_bones": 121,
+  "target_skeleton_bones": 24,
+  "mapping": {
+    "Hips": "Hips",
+    "Spine02": "Spine02",
+    "Spine01": "Spine01",
+    "Spine": "Spine",
+    "neck": "neck",
+    "Head": "Head",
+    "head_end": "head_end",
+    "headfront": "headfront",
+    "LeftShoulder": "LeftShoulder",
+    "LeftArm": "LeftArm",
+    "LeftForeArm": "LeftForeArm",
+    "LeftHand": "LeftHand",
+    "RightShoulder": "RightShoulder",
+    "RightArm": "RightArm",
+    "RightForeArm": "RightForeArm",
+    "RightHand": "RightHand",
+    "LeftUpLeg": "LeftUpLeg",
+    "LeftLeg": "LeftLeg",
+    "LeftFoot": "LeftFoot",
+    "LeftToeBase": "LeftToeBase",
+    "RightUpLeg": "RightUpLeg",
+    "RightLeg": "RightLeg",
+    "RightFoot": "RightFoot",
+    "RightToeBase": "RightToeBase"
+  },
+  "identity_mapping": true,
+  "order": [
+    "Hips",
+    "Spine02",
+    "Spine01",
+    "Spine",
+    "neck",
+    "Head",
+    "head_end",
+    "headfront",
+    "LeftShoulder",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "RightShoulder",
+    "RightArm",
+    "RightForeArm",
+    "RightHand",
+    "LeftUpLeg",
+    "LeftLeg",
+    "LeftFoot",
+    "LeftToeBase",
+    "RightUpLeg",
+    "RightLeg",
+    "RightFoot",
+    "RightToeBase"
+  ],
+  "aim_child": {
+    "Hips": "Spine02",
+    "Spine02": "Spine01",
+    "Spine01": "Spine",
+    "Spine": "neck",
+    "neck": "Head",
+    "Head": "head_end",
+    "LeftShoulder": "LeftArm",
+    "LeftArm": "LeftForeArm",
+    "LeftForeArm": "LeftHand",
+    "RightShoulder": "RightArm",
+    "RightArm": "RightForeArm",
+    "RightForeArm": "RightHand",
+    "LeftUpLeg": "LeftLeg",
+    "LeftLeg": "LeftFoot",
+    "LeftFoot": "LeftToeBase",
+    "RightUpLeg": "RightLeg",
+    "RightLeg": "RightFoot",
+    "RightFoot": "RightToeBase"
+  },
+  "aimed_bones": [
+    "Head",
+    "LeftArm",
+    "LeftFoot",
+    "LeftForeArm",
+    "LeftLeg",
+    "LeftShoulder",
+    "LeftUpLeg",
+    "RightArm",
+    "RightFoot",
+    "RightForeArm",
+    "RightLeg",
+    "RightShoulder",
+    "RightUpLeg",
+    "Spine",
+    "Spine01",
+    "Spine02",
+    "neck"
+  ],
+  "root_frame": {
+    "up": "Hips->Spine02",
+    "side": "RightUpLeg->LeftUpLeg",
+    "handedness": "forward=side cross up"
+  },
+  "leaf_basis_copy": [
+    "LeftHand",
+    "RightHand"
+  ],
+  "feet": "LeftFoot/RightFoot aim from ankle joint to the source ToeBase direction; ToeBase remains rest-relative. This uses the old rig's actual foot direction rather than SMPL tip points.",
+  "method": "per-frame old-rig posed joint heads; parent-forward direction FK using each target bone's actual rest joint-to-child axis; then non-root pose locations solve each mapped joint head to the source-aligned position; root anatomical-frame delta and scaled translation (glTF synthetic tails are not used as joint axes)",
+  "moves": {
+    "idle_guard": {
+      "frames": 96,
+      "fps": 30,
+      "loop": true
+    },
+    "walk_stalk": {
+      "frames": 72,
+      "fps": 30,
+      "loop": true
+    },
+    "lunge_thrust": {
+      "frames": 64,
+      "fps": 30,
+      "loop": false
+    },
+    "rising_spin": {
+      "frames": 116,
+      "fps": 30,
+      "loop": false
+    },
+    "xslash": {
+      "frames": 90,
+      "fps": 30,
+      "loop": false
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "astra-v3-glb-roundtrip",
+  "source_glb": "models/astra_character_v3.glb",
+  "armatures": 1,
+  "rig_object": "Astra_V3_Rig",
+  "bone_count": 24,
+  "bone_names": [
+    "Hips",
+    "LeftUpLeg",
+    "LeftLeg",
+    "LeftFoot",
+    "LeftToeBase",
+    "RightUpLeg",
+    "RightLeg",
+    "RightFoot",
+    "RightToeBase",
+    "Spine02",
+    "Spine01",
+    "Spine",
+    "LeftShoulder",
+    "LeftArm",
+    "LeftForeArm",
+    "LeftHand",
+    "neck",
+    "Head",
+    "head_end",
+    "headfront",
+    "RightShoulder",
+    "RightArm",
+    "RightForeArm",
+    "RightHand"
+  ],
+  "expected_bone_names_exact": true,
+  "animation_count": 5,
+  "animations": [
+    {
+      "name": "Godwyn_V3_idle_guard",
+      "frame_start": 1.0,
+      "frame_end": 96.0,
+      "frames_inclusive": 96
+    },
+    {
+      "name": "Godwyn_V3_lunge_thrust",
+      "frame_start": 1.0,
+      "frame_end": 64.0,
+      "frames_inclusive": 64
+    },
+    {
+      "name": "Godwyn_V3_rising_spin",
+      "frame_start": 1.0,
+      "frame_end": 116.0,
+      "frames_inclusive": 116
+    },
+    {
+      "name": "Godwyn_V3_walk_stalk",
+      "frame_start": 1.0,
+      "frame_end": 72.0,
+      "frames_inclusive": 72
+    },
+    {
+      "name": "Godwyn_V3_xslash",
+      "frame_start": 1.0,
+      "frame_end": 90.0,
+      "frames_inclusive": 90
+    }
+  ],
+  "expected_animation_names_exact": true,
+  "largest_mesh_object": "char1",
+  "largest_mesh_weights": {
+    "vertices": 275595,
+    "vertex_groups": 24,
+    "unweighted_vertices": 0,
+    "bad_weight_sum_vertices": 0,
+    "influences_min": 1,
+    "influences_max": 4
+  },
+  "pass": true
+}

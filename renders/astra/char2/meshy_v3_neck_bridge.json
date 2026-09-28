@@ -1,0 +1,30 @@
+{
+  "schema": "astra-v3-neck-bridge",
+  "bridge": {
+    "object": "Astra_V3_Rigid_Neck_Bridge",
+    "center_m": [
+      -0.225,
+      -0.127,
+      2.665
+    ],
+    "radius_m": 0.092,
+    "depth_m": 0.21,
+    "y_scale": 0.82,
+    "parent_bone": "Head",
+    "material": "Astra V3 Neck Bridge Skin"
+  },
+  "gorget": {
+    "object": "Astra_V3_Neck_Gorget_Trim",
+    "center_m": [
+      -0.225,
+      -0.127,
+      2.585
+    ],
+    "major_radius_m": 0.104,
+    "minor_radius_m": 0.014,
+    "y_scale": 0.82,
+    "parent_bone": "Head",
+    "material": "Astra V3 Gorget Gold"
+  },
+  "design": "closed rigid neck bridge behind armor; metallic torus hides lower join without armature distortion"
+}
