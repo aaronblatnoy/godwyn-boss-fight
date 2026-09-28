@@ -1,0 +1,117 @@
+{
+  "idle_guard": {
+    "nonplate_both": {
+      "edges": 400959,
+      "maximum_ratio": 68.16453552246094,
+      "p99_ratio": 4.598849773406982,
+      "p999_ratio": 13.18410587310791
+    },
+    "plate_internal_same_island": {
+      "edges": 38303,
+      "maximum_ratio": 1.0002795457839966,
+      "p99_ratio": 1.0000590085983276,
+      "p999_ratio": 1.0001312494277954
+    },
+    "plate_cross_island": {
+      "edges": 0
+    },
+    "plate_to_nonplate_boundary": {
+      "edges": 8551,
+      "maximum_ratio": 104.42575073242188,
+      "p99_ratio": 16.992637634277344,
+      "p999_ratio": 44.807518005371094
+    }
+  },
+  "walk_stalk": {
+    "nonplate_both": {
+      "edges": 400959,
+      "maximum_ratio": 69.95575714111328,
+      "p99_ratio": 4.73709774017334,
+      "p999_ratio": 13.629899978637695
+    },
+    "plate_internal_same_island": {
+      "edges": 38303,
+      "maximum_ratio": 1.0002431869506836,
+      "p99_ratio": 1.000062108039856,
+      "p999_ratio": 1.0001204013824463
+    },
+    "plate_cross_island": {
+      "edges": 0
+    },
+    "plate_to_nonplate_boundary": {
+      "edges": 8551,
+      "maximum_ratio": 107.57589721679688,
+      "p99_ratio": 17.057519912719727,
+      "p999_ratio": 45.54966354370117
+    }
+  },
+  "lunge_thrust": {
+    "nonplate_both": {
+      "edges": 400959,
+      "maximum_ratio": 90.41864776611328,
+      "p99_ratio": 5.491732597351074,
+      "p999_ratio": 17.972637176513672
+    },
+    "plate_internal_same_island": {
+      "edges": 38303,
+      "maximum_ratio": 1.0003305673599243,
+      "p99_ratio": 1.0000778436660767,
+      "p999_ratio": 1.0001453161239624
+    },
+    "plate_cross_island": {
+      "edges": 0
+    },
+    "plate_to_nonplate_boundary": {
+      "edges": 8551,
+      "maximum_ratio": 104.759765625,
+      "p99_ratio": 19.34957504272461,
+      "p999_ratio": 51.16617965698242
+    }
+  },
+  "rising_spin": {
+    "nonplate_both": {
+      "edges": 400959,
+      "maximum_ratio": 99.4913558959961,
+      "p99_ratio": 6.180572986602783,
+      "p999_ratio": 20.23351287841797
+    },
+    "plate_internal_same_island": {
+      "edges": 38303,
+      "maximum_ratio": 1.000246524810791,
+      "p99_ratio": 1.0000580549240112,
+      "p999_ratio": 1.0001177787780762
+    },
+    "plate_cross_island": {
+      "edges": 0
+    },
+    "plate_to_nonplate_boundary": {
+      "edges": 8551,
+      "maximum_ratio": 106.33413696289062,
+      "p99_ratio": 22.78761863708496,
+      "p999_ratio": 58.58415222167969
+    }
+  },
+  "xslash": {
+    "nonplate_both": {
+      "edges": 400959,
+      "maximum_ratio": 77.85782623291016,
+      "p99_ratio": 5.574806213378906,
+      "p999_ratio": 16.321685791015625
+    },
+    "plate_internal_same_island": {
+      "edges": 38303,
+      "maximum_ratio": 1.0002931356430054,
+      "p99_ratio": 1.0000566244125366,
+      "p999_ratio": 1.000112771987915
+    },
+    "plate_cross_island": {
+      "edges": 0
+    },
+    "plate_to_nonplate_boundary": {
+      "edges": 8551,
+      "maximum_ratio": 100.4542236328125,
+      "p99_ratio": 18.247665405273438,
+      "p999_ratio": 43.20621109008789
+    }
+  }
+}

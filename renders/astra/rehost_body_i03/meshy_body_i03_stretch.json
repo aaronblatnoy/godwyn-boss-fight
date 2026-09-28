@@ -1,0 +1,1440 @@
+{
+  "candidate": "models/astra_character_v2_body_i03.blend",
+  "candidate_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+  "frame_source": "renders/astra/rehost_body_i02/meshy_body_move_stills.json",
+  "moves": {
+    "idle_guard": {
+      "frame": 48,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "plate_edges": 38303,
+      "maximum_ratio": 104.42575073242188,
+      "p99_ratio": 4.743943691253662,
+      "maximum_plate_edge_ratio": 1.0002795457839966,
+      "gates": {
+        "p99_le_1_6": false,
+        "maximum_le_3_0": false,
+        "plate_maximum_le_1_01": true
+      },
+      "worst_5_edges": [
+        {
+          "edge_index": 38665,
+          "vertices": [
+            21288,
+            21310
+          ],
+          "ratio": 104.42575073242188,
+          "rest_length_m": 0.00432915473356843,
+          "posed_length_m": 0.4520752429962158,
+          "rest_midpoint_world_m": [
+            0.26169338822364807,
+            -0.6779283285140991,
+            1.8676042556762695
+          ],
+          "posed_midpoint_world_m": [
+            -0.12181024253368378,
+            -0.018751412630081177,
+            1.6927412748336792
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21288": [
+              [
+                "LeftUpLeg",
+                1.0
+              ]
+            ],
+            "21310": [
+              [
+                "LeftUpLeg",
+                0.5557608008384705
+              ],
+              [
+                "Hips",
+                0.3090308904647827
+              ],
+              [
+                "Spine02",
+                0.10241690278053284
+              ],
+              [
+                "Spine01",
+                0.03279139846563339
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        },
+        {
+          "edge_index": 429591,
+          "vertices": [
+            1111,
+            1135
+          ],
+          "ratio": 73.66544342041016,
+          "rest_length_m": 0.00527895288541913,
+          "posed_length_m": 0.38887640833854675,
+          "rest_midpoint_world_m": [
+            0.24003250896930695,
+            -0.6912077069282532,
+            2.412226676940918
+          ],
+          "posed_midpoint_world_m": [
+            0.2036903202533722,
+            -0.27556172013282776,
+            2.127476692199707
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "1111": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ],
+            "1135": [
+              [
+                "LeftShoulder",
+                0.5089693069458008
+              ],
+              [
+                "LeftArm",
+                0.4359194040298462
+              ],
+              [
+                "Spine01",
+                0.03349699825048447
+              ],
+              [
+                "Spine02",
+                0.021614300087094307
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 430072,
+          "vertices": [
+            21127,
+            21252
+          ],
+          "ratio": 73.23796844482422,
+          "rest_length_m": 0.0037294465582817793,
+          "posed_length_m": 0.27313709259033203,
+          "rest_midpoint_world_m": [
+            0.2503475248813629,
+            -0.6917294263839722,
+            1.869992971420288
+          ],
+          "posed_midpoint_world_m": [
+            0.18984061479568481,
+            -0.5925599336624146,
+            1.7930915355682373
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21127": [
+              [
+                "Hips",
+                1.0
+              ]
+            ],
+            "21252": [
+              [
+                "Hips",
+                0.6293900012969971
+              ],
+              [
+                "LeftUpLeg",
+                0.2634549140930176
+              ],
+              [
+                "Spine02",
+                0.08167240023612976
+              ],
+              [
+                "Spine01",
+                0.025482799857854843
+              ]
+            ]
+          },
+          "region": "Hips"
+        },
+        {
+          "edge_index": 268113,
+          "vertices": [
+            105516,
+            105541
+          ],
+          "ratio": 72.9623031616211,
+          "rest_length_m": 0.002681251848116517,
+          "posed_length_m": 0.19563031196594238,
+          "rest_midpoint_world_m": [
+            0.36975616216659546,
+            -0.42549628019332886,
+            0.0493936687707901
+          ],
+          "posed_midpoint_world_m": [
+            0.21773871779441833,
+            -0.2515808641910553,
+            0.03204106539487839
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "105516": [
+              [
+                "LeftLeg",
+                1.0
+              ]
+            ],
+            "105541": [
+              [
+                "LeftLeg",
+                0.48386189341545105
+              ],
+              [
+                "LeftFoot",
+                0.35974401235580444
+              ],
+              [
+                "LeftToeBase",
+                0.1563940942287445
+              ]
+            ]
+          },
+          "region": "LeftLeg"
+        },
+        {
+          "edge_index": 430189,
+          "vertices": [
+            21127,
+            21270
+          ],
+          "ratio": 69.11125183105469,
+          "rest_length_m": 0.006578390020877123,
+          "posed_length_m": 0.4546407461166382,
+          "rest_midpoint_world_m": [
+            0.2518808841705322,
+            -0.690869152545929,
+            1.8697125911712646
+          ],
+          "posed_midpoint_world_m": [
+            0.1473269909620285,
+            -0.5135864615440369,
+            1.7792245149612427
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21127": [
+              [
+                "Hips",
+                1.0
+              ]
+            ],
+            "21270": [
+              [
+                "Hips",
+                0.4711225926876068
+              ],
+              [
+                "LeftUpLeg",
+                0.4389426112174988
+              ],
+              [
+                "Spine02",
+                0.06796020269393921
+              ],
+              [
+                "Spine01",
+                0.021974600851535797
+              ]
+            ]
+          },
+          "region": "Hips"
+        }
+      ],
+      "transfer": {
+        "source": "models/astra_move_idle_guard_v2_wip.blend",
+        "source_sha256": "fc24935c6e0b74722e73fc8a779487b12ae7aaf26bb3ee1d03d9cebad73919ce",
+        "output": "models/astra_move_idle_guard_body_i03.blend",
+        "output_sha256": "e282bac85b3e2a7f11777e7321c25c1513495af3e9f29e5a9df023e56aa73e1f",
+        "base_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+        "bones": 121,
+        "rest_matrix_error": 0.0,
+        "action_digest": "e82a6ffebd9802249cd90d7f4ea98eefb6695aa7c3b3d4cd3262d396098c7346",
+        "action_fcurves": 847,
+        "action_keys": 326095,
+        "action_data_identical": true
+      },
+      "gate_pass": false
+    },
+    "walk_stalk": {
+      "frame": 36,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "plate_edges": 38303,
+      "maximum_ratio": 107.57589721679688,
+      "p99_ratio": 4.885766506195068,
+      "maximum_plate_edge_ratio": 1.0002431869506836,
+      "gates": {
+        "p99_le_1_6": false,
+        "maximum_le_3_0": false,
+        "plate_maximum_le_1_01": true
+      },
+      "worst_5_edges": [
+        {
+          "edge_index": 38665,
+          "vertices": [
+            21288,
+            21310
+          ],
+          "ratio": 107.57589721679688,
+          "rest_length_m": 0.00432915473356843,
+          "posed_length_m": 0.46571269631385803,
+          "rest_midpoint_world_m": [
+            0.26169338822364807,
+            -0.6779283285140991,
+            1.8676042556762695
+          ],
+          "posed_midpoint_world_m": [
+            -0.21365050971508026,
+            -0.734880805015564,
+            1.5575809478759766
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21288": [
+              [
+                "LeftUpLeg",
+                1.0
+              ]
+            ],
+            "21310": [
+              [
+                "LeftUpLeg",
+                0.5557608008384705
+              ],
+              [
+                "Hips",
+                0.3090308904647827
+              ],
+              [
+                "Spine02",
+                0.10241690278053284
+              ],
+              [
+                "Spine01",
+                0.03279139846563339
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        },
+        {
+          "edge_index": 430072,
+          "vertices": [
+            21127,
+            21252
+          ],
+          "ratio": 75.5807876586914,
+          "rest_length_m": 0.0037294465582817793,
+          "posed_length_m": 0.28187450766563416,
+          "rest_midpoint_world_m": [
+            0.2503475248813629,
+            -0.6917294263839722,
+            1.869992971420288
+          ],
+          "posed_midpoint_world_m": [
+            0.09803597629070282,
+            -1.3219926357269287,
+            1.706444263458252
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21127": [
+              [
+                "Hips",
+                1.0
+              ]
+            ],
+            "21252": [
+              [
+                "Hips",
+                0.6293900012969971
+              ],
+              [
+                "LeftUpLeg",
+                0.2634549140930176
+              ],
+              [
+                "Spine02",
+                0.08167240023612976
+              ],
+              [
+                "Spine01",
+                0.025482799857854843
+              ]
+            ]
+          },
+          "region": "Hips"
+        },
+        {
+          "edge_index": 429591,
+          "vertices": [
+            1111,
+            1135
+          ],
+          "ratio": 75.55743408203125,
+          "rest_length_m": 0.00527895288541913,
+          "posed_length_m": 0.39886412024497986,
+          "rest_midpoint_world_m": [
+            0.24003250896930695,
+            -0.6912077069282532,
+            2.412226676940918
+          ],
+          "posed_midpoint_world_m": [
+            0.1390729546546936,
+            -1.0005548000335693,
+            2.055304527282715
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "1111": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ],
+            "1135": [
+              [
+                "LeftShoulder",
+                0.5089693069458008
+              ],
+              [
+                "LeftArm",
+                0.4359194040298462
+              ],
+              [
+                "Spine01",
+                0.03349699825048447
+              ],
+              [
+                "Spine02",
+                0.021614300087094307
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 268113,
+          "vertices": [
+            105516,
+            105541
+          ],
+          "ratio": 74.0285873413086,
+          "rest_length_m": 0.002681251848116517,
+          "posed_length_m": 0.19848929345607758,
+          "rest_midpoint_world_m": [
+            0.36975616216659546,
+            -0.42549628019332886,
+            0.0493936687707901
+          ],
+          "posed_midpoint_world_m": [
+            0.1210235059261322,
+            -1.0786771774291992,
+            0.03667014092206955
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "105516": [
+              [
+                "LeftLeg",
+                1.0
+              ]
+            ],
+            "105541": [
+              [
+                "LeftLeg",
+                0.48386189341545105
+              ],
+              [
+                "LeftFoot",
+                0.35974401235580444
+              ],
+              [
+                "LeftToeBase",
+                0.1563940942287445
+              ]
+            ]
+          },
+          "region": "LeftLeg"
+        },
+        {
+          "edge_index": 430189,
+          "vertices": [
+            21127,
+            21270
+          ],
+          "ratio": 71.267578125,
+          "rest_length_m": 0.006578390020877123,
+          "posed_length_m": 0.46882593631744385,
+          "rest_midpoint_world_m": [
+            0.2518808841705322,
+            -0.690869152545929,
+            1.8697125911712646
+          ],
+          "posed_midpoint_world_m": [
+            0.055592067539691925,
+            -1.2412967681884766,
+            1.6858209371566772
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21127": [
+              [
+                "Hips",
+                1.0
+              ]
+            ],
+            "21270": [
+              [
+                "Hips",
+                0.4711225926876068
+              ],
+              [
+                "LeftUpLeg",
+                0.4389426112174988
+              ],
+              [
+                "Spine02",
+                0.06796020269393921
+              ],
+              [
+                "Spine01",
+                0.021974600851535797
+              ]
+            ]
+          },
+          "region": "Hips"
+        }
+      ],
+      "transfer": {
+        "source": "models/astra_move_walk_stalk_v2_wip.blend",
+        "source_sha256": "164ef0e4705d43c7b1230b51ede372d1549024f4b42be933ac39ac751db89e92",
+        "output": "models/astra_move_walk_stalk_body_i03.blend",
+        "output_sha256": "b82b0ebd8cfecc9170572212d1f262322fb5a9f5a13074582605d16b9e78f125",
+        "base_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+        "bones": 121,
+        "rest_matrix_error": 0.0,
+        "action_digest": "3d13eccdf5b43348ccab3705b73f4bd1feceee344f77b787a87efaa577c3aa86",
+        "action_fcurves": 847,
+        "action_keys": 244783,
+        "action_data_identical": true
+      },
+      "gate_pass": false
+    },
+    "lunge_thrust": {
+      "frame": 40,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "plate_edges": 38303,
+      "maximum_ratio": 104.759765625,
+      "p99_ratio": 5.6315083503723145,
+      "maximum_plate_edge_ratio": 1.0003305673599243,
+      "gates": {
+        "p99_le_1_6": false,
+        "maximum_le_3_0": false,
+        "plate_maximum_le_1_01": true
+      },
+      "worst_5_edges": [
+        {
+          "edge_index": 38665,
+          "vertices": [
+            21288,
+            21310
+          ],
+          "ratio": 104.759765625,
+          "rest_length_m": 0.00432915473356843,
+          "posed_length_m": 0.4535212218761444,
+          "rest_midpoint_world_m": [
+            0.26169338822364807,
+            -0.6779283285140991,
+            1.8676042556762695
+          ],
+          "posed_midpoint_world_m": [
+            0.043812353163957596,
+            -2.926290273666382,
+            1.499218463897705
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21288": [
+              [
+                "LeftUpLeg",
+                1.0
+              ]
+            ],
+            "21310": [
+              [
+                "LeftUpLeg",
+                0.5557608008384705
+              ],
+              [
+                "Hips",
+                0.3090308904647827
+              ],
+              [
+                "Spine02",
+                0.10241690278053284
+              ],
+              [
+                "Spine01",
+                0.03279139846563339
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        },
+        {
+          "edge_index": 429591,
+          "vertices": [
+            1111,
+            1135
+          ],
+          "ratio": 96.24085235595703,
+          "rest_length_m": 0.00527895288541913,
+          "posed_length_m": 0.5080509185791016,
+          "rest_midpoint_world_m": [
+            0.24003250896930695,
+            -0.6912077069282532,
+            2.412226676940918
+          ],
+          "posed_midpoint_world_m": [
+            0.6335126161575317,
+            -2.771007537841797,
+            2.1299190521240234
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "1111": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ],
+            "1135": [
+              [
+                "LeftShoulder",
+                0.5089693069458008
+              ],
+              [
+                "LeftArm",
+                0.4359194040298462
+              ],
+              [
+                "Spine01",
+                0.03349699825048447
+              ],
+              [
+                "Spine02",
+                0.021614300087094307
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 149132,
+          "vertices": [
+            986,
+            1009
+          ],
+          "ratio": 90.41864776611328,
+          "rest_length_m": 0.0026346745435148478,
+          "posed_length_m": 0.23822370171546936,
+          "rest_midpoint_world_m": [
+            0.2268986850976944,
+            -0.6887791156768799,
+            2.4210715293884277
+          ],
+          "posed_midpoint_world_m": [
+            0.6279982328414917,
+            -2.8855173587799072,
+            2.146273612976074
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "986": [
+              [
+                "LeftArm",
+                0.7275670170783997
+              ],
+              [
+                "LeftShoulder",
+                0.17234660685062408
+              ],
+              [
+                "Spine01",
+                0.061369601637125015
+              ],
+              [
+                "Spine02",
+                0.03871690109372139
+              ]
+            ],
+            "1009": [
+              [
+                "LeftArm",
+                0.4699859917163849
+              ],
+              [
+                "LeftShoulder",
+                0.3455148935317993
+              ],
+              [
+                "Spine01",
+                0.11324310302734375
+              ],
+              [
+                "Spine02",
+                0.07125610113143921
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 100778,
+          "vertices": [
+            6889,
+            7015
+          ],
+          "ratio": 84.0024185180664,
+          "rest_length_m": 0.0029971138574182987,
+          "posed_length_m": 0.25176480412483215,
+          "rest_midpoint_world_m": [
+            0.36976736783981323,
+            -0.605793833732605,
+            2.368009567260742
+          ],
+          "posed_midpoint_world_m": [
+            0.631864070892334,
+            -2.782245635986328,
+            2.06301212310791
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "6889": [
+              [
+                "LeftArm",
+                0.5865706205368042
+              ],
+              [
+                "LeftShoulder",
+                0.35710710287094116
+              ],
+              [
+                "Spine01",
+                0.0391089990735054
+              ],
+              [
+                "LeftForeArm",
+                0.017213299870491028
+              ]
+            ],
+            "7015": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 86933,
+          "vertices": [
+            93345,
+            93364
+          ],
+          "ratio": 80.32334899902344,
+          "rest_length_m": 0.0023230828810483217,
+          "posed_length_m": 0.1865977942943573,
+          "rest_midpoint_world_m": [
+            0.09237821400165558,
+            -0.8014333248138428,
+            0.7693545818328857
+          ],
+          "posed_midpoint_world_m": [
+            0.3407275676727295,
+            -3.186656951904297,
+            0.5091372728347778
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "93345": [
+              [
+                "LeftUpLeg",
+                0.42401158809661865
+              ],
+              [
+                "RightUpLeg",
+                0.2733986973762512
+              ],
+              [
+                "Hips",
+                0.20010130107402802
+              ],
+              [
+                "LeftHand",
+                0.10248839855194092
+              ]
+            ],
+            "93364": [
+              [
+                "LeftUpLeg",
+                0.4262833893299103
+              ],
+              [
+                "RightUpLeg",
+                0.27487051486968994
+              ],
+              [
+                "Hips",
+                0.2011709064245224
+              ],
+              [
+                "RightToeBase",
+                0.09767519682645798
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        }
+      ],
+      "transfer": {
+        "source": "models/astra_move_lunge_thrust_v2_wip.blend",
+        "source_sha256": "b7a1d6a2fcb852f62217a313fb2f442c73e615660abbe143083ab7cf530ad352",
+        "output": "models/astra_move_lunge_thrust_body_i03.blend",
+        "output_sha256": "f655e680e9828fa563505cc2fb380ad6a16ee092c094b6965be37f5102892d23",
+        "base_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+        "bones": 121,
+        "rest_matrix_error": 0.0,
+        "action_digest": "06e6ed299462d7204ccdc39d0bd316bb5dca62832c0725f8bde71ca40150ccc8",
+        "action_fcurves": 847,
+        "action_keys": 214291,
+        "action_data_identical": true
+      },
+      "gate_pass": false
+    },
+    "rising_spin": {
+      "frame": 40,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "plate_edges": 38303,
+      "maximum_ratio": 106.33413696289062,
+      "p99_ratio": 6.354090690612793,
+      "maximum_plate_edge_ratio": 1.000246524810791,
+      "gates": {
+        "p99_le_1_6": false,
+        "maximum_le_3_0": false,
+        "plate_maximum_le_1_01": true
+      },
+      "worst_5_edges": [
+        {
+          "edge_index": 429591,
+          "vertices": [
+            1111,
+            1135
+          ],
+          "ratio": 106.33413696289062,
+          "rest_length_m": 0.00527895288541913,
+          "posed_length_m": 0.5613328814506531,
+          "rest_midpoint_world_m": [
+            0.24003250896930695,
+            -0.6912077069282532,
+            2.412226676940918
+          ],
+          "posed_midpoint_world_m": [
+            0.6091119647026062,
+            0.2551589012145996,
+            2.3816847801208496
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "1111": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ],
+            "1135": [
+              [
+                "LeftShoulder",
+                0.5089693069458008
+              ],
+              [
+                "LeftArm",
+                0.4359194040298462
+              ],
+              [
+                "Spine01",
+                0.03349699825048447
+              ],
+              [
+                "Spine02",
+                0.021614300087094307
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 38665,
+          "vertices": [
+            21288,
+            21310
+          ],
+          "ratio": 104.23316955566406,
+          "rest_length_m": 0.00432915473356843,
+          "posed_length_m": 0.45124152302742004,
+          "rest_midpoint_world_m": [
+            0.26169338822364807,
+            -0.6779283285140991,
+            1.8676042556762695
+          ],
+          "posed_midpoint_world_m": [
+            0.024015046656131744,
+            -0.03586408868432045,
+            1.623767375946045
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "21288": [
+              [
+                "LeftUpLeg",
+                1.0
+              ]
+            ],
+            "21310": [
+              [
+                "LeftUpLeg",
+                0.5557608008384705
+              ],
+              [
+                "Hips",
+                0.3090308904647827
+              ],
+              [
+                "Spine02",
+                0.10241690278053284
+              ],
+              [
+                "Spine01",
+                0.03279139846563339
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        },
+        {
+          "edge_index": 100778,
+          "vertices": [
+            6889,
+            7015
+          ],
+          "ratio": 100.26822662353516,
+          "rest_length_m": 0.0029971138574182987,
+          "posed_length_m": 0.3005152940750122,
+          "rest_midpoint_world_m": [
+            0.36976736783981323,
+            -0.605793833732605,
+            2.368009567260742
+          ],
+          "posed_midpoint_world_m": [
+            0.5942885875701904,
+            0.29951754212379456,
+            2.2826738357543945
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "6889": [
+              [
+                "LeftArm",
+                0.5865706205368042
+              ],
+              [
+                "LeftShoulder",
+                0.35710710287094116
+              ],
+              [
+                "Spine01",
+                0.0391089990735054
+              ],
+              [
+                "LeftForeArm",
+                0.017213299870491028
+              ]
+            ],
+            "7015": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 149132,
+          "vertices": [
+            986,
+            1009
+          ],
+          "ratio": 99.4913558959961,
+          "rest_length_m": 0.0026346745435148478,
+          "posed_length_m": 0.2621273398399353,
+          "rest_midpoint_world_m": [
+            0.2268986850976944,
+            -0.6887791156768799,
+            2.4210715293884277
+          ],
+          "posed_midpoint_world_m": [
+            0.6168200969696045,
+            0.12505526840686798,
+            2.3684489727020264
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "986": [
+              [
+                "LeftArm",
+                0.7275670170783997
+              ],
+              [
+                "LeftShoulder",
+                0.17234660685062408
+              ],
+              [
+                "Spine01",
+                0.061369601637125015
+              ],
+              [
+                "Spine02",
+                0.03871690109372139
+              ]
+            ],
+            "1009": [
+              [
+                "LeftArm",
+                0.4699859917163849
+              ],
+              [
+                "LeftShoulder",
+                0.3455148935317993
+              ],
+              [
+                "Spine01",
+                0.11324310302734375
+              ],
+              [
+                "Spine02",
+                0.07125610113143921
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 86933,
+          "vertices": [
+            93345,
+            93364
+          ],
+          "ratio": 97.50812530517578,
+          "rest_length_m": 0.0023230828810483217,
+          "posed_length_m": 0.22651945054531097,
+          "rest_midpoint_world_m": [
+            0.09237821400165558,
+            -0.8014333248138428,
+            0.7693545818328857
+          ],
+          "posed_midpoint_world_m": [
+            0.3729296624660492,
+            -0.25145500898361206,
+            0.620144248008728
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "93345": [
+              [
+                "LeftUpLeg",
+                0.42401158809661865
+              ],
+              [
+                "RightUpLeg",
+                0.2733986973762512
+              ],
+              [
+                "Hips",
+                0.20010130107402802
+              ],
+              [
+                "LeftHand",
+                0.10248839855194092
+              ]
+            ],
+            "93364": [
+              [
+                "LeftUpLeg",
+                0.4262833893299103
+              ],
+              [
+                "RightUpLeg",
+                0.27487051486968994
+              ],
+              [
+                "Hips",
+                0.2011709064245224
+              ],
+              [
+                "RightToeBase",
+                0.09767519682645798
+              ]
+            ]
+          },
+          "region": "LeftUpLeg"
+        }
+      ],
+      "transfer": {
+        "source": "models/astra_move_rising_spin_v2_wip.blend",
+        "source_sha256": "ee2c7694deee7d8082cc3ef447dc201a7fcfb334156a9e939a199336e4ce839d",
+        "output": "models/astra_move_rising_spin_body_i03.blend",
+        "output_sha256": "5274de831219845c0cd95d9ff505074583f6aa357c9c30aaa71d56764aadd3fc",
+        "base_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+        "bones": 121,
+        "rest_matrix_error": 0.0,
+        "action_digest": "5cca9a643371c6c7f17df2edb7b5ee9de9402c6d774f05b64a99842d63bf01d6",
+        "action_fcurves": 847,
+        "action_keys": 390467,
+        "action_data_identical": true
+      },
+      "gate_pass": false
+    },
+    "xslash": {
+      "frame": 55,
+      "edges": 447813,
+      "valid_edges_rest_length_gt_1um": 447813,
+      "plate_edges": 38303,
+      "maximum_ratio": 100.4542236328125,
+      "p99_ratio": 5.726003170013428,
+      "maximum_plate_edge_ratio": 1.0002931356430054,
+      "gates": {
+        "p99_le_1_6": false,
+        "maximum_le_3_0": false,
+        "plate_maximum_le_1_01": true
+      },
+      "worst_5_edges": [
+        {
+          "edge_index": 100778,
+          "vertices": [
+            6889,
+            7015
+          ],
+          "ratio": 100.4542236328125,
+          "rest_length_m": 0.0029971138574182987,
+          "posed_length_m": 0.30107274651527405,
+          "rest_midpoint_world_m": [
+            0.36976736783981323,
+            -0.605793833732605,
+            2.368009567260742
+          ],
+          "posed_midpoint_world_m": [
+            0.28079864382743835,
+            -0.5743482708930969,
+            2.0656309127807617
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "6889": [
+              [
+                "LeftArm",
+                0.5865706205368042
+              ],
+              [
+                "LeftShoulder",
+                0.35710710287094116
+              ],
+              [
+                "Spine01",
+                0.0391089990735054
+              ],
+              [
+                "LeftForeArm",
+                0.017213299870491028
+              ]
+            ],
+            "7015": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 429591,
+          "vertices": [
+            1111,
+            1135
+          ],
+          "ratio": 84.45611572265625,
+          "rest_length_m": 0.00527895288541913,
+          "posed_length_m": 0.44583985209465027,
+          "rest_midpoint_world_m": [
+            0.24003250896930695,
+            -0.6912077069282532,
+            2.412226676940918
+          ],
+          "posed_midpoint_world_m": [
+            0.11056289076805115,
+            -0.5915793776512146,
+            2.0211615562438965
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "1111": [
+              [
+                "LeftArm",
+                1.0
+              ]
+            ],
+            "1135": [
+              [
+                "LeftShoulder",
+                0.5089693069458008
+              ],
+              [
+                "LeftArm",
+                0.4359194040298462
+              ],
+              [
+                "Spine01",
+                0.03349699825048447
+              ],
+              [
+                "Spine02",
+                0.021614300087094307
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 100567,
+          "vertices": [
+            6889,
+            6987
+          ],
+          "ratio": 77.85782623291016,
+          "rest_length_m": 0.0034120529890060425,
+          "posed_length_m": 0.2656550407409668,
+          "rest_midpoint_world_m": [
+            0.36941957473754883,
+            -0.6054543852806091,
+            2.3708600997924805
+          ],
+          "posed_midpoint_world_m": [
+            0.1269441694021225,
+            -0.8116657733917236,
+            2.0829901695251465
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "6889": [
+              [
+                "LeftArm",
+                0.5865706205368042
+              ],
+              [
+                "LeftShoulder",
+                0.35710710287094116
+              ],
+              [
+                "Spine01",
+                0.0391089990735054
+              ],
+              [
+                "LeftForeArm",
+                0.017213299870491028
+              ]
+            ],
+            "6987": [
+              [
+                "LeftShoulder",
+                0.7284913063049316
+              ],
+              [
+                "LeftArm",
+                0.22852620482444763
+              ],
+              [
+                "Spine01",
+                0.026535000652074814
+              ],
+              [
+                "LeftForeArm",
+                0.01644749939441681
+              ]
+            ]
+          },
+          "region": "LeftArm/LeftShoulder"
+        },
+        {
+          "edge_index": 149132,
+          "vertices": [
+            986,
+            1009
+          ],
+          "ratio": 76.52938079833984,
+          "rest_length_m": 0.0026346745435148478,
+          "posed_length_m": 0.20163001120090485,
+          "rest_midpoint_world_m": [
+            0.2268986850976944,
+            -0.6887791156768799,
+            2.4210715293884277
+          ],
+          "posed_midpoint_world_m": [
+            0.051777977496385574,
+            -0.6683574914932251,
+            2.049128770828247
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "986": [
+              [
+                "LeftArm",
+                0.7275670170783997
+              ],
+              [
+                "LeftShoulder",
+                0.17234660685062408
+              ],
+              [
+                "Spine01",
+                0.061369601637125015
+              ],
+              [
+                "Spine02",
+                0.03871690109372139
+              ]
+            ],
+            "1009": [
+              [
+                "LeftArm",
+                0.4699859917163849
+              ],
+              [
+                "LeftShoulder",
+                0.3455148935317993
+              ],
+              [
+                "Spine01",
+                0.11324310302734375
+              ],
+              [
+                "Spine02",
+                0.07125610113143921
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        },
+        {
+          "edge_index": 100904,
+          "vertices": [
+            7025,
+            7035
+          ],
+          "ratio": 73.97760009765625,
+          "rest_length_m": 0.0017101711127907038,
+          "posed_length_m": 0.12651436030864716,
+          "rest_midpoint_world_m": [
+            0.37352460622787476,
+            -0.6017911434173584,
+            2.3686094284057617
+          ],
+          "posed_midpoint_world_m": [
+            0.2212429791688919,
+            -0.6729063987731934,
+            2.082320213317871
+          ],
+          "plate_edge": false,
+          "endpoint_weights": {
+            "7025": [
+              [
+                "LeftArm",
+                0.7043246030807495
+              ],
+              [
+                "LeftShoulder",
+                0.19311510026454926
+              ],
+              [
+                "Spine01",
+                0.06195149943232536
+              ],
+              [
+                "LeftForeArm",
+                0.04060880094766617
+              ]
+            ],
+            "7035": [
+              [
+                "LeftArm",
+                0.5283610820770264
+              ],
+              [
+                "LeftShoulder",
+                0.34648218750953674
+              ],
+              [
+                "Spine01",
+                0.07452909648418427
+              ],
+              [
+                "LeftForeArm",
+                0.05062749981880188
+              ]
+            ]
+          },
+          "region": "LeftArm"
+        }
+      ],
+      "transfer": {
+        "source": "models/astra_xslash_v2_final_on_char2_cloth_wip.blend",
+        "source_sha256": "83db79f6204c4467e724c540dc88fd7fc86163ece17c01363cfe2ac2a63ce354",
+        "output": "models/astra_xslash_body_i03.blend",
+        "output_sha256": "8fb4a5c980ea6fbdfab483da74926cc977ecb4839368de4c7df53b05c4c65d38",
+        "base_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+        "bones": 121,
+        "rest_matrix_error": 0.0,
+        "action_digest": "133bf4ec0b6f0ab79610cdf468dd36a28e233a145ca8a4b501d4caf1a30c3911",
+        "action_fcurves": 847,
+        "action_keys": 307643,
+        "action_data_identical": true
+      },
+      "gate_pass": false
+    }
+  },
+  "thresholds": {
+    "p99_max": 1.6,
+    "maximum_max": 3.0,
+    "plate_maximum_max": 1.01
+  },
+  "all_moves_pass": false,
+  "render_authorized": false
+}

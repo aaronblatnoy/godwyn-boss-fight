@@ -1,0 +1,1619 @@
+{
+  "source": "models/astra_character_v2_body_i02.blend",
+  "source_sha256": "72d3c3fcc339ff4538cceedc3077640e1e6ba99872759963e76a9bf6582a1179",
+  "candidate": "models/astra_character_v2_body_i03.blend",
+  "glb": "models/astra_character_v2_body_i03.glb",
+  "body_vertices": 149413,
+  "body_faces": 298229,
+  "prepose": {
+    "LeftArm": {
+      "segments": [
+        {
+          "bone": "LeftArm",
+          "source_start_world_m": [
+            0.31995999813079834,
+            -0.18713000416755676,
+            2.6130259037017822
+          ],
+          "source_end_world_m": [
+            0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "target_start_world_m": [
+            0.31482839584350586,
+            -0.18751105666160583,
+            2.612762451171875
+          ],
+          "target_end_world_m": [
+            0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "angle_before_deg": 0.6214960947740911,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 6624
+        },
+        {
+          "bone": "LeftForeArm",
+          "source_start_world_m": [
+            0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "source_end_world_m": [
+            0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "target_start_world_m": [
+            0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "target_end_world_m": [
+            0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "angle_before_deg": 0.0,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 6026
+        },
+        {
+          "bone": "LeftHand",
+          "source_start_world_m": [
+            0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "source_end_world_m": [
+            0.6086938381195068,
+            -0.6358515024185181,
+            1.7869762182235718
+          ],
+          "target_start_world_m": [
+            0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "target_end_world_m": [
+            0.6086938381195068,
+            -0.6358515024185181,
+            1.7869762182235718
+          ],
+          "angle_before_deg": 0.0,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 4698
+        }
+      ],
+      "vertices_moved": 8132,
+      "maximum_displacement_m": 0.007537080284374976,
+      "membership": "nearest inferred rig-bone segment after the parent target correction",
+      "joint_blend_band_m": 0.04
+    },
+    "RightArm": {
+      "segments": [
+        {
+          "bone": "RightArm",
+          "source_start_world_m": [
+            -0.31095999479293823,
+            -0.18047699332237244,
+            2.6130259037017822
+          ],
+          "source_end_world_m": [
+            -0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "target_start_world_m": [
+            -0.3080804646015167,
+            -0.18063071370124817,
+            2.6149520874023438
+          ],
+          "target_end_world_m": [
+            -0.4492760896682739,
+            -0.13828201591968536,
+            2.129756212234497
+          ],
+          "angle_before_deg": 4.69172823098122,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 4606
+        },
+        {
+          "bone": "RightForeArm",
+          "source_start_world_m": [
+            -0.4691309332847595,
+            -0.16121606528759003,
+            2.184993028640747
+          ],
+          "source_end_world_m": [
+            -0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "target_start_world_m": [
+            -0.4492760896682739,
+            -0.13828201591968536,
+            2.129756212234497
+          ],
+          "target_end_world_m": [
+            -0.4675523638725281,
+            -0.22455796599388123,
+            1.661215901374817
+          ],
+          "angle_before_deg": 47.00804271727698,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 7407
+        },
+        {
+          "bone": "RightHand",
+          "source_start_world_m": [
+            -0.5685197114944458,
+            -0.5042595267295837,
+            1.9586433172225952
+          ],
+          "source_end_world_m": [
+            -0.6086938381195068,
+            -0.6358515024185181,
+            1.7869762182235718
+          ],
+          "target_start_world_m": [
+            -0.4675523638725281,
+            -0.22455796599388123,
+            1.661215901374817
+          ],
+          "target_end_world_m": [
+            -0.44364333152770996,
+            -0.22540810704231262,
+            1.4425206184387207
+          ],
+          "angle_before_deg": 40.69921213189506,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 4094
+        }
+      ],
+      "vertices_moved": 16107,
+      "maximum_displacement_m": 0.7198660390585621,
+      "membership": "nearest inferred rig-bone segment after the parent target correction",
+      "joint_blend_band_m": 0.04
+    },
+    "LeftLeg": {
+      "segments": [
+        {
+          "bone": "LeftUpLeg",
+          "source_start_world_m": [
+            0.20155133306980133,
+            -0.16419611871242523,
+            1.6277326345443726
+          ],
+          "source_end_world_m": [
+            0.2812199890613556,
+            -0.1706559956073761,
+            0.9093980193138123
+          ],
+          "target_start_world_m": [
+            0.20155133306980133,
+            -0.16419611871242523,
+            1.6277326345443726
+          ],
+          "target_end_world_m": [
+            0.278532475233078,
+            -0.17093442380428314,
+            0.9094609618186951
+          ],
+          "angle_before_deg": 0.21214208710323915,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 10798
+        },
+        {
+          "bone": "LeftLeg",
+          "source_start_world_m": [
+            0.2812199890613556,
+            -0.1706559956073761,
+            0.9093980193138123
+          ],
+          "source_end_world_m": [
+            0.331822007894516,
+            -0.19694699347019196,
+            0.1708430051803589
+          ],
+          "target_start_world_m": [
+            0.278532475233078,
+            -0.17093442380428314,
+            0.9094609618186951
+          ],
+          "target_end_world_m": [
+            0.32678142189979553,
+            -0.2083982229232788,
+            0.16884131729602814
+          ],
+          "angle_before_deg": 0.8769264934340562,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 18094
+        },
+        {
+          "bone": "LeftFoot",
+          "source_start_world_m": [
+            0.331822007894516,
+            -0.19694699347019196,
+            0.1708430051803589
+          ],
+          "source_end_world_m": [
+            0.40837743878364563,
+            -0.4079805016517639,
+            0.08596589416265488
+          ],
+          "target_start_world_m": [
+            0.32678142189979553,
+            -0.2083982229232788,
+            0.16884131729602814
+          ],
+          "target_end_world_m": [
+            0.40333685278892517,
+            -0.4194317162036896,
+            0.08396420627832413
+          ],
+          "angle_before_deg": 0.0,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 6978
+        }
+      ],
+      "vertices_moved": 35870,
+      "maximum_displacement_m": 0.015101472398653622,
+      "membership": "nearest inferred rig-bone segment after the parent target correction",
+      "joint_blend_band_m": 0.04
+    },
+    "RightLeg": {
+      "segments": [
+        {
+          "bone": "RightUpLeg",
+          "source_start_world_m": [
+            -0.19153861701488495,
+            -0.16653591394424438,
+            1.6343696117401123
+          ],
+          "source_end_world_m": [
+            -0.2722199857234955,
+            -0.1706559956073761,
+            0.9426789879798889
+          ],
+          "target_start_world_m": [
+            -0.19153861701488495,
+            -0.16653591394424438,
+            1.6343696117401123
+          ],
+          "target_end_world_m": [
+            -0.2690819799900055,
+            -0.18264013528823853,
+            0.9426094889640808
+          ],
+          "angle_before_deg": 1.0193319889257082,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 9158
+        },
+        {
+          "bone": "RightLeg",
+          "source_start_world_m": [
+            -0.2722199857234955,
+            -0.1706559956073761,
+            0.9426789879798889
+          ],
+          "source_end_world_m": [
+            -0.3228220045566559,
+            -0.18713000416755676,
+            0.19746799767017365
+          ],
+          "target_start_world_m": [
+            -0.2690819799900055,
+            -0.18264013528823853,
+            0.9426094889640808
+          ],
+          "target_end_world_m": [
+            -0.3233594000339508,
+            -0.1883082389831543,
+            0.19616971909999847
+          ],
+          "angle_before_deg": 0.8737969327728681,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 16774
+        },
+        {
+          "bone": "RightFoot",
+          "source_start_world_m": [
+            -0.3228220045566559,
+            -0.18713000416755676,
+            0.19746799767017365
+          ],
+          "source_end_world_m": [
+            -0.405325710773468,
+            -0.38145309686660767,
+            0.08331172168254852
+          ],
+          "target_start_world_m": [
+            -0.3233594000339508,
+            -0.1883082389831543,
+            0.19616971909999847
+          ],
+          "target_end_world_m": [
+            -0.40586310625076294,
+            -0.3826313614845276,
+            0.08201344311237335
+          ],
+          "angle_before_deg": 0.0,
+          "angle_after_deg": 0.0,
+          "assigned_vertices": 6999
+        }
+      ],
+      "vertices_moved": 32931,
+      "maximum_displacement_m": 0.013792529003099732,
+      "membership": "nearest inferred rig-bone segment after the parent target correction",
+      "joint_blend_band_m": 0.04
+    }
+  },
+  "coverage_24_bones": {
+    "bones_checked": 24,
+    "per_bone": {
+      "Hips": {
+        "midpoint_world_m": [
+          0.005475593730807304,
+          -0.16674275696277618,
+          1.9289958477020264
+        ],
+        "nearest_triangle_surface_distance_m": 0.039137449115514755,
+        "nearest_triangle_signed_plane_distance_m": 0.03469128627330065,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.039137449115514755,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "Spine02": {
+        "midpoint_world_m": [
+          0.004479954019188881,
+          -0.17520545423030853,
+          2.1723666191101074
+        ],
+        "nearest_triangle_surface_distance_m": 0.05677567049860954,
+        "nearest_triangle_signed_plane_distance_m": 0.054984308895654976,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.05677567049860954,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "Spine01": {
+        "midpoint_world_m": [
+          0.0034843645989894867,
+          -0.18366824090480804,
+          2.4157378673553467
+        ],
+        "nearest_triangle_surface_distance_m": 0.002138986252248287,
+        "nearest_triangle_signed_plane_distance_m": 0.002138986396744258,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.002138986252248287,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "Spine": {
+        "midpoint_world_m": [
+          0.0021041128784418106,
+          -0.19111457467079163,
+          2.629877805709839
+        ],
+        "nearest_triangle_surface_distance_m": 0.03182226046919823,
+        "nearest_triangle_signed_plane_distance_m": 0.03164111550722737,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.03182226046919823,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "neck": {
+        "midpoint_world_m": [
+          0.0006107696099206805,
+          -0.19655495882034302,
+          2.7863292694091797
+        ],
+        "nearest_triangle_surface_distance_m": 0.048653144389390945,
+        "nearest_triangle_signed_plane_distance_m": -0.04865314781829966,
+        "midpoint_enclosed_by_preserved_or_body_surface": true,
+        "inside_ray_votes_of_3": 3,
+        "coverage_distance_m": 0.0,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftShoulder": {
+        "midpoint_world_m": [
+          0.19009214639663696,
+          -0.18760809302330017,
+          2.612762451171875
+        ],
+        "nearest_triangle_surface_distance_m": 0.016187438741326332,
+        "nearest_triangle_signed_plane_distance_m": 0.015539236972699655,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.016187438741326332,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftArm": {
+        "midpoint_world_m": [
+          0.3919796645641327,
+          -0.17436355352401733,
+          2.3988776206970215
+        ],
+        "nearest_triangle_surface_distance_m": 0.059022437781095505,
+        "nearest_triangle_signed_plane_distance_m": 0.05845095262338873,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.059022437781095505,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftForeArm": {
+        "midpoint_world_m": [
+          0.5188252925872803,
+          -0.3327378034591675,
+          2.0718181133270264
+        ],
+        "nearest_triangle_surface_distance_m": 0.03573313355445862,
+        "nearest_triangle_signed_plane_distance_m": -0.0357318501919508,
+        "midpoint_enclosed_by_preserved_or_body_surface": true,
+        "inside_ray_votes_of_3": 3,
+        "coverage_distance_m": 0.0,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftHand": {
+        "midpoint_world_m": [
+          0.5685197114944458,
+          -0.5042595267295837,
+          1.9586433172225952
+        ],
+        "nearest_triangle_surface_distance_m": 0.0020915004424750805,
+        "nearest_triangle_signed_plane_distance_m": 0.0020915005734423175,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.0020915004424750805,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightShoulder": {
+        "midpoint_world_m": [
+          -0.1836528331041336,
+          -0.18244796991348267,
+          2.6149520874023438
+        ],
+        "nearest_triangle_surface_distance_m": 0.054411377757787704,
+        "nearest_triangle_signed_plane_distance_m": 0.05402830149978399,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.054411377757787704,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightArm": {
+        "midpoint_world_m": [
+          -0.37867826223373413,
+          -0.15945637226104736,
+          2.372354030609131
+        ],
+        "nearest_triangle_surface_distance_m": 0.029619086533784866,
+        "nearest_triangle_signed_plane_distance_m": 0.029619087115861475,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.029619086533784866,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightForeArm": {
+        "midpoint_world_m": [
+          -0.458414226770401,
+          -0.1814199984073639,
+          1.8954861164093018
+        ],
+        "nearest_triangle_surface_distance_m": 0.04506058990955353,
+        "nearest_triangle_signed_plane_distance_m": -0.04503410869074287,
+        "midpoint_enclosed_by_preserved_or_body_surface": true,
+        "inside_ray_votes_of_3": 3,
+        "coverage_distance_m": 0.0,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightHand": {
+        "midpoint_world_m": [
+          -0.4675523638725281,
+          -0.22455796599388123,
+          1.661215901374817
+        ],
+        "nearest_triangle_surface_distance_m": 0.013074198737740517,
+        "nearest_triangle_signed_plane_distance_m": 0.01307420086232014,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.013074198737740517,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftUpLeg": {
+        "midpoint_world_m": [
+          0.24004191160202026,
+          -0.1675652712583542,
+          1.2685967683792114
+        ],
+        "nearest_triangle_surface_distance_m": 0.04894591495394707,
+        "nearest_triangle_signed_plane_distance_m": 0.048677810933440924,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.04894591495394707,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftLeg": {
+        "midpoint_world_m": [
+          0.30265694856643677,
+          -0.18966633081436157,
+          0.539151132106781
+        ],
+        "nearest_triangle_surface_distance_m": 0.022705314680933952,
+        "nearest_triangle_signed_plane_distance_m": 0.022697152919135988,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.022705314680933952,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftFoot": {
+        "midpoint_world_m": [
+          0.37098419666290283,
+          -0.3302515149116516,
+          0.1198340430855751
+        ],
+        "nearest_triangle_surface_distance_m": 0.013824311085045338,
+        "nearest_triangle_signed_plane_distance_m": 0.013824310968630016,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.013824311085045338,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "LeftToeBase": {
+        "midpoint_world_m": [
+          0.4151870012283325,
+          -0.4521048367023468,
+          0.07082676887512207
+        ],
+        "nearest_triangle_surface_distance_m": 0.04545358568429947,
+        "nearest_triangle_signed_plane_distance_m": 0.045290250331163406,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.04545358568429947,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightUpLeg": {
+        "midpoint_world_m": [
+          -0.23031029105186462,
+          -0.17458802461624146,
+          1.288489580154419
+        ],
+        "nearest_triangle_surface_distance_m": 0.04909386485815048,
+        "nearest_triangle_signed_plane_distance_m": 0.04871382343117148,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.04909386485815048,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightLeg": {
+        "midpoint_world_m": [
+          -0.29622069001197815,
+          -0.1854741871356964,
+          0.5693895816802979
+        ],
+        "nearest_triangle_surface_distance_m": 0.015344505198299885,
+        "nearest_triangle_signed_plane_distance_m": 0.015343808510806412,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.015344505198299885,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightFoot": {
+        "midpoint_world_m": [
+          -0.36860665678977966,
+          -0.2948785424232483,
+          0.13356080651283264
+        ],
+        "nearest_triangle_surface_distance_m": 0.021232645958662033,
+        "nearest_triangle_signed_plane_distance_m": 0.021153602632693946,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.021232645958662033,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "RightToeBase": {
+        "midpoint_world_m": [
+          -0.4138539135456085,
+          -0.4014488160610199,
+          0.070951908826828
+        ],
+        "nearest_triangle_surface_distance_m": 0.04709051549434662,
+        "nearest_triangle_signed_plane_distance_m": 0.04567641136236489,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.04709051549434662,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "new Meshy body"
+      },
+      "Head": {
+        "midpoint_world_m": [
+          -0.0017132061766460538,
+          -0.2526821494102478,
+          3.0286972522735596
+        ],
+        "nearest_triangle_surface_distance_m": 0.11046299338340759,
+        "nearest_triangle_signed_plane_distance_m": -0.0971892753929069,
+        "midpoint_enclosed_by_preserved_or_body_surface": true,
+        "inside_ray_votes_of_3": 3,
+        "coverage_distance_m": 0.0,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "published head/hair/NeckBlend"
+      },
+      "head_end": {
+        "midpoint_world_m": [
+          -0.003426317824050784,
+          -0.30658388137817383,
+          3.2070677280426025
+        ],
+        "nearest_triangle_surface_distance_m": 0.06593743711709976,
+        "nearest_triangle_signed_plane_distance_m": 0.06585884699597955,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.06593743711709976,
+        "gate_m": 0.06,
+        "gate_pass": false,
+        "coverage_surface": "published head/hair/NeckBlend"
+      },
+      "headfront": {
+        "midpoint_world_m": [
+          -1.0821249674108913e-07,
+          -0.44711461663246155,
+          2.8503258228302
+        ],
+        "nearest_triangle_surface_distance_m": 0.03732309862971306,
+        "nearest_triangle_signed_plane_distance_m": 0.03730155181619921,
+        "midpoint_enclosed_by_preserved_or_body_surface": false,
+        "inside_ray_votes_of_3": 0,
+        "coverage_distance_m": 0.03732309862971306,
+        "gate_m": 0.06,
+        "gate_pass": true,
+        "coverage_surface": "published head/hair/NeckBlend"
+      }
+    },
+    "maximum_coverage_distance_m": 0.06593743711709976,
+    "all_24_bones_within_60mm": false,
+    "distance_definition": "zero when midpoint is enclosed; otherwise nearest triangle-surface distance"
+  },
+  "binding": {
+    "operator": "bpy.ops.object.parent_set(type='ARMATURE_AUTO', keep_transform=True)",
+    "operator_result": [
+      "FINISHED"
+    ],
+    "temporarily_disabled_deform_bones": [
+      "head_end",
+      "headfront",
+      "phys_cape_C_00",
+      "phys_cape_C_01",
+      "phys_cape_C_02",
+      "phys_cape_C_03",
+      "phys_cape_C_04",
+      "phys_cape_C_05",
+      "phys_cape_C_06",
+      "phys_cape_L_00",
+      "phys_cape_L_01",
+      "phys_cape_L_02",
+      "phys_cape_L_03",
+      "phys_cape_L_04",
+      "phys_cape_L_05",
+      "phys_cape_L_06",
+      "phys_cape_R_00",
+      "phys_cape_R_01",
+      "phys_cape_R_02",
+      "phys_cape_R_03",
+      "phys_cape_R_04",
+      "phys_cape_R_05",
+      "phys_cape_R_06",
+      "phys_hair_back_00",
+      "phys_hair_back_01",
+      "phys_hair_back_02",
+      "phys_hair_back_03",
+      "phys_hair_front_L_00",
+      "phys_hair_front_L_01",
+      "phys_hair_front_L_02",
+      "phys_hair_front_L_03",
+      "phys_hair_front_R_00",
+      "phys_hair_front_R_01",
+      "phys_hair_front_R_02",
+      "phys_hair_front_R_03",
+      "phys_robe_back_C_00",
+      "phys_robe_back_C_01",
+      "phys_robe_back_C_02",
+      "phys_robe_back_C_03",
+      "phys_robe_back_C_04",
+      "phys_robe_back_C_05",
+      "phys_robe_back_C_06",
+      "phys_robe_back_C_07",
+      "phys_robe_back_L_00",
+      "phys_robe_back_L_01",
+      "phys_robe_back_L_02",
+      "phys_robe_back_L_03",
+      "phys_robe_back_L_04",
+      "phys_robe_back_L_05",
+      "phys_robe_back_L_06",
+      "phys_robe_back_L_07",
+      "phys_robe_back_R_00",
+      "phys_robe_back_R_01",
+      "phys_robe_back_R_02",
+      "phys_robe_back_R_03",
+      "phys_robe_back_R_04",
+      "phys_robe_back_R_05",
+      "phys_robe_back_R_06",
+      "phys_robe_back_R_07",
+      "phys_robe_front_C_00",
+      "phys_robe_front_C_01",
+      "phys_robe_front_C_02",
+      "phys_robe_front_C_03",
+      "phys_robe_front_C_04",
+      "phys_robe_front_C_05",
+      "phys_robe_front_C_06",
+      "phys_robe_front_C_07",
+      "phys_robe_front_L_00",
+      "phys_robe_front_L_01",
+      "phys_robe_front_L_02",
+      "phys_robe_front_L_03",
+      "phys_robe_front_L_04",
+      "phys_robe_front_L_05",
+      "phys_robe_front_L_06",
+      "phys_robe_front_L_07",
+      "phys_robe_front_R_00",
+      "phys_robe_front_R_01",
+      "phys_robe_front_R_02",
+      "phys_robe_front_R_03",
+      "phys_robe_front_R_04",
+      "phys_robe_front_R_05",
+      "phys_robe_front_R_06",
+      "phys_robe_front_R_07",
+      "phys_robe_side_L_00",
+      "phys_robe_side_L_01",
+      "phys_robe_side_L_02",
+      "phys_robe_side_L_03",
+      "phys_robe_side_L_04",
+      "phys_robe_side_L_05",
+      "phys_robe_side_L_06",
+      "phys_robe_side_L_07",
+      "phys_robe_side_R_00",
+      "phys_robe_side_R_01",
+      "phys_robe_side_R_02",
+      "phys_robe_side_R_03",
+      "phys_robe_side_R_04",
+      "phys_robe_side_R_05",
+      "phys_robe_side_R_06",
+      "phys_robe_side_R_07"
+    ],
+    "temporary_heat_segment_normalization": {
+      "LeftToeBase": "terminal 0.12 m along original direction",
+      "RightToeBase": "terminal 0.12 m along original direction",
+      "LeftHand": "terminal 0.22 m along original direction",
+      "LeftUpLeg": "LeftLeg",
+      "RightForeArm": "RightHand",
+      "Spine02": "Spine01",
+      "LeftShoulder": "LeftArm",
+      "RightFoot": "RightToeBase",
+      "RightUpLeg": "RightLeg",
+      "Spine": "neck",
+      "Spine01": "Spine",
+      "LeftArm": "LeftForeArm",
+      "Hips": "Spine02",
+      "LeftLeg": "LeftFoot",
+      "Head": "head_end",
+      "neck": "Head",
+      "RightHand": "terminal 0.22 m along original direction",
+      "LeftForeArm": "LeftHand",
+      "RightShoulder": "RightArm",
+      "LeftFoot": "LeftToeBase",
+      "RightArm": "RightForeArm",
+      "RightLeg": "RightFoot"
+    },
+    "heat_operator_armature": "temporary duplicate of Armature; deleted after extracting weights",
+    "heat_bones": [
+      "Head",
+      "Hips",
+      "LeftArm",
+      "LeftFoot",
+      "LeftForeArm",
+      "LeftHand",
+      "LeftLeg",
+      "LeftShoulder",
+      "LeftToeBase",
+      "LeftUpLeg",
+      "RightArm",
+      "RightFoot",
+      "RightForeArm",
+      "RightHand",
+      "RightLeg",
+      "RightShoulder",
+      "RightToeBase",
+      "RightUpLeg",
+      "Spine",
+      "Spine01",
+      "Spine02",
+      "neck"
+    ],
+    "heat_unweighted_vertices_before_fallback": 0,
+    "fallback": "nearest-bone weights copied from nearest heat-weighted vertex",
+    "top_influences_nonplate": 4,
+    "heat_graph_smoothing": {
+      "iterations": 6,
+      "self_weight": 2.0
+    },
+    "harmonic_transition": {
+      "iterations": 30,
+      "self_weight": 1.0,
+      "fixed_vertices": 14330
+    },
+    "phys_weight_vertices": 0,
+    "plate_component_count": 114,
+    "plate_partition": {
+      "classified_plate_vertices": 55838,
+      "rigid_core_vertices": 14330,
+      "heat_blend_boundary_vertices": 41508,
+      "erosion_distance_m": 0.04
+    },
+    "plate_components": [
+      {
+        "component": 0,
+        "vertices": 6681,
+        "chosen_bone": "LeftShoulder",
+        "summed_heat_weight": 2168.987244794145
+      },
+      {
+        "component": 1,
+        "vertices": 949,
+        "chosen_bone": "RightFoot",
+        "summed_heat_weight": 438.02057260722
+      },
+      {
+        "component": 2,
+        "vertices": 949,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 797.7802802198869
+      },
+      {
+        "component": 3,
+        "vertices": 888,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 645.179137979446
+      },
+      {
+        "component": 4,
+        "vertices": 837,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 411.93601284920595
+      },
+      {
+        "component": 5,
+        "vertices": 498,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 432.76009620085506
+      },
+      {
+        "component": 6,
+        "vertices": 348,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 119.30751459353618
+      },
+      {
+        "component": 7,
+        "vertices": 326,
+        "chosen_bone": "RightForeArm",
+        "summed_heat_weight": 317.5715664498591
+      },
+      {
+        "component": 8,
+        "vertices": 325,
+        "chosen_bone": "LeftUpLeg",
+        "summed_heat_weight": 153.90389024774746
+      },
+      {
+        "component": 9,
+        "vertices": 227,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 118.61077551304479
+      },
+      {
+        "component": 10,
+        "vertices": 195,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 97.20510407166546
+      },
+      {
+        "component": 11,
+        "vertices": 191,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 111.99863208084479
+      },
+      {
+        "component": 12,
+        "vertices": 164,
+        "chosen_bone": "Spine02",
+        "summed_heat_weight": 54.24094435730947
+      },
+      {
+        "component": 13,
+        "vertices": 161,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 141.77691356739095
+      },
+      {
+        "component": 14,
+        "vertices": 145,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 73.63158946046968
+      },
+      {
+        "component": 15,
+        "vertices": 129,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 67.72743566044315
+      },
+      {
+        "component": 16,
+        "vertices": 117,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 89.04044360399214
+      },
+      {
+        "component": 17,
+        "vertices": 113,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 85.46887116339245
+      },
+      {
+        "component": 18,
+        "vertices": 111,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 98.11167656914033
+      },
+      {
+        "component": 19,
+        "vertices": 108,
+        "chosen_bone": "LeftToeBase",
+        "summed_heat_weight": 81.61279207290822
+      },
+      {
+        "component": 20,
+        "vertices": 98,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 31.542668921280445
+      },
+      {
+        "component": 21,
+        "vertices": 91,
+        "chosen_bone": "RightToeBase",
+        "summed_heat_weight": 71.45135508537315
+      },
+      {
+        "component": 22,
+        "vertices": 67,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 40.805717066931734
+      },
+      {
+        "component": 23,
+        "vertices": 67,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 29.35320352090384
+      },
+      {
+        "component": 24,
+        "vertices": 67,
+        "chosen_bone": "LeftUpLeg",
+        "summed_heat_weight": 38.298929240336925
+      },
+      {
+        "component": 25,
+        "vertices": 65,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 49.08665525658929
+      },
+      {
+        "component": 26,
+        "vertices": 33,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 16.705113857848026
+      },
+      {
+        "component": 27,
+        "vertices": 24,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 7.611244770680927
+      },
+      {
+        "component": 28,
+        "vertices": 22,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 14.623478559309836
+      },
+      {
+        "component": 29,
+        "vertices": 22,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 7.155927713018196
+      },
+      {
+        "component": 30,
+        "vertices": 22,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 9.06620061693135
+      },
+      {
+        "component": 31,
+        "vertices": 20,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 17.635176388166173
+      },
+      {
+        "component": 32,
+        "vertices": 17,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 5.858074142098006
+      },
+      {
+        "component": 33,
+        "vertices": 14,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 9.726419964152415
+      },
+      {
+        "component": 34,
+        "vertices": 14,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 11.332163436613168
+      },
+      {
+        "component": 35,
+        "vertices": 13,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 11.700194667425393
+      },
+      {
+        "component": 36,
+        "vertices": 11,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 4.680565686016736
+      },
+      {
+        "component": 37,
+        "vertices": 10,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 9.521723689862604
+      },
+      {
+        "component": 38,
+        "vertices": 9,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 6.4675748225905165
+      },
+      {
+        "component": 39,
+        "vertices": 8,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 5.616797799409916
+      },
+      {
+        "component": 40,
+        "vertices": 8,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 7.036512285595181
+      },
+      {
+        "component": 41,
+        "vertices": 8,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 5.1822806087311655
+      },
+      {
+        "component": 42,
+        "vertices": 7,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 2.957600669938662
+      },
+      {
+        "component": 43,
+        "vertices": 7,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 6.1674351713434215
+      },
+      {
+        "component": 44,
+        "vertices": 7,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 5.884844017198629
+      },
+      {
+        "component": 45,
+        "vertices": 6,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 3.7473990019329917
+      },
+      {
+        "component": 46,
+        "vertices": 6,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 3.2427757125349483
+      },
+      {
+        "component": 47,
+        "vertices": 6,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 5.271374330740754
+      },
+      {
+        "component": 48,
+        "vertices": 5,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 1.6661892617987042
+      },
+      {
+        "component": 49,
+        "vertices": 5,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 2.9410356301936993
+      },
+      {
+        "component": 50,
+        "vertices": 5,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 3.715393873957776
+      },
+      {
+        "component": 51,
+        "vertices": 5,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 4.41710918689808
+      },
+      {
+        "component": 52,
+        "vertices": 4,
+        "chosen_bone": "RightFoot",
+        "summed_heat_weight": 2.5905616839348546
+      },
+      {
+        "component": 53,
+        "vertices": 4,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 3.063479617871889
+      },
+      {
+        "component": 54,
+        "vertices": 4,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 1.801720219642388
+      },
+      {
+        "component": 55,
+        "vertices": 4,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 2.4299343584294464
+      },
+      {
+        "component": 56,
+        "vertices": 3,
+        "chosen_bone": "RightToeBase",
+        "summed_heat_weight": 1.7341938058176734
+      },
+      {
+        "component": 57,
+        "vertices": 3,
+        "chosen_bone": "LeftToeBase",
+        "summed_heat_weight": 1.4806923874230091
+      },
+      {
+        "component": 58,
+        "vertices": 3,
+        "chosen_bone": "LeftFoot",
+        "summed_heat_weight": 2.688228941148384
+      },
+      {
+        "component": 59,
+        "vertices": 3,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 2.0010089331454077
+      },
+      {
+        "component": 60,
+        "vertices": 3,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 1.088802409724223
+      },
+      {
+        "component": 61,
+        "vertices": 3,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 2.2876940208478547
+      },
+      {
+        "component": 62,
+        "vertices": 2,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 0.5790925653743295
+      },
+      {
+        "component": 63,
+        "vertices": 2,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 1.5213284336181965
+      },
+      {
+        "component": 64,
+        "vertices": 2,
+        "chosen_bone": "LeftFoot",
+        "summed_heat_weight": 1.7586359951494381
+      },
+      {
+        "component": 65,
+        "vertices": 2,
+        "chosen_bone": "LeftFoot",
+        "summed_heat_weight": 1.4984592211648708
+      },
+      {
+        "component": 66,
+        "vertices": 2,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 1.2482282177531179
+      },
+      {
+        "component": 67,
+        "vertices": 2,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 1.2992108425037485
+      },
+      {
+        "component": 68,
+        "vertices": 2,
+        "chosen_bone": "Spine02",
+        "summed_heat_weight": 0.578410514153086
+      },
+      {
+        "component": 69,
+        "vertices": 2,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 0.6630212780254355
+      },
+      {
+        "component": 70,
+        "vertices": 2,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 1.9376627339202597
+      },
+      {
+        "component": 71,
+        "vertices": 2,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 1.2482180943920478
+      },
+      {
+        "component": 72,
+        "vertices": 2,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 0.7821798040082002
+      },
+      {
+        "component": 73,
+        "vertices": 2,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 1.6369840477945443
+      },
+      {
+        "component": 74,
+        "vertices": 2,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 1.4930576822247277
+      },
+      {
+        "component": 75,
+        "vertices": 1,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 0.717267576841531
+      },
+      {
+        "component": 76,
+        "vertices": 1,
+        "chosen_bone": "Spine02",
+        "summed_heat_weight": 0.40421327974120097
+      },
+      {
+        "component": 77,
+        "vertices": 1,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 0.3074334356288777
+      },
+      {
+        "component": 78,
+        "vertices": 1,
+        "chosen_bone": "RightFoot",
+        "summed_heat_weight": 0.6184486856404587
+      },
+      {
+        "component": 79,
+        "vertices": 1,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 0.6588409444291482
+      },
+      {
+        "component": 80,
+        "vertices": 1,
+        "chosen_bone": "Spine02",
+        "summed_heat_weight": 0.39959590798368216
+      },
+      {
+        "component": 81,
+        "vertices": 1,
+        "chosen_bone": "LeftFoot",
+        "summed_heat_weight": 0.7238304050107213
+      },
+      {
+        "component": 82,
+        "vertices": 1,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 0.4751388160974994
+      },
+      {
+        "component": 83,
+        "vertices": 1,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 0.9668261396814293
+      },
+      {
+        "component": 84,
+        "vertices": 1,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 0.7799432517886784
+      },
+      {
+        "component": 85,
+        "vertices": 1,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 0.5669493133669176
+      },
+      {
+        "component": 86,
+        "vertices": 1,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 0.9350969014384246
+      },
+      {
+        "component": 87,
+        "vertices": 1,
+        "chosen_bone": "LeftArm",
+        "summed_heat_weight": 0.5551042942625456
+      },
+      {
+        "component": 88,
+        "vertices": 1,
+        "chosen_bone": "LeftUpLeg",
+        "summed_heat_weight": 0.44385329857613914
+      },
+      {
+        "component": 89,
+        "vertices": 1,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 0.9625971887481728
+      },
+      {
+        "component": 90,
+        "vertices": 1,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 0.3138661513984638
+      },
+      {
+        "component": 91,
+        "vertices": 1,
+        "chosen_bone": "LeftForeArm",
+        "summed_heat_weight": 0.7965881314029702
+      },
+      {
+        "component": 92,
+        "vertices": 1,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 0.3647019318255651
+      },
+      {
+        "component": 93,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8072738639870951
+      },
+      {
+        "component": 94,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8830273195044684
+      },
+      {
+        "component": 95,
+        "vertices": 1,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 0.7558650373532696
+      },
+      {
+        "component": 96,
+        "vertices": 1,
+        "chosen_bone": "RightUpLeg",
+        "summed_heat_weight": 0.37784945375173695
+      },
+      {
+        "component": 97,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8790712466058436
+      },
+      {
+        "component": 98,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8824781229452499
+      },
+      {
+        "component": 99,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8825760309301751
+      },
+      {
+        "component": 100,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8828623895163831
+      },
+      {
+        "component": 101,
+        "vertices": 1,
+        "chosen_bone": "LeftHand",
+        "summed_heat_weight": 0.8824383232854505
+      },
+      {
+        "component": 102,
+        "vertices": 1,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 0.30611977756286984
+      },
+      {
+        "component": 103,
+        "vertices": 1,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 0.3080401096648328
+      },
+      {
+        "component": 104,
+        "vertices": 1,
+        "chosen_bone": "Hips",
+        "summed_heat_weight": 0.3062176849423348
+      },
+      {
+        "component": 105,
+        "vertices": 1,
+        "chosen_bone": "LeftUpLeg",
+        "summed_heat_weight": 0.3156001729223037
+      },
+      {
+        "component": 106,
+        "vertices": 1,
+        "chosen_bone": "LeftUpLeg",
+        "summed_heat_weight": 0.3254778716050437
+      },
+      {
+        "component": 107,
+        "vertices": 1,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 0.808090381823546
+      },
+      {
+        "component": 108,
+        "vertices": 1,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 0.6234517353068006
+      },
+      {
+        "component": 109,
+        "vertices": 1,
+        "chosen_bone": "LeftLeg",
+        "summed_heat_weight": 0.5524814858796977
+      },
+      {
+        "component": 110,
+        "vertices": 1,
+        "chosen_bone": "RightForeArm",
+        "summed_heat_weight": 0.9999871100335237
+      },
+      {
+        "component": 111,
+        "vertices": 1,
+        "chosen_bone": "RightHand",
+        "summed_heat_weight": 0.8203006812416126
+      },
+      {
+        "component": 112,
+        "vertices": 1,
+        "chosen_bone": "RightLeg",
+        "summed_heat_weight": 0.8261683913059832
+      },
+      {
+        "component": 113,
+        "vertices": 1,
+        "chosen_bone": "Spine01",
+        "summed_heat_weight": 0.2912852554199003
+      }
+    ]
+  },
+  "weights": {
+    "vertices": 149413,
+    "unweighted_vertices": 0,
+    "bad_weight_sum_vertices": 0,
+    "maximum_weight_sum_error": 1.4674151316285133e-07,
+    "vertices_with_phys_weights": 0,
+    "vertices_over_four_influences": 0
+  },
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "preserved_geometry_sha256_before": {
+    "AstraChar2_Meshy_HeadHair": "6a780db76c29d1cf362ec5ca462d98198fe09b1d1a306bfb6906f6e381393bcd",
+    "AstraChar2_Meshy_NeckBlend": "c590a6ff198b428daa18a8b7525a7219b7340c7ca1ae42263561891b7c3e9e05",
+    "Godwyn_Sword": "01aa81dcb27ebb08a2735366d3ae6ab13d3a5b70dcf4d8ab263f09ab972582a3"
+  },
+  "preserved_geometry_sha256_after": {
+    "AstraChar2_Meshy_HeadHair": "6a780db76c29d1cf362ec5ca462d98198fe09b1d1a306bfb6906f6e381393bcd",
+    "AstraChar2_Meshy_NeckBlend": "c590a6ff198b428daa18a8b7525a7219b7340c7ca1ae42263561891b7c3e9e05",
+    "Godwyn_Sword": "01aa81dcb27ebb08a2735366d3ae6ab13d3a5b70dcf4d8ab263f09ab972582a3"
+  },
+  "preserved_geometry_unchanged": true,
+  "cloth_secondary_motion_known_gap": "new Meshy body has zero phys_* weights in i03",
+  "selected_for_glb": [
+    "Armature",
+    "Godwyn_Sword",
+    "AstraChar2_Meshy_HeadHair",
+    "AstraChar2_Meshy_NeckBlend",
+    "char1"
+  ],
+  "candidate_sha256": "04187a43d088c037cc4089f001e931ee67ec0b99cc6fa05710b162b09a4bb3aa",
+  "glb_sha256": "2d29ebeda8b51356780ed51ce844a15c5dbd496c7727160f6633f0455587a91c",
+  "candidate_bytes": 192131173,
+  "glb_bytes": 62342332,
+  "source_unchanged": true
+}
