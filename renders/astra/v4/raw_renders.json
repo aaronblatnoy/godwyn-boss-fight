@@ -1,0 +1,26 @@
+[
+  {
+    "file": "raw/rest_front.png",
+    "engine": "BLENDER_EEVEE",
+    "pose": "rest",
+    "view": "front"
+  },
+  {
+    "file": "raw/rest_side.png",
+    "engine": "BLENDER_EEVEE",
+    "pose": "rest",
+    "view": "side"
+  },
+  {
+    "file": "raw/rest_back.png",
+    "engine": "BLENDER_EEVEE",
+    "pose": "rest",
+    "view": "back"
+  },
+  {
+    "file": "raw/rest_face.png",
+    "engine": "BLENDER_EEVEE",
+    "pose": "rest",
+    "view": "face"
+  }
+]

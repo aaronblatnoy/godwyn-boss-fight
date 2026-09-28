@@ -1,0 +1,16 @@
+{
+  "rigged_unique_uvs": 277690,
+  "unrigged_unique_uvs": 279569,
+  "unique_uvs_exact_at_1e_6": false,
+  "v3_skin_region": {
+    "triangles": 15956,
+    "region": "all skin-mask triangles on separate donor head, including neck; not identically cropped to v4 face ROI",
+    "texture_size": [
+      2048,
+      2048
+    ],
+    "surface_cm2": 1376.8363093359233,
+    "uv_area": 0.07116341898309025,
+    "texels_per_cm": 14.723708125718417
+  }
+}

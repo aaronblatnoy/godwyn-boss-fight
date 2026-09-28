@@ -1,0 +1,706 @@
+{
+  "frames": 51,
+  "stretch_p99_max": 1.5099693802579137,
+  "stretch_gate": 2.2,
+  "lowest_planted_sole_min_m": 0.0009998851455748081,
+  "lowest_planted_sole_max_m": 0.0010001510381698608,
+  "blade_min_z_m": 0.9574980139732361,
+  "blade_body_pairs_max": 0,
+  "sword_non_grip_body_pairs_max": 0,
+  "whole_sword_body_pairs_max": 469,
+  "grip": {
+    "hilt_reference_world_m": [
+      -0.9021658301353455,
+      -0.48841843008995056,
+      1.666123628616333
+    ],
+    "signed_normal_depth_m": 0.007101862567651551,
+    "nearest_surface_distance_m": 0.007101862691342831,
+    "definition": "v3 handle center marker fitted from astra_sword_source; signed distance against nearest right-hand surface normal, positive inward. Open fingers mean this does not certify a closed fist.",
+    "right_hand_faces": 5380,
+    "right_hand_vertices": 4342
+  },
+  "weights": {
+    "objects": {
+      "V4_Body": {
+        "vertices": 279316,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.4301622286438942e-07
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "rows": [
+    {
+      "frame": 1,
+      "stretch_p99": 1.4868415807177864,
+      "stretch_max": 41.967207156112266,
+      "soles_m": {
+        "Left": 0.001000046730041504,
+        "Right": 0.06627967953681946
+      },
+      "blade_min_z_m": 1.1213374137878418,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 2,
+      "stretch_p99": 1.4912960501286545,
+      "stretch_max": 42.128712425924924,
+      "soles_m": {
+        "Left": 0.0009999435860663652,
+        "Right": 0.06591147929430008
+      },
+      "blade_min_z_m": 1.1118323802947998,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 3,
+      "stretch_p99": 1.4941782304463622,
+      "stretch_max": 42.29110949442406,
+      "soles_m": {
+        "Left": 0.001000046730041504,
+        "Right": 0.06533658504486084
+      },
+      "blade_min_z_m": 1.0980108976364136,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 4,
+      "stretch_p99": 1.4972092257764567,
+      "stretch_max": 42.449720376192154,
+      "soles_m": {
+        "Left": 0.001000072923488915,
+        "Right": 0.06471477448940277
+      },
+      "blade_min_z_m": 1.0833090543746948,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 5,
+      "stretch_p99": 1.500346762806103,
+      "stretch_max": 42.60172719845653,
+      "soles_m": {
+        "Left": 0.0010000335751101375,
+        "Right": 0.0641021728515625
+      },
+      "blade_min_z_m": 1.0692569017410278,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 6,
+      "stretch_p99": 1.5027888845245316,
+      "stretch_max": 42.74596376293488,
+      "soles_m": {
+        "Left": 0.0009998977184295654,
+        "Right": 0.06346307694911957
+      },
+      "blade_min_z_m": 1.0555973052978516,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 7,
+      "stretch_p99": 1.5041163526157728,
+      "stretch_max": 42.8819102934697,
+      "soles_m": {
+        "Left": 0.0010000442853197455,
+        "Right": 0.06282884627580643
+      },
+      "blade_min_z_m": 1.0420562028884888,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 8,
+      "stretch_p99": 1.5062452908478274,
+      "stretch_max": 43.02778270169247,
+      "soles_m": {
+        "Left": 0.0010000115726143122,
+        "Right": 0.06221315264701843
+      },
+      "blade_min_z_m": 1.0287154912948608,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 9,
+      "stretch_p99": 1.5073564408105482,
+      "stretch_max": 43.16763942646801,
+      "soles_m": {
+        "Left": 0.0009999149478971958,
+        "Right": 0.061608828604221344
+      },
+      "blade_min_z_m": 1.0158679485321045,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 10,
+      "stretch_p99": 1.5086212738365468,
+      "stretch_max": 43.29457298566256,
+      "soles_m": {
+        "Left": 0.000999911455437541,
+        "Right": 0.06101907417178154
+      },
+      "blade_min_z_m": 1.0035853385925293,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 11,
+      "stretch_p99": 1.5096182914756404,
+      "stretch_max": 43.41136431364168,
+      "soles_m": {
+        "Left": 0.0009999519679695368,
+        "Right": 0.06045085936784744
+      },
+      "blade_min_z_m": 0.9917070269584656,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 12,
+      "stretch_p99": 1.5099693802579137,
+      "stretch_max": 43.51695011197147,
+      "soles_m": {
+        "Left": 0.0009999393951147795,
+        "Right": 0.059848345816135406
+      },
+      "blade_min_z_m": 0.9810946583747864,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 13,
+      "stretch_p99": 1.5095819994182667,
+      "stretch_max": 43.57339991344245,
+      "soles_m": {
+        "Left": 0.0010000192560255527,
+        "Right": 0.059237364679574966
+      },
+      "blade_min_z_m": 0.9727197289466858,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 14,
+      "stretch_p99": 1.5082319377896214,
+      "stretch_max": 43.58329412963858,
+      "soles_m": {
+        "Left": 0.000999931711703539,
+        "Right": 0.058602504432201385
+      },
+      "blade_min_z_m": 0.9668045043945312,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 15,
+      "stretch_p99": 1.5052556791511171,
+      "stretch_max": 43.55712854510071,
+      "soles_m": {
+        "Left": 0.000999932293780148,
+        "Right": 0.057954177260398865
+      },
+      "blade_min_z_m": 0.9629177451133728,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 16,
+      "stretch_p99": 1.502759779996303,
+      "stretch_max": 43.51354914005765,
+      "soles_m": {
+        "Left": 0.000999922165647149,
+        "Right": 0.05734927952289581
+      },
+      "blade_min_z_m": 0.9600352048873901,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 17,
+      "stretch_p99": 1.5000388455885882,
+      "stretch_max": 43.46236306160301,
+      "soles_m": {
+        "Left": 0.0010000073816627264,
+        "Right": 0.056909237056970596
+      },
+      "blade_min_z_m": 0.9574980139732361,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 18,
+      "stretch_p99": 1.4971593085604478,
+      "stretch_max": 43.399137700880914,
+      "soles_m": {
+        "Left": 0.0010000604670494795,
+        "Right": 0.05654170736670494
+      },
+      "blade_min_z_m": 0.9583074450492859,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 19,
+      "stretch_p99": 1.4942034880767379,
+      "stretch_max": 43.3157070314575,
+      "soles_m": {
+        "Left": 0.0009999281028285623,
+        "Right": 0.05622554570436478
+      },
+      "blade_min_z_m": 0.9639764428138733,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 20,
+      "stretch_p99": 1.4905288104596064,
+      "stretch_max": 43.20882838887808,
+      "soles_m": {
+        "Left": 0.001000067568384111,
+        "Right": 0.055955104529857635
+      },
+      "blade_min_z_m": 0.974223256111145,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 21,
+      "stretch_p99": 1.4867807795563708,
+      "stretch_max": 43.080301201261534,
+      "soles_m": {
+        "Left": 0.0010000001639127731,
+        "Right": 0.055732209235429764
+      },
+      "blade_min_z_m": 0.9875033497810364,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 22,
+      "stretch_p99": 1.4826528992956407,
+      "stretch_max": 42.93778227271483,
+      "soles_m": {
+        "Left": 0.0009999638423323631,
+        "Right": 0.055664803832769394
+      },
+      "blade_min_z_m": 1.0013353824615479,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 23,
+      "stretch_p99": 1.4785232758566684,
+      "stretch_max": 42.79085184297348,
+      "soles_m": {
+        "Left": 0.0009999542962759733,
+        "Right": 0.055709950625896454
+      },
+      "blade_min_z_m": 1.0145397186279297,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 24,
+      "stretch_p99": 1.4751920986759037,
+      "stretch_max": 42.63932258154417,
+      "soles_m": {
+        "Left": 0.0009999615140259266,
+        "Right": 0.05585607513785362
+      },
+      "blade_min_z_m": 1.027860403060913,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 25,
+      "stretch_p99": 1.4713349368151383,
+      "stretch_max": 42.479091686777565,
+      "soles_m": {
+        "Left": 0.0009999399771913886,
+        "Right": 0.05611421540379524
+      },
+      "blade_min_z_m": 1.041904091835022,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 26,
+      "stretch_p99": 1.4666542526629183,
+      "stretch_max": 42.302964084655855,
+      "soles_m": {
+        "Left": 0.0009999984176829457,
+        "Right": 0.05650543048977852
+      },
+      "blade_min_z_m": 1.0571714639663696,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 27,
+      "stretch_p99": 1.462741297637608,
+      "stretch_max": 42.11231705007353,
+      "soles_m": {
+        "Left": 0.0009999638423323631,
+        "Right": 0.05702029913663864
+      },
+      "blade_min_z_m": 1.0736726522445679,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 28,
+      "stretch_p99": 1.4593211158937194,
+      "stretch_max": 41.9381814834793,
+      "soles_m": {
+        "Left": 0.0010000288020819426,
+        "Right": 0.05766166374087334
+      },
+      "blade_min_z_m": 1.08997642993927,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 29,
+      "stretch_p99": 1.4563996903207297,
+      "stretch_max": 41.7809373227751,
+      "soles_m": {
+        "Left": 0.001000010990537703,
+        "Right": 0.058450352400541306
+      },
+      "blade_min_z_m": 1.1061136722564697,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 30,
+      "stretch_p99": 1.4541698934331075,
+      "stretch_max": 41.6414605359015,
+      "soles_m": {
+        "Left": 0.0009999846806749701,
+        "Right": 0.059359874576330185
+      },
+      "blade_min_z_m": 1.1219189167022705,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 31,
+      "stretch_p99": 1.45235262046886,
+      "stretch_max": 41.521062436311695,
+      "soles_m": {
+        "Left": 0.0009999489411711693,
+        "Right": 0.060320205986499786
+      },
+      "blade_min_z_m": 1.1370456218719482,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 32,
+      "stretch_p99": 1.4520163780702982,
+      "stretch_max": 41.431069922707,
+      "soles_m": {
+        "Left": 0.0010000717593356967,
+        "Right": 0.06134048476815224
+      },
+      "blade_min_z_m": 1.1499323844909668,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 33,
+      "stretch_p99": 1.452142996978514,
+      "stretch_max": 41.35284756868923,
+      "soles_m": {
+        "Left": 0.0009999173926189542,
+        "Right": 0.0623977854847908
+      },
+      "blade_min_z_m": 1.1615629196166992,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 34,
+      "stretch_p99": 1.4521278240597848,
+      "stretch_max": 41.28980162308749,
+      "soles_m": {
+        "Left": 0.0010001510381698608,
+        "Right": 0.06340599060058594
+      },
+      "blade_min_z_m": 1.1720741987228394,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 35,
+      "stretch_p99": 1.4530378366317132,
+      "stretch_max": 41.2437183217324,
+      "soles_m": {
+        "Left": 0.0009998851455748081,
+        "Right": 0.06433002650737762
+      },
+      "blade_min_z_m": 1.1814610958099365,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 36,
+      "stretch_p99": 1.4543813095519986,
+      "stretch_max": 41.214885256508055,
+      "soles_m": {
+        "Left": 0.0009999662870541215,
+        "Right": 0.06517495959997177
+      },
+      "blade_min_z_m": 1.1895825862884521,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 37,
+      "stretch_p99": 1.4564097270199357,
+      "stretch_max": 41.2027852897146,
+      "soles_m": {
+        "Left": 0.0010000073816627264,
+        "Right": 0.06594689935445786
+      },
+      "blade_min_z_m": 1.196179986000061,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 38,
+      "stretch_p99": 1.4592186358426777,
+      "stretch_max": 41.20442113345903,
+      "soles_m": {
+        "Left": 0.0009999691974371672,
+        "Right": 0.06665849685668945
+      },
+      "blade_min_z_m": 1.2020372152328491,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 465,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 39,
+      "stretch_p99": 1.461676097751265,
+      "stretch_max": 41.21682188442484,
+      "soles_m": {
+        "Left": 0.0009999829344451427,
+        "Right": 0.06729166209697723
+      },
+      "blade_min_z_m": 1.2063950300216675,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 40,
+      "stretch_p99": 1.4639620078773463,
+      "stretch_max": 41.23875010597312,
+      "soles_m": {
+        "Left": 0.000999968615360558,
+        "Right": 0.06782781332731247
+      },
+      "blade_min_z_m": 1.2088154554367065,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 41,
+      "stretch_p99": 1.4664982107739857,
+      "stretch_max": 41.27094720470415,
+      "soles_m": {
+        "Left": 0.0010000217007473111,
+        "Right": 0.06823039799928665
+      },
+      "blade_min_z_m": 1.2091763019561768,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 42,
+      "stretch_p99": 1.468845310758018,
+      "stretch_max": 41.311407952802185,
+      "soles_m": {
+        "Left": 0.0009999250760301948,
+        "Right": 0.06854891031980515
+      },
+      "blade_min_z_m": 1.207305669784546,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 467,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 43,
+      "stretch_p99": 1.4712389185184902,
+      "stretch_max": 41.35821683001166,
+      "soles_m": {
+        "Left": 0.001000004936940968,
+        "Right": 0.06876184046268463
+      },
+      "blade_min_z_m": 1.2036857604980469,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 44,
+      "stretch_p99": 1.4732899567757198,
+      "stretch_max": 41.41188569711712,
+      "soles_m": {
+        "Left": 0.0010000270558521152,
+        "Right": 0.06885320693254471
+      },
+      "blade_min_z_m": 1.1977753639221191,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 45,
+      "stretch_p99": 1.4761218020528404,
+      "stretch_max": 41.47323511444843,
+      "soles_m": {
+        "Left": 0.00099992158357054,
+        "Right": 0.06881719082593918
+      },
+      "blade_min_z_m": 1.18943190574646,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 46,
+      "stretch_p99": 1.4783732531708873,
+      "stretch_max": 41.543315188151205,
+      "soles_m": {
+        "Left": 0.0009999978356063366,
+        "Right": 0.06866378337144852
+      },
+      "blade_min_z_m": 1.1788825988769531,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 47,
+      "stretch_p99": 1.4801908258051089,
+      "stretch_max": 41.62493587562514,
+      "soles_m": {
+        "Left": 0.001000015065073967,
+        "Right": 0.06837975978851318
+      },
+      "blade_min_z_m": 1.1679019927978516,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 48,
+      "stretch_p99": 1.4818710964967043,
+      "stretch_max": 41.71441388998763,
+      "soles_m": {
+        "Left": 0.0010000144829973578,
+        "Right": 0.06799022853374481
+      },
+      "blade_min_z_m": 1.1566603183746338,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 49,
+      "stretch_p99": 1.4842406737688196,
+      "stretch_max": 41.78399529519412,
+      "soles_m": {
+        "Left": 0.0009999972535297275,
+        "Right": 0.06767022609710693
+      },
+      "blade_min_z_m": 1.1461973190307617,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 50,
+      "stretch_p99": 1.485761683097574,
+      "stretch_max": 41.846487164688874,
+      "soles_m": {
+        "Left": 0.0010000246111303568,
+        "Right": 0.06725997477769852
+      },
+      "blade_min_z_m": 1.1354495286941528,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    },
+    {
+      "frame": 51,
+      "stretch_p99": 1.4865838745336726,
+      "stretch_max": 41.95803851577052,
+      "soles_m": {
+        "Left": 0.000999937648884952,
+        "Right": 0.06629979610443115
+      },
+      "blade_min_z_m": 1.1213428974151611,
+      "blade_body_triangle_pairs": 0,
+      "whole_sword_body_triangle_pairs": 469,
+      "sword_non_grip_body_triangle_pairs": 0
+    }
+  ],
+  "mechanical_pass": true
+}

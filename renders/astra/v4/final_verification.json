@@ -1,0 +1,15 @@
+{
+  "input_hashes_unchanged": true,
+  "input_hashes_after": {
+    "models/astra_character_v3.blend": "57595cbed5d7b24b8838c8c1d3438262422737c71fdd5ea73e78684ead3306ad",
+    "models/meshy_godwyn_full_rigged.glb": "f0111c63364158fc82bbbff8f9976da2ba3b93303f480852b6406a34987202ce",
+    "models/meshy_godwyn_full.glb": "41bd7e22051138d4d2bd21ee1b41f182ecef3366ba2bdd3542c0d9033833afc6"
+  },
+  "protected_v3_metadata_changed_since_start": [],
+  "release_paths_exist": {
+    "models/astra_character_v4.blend": false,
+    "models/astra_character_v4.glb": false
+  },
+  "publication": "WITHHELD: inferior facial detail/likeness, open sword hand, severe robe deformation.",
+  "scope": "Only V4 scripts, V4 evidence and candidates, V4_REPORT.md and codex_v4.log were written by this run."
+}

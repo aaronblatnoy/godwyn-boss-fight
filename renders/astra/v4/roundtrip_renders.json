@@ -1,0 +1,14 @@
+[
+  {
+    "file": "roundtrip/stance_front.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "front"
+  },
+  {
+    "file": "roundtrip/stance_collar_top45.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "collar_top45"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "back_hair": {
+    "count": 4796,
+    "masked_fraction": 0.004287887364625931
+  },
+  "top_hair": {
+    "count": 2143,
+    "masked_fraction": 9.332712215837091e-05
+  },
+  "front_face": {
+    "count": 1738,
+    "masked_fraction": 0.7923012971878052
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "models/astra_character_v3m_round2_wip.blend": {
+    "size": 203341128,
+    "mtime_ns": 1790601979854551587
+  },
+  "models/astra_character_v3fists_wip.blend": {
+    "size": 63126878,
+    "mtime_ns": 1790581384124824431
+  },
+  "models/astra_character_v3.blend": {
+    "size": 59472781,
+    "mtime_ns": 1790618478684201628
+  },
+  "models/astra_character_v3_prev.blend": {
+    "size": 200892648,
+    "mtime_ns": 1790603098970368162
+  },
+  "models/astra_character_v3_pre_mocap.glb": {
+    "size": 70657336,
+    "mtime_ns": 1790582093360920813
+  },
+  "models/astra_character_v3_openhand.blend": {
+    "size": 67589746,
+    "mtime_ns": 1790577975231482839
+  },
+  "models/astra_character_v3_openhand.glb": {
+    "size": 75960192,
+    "mtime_ns": 1790577981685250899
+  },
+  "models/astra_character_v3fists_pre_body_cleanup.blend": {
+    "size": 63850469,
+    "mtime_ns": 1790581131391118464
+  },
+  "models/astra_character_v3m_wip.blend": {
+    "size": 61822489,
+    "mtime_ns": 1790591582723064567
+  },
+  "models/astra_character_v3_prev.glb": {
+    "size": 71585944,
+    "mtime_ns": 1790603103525226592
+  },
+  "models/astra_character_v3_pre_mocap.blend": {
+    "size": 63126814,
+    "mtime_ns": 1790582086802106747
+  },
+  "models/astra_character_v3.glb": {
+    "size": 71646532,
+    "mtime_ns": 1790618483707469451
+  },
+  "models/astra_character_v3_wip.blend": {
+    "size": 67589741,
+    "mtime_ns": 1790577321308437741
+  }
+}
