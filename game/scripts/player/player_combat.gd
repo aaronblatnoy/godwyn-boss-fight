@@ -14,8 +14,6 @@ enum State {
 	DEAD,
 }
 
-const MAX_LIGHT_COMBO_HITS := 3 # SPEC.txt Section 3: light attacks chain for 2-3 hits.
-
 var tunables := TunablesScript.new()
 var state: State = State.FREE
 var roll_elapsed: float = 0.0
@@ -68,7 +66,7 @@ func buffer_light_attack() -> bool:
 		return false
 	if attack_elapsed < tunables.light_attack_active_end or attack_elapsed >= _light_attack_duration():
 		return false
-	if _light_combo_count >= MAX_LIGHT_COMBO_HITS:
+	if _light_combo_count >= tunables.light_attack_combo_max_hits:
 		return false
 	_light_attack_buffered = true
 	return true
@@ -90,7 +88,7 @@ func advance_attack(delta: float, stats: PlayerStats) -> void:
 		return
 	attack_elapsed += delta
 	if state == State.LIGHT_ATTACK and attack_elapsed >= _light_attack_duration():
-		if _light_attack_buffered and _light_combo_count < MAX_LIGHT_COMBO_HITS:
+		if _light_attack_buffered and _light_combo_count < tunables.light_attack_combo_max_hits:
 			_light_attack_buffered = false
 			if stats.spend_stamina(tunables.stamina_cost_light_attack):
 				_light_combo_count += 1
@@ -105,16 +103,26 @@ func is_attacking() -> bool:
 	return state == State.LIGHT_ATTACK or state == State.HEAVY_ATTACK
 
 
+func get_attack_t() -> float:
+	var duration := _attack_duration()
+	if duration <= 0.0:
+		return 0.0
+	return clampf(attack_elapsed / duration, 0.0, 1.0)
+
+
 func is_attack_hitbox_open() -> bool:
-	# These SPEC values are literal seconds, unlike AttackData's normalized boss
-	# windows. They are the greybox fallback required by invariant I2. When real
-	# player clips arrive, AnimationPlayer call tracks should replace this polling
-	# while preserving the same open/close contract.
+	# Convert SPEC's authored seconds to the placeholder clip's normalized [0, 1]
+	# timeline. Real player clips replace this greybox polling with AnimationPlayer
+	# call tracks while preserving these normalized open/close boundaries.
+	var attack_t := get_attack_t()
 	if state == State.LIGHT_ATTACK:
-		return attack_elapsed >= tunables.light_attack_active_start and attack_elapsed < tunables.light_attack_active_end
+		var duration := _light_attack_duration()
+		return attack_t >= tunables.light_attack_active_start / duration and attack_t < tunables.light_attack_active_end / duration
 	if state == State.HEAVY_ATTACK:
-		var active_elapsed := attack_elapsed - tunables.heavy_attack_telegraph
-		return active_elapsed >= tunables.heavy_attack_active_start and active_elapsed < tunables.heavy_attack_active_end
+		var duration := _heavy_attack_duration()
+		var active_start := tunables.heavy_attack_telegraph + tunables.heavy_attack_active_start
+		var active_end := tunables.heavy_attack_telegraph + tunables.heavy_attack_active_end
+		return attack_t >= active_start / duration and attack_t < active_end / duration
 	return false
 
 
@@ -208,6 +216,14 @@ func _light_attack_duration() -> float:
 
 func _heavy_attack_duration() -> float:
 	return tunables.heavy_attack_telegraph + tunables.heavy_attack_active_end + tunables.heavy_attack_recovery
+
+
+func _attack_duration() -> float:
+	if state == State.LIGHT_ATTACK:
+		return _light_attack_duration()
+	if state == State.HEAVY_ATTACK:
+		return _heavy_attack_duration()
+	return 0.0
 
 
 func _finish_attack() -> void:

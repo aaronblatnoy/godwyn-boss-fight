@@ -7,6 +7,7 @@ signal attack_started(attack_id: String)
 signal attack_window_opened(attack_id: String)
 signal attack_window_closed(attack_id: String)
 signal hp_changed(new_hp: int, max_hp: int)
+signal poise_broken
 
 enum State {
 	IDLE,
@@ -47,6 +48,7 @@ var _did_overshoot := false
 var _last_hitbox_monitoring := false
 var _attack_token := 0
 var _chain_attack_count := 0
+var _poise_regen_delay_remaining := 0.0
 
 
 func _ready() -> void:
@@ -64,6 +66,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_emit_window_edge_signals()
+	_advance_poise_regen(delta)
 	match current_state:
 		State.IDLE:
 			state_timer = maxf(state_timer - delta, 0.0)
@@ -120,6 +123,7 @@ func take_poise_damage(amount: float) -> void:
 	if current_state == State.STUNNED or amount <= 0.0:
 		return
 	current_poise -= amount
+	_poise_regen_delay_remaining = _tunables.boss_poise_regen_delay
 	if current_poise <= 0.0:
 		_interrupt_to_stunned()
 
@@ -218,6 +222,22 @@ func _interrupt_to_stunned() -> void:
 	_did_overshoot = false
 	_set_state(State.STUNNED)
 	state_timer = _tunables.boss_stagger_duration
+	_poise_regen_delay_remaining = 0.0
+	poise_broken.emit()
+
+
+func _advance_poise_regen(delta: float) -> void:
+	if current_state == State.STUNNED or current_poise >= _tunables.boss_poise:
+		return
+	var regen_delta := delta
+	if _poise_regen_delay_remaining > 0.0:
+		regen_delta = maxf(delta - _poise_regen_delay_remaining, 0.0)
+		_poise_regen_delay_remaining = maxf(_poise_regen_delay_remaining - delta, 0.0)
+	if regen_delta > 0.0:
+		current_poise = minf(
+			current_poise + _tunables.boss_poise_regen_rate * regen_delta,
+			_tunables.boss_poise
+		)
 
 
 func _enter_idle_with_cooldown() -> void:

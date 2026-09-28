@@ -41,6 +41,8 @@ func cancel_drink() -> void:
 
 
 func refill() -> void:
+	# Attempt orchestration may call this only at the restart boundary. A freshly
+	# instantiated attempt receives the same refill through _ready().
 	if charges == tunables.flask_count:
 		return
 	charges = tunables.flask_count
