@@ -1,0 +1,195 @@
+{
+  "reviewer": "Codex default model; direct visual review in this session, no delegated or external-model scoring",
+  "scope": "All 107 entries in supplied catalog; group metadata absent, so no category exclusions",
+  "status": "preview_scout_complete",
+  "selection_stage": "Source-motion candidates for subsequent retarget review, not final animation approvals",
+  "scoring_order": [
+    "grounded",
+    "boss_scale",
+    "sword_readability",
+    "spec_role_match"
+  ],
+  "method": "Eight evenly spaced frame indices including endpoints per GIF, inspected directly; supplementary 16-frame sheets for 12 clips. GIF durations are preview timings, not certified source timing.",
+  "roles": {
+    "idle_low_hang": [],
+    "stalk_walk": [
+      {
+        "animation_action_id": 112,
+        "name": "Monster_Walk",
+        "reason": "Compact forward gait, low arms and little flourish; best stalking base, needs sword hand pose.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 2,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Monster_Walk.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      },
+      {
+        "animation_action_id": 114,
+        "name": "Proud_Strut",
+        "reason": "Broad upright forward steps and restrained low arms; second stalking base, soften swagger and author grip.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 2,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Proud_Strut.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "x_combo": [
+      {
+        "animation_action_id": 241,
+        "name": "Weapon_Combo_2",
+        "reason": "Alternating raised right-hand windups and descending cross-body cuts with steps; strongest X-combo base, needs blade-path confirmation.",
+        "scores": {
+          "grounded": 4,
+          "boss_scale": 4,
+          "sword_readability": 4,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Weapon_Combo_2.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "horizontal_sweep": [
+      {
+        "animation_action_id": 242,
+        "name": "Charged_Slash",
+        "reason": "Compact planted waist/chest-level cross-body swing with torso follow-through; best horizontal-sweep base, weapon absent.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 4,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Charged_Slash.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "overhead": [
+      {
+        "animation_action_id": 4,
+        "name": "Attack",
+        "reason": "Two-handed overhead lift followed by committed downward strike and planted recovery; strong overhead candidate.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 5,
+          "sword_readability": 5,
+          "spec_role_match": 5
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Attack.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      },
+      {
+        "animation_action_id": 128,
+        "name": "Heavy_Hammer_Swing",
+        "reason": "Grounded high two-arm windup and deep committed downward strike; second overhead base, hammer grip needs sword adaptation.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 3,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Heavy_Hammer_Swing.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "jump_lunge": [],
+    "rising_spin": [],
+    "the_pause": [],
+    "stagger": [
+      {
+        "animation_action_id": 179,
+        "name": "Hit_Reaction_1",
+        "reason": "Small planted torso compression and recovery; best restrained stagger, needs armed hand pose.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 1,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Hit_Reaction_1.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      },
+      {
+        "animation_action_id": 171,
+        "name": "Hit_Reaction_to_Waist",
+        "reason": "Clear weighty waist recoil with feet supporting and controlled return; second stagger, adapt boxing arms.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 1,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Hit_Reaction_to_Waist.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "death": [
+      {
+        "animation_action_id": 8,
+        "name": "Dead",
+        "reason": "Knees buckle from armed stance into prone collapse; best death source, raw preview contains no aerial tumble.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 3,
+          "spec_role_match": 5
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Dead.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      },
+      {
+        "animation_action_id": 188,
+        "name": "Fall_Dead_from_Abdominal_Injury",
+        "reason": "Clutches abdomen, sinks to knees and folds onto side; convincing collapse, adapt occupied sword hand.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 1,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Fall_Dead_from_Abdominal_Injury.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ],
+    "dodge": [
+      {
+        "animation_action_id": 157,
+        "name": "Stand_Dodge_1",
+        "reason": "Single bent-knee evasive step with balanced recovery; best dodge base, replace boxing hands with sword carriage.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 1,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Stand_Dodge_1.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      },
+      {
+        "animation_action_id": 156,
+        "name": "Stand_Dodge",
+        "reason": "Compact standing torso slip with low arms and return; second dodge candidate, does not establish an offline step.",
+        "scores": {
+          "grounded": 5,
+          "boss_scale": 4,
+          "sword_readability": 2,
+          "spec_role_match": 4
+        },
+        "preview_url": "https://cdn.meshy.ai/webapp-assets/feature-demo/animation/preview/biped/Stand_Dodge.gif",
+        "status": "preview_candidate_requires_retarget_validation"
+      }
+    ]
+  },
+  "empty_role_reasons": {
+    "idle_low_hang": "No preview establishes the specified active sword grip hanging low at the side with point toward ground; Combat_Stance is a crouched shield guard.",
+    "jump_lunge": "No clip shows a clear gap-closing jump whose landing is a thrust followed by overshoot continuation.",
+    "rising_spin": "No candidate establishes both a rising sword arc and controlled rotation at no more than roughly one revolution per second; roll/spin names are unsafe substitutes.",
+    "the_pause": "No complete clip combines low-sword stillness with a sudden offline step; boxing counters and alert pivots do not meet this role."
+  }
+}
