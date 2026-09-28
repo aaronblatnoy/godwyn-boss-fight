@@ -1,9 +1,13 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene load_steps=15 format=3]
 
 [ext_resource type="Script" path="res://scripts/player/player_controller.gd" id="1_controller"]
 [ext_resource type="Script" path="res://scripts/player/player_stats.gd" id="2_stats"]
 [ext_resource type="Script" path="res://scripts/player/player_combat.gd" id="3_combat"]
 [ext_resource type="Script" path="res://scripts/systems/hurtbox.gd" id="4_hurtbox"]
+[ext_resource type="Script" path="res://scripts/player/flask.gd" id="5_flask"]
+[ext_resource type="Script" path="res://scripts/systems/hitbox.gd" id="6_hitbox"]
+[ext_resource type="Script" path="res://scripts/systems/hit_resolver.gd" id="7_resolver"]
+[ext_resource type="Script" path="res://scripts/systems/hitstop.gd" id="8_hitstop"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_body"]
 radius = 0.4
@@ -23,6 +27,9 @@ albedo_color = Color(1, 1, 1, 1)
 [sub_resource type="QuadMesh" id="QuadMesh_iframe_indicator"]
 material = SubResource("StandardMaterial3D_iframe_indicator")
 size = Vector2(0.3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_weapon"]
+size = Vector3(1.2, 0.7, 1.6)
 
 [node name="Player" type="CharacterBody3D"]
 collision_layer = 2
@@ -51,11 +58,28 @@ mesh = SubResource("QuadMesh_iframe_indicator")
 [node name="HandSocket" type="Node3D" parent="."]
 position = Vector3(0.5, 1.15, -0.05)
 
+[node name="WeaponHitbox" type="Area3D" parent="HandSocket"]
+script = ExtResource("6_hitbox")
+owner_faction = "player"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HandSocket/WeaponHitbox"]
+position = Vector3(0, 0, -0.8)
+shape = SubResource("BoxShape3D_weapon")
+
 [node name="Stats" type="Node" parent="."]
 script = ExtResource("2_stats")
 
 [node name="Combat" type="Node" parent="."]
 script = ExtResource("3_combat")
+
+[node name="Flask" type="Node" parent="."]
+script = ExtResource("5_flask")
+
+[node name="HitResolver" type="Node" parent="."]
+script = ExtResource("7_resolver")
+
+[node name="Hitstop" type="Node" parent="."]
+script = ExtResource("8_hitstop")
 
 [node name="Hurtbox" type="Area3D" parent="."]
 position = Vector3(0, 0.9, 0)

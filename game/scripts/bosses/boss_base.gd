@@ -37,6 +37,7 @@ var boss_hitbox: Hitbox
 var boss_hurtbox: Hurtbox
 var boss_stats: BossStats
 var hit_resolver: HitResolver
+var hitstop: Hitstop
 var animation_player: AnimationPlayer
 
 var _tunables: Tunables
@@ -263,6 +264,12 @@ func _ensure_runtime_children() -> void:
 		hit_resolver = HitResolver.new()
 		hit_resolver.name = "HitResolver"
 		add_child(hit_resolver)
+	hitstop = get_node_or_null("Hitstop") as Hitstop
+	if hitstop == null:
+		hitstop = Hitstop.new()
+		hitstop.name = "Hitstop"
+		add_child(hitstop)
+	hitstop.bind_resolver(hit_resolver)
 	boss_hitbox = get_node_or_null("BossHitbox") as Hitbox
 	if boss_hitbox == null:
 		boss_hitbox = Hitbox.new()

@@ -10,10 +10,15 @@ var _roll_direction: Vector3 = Vector3.FORWARD
 var _iframe_indicator_material: StandardMaterial3D
 var _movement_camera: Camera3D
 var _lock_on_target: Node3D
+var _weapon_window_open: bool = false
 
 @onready var stats: PlayerStats = $Stats
 @onready var combat: PlayerCombat = $Combat
+@onready var flask: Flask = $Flask
 @onready var hurtbox: Hurtbox = $Hurtbox
+@onready var weapon_hitbox: Hitbox = $HandSocket/WeaponHitbox
+@onready var hit_resolver: HitResolver = $HitResolver
+@onready var hitstop: Hitstop = $Hitstop
 @onready var iframe_indicator: MeshInstance3D = $IFrameIndicator
 
 
@@ -21,7 +26,10 @@ func _ready() -> void:
 	_iframe_indicator_material = iframe_indicator.material_override.duplicate() as StandardMaterial3D
 	iframe_indicator.material_override = _iframe_indicator_material
 	hurtbox.stats_target = stats
+	hurtbox.hit_resolver = hit_resolver
+	hitstop.bind_resolver(hit_resolver)
 	stats.died.connect(_on_died)
+	weapon_hitbox.deactivate()
 	_set_hurtbox_monitoring(true)
 
 
@@ -33,12 +41,30 @@ func _physics_process(delta: float) -> void:
 	var input_vector := Input.get_vector("move_left", "move_right", "move_fwd", "move_back")
 	var move_direction := _get_camera_relative_direction(input_vector)
 
-	if combat.state != PlayerCombat.State.ROLL and Input.is_action_just_pressed("roll"):
-		if combat.try_start_roll(stats, tunables.stamina_cost_roll):
+	if Input.is_action_just_pressed("light_attack"):
+		combat.try_start_light_attack(stats)
+	if Input.is_action_just_pressed("heavy_attack"):
+		combat.try_start_heavy_attack(stats)
+	if Input.is_action_just_pressed("use_flask"):
+		combat.try_start_flask(flask)
+
+	if Input.is_action_just_pressed("roll"):
+		var roll_started := false
+		if combat.state == PlayerCombat.State.FLASK:
+			roll_started = combat.try_cancel_flask_into_roll(stats, flask, tunables.stamina_cost_roll)
+		elif combat.state != PlayerCombat.State.ROLL:
+			roll_started = combat.try_start_roll(stats, tunables.stamina_cost_roll)
+		if roll_started:
 			_roll_direction = _get_roll_direction(move_direction)
 
 	if combat.state == PlayerCombat.State.ROLL:
 		_process_roll(delta)
+		return
+	if combat.is_attacking():
+		_process_attack(delta)
+		return
+	if combat.state == PlayerCombat.State.FLASK:
+		_process_flask(delta)
 		return
 
 	_process_locomotion(delta, move_direction)
@@ -74,6 +100,7 @@ func _process_locomotion(delta: float, move_direction: Vector3) -> void:
 
 
 func _process_roll(delta: float) -> void:
+	_set_weapon_hitbox_active(false)
 	var roll_t := combat.get_roll_t()
 	_set_hurtbox_monitoring(not combat.is_roll_invulnerable_at(roll_t))
 
@@ -92,6 +119,28 @@ func _process_roll(delta: float) -> void:
 		_set_hurtbox_monitoring(true)
 		velocity.x = 0.0
 		velocity.z = 0.0
+
+
+func _process_attack(delta: float) -> void:
+	_set_weapon_hitbox_active(combat.is_attack_hitbox_open())
+	velocity.x = 0.0
+	velocity.z = 0.0
+	_apply_gravity(delta)
+	move_and_slide()
+	combat.advance_attack(delta, stats)
+	stats.process_stamina_regen(delta, true)
+	if not combat.is_attacking():
+		_set_weapon_hitbox_active(false)
+
+
+func _process_flask(delta: float) -> void:
+	_set_weapon_hitbox_active(false)
+	velocity.x = 0.0
+	velocity.z = 0.0
+	_apply_gravity(delta)
+	move_and_slide()
+	combat.advance_flask(delta, flask, stats)
+	stats.process_stamina_regen(delta, false)
 
 
 func set_movement_camera(camera: Camera3D) -> void:
@@ -150,6 +199,7 @@ func _apply_gravity(delta: float) -> void:
 
 
 func _process_dead(delta: float) -> void:
+	_set_weapon_hitbox_active(false)
 	_set_hurtbox_monitoring(true)
 	velocity.x = 0.0
 	velocity.z = 0.0
@@ -158,7 +208,9 @@ func _process_dead(delta: float) -> void:
 
 
 func _on_died() -> void:
+	flask.cancel_drink()
 	combat.enter_dead()
+	_set_weapon_hitbox_active(false)
 	_set_hurtbox_monitoring(true)
 	velocity = Vector3.ZERO
 
@@ -167,3 +219,16 @@ func _set_hurtbox_monitoring(enabled: bool) -> void:
 	hurtbox.monitoring = enabled
 	# Minimal logic-only QA overlay: white is vulnerable, magenta is in i-frames.
 	_iframe_indicator_material.albedo_color = Color.WHITE if enabled else Color.MAGENTA
+
+
+func _set_weapon_hitbox_active(enabled: bool) -> void:
+	if enabled == _weapon_window_open:
+		return
+	_weapon_window_open = enabled
+	if enabled:
+		weapon_hitbox.damage = combat.get_attack_damage()
+		weapon_hitbox.poise_damage = combat.get_attack_poise_damage()
+		weapon_hitbox.hitstop_duration = combat.get_attack_hitstop_duration()
+		weapon_hitbox.activate()
+	else:
+		weapon_hitbox.deactivate()

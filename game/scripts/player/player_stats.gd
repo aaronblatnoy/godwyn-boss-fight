@@ -34,6 +34,15 @@ func take_damage(amount: int, _damage_type: DamageTypes.Type = DamageTypes.Type.
 		died.emit()
 
 
+func heal(amount: int) -> void:
+	if is_dead or amount <= 0:
+		return
+	var previous_hp := hp
+	hp = mini(hp + amount, tunables.player_max_hp)
+	if hp != previous_hp:
+		hp_changed.emit(hp, tunables.player_max_hp)
+
+
 func take_poise_damage(_amount: float) -> void:
 	# Player poise is not part of the Phase 2 contract. This receiver keeps the
 	# shared HitResolver interface explicit until a later phase defines it.
