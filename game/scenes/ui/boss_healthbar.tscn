@@ -33,6 +33,7 @@ offset_right = 300.0
 offset_bottom = -48.0
 grow_horizontal = 2
 grow_vertical = 0
+; PLACEHOLDER -- SPEC.txt Section 14 does not specify name-card bounds relative to the boss bar.
 alignment = 1
 
 [node name="BossName" type="Label" parent="NameCard"]

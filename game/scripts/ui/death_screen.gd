@@ -19,6 +19,8 @@ var _sequence_running: bool = false
 
 func _ready() -> void:
 	death_label.add_theme_font_override("font", CINZEL_FONT)
+	death_label.add_theme_color_override("font_color", tunables.ui_death_text_color)
+	death_label.add_theme_font_size_override("font_size", tunables.ui_death_text_size)
 	visible = false
 	black_overlay.modulate.a = 0.0
 	death_label.modulate.a = 0.0
@@ -71,4 +73,6 @@ func _run_death_sequence() -> void:
 	hold_timer.start(tunables.death_text_hold_duration)
 	await hold_timer.timeout
 	if is_inside_tree():
+		# No restart hook exists yet in game_state/game_manager; the owner performs
+		# the current-phase restart when it receives this Phase 7 boundary signal.
 		restart_requested.emit()

@@ -4,6 +4,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleHPBackground"]
 bg_color = Color(0.101961, 0, 0, 1)
+; PLACEHOLDER -- SPEC.txt Section 14 specifies a black border but not its width.
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -85,14 +86,22 @@ anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 40.0
 offset_top = -32.0
+; PLACEHOLDER -- SPEC.txt Section 14 specifies flask position but not display bounds.
 offset_right = 82.0
 offset_bottom = -9.0
 grow_vertical = 0
 
-[node name="FlaskIcon" type="Label" parent="FlaskDisplay"]
+[node name="FlaskIcon" type="Control" parent="FlaskDisplay"]
 unique_name_in_owner = true
+; PLACEHOLDER -- SPEC.txt Section 14 requests a flask silhouette but gives no icon dimensions.
+custom_minimum_size = Vector2(18, 22)
 layout_mode = 2
-text = "FLASK"
+mouse_filter = 2
+
+[node name="Silhouette" type="Polygon2D" parent="FlaskDisplay/FlaskIcon"]
+; PLACEHOLDER -- SPEC.txt Section 14 gives no flask artwork; this geometry is a script-free silhouette until real art lands.
+polygon = PackedVector2Array(6, 0, 12, 0, 12, 4, 14, 7, 16, 18, 14, 22, 4, 22, 2, 18, 4, 7, 6, 4)
+color = Color(1, 1, 1, 1)
 
 [node name="FlaskCount" type="Label" parent="FlaskDisplay"]
 unique_name_in_owner = true

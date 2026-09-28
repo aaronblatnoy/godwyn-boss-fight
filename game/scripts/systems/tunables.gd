@@ -68,6 +68,8 @@ var roll_iframe_end_t: float:
 @export var light_attack_recovery: float = 0.4 # SPEC.txt Section 3, seconds
 @export var light_attack_hitstop: float = 0.06 # SPEC.txt Section 3; ref Section 8a value UNKNOWN
 @export var light_attack_poise_damage: float = 15.0 # SPEC.txt Section 6, Godwyn poise per light
+# PLAN CONTRACT / PLACEHOLDER, NO SPEC/REFERENCE SOURCE VALUE -- Phase 6 requires a 2-3 hit player chain; cap it at 3.
+@export var light_attack_combo_max_hits: int = 3
 @export var heavy_attack_damage: int = 110 # SPEC.txt Section 3
 @export var heavy_attack_telegraph: float = 0.4 # SPEC.txt Section 3, seconds
 @export var heavy_attack_active_start: float = 0.2 # SPEC.txt Section 3, seconds
@@ -79,13 +81,15 @@ var roll_iframe_end_t: float:
 # --- LOCK-ON ---
 @export var lockon_max_range: float = 25.0 # SPEC.txt Section 3/4; lock-on range is a SPEC design decision, NOT in plan Assumption A6's reference-doc-override list
 @export var lockon_break_range: float = 35.0 # SPEC.txt Section 3; lock-on range is a SPEC design decision, NOT in plan Assumption A6's reference-doc-override list
-@export var lockon_break_grace_seconds: float = 2.0 # ref Section 7 EXACT; supplementary/deferred context, not wired in Phase 0
+@export var lockon_break_grace_seconds: float = 2.0 # ref Section 7 EXACT lockTgtKeepTime; continuous out-of-range grace prevents mobile-target lock flicker
 @export var lockon_camera_lerp: float = 8.0 # SPEC.txt Section 3
 
 # --- BOSS ---
 @export var boss_max_hp: int = 3000 # SPEC.txt Section 6; ref has no Godwyn-specific HP
 @export var boss_poise: int = 80 # SPEC.txt Section 6; ref has no conflicting exact Godwyn value
 @export var boss_stagger_duration: float = 0.8 # SPEC.txt Section 6; ref says exact boss window UNKNOWN
+@export var boss_poise_regen_delay: float = 6.0 # ref Section 3e APPROX community feel; SPEC requires regen but gives no value
+@export var boss_poise_regen_rate: float = 13.0 # ref Section 3e APPROX community value; SPEC requires regen but gives no value
 @export var boss_global_cooldown_min: float = 0.5 # SPEC.txt Section 6
 @export var boss_global_cooldown_max: float = 1.4 # SPEC.txt Section 6
 
@@ -127,6 +131,10 @@ var roll_iframe_end_t: float:
 @export var camera_lockon_distance_min: float = 3.0 # SPEC.txt Section 4, meters
 @export var camera_lockon_distance_max: float = 8.0 # SPEC.txt Section 4, meters
 @export var camera_lockon_position_lerp: float = 6.0 # SPEC.txt Section 4 (distinct from the existing lockon_camera_lerp=8.0, which is the rotation lerp from SPEC Section 3)
+# PLACEHOLDER -- SPEC.txt Sections 3/4 require boss upper-center framing but do not specify the exact target-focus weight; 0.68 biases the existing composition toward the boss. Replace when a real value lands, pending design review.
+@export var camera_lockon_focus_target_weight: float = 0.68
+# PLACEHOLDER -- SPEC.txt Sections 3/4 require the player lower-left but do not specify the exact screen-offset ratio; 0.12 supplies the existing lateral composition. Replace when a real value lands, pending design review.
+@export var camera_lockon_player_screen_offset_ratio: float = 0.12
 @export var camera_pullback_distance: float = 8.0 # SPEC.txt Section 4, Dynamic Pullback
 @export var camera_pullback_in_time: float = 0.3 # SPEC.txt Section 4
 @export var camera_pullback_return_time: float = 0.5 # SPEC.txt Section 4
@@ -145,28 +153,36 @@ var roll_iframe_end_t: float:
 @export var ui_player_stamina_size: Vector2 = Vector2(240.0, 10.0) # SPEC.txt Section 14, pixels
 @export var ui_player_stamina_color: Color = Color("7a9a20") # SPEC.txt Section 14
 @export var ui_player_flask_gap: float = 12.0 # SPEC.txt Section 14, pixels below stamina
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the empty-flask alpha; 0.35 visibly dims it while preserving the silhouette. Replace when real value lands.
+@export var ui_player_flask_empty_alpha: float = 0.35
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify FP/stamina background colors; neutral black keeps the specified fills legible. Replace when real value lands.
+@export var ui_player_secondary_bar_background_color: Color = Color("000000")
 @export var ui_boss_bottom_offset: float = 40.0 # SPEC.txt Section 14, pixels
 @export var ui_boss_hp_size: Vector2 = Vector2(600.0, 14.0) # SPEC.txt Section 14, pixels
 @export var ui_boss_hp_color: Color = Color("c00000") # SPEC.txt Section 14
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the boss-bar background color; reuse the specified player-HP background. Replace when real value lands.
+@export var ui_boss_hp_background_color: Color = Color("1a0000")
 @export var ui_boss_name_delay: float = 0.5 # SPEC.txt Section 14, seconds
 @export var ui_boss_name_fade_duration: float = 0.6 # SPEC.txt Section 14, seconds
 @export var ui_boss_name_line_1_size: int = 28 # SPEC.txt Section 14, points
 @export var ui_boss_name_line_2_size: int = 16 # SPEC.txt Section 14, points
-# SPEC.txt Section 14 says "white with gold tint" but does not specify an exact hex; interpreted placeholder pending design review.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the exact "white with gold tint" hex; #FDEBC8 is the interpreted tint. Replace when real value lands.
 @export var ui_boss_name_line_1_color: Color = Color("fdebc8")
-# SPEC.txt Section 14 says "italic" but gives no numeric shear; placeholder pending design review.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify numeric italic shear; 0.18 supplies the requested italic treatment. Replace when real value lands.
 @export var ui_boss_name_line_2_italic_shear: float = 0.18
-# SPEC.txt Section 14 says "slightly letter-spaced" but gives no exact pixel spacing; placeholder pending design review.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify exact glyph spacing; 1 px supplies the requested slight letter spacing. Replace when real value lands.
 @export var ui_boss_name_line_2_glyph_spacing: int = 1
-# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar size; placeholder pending Phase 8 confirmation.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar size; 400x8 keeps the stub subordinate to the boss bar. Replace when real value lands.
 @export var ui_dragon_hp_size: Vector2 = Vector2(400.0, 8.0)
-# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar offset; placeholder pending Phase 8 confirmation.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar offset; 122 px keeps the stub separate from the boss bar. Replace when real value lands.
 @export var ui_dragon_hp_bottom_offset: float = 122.0
-# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar color; placeholder pending Phase 8 confirmation.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar color; #70B7A8 distinguishes the stub from boss HP. Replace when real value lands.
 @export var ui_dragon_hp_color: Color = Color("70b7a8")
-# SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar background color; placeholder pending Phase 8 confirmation.
+# PLACEHOLDER -- SPEC.txt Section 14 does not specify the Dragon's Memory secondary-bar background; #102624 supports the interpreted fill. Replace when real value lands.
 @export var ui_dragon_hp_background_color: Color = Color("102624")
 @export var ui_death_text_color: Color = Color("c8986e") # SPEC.txt Section 14
+# PLACEHOLDER -- SPEC.txt Sections 3/14 do not specify the numeric "large" text size; 64 px provides the requested prominence. Replace when real value lands.
+@export var ui_death_text_size: int = 64
 
 # --- BOSS AI (Phase 5) ---
 @export var boss_perception_close_range: float = 4.0 # SPEC.txt Section 6, "Close (< 4m)"

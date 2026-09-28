@@ -19,6 +19,7 @@ var _active_tween: Tween
 
 func _ready() -> void:
 	_apply_spec_layout()
+	_apply_spec_styles()
 	boss_name_label.modulate.a = 0.0
 	boss_title_label.modulate.a = 0.0
 	hp_bar.modulate.a = 0.0
@@ -93,7 +94,8 @@ func _run_intro(generation: int) -> void:
 	await _active_tween.finished
 	if generation != _intro_generation or not is_inside_tree():
 		return
-	# SPEC does not state a separate boss-bar fade duration; reuse its 0.6s name-card fade.
+	# PLACEHOLDER -- SPEC.txt Section 14 does not specify a separate boss-bar fade
+	# duration; reuse the sourced 0.6s name-card fade. Replace when real timing lands.
 	_active_tween = create_tween().set_ignore_time_scale(true)
 	_active_tween.tween_property(hp_bar, "modulate:a", 1.0, tunables.ui_boss_name_fade_duration)
 
@@ -121,3 +123,12 @@ func _apply_spec_layout() -> void:
 	)
 	italic_font.spacing_glyph = tunables.ui_boss_name_line_2_glyph_spacing
 	boss_title_label.add_theme_font_override("font", italic_font)
+
+
+func _apply_spec_styles() -> void:
+	var background := hp_bar.get_theme_stylebox("background").duplicate() as StyleBoxFlat
+	background.bg_color = tunables.ui_boss_hp_background_color
+	hp_bar.add_theme_stylebox_override("background", background)
+	var fill := hp_bar.get_theme_stylebox("fill").duplicate() as StyleBoxFlat
+	fill.bg_color = tunables.ui_boss_hp_color
+	hp_bar.add_theme_stylebox_override("fill", fill)
