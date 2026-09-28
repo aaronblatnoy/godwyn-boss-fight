@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/environments/void.gd" id="1_boundary"]
+
+; SPEC.txt Section 5 Arena status for this logic-layer greybox:
+; implemented for real: Floor and invisible collision-only Boundary.
+; intentionally deferred by user override: volumetric gold fog, 400 gold
+; motes, crack-of-light, and the low-opacity cracked-stone floor texture.
+
+; SPEC.txt Section 5, Playable radius: 20 meters. The 40m square floor
+; covers that radius; its collision triangles use the same +/-20m extent.
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+size = Vector2(40, 40)
+
+; Flat grey is a greybox visibility choice, not a gameplay tunable.
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_floor"]
+albedo_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_floor"]
+data = PackedVector3Array(-20, 0, -20, 20, 0, -20, 20, 0, 20, -20, 0, -20, 20, 0, 20, -20, 0, 20)
+
+; SPEC.txt Section 5 requires a black void background. Fog, glow, and shaders
+; are intentionally absent from this logic-layer greybox.
+[sub_resource type="Environment" id="Environment_void"]
+background_mode = 1
+background_color = Color(0, 0, 0, 1)
+
+[node name="Void" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_void")
+
+; This basis points the default directional light down at the floor without
+; introducing an authored lighting angle or other gameplay tuning value.
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+material_override = SubResource("StandardMaterial3D_floor")
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("ConcavePolygonShape3D_floor")
+
+; SPEC.txt Section 5: invisible soft wall at the 20m playable radius.
+; The attached script creates only StaticBody3D/CollisionShape3D children.
+[node name="Boundary" type="Node3D" parent="."]
+script = ExtResource("1_boundary")
+
+; Placeholder greybox spawn coordinates; exact coordinates are not mandated
+; by SPEC.txt and will be authored during later encounter assembly.
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+position = Vector3(-4, 0, 0)
+
+[node name="BossSpawn" type="Marker3D" parent="."]
+position = Vector3(4, 0, 0)
