@@ -1,0 +1,16 @@
+TASK: adversarial visual QA of Godwyn v3 (fist variant). Read-only on the Mac; you may run ssh black-sky "cd ~/godwyn-boss-fight && blender --background --python-exit-code 1 --python scripts/<script>.py -- <args>" ONLY to render additional inspection views or extract film frames; never modify models or scripts; never run Blender or ffmpeg on the Mac. No git.
+
+GOAL: find every visible flaw. The owner's instruction is "make sure there's no flaws." Assume flaws exist and hunt for them. Compare against body-concepts/god_A.png and face-concepts/godwyn_face_APPROVED.png and the SPEC "VISUAL DESIGN - PHASE 1" section.
+
+INPUTS: renders/astra/v3fists/ (hero_idle_front/side/three_quarter.png, hero_collar_closeup.png, hero_face_closeup.png, hero_comparison_model.png, five <move>.mp4 films and contact sheets), renders/astra/char2/MESHY_RIG_V3_REPORT.md, renders/astra/char2/meshy_v3fists_audit.json. If any of those are missing, say so and inspect what exists.
+
+CHECKLIST (report each as PASS or FAIL with the exact file and a crop region):
+1. Head: seam between head and collar hidden from all three hero angles; no hole or void inside the collar; hair does not clip through the pauldrons at rest; braids intact; eyes, lips, and brows not distorted; skin warm and even with no mottling, banding, or color seams on face, jaw, neck, ears.
+2. Armor: no torn, jagged, floating, or missing plate facets (gorget, pauldrons, vambraces, gauntlets, greaves, boots, belt, sun emblem); no z-fighting or plates poking through cloth at rest; textures sharp, no stretched or smeared texels; gold reads as aged brass, not chrome.
+3. Cloth: sash and robe continuous, trim continuous, no holes, no confetti; SPEC deep-blue read; hem not floating far above the floor at rest.
+4. Sword: gripped by the right fist with fingers around the hilt, no visible gap between palm and hilt, no fingers passing through the hilt, blade not intersecting the body, cloth, or head in any hero view.
+5. Films (extract at least 12 evenly spaced frames from EACH of the five mp4s with ffmpeg on black-sky, plus the frames the audit lists as most extended): no tearing, strip artifacts, or spikes; plates stay rigid; robe follows the legs without exploding; feet do not sink through the floor; sword stays in the fist; no head or hair popping; loops for idle_guard and walk_stalk do not hitch at the wrap.
+6. Proportions: head size relative to shoulders and torso matches the concept; sword length relative to the body matches the concept.
+7. Lighting-independent check: render one extra front view under a flat neutral studio (single area light, roughness untouched) to confirm nothing is hidden by the hero lighting.
+
+OUTPUT: renders/astra/char2/V3_VISUAL_QA.md with the checklist verdicts, a numbered list of every flaw found (severity blocking/minor, file, location, likely cause), and crops saved under renders/astra/char2/qa_crops/. End with a one-line overall verdict: SHIP or FIX, and if FIX, the ordered fix list.

@@ -1,0 +1,17 @@
+[
+ {"job": "1729cf7f-e9ea-4d25-a7fa-a2f21cf06a01", "action_id": 89, "name": "Combat_Stance", "role": "idle (low hang guard placeholder)"},
+ {"job": "4d407dbd-52cd-4f22-9df1-9956629cce9f", "action_id": 21, "name": "Walk_Fight_Forward", "role": "walk / stalk"},
+ {"job": "0dc4d372-c77c-45e7-b968-bc1310f2e7c9", "action_id": 4, "name": "Attack", "role": "single attack initiator"},
+ {"job": "423deb89-2d33-4561-afa8-858443e8c71b", "action_id": 97, "name": "Left_Slash", "role": "horizontal sweep"},
+ {"job": "cc5fdd7c-0883-4c6a-a1da-d88d9fdae10c", "action_id": 219, "name": "Right_Hand_Sword_Slash", "role": "diagonal slash"},
+ {"job": "055ffab7-76b5-4060-b5db-8aa8676aab87", "action_id": 92, "name": "Double_Combo_Attack", "role": "X combo candidate"},
+ {"job": "73ec4f26-21cd-432c-a2aa-8fb996fd4773", "action_id": 105, "name": "Triple_Combo_Attack", "role": "Sovereign's Sequence candidate"},
+ {"job": "242d155b-94b3-44b6-a647-0a3037b1d5d3", "action_id": 102, "name": "Sword_Judgment", "role": "overhead / sacred slam candidate"},
+ {"job": "6128818b-0c13-477d-8b1f-237e60ac101b", "action_id": 99, "name": "Reaping_Swing", "role": "The Tide candidate"},
+ {"job": "202c19ce-78fc-4419-9a43-e2f37b0ade6b", "action_id": 100, "name": "Rightward_Spin", "role": "rising spin / spin attack"},
+ {"job": "8f153623-ad4a-44b4-9885-ca030870a780", "action_id": 86, "name": "Basic_Jump", "role": "jump lunge base"},
+ {"job": "148f64f6-debb-4769-97ef-5c066d2bd2f6", "action_id": 158, "name": "Roll_Dodge", "role": "dodge / repositioning"},
+ {"job": "b6dfdd5d-a7c1-40ec-9285-0ab95f30c824", "action_id": 147, "name": "Sword_Parry", "role": "The Pause / parry stance"},
+ {"job": "b7f56a6c-e545-47f8-8dc2-6557b987c669", "action_id": 178, "name": "Hit_Reaction", "role": "stagger"},
+ {"job": "87087446-fe30-452f-aefd-abc59e29c9dd", "action_id": 8, "name": "Dead", "role": "death"}
+]
