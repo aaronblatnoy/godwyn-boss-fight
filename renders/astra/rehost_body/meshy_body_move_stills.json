@@ -1,0 +1,27 @@
+{
+  "idle_guard": {
+    "model": "models/astra_move_idle_guard_body_i01.blend",
+    "frame": 48,
+    "path": "renders/astra/rehost_body/idle_guard_extended.png"
+  },
+  "walk_stalk": {
+    "model": "models/astra_move_walk_stalk_body_i01.blend",
+    "frame": 36,
+    "path": "renders/astra/rehost_body/walk_stalk_extended.png"
+  },
+  "lunge_thrust": {
+    "model": "models/astra_move_lunge_thrust_body_i01.blend",
+    "frame": 40,
+    "path": "renders/astra/rehost_body/lunge_thrust_extended.png"
+  },
+  "rising_spin": {
+    "model": "models/astra_move_rising_spin_body_i01.blend",
+    "frame": 40,
+    "path": "renders/astra/rehost_body/rising_spin_extended.png"
+  },
+  "xslash": {
+    "model": "models/astra_xslash_body_i01.blend",
+    "frame": 55,
+    "path": "renders/astra/rehost_body/xslash_extended.png"
+  }
+}

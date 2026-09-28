@@ -1,0 +1,33 @@
+{
+  "execution_host": "black-sky",
+  "videos": {
+    "rising_spin": {
+      "path": "renders/astra/rehost_body/rising_spin.mp4",
+      "sha256": "d8283cc6590a71b6f214ce288254c2415c6625a8f0c62c378bff1ff85b884dee",
+      "source_frames": 116,
+      "decoded_frames": 116,
+      "decode_error_free": true,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "resolution": [
+        768,
+        768
+      ],
+      "fps": "30/1"
+    },
+    "xslash": {
+      "path": "renders/astra/rehost_body/xslash.mp4",
+      "sha256": "4b0ff53558a43324514c4c96ee52b5622d27b78fbb0ef25fbb9d5b2b07059812",
+      "source_frames": 90,
+      "decoded_frames": 90,
+      "decode_error_free": true,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "resolution": [
+        768,
+        768
+      ],
+      "fps": "30/1"
+    }
+  }
+}

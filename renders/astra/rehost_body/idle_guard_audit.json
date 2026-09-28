@@ -1,0 +1,1883 @@
+{
+  "transfer": {
+    "name": "idle_guard",
+    "source": "models/astra_move_idle_guard_v2_wip.blend",
+    "source_sha256": "fc24935c6e0b74722e73fc8a779487b12ae7aaf26bb3ee1d03d9cebad73919ce",
+    "output": "models/astra_move_idle_guard_body_i01.blend",
+    "output_sha256": "310ee8e968cdc7c491e726c4d773aa4a1b943253bc920a5fea5ba78f33b8374e",
+    "base_sha256": "108a2b30a3b3d641bb33c246abfd61630c99b752ad4ea75069fdc3c631b8b95a",
+    "bones": 121,
+    "rest_matrix_error": 0.0,
+    "action_digest": "e82a6ffebd9802249cd90d7f4ea98eefb6695aa7c3b3d4cd3262d396098c7346",
+    "action_fcurves": 847,
+    "action_keys": 326095,
+    "action_data_identical": true,
+    "frame_range": [
+      1,
+      96
+    ]
+  },
+  "surface": {
+    "floor_z_m": -0.014999999664723873,
+    "sample_step_frames": 1.0,
+    "samples": 96,
+    "sole_vertex_counts": {
+      "Left": 3936,
+      "Right": 4872
+    },
+    "cloth_family_vertex_counts": {
+      "phys_robe_front_L": 5891,
+      "phys_robe_side_L": 10594,
+      "phys_robe_front_C": 149,
+      "phys_cape_L": 7204,
+      "phys_robe_back_L": 13,
+      "phys_cape_C": 3151,
+      "phys_robe_side_R": 10009,
+      "phys_robe_front_R": 5364,
+      "phys_cape_R": 6372,
+      "phys_robe_back_R": 40
+    },
+    "sole_minimum_clearance_m": -0.001552456058561802,
+    "sole_worst_frame": 16,
+    "cloth_minimum_clearance_m": -0.0004003262147307396,
+    "cloth_worst_frame": 42,
+    "sole_gate_pass": false,
+    "cloth_gate_m": 0.002,
+    "cloth_gate_pass": false,
+    "rows": [
+      {
+        "frame": 1,
+        "sole": {
+          "Left": 0.00364125519990921,
+          "Right": -0.001295791007578373
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019871659576892853,
+          "phys_robe_side_L": 0.009104734286665916,
+          "phys_robe_front_C": 0.2784103453159332,
+          "phys_cape_L": 0.01512238197028637,
+          "phys_robe_back_L": 0.07043981552124023,
+          "phys_cape_C": 0.008275790140032768,
+          "phys_robe_side_R": 0.0025151660665869713,
+          "phys_robe_front_R": 0.017228299751877785,
+          "phys_cape_R": 0.017114412039518356,
+          "phys_robe_back_R": 0.038628581911325455
+        }
+      },
+      {
+        "frame": 2,
+        "sole": {
+          "Left": 0.0036302944645285606,
+          "Right": -0.001323123462498188
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019724860787391663,
+          "phys_robe_side_L": 0.009167728014290333,
+          "phys_robe_front_C": 0.2786377966403961,
+          "phys_cape_L": 0.015090269036591053,
+          "phys_robe_back_L": 0.07058767229318619,
+          "phys_cape_C": 0.008207814767956734,
+          "phys_robe_side_R": 0.002632719464600086,
+          "phys_robe_front_R": 0.01710357703268528,
+          "phys_cape_R": 0.01708248071372509,
+          "phys_robe_back_R": 0.038590896874666214
+        }
+      },
+      {
+        "frame": 3,
+        "sole": {
+          "Left": 0.0036145756021142006,
+          "Right": -0.0013498356565833092
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01955864578485489,
+          "phys_robe_side_L": 0.009236136451363564,
+          "phys_robe_front_C": 0.27888426184654236,
+          "phys_cape_L": 0.015060552395880222,
+          "phys_robe_back_L": 0.07074708491563797,
+          "phys_cape_C": 0.008123377338051796,
+          "phys_robe_side_R": 0.0027549583464860916,
+          "phys_robe_front_R": 0.01696855202317238,
+          "phys_cape_R": 0.01704629883170128,
+          "phys_robe_back_R": 0.03854629397392273
+        }
+      },
+      {
+        "frame": 4,
+        "sole": {
+          "Left": 0.0035952646285295486,
+          "Right": -0.00137298833578825
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019374500960111618,
+          "phys_robe_side_L": 0.009308849461376667,
+          "phys_robe_front_C": 0.27914872765541077,
+          "phys_cape_L": 0.015032630413770676,
+          "phys_robe_back_L": 0.07091646641492844,
+          "phys_cape_C": 0.008019509725272655,
+          "phys_robe_side_R": 0.002881927415728569,
+          "phys_robe_front_R": 0.016818996518850327,
+          "phys_cape_R": 0.017006918787956238,
+          "phys_robe_back_R": 0.038495562970638275
+        }
+      },
+      {
+        "frame": 5,
+        "sole": {
+          "Left": 0.003572540357708931,
+          "Right": -0.0013968190178275108
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019172444939613342,
+          "phys_robe_side_L": 0.009386305697262287,
+          "phys_robe_front_C": 0.2794288992881775,
+          "phys_cape_L": 0.015007921494543552,
+          "phys_robe_back_L": 0.07109584659337997,
+          "phys_cape_C": 0.00785260833799839,
+          "phys_robe_side_R": 0.0030127502977848053,
+          "phys_robe_front_R": 0.016651984304189682,
+          "phys_cape_R": 0.017083169892430305,
+          "phys_robe_back_R": 0.03850160911679268
+        }
+      },
+      {
+        "frame": 6,
+        "sole": {
+          "Left": 0.003545481711626053,
+          "Right": -0.0014198264107108116
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018953777849674225,
+          "phys_robe_side_L": 0.00946810096502304,
+          "phys_robe_front_C": 0.2797245979309082,
+          "phys_cape_L": 0.01498632226139307,
+          "phys_robe_back_L": 0.07128432393074036,
+          "phys_cape_C": 0.0076691508293151855,
+          "phys_robe_side_R": 0.0031451620161533356,
+          "phys_robe_front_R": 0.016467638313770294,
+          "phys_cape_R": 0.017251886427402496,
+          "phys_robe_back_R": 0.03855156898498535
+        }
+      },
+      {
+        "frame": 7,
+        "sole": {
+          "Left": 0.003514336422085762,
+          "Right": -0.0014434950426220894
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018718592822551727,
+          "phys_robe_side_L": 0.009553824551403522,
+          "phys_robe_front_C": 0.28003427386283875,
+          "phys_cape_L": 0.014967985451221466,
+          "phys_robe_back_L": 0.07148099690675735,
+          "phys_cape_C": 0.007467921823263168,
+          "phys_robe_side_R": 0.0032807597890496254,
+          "phys_robe_front_R": 0.01627075858414173,
+          "phys_cape_R": 0.017420561984181404,
+          "phys_robe_back_R": 0.03859782963991165
+        }
+      },
+      {
+        "frame": 8,
+        "sole": {
+          "Left": 0.003479127772152424,
+          "Right": -0.0014634029939770699
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018466945737600327,
+          "phys_robe_side_L": 0.009660698473453522,
+          "phys_robe_front_C": 0.2803571820259094,
+          "phys_cape_L": 0.015023973770439625,
+          "phys_robe_back_L": 0.07169827818870544,
+          "phys_cape_C": 0.007261583581566811,
+          "phys_robe_side_R": 0.003418182022869587,
+          "phys_robe_front_R": 0.01606135070323944,
+          "phys_cape_R": 0.01758876070380211,
+          "phys_robe_back_R": 0.03864011541008949
+        }
+      },
+      {
+        "frame": 9,
+        "sole": {
+          "Left": 0.0034399330615997314,
+          "Right": -0.001481323502957821
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018201131373643875,
+          "phys_robe_side_L": 0.009770432487130165,
+          "phys_robe_front_C": 0.2806912362575531,
+          "phys_cape_L": 0.015081620775163174,
+          "phys_robe_back_L": 0.07192178815603256,
+          "phys_cape_C": 0.007038632407784462,
+          "phys_robe_side_R": 0.0035577593371272087,
+          "phys_robe_front_R": 0.015840696170926094,
+          "phys_cape_R": 0.017756212502717972,
+          "phys_robe_back_R": 0.03867889195680618
+        }
+      },
+      {
+        "frame": 10,
+        "sole": {
+          "Left": 0.0033977171406149864,
+          "Right": -0.0014973441138863564
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017922542989253998,
+          "phys_robe_side_L": 0.009882461279630661,
+          "phys_robe_front_C": 0.28103527426719666,
+          "phys_cape_L": 0.015140814706683159,
+          "phys_robe_back_L": 0.07215045392513275,
+          "phys_cape_C": 0.0068013789132237434,
+          "phys_robe_side_R": 0.0036984598264098167,
+          "phys_robe_front_R": 0.01560976542532444,
+          "phys_cape_R": 0.017921961843967438,
+          "phys_robe_back_R": 0.03871363028883934
+        }
+      },
+      {
+        "frame": 11,
+        "sole": {
+          "Left": 0.0033519603312015533,
+          "Right": -0.0015115337446331978
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017653334885835648,
+          "phys_robe_side_L": 0.009996335953474045,
+          "phys_robe_front_C": 0.281400591135025,
+          "phys_cape_L": 0.015201101079583168,
+          "phys_robe_back_L": 0.07238328456878662,
+          "phys_cape_C": 0.006551310420036316,
+          "phys_robe_side_R": 0.0038399407640099525,
+          "phys_robe_front_R": 0.01536981575191021,
+          "phys_cape_R": 0.018085064366459846,
+          "phys_robe_back_R": 0.038744308054447174
+        }
+      },
+      {
+        "frame": 12,
+        "sole": {
+          "Left": 0.0033025387674570084,
+          "Right": -0.0015237117186188698
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017375757917761803,
+          "phys_robe_side_L": 0.010111242532730103,
+          "phys_robe_front_C": 0.28177425265312195,
+          "phys_cape_L": 0.015261512249708176,
+          "phys_robe_back_L": 0.07261896133422852,
+          "phys_cape_C": 0.006287527270615101,
+          "phys_robe_side_R": 0.003981446847319603,
+          "phys_robe_front_R": 0.0151209756731987,
+          "phys_cape_R": 0.018245164304971695,
+          "phys_robe_back_R": 0.038770891726017
+        }
+      },
+      {
+        "frame": 13,
+        "sole": {
+          "Left": 0.0032504675909876823,
+          "Right": -0.0015340382233262062
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017089437693357468,
+          "phys_robe_side_L": 0.010227284394204617,
+          "phys_robe_front_C": 0.28215378522872925,
+          "phys_cape_L": 0.015323163941502571,
+          "phys_robe_back_L": 0.07285697013139725,
+          "phys_cape_C": 0.00601319782435894,
+          "phys_robe_side_R": 0.004122615791857243,
+          "phys_robe_front_R": 0.014864630997180939,
+          "phys_cape_R": 0.018401365727186203,
+          "phys_robe_back_R": 0.038793496787548065
+        }
+      },
+      {
+        "frame": 14,
+        "sole": {
+          "Left": 0.0031961817294359207,
+          "Right": -0.001541866920888424
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01679612137377262,
+          "phys_robe_side_L": 0.010343404486775398,
+          "phys_robe_front_C": 0.2825380265712738,
+          "phys_cape_L": 0.015186181291937828,
+          "phys_robe_back_L": 0.07309590280056,
+          "phys_cape_C": 0.005728723481297493,
+          "phys_robe_side_R": 0.004262491129338741,
+          "phys_robe_front_R": 0.014602339826524258,
+          "phys_cape_R": 0.01855238899588585,
+          "phys_robe_back_R": 0.03881127014756203
+        }
+      },
+      {
+        "frame": 15,
+        "sole": {
+          "Left": 0.003139062784612179,
+          "Right": -0.001548650674521923
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.016496220603585243,
+          "phys_robe_side_L": 0.0104592926800251,
+          "phys_robe_front_C": 0.28292420506477356,
+          "phys_cape_L": 0.014939818531274796,
+          "phys_robe_back_L": 0.07333473861217499,
+          "phys_cape_C": 0.005435607396066189,
+          "phys_robe_side_R": 0.004400821402668953,
+          "phys_robe_front_R": 0.014334027655422688,
+          "phys_cape_R": 0.018698537722229958,
+          "phys_robe_back_R": 0.038824986666440964
+        }
+      },
+      {
+        "frame": 16,
+        "sole": {
+          "Left": 0.0030798111110925674,
+          "Right": -0.001552456058561802
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.0161924809217453,
+          "phys_robe_side_L": 0.010575322434306145,
+          "phys_robe_front_C": 0.28331196308135986,
+          "phys_cape_L": 0.014699915423989296,
+          "phys_robe_back_L": 0.07357320189476013,
+          "phys_cape_C": 0.005135985091328621,
+          "phys_robe_side_R": 0.004536771215498447,
+          "phys_robe_front_R": 0.014062408357858658,
+          "phys_cape_R": 0.01883835345506668,
+          "phys_robe_back_R": 0.03883408382534981
+        }
+      },
+      {
+        "frame": 17,
+        "sole": {
+          "Left": 0.0030200285837054253,
+          "Right": -0.0015483209863305092
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.015883706510066986,
+          "phys_robe_side_L": 0.01069430261850357,
+          "phys_robe_front_C": 0.28369900584220886,
+          "phys_cape_L": 0.01448050420731306,
+          "phys_robe_back_L": 0.07381276786327362,
+          "phys_cape_C": 0.004833445884287357,
+          "phys_robe_side_R": 0.004670221358537674,
+          "phys_robe_front_R": 0.013787598349153996,
+          "phys_cape_R": 0.018971135839819908,
+          "phys_robe_back_R": 0.038838598877191544
+        }
+      },
+      {
+        "frame": 18,
+        "sole": {
+          "Left": 0.0029586339369416237,
+          "Right": -0.0015414422377943993
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.015573782846331596,
+          "phys_robe_side_L": 0.010811154730618,
+          "phys_robe_front_C": 0.284083753824234,
+          "phys_cape_L": 0.014264674857258797,
+          "phys_robe_back_L": 0.07404889911413193,
+          "phys_cape_C": 0.004526725970208645,
+          "phys_robe_side_R": 0.004800118505954742,
+          "phys_robe_front_R": 0.01351063884794712,
+          "phys_cape_R": 0.019097303971648216,
+          "phys_robe_back_R": 0.03883873671293259
+        }
+      },
+      {
+        "frame": 19,
+        "sole": {
+          "Left": 0.002897036261856556,
+          "Right": -0.0015340270474553108
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.015262479893863201,
+          "phys_robe_side_L": 0.01092553697526455,
+          "phys_robe_front_C": 0.2844643294811249,
+          "phys_cape_L": 0.014054570347070694,
+          "phys_robe_back_L": 0.0742807611823082,
+          "phys_cape_C": 0.004216611385345459,
+          "phys_robe_side_R": 0.004926071502268314,
+          "phys_robe_front_R": 0.013233209028840065,
+          "phys_cape_R": 0.019214794039726257,
+          "phys_robe_back_R": 0.038833994418382645
+        }
+      },
+      {
+        "frame": 20,
+        "sole": {
+          "Left": 0.002834961749613285,
+          "Right": -0.0015251552686095238
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014952117577195168,
+          "phys_robe_side_L": 0.011036640033125877,
+          "phys_robe_front_C": 0.2848394811153412,
+          "phys_cape_L": 0.013850132003426552,
+          "phys_robe_back_L": 0.07450708746910095,
+          "phys_cape_C": 0.003906385973095894,
+          "phys_robe_side_R": 0.005047735758125782,
+          "phys_robe_front_R": 0.01295611634850502,
+          "phys_cape_R": 0.01932494156062603,
+          "phys_robe_back_R": 0.03882508724927902
+        }
+      },
+      {
+        "frame": 21,
+        "sole": {
+          "Left": 0.0027729878202080727,
+          "Right": -0.001514325849711895
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014643427915871143,
+          "phys_robe_side_L": 0.011144171468913555,
+          "phys_robe_front_C": 0.2852076292037964,
+          "phys_cape_L": 0.013652121648192406,
+          "phys_robe_back_L": 0.07472718507051468,
+          "phys_cape_C": 0.003596019931137562,
+          "phys_robe_side_R": 0.005164315924048424,
+          "phys_robe_front_R": 0.012680632062256336,
+          "phys_cape_R": 0.01935473270714283,
+          "phys_robe_back_R": 0.03881122171878815
+        }
+      },
+      {
+        "frame": 22,
+        "sole": {
+          "Left": 0.0027116555720567703,
+          "Right": -0.0015022782608866692
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01433865912258625,
+          "phys_robe_side_L": 0.011247818358242512,
+          "phys_robe_front_C": 0.2855668365955353,
+          "phys_cape_L": 0.013462219387292862,
+          "phys_robe_back_L": 0.07494004815816879,
+          "phys_cape_C": 0.003287910483777523,
+          "phys_robe_side_R": 0.00527513213455677,
+          "phys_robe_front_R": 0.012408523820340633,
+          "phys_cape_R": 0.019057855010032654,
+          "phys_robe_back_R": 0.03879254311323166
+        }
+      },
+      {
+        "frame": 23,
+        "sole": {
+          "Left": 0.0026521719992160797,
+          "Right": -0.001490018330514431
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014037652872502804,
+          "phys_robe_side_L": 0.011346768587827682,
+          "phys_robe_front_C": 0.28591546416282654,
+          "phys_cape_L": 0.013280568644404411,
+          "phys_robe_back_L": 0.07514455169439316,
+          "phys_cape_C": 0.00298368651419878,
+          "phys_robe_side_R": 0.005380256101489067,
+          "phys_robe_front_R": 0.012140143662691116,
+          "phys_cape_R": 0.01877065747976303,
+          "phys_robe_back_R": 0.03876958042383194
+        }
+      },
+      {
+        "frame": 24,
+        "sole": {
+          "Left": 0.002594172954559326,
+          "Right": -0.0014763539656996727
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013742651790380478,
+          "phys_robe_side_L": 0.011440923437476158,
+          "phys_robe_front_C": 0.28625261783599854,
+          "phys_cape_L": 0.0131078427657485,
+          "phys_robe_back_L": 0.07534017413854599,
+          "phys_cape_C": 0.002684490755200386,
+          "phys_robe_side_R": 0.005479080602526665,
+          "phys_robe_front_R": 0.011877448298037052,
+          "phys_cape_R": 0.018493296578526497,
+          "phys_robe_back_R": 0.03874209523200989
+        }
+      },
+      {
+        "frame": 25,
+        "sole": {
+          "Left": 0.0025381185114383698,
+          "Right": -0.0014617843553423882
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013455287553369999,
+          "phys_robe_side_L": 0.011529919691383839,
+          "phys_robe_front_C": 0.28657612204551697,
+          "phys_cape_L": 0.012945039197802544,
+          "phys_robe_back_L": 0.07552606612443924,
+          "phys_cape_C": 0.0023921681568026543,
+          "phys_robe_side_R": 0.0055817002430558205,
+          "phys_robe_front_R": 0.011628733947873116,
+          "phys_cape_R": 0.018227115273475647,
+          "phys_robe_back_R": 0.03871719166636467
+        }
+      },
+      {
+        "frame": 26,
+        "sole": {
+          "Left": 0.0024845628067851067,
+          "Right": -0.001446935348212719
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013175995089113712,
+          "phys_robe_side_L": 0.011613104492425919,
+          "phys_robe_front_C": 0.28688499331474304,
+          "phys_cape_L": 0.01279250904917717,
+          "phys_robe_back_L": 0.07570123672485352,
+          "phys_cape_C": 0.002108468674123287,
+          "phys_robe_side_R": 0.005785055458545685,
+          "phys_robe_front_R": 0.011462435126304626,
+          "phys_cape_R": 0.0179732795804739,
+          "phys_robe_back_R": 0.03875989094376564
+        }
+      },
+      {
+        "frame": 27,
+        "sole": {
+          "Left": 0.0024336446076631546,
+          "Right": -0.0014312071725726128
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012906979769468307,
+          "phys_robe_side_L": 0.01169046200811863,
+          "phys_robe_front_C": 0.28717800974845886,
+          "phys_cape_L": 0.012650704942643642,
+          "phys_robe_back_L": 0.07586535811424255,
+          "phys_cape_C": 0.0018341997638344765,
+          "phys_robe_side_R": 0.005974256433546543,
+          "phys_robe_front_R": 0.011300620622932911,
+          "phys_cape_R": 0.017732249572873116,
+          "phys_robe_back_R": 0.038793887943029404
+        }
+      },
+      {
+        "frame": 28,
+        "sole": {
+          "Left": 0.002386808395385742,
+          "Right": -0.0014155460521578789
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012648724019527435,
+          "phys_robe_side_L": 0.011761313304305077,
+          "phys_robe_front_C": 0.28745323419570923,
+          "phys_cape_L": 0.012520546093583107,
+          "phys_robe_back_L": 0.07601725310087204,
+          "phys_cape_C": 0.0015713917091488838,
+          "phys_robe_side_R": 0.0061479900032281876,
+          "phys_robe_front_R": 0.011143763549625874,
+          "phys_cape_R": 0.017505083233118057,
+          "phys_robe_back_R": 0.03881874307990074
+        }
+      },
+      {
+        "frame": 29,
+        "sole": {
+          "Left": 0.0023432206362485886,
+          "Right": -0.0013995030894875526
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012414386495947838,
+          "phys_robe_side_L": 0.011825863271951675,
+          "phys_robe_front_C": 0.28771767020225525,
+          "phys_cape_L": 0.012402301654219627,
+          "phys_robe_back_L": 0.07615695893764496,
+          "phys_cape_C": 0.0013204477727413177,
+          "phys_robe_side_R": 0.006306123919785023,
+          "phys_robe_front_R": 0.010992299765348434,
+          "phys_cape_R": 0.01729259453713894,
+          "phys_robe_back_R": 0.03883478417992592
+        }
+      },
+      {
+        "frame": 30,
+        "sole": {
+          "Left": 0.0023038601502776146,
+          "Right": -0.001383473165333271
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012198860757052898,
+          "phys_robe_side_L": 0.011883443221449852,
+          "phys_robe_front_C": 0.28796517848968506,
+          "phys_cape_L": 0.0122965844348073,
+          "phys_robe_back_L": 0.07628335803747177,
+          "phys_cape_C": 0.0010836413130164146,
+          "phys_robe_side_R": 0.006447729654610157,
+          "phys_robe_front_R": 0.010847507044672966,
+          "phys_cape_R": 0.017095627263188362,
+          "phys_robe_back_R": 0.038841571658849716
+        }
+      },
+      {
+        "frame": 31,
+        "sole": {
+          "Left": 0.0022685453295707703,
+          "Right": -0.0013673743233084679
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.0119963139295578,
+          "phys_robe_side_L": 0.011934040114283562,
+          "phys_robe_front_C": 0.28819143772125244,
+          "phys_cape_L": 0.012203698977828026,
+          "phys_robe_back_L": 0.07639624923467636,
+          "phys_cape_C": 0.0008612014353275299,
+          "phys_robe_side_R": 0.006571889854967594,
+          "phys_robe_front_R": 0.010709535330533981,
+          "phys_cape_R": 0.016914159059524536,
+          "phys_robe_back_R": 0.03883867338299751
+        }
+      },
+      {
+        "frame": 32,
+        "sole": {
+          "Left": 0.0022379402071237564,
+          "Right": -0.0013518566265702248
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011808388866484165,
+          "phys_robe_side_L": 0.01197740901261568,
+          "phys_robe_front_C": 0.28839555382728577,
+          "phys_cape_L": 0.012124070897698402,
+          "phys_robe_back_L": 0.07649517804384232,
+          "phys_cape_C": 0.000654241070151329,
+          "phys_robe_side_R": 0.0066782040521502495,
+          "phys_robe_front_R": 0.010579504072666168,
+          "phys_cape_R": 0.01674947515130043,
+          "phys_robe_back_R": 0.03882647305727005
+        }
+      },
+      {
+        "frame": 33,
+        "sole": {
+          "Left": 0.0022121556103229523,
+          "Right": -0.0013361657038331032
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.0116355512291193,
+          "phys_robe_side_L": 0.012012920342385769,
+          "phys_robe_front_C": 0.28857675194740295,
+          "phys_cape_L": 0.012057114392518997,
+          "phys_robe_back_L": 0.0765792578458786,
+          "phys_cape_C": 0.0004642382264137268,
+          "phys_robe_side_R": 0.006766384467482567,
+          "phys_robe_front_R": 0.010457349941134453,
+          "phys_cape_R": 0.016601553186774254,
+          "phys_robe_back_R": 0.03880469873547554
+        }
+      },
+      {
+        "frame": 34,
+        "sole": {
+          "Left": 0.0021910229697823524,
+          "Right": -0.0013209348544478416
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011478371918201447,
+          "phys_robe_side_L": 0.012013771571218967,
+          "phys_robe_front_C": 0.28873398900032043,
+          "phys_cape_L": 0.012004232965409756,
+          "phys_robe_back_L": 0.07664889097213745,
+          "phys_cape_C": 0.00029121898114681244,
+          "phys_robe_side_R": 0.0068358564749360085,
+          "phys_robe_front_R": 0.010344326496124268,
+          "phys_cape_R": 0.01647162064909935,
+          "phys_robe_back_R": 0.03877386078238487
+        }
+      },
+      {
+        "frame": 35,
+        "sole": {
+          "Left": 0.0021751215681433678,
+          "Right": -0.001305920071899891
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011338516138494015,
+          "phys_robe_side_L": 0.011950281448662281,
+          "phys_robe_front_C": 0.2888662815093994,
+          "phys_cape_L": 0.011965804733335972,
+          "phys_robe_back_L": 0.07670342922210693,
+          "phys_cape_C": 0.00013647321611642838,
+          "phys_robe_side_R": 0.006885957904160023,
+          "phys_robe_front_R": 0.010240661911666393,
+          "phys_cape_R": 0.01636013574898243,
+          "phys_robe_back_R": 0.03873346373438835
+        }
+      },
+      {
+        "frame": 36,
+        "sole": {
+          "Left": 0.002164107747375965,
+          "Right": -0.0012911828234791756
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011215383186936378,
+          "phys_robe_side_L": 0.011894989758729935,
+          "phys_robe_front_C": 0.28897348046302795,
+          "phys_cape_L": 0.011940662749111652,
+          "phys_robe_back_L": 0.07674261927604675,
+          "phys_cape_C": 8.67992639541626e-07,
+          "phys_robe_side_R": 0.006917173974215984,
+          "phys_robe_front_R": 0.01014671940356493,
+          "phys_cape_R": 0.016266513615846634,
+          "phys_robe_back_R": 0.03868407756090164
+        }
+      },
+      {
+        "frame": 37,
+        "sole": {
+          "Left": 0.002158273011445999,
+          "Right": -0.0012778574600815773
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011110330000519753,
+          "phys_robe_side_L": 0.011848516762256622,
+          "phys_robe_front_C": 0.28905531764030457,
+          "phys_cape_L": 0.011930174194276333,
+          "phys_robe_back_L": 0.07676654309034348,
+          "phys_cape_C": -0.00011561159044504166,
+          "phys_robe_side_R": 0.006928451359272003,
+          "phys_robe_front_R": 0.010063307359814644,
+          "phys_cape_R": 0.016192883253097534,
+          "phys_robe_back_R": 0.0386258028447628
+        }
+      },
+      {
+        "frame": 38,
+        "sole": {
+          "Left": 0.0021571870893239975,
+          "Right": -0.0012648003175854683
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01102352049201727,
+          "phys_robe_side_L": 0.011810657568275928,
+          "phys_robe_front_C": 0.28911110758781433,
+          "phys_cape_L": 0.011933637782931328,
+          "phys_robe_back_L": 0.07677484303712845,
+          "phys_cape_C": -0.0002129487693309784,
+          "phys_robe_side_R": 0.006920524872839451,
+          "phys_robe_front_R": 0.009990079328417778,
+          "phys_cape_R": 0.016137931495904922,
+          "phys_robe_back_R": 0.038558878004550934
+        }
+      },
+      {
+        "frame": 39,
+        "sole": {
+          "Left": 0.002161417156457901,
+          "Right": -0.0012522479519248009
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010955586098134518,
+          "phys_robe_side_L": 0.011781830340623856,
+          "phys_robe_front_C": 0.2891409397125244,
+          "phys_cape_L": 0.011951440945267677,
+          "phys_robe_back_L": 0.07676774263381958,
+          "phys_cape_C": -0.0002906797453761101,
+          "phys_robe_side_R": 0.006892820820212364,
+          "phys_robe_front_R": 0.00992842298001051,
+          "phys_cape_R": 0.016102291643619537,
+          "phys_robe_back_R": 0.03848334029316902
+        }
+      },
+      {
+        "frame": 40,
+        "sole": {
+          "Left": 0.0021704239770770073,
+          "Right": -0.0012400811538100243
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010906558483839035,
+          "phys_robe_side_L": 0.01176197174936533,
+          "phys_robe_front_C": 0.2891443073749542,
+          "phys_cape_L": 0.011983244679868221,
+          "phys_robe_back_L": 0.07674512267112732,
+          "phys_cape_C": -0.0003485344350337982,
+          "phys_robe_side_R": 0.00684573408216238,
+          "phys_robe_front_R": 0.009877577424049377,
+          "phys_cape_R": 0.016086064279079437,
+          "phys_robe_back_R": 0.03839966654777527
+        }
+      },
+      {
+        "frame": 41,
+        "sole": {
+          "Left": 0.0021835612133145332,
+          "Right": -0.0012283353134989738
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010877173393964767,
+          "phys_robe_side_L": 0.011752665042877197,
+          "phys_robe_front_C": 0.28912124037742615,
+          "phys_cape_L": 0.012035559862852097,
+          "phys_robe_back_L": 0.07670848816633224,
+          "phys_cape_C": -0.00038516800850629807,
+          "phys_robe_side_R": 0.006779186427593231,
+          "phys_robe_front_R": 0.009838616475462914,
+          "phys_cape_R": 0.01608964614570141,
+          "phys_robe_back_R": 0.038308024406433105
+        }
+      },
+      {
+        "frame": 42,
+        "sole": {
+          "Left": 0.0022014183923602104,
+          "Right": -0.0012173419818282127
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010866107419133186,
+          "phys_robe_side_L": 0.011754417791962624,
+          "phys_robe_front_C": 0.2890717387199402,
+          "phys_cape_L": 0.012111978605389595,
+          "phys_robe_back_L": 0.07665868103504181,
+          "phys_cape_C": -0.0004003262147307396,
+          "phys_robe_side_R": 0.006693675182759762,
+          "phys_robe_front_R": 0.009811412543058395,
+          "phys_cape_R": 0.016112910583615303,
+          "phys_robe_back_R": 0.03820904716849327
+        }
+      },
+      {
+        "frame": 43,
+        "sole": {
+          "Left": 0.0022231098264455795,
+          "Right": -0.0012069819495081902
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010875098407268524,
+          "phys_robe_side_L": 0.011766083538532257,
+          "phys_robe_front_C": 0.2889968454837799,
+          "phys_cape_L": 0.012203708291053772,
+          "phys_robe_back_L": 0.07659435272216797,
+          "phys_cape_C": -0.0003951024264097214,
+          "phys_robe_side_R": 0.006589851342141628,
+          "phys_robe_front_R": 0.009795998223125935,
+          "phys_cape_R": 0.016156857833266258,
+          "phys_robe_back_R": 0.03810379281640053
+        }
+      },
+      {
+        "frame": 44,
+        "sole": {
+          "Left": 0.0022490285336971283,
+          "Right": -0.0011970242485404015
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010903460904955864,
+          "phys_robe_side_L": 0.011786673218011856,
+          "phys_robe_front_C": 0.28889593482017517,
+          "phys_cape_L": 0.012308904901146889,
+          "phys_robe_back_L": 0.07651504129171371,
+          "phys_cape_C": -0.00037076976150274277,
+          "phys_robe_side_R": 0.006467279978096485,
+          "phys_robe_front_R": 0.009792222641408443,
+          "phys_cape_R": 0.0162205770611763,
+          "phys_robe_back_R": 0.03799187019467354
+        }
+      },
+      {
+        "frame": 45,
+        "sole": {
+          "Left": 0.0022780606523156166,
+          "Right": -0.0011875322088599205
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.010950816795229912,
+          "phys_robe_side_L": 0.011816779151558876,
+          "phys_robe_front_C": 0.2887696921825409,
+          "phys_cape_L": 0.012428240850567818,
+          "phys_robe_back_L": 0.07642175257205963,
+          "phys_cape_C": -0.000327196903526783,
+          "phys_robe_side_R": 0.006327426061034203,
+          "phys_robe_front_R": 0.009800616651773453,
+          "phys_cape_R": 0.016304071992635727,
+          "phys_robe_back_R": 0.03787432238459587
+        }
+      },
+      {
+        "frame": 46,
+        "sole": {
+          "Left": 0.002310037612915039,
+          "Right": -0.001175680197775364
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01101726945489645,
+          "phys_robe_side_L": 0.011804893612861633,
+          "phys_robe_front_C": 0.2886190712451935,
+          "phys_cape_L": 0.012560985051095486,
+          "phys_robe_back_L": 0.07631458342075348,
+          "phys_cape_C": -0.00026452168822288513,
+          "phys_robe_side_R": 0.006170296110212803,
+          "phys_robe_front_R": 0.009820707142353058,
+          "phys_cape_R": 0.01640641689300537,
+          "phys_robe_back_R": 0.03775098919868469
+        }
+      },
+      {
+        "frame": 47,
+        "sole": {
+          "Left": 0.002345016226172447,
+          "Right": -0.0011670207604765892
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01110218744724989,
+          "phys_robe_side_L": 0.011741233989596367,
+          "phys_robe_front_C": 0.2884443700313568,
+          "phys_cape_L": 0.01270622294396162,
+          "phys_robe_back_L": 0.07619396597146988,
+          "phys_cape_C": -0.00018433015793561935,
+          "phys_robe_side_R": 0.005996973253786564,
+          "phys_robe_front_R": 0.009852751158177853,
+          "phys_cape_R": 0.016528166830539703,
+          "phys_robe_back_R": 0.03762327879667282
+        }
+      },
+      {
+        "frame": 48,
+        "sole": {
+          "Left": 0.0023822691291570663,
+          "Right": -0.0011577913537621498
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011206022463738918,
+          "phys_robe_side_L": 0.011671553365886211,
+          "phys_robe_front_C": 0.2882462739944458,
+          "phys_cape_L": 0.01286488026380539,
+          "phys_robe_back_L": 0.07606042921543121,
+          "phys_cape_C": -8.597131818532944e-05,
+          "phys_robe_side_R": 0.005808076821267605,
+          "phys_robe_front_R": 0.009896449744701385,
+          "phys_cape_R": 0.016669372096657753,
+          "phys_robe_back_R": 0.03749179095029831
+        }
+      },
+      {
+        "frame": 49,
+        "sole": {
+          "Left": 0.002421910874545574,
+          "Right": -0.0011489717289805412
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011326861567795277,
+          "phys_robe_side_L": 0.011596173979341984,
+          "phys_robe_front_C": 0.2880258858203888,
+          "phys_cape_L": 0.013035793788731098,
+          "phys_robe_back_L": 0.07591470330953598,
+          "phys_cape_C": 2.8874725103378296e-05,
+          "phys_robe_side_R": 0.005604300647974014,
+          "phys_robe_front_R": 0.009951126761734486,
+          "phys_cape_R": 0.01682864874601364,
+          "phys_robe_back_R": 0.037356581538915634
+        }
+      },
+      {
+        "frame": 50,
+        "sole": {
+          "Left": 0.002462795004248619,
+          "Right": -0.001141461543738842
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011465486139059067,
+          "phys_robe_side_L": 0.011515171267092228,
+          "phys_robe_front_C": 0.28778401017189026,
+          "phys_cape_L": 0.013217616826295853,
+          "phys_robe_back_L": 0.07575713098049164,
+          "phys_cape_C": 0.0001605655997991562,
+          "phys_robe_side_R": 0.005386980250477791,
+          "phys_robe_front_R": 0.010017220862209797,
+          "phys_cape_R": 0.016977762803435326,
+          "phys_robe_back_R": 0.03721889853477478
+        }
+      },
+      {
+        "frame": 51,
+        "sole": {
+          "Left": 0.002505192533135414,
+          "Right": -0.0011355439200997353
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01162085123360157,
+          "phys_robe_side_L": 0.011428837664425373,
+          "phys_robe_front_C": 0.28752192854881287,
+          "phys_cape_L": 0.013409768231213093,
+          "phys_robe_back_L": 0.07558831572532654,
+          "phys_cape_C": 0.000307437963783741,
+          "phys_robe_side_R": 0.0051565030589699745,
+          "phys_robe_front_R": 0.01009415090084076,
+          "phys_cape_R": 0.016884678974747658,
+          "phys_robe_back_R": 0.037079013884067535
+        }
+      },
+      {
+        "frame": 52,
+        "sole": {
+          "Left": 0.0025482121855020523,
+          "Right": -0.001127372495830059
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011791652999818325,
+          "phys_robe_side_L": 0.011337784118950367,
+          "phys_robe_front_C": 0.28724032640457153,
+          "phys_cape_L": 0.013612047769129276,
+          "phys_robe_back_L": 0.0754091665148735,
+          "phys_cape_C": 0.00046914350241422653,
+          "phys_robe_side_R": 0.004913903772830963,
+          "phys_robe_front_R": 0.010181215591728687,
+          "phys_cape_R": 0.016796570271253586,
+          "phys_robe_back_R": 0.03693742677569389
+        }
+      },
+      {
+        "frame": 53,
+        "sole": {
+          "Left": 0.00259214174002409,
+          "Right": -0.0011189421638846397
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.011977996677160263,
+          "phys_robe_side_L": 0.01124241016805172,
+          "phys_robe_front_C": 0.2869411110877991,
+          "phys_cape_L": 0.01382340770214796,
+          "phys_robe_back_L": 0.07522042840719223,
+          "phys_cape_C": 0.000644938088953495,
+          "phys_robe_side_R": 0.004660884849727154,
+          "phys_robe_front_R": 0.010278455913066864,
+          "phys_cape_R": 0.016713988035917282,
+          "phys_robe_back_R": 0.03679525852203369
+        }
+      },
+      {
+        "frame": 54,
+        "sole": {
+          "Left": 0.0026362258940935135,
+          "Right": -0.0011108750477433205
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012178697623312473,
+          "phys_robe_side_L": 0.011142682284116745,
+          "phys_robe_front_C": 0.2866252064704895,
+          "phys_cape_L": 0.014042925089597702,
+          "phys_robe_back_L": 0.07502243667840958,
+          "phys_cape_C": 0.0008446183055639267,
+          "phys_robe_side_R": 0.004513845779001713,
+          "phys_robe_front_R": 0.01046561449766159,
+          "phys_cape_R": 0.0166659913957119,
+          "phys_robe_back_R": 0.03673049435019493
+        }
+      },
+      {
+        "frame": 55,
+        "sole": {
+          "Left": 0.002679760567843914,
+          "Right": -0.0011015525087714195
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012392066419124603,
+          "phys_robe_side_L": 0.011039746925234795,
+          "phys_robe_front_C": 0.2862934470176697,
+          "phys_cape_L": 0.014270363375544548,
+          "phys_robe_back_L": 0.0748167634010315,
+          "phys_cape_C": 0.001128699630498886,
+          "phys_robe_side_R": 0.004373760893940926,
+          "phys_robe_front_R": 0.0106724314391613,
+          "phys_cape_R": 0.016627026721835136,
+          "phys_robe_back_R": 0.03667617216706276
+        }
+      },
+      {
+        "frame": 56,
+        "sole": {
+          "Left": 0.0027233920991420746,
+          "Right": -0.0010865097865462303
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012616829946637154,
+          "phys_robe_side_L": 0.010946795344352722,
+          "phys_robe_front_C": 0.285948246717453,
+          "phys_cape_L": 0.014551647007465363,
+          "phys_robe_back_L": 0.07461375743150711,
+          "phys_cape_C": 0.0014281515032052994,
+          "phys_robe_side_R": 0.004229017533361912,
+          "phys_robe_front_R": 0.01088794320821762,
+          "phys_cape_R": 0.016686273738741875,
+          "phys_robe_back_R": 0.0366581492125988
+        }
+      },
+      {
+        "frame": 57,
+        "sole": {
+          "Left": 0.002765604294836521,
+          "Right": -0.0010720966383814812
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.012852600775659084,
+          "phys_robe_side_L": 0.010855240747332573,
+          "phys_robe_front_C": 0.285590261220932,
+          "phys_cape_L": 0.014853292144834995,
+          "phys_robe_back_L": 0.07440752536058426,
+          "phys_cape_C": 0.0017352476716041565,
+          "phys_robe_side_R": 0.004082122817635536,
+          "phys_robe_front_R": 0.011113671585917473,
+          "phys_cape_R": 0.016776487231254578,
+          "phys_robe_back_R": 0.036652982234954834
+        }
+      },
+      {
+        "frame": 58,
+        "sole": {
+          "Left": 0.0028078118339180946,
+          "Right": -0.0010571768507361412
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013097995892167091,
+          "phys_robe_side_L": 0.010761622339487076,
+          "phys_robe_front_C": 0.28522148728370667,
+          "phys_cape_L": 0.01516002882272005,
+          "phys_robe_back_L": 0.07419601082801819,
+          "phys_cape_C": 0.0020481422543525696,
+          "phys_robe_side_R": 0.003933071158826351,
+          "phys_robe_front_R": 0.01134738139808178,
+          "phys_cape_R": 0.01692442037165165,
+          "phys_robe_back_R": 0.03667043149471283
+        }
+      },
+      {
+        "frame": 59,
+        "sole": {
+          "Left": 0.002848944626748562,
+          "Right": -0.0010425494983792305
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013353172689676285,
+          "phys_robe_side_L": 0.01066630706191063,
+          "phys_robe_front_C": 0.284843772649765,
+          "phys_cape_L": 0.015470939688384533,
+          "phys_robe_back_L": 0.07398004084825516,
+          "phys_cape_C": 0.00236457958817482,
+          "phys_robe_side_R": 0.003783132880926132,
+          "phys_robe_front_R": 0.011589492671191692,
+          "phys_cape_R": 0.016921518370509148,
+          "phys_robe_back_R": 0.03670015558600426
+        }
+      },
+      {
+        "frame": 60,
+        "sole": {
+          "Left": 0.002887978218495846,
+          "Right": -0.0010271361097693443
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013633443042635918,
+          "phys_robe_side_L": 0.010569604113698006,
+          "phys_robe_front_C": 0.2844685912132263,
+          "phys_cape_L": 0.015784109011292458,
+          "phys_robe_back_L": 0.07376047968864441,
+          "phys_cape_C": 0.002682933583855629,
+          "phys_robe_side_R": 0.003633381798863411,
+          "phys_robe_front_R": 0.011839209124445915,
+          "phys_cape_R": 0.01688980683684349,
+          "phys_robe_back_R": 0.03673375025391579
+        }
+      },
+      {
+        "frame": 61,
+        "sole": {
+          "Left": 0.002926696091890335,
+          "Right": -0.0010125478729605675
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.013922466896474361,
+          "phys_robe_side_L": 0.010472098365426064,
+          "phys_robe_front_C": 0.28408893942832947,
+          "phys_cape_L": 0.015867670997977257,
+          "phys_robe_back_L": 0.07353845983743668,
+          "phys_cape_C": 0.0030025169253349304,
+          "phys_robe_side_R": 0.0034848451614379883,
+          "phys_robe_front_R": 0.012095141224563122,
+          "phys_cape_R": 0.016859017312526703,
+          "phys_robe_back_R": 0.0367712639272213
+        }
+      },
+      {
+        "frame": 62,
+        "sole": {
+          "Left": 0.0029635466635227203,
+          "Right": -0.0009980974718928337
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014217807911336422,
+          "phys_robe_side_L": 0.010374065488576889,
+          "phys_robe_front_C": 0.28370481729507446,
+          "phys_cape_L": 0.015880713239312172,
+          "phys_robe_back_L": 0.07331464439630508,
+          "phys_cape_C": 0.0033204499632120132,
+          "phys_robe_side_R": 0.0033379951491951942,
+          "phys_robe_front_R": 0.012357333675026894,
+          "phys_cape_R": 0.016829224303364754,
+          "phys_robe_back_R": 0.036812737584114075
+        }
+      },
+      {
+        "frame": 63,
+        "sole": {
+          "Left": 0.002998907119035721,
+          "Right": -0.0009835297241806984
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014518260955810547,
+          "phys_robe_side_L": 0.010275990702211857,
+          "phys_robe_front_C": 0.28331872820854187,
+          "phys_cape_L": 0.015892650932073593,
+          "phys_robe_back_L": 0.07309014350175858,
+          "phys_cape_C": 0.003637419082224369,
+          "phys_robe_side_R": 0.003193635493516922,
+          "phys_robe_front_R": 0.012623386457562447,
+          "phys_cape_R": 0.01679989881813526,
+          "phys_robe_back_R": 0.03685756027698517
+        }
+      },
+      {
+        "frame": 64,
+        "sole": {
+          "Left": 0.0030328817665576935,
+          "Right": -0.0009697051718831062
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.014822489582002163,
+          "phys_robe_side_L": 0.010178232565522194,
+          "phys_robe_front_C": 0.2829321026802063,
+          "phys_cape_L": 0.015903377905488014,
+          "phys_robe_back_L": 0.07286588102579117,
+          "phys_cape_C": 0.003950662910938263,
+          "phys_robe_side_R": 0.003052009269595146,
+          "phys_robe_front_R": 0.01289287768304348,
+          "phys_cape_R": 0.0167715921998024,
+          "phys_robe_back_R": 0.03690555319190025
+        }
+      },
+      {
+        "frame": 65,
+        "sole": {
+          "Left": 0.0030652424320578575,
+          "Right": -0.0009562568739056587
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.015128794126212597,
+          "phys_robe_side_L": 0.01008104532957077,
+          "phys_robe_front_C": 0.2825460731983185,
+          "phys_cape_L": 0.015911811962723732,
+          "phys_robe_back_L": 0.07264259457588196,
+          "phys_cape_C": 0.004259706474840641,
+          "phys_robe_side_R": 0.0029141511768102646,
+          "phys_robe_front_R": 0.013164649717509747,
+          "phys_cape_R": 0.016744524240493774,
+          "phys_robe_back_R": 0.0369567908346653
+        }
+      },
+      {
+        "frame": 66,
+        "sole": {
+          "Left": 0.0030961940065026283,
+          "Right": -0.0009435052052140236
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.0154365673661232,
+          "phys_robe_side_L": 0.009984875097870827,
+          "phys_robe_front_C": 0.28216293454170227,
+          "phys_cape_L": 0.01591852679848671,
+          "phys_robe_back_L": 0.0724213495850563,
+          "phys_cape_C": 0.004563496448099613,
+          "phys_robe_side_R": 0.0027802586555480957,
+          "phys_robe_front_R": 0.013436911627650261,
+          "phys_cape_R": 0.01671868935227394,
+          "phys_robe_back_R": 0.03701097145676613
+        }
+      },
+      {
+        "frame": 67,
+        "sole": {
+          "Left": 0.0031258538365364075,
+          "Right": -0.0009317519143223763
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.015743622556328773,
+          "phys_robe_side_L": 0.009890386834740639,
+          "phys_robe_front_C": 0.2817838490009308,
+          "phys_cape_L": 0.015923961997032166,
+          "phys_robe_back_L": 0.07220329344272614,
+          "phys_cape_C": 0.004860617220401764,
+          "phys_robe_side_R": 0.0026513179764151573,
+          "phys_robe_front_R": 0.013709094375371933,
+          "phys_cape_R": 0.016694236546754837,
+          "phys_robe_back_R": 0.037067726254463196
+        }
+      },
+      {
+        "frame": 68,
+        "sole": {
+          "Left": 0.0031545422971248627,
+          "Right": -0.0009208759292960167
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.016049884259700775,
+          "phys_robe_side_L": 0.009797707200050354,
+          "phys_robe_front_C": 0.2814113199710846,
+          "phys_cape_L": 0.01592683233320713,
+          "phys_robe_back_L": 0.07198914885520935,
+          "phys_cape_C": 0.00514955073595047,
+          "phys_robe_side_R": 0.0025276588276028633,
+          "phys_robe_front_R": 0.013980027288198471,
+          "phys_cape_R": 0.016671549528837204,
+          "phys_robe_back_R": 0.03712725639343262
+        }
+      },
+      {
+        "frame": 69,
+        "sole": {
+          "Left": 0.0031821001321077347,
+          "Right": -0.0009106369689106941
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01635274663567543,
+          "phys_robe_side_L": 0.00970705971121788,
+          "phys_robe_front_C": 0.2810458242893219,
+          "phys_cape_L": 0.01592746190726757,
+          "phys_robe_back_L": 0.07177959382534027,
+          "phys_cape_C": 0.0054291775450110435,
+          "phys_robe_side_R": 0.0024098707363009453,
+          "phys_robe_front_R": 0.014247825369238853,
+          "phys_cape_R": 0.01665014773607254,
+          "phys_robe_back_R": 0.037188656628131866
+        }
+      },
+      {
+        "frame": 70,
+        "sole": {
+          "Left": 0.0032081520184874535,
+          "Right": -0.000902215950191021
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01665162295103073,
+          "phys_robe_side_L": 0.009618917480111122,
+          "phys_robe_front_C": 0.28068941831588745,
+          "phys_cape_L": 0.015925515443086624,
+          "phys_robe_back_L": 0.07157576829195023,
+          "phys_cape_C": 0.005699307657778263,
+          "phys_robe_side_R": 0.002298482693731785,
+          "phys_robe_front_R": 0.014512168243527412,
+          "phys_cape_R": 0.016630470752716064,
+          "phys_robe_back_R": 0.037251994013786316
+        }
+      },
+      {
+        "frame": 71,
+        "sole": {
+          "Left": 0.0032338639721274376,
+          "Right": -0.0008946983143687248
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01694517210125923,
+          "phys_robe_side_L": 0.009533936157822609,
+          "phys_robe_front_C": 0.2803434431552887,
+          "phys_cape_L": 0.015921298414468765,
+          "phys_robe_back_L": 0.07137878239154816,
+          "phys_cape_C": 0.005959397181868553,
+          "phys_robe_side_R": 0.0021948693320155144,
+          "phys_robe_front_R": 0.01477163564413786,
+          "phys_cape_R": 0.01664145477116108,
+          "phys_robe_back_R": 0.03733236715197563
+        }
+      },
+      {
+        "frame": 72,
+        "sole": {
+          "Left": 0.0032587023451924324,
+          "Right": -0.0008886521682143211
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017232051119208336,
+          "phys_robe_side_L": 0.009452072903513908,
+          "phys_robe_front_C": 0.28000935912132263,
+          "phys_cape_L": 0.015914861112833023,
+          "phys_robe_back_L": 0.07118900865316391,
+          "phys_cape_C": 0.006206865422427654,
+          "phys_robe_side_R": 0.002100071869790554,
+          "phys_robe_front_R": 0.015025069937109947,
+          "phys_cape_R": 0.016699377447366714,
+          "phys_robe_back_R": 0.037438247352838516
+        }
+      },
+      {
+        "frame": 73,
+        "sole": {
+          "Left": 0.0032823625952005386,
+          "Right": -0.0008843215182423592
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01751139387488365,
+          "phys_robe_side_L": 0.009373705834150314,
+          "phys_robe_front_C": 0.2796887457370758,
+          "phys_cape_L": 0.015905318781733513,
+          "phys_robe_back_L": 0.07100745290517807,
+          "phys_cape_C": 0.00644176360219717,
+          "phys_robe_side_R": 0.002012762241065502,
+          "phys_robe_front_R": 0.015271572396159172,
+          "phys_cape_R": 0.01675495132803917,
+          "phys_robe_back_R": 0.037542615085840225
+        }
+      },
+      {
+        "frame": 74,
+        "sole": {
+          "Left": 0.003306136466562748,
+          "Right": -0.0008816877380013466
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.017781784757971764,
+          "phys_robe_side_L": 0.009299233555793762,
+          "phys_robe_front_C": 0.2793830931186676,
+          "phys_cape_L": 0.015893282368779182,
+          "phys_robe_back_L": 0.07083488255739212,
+          "phys_cape_C": 0.006659910082817078,
+          "phys_robe_side_R": 0.0019332850351929665,
+          "phys_robe_front_R": 0.015510182827711105,
+          "phys_cape_R": 0.01680867001414299,
+          "phys_robe_back_R": 0.03764541447162628
+        }
+      },
+      {
+        "frame": 75,
+        "sole": {
+          "Left": 0.003329627215862274,
+          "Right": -0.0008810358121991158
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018042363226413727,
+          "phys_robe_side_L": 0.009229009039700031,
+          "phys_robe_front_C": 0.2790933847427368,
+          "phys_cape_L": 0.015879012644290924,
+          "phys_robe_back_L": 0.07067211717367172,
+          "phys_cape_C": 0.006822006776928902,
+          "phys_robe_side_R": 0.0018621468916535378,
+          "phys_robe_front_R": 0.015740016475319862,
+          "phys_cape_R": 0.01686037704348564,
+          "phys_robe_back_R": 0.03774624317884445
+        }
+      },
+      {
+        "frame": 76,
+        "sole": {
+          "Left": 0.0033519696444272995,
+          "Right": -0.0008820099756121635
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.0182911716401577,
+          "phys_robe_side_L": 0.00916288048028946,
+          "phys_robe_front_C": 0.27882081270217896,
+          "phys_cape_L": 0.015860699117183685,
+          "phys_robe_back_L": 0.07051952928304672,
+          "phys_cape_C": 0.006971199996769428,
+          "phys_robe_side_R": 0.0017987582832574844,
+          "phys_robe_front_R": 0.015959134325385094,
+          "phys_cape_R": 0.016910679638385773,
+          "phys_robe_back_R": 0.03784481808543205
+        }
+      },
+      {
+        "frame": 77,
+        "sole": {
+          "Left": 0.0033746715635061264,
+          "Right": -0.0008849231526255608
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01853024959564209,
+          "phys_robe_side_L": 0.009101761505007744,
+          "phys_robe_front_C": 0.2785680294036865,
+          "phys_cape_L": 0.015840746462345123,
+          "phys_robe_back_L": 0.07037828862667084,
+          "phys_cape_C": 0.007108478806912899,
+          "phys_robe_side_R": 0.001743401400744915,
+          "phys_robe_front_R": 0.01616699993610382,
+          "phys_cape_R": 0.016960499808192253,
+          "phys_robe_back_R": 0.037941139191389084
+        }
+      },
+      {
+        "frame": 78,
+        "sole": {
+          "Left": 0.0033972784876823425,
+          "Right": -0.0008900286629796028
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.018775533884763718,
+          "phys_robe_side_L": 0.009045856073498726,
+          "phys_robe_front_C": 0.2783462405204773,
+          "phys_cape_L": 0.015818459913134575,
+          "phys_robe_back_L": 0.07024908065795898,
+          "phys_cape_C": 0.00723239267244935,
+          "phys_robe_side_R": 0.0016970857977867126,
+          "phys_robe_front_R": 0.016363700851798058,
+          "phys_cape_R": 0.017006346955895424,
+          "phys_robe_back_R": 0.03803329914808273
+        }
+      },
+      {
+        "frame": 79,
+        "sole": {
+          "Left": 0.0034193135797977448,
+          "Right": -0.0008973507210612297
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019005849957466125,
+          "phys_robe_side_L": 0.008994726464152336,
+          "phys_robe_front_C": 0.2781445384025574,
+          "phys_cape_L": 0.015792571008205414,
+          "phys_robe_back_L": 0.070131815969944,
+          "phys_cape_C": 0.007343745790421963,
+          "phys_robe_side_R": 0.0016602491959929466,
+          "phys_robe_front_R": 0.016548259183764458,
+          "phys_cape_R": 0.017048388719558716,
+          "phys_robe_back_R": 0.038121119141578674
+        }
+      },
+      {
+        "frame": 80,
+        "sole": {
+          "Left": 0.0034413645043969154,
+          "Right": -0.0009065857157111168
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019219959154725075,
+          "phys_robe_side_L": 0.008949168026447296,
+          "phys_robe_front_C": 0.277963250875473,
+          "phys_cape_L": 0.015764804556965828,
+          "phys_robe_back_L": 0.0700274407863617,
+          "phys_cape_C": 0.00744116585701704,
+          "phys_robe_side_R": 0.0016329893842339516,
+          "phys_robe_front_R": 0.016720103099942207,
+          "phys_cape_R": 0.017085811123251915,
+          "phys_robe_back_R": 0.03820386156439781
+        }
+      },
+      {
+        "frame": 81,
+        "sole": {
+          "Left": 0.0034633995965123177,
+          "Right": -0.0009177280589938164
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019417008385062218,
+          "phys_robe_side_L": 0.008909137919545174,
+          "phys_robe_front_C": 0.27780330181121826,
+          "phys_cape_L": 0.015734463930130005,
+          "phys_robe_back_L": 0.06993640959262848,
+          "phys_cape_C": 0.0075232964009046555,
+          "phys_robe_side_R": 0.0016149654984474182,
+          "phys_robe_front_R": 0.016879994422197342,
+          "phys_cape_R": 0.017118850722908974,
+          "phys_robe_back_R": 0.03828117251396179
+        }
+      },
+      {
+        "frame": 82,
+        "sole": {
+          "Left": 0.003484778106212616,
+          "Right": -0.0009306641295552254
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.01959698647260666,
+          "phys_robe_side_L": 0.008874913677573204,
+          "phys_robe_front_C": 0.27766549587249756,
+          "phys_cape_L": 0.015702301636338234,
+          "phys_robe_back_L": 0.06985901296138763,
+          "phys_cape_C": 0.007591638248413801,
+          "phys_robe_side_R": 0.0016066953539848328,
+          "phys_robe_front_R": 0.017029648646712303,
+          "phys_cape_R": 0.017147108912467957,
+          "phys_robe_back_R": 0.03835272789001465
+        }
+      },
+      {
+        "frame": 83,
+        "sole": {
+          "Left": 0.0035056136548519135,
+          "Right": -0.0009460905566811562
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019758695736527443,
+          "phys_robe_side_L": 0.008846821263432503,
+          "phys_robe_front_C": 0.2775501608848572,
+          "phys_cape_L": 0.015668408945202827,
+          "phys_robe_back_L": 0.06979589909315109,
+          "phys_cape_C": 0.007645811419934034,
+          "phys_robe_side_R": 0.001607983373105526,
+          "phys_robe_front_R": 0.017164703458547592,
+          "phys_cape_R": 0.017171157523989677,
+          "phys_robe_back_R": 0.038418132811784744
+        }
+      },
+      {
+        "frame": 84,
+        "sole": {
+          "Left": 0.0035262703895568848,
+          "Right": -0.0009630778804421425
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019900767132639885,
+          "phys_robe_side_L": 0.008824629709124565,
+          "phys_robe_front_C": 0.27745845913887024,
+          "phys_cape_L": 0.01563216559588909,
+          "phys_robe_back_L": 0.06974712759256363,
+          "phys_cape_C": 0.007770154159516096,
+          "phys_robe_side_R": 0.0016190484166145325,
+          "phys_robe_front_R": 0.01728307083249092,
+          "phys_cape_R": 0.017189910635352135,
+          "phys_robe_back_R": 0.03847721591591835
+        }
+      },
+      {
+        "frame": 85,
+        "sole": {
+          "Left": 0.0035462472587823868,
+          "Right": -0.000982171855866909
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.020023725926876068,
+          "phys_robe_side_L": 0.008808590471744537,
+          "phys_robe_front_C": 0.2773902416229248,
+          "phys_cape_L": 0.015594368800520897,
+          "phys_robe_back_L": 0.06971286982297897,
+          "phys_cape_C": 0.007891195826232433,
+          "phys_robe_side_R": 0.0016394006088376045,
+          "phys_robe_front_R": 0.017385806888341904,
+          "phys_cape_R": 0.01720377244055271,
+          "phys_robe_back_R": 0.03852925822138786
+        }
+      },
+      {
+        "frame": 86,
+        "sole": {
+          "Left": 0.003565208986401558,
+          "Right": -0.0010027764365077019
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.020126473158597946,
+          "phys_robe_side_L": 0.00879884883761406,
+          "phys_robe_front_C": 0.27734553813934326,
+          "phys_cape_L": 0.0155554274097085,
+          "phys_robe_back_L": 0.06969346106052399,
+          "phys_cape_C": 0.008000897243618965,
+          "phys_robe_side_R": 0.0016676057130098343,
+          "phys_robe_front_R": 0.01746990717947483,
+          "phys_cape_R": 0.017217962071299553,
+          "phys_robe_back_R": 0.03857662156224251
+        }
+      },
+      {
+        "frame": 87,
+        "sole": {
+          "Left": 0.0035825157538056374,
+          "Right": -0.0010253330692648888
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.020208774134516716,
+          "phys_robe_side_L": 0.00879534799605608,
+          "phys_robe_front_C": 0.27732497453689575,
+          "phys_cape_L": 0.015515330247581005,
+          "phys_robe_back_L": 0.06968884915113449,
+          "phys_cape_C": 0.008097868412733078,
+          "phys_robe_side_R": 0.0017048800364136696,
+          "phys_robe_front_R": 0.01753658801317215,
+          "phys_cape_R": 0.017228716984391212,
+          "phys_robe_back_R": 0.03861745819449425
+        }
+      },
+      {
+        "frame": 88,
+        "sole": {
+          "Left": 0.003599087707698345,
+          "Right": -0.0010490501299500465
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.020270369946956635,
+          "phys_robe_side_L": 0.008798372000455856,
+          "phys_robe_front_C": 0.2773284912109375,
+          "phys_cape_L": 0.015474830754101276,
+          "phys_robe_back_L": 0.06969928741455078,
+          "phys_cape_C": 0.008181720972061157,
+          "phys_robe_side_R": 0.0017508696764707565,
+          "phys_robe_front_R": 0.01758609339594841,
+          "phys_cape_R": 0.01723507046699524,
+          "phys_robe_back_R": 0.038651157170534134
+        }
+      },
+      {
+        "frame": 89,
+        "sole": {
+          "Left": 0.0036140084266662598,
+          "Right": -0.0010737674310803413
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02031092904508114,
+          "phys_robe_side_L": 0.008807698264718056,
+          "phys_robe_front_C": 0.27735620737075806,
+          "phys_cape_L": 0.015433593653142452,
+          "phys_robe_back_L": 0.06972461193799973,
+          "phys_cape_C": 0.008252458646893501,
+          "phys_robe_side_R": 0.0018051937222480774,
+          "phys_robe_front_R": 0.017617465928196907,
+          "phys_cape_R": 0.017237728461623192,
+          "phys_robe_back_R": 0.03867770731449127
+        }
+      },
+      {
+        "frame": 90,
+        "sole": {
+          "Left": 0.0036264946684241295,
+          "Right": -0.0011002449318766594
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02032983861863613,
+          "phys_robe_side_L": 0.00882331095635891,
+          "phys_robe_front_C": 0.27740776538848877,
+          "phys_cape_L": 0.015392264351248741,
+          "phys_robe_back_L": 0.06976466625928879,
+          "phys_cape_C": 0.00830894336104393,
+          "phys_robe_side_R": 0.0018681148067116737,
+          "phys_robe_front_R": 0.01763114333152771,
+          "phys_cape_R": 0.017236098647117615,
+          "phys_robe_back_R": 0.038697127252817154
+        }
+      },
+      {
+        "frame": 91,
+        "sole": {
+          "Left": 0.003637191839516163,
+          "Right": -0.001126992516219616
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02032744139432907,
+          "phys_robe_side_L": 0.008845346048474312,
+          "phys_robe_front_C": 0.27748316526412964,
+          "phys_cape_L": 0.015350984409451485,
+          "phys_robe_back_L": 0.06981948763132095,
+          "phys_cape_C": 0.008350038900971413,
+          "phys_robe_side_R": 0.0019390461966395378,
+          "phys_robe_front_R": 0.017626632004976273,
+          "phys_cape_R": 0.017230456694960594,
+          "phys_robe_back_R": 0.03870914503931999
+        }
+      },
+      {
+        "frame": 92,
+        "sole": {
+          "Left": 0.0036456873640418053,
+          "Right": -0.0011546583846211433
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02030416950583458,
+          "phys_robe_side_L": 0.008873621001839638,
+          "phys_robe_front_C": 0.27758198976516724,
+          "phys_cape_L": 0.015310204587876797,
+          "phys_robe_back_L": 0.06988877803087234,
+          "phys_cape_C": 0.008377395570278168,
+          "phys_robe_side_R": 0.002017722465097904,
+          "phys_robe_front_R": 0.017604272812604904,
+          "phys_cape_R": 0.01722109131515026,
+          "phys_robe_back_R": 0.038713883608579636
+        }
+      },
+      {
+        "frame": 93,
+        "sole": {
+          "Left": 0.0036507491022348404,
+          "Right": -0.001183011569082737
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02025923691689968,
+          "phys_robe_side_L": 0.008908080868422985,
+          "phys_robe_front_C": 0.2777037024497986,
+          "phys_cape_L": 0.015270261093974113,
+          "phys_robe_back_L": 0.06997226923704147,
+          "phys_cape_C": 0.008388347923755646,
+          "phys_robe_side_R": 0.002103886567056179,
+          "phys_robe_front_R": 0.017564119771122932,
+          "phys_cape_R": 0.017207281664013863,
+          "phys_robe_back_R": 0.03871115297079086
+        }
+      },
+      {
+        "frame": 94,
+        "sole": {
+          "Left": 0.003653714433312416,
+          "Right": -0.0012113666161894798
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.02019345574080944,
+          "phys_robe_side_L": 0.00894847884774208,
+          "phys_robe_front_C": 0.2778482437133789,
+          "phys_cape_L": 0.015230759046971798,
+          "phys_robe_back_L": 0.07006941735744476,
+          "phys_cape_C": 0.008384015411138535,
+          "phys_robe_side_R": 0.002197209745645523,
+          "phys_robe_front_R": 0.017506157979369164,
+          "phys_cape_R": 0.017190247774124146,
+          "phys_robe_back_R": 0.03870149701833725
+        }
+      },
+      {
+        "frame": 95,
+        "sole": {
+          "Left": 0.0036529144272208214,
+          "Right": -0.0012397738173604012
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.020106634125113487,
+          "phys_robe_side_L": 0.008994810283184052,
+          "phys_robe_front_C": 0.2780144512653351,
+          "phys_cape_L": 0.015192927792668343,
+          "phys_robe_back_L": 0.0701800212264061,
+          "phys_cape_C": 0.008363807573914528,
+          "phys_robe_side_R": 0.0022968342527747154,
+          "phys_robe_front_R": 0.017430445179343224,
+          "phys_cape_R": 0.017168626189231873,
+          "phys_robe_back_R": 0.038684066385030746
+        }
+      },
+      {
+        "frame": 96,
+        "sole": {
+          "Left": 0.00364888459444046,
+          "Right": -0.001267951913177967
+        },
+        "cloth": {
+          "phys_robe_front_L": 0.019999315962195396,
+          "phys_robe_side_L": 0.009047049097716808,
+          "phys_robe_front_C": 0.2782021164894104,
+          "phys_cape_L": 0.01515665277838707,
+          "phys_robe_back_L": 0.07030380517244339,
+          "phys_cape_C": 0.008328288793563843,
+          "phys_robe_side_R": 0.002403230406343937,
+          "phys_robe_front_R": 0.01733788475394249,
+          "phys_cape_R": 0.0171433687210083,
+          "phys_robe_back_R": 0.0386599525809288
+        }
+      }
+    ]
+  },
+  "grip": {
+    "binding": "RightHand-only rigid sword",
+    "quarter_samples": 381,
+    "max_hand_local_hilt_drift_m": 4.7449490347514626e-07,
+    "gate_m": 1e-05,
+    "gate_pass": true
+  },
+  "collision": null,
+  "most_extended_frame": 48
+}

@@ -1,0 +1,65 @@
+{
+  "source": "models/astra_character_v2_body_i01.blend",
+  "source_sha256": "108a2b30a3b3d641bb33c246abfd61630c99b752ad4ea75069fdc3c631b8b95a",
+  "bones": 121,
+  "actions": 0,
+  "rest_matrix_error": 0.0,
+  "head_hair_preserved": true,
+  "neck_blend_preserved": true,
+  "sword_binding": {
+    "groups": [
+      "RightHand"
+    ],
+    "parent": "Armature"
+  },
+  "body_weights": {
+    "objects": {
+      "char1": {
+        "vertices": 194455,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 5.21540641784668e-08
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 5.21540641784668e-08
+  },
+  "all_visible_weights": {
+    "objects": {
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "AstraChar2_R3_ChasedLaurel": {
+        "vertices": 0,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_HeadHair": {
+        "vertices": 156182,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "AstraChar2_Meshy_NeckBlend": {
+        "vertices": 577,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 0.0
+      },
+      "char1": {
+        "vertices": 194455,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "max_weight_sum_error": 5.21540641784668e-08
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0,
+    "weight_sum_max_error": 5.21540641784668e-08
+  },
+  "plate_vertices": 47856,
+  "plate_nonrigid_or_phys_vertices": 0
+}
