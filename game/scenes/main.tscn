@@ -22,6 +22,8 @@ adjustment_saturation = 0.8
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_game_manager")
+; Phase 10 runtime assembly is owned by GameManager so every entrypoint uses
+; the same Void, player, camera, boss, lock-on, UI, and restart wiring.
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_spec13")

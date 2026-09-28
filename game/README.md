@@ -71,3 +71,61 @@ Keyboard and mouse defaults are functional, with matching gamepad inputs where a
 ## Tunables
 
 Phase-wide numeric configuration lives in `scripts/systems/tunables.gd`. Every numeric field carries a source comment naming `SPEC.txt` or `elden-ring-combat-reference.md`. In this file, only the reference's exact roll stamina cost overrides a SPEC placeholder; lock-on remains exactly at SPEC's 25 m acquisition and 35 m break distances because camera behavior is not in plan Assumption A6's reference-document override list. Approximate SPEC numbers are labeled as approximate, and approximate or unknown reference values do not override exact SPEC values. Do not add guessed values: later phases extend this resource only when an authoritative source provides the number.
+
+## How to run
+
+For interactive editing, open `game/project.godot` in the Godot 4 editor on the Mac. The assembled `main.tscn` creates the Void, player, camera, Godwyn logic capsule, lock-on marker, and combat UI through `game_manager.gd`.
+
+From the repository root, run all automated tests headlessly on black-sky with a descriptive label:
+
+```bash
+bash scripts/godot/ci.sh p10
+```
+
+To sync and boot the assembled main scene headlessly for manual inspection of runtime prints, including `boot ok`, use:
+
+```bash
+bash scripts/godot/run_native.sh p10-native
+bash scripts/godot/run_native.sh p10-native 900
+```
+
+The optional second argument is the number of frames before the headless process exits. Logs are retained under `~/godwyn-ci/<label>/logs/` on black-sky. Never run the Godot GUI on the server; black-sky is headless-only.
+
+## Controls
+
+| Input action | Default keyboard/mouse control | Behavior |
+|---|---|---|
+| `move_fwd`, `move_back`, `move_left`, `move_right` | W, S, A, D | Move relative to the camera; strafe while locked on. |
+| `sprint` | Left Shift | Sprint while moving and not locked on. |
+| `roll` | Space | Mid-roll dodge with the authored hurtbox-disabled i-frame window. |
+| `light_attack` | Left mouse button | Perform or buffer a light attack. |
+| `heavy_attack` | Right mouse button | Perform a heavy attack. |
+| `use_flask` | R | Consume a flask and heal when the drink completes. |
+| `lock_on` | Middle mouse button | Toggle lock-on to a valid layer-9 target. |
+| `target_left`, `target_right` | Q, E | Cycle left or right among valid lock-on targets. |
+| `interact` | F | Reserved interaction action. |
+| `pause` | Escape | Reserved pause action. |
+
+## Layer map
+
+| Layer | Name | Current occupants / role |
+|---:|---|---|
+| 1 | `world` | Void floor and invisible arena boundary. |
+| 2 | `player_body` | Player `CharacterBody3D`. |
+| 3 | `boss_body` | Reserved boss physics-body layer. |
+| 4 | `player_hurtbox` | Player `Hurtbox` `Area3D`. |
+| 5 | `player_hitbox` | Player weapon `Hitbox` `Area3D`. |
+| 6 | `environment` | Reserved environment collision layer. |
+| 7 | `boss_hurtbox` | Godwyn runtime `BossHurtbox` `Area3D`. |
+| 8 | `boss_hitbox` | Godwyn runtime `BossHitbox` `Area3D`. |
+| 9 | `lockon_target` | Godwyn's direct-child `LockOnMarker` `Area3D`; the camera's acquisition area masks this layer. |
+
+Combat damage remains exclusively on the dedicated hitbox/hurtbox `Area3D` pairs. Body and world collision do not resolve combat hits.
+
+## Known gaps
+
+This Phase 10 checkpoint is intentionally logic-only. The player and Godwyn are capsule placeholders on the flat grey Void floor; there is no arena visual pass, lighting design, fog, particle work, or gameplay material work. The Phase 1.5 lightning layer is not added to the default vertical-slice assembly, although its isolated subsystem and tests remain in the project.
+
+Godwyn still uses runtime placeholder attack clips and has no production rig or real animation set. Phase 11 replaces only the visual capsule with the real mesh while preserving the combat code and node contracts. Existing sourced-code comments identify remaining SPEC placeholders, including the boss capsule radius and per-move attack timing, geometry, damage, poise, and continuation values where the design documents do not provide exact numbers.
+
+The Phase 10 automated-smoke verdict, prioritized tuning deltas, and a real captured black-sky frame-time profile are tracked in [`docs/PHASE10_FEEL_CHECKPOINT.md`](docs/PHASE10_FEEL_CHECKPOINT.md).
