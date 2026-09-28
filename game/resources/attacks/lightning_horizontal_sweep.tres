@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "lightning_horizontal_sweep"
+initiator = true
+telegraph_time = 0.5
+; 20m mirrors Tunables.arena_boundary_radius. Authored line-gap spacing/speed is
+; absent from SPEC 7B, so this is the full-arena greybox coverage envelope.
+active_windows = [{"start_t": 0.0, "end_t": 1.0, "position": Vector3(0, 0, 0), "radius": 20.0}]
+recovery_time = 0.0
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+damage = 110
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+poise_damage = 30.0
+damage_type = 2
+animation_clip = ""
+enters_state = "EXTENDED"
+exit_options = [{"attack_id": "x_combo", "weight": 1.0, "continue_probability": 1.0}, {"attack_id": "jump_lunge", "weight": 1.0, "continue_probability": 1.0}]
+cut_vocabulary = "FULL-ARENA LIGHTNING SWEEP"

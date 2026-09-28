@@ -23,6 +23,9 @@ var _player_damaged_outside_roll := false
 var _iframe_overlap_proof_observed := false
 var _poise_break_observed := false
 var _end_state_reached := false
+var _death_observed := false
+var _restart_observed := false
+var _victory_observed := false
 var _boss_window_open := false
 var _recovery_signal_seen := false
 var _last_boss_hp := 0
@@ -58,11 +61,21 @@ func _run() -> void:
 		_fail("GameManager did not finish vertical-slice assembly")
 		return
 
-	_player = _manager.player
-	_player_stats = _player.stats
-	_player_combat = _player.combat
-	_camera_rig = _manager.player_camera
-	_boss = _manager.boss
+	_bind_manager_refs()
+	if not _verify_assembly_contract():
+		return
+	if not await _run_never_roll_death_path():
+		return
+	_manager.queue_free()
+	await process_frame
+	await process_frame
+	var victory_instance := packed_scene.instantiate() as GameManager
+	_manager = victory_instance
+	root.add_child(_manager)
+	if not await _wait_for_assembly():
+		_fail("second GameManager did not finish victory-path assembly")
+		return
+	_bind_manager_refs()
 	if not _verify_assembly_contract():
 		return
 
@@ -82,6 +95,10 @@ func _run() -> void:
 	_last_boss_hp = _boss.boss_stats.hp
 	_last_player_hp = _player_stats.hp
 	_connect_runtime_signals()
+	# The winning bot must still observe real damage but cannot accidentally
+	# terminate through the already-proven death path.
+	_player_stats.hp = _tunables.player_max_hp * 100
+	_last_player_hp = _player_stats.hp
 
 	Engine.time_scale = TEST_TIME_SCALE
 	var attack_target_hp := _boss.boss_stats.hp
@@ -189,7 +206,7 @@ func _prove_real_iframe_overlap() -> String:
 			active_overlap_seen = true
 			var roll_t := _player_combat.get_roll_t()
 			var inside_confirmed_iframe_overlap := (
-				not _player.hurtbox.monitoring
+				not _player.hurtbox.is_enabled()
 				and _player_combat.is_roll_invulnerable_at(roll_t)
 			)
 			if not inside_confirmed_iframe_overlap:
@@ -289,8 +306,11 @@ func _verify_assembly_contract() -> bool:
 	if marker.get_node_or_null("CollisionShape3D") == null:
 		_fail("boss LockOnMarker has no detectable CollisionShape3D")
 		return false
-	if _boss.get_node_or_null("GreyboxCapsule") == null:
-		_fail("boss is missing its logic-layer capsule visual")
+	if _boss.get_node_or_null("VisualRig") == null:
+		_fail("boss is missing its imported Phase 11 visual rig")
+		return false
+	if _manager.boss_ai.initiator_subset != GameManager.VERTICAL_SLICE_INITIATORS:
+		_fail("vertical slice did not configure its authored initiator subset")
 		return false
 	if _manager.hud == null or _manager.boss_healthbar == null or _manager.death_screen == null:
 		_fail("assembled combat UI is incomplete")
@@ -308,6 +328,45 @@ func _connect_runtime_signals() -> void:
 	_player_stats.hp_changed.connect(_on_player_hp_changed)
 	_player_stats.died.connect(_on_player_died)
 	_manager.victory_reached.connect(_on_victory_reached)
+
+
+func _bind_manager_refs() -> void:
+	_player = _manager.player
+	_player_stats = _player.stats
+	_player_combat = _player.combat
+	_camera_rig = _manager.player_camera
+	_boss = _manager.boss
+
+
+func _run_never_roll_death_path() -> bool:
+	_boss.auto_select_attacks = false
+	if _manager.death_screen.restart_requested.is_connected(_manager._on_restart_requested):
+		_manager.death_screen.restart_requested.disconnect(_manager._on_restart_requested)
+	_manager.death_screen.restart_requested.connect(func() -> void: _restart_observed = true)
+	_manager.death_screen.tunables.death_delay = 0.01
+	_manager.death_screen.tunables.death_screen_fade_duration = 0.01
+	_manager.death_screen.tunables.death_text_fade_duration = 0.01
+	_manager.death_screen.tunables.death_text_hold_duration = 0.01
+	_player_stats.died.connect(func() -> void: _death_observed = true)
+	_boss.boss_hitbox.damage = _tunables.player_max_hp
+	_place_player_for_overlap()
+	_boss.boss_hitbox.activate()
+	for _frame: int in BOT_FRAME_CAP:
+		_place_player_for_overlap()
+		await physics_frame
+		if _restart_observed:
+			break
+	_boss.boss_hitbox.deactivate()
+	if not _death_observed:
+		_fail("never-roll bot did not reach player death through a real boss hitbox")
+		return false
+	if not _manager.death_screen.get_is_death_text_visible():
+		_fail("never-roll death path did not reach visible YOU DIED state")
+		return false
+	if not _restart_observed:
+		_fail("never-roll death path did not emit restart_requested")
+		return false
+	return true
 
 
 func _on_boss_state_changed(_old_state: BossBase.State, new_state: BossBase.State) -> void:
@@ -348,10 +407,12 @@ func _on_player_hp_changed(new_hp: int, _maximum_hp: int) -> void:
 
 
 func _on_player_died() -> void:
+	_death_observed = true
 	_end_state_reached = true
 
 
 func _on_victory_reached() -> void:
+	_victory_observed = true
 	_end_state_reached = true
 
 
@@ -389,7 +450,7 @@ func _all_outcomes_observed() -> bool:
 		and _player_damaged_outside_roll
 		and _iframe_overlap_proof_observed
 		and _poise_break_observed
-		and _end_state_reached
+		and _victory_observed
 	)
 
 
@@ -403,8 +464,8 @@ func _missing_outcomes_reason() -> String:
 		missing.append("(3) no pinned roll combined active Area3D overlap, disabled hurtbox i-frames, and unchanged HP")
 	if not _poise_break_observed:
 		missing.append("(4) no boss poise-break/STUNNED state occurred")
-	if not _end_state_reached:
-		missing.append("(5) neither player death nor GameManager.victory_reached occurred")
+	if not _victory_observed:
+		missing.append("(5) winning bot did not reach GameManager.victory_reached")
 	var reason := "safety cap reached without: "
 	for index: int in missing.size():
 		if index > 0:

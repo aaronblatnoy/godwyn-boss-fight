@@ -216,7 +216,7 @@ func _on_died() -> void:
 
 
 func _set_hurtbox_monitoring(enabled: bool) -> void:
-	hurtbox.monitoring = enabled
+	hurtbox.set_enabled(enabled)
 	# Minimal logic-only QA overlay: white is vulnerable, magenta is in i-frames.
 	_iframe_indicator_material.albedo_color = Color.WHITE if enabled else Color.MAGENTA
 

@@ -66,6 +66,8 @@ func _run() -> void:
 		return
 	if not _test_distinct_initiator_resources(distribution_rig):
 		return
+	if not _test_initiator_subset(distribution_rig):
+		return
 	if not _test_distributions(distribution_rig):
 		return
 	await _free_rig(distribution_rig)
@@ -232,6 +234,25 @@ func _test_distinct_initiator_resources(rig: Dictionary) -> bool:
 		return false
 	if radiant_sequence == sacred_cleave:
 		_fail("Radiant Sequence and Sacred Cleave resolved to the same AttackData")
+		return false
+	return true
+
+
+func _test_initiator_subset(rig: Dictionary) -> bool:
+	var ai := rig.ai as GodwynP1AI
+	ai.initiator_subset = ["x_combo", "jump_lunge", "the_pause", "dragons_memory"]
+	for distance: float in [CLOSE_DISTANCE, MID_DISTANCE, FAR_DISTANCE]:
+		var table := ai.build_weight_table(distance)
+		for entry: Dictionary in table:
+			if not ai.initiator_subset.has(str(entry.get("attack_id", ""))):
+				_fail("initiator subset leaked %s" % str(entry.get("attack_id", "")))
+				return false
+		if table.is_empty():
+			_fail("initiator subset removed every entry at distance %.1f" % distance)
+			return false
+	ai.initiator_subset.clear()
+	if ai.build_weight_table(CLOSE_DISTANCE).size() != EXPECTED_WEIGHT_SLOT_COUNT:
+		_fail("empty initiator subset did not restore the full SPEC table")
 		return false
 	return true
 
@@ -595,7 +616,7 @@ func _test_memory_fragment_mid_cycle_window() -> bool:
 	if boss.boss_hitbox.damage != attack.damage:
 		_fail("x_combo window 1 was not unbuffed before threshold crossing")
 		return false
-	while boss.boss_hitbox.monitoring:
+	while boss.boss_hitbox.is_active():
 		if not _advance_attack_frame(boss, ai):
 			_fail("x_combo ended before its first active window closed")
 			return false
@@ -695,7 +716,7 @@ func _advance_until_hitbox_monitoring(
 		_advance_attack_frame(boss, ai)
 		if not elapsed_clock.is_empty():
 			elapsed_clock.seconds = float(elapsed_clock.seconds) + SYNTHETIC_DELTA
-		if boss.boss_hitbox.monitoring == expected_monitoring:
+		if boss.boss_hitbox.is_active() == expected_monitoring:
 			return true
 	return false
 

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/boss_base.gd" id="1_boss"]
+[ext_resource type="PackedScene" path="res://assets/godwyn/godwyn_v3.glb" id="2_rig"]
+[ext_resource type="Script" path="res://scripts/bosses/godwyn_visual.gd" id="3_visual"]
+
+[node name="GodwynPhase1" type="Node3D"]
+script = ExtResource("1_boss")
+
+[node name="VisualRig" type="Node3D" parent="."]
+scale = Vector3(0.991812, 0.991812, 0.991812)
+script = ExtResource("3_visual")
+
+[node name="GodwynV3" parent="VisualRig" instance=ExtResource("2_rig")]
+
+[node name="Phase1Light" type="OmniLight3D" parent="."]
+position = Vector3(0, 1.8, 0)
+light_color = Color(1, 0.92, 0.6, 1)
+light_energy = 2.5
+omni_range = 12.0
+shadow_enabled = true

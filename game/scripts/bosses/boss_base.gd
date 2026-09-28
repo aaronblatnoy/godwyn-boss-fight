@@ -259,9 +259,9 @@ func _set_state(next_state: State) -> void:
 
 
 func _emit_window_edge_signals() -> void:
-	if boss_hitbox == null or boss_hitbox.monitoring == _last_hitbox_monitoring:
+	if boss_hitbox == null or boss_hitbox.is_active() == _last_hitbox_monitoring:
 		return
-	_last_hitbox_monitoring = boss_hitbox.monitoring
+	_last_hitbox_monitoring = boss_hitbox.is_active()
 	var attack_id := _current_attack.id if _current_attack != null else ""
 	if _last_hitbox_monitoring:
 		attack_window_opened.emit(attack_id)

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "jump_lunge"
+initiator = true
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.40
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.55, "end_t": 0.78, "radius": 0.8, "position": Vector3(0, 1, -1.8), "extents": Vector3(0.8, 0.8, 2.2)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.55
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 90
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 25.0
+animation_clip = "jump_lunge"
+enters_state = "AIRBORNE"
+; PLACEHOLDER -- SPEC requires probabilistic extension but gives no probability.
+exit_options = [{"attack_id": "jump_lunge_connect", "weight": 1.0, "continue_probability": 0.7}]
+overshoot_possible = true
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "STRAIGHT STAB"

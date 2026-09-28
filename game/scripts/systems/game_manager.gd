@@ -12,6 +12,13 @@ const BOSS_HEALTHBAR_SCENE := preload("res://scenes/ui/boss_healthbar.tscn")
 const DEATH_SCREEN_SCENE := preload("res://scenes/ui/death_screen.tscn")
 const BOSS_BASE_SCRIPT := preload("res://scripts/bosses/boss_base.gd")
 const GODWYN_P1_AI_SCRIPT := preload("res://scripts/bosses/godwyn_p1_ai.gd")
+const GODWYN_PHASE1_SCENE := preload("res://scenes/bosses/godwyn_phase1.tscn")
+const VERTICAL_SLICE_INITIATORS: Array[String] = [
+	"x_combo",
+	"jump_lunge",
+	"the_pause",
+	"dragons_memory",
+]
 
 var arena: Node3D
 var player: PlayerController
@@ -60,9 +67,8 @@ func _assemble_vertical_slice() -> void:
 		await player_camera.ready
 	player_camera.set_follow_target(player)
 
-	boss = BOSS_BASE_SCRIPT.new() as BossBase
+	boss = GODWYN_PHASE1_SCENE.instantiate() as BossBase
 	boss.name = "Godwyn"
-	_add_boss_greybox_visual(boss)
 	_add_boss_lockon_marker(boss)
 	add_child(boss)
 	boss.global_position = boss_spawn.global_position
@@ -75,6 +81,7 @@ func _assemble_vertical_slice() -> void:
 	boss_ai.name = "GodwynP1AI"
 	boss_ai.boss = boss
 	boss_ai.player_target = player
+	boss_ai.initiator_subset = VERTICAL_SLICE_INITIATORS.duplicate()
 	boss.add_child(boss_ai)
 
 	ui_layer = CanvasLayer.new()
@@ -100,17 +107,6 @@ func _assemble_vertical_slice() -> void:
 	death_screen.restart_requested.connect(_on_restart_requested)
 
 	boss.boss_stats.died.connect(_on_boss_died)
-
-
-func _add_boss_greybox_visual(target_boss: BossBase) -> void:
-	var mesh_instance := MeshInstance3D.new()
-	mesh_instance.name = "GreyboxCapsule"
-	var capsule := CapsuleMesh.new()
-	capsule.height = BossBase.BOSS_HEIGHT
-	capsule.radius = BossBase.BOSS_CAPSULE_RADIUS
-	mesh_instance.mesh = capsule
-	mesh_instance.position.y = BossBase.BOSS_HEIGHT * 0.5
-	target_boss.add_child(mesh_instance)
 
 
 func _add_boss_lockon_marker(target_boss: BossBase) -> void:

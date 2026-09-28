@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "branch_a_double_spin"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.25
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.10, "end_t": 0.25, "radius": 1.4, "position": Vector3(0, 1, 0), "extents": Vector3(2, 1, 2)}, {"start_t": 0.55, "end_t": 0.72, "radius": 1.4, "position": Vector3(0, 1, 0), "extents": Vector3(2, 1, 2)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.50
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 80
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 20.0
+animation_clip = "branch_a_double_spin"
+enters_state = "IDLE"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "CIRCULAR + CIRCULAR"

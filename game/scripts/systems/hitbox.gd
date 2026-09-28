@@ -10,6 +10,7 @@ extends Area3D
 @export var hitstop_duration: float = 0.0
 
 var _already_hit: Dictionary = {}
+var _active_requested := false
 
 
 func _ready() -> void:
@@ -18,7 +19,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:
-	if not monitoring:
+	if not _active_requested or not monitoring:
 		return
 	# Poll while active because toggling monitoring off and on does not make
 	# Godot re-emit area_entered for pairs that never stopped overlapping.
@@ -29,8 +30,9 @@ func _physics_process(_delta: float) -> void:
 
 func activate() -> void:
 	_already_hit.clear()
-	monitorable = true
-	monitoring = true
+	_active_requested = true
+	set_deferred(&"monitorable", true)
+	set_deferred(&"monitoring", true)
 
 
 func activate_window(window: Dictionary) -> void:
@@ -58,8 +60,16 @@ func configure_window(window: Dictionary) -> void:
 
 
 func deactivate() -> void:
-	monitoring = false
-	monitorable = false
+	# Animation call tracks and hit resolution can close a window while Godot is
+	# flushing Area3D enter/exit signals. Deferred writes are the engine-safe
+	# path; _active_requested stops overlap polling in this same frame.
+	_active_requested = false
+	set_deferred(&"monitoring", false)
+	set_deferred(&"monitorable", false)
+
+
+func is_active() -> bool:
+	return _active_requested
 
 
 func has_hit(hurtbox: Hurtbox) -> bool:

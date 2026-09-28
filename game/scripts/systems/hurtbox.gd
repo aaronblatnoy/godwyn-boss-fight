@@ -7,6 +7,7 @@ extends Area3D
 @export var hit_resolver_path: NodePath
 
 var hit_resolver: HitResolver
+var _enabled_requested := true
 
 
 func _ready() -> void:
@@ -23,7 +24,7 @@ func _on_area_entered(area: Area3D) -> void:
 
 
 func try_receive_hit(incoming: Hitbox) -> bool:
-	if not monitoring or incoming == null:
+	if not _enabled_requested or not monitoring or incoming == null:
 		return false
 	if not incoming.monitoring or incoming.owner_faction == faction:
 		return false
@@ -31,6 +32,17 @@ func try_receive_hit(incoming: Hitbox) -> bool:
 		push_error("Hurtbox cannot resolve a hit without a HitResolver")
 		return false
 	return hit_resolver.resolve(incoming, self)
+
+
+func set_enabled(enabled: bool) -> void:
+	# Roll/death transitions can be reached from Area3D callbacks. The logical
+	# flag changes immediately while the physics-server property changes safely.
+	_enabled_requested = enabled
+	set_deferred(&"monitoring", enabled)
+
+
+func is_enabled() -> bool:
+	return _enabled_requested
 
 
 func _configure_collision_layers() -> void:

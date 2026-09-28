@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "lightning_shrinking_circle"
+initiator = true
+telegraph_time = 0.8
+; Radius mirrors Tunables.lightning_shrinking_circle_start_radius. LightningLayer
+; contracts it with the tunable speed/duration and holds at the tunable end.
+active_windows = [{"start_t": 0.0, "end_t": 1.0, "position": Vector3(0, 0, 0), "radius": 15.0}]
+recovery_time = 0.0
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+damage = 200
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+poise_damage = 45.0
+damage_type = 2
+animation_clip = ""
+enters_state = "EXTENDED"
+cut_vocabulary = "SHRINKING LIGHTNING CIRCLE"

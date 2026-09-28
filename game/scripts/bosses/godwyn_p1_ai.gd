@@ -13,6 +13,7 @@ const TUNABLES_SCRIPT := preload("res://scripts/systems/tunables.gd")
 
 @export var boss: BossBase
 @export var player_target: Node3D
+@export var initiator_subset: Array[String] = []
 
 var _tunables: Tunables
 var _rng := RandomNumberGenerator.new()
@@ -145,7 +146,17 @@ func build_weight_table(distance_to_player: float) -> Array[Dictionary]:
 			_entry("Dragon's Memory", "dragons_memory", 30.0),
 			_entry("The Pause", "the_pause", 15.0),
 		]
-	return table
+	return _restrict_to_initiator_subset(table)
+
+
+func _restrict_to_initiator_subset(table: Array[Dictionary]) -> Array[Dictionary]:
+	if initiator_subset.is_empty():
+		return table
+	var restricted: Array[Dictionary] = []
+	for entry: Dictionary in table:
+		if initiator_subset.has(str(entry.get("attack_id", ""))):
+			restricted.append(entry)
+	return restricted
 
 
 func pick_weighted_initiator(

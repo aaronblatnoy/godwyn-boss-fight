@@ -10,6 +10,10 @@ lifecycle/archive/plans/blender-build-plan.txt
 renders/wip/
 renders/_discarded/
 
+# Phase 11 production rig is staged only on black-sky. Keep the large binary
+# out of Git and out of the Mac game tree; scenes reference this remote asset.
+game/assets/godwyn/*.glb
+
 # junk
 .DS_Store
 **/.DS_Store

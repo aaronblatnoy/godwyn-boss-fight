@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "lightning_dragons_charge"
+initiator = true
+; SPEC 7B supplies no numeric emergence/charge warning duration.
+telegraph_time = 0.0
+; X/Y half-extents are half the tunable 4m width; Z is the tunable 20m arena
+; radius, producing a 40m end-to-end fire corridor.
+active_windows = [{"start_t": 0.0, "end_t": 1.0, "position": Vector3(0, 0, 0), "extents": Vector3(2, 2, 20)}]
+recovery_time = 0.0
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+damage = 250
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+poise_damage = 50.0
+damage_type = 2
+animation_clip = ""
+enters_state = "EXTENDED"
+cut_vocabulary = "DRAGON FIRE LINE"

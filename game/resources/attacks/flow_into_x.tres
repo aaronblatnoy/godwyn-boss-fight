@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "flow_into_x"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.20
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.18, "end_t": 0.40, "radius": 1.2, "position": Vector3(0, 1, -1.2), "extents": Vector3(1.2, 1, 1.8)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.40
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 60
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 15.0
+animation_clip = "flow_into_x"
+enters_state = "EXTENDED"
+; PLACEHOLDER -- SPEC permits the X sequence to extend to six hits but gives no probability.
+exit_options = [{"attack_id": "x_combo", "weight": 1.0, "continue_probability": 0.65}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "DIAGONAL /"

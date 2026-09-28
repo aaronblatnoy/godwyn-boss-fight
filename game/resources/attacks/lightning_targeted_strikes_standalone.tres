@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "lightning_targeted_strikes_standalone"
+initiator = true
+; SPEC 7B gives no initial warning duration; each target pulse is Timer-driven.
+telegraph_time = 0.0
+; # PLACEHOLDER -- SPEC has no per-move numeric value; 2.0m is a small greybox strike radius.
+active_windows = [{"start_t": 0.0, "end_t": 1.0, "position": Vector3(0, 0, 0), "radius": 2.0}]
+; Runtime replaces this with (random count - 1) * the tunable 0.4s interval.
+recovery_time = 0.0
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+damage = 65
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending feel tuning.
+poise_damage = 12.0
+damage_type = 2
+animation_clip = ""
+enters_state = "EXTENDED"
+exit_options = [{"attack_id": "jump_lunge", "weight": 1.0, "continue_probability": 1.0}]
+cut_vocabulary = "TARGETED LIGHTNING"

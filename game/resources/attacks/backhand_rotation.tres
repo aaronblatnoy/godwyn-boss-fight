@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "backhand_rotation"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.20
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.15, "end_t": 0.40, "radius": 1.4, "position": Vector3(0, 1, 0), "extents": Vector3(2, 1, 2)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.35
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 70
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 18.0
+animation_clip = "backhand_rotation"
+enters_state = "EXTENDED"
+; Direct follow-ups preserve the backhand's three SPEC branches.
+; PLACEHOLDER -- SPEC requires probabilistic extension but gives no probability.
+exit_options = [{"attack_id": "x_combo", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "jump_thrust", "weight": 1.0, "continue_probability": 0.6}, {"attack_id": "straight_stab_quiet", "weight": 1.0, "continue_probability": 0.6}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "CIRCULAR"
