@@ -1,0 +1,16 @@
+[
+ {"job": "848ba409-c40d-41e1-a9e2-6ff61f670a5b", "action_id": 89, "name": "Combat_Stance", "role": "idle placeholder"},
+ {"job": "efec9aad-82a0-4150-93c9-d08b59bf0cb3", "action_id": 219, "name": "Right_Hand_Sword_Slash", "role": "diagonal slash"},
+ {"job": "da31afea-8ae7-4cd5-8b2e-4928d71ad914", "action_id": 112, "name": "Monster_Walk", "role": "stalk walk"},
+ {"job": "b8d7cafa-64d8-4f8e-8034-e6ae91bcf987", "action_id": 114, "name": "Proud_Strut", "role": "stalk walk alt"},
+ {"job": "62adda24-a7f3-46d0-ac15-f9146d3a583f", "action_id": 241, "name": "Weapon_Combo_2", "role": "X combo"},
+ {"job": "fddff44d-df01-487d-9b8b-d327fad56700", "action_id": 242, "name": "Charged_Slash", "role": "horizontal sweep"},
+ {"job": "c80159ae-aec3-4a59-ba56-18455e8a0ba7", "action_id": 4, "name": "Attack", "role": "overhead"},
+ {"job": "ed2f8703-362b-4fb4-99b4-440b374c0900", "action_id": 128, "name": "Heavy_Hammer_Swing", "role": "overhead alt"},
+ {"job": "ae6c8ded-6f66-4b5c-96fe-102f516508d1", "action_id": 179, "name": "Hit_Reaction_1", "role": "stagger"},
+ {"job": "05a5baaa-9696-4ba4-9ffb-cb667a58d78a", "action_id": 171, "name": "Hit_Reaction_to_Waist", "role": "stagger alt"},
+ {"job": "c8ed3295-f6fe-41f4-a4cb-4665a73bd868", "action_id": 8, "name": "Dead", "role": "death"},
+ {"job": "9d61f5a5-752f-45fb-ae53-f3f6fb82460e", "action_id": 188, "name": "Fall_Dead_from_Abdominal_Injury", "role": "death alt"},
+ {"job": "50897158-81fa-4bdb-acbd-d87f30b9e64e", "action_id": 157, "name": "Stand_Dodge_1", "role": "dodge"},
+ {"job": "2d586243-dd86-4392-ad63-f91dc8a7a890", "action_id": 156, "name": "Stand_Dodge", "role": "dodge alt"}
+]
