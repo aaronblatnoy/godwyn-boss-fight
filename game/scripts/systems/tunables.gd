@@ -49,6 +49,17 @@ extends Resource
 @export var roll_iframe_end_frame: int = 16 # SPEC.txt Section 3; ref exact TAE index UNKNOWN
 @export var roll_iframe_start_seconds: float = 0.2 # SPEC.txt Section 3, framerate-independent runtime contract
 @export var roll_iframe_end_seconds: float = 0.4 # SPEC.txt Section 3, framerate-independent runtime contract
+# SPEC-derived normalized window: start_t = 0.2 / 0.65, end_t = 0.4 / 0.65.
+# Frame->t is t = frame / assumed_clip_length_frames. The approximate frame labels
+# imply 4 / start_t = 13 frames and 16 / end_t = 26 frames, so they cannot yet name
+# one real clip length. Until Phase 9 imports it, derive t from the authoritative
+# seconds window: roll_iframe_*_t = roll_iframe_*_seconds / roll_duration.
+var roll_iframe_start_t: float:
+	get:
+		return roll_iframe_start_seconds / roll_duration
+var roll_iframe_end_t: float:
+	get:
+		return roll_iframe_end_seconds / roll_duration
 
 # --- ATTACKS ---
 @export var light_attack_damage: int = 60 # SPEC.txt Section 3
@@ -75,6 +86,8 @@ extends Resource
 @export var boss_max_hp: int = 3000 # SPEC.txt Section 6; ref has no Godwyn-specific HP
 @export var boss_poise: int = 80 # SPEC.txt Section 6; ref has no conflicting exact Godwyn value
 @export var boss_stagger_duration: float = 0.8 # SPEC.txt Section 6; ref says exact boss window UNKNOWN
+@export var boss_global_cooldown_min: float = 0.5 # SPEC.txt Section 6
+@export var boss_global_cooldown_max: float = 1.4 # SPEC.txt Section 6
 
 # --- LIGHTNING (Phase 1.5) ---
 @export var lightning_unlock_hp_percent: float = 0.5 # SPEC.txt Section 7B
@@ -100,3 +113,6 @@ extends Resource
 
 # --- COMBAT ---
 @export var hitstop_time_scale: float = 0.05 # SPEC.txt Section 3
+
+# --- ARENA ---
+@export var arena_boundary_radius: float = 20.0 # SPEC.txt Section 5, Arena Playable radius: 20 meters / Boundary
