@@ -4,14 +4,14 @@
 
 ## Review images
 
-- [Before / after face, left / right](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_after_face.png)
+- [Before / after face, left / right](before_after_face.png)
 - [Approved portrait](/Users/aaron_7nh0yzm/godwyn-boss-fight/face-concepts/godwyn_face_APPROVED.png)
-- [Before face](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_face.png)
-- [After face](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face.png)
-- [Before front](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/before_front.png)
-- [After front](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_front.png)
-- [After three-quarter face](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/after_face_three_quarter.png)
-- [Fresh GLB import](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/glb_check_face.png)
+- [Before face](before_face.png)
+- [After face](after_face.png)
+- [Before front](before_front.png)
+- [After front](after_front.png)
+- [After three-quarter face](after_face_three_quarter.png)
+- [Fresh GLB import](glb_check_face.png)
 
 All character renders use local Cycles METAL on the Apple M1 Pro, 32 samples, 960×960, AgX, exposure −0.35. Before/after cameras, lights and world match. Existing evaluation fixtures and camera definitions come from `astra_character_common.py`. The extra three-quarter face camera uses location (2.9, −5, 3.15), target (0, −0.25, 2.99), orthographic scale 0.59.
 
@@ -55,10 +55,10 @@ Primary saved files:
 
 - `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.blend`
 - `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2.glb`
-- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.blend` — untouched input backup
-- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_prechar2.glb` — previous export backup
-- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/astra_character_v2_char2_work.blend` — procedural working output
+- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/archive/character-prechar2/astra_character_v2_prechar2.blend` — untouched input backup
+- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/archive/character-prechar2/astra_character_v2_prechar2.glb` — previous export backup
+- `/Users/aaron_7nh0yzm/godwyn-boss-fight/models/archive/character-work/astra_character_v2_char2_work.blend` — procedural working output
 
-Main authoring scripts are `scripts/astra_char2_face.py` and `scripts/astra_char2_skin.py`. Run `blender --background --python scripts/astra_char2_build.py` to rebuild the working model from the backup, then `astra_char2_deliver.py` to validate, render and export. `astra_char2_glb_check.py` verifies a fresh import; `astra_char2_finalize.py` records the candid quality assessment. Use the local Blender executable `/opt/homebrew/bin/blender` and set `PYTHONDONTWRITEBYTECODE=1`.
+The campaign's authoring scripts are retained under `scripts/archive/character-foundation/`. They are historical reproduction tools, not the live character pipeline.
 
-[Exact written paths](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/written_paths.txt) lists every retained output, script and explicitly written temporary file. [Delivery manifest](/Users/aaron_7nh0yzm/godwyn-boss-fight/renders/astra/char2/delivery_manifest.json) records sizes and primary model hashes. Drafts and earlier diagnostic failure logs are retained for review; `validation.json` and `idempotence.json` contain the final technical results.
+[Exact written paths](written_paths.txt) lists every retained output, script and explicitly written temporary file. [Delivery manifest](delivery_manifest.json) records sizes and primary model hashes. Drafts and earlier diagnostic failure logs are retained for review; `validation.json` and `idempotence.json` contain the final technical results.

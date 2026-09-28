@@ -4,11 +4,11 @@
 
 The published Godwyn character was replaced only after iteration 06 passed the visual and mechanical gates. The accepted MPFB head was not regenerated. Armor, cloth, body, and the 121-bone rest rig were not redesigned or edited.
 
-![Published before on the left; likeness i06 after on the right](likeness_before_after.png)
+![Published before on the left; likeness i06 after on the right](archive/likeness/likeness_before_after.png)
 
-![Approved reference on the left; likeness i06 on the right](likeness_i06_approved_comparison.png)
+![Approved reference on the left; likeness i06 on the right](archive/likeness/likeness_i06_approved_comparison.png)
 
-Final views: [front](likeness_i06_front.png), [side](likeness_i06_side.png), [three-quarter](likeness_i06_three_quarter.png).
+Final views: [front](archive/likeness/likeness_i06_front.png), [side](archive/likeness/likeness_i06_side.png), [three-quarter](archive/likeness/likeness_i06_three_quarter.png).
 
 ## What changed
 
@@ -40,7 +40,7 @@ Preserved byte copies:
 
 ## Rising Spin proof
 
-![Published likeness at Rising Spin F40](likeness_rising_spin_f040.png)
+![Published likeness at Rising Spin F40](archive/likeness/likeness_rising_spin_f040.png)
 
 The corrected Rising Spin scene/action was rehosted in memory onto the new published character at the prior exact worst frame, F40. The blade/head exact triangle-overlap count is **0**. Sampled blade-to-head surface distance is **1.449 mm**. Sampled blade-to-hair clearance is **17.562 mm**, after the same **2.0 mm** fiber-radius allowance. This is a frame-40 sampled proof, not a claim of continuous-time collision clearance.
 

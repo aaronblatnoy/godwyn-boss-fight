@@ -1,0 +1,3 @@
+# Model map
+
+The canonical current character is `astra_character_v2.blend` with its portable `astra_character_v2.glb` export. Files named `astra_character_v2_pre_*` are intentional publication backups and remain beside the canonical pair. `astra_move_character_base*.blend`, `astra_move_*_v2_wip.blend`, and `astra_xslash_v2_final_on_char2*.blend` are the retained live move-authoring scenes. `meshy_*.glb` files are imported Meshy sources. `godwyn_gameasset.blend` and `godwyn_game.glb` are the canonical game-asset pair. Superseded iterations are preserved, not deleted, under `models/archive/`, grouped by character rounds, MPFB, character work, moves, X-slash, and legacy Godwyn exports.

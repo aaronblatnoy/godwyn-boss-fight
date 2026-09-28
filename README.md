@@ -2,6 +2,10 @@
 
 As much as we all love the Promised Consort boss fight, lets be real, it's not what any of us were hoping for. In fact, what we all wanted was to fight Godwyn the Golden, the Prince of Death himself. In this project, I attempt to use advanced tools (namely Claude Fable 5) to make this boss fight a reality. Stay tuned as I progress!
 
+## Where things are
+
+Current and archived authoring tools are indexed in [scripts/README.md](scripts/README.md). Canonical models and retained backups are described in [models/README.md](models/README.md). Render campaigns and their reports are indexed in [renders/astra/README.md](renders/astra/README.md). Planning work lives under [lifecycle/](lifecycle/), with active plans in `lifecycle/pending/plans/`, workflow definitions in `lifecycle/pending/workflows/`, brainstorms in `lifecycle/brainstorms/`, and completed plans in `lifecycle/archive/plans/`.
+
 ## Phase 1 Character Renders
 
 Godwyn the Golden in his idealized prime — a demigod swordsman of peerless grace. All renders are GPU-accelerated via Cycles (OptiX/CUDA on 2x RTX 3060 Ti), produced headlessly from reproducible Blender scripts.
