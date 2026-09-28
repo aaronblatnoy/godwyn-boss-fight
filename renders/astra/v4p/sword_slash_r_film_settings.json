@@ -1,0 +1,29 @@
+{
+  "mode": "film",
+  "clip": "sword_slash_r",
+  "source_frames": 46,
+  "rendered_frames": 46,
+  "source_fps": 30,
+  "render_step": 1,
+  "encoded_input_fps": 30.0,
+  "output_fps": 30,
+  "resolution": [
+    768,
+    768
+  ],
+  "samples": 20,
+  "devices": [
+    {
+      "name": "NVIDIA GeForce RTX 3060 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "camera": "three-quarter XY root-follow; vertical root motion remains visible",
+  "fit": "All-frame evaluated body/sword bounding boxes in root-follow camera coordinates; 12% margin",
+  "ortho_scale": 6.022069298964347,
+  "camera_shift_world": [
+    0.23791027069091797,
+    0.23101361095905304,
+    0.5177202224731445
+  ]
+}

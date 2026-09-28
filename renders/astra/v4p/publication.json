@@ -1,0 +1,17 @@
+{
+  "published_utc": "2026-09-28T22:35:56.729388+00:00",
+  "host": "black-sky",
+  "files": {
+    "models/astra_character_v4.blend": {
+      "size": 80488044,
+      "sha256": "6a73a31393c94fa0b60e257fd5c13abd932572bb86cc12d2b49fd1fb30809912",
+      "source": "renders/astra/v4p/candidate_export.blend"
+    },
+    "models/astra_character_v4.glb": {
+      "size": 59679616,
+      "sha256": "5aba0d505692514a684a7dc6767f80fd188b722e4d55e442521a5bc0e9afc24f",
+      "source": "renders/astra/v4p/candidate.glb"
+    }
+  },
+  "status": "Published with documented visual limitations; numeric gates passed"
+}

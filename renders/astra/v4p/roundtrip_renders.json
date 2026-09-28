@@ -1,0 +1,26 @@
+[
+  {
+    "file": "roundtrip/stance_front.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "front"
+  },
+  {
+    "file": "roundtrip/stance_face.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "face"
+  },
+  {
+    "file": "roundtrip/stance_collar_top45.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "collar_top45"
+  },
+  {
+    "file": "roundtrip/stance_back.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "back"
+  }
+]

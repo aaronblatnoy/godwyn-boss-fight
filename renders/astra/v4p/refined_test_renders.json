@@ -1,0 +1,38 @@
+[
+  {
+    "file": "refined_test/rest_face.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "face"
+  },
+  {
+    "file": "refined_test/rest_back.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "back"
+  },
+  {
+    "file": "refined_test/rest_side.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "side"
+  },
+  {
+    "file": "refined_test/stance_face.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "face"
+  },
+  {
+    "file": "refined_test/stance_back.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "back"
+  },
+  {
+    "file": "refined_test/stance_side.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "side"
+  }
+]

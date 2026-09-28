@@ -1,0 +1,14 @@
+{
+  "belt_fade_z_m": [
+    1.1,
+    1.55
+  ],
+  "hem_vertices_corrected": 245,
+  "hem_constraint_m": -0.014,
+  "hem_predicted_min_m": -0.014035198407804532,
+  "iterations": 5,
+  "max_weight_change": 0.33487722775133966,
+  "changed_vertices": 33298,
+  "only_existing_leg_hip_weights": true,
+  "geometry_unchanged": true
+}

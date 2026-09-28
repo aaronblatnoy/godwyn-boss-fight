@@ -1,0 +1,72 @@
+{
+  "renders/astra/v4/candidate.blend": {
+    "size": 47845772,
+    "mtime_ns": 1790632132447074592,
+    "sha256": "9aa5909076235ca6749bfa9f1dfefe26cbdcde2da439cc80eb5cc8cf8de09c44"
+  },
+  "models/astra_character_v3.blend": {
+    "size": 59472781,
+    "mtime_ns": 1790618478684201628,
+    "sha256": "57595cbed5d7b24b8838c8c1d3438262422737c71fdd5ea73e78684ead3306ad"
+  },
+  "models/astra_character_v3.glb": {
+    "size": 71646532,
+    "mtime_ns": 1790618483707469451,
+    "sha256": "e79158139f537b1693510fb8de27948409bc2373b5fa801a9768a53d290d0f67"
+  },
+  "models/astra_character_v3_openhand.blend": {
+    "size": 67589746,
+    "mtime_ns": 1790577975231482839,
+    "sha256": "43b3a6643e6c6ddb8cc317ee0bed3381d3c654832028a5f5f2b7e7a8d405359c"
+  },
+  "models/astra_character_v3_openhand.glb": {
+    "size": 75960192,
+    "mtime_ns": 1790577981685250899,
+    "sha256": "c98c7b6df2406c91b72298d8c3d6ee2c10fd768f24cce68ac29c481f19f2cb91"
+  },
+  "models/astra_character_v3_pre_mocap.blend": {
+    "size": 63126814,
+    "mtime_ns": 1790582086802106747,
+    "sha256": "e254ac97530c265ee1ac36b659f4d5ae752e8d27ec6842254e8b79277ca2abc9"
+  },
+  "models/astra_character_v3_pre_mocap.glb": {
+    "size": 70657336,
+    "mtime_ns": 1790582093360920813,
+    "sha256": "e2577625e35af133ef3fe0e240016e59108a10e9453430c4a58d4ca95e6b9fe9"
+  },
+  "models/astra_character_v3_prev.blend": {
+    "size": 200892648,
+    "mtime_ns": 1790603098970368162,
+    "sha256": "32afac85f2676bfb4ab5db22156bfee14b9aae1844d0b3a12aa1977a117c1ba0"
+  },
+  "models/astra_character_v3_prev.glb": {
+    "size": 71585944,
+    "mtime_ns": 1790603103525226592,
+    "sha256": "351a3ef83baee9ed4b315f1c042f76a72846af905680f17a51bf75b08b4b03ab"
+  },
+  "models/astra_character_v3_wip.blend": {
+    "size": 67589741,
+    "mtime_ns": 1790577321308437741,
+    "sha256": "bae4ef51c3a79e6198c69709d38c1a31d1247090601cb40483f3861fec031d67"
+  },
+  "models/astra_character_v3fists_pre_body_cleanup.blend": {
+    "size": 63850469,
+    "mtime_ns": 1790581131391118464,
+    "sha256": "0c17e2d7ab284595c7e6c2598d38ed9ec16981f9711de9bd3e851430fbae4131"
+  },
+  "models/astra_character_v3fists_wip.blend": {
+    "size": 63126878,
+    "mtime_ns": 1790581384124824431,
+    "sha256": "7540e8d5f20d181689e12ded312ea2f5a00edfd58d6eeed9fa5dbedbce5ee5c7"
+  },
+  "models/astra_character_v3m_round2_wip.blend": {
+    "size": 203341128,
+    "mtime_ns": 1790601979854551587,
+    "sha256": "85144d2823f6d328a18ce5109cd2e568f90059c2a6478810c5dccc0759241ebd"
+  },
+  "models/astra_character_v3m_wip.blend": {
+    "size": 61822489,
+    "mtime_ns": 1790591582723064567,
+    "sha256": "178892da10bf84437200ceac4c0e449cf5659d5b32fe79a13ffd9f1c1c6571b6"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "fallback": "eyes and lips only; native eyebrows retained",
+  "reason": "Full-face projection visibly mapped donor blond hair into thin dark/gold cheek streaks. Rejected by direct close-up inspection.",
+  "feature_mask": "Two feathered eye ellipses and one lip ellipse in V4 rest world coordinates; 22% radial feather. Original V4 appearance retained elsewhere.",
+  "projected_atlas_fraction": 0.1063759016712479,
+  "body_geometry_changed": false
+}

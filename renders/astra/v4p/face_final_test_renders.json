@@ -1,0 +1,14 @@
+[
+  {
+    "file": "face_final_test/rest_face.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "face"
+  },
+  {
+    "file": "face_final_test/stance_face.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "face"
+  }
+]

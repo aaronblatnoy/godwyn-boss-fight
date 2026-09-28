@@ -1,0 +1,26 @@
+[
+  {
+    "file": "cloth_test/rest_back.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "back"
+  },
+  {
+    "file": "cloth_test/rest_side.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "side"
+  },
+  {
+    "file": "cloth_test/stance_back.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "back"
+  },
+  {
+    "file": "cloth_test/stance_side.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "side"
+  }
+]

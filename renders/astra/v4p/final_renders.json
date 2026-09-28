@@ -1,0 +1,86 @@
+[
+  {
+    "file": "final/rest_front.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "front"
+  },
+  {
+    "file": "final/rest_side.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "side"
+  },
+  {
+    "file": "final/rest_three_quarter.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "three_quarter"
+  },
+  {
+    "file": "final/rest_back.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "back"
+  },
+  {
+    "file": "final/rest_face.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "face"
+  },
+  {
+    "file": "final/rest_collar.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "collar"
+  },
+  {
+    "file": "final/rest_collar_top45.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "collar_top45"
+  },
+  {
+    "file": "final/stance_front.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "front"
+  },
+  {
+    "file": "final/stance_side.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "side"
+  },
+  {
+    "file": "final/stance_three_quarter.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "three_quarter"
+  },
+  {
+    "file": "final/stance_back.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "back"
+  },
+  {
+    "file": "final/stance_face.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "face"
+  },
+  {
+    "file": "final/stance_collar.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "collar"
+  },
+  {
+    "file": "final/stance_collar_top45.png",
+    "engine": "CYCLES",
+    "pose": "stance",
+    "view": "collar_top45"
+  }
+]

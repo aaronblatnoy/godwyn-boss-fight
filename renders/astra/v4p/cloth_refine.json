@@ -1,0 +1,19 @@
+{
+  "method": "8 uniform-space Laplacian passes on 20mm cells, 65mm Gaussian kernel, 130mm cutoff; 8-cell interpolation",
+  "vertices": 130198,
+  "embroidered_seam_vertices_added": 20641,
+  "cells": 26568,
+  "max_weight_change": 0.6206706361260357,
+  "bones": [
+    "Hips",
+    "LeftUpLeg",
+    "LeftLeg",
+    "LeftFoot",
+    "LeftToeBase",
+    "RightUpLeg",
+    "RightLeg",
+    "RightFoot",
+    "RightToeBase"
+  ],
+  "vertex_coordinates_unchanged": true
+}

@@ -1,0 +1,77 @@
+{
+  "exporter_tiny_weight_threshold": 0.0,
+  "mapping": "nearest rest position within 20 micrometers, then closest bone-weight vector to disambiguate coincident split vertices",
+  "bones": 24,
+  "hierarchy_preserved": true,
+  "joint_rest_error_m": 1.874566078186035e-05,
+  "animation_frames": {
+    "Combat_Stance": 51,
+    "sword_slash_r": 46
+  },
+  "fps": 30,
+  "gltf_skin_joint_counts": [
+    24
+  ],
+  "native_weights": {
+    "objects": {
+      "V4_Body": {
+        "vertices": 279316,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.7508864402770996e-07
+      },
+      "Godwyn_Sword": {
+        "vertices": 4235,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "imported_weights": {
+    "objects": {
+      "Godwyn_Sword": {
+        "vertices": 6090,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 0.0
+      },
+      "V4_Body": {
+        "vertices": 280278,
+        "unweighted": 0,
+        "bad_weight_sum": 0,
+        "maximum_weight_sum_error": 1.5974364941939712e-07
+      }
+    },
+    "unweighted_or_bad_sum_vertices": 0
+  },
+  "rest_sample_matching_error_m": 5.2166210480208974e-06,
+  "sampled_deformation_max_error_m": {
+    "Combat_Stance": {
+      "V4_Body": 2.9640117692419267e-05,
+      "Godwyn_Sword": 9.537488193020635e-06
+    },
+    "sword_slash_r": {
+      "V4_Body": 3.54990072578607e-05,
+      "Godwyn_Sword": 1.6455740314913e-05
+    }
+  },
+  "deformation_samples_per_mesh": 300,
+  "frames_compared": 97,
+  "material_bakes": [
+    "body_Base_Color.png",
+    "body_Roughness.png"
+  ],
+  "gltf_materials": [
+    "V4_BodySword",
+    "V4_Face"
+  ],
+  "body_materials": [
+    "V4_BodySword",
+    "V4_Face"
+  ],
+  "material_limit": "Native skin_i01 subsurface has no exact core glTF equivalent. Exactly two materials: V4_BodySword (4096x2048 body/sword atlas) and V4_Face (2048x2048).",
+  "export_sha256": "5aba0d505692514a684a7dc6767f80fd188b722e4d55e442521a5bc0e9afc24f",
+  "mechanical_pass": true
+}

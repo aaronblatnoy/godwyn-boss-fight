@@ -1,0 +1,38 @@
+{
+  "reviewer": "Codex default model; direct image inspection",
+  "final_visual_review_complete": true,
+  "native_stills": [
+    "final/rest_back.png",
+    "final/rest_collar.png",
+    "final/rest_collar_top45.png",
+    "final/rest_face.png",
+    "final/rest_front.png",
+    "final/rest_side.png",
+    "final/rest_three_quarter.png",
+    "final/stance_back.png",
+    "final/stance_collar.png",
+    "final/stance_collar_top45.png",
+    "final/stance_face.png",
+    "final/stance_front.png",
+    "final/stance_side.png",
+    "final/stance_three_quarter.png"
+  ],
+  "fresh_glb_stills": [
+    "roundtrip/stance_back.png",
+    "roundtrip/stance_collar_top45.png",
+    "roundtrip/stance_face.png",
+    "roundtrip/stance_front.png"
+  ],
+  "film_frames_reviewed": {
+    "Combat_Stance": 51,
+    "sword_slash_r": 46
+  },
+  "method": "Each native and round-trip still viewed directly; every film frame inspected on twelve numbered contact sheets. Rejected first slash framing was also inspected in full.",
+  "verdict": "Publish within accepted V4 scope, with documented visual limitations. Rear serration removed; eyes/lips clearer; full swing now contained in frame.",
+  "limitations": [
+    "Face below approved portrait quality: faceted cheeks/jaw, pale highlights, soft original brows, coarse hairline.",
+    "Open fingers accepted; sword seated but no closed grip.",
+    "Stiff cloth, residual fold faceting and severe isolated edge stretches remain.",
+    "Native subsurface is not exactly represented by core glTF."
+  ]
+}

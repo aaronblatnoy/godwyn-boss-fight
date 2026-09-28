@@ -1,0 +1,8 @@
+[
+  {
+    "file": "face_test/rest_face.png",
+    "engine": "CYCLES",
+    "pose": "rest",
+    "view": "face"
+  }
+]
