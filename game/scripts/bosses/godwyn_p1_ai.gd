@@ -2,6 +2,9 @@ class_name GodwynP1AI
 extends Node
 
 
+signal memory_fragment_triggered(hp_threshold: float, trigger_count: int)
+
+
 # Phase 6 player-attack wiring calls report_player_attack() when attack input
 # fires. During The Pause this schedules Godwyn's SPEC 0.12s counter; outside
 # The Pause the method is intentionally a safe no-op.
@@ -41,12 +44,22 @@ func _ready() -> void:
 	# The Phase 4 resource is preloaded and shared. AI weights must remain local
 	# to this boss instance so another boss cannot observe distance-band changes.
 	boss.moveset_tree = boss.moveset_tree.duplicate(true) as MovesetTree
+	# ResourceLoader reuses the_pause.tres across AttackLibrary instances. This
+	# script randomizes recovery_time, so replace only this boss's dictionary
+	# entry with a private copy to prevent cross-instance cache-sharing clobber.
+	var shared_pause := boss.attack_library.get_attack("the_pause")
+	if shared_pause != null:
+		var private_pause := shared_pause.duplicate() as AttackData
+		var attacks: Dictionary = boss.attack_library.get("_attacks")
+		attacks["the_pause"] = private_pause
 	_pause_cooldown_elapsed = _tunables.boss_pause_cooldown
 	_last_hp_ratio = float(boss.get_hp()) / float(boss.get_max_hp())
 	for threshold: float in _memory_fragment_thresholds():
 		_memory_fragment_latches[threshold] = false
 	if not boss.attack_started.is_connected(_on_attack_started):
 		boss.attack_started.connect(_on_attack_started)
+	if not boss.attack_window_opened.is_connected(_on_attack_window_opened):
+		boss.attack_window_opened.connect(_on_attack_window_opened)
 	if not boss.hp_changed.is_connected(_on_boss_hp_changed):
 		boss.hp_changed.connect(_on_boss_hp_changed)
 	if not boss.state_changed.is_connected(_on_boss_state_changed):
@@ -103,26 +116,21 @@ func report_player_attack() -> void:
 func build_weight_table(distance_to_player: float) -> Array[Dictionary]:
 	var table: Array[Dictionary] = []
 	if distance_to_player < _tunables.boss_perception_close_range:
-		# Radiant Sequence has no distinct Phase 4 geometry. Keep its literal
-		# SPEC weight auditable here, but funnel it into the available x_combo
-		# resource until the Phase 4 resource gap is resolved by that phase.
 		# The six values below are the literal close-band weights in SPEC.txt line 407.
 		table = [
 			_entry("Sovereign's Sequence", "x_combo", 45.0),
 			_entry("The Tide", "horizontal_sweep", 25.0),
-			_entry("Radiant Sequence", "x_combo", 20.0),
+			_entry("Radiant Sequence", "radiant_sequence", 20.0),
 			_entry("Dash Chain", "jump_lunge", 0.0),
 			_entry("Dragon's Memory", "dragons_memory", 0.0),
 			_entry("The Pause", "the_pause", 10.0),
 		]
 	elif distance_to_player <= _tunables.boss_perception_mid_range:
-		# Sacred Cleave -> horizontal_sweep is an unresolved plan gap: Phase 4
-		# authored no separate geometry, so the architect should confirm this map.
 		# The six values below are the literal mid-band weights in SPEC.txt lines 409-410.
 		table = [
 			_entry("Sovereign's Sequence", "x_combo", 25.0),
-			_entry("Sacred Cleave", "horizontal_sweep", 15.0),
-			_entry("Radiant Sequence", "x_combo", 0.0),
+			_entry("Sacred Cleave", "sacred_cleave", 15.0),
+			_entry("Radiant Sequence", "radiant_sequence", 0.0),
 			_entry("Dash Chain", "jump_lunge", 35.0),
 			_entry("Dragon's Memory", "dragons_memory", 20.0),
 			_entry("The Pause", "the_pause", 5.0),
@@ -132,7 +140,7 @@ func build_weight_table(distance_to_player: float) -> Array[Dictionary]:
 		table = [
 			_entry("Sovereign's Sequence", "x_combo", 0.0),
 			_entry("The Tide", "horizontal_sweep", 0.0),
-			_entry("Radiant Sequence", "x_combo", 0.0),
+			_entry("Radiant Sequence", "radiant_sequence", 0.0),
 			_entry("Dash Chain", "jump_lunge", 55.0),
 			_entry("Dragon's Memory", "dragons_memory", 30.0),
 			_entry("The Pause", "the_pause", 15.0),
@@ -170,13 +178,6 @@ func _refresh_runtime_initiators() -> void:
 
 
 func _on_attack_started(attack_id: String) -> void:
-	# BossBase assigns the AttackData's unbuffed damage immediately before this
-	# signal, so multiplying here cannot accumulate across attacks.
-	if is_memory_fragment_active():
-		boss.boss_hitbox.damage = roundi(
-			float(boss.boss_hitbox.damage)
-			* _tunables.boss_memory_fragment_damage_multiplier
-		)
 	if attack_id == "the_pause":
 		_pause_cooldown_elapsed = 0.0
 		_pause_in_progress = true
@@ -184,13 +185,36 @@ func _on_attack_started(attack_id: String) -> void:
 		_counter_pending = false
 		var pause_attack := boss.attack_library.get_attack("the_pause")
 		if pause_attack != null:
-			pause_attack.recovery_time = _rng.randf_range(
+			var total_pause_duration := _rng.randf_range(
 				_tunables.boss_pause_duration_min,
 				_tunables.boss_pause_duration_max
+			)
+			# The SPEC duration covers the entire stillness, including the
+			# Phase 4 active clip. BossBase adds recovery after that clip, so
+			# budget recovery from the randomized total instead of adding the
+			# randomized 3-5 seconds on top of the clip.
+			pause_attack.recovery_time = maxf(
+				total_pause_duration - _attack_active_duration(pause_attack),
+				0.0
 			)
 		return
 	if _jump_lunge_bonus_for_next_pick:
 		_jump_lunge_bonus_for_next_pick = false
+
+
+func _on_attack_window_opened(_attack_id: String) -> void:
+	var current_attack := boss.get_current_attack()
+	if current_attack == null:
+		return
+	var damage := current_attack.damage
+	if is_memory_fragment_active():
+		damage = roundi(
+			float(current_attack.damage)
+			* _tunables.boss_memory_fragment_damage_multiplier
+		)
+	# Always derive from immutable authored damage so multiple windows cannot
+	# compound a value written by an earlier window in the same attack cycle.
+	boss.boss_hitbox.damage = damage
 
 
 func _update_completed_pause() -> void:
@@ -321,6 +345,7 @@ func _on_boss_hp_changed(new_hp: int, maximum_hp: int) -> void:
 			# A new threshold crossing refreshes the SPEC 10-second mechanical
 			# buff even if another fragment is already active.
 			_memory_fragment_time_remaining = _tunables.boss_memory_fragment_duration
+			memory_fragment_triggered.emit(threshold, _memory_fragment_trigger_count)
 	_last_hp_ratio = hp_ratio
 
 
@@ -348,6 +373,14 @@ func _memory_fragment_thresholds() -> Array[float]:
 		_tunables.boss_memory_fragment_threshold_50,
 		_tunables.boss_memory_fragment_threshold_25,
 	]
+
+
+func _attack_active_duration(attack: AttackData) -> float:
+	if attack == null or attack.animation_clip.is_empty():
+		return AttackLibrary.ACTIVE_CLIP_DURATION
+	var animation_name := boss.attack_library.animation_name(attack)
+	var animation := boss.animation_player.get_animation(animation_name)
+	return animation.length if animation != null else AttackLibrary.ACTIVE_CLIP_DURATION
 
 
 func _entry(spec_name: String, attack_id: String, weight: float) -> Dictionary:

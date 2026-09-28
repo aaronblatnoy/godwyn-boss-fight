@@ -21,6 +21,7 @@ const CONTROL_FRAME_CAP := 160 # TEST HARNESS VALUE -- safety cap for an uncount
 const EXPECTED_WEIGHT_SLOT_COUNT := 6 # Phase 5 contract: six auditable slots per distance band.
 const LATCH_PROBE_DAMAGE := 1 # TEST HARNESS VALUE -- damage below a crossed threshold must not retrigger it.
 const MEMORY_COOLDOWN_SEED := 1447 # TEST HARNESS VALUE -- deterministic transition-time verification.
+const PAUSE_ISOLATION_SEED := 991 # TEST HARNESS VALUE -- deterministic private-resource mutation.
 const CLOSE_DISTANCE := 3.0 # SPEC Section 6 representative close distance required by the plan.
 const MID_DISTANCE := 7.0 # SPEC Section 6 representative mid distance required by the plan.
 const FAR_DISTANCE := 12.0 # SPEC Section 6 representative far distance required by the plan.
@@ -63,6 +64,8 @@ func _run() -> void:
 	var distribution_rig := await _make_rig(MID_DISTANCE)
 	if not _test_weight_sums(distribution_rig):
 		return
+	if not _test_distinct_initiator_resources(distribution_rig):
+		return
 	if not _test_distributions(distribution_rig):
 		return
 	await _free_rig(distribution_rig)
@@ -73,7 +76,13 @@ func _run() -> void:
 		return
 	if not await _test_pause_counter():
 		return
+	if not await _test_pause_resource_isolation():
+		return
+	if not await _test_memory_fragment_signal():
+		return
 	if not await _test_memory_fragment():
+		return
+	if not await _test_memory_fragment_mid_cycle_window():
 		return
 
 	print("PASS test_boss_ai")
@@ -134,13 +143,15 @@ func _test_distributions(rig: Dictionary) -> bool:
 	var ai := rig.ai as GodwynP1AI
 	var boss := rig.boss as BossBase
 	var player := rig.player as Node3D
-	# SPEC Sections 6/7 resolved onto Phase 4's five canonical initiators.
+	# SPEC Sections 6/7 resolved onto distinct AttackData initiators.
 	var cases: Array[Dictionary] = [
 		{
 			"distance": CLOSE_DISTANCE,
 			"expected": {
-				"x_combo": 0.65,
+				"x_combo": 0.45,
 				"horizontal_sweep": 0.25,
+				"radiant_sequence": 0.20,
+				"sacred_cleave": 0.0,
 				"jump_lunge": 0.0,
 				"dragons_memory": 0.0,
 				"the_pause": 0.10,
@@ -150,7 +161,9 @@ func _test_distributions(rig: Dictionary) -> bool:
 			"distance": MID_DISTANCE,
 			"expected": {
 				"x_combo": 0.25,
-				"horizontal_sweep": 0.15,
+				"horizontal_sweep": 0.0,
+				"radiant_sequence": 0.0,
+				"sacred_cleave": 0.15,
 				"jump_lunge": 0.35,
 				"dragons_memory": 0.20,
 				"the_pause": 0.05,
@@ -161,6 +174,8 @@ func _test_distributions(rig: Dictionary) -> bool:
 			"expected": {
 				"x_combo": 0.0,
 				"horizontal_sweep": 0.0,
+				"radiant_sequence": 0.0,
+				"sacred_cleave": 0.0,
 				"jump_lunge": 0.55,
 				"dragons_memory": 0.30,
 				"the_pause": 0.15,
@@ -175,6 +190,8 @@ func _test_distributions(rig: Dictionary) -> bool:
 		var counts := {
 			"x_combo": 0,
 			"horizontal_sweep": 0,
+			"radiant_sequence": 0,
+			"sacred_cleave": 0,
 			"jump_lunge": 0,
 			"dragons_memory": 0,
 			"the_pause": 0,
@@ -200,6 +217,22 @@ func _test_distributions(rig: Dictionary) -> bool:
 					]
 				)
 				return false
+	return true
+
+
+func _test_distinct_initiator_resources(rig: Dictionary) -> bool:
+	var boss := rig.boss as BossBase
+	var radiant_sequence := boss.attack_library.get_attack("radiant_sequence")
+	var sacred_cleave := boss.attack_library.get_attack("sacred_cleave")
+	if radiant_sequence == null or sacred_cleave == null:
+		_fail("distinct Radiant Sequence and Sacred Cleave resources did not resolve")
+		return false
+	if radiant_sequence.id != "radiant_sequence" or sacred_cleave.id != "sacred_cleave":
+		_fail("distinct initiator resources did not preserve their authored ids")
+		return false
+	if radiant_sequence == sacred_cleave:
+		_fail("Radiant Sequence and Sacred Cleave resolved to the same AttackData")
+		return false
 	return true
 
 
@@ -306,8 +339,9 @@ func _test_pause_counter() -> bool:
 	control_ai.set_physics_process(false)
 	control_boss.run_attack(control_boss.attack_library.get_attack("the_pause"))
 	control_boss._process(0.0)
-	var control_duration := control_boss.get_current_attack().recovery_time
-	if control_duration <= TUNABLES_SCRIPT.new().boss_pause_counter_delay:
+	var tunables: Tunables = TUNABLES_SCRIPT.new()
+	var control_recovery_duration := control_boss.get_current_attack().recovery_time
+	if control_recovery_duration <= tunables.boss_pause_counter_delay:
 		_fail("seeded Pause duration was not longer than its counter delay")
 		return false
 	var control_elapsed := 0.0
@@ -322,8 +356,11 @@ func _test_pause_counter() -> bool:
 	if control_boss.get_current_attack() != null and control_boss.get_current_attack().id == "the_pause":
 		_fail("uncountered Pause did not complete within the deterministic safety cap")
 		return false
-	if control_elapsed < control_duration:
-		_fail("uncountered Pause ended before its randomized duration")
+	if control_elapsed + TIME_EPSILON < tunables.boss_pause_duration_min:
+		_fail("uncountered Pause ended before the SPEC 3.0s minimum")
+		return false
+	if control_elapsed > tunables.boss_pause_duration_max + TIME_EPSILON:
+		_fail("uncountered Pause exceeded the SPEC 5.0s maximum")
 		return false
 	await _free_rig(control_rig)
 
@@ -338,7 +375,7 @@ func _test_pause_counter() -> bool:
 	var position_before_counter := counter_boss.global_position
 	counter_ai.report_player_attack()
 	var counter_elapsed := 0.0
-	while counter_elapsed < TUNABLES_SCRIPT.new().boss_pause_counter_delay + COUNTER_DELTA:
+	while counter_elapsed < tunables.boss_pause_counter_delay + COUNTER_DELTA:
 		counter_ai._process(COUNTER_DELTA)
 		counter_elapsed += COUNTER_DELTA
 		var current_attack := counter_boss.get_current_attack()
@@ -351,10 +388,9 @@ func _test_pause_counter() -> bool:
 	if counter_elapsed >= control_elapsed:
 		_fail("countered Pause was not measurably shorter than the full wait")
 		return false
-	if counter_elapsed > TUNABLES_SCRIPT.new().boss_pause_counter_delay + COUNTER_DELTA:
+	if counter_elapsed > tunables.boss_pause_counter_delay + COUNTER_DELTA:
 		_fail("Pause counter took %.3fs" % counter_elapsed)
 		return false
-	var tunables: Tunables = TUNABLES_SCRIPT.new()
 	var offline_distance := counter_boss.global_position.distance_to(position_before_counter)
 	if absf(offline_distance - tunables.boss_pause_counter_step_distance) > MOVEMENT_EPSILON:
 		_fail("Pause counter did not take its offline reposition step")
@@ -366,6 +402,85 @@ func _test_pause_counter() -> bool:
 		_fail("Pause counter did not restore the shared AttackData telegraph")
 		return false
 	await _free_rig(counter_rig)
+	return true
+
+
+func _test_pause_resource_isolation() -> bool:
+	var rig_a := await _make_rig(MID_DISTANCE)
+	var rig_b := await _make_rig(MID_DISTANCE)
+	var boss_a := rig_a.boss as BossBase
+	var boss_b := rig_b.boss as BossBase
+	var ai_a := rig_a.ai as GodwynP1AI
+	boss_a.set_process(false)
+	boss_b.set_process(false)
+	ai_a.set_process(false)
+	ai_a.set_physics_process(false)
+	var pause_a := boss_a.attack_library.get_attack("the_pause")
+	var pause_b := boss_b.attack_library.get_attack("the_pause")
+	if pause_a == null or pause_b == null:
+		_fail("Pause isolation test could not resolve both AttackData resources")
+		return false
+	if pause_a == pause_b:
+		_fail("two AI rigs retained the same cached the_pause AttackData object")
+		return false
+	var recovery_a_before := pause_a.recovery_time
+	var recovery_b_before := pause_b.recovery_time
+	ai_a._rng.seed = PAUSE_ISOLATION_SEED
+	boss_a.run_attack(pause_a)
+	if absf(pause_a.recovery_time - recovery_a_before) <= WEIGHT_EPSILON:
+		_fail("rig A did not randomize its private the_pause recovery_time")
+		return false
+	if absf(pause_b.recovery_time - recovery_b_before) > WEIGHT_EPSILON:
+		_fail("rig A's the_pause mutation leaked into rig B")
+		return false
+	await _free_rig(rig_a)
+	await _free_rig(rig_b)
+	return true
+
+
+func _test_memory_fragment_signal() -> bool:
+	var rig := await _make_rig(MID_DISTANCE)
+	var boss := rig.boss as BossBase
+	var ai := rig.ai as GodwynP1AI
+	var tunables: Tunables = TUNABLES_SCRIPT.new()
+	boss.set_process(false)
+	ai.set_process(false)
+	ai.set_physics_process(false)
+	var emissions: Array[Dictionary] = []
+	ai.memory_fragment_triggered.connect(
+		func(hp_threshold: float, trigger_count: int) -> void:
+			emissions.append({
+				"hp_threshold": hp_threshold,
+				"trigger_count": trigger_count,
+			})
+	)
+	var threshold_hp := roundi(
+		float(boss.boss_stats.max_hp) * tunables.boss_memory_fragment_threshold_75
+	)
+	boss.boss_stats.take_damage(
+		boss.boss_stats.hp - threshold_hp,
+		DamageTypes.Type.PHYSICAL
+	)
+	if emissions.size() != 1:
+		_fail("Memory Fragment signal fired %d times for one threshold" % emissions.size())
+		return false
+	var emission: Dictionary = emissions[0]
+	if (
+		absf(
+			float(emission.hp_threshold)
+			- tunables.boss_memory_fragment_threshold_75
+		) > WEIGHT_EPSILON
+	):
+		_fail("Memory Fragment signal did not report the crossed 0.75 threshold")
+		return false
+	if int(emission.trigger_count) != 1:
+		_fail("Memory Fragment signal did not report trigger count 1")
+		return false
+	boss.boss_stats.take_damage(LATCH_PROBE_DAMAGE, DamageTypes.Type.PHYSICAL)
+	if emissions.size() != 1:
+		_fail("Memory Fragment signal repeated below an already-latched threshold")
+		return false
+	await _free_rig(rig)
 	return true
 
 
@@ -388,9 +503,12 @@ func _test_memory_fragment() -> bool:
 		tunables.boss_memory_fragment_threshold_25,
 	]
 	for threshold_index: int in thresholds.size():
-		# Begin an unbuffed attack first so crossing happens mid-cycle and the
-		# immediately following attack can be compared against its own base hit.
+		# Open an actual animation window before comparing damage: Phase 5 now
+		# derives the hit value at each attack_window_opened edge.
 		boss.run_attack(attack)
+		if not _advance_until_hitbox_monitoring(boss, ai, true, {}):
+			_fail("pre-threshold attack did not open an active window")
+			return false
 		var damage_before_threshold := boss.boss_hitbox.damage
 		if damage_before_threshold != attack.damage:
 			_fail("pre-threshold attack damage was not the AttackData base value")
@@ -407,6 +525,10 @@ func _test_memory_fragment() -> bool:
 			_fail("Memory Fragment threshold did not latch exactly once")
 			return false
 		boss.run_attack(attack)
+		var buff_clock := {"seconds": 0.0}
+		if not _advance_until_hitbox_monitoring(boss, ai, true, buff_clock):
+			_fail("post-threshold attack did not open an active window")
+			return false
 		var expected_damage := roundi(
 			float(attack.damage) * tunables.boss_memory_fragment_damage_multiplier
 		)
@@ -421,9 +543,9 @@ func _test_memory_fragment() -> bool:
 		if boss.boss_hitbox.damage <= damage_before_threshold:
 			_fail("post-threshold hit was not heavier than the preceding hit")
 			return false
-		var elapsed := 0.0
+		var elapsed := float(buff_clock.seconds)
 		while elapsed + SYNTHETIC_DELTA < tunables.boss_memory_fragment_duration:
-			ai._process(SYNTHETIC_DELTA)
+			_advance_attack_frame(boss, ai)
 			elapsed += SYNTHETIC_DELTA
 		if not ai.is_memory_fragment_active():
 			_fail("Memory Fragment expired before its SPEC 10.0s duration")
@@ -444,6 +566,71 @@ func _test_memory_fragment() -> bool:
 
 	if not await _test_memory_fragment_transition_multiplier():
 		return false
+	return true
+
+
+func _test_memory_fragment_mid_cycle_window() -> bool:
+	var rig := await _make_rig(MID_DISTANCE)
+	var boss := rig.boss as BossBase
+	var ai := rig.ai as GodwynP1AI
+	var tunables: Tunables = TUNABLES_SCRIPT.new()
+	boss.set_process(false)
+	ai.set_process(false)
+	ai.set_physics_process(false)
+	boss.auto_select_attacks = false
+	var attack := boss.attack_library.get_attack("x_combo")
+	if attack == null or attack.active_windows.size() != 2:
+		_fail("mid-cycle test requires x_combo's two authored active windows")
+		return false
+	var windows_opened := {"count": 0}
+	boss.attack_window_opened.connect(func(attack_id: String) -> void:
+		if attack_id == "x_combo":
+			windows_opened.count = int(windows_opened.count) + 1
+	)
+	boss.run_attack(attack)
+	while int(windows_opened.count) < 1:
+		if not _advance_attack_frame(boss, ai):
+			_fail("x_combo ended before its first active window opened")
+			return false
+	if boss.boss_hitbox.damage != attack.damage:
+		_fail("x_combo window 1 was not unbuffed before threshold crossing")
+		return false
+	while boss.boss_hitbox.monitoring:
+		if not _advance_attack_frame(boss, ai):
+			_fail("x_combo ended before its first active window closed")
+			return false
+	if boss.get_current_attack() != attack:
+		_fail("x_combo cycle ended before the between-window threshold crossing")
+		return false
+	var threshold_hp := roundi(
+		float(boss.boss_stats.max_hp) * tunables.boss_memory_fragment_threshold_75
+	)
+	boss.boss_stats.take_damage(
+		boss.boss_stats.hp - threshold_hp,
+		DamageTypes.Type.PHYSICAL
+	)
+	if not ai.is_memory_fragment_active():
+		_fail("mid-cycle threshold did not activate Memory Fragment")
+		return false
+	while int(windows_opened.count) < 2:
+		if not _advance_attack_frame(boss, ai):
+			_fail("x_combo ended before its second active window opened")
+			return false
+	var expected_damage := roundi(
+		float(attack.damage) * tunables.boss_memory_fragment_damage_multiplier
+	)
+	if absi(boss.boss_hitbox.damage - expected_damage) > DAMAGE_TOLERANCE:
+		_fail(
+			"x_combo window 2 damage %d did not pick up the mid-cycle buff %d" % [
+				boss.boss_hitbox.damage,
+				expected_damage,
+			]
+		)
+		return false
+	if boss.get_current_attack() != attack:
+		_fail("Memory Fragment window 2 assertion was not in the original x_combo cycle")
+		return false
+	await _free_rig(rig)
 	return true
 
 
@@ -496,6 +683,28 @@ func _test_memory_fragment_transition_multiplier() -> bool:
 		return false
 	await _free_rig(rig)
 	return true
+
+
+func _advance_until_hitbox_monitoring(
+	boss: BossBase,
+	ai: GodwynP1AI,
+	expected_monitoring: bool,
+	elapsed_clock: Dictionary
+) -> bool:
+	for _frame: int in CONTROL_FRAME_CAP:
+		_advance_attack_frame(boss, ai)
+		if not elapsed_clock.is_empty():
+			elapsed_clock.seconds = float(elapsed_clock.seconds) + SYNTHETIC_DELTA
+		if boss.boss_hitbox.monitoring == expected_monitoring:
+			return true
+	return false
+
+
+func _advance_attack_frame(boss: BossBase, ai: GodwynP1AI) -> bool:
+	boss.animation_player.advance(SYNTHETIC_DELTA)
+	boss._process(SYNTHETIC_DELTA)
+	ai._process(SYNTHETIC_DELTA)
+	return boss.get_current_attack() != null
 
 
 func _make_rig(player_distance: float) -> Dictionary:

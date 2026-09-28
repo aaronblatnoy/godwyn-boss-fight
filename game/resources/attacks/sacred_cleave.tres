@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="AttackData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/bosses/attack_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "sacred_cleave"
+initiator = true
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+telegraph_time = 0.65
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+active_windows = [{"start_t": 0.38, "end_t": 0.56, "radius": 0.9, "position": Vector3(0, 1.25, -1.5), "extents": Vector3(0.9, 1.25, 1.8)}, {"start_t": 0.60, "end_t": 0.88, "radius": 3.2, "position": Vector3(0, 0.25, -2.1), "extents": Vector3(3.2, 0.25, 3.0)}]
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+recovery_time = 0.60
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+damage = 85
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+poise_damage = 24.0
+animation_clip = "sacred_cleave"
+enters_state = "IDLE"
+; # PLACEHOLDER -- SPEC has no per-move numeric value; pending real animation authoring (Phase 6/9)
+camera_pull = 0.0
+cut_vocabulary = "OVERHEAD + JUMPABLE SHOCKWAVE"
